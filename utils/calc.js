@@ -169,4 +169,10 @@ function calculateMixed(items, container) {
   };
 }
 
-module.exports = { CONTAINER_PRESETS, calculate, calculateMixed };
+const ContainerCalc = { CONTAINER_PRESETS, calculate, calculateMixed };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = ContainerCalc;
+} else if (typeof window !== 'undefined') {
+  window.ContainerCalc = ContainerCalc;
+}

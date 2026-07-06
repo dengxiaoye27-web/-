@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>货柜装柜计算器</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>货柜装柜计算器</h1>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="single">单件装柜量</button>
+      <button class="tab-btn" data-tab="mix">混装方案</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- ===================== 单件装柜量 ===================== -->
+    <section id="tab-single" class="tab-panel active">
+      <div class="card">
+        <h2>1. 选择货柜类型</h2>
+        <div id="single-container-options" class="radio-group"></div>
+
+        <div id="single-custom-inputs" class="custom-inputs hidden">
+          <div class="input-row">
+            <label>内长(cm)</label>
+            <input type="number" id="single-c-length" min="0" />
+          </div>
+          <div class="input-row">
+            <label>内宽(cm)</label>
+            <input type="number" id="single-c-width" min="0" />
+          </div>
+          <div class="input-row">
+            <label>内高(cm)</label>
+            <input type="number" id="single-c-height" min="0" />
+          </div>
+          <div class="input-row">
+            <label>限重(kg,选填)</label>
+            <input type="number" id="single-c-maxPayload" min="0" />
+          </div>
+        </div>
+
+        <p class="info-line" id="single-container-info"></p>
+      </div>
+
+      <div class="card">
+        <h2>2. 输入包装尺寸</h2>
+        <div class="input-row">
+          <label>长(cm)</label>
+          <input type="number" id="single-b-length" min="0" />
+        </div>
+        <div class="input-row">
+          <label>宽(cm)</label>
+          <input type="number" id="single-b-width" min="0" />
+        </div>
+        <div class="input-row">
+          <label>高(cm)</label>
+          <input type="number" id="single-b-height" min="0" />
+        </div>
+        <div class="input-row">
+          <label>单件重量(kg,选填)</label>
+          <input type="number" id="single-b-weight" min="0" />
+        </div>
+      </div>
+
+      <button class="btn-primary" id="single-calc-btn">开始计算</button>
+
+      <div class="card result hidden" id="single-result-card">
+        <h2>计算结果</h2>
+        <p class="result-line highlight" id="single-r-qty"></p>
+        <p class="result-line" id="single-r-limit"></p>
+        <p class="result-line" id="single-r-arrangement-count"></p>
+        <p class="result-line" id="single-r-arrangement-dims"></p>
+        <p class="result-line" id="single-r-theoretical"></p>
+        <p class="result-line" id="single-r-volume-util"></p>
+        <p class="result-line" id="single-r-weight-util"></p>
+        <p class="result-tip">* 结果按整齐码放估算，实际装柜受托盘、缠绕膜、加固方式等因素影响，仅供参考</p>
+
+        <div class="result-actions">
+          <button class="btn-secondary" id="single-copy-btn">复制文字结果</button>
+          <button class="btn-secondary" id="single-share-btn">分享</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 混装方案 ===================== -->
+    <section id="tab-mix" class="tab-panel">
+      <div class="card">
+        <h2>1. 选择货柜类型</h2>
+        <div id="mix-container-options" class="radio-group"></div>
+
+        <div id="mix-custom-inputs" class="custom-inputs hidden">
+          <div class="input-row">
+            <label>内长(cm)</label>
+            <input type="number" id="mix-c-length" min="0" />
+          </div>
+          <div class="input-row">
+            <label>内宽(cm)</label>
+            <input type="number" id="mix-c-width" min="0" />
+          </div>
+          <div class="input-row">
+            <label>内高(cm)</label>
+            <input type="number" id="mix-c-height" min="0" />
+          </div>
+          <div class="input-row">
+            <label>限重(kg,选填)</label>
+            <input type="number" id="mix-c-maxPayload" min="0" />
+          </div>
+        </div>
+
+        <p class="info-line" id="mix-container-info"></p>
+      </div>
+
+      <div class="card">
+        <div class="card-title-row">
+          <h2>2. 添加包装规格</h2>
+          <button class="add-btn" id="mix-add-item">+ 添加规格</button>
+        </div>
+        <p class="hint-line">按添加顺序装载，可自行调整每项数量后重新计算</p>
+        <div id="mix-items"></div>
+      </div>
+
+      <button class="btn-primary" id="mix-calc-btn">计算混装方案</button>
+      <p class="error-text hidden" id="mix-error"></p>
+
+      <div class="result-spacer hidden" id="mix-result-spacer"></div>
+    </section>
+  </main>
+
+  <!-- 混装结果底部悬浮汇总栏 -->
+  <div class="summary-bar hidden" id="mix-summary-bar">
+    <div class="summary-main">
+      <div class="summary-item">
+        <span class="summary-num" id="mix-s-total"></span>
+        <span class="summary-label">总件数</span>
+      </div>
+      <div class="summary-item highlight">
+        <span class="summary-num" id="mix-s-containers"></span>
+        <span class="summary-label">所需货柜</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-num" id="mix-s-util"></span>
+        <span class="summary-label">容积利用率</span>
+      </div>
+    </div>
+    <button class="summary-toggle" id="mix-toggle-detail">详情 ▴</button>
+  </div>
+
+  <div class="detail-mask hidden" id="mix-detail-mask"></div>
+  <div class="detail-panel hidden" id="mix-detail-panel">
+    <div class="detail-scroll" id="mix-detail-scroll"></div>
+    <div class="detail-actions">
+      <button class="btn-secondary" id="mix-copy-btn">复制文字结果</button>
+      <button class="btn-secondary" id="mix-export-btn">导出图片</button>
+      <button class="btn-secondary" id="mix-share-btn">分享</button>
+    </div>
+  </div>
+
+  <canvas id="poster-canvas" class="poster-canvas"></canvas>
+
+  <div class="poster-modal hidden" id="poster-modal">
+    <div class="poster-modal-mask" id="poster-modal-mask"></div>
+    <div class="poster-modal-content">
+      <img id="poster-image" class="poster-image" alt="装柜方案图" />
+      <div class="poster-modal-actions">
+        <a class="btn-secondary" id="poster-download">下载图片</a>
+        <button class="btn-secondary" id="poster-close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="../utils/calc.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
