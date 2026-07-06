@@ -1,0 +1,6 @@
+{
+  "desc": "关闭小程序页面的索引",
+  "rules": [
+    { "action": "disallow", "page": "*" }
+  ]
+}

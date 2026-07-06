@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">1. 选择货柜类型</view>
+    <radio-group class="radio-group" bindchange="onContainerChange">
+      <label class="radio-item" wx:for="{{containerOptions}}" wx:key="key">
+        <radio value="{{item.key}}" checked="{{item.key === selectedContainer}}" color="#2c3e50" />
+        <text>{{item.label}}</text>
+      </label>
+    </radio-group>
+
+    <view wx:if="{{selectedContainer === 'CUSTOM'}}" class="custom-inputs">
+      <view class="input-row">
+        <text class="label">内长(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.length}}" data-field="length" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">内宽(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.width}}" data-field="width" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">内高(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.height}}" data-field="height" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">限重(kg,选填)</text>
+        <input class="input" type="digit" value="{{customContainer.maxPayload}}" data-field="maxPayload" bindinput="onCustomContainerInput" />
+      </view>
+    </view>
+
+    <view class="info-line" wx:if="{{selectedContainer !== 'CUSTOM' && currentContainer}}">
+      内尺寸: {{currentContainer.length}} x {{currentContainer.width}} x {{currentContainer.height}} cm，限重约 {{currentContainer.maxPayload}} kg
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">2. 输入包装尺寸</view>
+    <view class="input-row">
+      <text class="label">长(cm)</text>
+      <input class="input" type="digit" value="{{box.length}}" data-field="length" bindinput="onBoxInput" />
+    </view>
+    <view class="input-row">
+      <text class="label">宽(cm)</text>
+      <input class="input" type="digit" value="{{box.width}}" data-field="width" bindinput="onBoxInput" />
+    </view>
+    <view class="input-row">
+      <text class="label">高(cm)</text>
+      <input class="input" type="digit" value="{{box.height}}" data-field="height" bindinput="onBoxInput" />
+    </view>
+    <view class="input-row">
+      <text class="label">单件重量(kg,选填)</text>
+      <input class="input" type="digit" value="{{box.weight}}" data-field="weight" bindinput="onBoxInput" />
+    </view>
+  </view>
+
+  <button class="calc-btn" bindtap="onCalculate">开始计算</button>
+
+  <view class="section result" wx:if="{{result}}">
+    <view class="section-title">计算结果</view>
+    <view class="result-line highlight">预计可装：{{result.finalQty}} 件</view>
+    <view class="result-line">限制因素：{{result.limitingFactorText}}</view>
+    <view class="result-line">推荐摆放件数(长x宽x高方向)：{{result.best.counts[0]}} x {{result.best.counts[1]}} x {{result.best.counts[2]}}</view>
+    <view class="result-line">对应朝向尺寸(长/宽/高,cm)：{{result.best.arrangement[0]}} / {{result.best.arrangement[1]}} / {{result.best.arrangement[2]}}</view>
+    <view class="result-line">仅按体积理论上限：{{result.theoreticalMax}} 件</view>
+    <view class="result-line">容积利用率：{{result.volumeUtilizationText}}</view>
+    <view class="result-line" wx:if="{{result.weightUtilizationText}}">载重利用率：{{result.weightUtilizationText}}</view>
+    <view class="result-tip">* 结果按整齐码放估算，实际装柜受托盘、缠绕膜、加固方式等因素影响，仅供参考</view>
+  </view>
+</view>
