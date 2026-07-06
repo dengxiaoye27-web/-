@@ -1,0 +1,129 @@
+<view class="container">
+  <view class="section">
+    <view class="section-title">1. 选择货柜类型</view>
+    <radio-group class="radio-group" bindchange="onContainerChange">
+      <label class="radio-item" wx:for="{{containerOptions}}" wx:key="key">
+        <radio value="{{item.key}}" checked="{{item.key === selectedContainer}}" color="#2c3e50" />
+        <text>{{item.label}}</text>
+      </label>
+    </radio-group>
+
+    <view wx:if="{{selectedContainer === 'CUSTOM'}}" class="custom-inputs">
+      <view class="input-row">
+        <text class="label">内长(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.length}}" data-field="length" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">内宽(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.width}}" data-field="width" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">内高(cm)</text>
+        <input class="input" type="digit" value="{{customContainer.height}}" data-field="height" bindinput="onCustomContainerInput" />
+      </view>
+      <view class="input-row">
+        <text class="label">限重(kg,选填)</text>
+        <input class="input" type="digit" value="{{customContainer.maxPayload}}" data-field="maxPayload" bindinput="onCustomContainerInput" />
+      </view>
+    </view>
+
+    <view class="info-line" wx:if="{{selectedContainer !== 'CUSTOM' && currentContainer}}">
+      内尺寸: {{currentContainer.length}} x {{currentContainer.width}} x {{currentContainer.height}} cm，限重约 {{currentContainer.maxPayload}} kg
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title-row">
+      <text class="section-title">2. 添加包装规格</text>
+      <text class="add-btn" bindtap="onAddItem">+ 添加规格</text>
+    </view>
+    <view class="hint-line">按添加顺序装载，可上下调整顺序影响装载优先级</view>
+
+    <view class="item-card" wx:for="{{items}}" wx:key="id" wx:for-item="it">
+      <view class="item-card-header">
+        <input class="item-label-input" placeholder="规格名称（选填，如：产品A）" value="{{it.label}}" data-id="{{it.id}}" data-field="label" bindinput="onItemInput" />
+        <text class="remove-btn" data-id="{{it.id}}" bindtap="onRemoveItem" wx:if="{{items.length > 1}}">删除</text>
+      </view>
+      <view class="item-grid">
+        <view class="item-field">
+          <text class="mini-label">长cm</text>
+          <input class="mini-input" type="digit" value="{{it.length}}" data-id="{{it.id}}" data-field="length" bindinput="onItemInput" />
+        </view>
+        <view class="item-field">
+          <text class="mini-label">宽cm</text>
+          <input class="mini-input" type="digit" value="{{it.width}}" data-id="{{it.id}}" data-field="width" bindinput="onItemInput" />
+        </view>
+        <view class="item-field">
+          <text class="mini-label">高cm</text>
+          <input class="mini-input" type="digit" value="{{it.height}}" data-id="{{it.id}}" data-field="height" bindinput="onItemInput" />
+        </view>
+        <view class="item-field">
+          <text class="mini-label">重量kg</text>
+          <input class="mini-input" type="digit" value="{{it.weight}}" data-id="{{it.id}}" data-field="weight" bindinput="onItemInput" />
+        </view>
+        <view class="item-field wide">
+          <text class="mini-label">数量(件)</text>
+          <input class="mini-input" type="number" value="{{it.qty}}" data-id="{{it.id}}" data-field="qty" bindinput="onItemInput" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <button class="calc-btn" bindtap="onCalculate">计算混装方案</button>
+
+  <view wx:if="{{errorText}}" class="section error-section">{{errorText}}</view>
+
+  <!-- 占位，避免内容被底部悬浮汇总栏遮挡 -->
+  <view style="height: 180rpx;" wx:if="{{result}}"></view>
+</view>
+
+<view class="summary-bar" wx:if="{{result}}" bindtap="onToggleDetail">
+  <view class="summary-main">
+    <view class="summary-item">
+      <text class="summary-num">{{result.totalRequestedQty}}</text>
+      <text class="summary-label">总件数</text>
+    </view>
+    <view class="summary-item highlight">
+      <text class="summary-num">{{result.containersNeeded}}</text>
+      <text class="summary-label">所需货柜</text>
+    </view>
+    <view class="summary-item">
+      <text class="summary-num">{{result.avgVolumeUtilizationText}}</text>
+      <text class="summary-label">容积利用率</text>
+    </view>
+  </view>
+  <text class="summary-toggle">{{showDetail ? '收起 ▾' : '详情 ▴'}}</text>
+</view>
+
+<view class="detail-mask" wx:if="{{result && showDetail}}" bindtap="onToggleDetail"></view>
+<view class="detail-panel" wx:if="{{result && showDetail}}">
+  <scroll-view scroll-y class="detail-scroll">
+    <view wx:if="{{!result.fullyPlaced}}" class="warn-line">部分数量按估算上限（{{maxContainersLimit}}个货柜）未能全部装完，请拆分批次或联系客服核算</view>
+    <view class="container-block" wx:for="{{result.containers}}" wx:key="index" wx:for-item="c" wx:for-index="cIdx">
+      <view class="container-block-title">第 {{cIdx + 1}} 个货柜</view>
+      <view class="item-row" wx:for="{{c.breakdown}}" wx:key="label" wx:for-item="b">
+        <text wx:if="{{b.placedQty > 0}}">{{b.label}}：{{b.placedQty}} 件</text>
+      </view>
+      <view class="item-row muted" wx:if="{{c.totalWeightText}}">该柜总重：约 {{c.totalWeightText}} kg</view>
+      <view class="item-row muted">该柜容积利用率：{{c.volumeUtilizationText}}</view>
+    </view>
+  </scroll-view>
+  <view class="detail-actions">
+    <button class="action-btn" bindtap="onCopyResult">复制文字结果</button>
+    <button class="action-btn primary" bindtap="onGeneratePoster">生成分享图</button>
+  </view>
+</view>
+
+<canvas type="2d" id="posterCanvas" class="poster-canvas"></canvas>
+
+<view class="poster-modal" wx:if="{{posterImage}}">
+  <view class="poster-modal-mask" bindtap="onClosePoster"></view>
+  <view class="poster-modal-content">
+    <image src="{{posterImage}}" mode="widthFix" class="poster-image" show-menu-by-longpress="{{true}}"></image>
+    <view class="poster-modal-actions">
+      <button class="action-btn" bindtap="onSavePoster">保存图片</button>
+      <button class="action-btn" open-type="share">分享小程序</button>
+      <button class="action-btn" bindtap="onClosePoster">关闭</button>
+    </view>
+  </view>
+</view>

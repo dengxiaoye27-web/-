@@ -21,6 +21,13 @@ Page({
     });
   },
 
+  onShareAppMessage() {
+    return {
+      title: '货柜装柜量计算器',
+      path: '/pages/index/index',
+    };
+  },
+
   onContainerChange(e) {
     const key = e.detail.value;
     this.setData({
@@ -90,5 +97,25 @@ Page({
     });
 
     this.setData({ result });
+  },
+
+  onCopyResult() {
+    const r = this.data.result;
+    if (!r) return;
+    const lines = [
+      '【单件装柜量计算】',
+      `预计可装：${r.finalQty} 件`,
+      `限制因素：${r.limitingFactorText}`,
+      `推荐摆放件数(长x宽x高方向)：${r.best.counts[0]} x ${r.best.counts[1]} x ${r.best.counts[2]}`,
+      `对应朝向尺寸(长/宽/高,cm)：${r.best.arrangement[0]} / ${r.best.arrangement[1]} / ${r.best.arrangement[2]}`,
+      `容积利用率：${r.volumeUtilizationText}`,
+    ];
+    if (r.weightUtilizationText) lines.push(`载重利用率：${r.weightUtilizationText}`);
+    lines.push('（估算结果仅供参考，实际装柜以现场核算为准）');
+
+    wx.setClipboardData({
+      data: lines.join('\n'),
+      success: () => wx.showToast({ title: '已复制到剪贴板', icon: 'success' }),
+    });
   },
 });

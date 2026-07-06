@@ -64,5 +64,10 @@
     <view class="result-line">容积利用率：{{result.volumeUtilizationText}}</view>
     <view class="result-line" wx:if="{{result.weightUtilizationText}}">载重利用率：{{result.weightUtilizationText}}</view>
     <view class="result-tip">* 结果按整齐码放估算，实际装柜受托盘、缠绕膜、加固方式等因素影响，仅供参考</view>
+
+    <view class="result-actions">
+      <button class="action-btn" bindtap="onCopyResult">复制文字结果</button>
+      <button class="action-btn primary" open-type="share">分享小程序</button>
+    </view>
   </view>
 </view>

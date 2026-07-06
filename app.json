@@ -1,10 +1,20 @@
 {
-  "pages": ["pages/index/index"],
+  "pages": ["pages/index/index", "pages/mix/mix"],
   "window": {
     "navigationBarTitleText": "货柜装柜计算器",
     "navigationBarBackgroundColor": "#2c3e50",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#8395a7",
+    "selectedColor": "#2c3e50",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "单件装柜量" },
+      { "pagePath": "pages/mix/mix", "text": "混装方案" }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
