@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IDC 机房设计方案生成器</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>IDC / AIDC 机房设计方案生成器</h1>
+    <p class="subtitle">输入客户基本参数，快速生成设备选型、关键计算结果、机房布局示意与报价预估</p>
+  </header>
+
+  <main class="page">
+    <!-- ============ 项目信息 ============ -->
+    <section class="card">
+      <h2>项目信息（选填，用于方案抬头）</h2>
+      <div class="grid-3">
+        <div class="field">
+          <label>客户名称</label>
+          <input type="text" id="p-client" placeholder="如：ABC Data Solutions" />
+        </div>
+        <div class="field">
+          <label>项目名称</label>
+          <input type="text" id="p-project" placeholder="如：迪拜二期数据中心" />
+        </div>
+        <div class="field">
+          <label>方案日期</label>
+          <input type="date" id="p-date" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ A. 机房/机柜规模 ============ -->
+    <section class="card">
+      <h2>1. 机房 / 机柜规模</h2>
+      <div class="radio-row" id="scale-mode-group">
+        <label class="radio-item"><input type="radio" name="scale-mode" value="byRackCount" checked /> 已知机柜数量</label>
+        <label class="radio-item"><input type="radio" name="scale-mode" value="byArea" /> 已知机房面积</label>
+      </div>
+
+      <div class="grid-2">
+        <div class="field" id="field-rackCount">
+          <label>机柜数量（台）</label>
+          <input type="number" id="a-rackCount" min="1" value="100" />
+        </div>
+        <div class="field hidden" id="field-roomArea">
+          <label>机房面积（m²）</label>
+          <input type="number" id="a-roomArea" min="1" value="300" />
+        </div>
+        <div class="field">
+          <label>单柜占用面积（含通道，m²/柜）</label>
+          <input type="number" id="a-areaPerRack" min="0.1" step="0.1" value="3.0" />
+        </div>
+        <div class="field">
+          <label>单柜满载重量（kg）</label>
+          <input type="number" id="a-rackWeight" min="1" value="800" />
+        </div>
+        <div class="field">
+          <label>机房楼板承重（kg/m²）</label>
+          <input type="number" id="a-floorLoad" min="1" value="750" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ B. IT 负载/功率需求 ============ -->
+    <section class="card">
+      <h2>2. IT 负载 / 功率需求</h2>
+      <div class="radio-row" id="density-preset-group">
+        <label class="radio-item"><input type="radio" name="density-preset" value="3" /> 低密度 3kW/柜</label>
+        <label class="radio-item"><input type="radio" name="density-preset" value="6" checked /> 中密度 6kW/柜</label>
+        <label class="radio-item"><input type="radio" name="density-preset" value="12" /> 高密度 12kW/柜</label>
+        <label class="radio-item"><input type="radio" name="density-preset" value="20" /> 超高密度(AI) 20kW/柜</label>
+        <label class="radio-item"><input type="radio" name="density-preset" value="custom" /> 自定义</label>
+      </div>
+      <div class="field">
+        <label>单柜平均功率密度（kW/柜）</label>
+        <input type="number" id="b-powerDensity" min="0.1" step="0.1" value="6" />
+      </div>
+    </section>
+
+    <!-- ============ C. 制冷/环境要求 ============ -->
+    <section class="card">
+      <h2>3. 制冷 / 环境要求</h2>
+      <div class="radio-row" id="cooling-type-group">
+        <label class="radio-item"><input type="radio" name="cooling-type" value="CRAC_DX" checked /> 风冷精密空调</label>
+        <label class="radio-item"><input type="radio" name="cooling-type" value="CRAH_CHILLED" /> 冷冻水精密空调</label>
+        <label class="radio-item"><input type="radio" name="cooling-type" value="IN_ROW" /> 列间空调</label>
+        <label class="radio-item"><input type="radio" name="cooling-type" value="LIQUID" /> 液冷（高密度/AI 推荐）</label>
+      </div>
+      <div class="grid-3">
+        <div class="field">
+          <label>目标室温（°C）</label>
+          <input type="number" id="c-targetTemp" min="15" max="30" value="24" />
+        </div>
+        <div class="field">
+          <label>目标 PUE</label>
+          <input type="number" id="c-targetPue" min="1.0" step="0.01" value="1.6" />
+        </div>
+        <div class="field">
+          <label>单台制冷设备容量（kW）</label>
+          <input type="number" id="c-cracUnitKw" min="1" value="50" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ D. 等级/冗余/预算 ============ -->
+    <section class="card">
+      <h2>4. 等级 / 冗余 / 预算</h2>
+      <div class="grid-3">
+        <div class="field">
+          <label>Tier 等级</label>
+          <select id="d-tier">
+            <option value="T1">Tier I（基础型）</option>
+            <option value="T2">Tier II（冗余组件型）</option>
+            <option value="T3" selected>Tier III（可并行维护型）</option>
+            <option value="T4">Tier IV（容错型）</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>电力冗余</label>
+          <select id="d-powerRedundancy">
+            <option value="N">N（无冗余）</option>
+            <option value="N+1" selected>N+1</option>
+            <option value="2N">2N</option>
+            <option value="2N+1">2N+1</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>制冷冗余</label>
+          <select id="d-coolingRedundancy">
+            <option value="N">N（无冗余）</option>
+            <option value="N+1" selected>N+1</option>
+            <option value="2N">2N</option>
+            <option value="2N+1">2N+1</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>UPS 后备时间（分钟）</label>
+          <input type="number" id="d-backupMinutes" min="1" value="10" />
+        </div>
+        <div class="field">
+          <label>客户预算（USD，选填）</label>
+          <input type="number" id="d-budget" min="0" placeholder="不填则不做预算对比" />
+        </div>
+      </div>
+      <p class="hint-line" id="tier-hint"></p>
+    </section>
+
+    <!-- ============ 高级设置：单价假设 ============ -->
+    <section class="card">
+      <div class="card-title-row">
+        <h2>高级设置：设备参考单价（USD，可按实际供应商报价调整）</h2>
+        <button class="toggle-btn" id="toggle-prices">展开 ▾</button>
+      </div>
+      <div class="grid-3 hidden" id="price-fields">
+        <div class="field">
+          <label>机柜（USD/台）</label>
+          <input type="number" id="price-rack" min="0" value="800" />
+        </div>
+        <div class="field">
+          <label>PDU（USD/条）</label>
+          <input type="number" id="price-pdu" min="0" value="180" />
+        </div>
+        <div class="field">
+          <label>UPS 模块容量（kVA/台）</label>
+          <input type="number" id="price-upsModuleKva" min="1" value="200" />
+        </div>
+        <div class="field">
+          <label>UPS 模块（USD/台）</label>
+          <input type="number" id="price-upsModule" min="0" value="45000" />
+        </div>
+        <div class="field">
+          <label>UPS 电池组（USD/组，10分钟基准）</label>
+          <input type="number" id="price-upsBattery" min="0" value="8000" />
+        </div>
+        <div class="field">
+          <label>制冷设备（USD/台）</label>
+          <input type="number" id="price-coolingUnit" min="0" value="12000" />
+        </div>
+        <div class="field">
+          <label>布线网络配套（USD/柜）</label>
+          <input type="number" id="price-cabling" min="0" value="500" />
+        </div>
+        <div class="field">
+          <label>动环监控 DCIM（USD/套）</label>
+          <input type="number" id="price-dcim" min="0" value="15000" />
+        </div>
+        <div class="field">
+          <label>消防灭火系统（USD/m²）</label>
+          <input type="number" id="price-fireSuppression" min="0" value="80" />
+        </div>
+        <div class="field">
+          <label>安装工程费比例（%）</label>
+          <input type="number" id="price-installFactor" min="0" max="100" value="15" />
+        </div>
+      </div>
+    </section>
+
+    <button class="btn-primary" id="generate-btn">生成设计方案</button>
+
+    <!-- ============ 输出：方案预览 ============ -->
+    <section class="card proposal hidden" id="proposal">
+      <div class="proposal-header">
+        <div>
+          <h2 class="proposal-title" id="out-title">数据中心机房设计方案</h2>
+          <p class="proposal-meta" id="out-meta"></p>
+        </div>
+      </div>
+
+      <h3>方案总览</h3>
+      <div class="dashboard" id="dashboard"></div>
+
+      <h3>关键计算结果</h3>
+      <table class="calc-table" id="calc-table"></table>
+
+      <h3>设备清单与选型（BOM）</h3>
+      <div class="table-scroll">
+        <table class="bom-table" id="bom-table">
+          <thead>
+            <tr><th>设备/项目</th><th>数量</th><th>单位</th><th class="num">单价(USD)</th><th class="num">小计(USD)</th></tr>
+          </thead>
+          <tbody id="bom-tbody"></tbody>
+          <tfoot id="bom-tfoot"></tfoot>
+        </table>
+      </div>
+
+      <h3>机房布局示意</h3>
+      <p class="hint-line">示意图仅表达机柜排列与冷热通道关系，非精确工程图纸</p>
+      <canvas id="layout-canvas" class="layout-canvas"></canvas>
+
+      <h3>报价预估</h3>
+      <div class="cost-summary" id="cost-summary"></div>
+
+      <p class="disclaimer">* 本方案基于行业通用经验参数快速估算，用于客户初步沟通与报价参考；正式实施前需由专业工程团队进行详细设计复核（含电力、制冷、结构承重、消防等强制性规范）。</p>
+
+      <div class="proposal-actions">
+        <button class="btn-secondary" id="copy-btn">复制文字方案</button>
+        <button class="btn-secondary" id="print-btn">打印/导出 PDF</button>
+        <button class="btn-secondary" id="export-btn">导出方案图片</button>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="poster-canvas" class="poster-canvas"></canvas>
+  <div class="poster-modal hidden" id="poster-modal">
+    <div class="poster-modal-mask" id="poster-modal-mask"></div>
+    <div class="poster-modal-content">
+      <img id="poster-image" class="poster-image" alt="方案摘要图" />
+      <div class="poster-modal-actions">
+        <a class="btn-secondary" id="poster-download">下载图片</a>
+        <button class="btn-secondary" id="poster-close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="calc.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
