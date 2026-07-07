@@ -148,6 +148,22 @@
       <p class="hint-line" id="tier-hint"></p>
     </section>
 
+    <!-- ============ E. 低压配电设计（列头柜） ============ -->
+    <section class="card">
+      <h2>5. 低压配电设计（列头柜 RPP）</h2>
+      <div class="grid-3">
+        <div class="field">
+          <label>每行机柜数量（台）</label>
+          <input type="number" id="e-racksPerRow" min="1" value="12" />
+        </div>
+        <div class="field">
+          <label>配电系统电压（V，三相）</label>
+          <input type="number" id="e-systemVoltage" min="1" value="400" />
+        </div>
+      </div>
+      <p class="hint-line">按行配置列头柜：电力冗余为 N 时每行 1 台（单路），N+1/2N/2N+1 时每行 2 台（A/B 双路，各自按整行满载容量配置）。进线开关规格按计算电流就近取标准壳架电流。</p>
+    </section>
+
     <!-- ============ 高级设置：单价假设 ============ -->
     <section class="card">
       <div class="card-title-row">
@@ -162,6 +178,10 @@
         <div class="field">
           <label>PDU（USD/条）</label>
           <input type="number" id="price-pdu" min="0" value="180" />
+        </div>
+        <div class="field">
+          <label>列头配电柜 RPP（USD/台）</label>
+          <input type="number" id="price-rowHeadCabinet" min="0" value="6000" />
         </div>
         <div class="field">
           <label>UPS 模块容量（kVA/台）</label>

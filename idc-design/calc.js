@@ -20,6 +20,14 @@ const COOLING_PUE_DEFAULTS = {
   LIQUID: 1.15, // 液冷（冷板式/浸没式）
 };
 
+// 常见低压断路器标准壳架电流（A），用于将计算电流就近向上取整为可采购的规格
+const STANDARD_BREAKER_FRAMES_A = [63, 100, 160, 200, 250, 315, 400, 630, 800, 1000, 1250, 1600, 2000, 2500, 3200, 4000];
+
+function roundUpToStandardBreaker(currentA) {
+  const match = STANDARD_BREAKER_FRAMES_A.find((frame) => frame >= currentA);
+  return match || STANDARD_BREAKER_FRAMES_A[STANDARD_BREAKER_FRAMES_A.length - 1];
+}
+
 // 冗余等级 -> 模块数量倍数逻辑
 function redundantModuleCount(baseModules, redundancy) {
   switch (redundancy) {
@@ -101,6 +109,21 @@ function generatePlan(input) {
   const pduPerRack = powerRedundancy === 'N' ? 1 : 2;
   const pduCount = rackCount * pduPerRack;
 
+  // ---- 列头柜（RPP，低压配电）----
+  // 标准做法：每一列（行）机柜由一台列头柜供电；冗余等级 >= N+1 时，
+  // 每列配置 A/B 双路列头柜，且每路都按整列满载容量配置（互为备份，而非分摊负载）。
+  const racksPerRow = input.racksPerRow > 0 ? Math.round(input.racksPerRow) : 12;
+  const rowsCount = Math.max(1, Math.ceil(rackCount / racksPerRow));
+  const rowHeadPaths = powerRedundancy === 'N' ? 1 : 2;
+  const rowHeadCabinets = rowsCount * rowHeadPaths;
+
+  const systemVoltage = input.systemVoltage > 0 ? input.systemVoltage : 400; // 三相电压 (V)，国际项目常见 400V IEC 标准
+  const rowHeadLoadKw = racksPerRow * powerDensityPerRack; // 单台列头柜按整列满载配置
+  const rowHeadLoadKva = rowHeadLoadKw / powerFactor;
+  const rowHeadCurrentA = (rowHeadLoadKw * 1000) / (Math.sqrt(3) * systemVoltage * powerFactor);
+  const rowHeadBreakerA = roundUpToStandardBreaker(rowHeadCurrentA);
+  const rowHeadOutputCircuits = racksPerRow; // 每机柜从本路列头柜取 1 个出线回路
+
   // ---- 报价 BOM ----
   const prices = Object.assign(
     {
@@ -109,6 +132,7 @@ function generatePlan(input) {
       upsModule: 45000,
       upsBattery: 8000,
       coolingUnit: input.coolingType === 'LIQUID' ? 25000 : 12000,
+      rowHeadCabinet: 6000,
       cabling: 500,
       dcim: 15000,
       fireSuppression: 80,
@@ -123,6 +147,13 @@ function generatePlan(input) {
   const bomItems = [
     { key: 'rack', label: '标准机柜（42U）', qty: rackCount, unit: '台', unitPrice: prices.rack },
     { key: 'pdu', label: '智能 PDU', qty: pduCount, unit: '条', unitPrice: prices.pdu },
+    {
+      key: 'rowHeadCabinet',
+      label: `列头配电柜 RPP（${rowHeadBreakerA}A 进线/台，${rowHeadPaths === 2 ? 'A/B 双路' : '单路'}）`,
+      qty: rowHeadCabinets,
+      unit: '台',
+      unitPrice: prices.rowHeadCabinet,
+    },
     { key: 'upsModule', label: `UPS 模块（${upsModuleKva}kVA/台）`, qty: upsModules, unit: '台', unitPrice: prices.upsModule },
     { key: 'upsBattery', label: `UPS 电池组（约${backupMinutes}分钟后备）`, qty: upsModules, unit: '组', unitPrice: Math.round(prices.upsBattery * batteryPriceFactor) },
     { key: 'coolingUnit', label: coolingLabel(input.coolingType, cracUnitKw), qty: cracUnits, unit: '台', unitPrice: prices.coolingUnit },
@@ -169,6 +200,16 @@ function generatePlan(input) {
     floorLoadCapacity,
     floorLoadOk,
     pduCount,
+    racksPerRow,
+    rowsCount,
+    rowHeadPaths,
+    rowHeadCabinets,
+    systemVoltage,
+    rowHeadLoadKw,
+    rowHeadLoadKva,
+    rowHeadCurrentA,
+    rowHeadBreakerA,
+    rowHeadOutputCircuits,
     bomItems,
     equipmentSubtotal,
     installCost,

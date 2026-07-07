@@ -122,6 +122,8 @@
       rackWeight: parseFloat($('a-rackWeight').value) || 800,
       floorLoadCapacity: parseFloat($('a-floorLoad').value) || 750,
       powerDensityPerRack: parseFloat($('b-powerDensity').value) || 6,
+      racksPerRow: parseFloat($('e-racksPerRow').value) || 12,
+      systemVoltage: parseFloat($('e-systemVoltage').value) || 400,
       coolingType,
       targetTemp: parseFloat($('c-targetTemp').value) || 24,
       targetPUE: parseFloat($('c-targetPue').value) || COOLING_PUE_DEFAULTS[coolingType],
@@ -134,6 +136,7 @@
       unitPrices: {
         rack: parseFloat($('price-rack').value) || 0,
         pdu: parseFloat($('price-pdu').value) || 0,
+        rowHeadCabinet: parseFloat($('price-rowHeadCabinet').value) || 0,
         upsModuleCapacityKva: parseFloat($('price-upsModuleKva').value) || 200,
         upsModule: parseFloat($('price-upsModule').value) || 0,
         upsBattery: parseFloat($('price-upsBattery').value) || 0,
@@ -190,6 +193,7 @@
       { label: '总 IT 负载', value: `${fmt(plan.itLoadKw, 1)} kW` },
       { label: '设施总负载（含PUE）', value: `${fmt(plan.facilityLoadKw, 1)} kW` },
       { label: 'UPS 建议容量', value: `${fmt(plan.installedUpsKva)} kVA（${plan.upsModules} 台）` },
+      { label: '列头柜（RPP）', value: `${plan.rowHeadCabinets} 台 × ${plan.rowHeadBreakerA}A（${plan.rowHeadPaths === 2 ? 'A/B 双路' : '单路'}）` },
       { label: '制冷建议容量', value: `${fmt(plan.installedCoolingKw)} kW / ${fmt(plan.installedCoolingRT, 1)} RT（${plan.cracUnits} 台）` },
       {
         label: '楼板承重校验',
@@ -218,6 +222,11 @@
       ['建议市电/变压器容量', `${fmt(plan.recommendedUtilityKw)} kW`],
       ['电力冗余等级', plan.powerRedundancy],
       ['UPS 需求容量（含负载与功率因数裕量）', `${fmt(plan.upsModules * plan.upsModuleKva)} kVA`],
+      ['每行机柜数量 / 总行数', `${fmt(plan.racksPerRow)} 台/行　×　${fmt(plan.rowsCount)} 行`],
+      ['列头柜（RPP）配置', `${plan.rowHeadCabinets} 台（${plan.rowHeadPaths === 2 ? 'A/B 双路，每行 2 台' : '单路，每行 1 台'}）`],
+      ['单台列头柜容量', `${fmt(plan.rowHeadLoadKw, 1)} kW / ${fmt(plan.rowHeadLoadKva, 1)} kVA（${fmt(plan.systemVoltage)}V 三相）`],
+      ['列头柜进线开关规格', `${plan.rowHeadBreakerA} A（计算电流 ${fmt(plan.rowHeadCurrentA, 1)} A）`],
+      ['单台列头柜出线回路数', `${fmt(plan.rowHeadOutputCircuits)} 路`],
       ['制冷冗余等级', plan.coolingRedundancy],
       ['制冷负载（含辅助热负荷）', `${fmt(plan.coolingLoadKw, 1)} kW`],
       ['机柜总重量', `${fmt(plan.totalRackWeightKg)} kg`],
@@ -305,8 +314,9 @@
   function drawLayout(plan) {
     const canvas = $('layout-canvas');
     const cssWidth = 820;
-    const racksPerRow = Math.min(12, Math.max(4, Math.round(Math.sqrt(plan.rackCount * 2.2))));
-    const totalRows = Math.max(1, Math.ceil(plan.rackCount / racksPerRow));
+    // 直接复用低压配电设计里的“每行机柜数”，保证排布示意图与列头柜（RPP）配置一致
+    const racksPerRow = plan.racksPerRow;
+    const totalRows = plan.rowsCount;
     const rackW = 26;
     const rackGap = 4;
     const aisleH = 34;
@@ -342,7 +352,7 @@
 
     ctx.fillStyle = textColor;
     ctx.font = '13px sans-serif';
-    ctx.fillText(`机柜排布示意（共 ${plan.rackCount} 台，每行约 ${racksPerRow} 台，含 ${plan.cracUnits} 台制冷设备）`, marginX, 24);
+    ctx.fillText(`机柜排布示意（共 ${plan.rackCount} 台，每行 ${racksPerRow} 台 × ${totalRows} 行，含 ${plan.cracUnits} 台制冷设备、${plan.rowHeadCabinets} 台列头柜）`, marginX, 24);
 
     let y = marginTop;
     let racksLeft = plan.rackCount;
@@ -408,6 +418,7 @@
     lines.push(`  机柜数量：${fmt(plan.rackCount)} 台，机房面积：${fmt(plan.roomArea, 1)} m²`);
     lines.push(`  总 IT 负载：${fmt(plan.itLoadKw, 1)} kW，设施总负载：${fmt(plan.facilityLoadKw, 1)} kW（PUE ${fmt(plan.targetPUE, 2)}）`);
     lines.push(`  UPS：${plan.upsModules} 台 × ${plan.upsModuleKva}kVA（${plan.powerRedundancy}），制冷：${plan.cracUnits} 台 × ${plan.cracUnitKw}kW（${plan.coolingRedundancy}）`);
+    lines.push(`  列头柜（RPP）：${plan.rowHeadCabinets} 台 × ${plan.rowHeadBreakerA}A（${plan.rowHeadPaths === 2 ? 'A/B 双路' : '单路'}，每行 ${fmt(plan.racksPerRow)} 台 × ${fmt(plan.rowsCount)} 行）`);
     lines.push(`  楼板承重校验：${plan.floorLoadOk ? '通过' : '超限，需加固'}（${fmt(plan.loadPerM2, 1)} / ${fmt(plan.floorLoadCapacity)} kg/m²）`);
     lines.push('');
     lines.push('设备清单：');
@@ -474,6 +485,7 @@
       `机柜数量：${fmt(plan.rackCount)} 台　机房面积：${fmt(plan.roomArea, 1)} m²`,
       `总IT负载：${fmt(plan.itLoadKw, 1)} kW　设施总负载：${fmt(plan.facilityLoadKw, 1)} kW（PUE ${fmt(plan.targetPUE, 2)}）`,
       `UPS：${plan.upsModules} 台 × ${plan.upsModuleKva}kVA（${plan.powerRedundancy}）`,
+      `列头柜：${plan.rowHeadCabinets} 台 × ${plan.rowHeadBreakerA}A（${plan.rowHeadPaths === 2 ? 'A/B 双路' : '单路'}）`,
       `制冷：${plan.cracUnits} 台 × ${plan.cracUnitKw}kW（${plan.coolingRedundancy}）`,
       `楼板承重：${plan.floorLoadOk ? '通过' : '超限'}（${fmt(plan.loadPerM2, 1)}/${fmt(plan.floorLoadCapacity)} kg/m²）`,
     ];
