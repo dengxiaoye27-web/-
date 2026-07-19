@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "solid" | "outline" | "ghost";

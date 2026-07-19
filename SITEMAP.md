@@ -114,11 +114,18 @@
 /sitemap.xml
 ```
 
-Locale prefixing is reserved from day one so EN ships first without a rewrite:
-`/en/...` is the default (unprefixed at launch, `en` is the implicit locale),
-future locales mount at `/ar`, `/fr`, `/es`, `/ru`, `/zh` using Next.js
-`i18n` routing conventions once translated content exists. Route structure
-below is written locale-agnostic for that reason.
+**Locale routing is live** (`src/app/[locale]/`, `src/proxy.ts`,
+`src/i18n/config.ts`): English is the default and unprefixed (`/products`),
+while `ar`, `fr`, `es`, `ru`, `zh` are addressable at `/ar/products` etc.
+via a request-time rewrite — no redirect, the URL bar stays clean. All
+internal `<Link>`s go through `src/components/ui/LocaleLink.tsx`, which
+reads the active locale from context and prefixes hrefs automatically, so
+existing/new pages don't need per-link locale handling. `<html lang>` and
+`dir` (RTL for Arabic) are set per locale in `[locale]/layout.tsx`.
+Non-English locales currently render the English content at their
+localized URL — see `translatedLocales` in `src/i18n/config.ts` — real
+translations are a follow-up; the sitemap intentionally lists English
+URLs only until then to avoid duplicate-content signals.
 
 ## B. Homepage structure (`/`)
 

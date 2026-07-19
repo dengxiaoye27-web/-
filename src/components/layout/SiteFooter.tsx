@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import { siteConfig } from "@/lib/site";
 import { productCategories } from "@/data/categories";
 import { solutions } from "@/data/solutions";

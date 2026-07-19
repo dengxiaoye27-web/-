@@ -1,10 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/ui/LocaleLink";
 import { useState } from "react";
 import { mainNav } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 import { MobileNav } from "./MobileNav";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function SiteHeader() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -70,6 +71,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <LanguageSwitcher className="hidden md:block" />
           <Button href="/contact" className="hidden md:inline-flex">
             Request a Quote
           </Button>
