@@ -1,16 +1,4 @@
-const nodes = [
-  "Grid Power",
-  "UPS",
-  "PDU",
-  "Rack",
-  "Cooling",
-  "Monitoring",
-  "Fire Protection",
-  "Liquid Cooling",
-  "Energy Storage",
-];
-
-export function ArchitectureDiagram() {
+export function ArchitectureDiagram({ nodes, caption }: { nodes: string[]; caption: string }) {
   return (
     <div className="rounded-2xl border border-navy-700 bg-navy-900 p-6 md:p-10">
       <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-9 gap-3">
@@ -30,10 +18,7 @@ export function ArchitectureDiagram() {
           </div>
         ))}
       </div>
-      <p className="mt-6 text-sm text-white/50">
-        One coordinated system — from utility power to the rack — engineered,
-        manufactured and monitored by Haisen.
-      </p>
+      <p className="mt-6 text-sm text-white/50">{caption}</p>
     </div>
   );
 }

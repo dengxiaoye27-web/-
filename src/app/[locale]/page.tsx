@@ -9,6 +9,8 @@ import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
+import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Data Center Infrastructure & Critical Power Solutions",
@@ -17,67 +19,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const coreSolutions = [
-  {
-    title: "Critical Power",
-    description: "Redundant, monitored power architecture from utility feed to IT load.",
-    href: "/solutions/critical-power",
-  },
-  {
-    title: "Power Distribution",
-    description: "Intelligent, metered and switched PDUs with outlet-level monitoring.",
-    href: "/products/power-distribution",
-  },
-  {
-    title: "Data Center Cabinets",
-    description: "Engineered enclosures for airflow, load capacity and cable management.",
-    href: "/products/network-server-cabinets",
-  },
-  {
-    title: "Micro Modular Data Centers",
-    description: "Factory-integrated data centers ready for rapid site deployment.",
-    href: "/solutions/micro-modular-data-center",
-  },
-  {
-    title: "Containerized Data Centers",
-    description: "Site-independent, factory-built data centers deployed in weeks.",
-    href: "/solutions/containerized-data-center",
-  },
-  {
-    title: "Cooling & Liquid Cooling",
-    description: "Precision, in-row and cold plate liquid cooling for high-density racks.",
-    href: "/solutions/liquid-cooling",
-  },
-  {
-    title: "Energy Storage",
-    description: "Battery energy storage for resilience, peak shaving and renewables.",
-    href: "/solutions/energy-storage",
-  },
+const coreSolutionHrefs = [
+  "/solutions/critical-power",
+  "/products/power-distribution",
+  "/products/network-server-cabinets",
+  "/solutions/micro-modular-data-center",
+  "/solutions/containerized-data-center",
+  "/solutions/liquid-cooling",
+  "/solutions/energy-storage",
 ];
 
-const industries = [
-  "Data Centers",
-  "Telecommunications",
-  "Banking",
-  "Government",
-  "Energy",
-  "Industrial",
-  "Cloud Computing",
-  "Edge Computing",
-];
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  const t = getHomeMessages(locale);
+  const common = getCommonMessages(locale);
 
-const whyHaisen = [
-  { title: "Manufacturing Capability", description: "Factory-direct production of power, enclosure and cooling systems at scale." },
-  { title: "Engineering Expertise", description: "In-house engineering for power, thermal and system architecture design." },
-  { title: "Customization", description: "Configurable specifications matched to project electrical and site requirements." },
-  { title: "OEM & ODM", description: "Private-label and custom-designed programs for distributors and partners." },
-  { title: "Global Delivery", description: "Export experience across the Middle East, Africa, Southeast Asia, Europe and beyond." },
-  { title: "Quality Control", description: "Factory testing at every production stage before shipment." },
-];
-
-const markets = ["Middle East", "Africa", "Southeast Asia", "Europe", "South America", "Central Asia"];
-
-export default function HomePage() {
   const featuredProducts = getFeaturedProducts();
   const latestArticles = articles.slice(0, 3);
 
@@ -94,18 +55,17 @@ export default function HomePage() {
           aria-hidden
         />
         <div className="container-page relative py-28 md:py-40">
-          <p className="eyebrow mb-6">One-Stop Data Center Infrastructure &amp; Critical Power Solution Provider</p>
+          <p className="eyebrow mb-6">{t.hero.eyebrow}</p>
           <h1 className="max-w-4xl text-5xl md:text-7xl font-semibold tracking-tight">
-            Powering the Infrastructure Behind the Digital World
+            {t.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed">
-            Integrated Data Center Infrastructure, Critical Power, Cooling and
-            Modular Data Center Solutions.
+            {t.hero.subtitle}
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/solutions">Explore Solutions</Button>
+            <Button href="/solutions">{t.hero.ctaPrimary}</Button>
             <Button href="/contact" variant="outline">
-              Request a Quote
+              {t.hero.ctaSecondary}
             </Button>
           </div>
         </div>
@@ -116,16 +76,15 @@ export default function HomePage() {
         <div className="container-page">
           <Reveal>
             <SectionHeading
-              eyebrow="About Haisen"
-              title="Trusted Data Center Infrastructure Partner"
-              description="Guangdong Haisen New Building Materials Technology Co., Ltd. designs and manufactures data center infrastructure and critical power products — from rack PDUs to full containerized data centers — supplying data center operators, telecom operators, system integrators and EPC contractors across global markets."
+              eyebrow={t.trustedPartner.eyebrow}
+              title={t.trustedPartner.title}
+              description={t.trustedPartner.description}
             />
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <StatTile value="9" label="Product Categories" />
-            <StatTile value="50+" label="Data Center Infrastructure Products" />
-            <StatTile value="6" label="Target Regions Served" />
-            <StatTile value="OEM/ODM" label="Factory-Direct Manufacturing" />
+            {t.trustedPartner.stats.map((stat) => (
+              <StatTile key={stat.label} value={stat.value} label={stat.label} />
+            ))}
           </div>
         </div>
       </section>
@@ -135,18 +94,18 @@ export default function HomePage() {
         <div className="container-page">
           <Reveal>
             <SectionHeading
-              eyebrow="What We Provide"
-              title="Our Core Solutions"
-              description="A complete infrastructure stack, engineered as one coordinated system rather than sold as disconnected products."
+              eyebrow={t.coreSolutions.eyebrow}
+              title={t.coreSolutions.title}
+              description={t.coreSolutions.description}
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {coreSolutions.map((item) => (
-              <Card key={item.title} href={item.href}>
+            {t.coreSolutions.items.map((item, i) => (
+              <Card key={item.title} href={coreSolutionHrefs[i]}>
                 <h3 className="text-xl font-semibold text-ink-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
                 <span className="mt-4 inline-block text-sm font-medium text-accent-500 group-hover:translate-x-1 transition-transform">
-                  Learn more →
+                  {common.nav.learnMore} →
                 </span>
               </Card>
             ))}
@@ -158,7 +117,7 @@ export default function HomePage() {
       <section className="bg-white py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow="Featured Products" title="Engineered for Data Center Deployment" />
+            <SectionHeading eyebrow={t.featuredProducts.eyebrow} title={t.featuredProducts.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {featuredProducts.map((product) => (
@@ -171,7 +130,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <Link href="/products" className="text-sm font-medium text-accent-500 hover:text-accent-400">
-              View all products →
+              {t.featuredProducts.viewAll} →
             </Link>
           </div>
         </div>
@@ -183,13 +142,13 @@ export default function HomePage() {
           <Reveal>
             <SectionHeading
               light
-              eyebrow="System Architecture"
-              title="One-Stop Data Center Solution"
-              description="Haisen doesn't sell a single product — we engineer the full path from grid power to the rack."
+              eyebrow={t.architecture.eyebrow}
+              title={t.architecture.title}
+              description={t.architecture.description}
             />
           </Reveal>
           <div className="mt-12">
-            <ArchitectureDiagram />
+            <ArchitectureDiagram nodes={t.architecture.nodes} caption={t.architecture.caption} />
           </div>
         </div>
       </section>
@@ -198,10 +157,10 @@ export default function HomePage() {
       <section className="bg-white py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow="Who We Serve" title="Industries We Serve" />
+            <SectionHeading eyebrow={t.industries.eyebrow} title={t.industries.title} />
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {industries.map((industry) => (
+            {t.industries.items.map((industry) => (
               <div
                 key={industry}
                 className="rounded-xl border border-line-200 px-5 py-6 text-center hover:border-accent-500/60 transition-colors"
@@ -217,10 +176,10 @@ export default function HomePage() {
       <section className="bg-paper-50 py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow="Why Choose Us" title="Why Haisen" />
+            <SectionHeading eyebrow={t.whyHaisen.eyebrow} title={t.whyHaisen.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {whyHaisen.map((item) => (
+            {t.whyHaisen.items.map((item) => (
               <Card key={item.title}>
                 <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
@@ -236,13 +195,13 @@ export default function HomePage() {
           <Reveal>
             <SectionHeading
               light
-              eyebrow="Global Reach"
-              title="Global Projects"
-              description="Haisen infrastructure is deployed across data center, telecom and government projects in key growth markets."
+              eyebrow={t.globalProjects.eyebrow}
+              title={t.globalProjects.title}
+              description={t.globalProjects.description}
             />
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
-            {markets.map((market) => (
+            {t.globalProjects.markets.map((market) => (
               <div key={market} className="rounded-xl border border-navy-700 bg-navy-900 px-5 py-6 text-center">
                 <p className="font-medium">{market}</p>
               </div>
@@ -250,7 +209,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <Link href="/projects" className="text-sm font-medium text-accent-400 hover:text-accent-500">
-              View project case studies →
+              {t.globalProjects.viewProjects} →
             </Link>
           </div>
         </div>
@@ -260,7 +219,7 @@ export default function HomePage() {
       <section className="bg-white py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow="Standards" title="Certifications" />
+            <SectionHeading eyebrow={t.certifications.eyebrow} title={t.certifications.title} />
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert) => (
@@ -277,7 +236,7 @@ export default function HomePage() {
       <section className="bg-paper-50 py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow="Knowledge Center" title="Latest Insights" />
+            <SectionHeading eyebrow={t.insights.eyebrow} title={t.insights.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {latestArticles.map((article) => (
@@ -295,13 +254,13 @@ export default function HomePage() {
       <section className="bg-navy-950 py-20 md:py-28 text-white text-center">
         <div className="container-page">
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-            Planning a Data Center Project?
+            {t.finalCta.title}
           </h2>
-          <p className="mt-4 text-lg text-white/70">Talk to Our Engineering Team</p>
+          <p className="mt-4 text-lg text-white/70">{t.finalCta.subtitle}</p>
           <div className="mt-10 flex justify-center gap-4">
-            <Button href="/contact">Request a Quote</Button>
+            <Button href="/contact">{t.hero.ctaSecondary}</Button>
             <Button href="/solutions" variant="outline">
-              Explore Solutions
+              {t.hero.ctaPrimary}
             </Button>
           </div>
         </div>

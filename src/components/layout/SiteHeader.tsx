@@ -2,12 +2,17 @@
 
 import Link from "@/components/ui/LocaleLink";
 import { useState } from "react";
-import { mainNav } from "@/lib/nav";
+import { getMainNav } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useLocale } from "@/i18n/LocaleContext";
+import { getCommonMessages } from "@/i18n/messages";
 
 export function SiteHeader() {
+  const locale = useLocale();
+  const t = getCommonMessages(locale);
+  const mainNav = getMainNav(t);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -17,7 +22,7 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center gap-2 text-white">
           <span className="text-xl font-semibold tracking-tight">HAISEN</span>
           <span className="hidden md:inline text-xs text-white/50 border-l border-white/20 pl-2 ml-1">
-            Data Center Infrastructure
+            {t.nav.headerTagline}
           </span>
         </Link>
 
@@ -60,7 +65,7 @@ export function SiteHeader() {
                         href={item.href}
                         className="text-sm font-medium text-accent-400 hover:text-accent-500"
                       >
-                        View all {item.label} →
+                        {t.nav.viewAll} {item.label} →
                       </Link>
                     </div>
                   </div>
@@ -73,7 +78,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher className="hidden md:block" />
           <Button href="/contact" className="hidden md:inline-flex">
-            Request a Quote
+            {t.nav.requestQuote}
           </Button>
           <button
             type="button"
@@ -88,7 +93,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} mainNav={mainNav} requestQuoteLabel={t.nav.requestQuote} />
     </header>
   );
 }

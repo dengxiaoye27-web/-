@@ -2,10 +2,20 @@
 
 import Link from "@/components/ui/LocaleLink";
 import { useState } from "react";
-import { mainNav } from "@/lib/nav";
+import { NavItem } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
 
-export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function MobileNav({
+  open,
+  onClose,
+  mainNav,
+  requestQuoteLabel,
+}: {
+  open: boolean;
+  onClose: () => void;
+  mainNav: NavItem[];
+  requestQuoteLabel: string;
+}) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   if (!open) return null;
@@ -71,7 +81,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
         </nav>
 
         <Button href="/contact" className="mt-6 w-full">
-          Request a Quote
+          {requestQuoteLabel}
         </Button>
       </div>
     </div>
