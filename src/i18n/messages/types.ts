@@ -135,6 +135,40 @@ export interface AboutMessages {
   };
 }
 
+export interface SolutionsUIMessages {
+  hub: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    browseTitle: string;
+    viewSolution: string;
+  };
+  detail: {
+    challengeEyebrow: string;
+    challengeTitle: string;
+    architectureEyebrow: string;
+    architectureTitle: string;
+    systemEyebrow: string;
+    systemTitle: string;
+    howEyebrow: string;
+    howTitle: string;
+    configEyebrow: string;
+    configTitle: string;
+    advantagesEyebrow: string;
+    advantagesTitle: string;
+    processEyebrow: string;
+    processTitle: string;
+    stepLabel: string;
+    appsEyebrow: string;
+    appsTitle: string;
+    faqEyebrow: string;
+    faqTitle: string;
+    ctaTitle: string;
+    ctaDescription: string;
+    ctaButton: string;
+  };
+}
+
 export interface ContactMessages {
   hero: {
     title: string;

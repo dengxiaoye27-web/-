@@ -3,6 +3,9 @@ import Link from "@/components/ui/LocaleLink";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { solutions } from "@/data/solutions";
+import { getSolutionContent } from "@/i18n/content/solutions";
+import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Data Center & Critical Power Solutions",
@@ -11,39 +14,47 @@ export const metadata: Metadata = {
   alternates: { canonical: "/solutions" },
 };
 
-export default function SolutionsPage() {
+export default async function SolutionsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  const ui = getSolutionsUiMessages(locale);
+  const common = getCommonMessages(locale);
+
   return (
     <div className="bg-white">
       <div className="bg-navy-950 text-white py-16 md:py-24">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions" }]} />
+          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.solutions }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            Data Center & Critical Power Solutions
+            {ui.hub.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">
-            Haisen designs systems, not just products — engineered around the
-            problem a customer needs to solve, then built from our own
-            manufactured power, cooling and enclosure products.
-          </p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{ui.hub.subtitle}</p>
         </div>
       </div>
 
       <div className="container-page py-20">
-        <SectionHeading eyebrow="Solutions" title="Browse Solutions" />
+        <SectionHeading eyebrow={ui.hub.eyebrow} title={ui.hub.browseTitle} />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/solutions/${s.slug}`}
-              className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
-            >
-              <h2 className="text-lg font-semibold text-ink-900">{s.name}</h2>
-              <p className="mt-2 text-sm text-ink-600 leading-relaxed">{s.tagline}</p>
-              <span className="mt-4 inline-block text-sm font-medium text-accent-500">
-                View solution →
-              </span>
-            </Link>
-          ))}
+          {solutions.map((s) => {
+            const content = getSolutionContent(s.slug, locale, s);
+            return (
+              <Link
+                key={s.slug}
+                href={`/solutions/${s.slug}`}
+                className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
+              >
+                <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+                <span className="mt-4 inline-block text-sm font-medium text-accent-500">
+                  {ui.hub.viewSolution} →
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
