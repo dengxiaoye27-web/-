@@ -7,6 +7,9 @@ import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getSolution, solutions } from "@/data/solutions";
+import { getSolutionContent } from "@/i18n/content/solutions";
+import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -18,12 +21,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
   const solution = getSolution(slug);
   if (!solution) return {};
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  const content = getSolutionContent(slug, locale, solution);
   return {
-    title: solution.name,
-    description: solution.tagline,
+    title: content.name,
+    description: content.tagline,
     alternates: { canonical: `/solutions/${solution.slug}` },
   };
 }
@@ -33,21 +38,26 @@ export default async function SolutionPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
   const solution = getSolution(slug);
   if (!solution) notFound();
 
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  const content = getSolutionContent(slug, locale, solution);
+  const ui = getSolutionsUiMessages(locale);
+  const common = getCommonMessages(locale);
+
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Solutions", href: "/solutions" },
-    { label: solution.name },
+    { label: common.nav.home, href: "/" },
+    { label: common.nav.solutions, href: "/solutions" },
+    { label: content.name },
   ];
 
   return (
     <div className="bg-white">
       <JsonLd
         data={[
-          faqSchema(solution.faqs),
+          faqSchema(content.faqs),
           breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/solutions/${solution.slug}` }))),
         ]}
       />
@@ -56,28 +66,28 @@ export default async function SolutionPage({
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            {solution.name}
+            {content.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">{solution.tagline}</p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{content.tagline}</p>
         </div>
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
         <section className="grid gap-10 md:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="The Problem" title="Customer Challenge" />
-            <p className="mt-6 text-ink-600 leading-relaxed">{solution.customerChallenge}</p>
+            <SectionHeading eyebrow={ui.detail.challengeEyebrow} title={ui.detail.challengeTitle} />
+            <p className="mt-6 text-ink-600 leading-relaxed">{content.customerChallenge}</p>
           </div>
           <div>
-            <SectionHeading eyebrow="The Approach" title="Solution Architecture" />
-            <p className="mt-6 text-ink-600 leading-relaxed">{solution.solutionArchitecture}</p>
+            <SectionHeading eyebrow={ui.detail.architectureEyebrow} title={ui.detail.architectureTitle} />
+            <p className="mt-6 text-ink-600 leading-relaxed">{content.solutionArchitecture}</p>
           </div>
         </section>
 
         <section>
-          <SectionHeading eyebrow="System" title="System Components" />
+          <SectionHeading eyebrow={ui.detail.systemEyebrow} title={ui.detail.systemTitle} />
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {solution.systemComponents.map((c) => (
+            {content.systemComponents.map((c) => (
               <div key={c.name} className="rounded-2xl border border-line-200 p-6">
                 <h3 className="text-lg font-semibold text-ink-900">{c.name}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{c.description}</p>
@@ -87,9 +97,9 @@ export default async function SolutionPage({
         </section>
 
         <section className="rounded-2xl border border-navy-700 bg-navy-950 p-8 md:p-10 text-white">
-          <SectionHeading light eyebrow="Architecture" title="How It Works" />
+          <SectionHeading light eyebrow={ui.detail.howEyebrow} title={ui.detail.howTitle} />
           <ol className="mt-8 space-y-4">
-            {solution.howItWorks.map((step, i) => (
+            {content.howItWorks.map((step, i) => (
               <li key={step} className="flex gap-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-500 text-sm font-semibold">
                   {i + 1}
@@ -101,16 +111,16 @@ export default async function SolutionPage({
         </section>
 
         <section>
-          <SectionHeading eyebrow="Configuration" title="Product Configuration" />
+          <SectionHeading eyebrow={ui.detail.configEyebrow} title={ui.detail.configTitle} />
           <div className="mt-8">
             <RelatedProducts slugs={solution.relatedProductSlugs} />
           </div>
         </section>
 
         <section>
-          <SectionHeading eyebrow="Advantages" title="Technical Advantages" />
+          <SectionHeading eyebrow={ui.detail.advantagesEyebrow} title={ui.detail.advantagesTitle} />
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {solution.technicalAdvantages.map((a) => (
+            {content.technicalAdvantages.map((a) => (
               <li key={a} className="flex items-start gap-3 rounded-xl border border-line-200 px-4 py-3 text-sm text-ink-900">
                 <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" aria-hidden />
                 {a}
@@ -120,11 +130,11 @@ export default async function SolutionPage({
         </section>
 
         <section>
-          <SectionHeading eyebrow="Process" title="Deployment Process" />
+          <SectionHeading eyebrow={ui.detail.processEyebrow} title={ui.detail.processTitle} />
           <ol className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {solution.deploymentProcess.map((step, i) => (
+            {content.deploymentProcess.map((step, i) => (
               <li key={step.step} className="rounded-2xl border border-line-200 p-6">
-                <p className="eyebrow mb-2">Step {i + 1}</p>
+                <p className="eyebrow mb-2">{ui.detail.stepLabel} {i + 1}</p>
                 <h3 className="text-lg font-semibold text-ink-900">{step.step}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{step.description}</p>
               </li>
@@ -133,9 +143,9 @@ export default async function SolutionPage({
         </section>
 
         <section>
-          <SectionHeading eyebrow="Deployment" title="Typical Applications" />
+          <SectionHeading eyebrow={ui.detail.appsEyebrow} title={ui.detail.appsTitle} />
           <div className="mt-6 flex flex-wrap gap-3">
-            {solution.typicalApplications.map((a) => (
+            {content.typicalApplications.map((a) => (
               <span key={a} className="rounded-full border border-line-200 px-4 py-1.5 text-sm font-medium text-ink-900">
                 {a}
               </span>
@@ -144,20 +154,17 @@ export default async function SolutionPage({
         </section>
 
         <section>
-          <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" />
+          <SectionHeading eyebrow={ui.detail.faqEyebrow} title={ui.detail.faqTitle} />
           <div className="mt-8 max-w-3xl">
-            <Accordion items={solution.faqs} />
+            <Accordion items={content.faqs} />
           </div>
         </section>
 
         <section className="rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center">
-          <h3 className="text-2xl font-semibold">Request This Solution</h3>
-          <p className="mt-2 text-white/60 max-w-xl mx-auto">
-            Tell us about your project and our engineering team will propose a
-            configuration matched to your site requirements.
-          </p>
+          <h3 className="text-2xl font-semibold">{ui.detail.ctaTitle}</h3>
+          <p className="mt-2 text-white/60 max-w-xl mx-auto">{ui.detail.ctaDescription}</p>
           <div className="mt-6 flex justify-center">
-            <Button href="/contact">Request Solution</Button>
+            <Button href="/contact">{ui.detail.ctaButton}</Button>
           </div>
         </section>
       </div>
