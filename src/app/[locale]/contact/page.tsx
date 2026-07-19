@@ -3,6 +3,8 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RFQForm } from "@/components/forms/RFQForm";
 import { siteConfig } from "@/lib/site";
+import { getContactMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: "Contact & Request a Quote",
@@ -11,43 +13,49 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+  const t = getContactMessages(locale);
+  const common = getCommonMessages(locale);
+
   return (
     <div className="bg-white">
       <div className="bg-navy-950 text-white py-16 md:py-24">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
+          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.contact }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            Talk to Our Engineering Team
+            {t.hero.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">
-            Product inquiry or full project quote — tell us what you&apos;re
-            working on and we&apos;ll respond with the right specification.
-          </p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{t.hero.subtitle}</p>
         </div>
       </div>
 
       <div className="container-page py-16 md:py-20 grid gap-16 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <SectionHeading eyebrow="Request a Quote" title="Send Us Your Requirements" />
+          <SectionHeading eyebrow={t.form.eyebrow} title={t.form.title} />
           <div className="mt-8">
-            <RFQForm />
+            <RFQForm messages={t.form} />
           </div>
         </div>
 
         <div className="space-y-8">
           <div className="rounded-2xl border border-line-200 p-6">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">Email</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.email}</h3>
             <p className="mt-2 text-ink-900">{siteConfig.email}</p>
           </div>
           <div className="rounded-2xl border border-line-200 p-6">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">WhatsApp</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.whatsapp}</h3>
             <a href={siteConfig.whatsapp} className="mt-2 block text-accent-500 hover:text-accent-400">
-              Chat with us on WhatsApp
+              {t.sidebar.whatsappCta}
             </a>
           </div>
           <div className="rounded-2xl border border-line-200 p-6">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">Location</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.location}</h3>
             <p className="mt-2 text-ink-900">{siteConfig.address}</p>
           </div>
         </div>
