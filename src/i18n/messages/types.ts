@@ -169,6 +169,34 @@ export interface SolutionsUIMessages {
   };
 }
 
+export interface ProductsUIMessages {
+  hubTitle: string;
+  hubSubtitle: string;
+  categoriesEyebrow: string;
+  categoriesTitle: string;
+  catalogEyebrow: string;
+  catalogTitle: string;
+  overviewEyebrow: string;
+  overviewTitle: string;
+  featuresEyebrow: string;
+  featuresTitle: string;
+  specsEyebrow: string;
+  specsTitle: string;
+  applicationsEyebrow: string;
+  applicationsTitle: string;
+  customizationEyebrow: string;
+  customizationTitle: string;
+  standardsEyebrow: string;
+  standardsTitle: string;
+  faqEyebrow: string;
+  faqTitle: string;
+  relatedSolutionsEyebrow: string;
+  relatedSolutionsTitle: string;
+  relatedProductsEyebrow: string;
+  relatedProductsTitle: string;
+  categoryComingSoon: string;
+}
+
 export interface ContactMessages {
   hero: {
     title: string;

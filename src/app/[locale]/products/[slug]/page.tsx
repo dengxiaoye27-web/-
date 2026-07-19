@@ -13,6 +13,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
+import { getProductContent } from "@/i18n/content/products";
+import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export function generateStaticParams() {
   return [
@@ -26,12 +29,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const product = getProduct(slug);
   if (product) {
+    const content = getProductContent(slug, locale, product);
     return {
-      title: product.name,
-      description: product.overview,
+      title: content.name,
+      description: content.overview,
       alternates: { canonical: `/products/${product.slug}` },
     };
   }
@@ -51,19 +56,22 @@ export default async function ProductOrCategoryPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const product = getProduct(slug);
-  if (product) return <ProductDetail slug={slug} />;
+  if (product) return <ProductDetail slug={slug} locale={locale} />;
 
   const category = getCategory(slug);
-  if (category) return <CategoryListing slug={slug} />;
+  if (category) return <CategoryListing slug={slug} locale={locale} />;
 
   notFound();
 }
 
-function CategoryListing({ slug }: { slug: string }) {
+function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
   const category = getCategory(slug)!;
   const items = getProductsByCategory(slug);
+  const t = getProductsUiMessages(locale);
+  const common = getCommonMessages(locale);
 
   return (
     <div className="bg-white">
@@ -71,8 +79,8 @@ function CategoryListing({ slug }: { slug: string }) {
         <div className="container-page">
           <Breadcrumbs
             items={[
-              { label: "Home", href: "/" },
-              { label: "Products", href: "/products" },
+              { label: common.nav.home, href: "/" },
+              { label: common.nav.products, href: "/products" },
               { label: category.name },
             ]}
           />
@@ -87,46 +95,49 @@ function CategoryListing({ slug }: { slug: string }) {
       <div className="container-page py-20">
         {items.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/products/${p.slug}`}
-                className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
-              >
-                <p className="eyebrow mb-2">{p.shortName}</p>
-                <h2 className="text-lg font-semibold text-ink-900">{p.name}</h2>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{p.tagline}</p>
-              </Link>
-            ))}
+            {items.map((p) => {
+              const content = getProductContent(p.slug, locale, p);
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/products/${p.slug}`}
+                  className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
+                >
+                  <p className="eyebrow mb-2">{content.shortName}</p>
+                  <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+                </Link>
+              );
+            })}
           </div>
         ) : (
-          <p className="text-ink-600">
-            Detailed product pages for this category are being added. Contact
-            our engineering team for current availability and specifications.
-          </p>
+          <p className="text-ink-600">{t.categoryComingSoon}</p>
         )}
       </div>
     </div>
   );
 }
 
-function ProductDetail({ slug }: { slug: string }) {
+function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
   const product = getProduct(slug)!;
   const category = getCategory(product.category);
+  const content = getProductContent(slug, locale, product);
+  const t = getProductsUiMessages(locale);
+  const common = getCommonMessages(locale);
 
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Products", href: "/products" },
+    { label: common.nav.home, href: "/" },
+    { label: common.nav.products, href: "/products" },
     ...(category ? [{ label: category.name, href: `/products/${category.slug}` }] : []),
-    { label: product.name },
+    { label: content.name },
   ];
 
   return (
     <div className="bg-white">
       <JsonLd
         data={[
-          productSchema(product),
-          faqSchema(product.faqs),
+          productSchema({ ...product, ...content }),
+          faqSchema(content.faqs),
           breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${product.slug}` }))),
         ]}
       />
@@ -136,37 +147,37 @@ function ProductDetail({ slug }: { slug: string }) {
           <Breadcrumbs items={breadcrumbItems} />
           <p className="eyebrow mt-6 mb-3">{category?.name}</p>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            {product.name}
+            {content.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">{product.tagline}</p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{content.tagline}</p>
         </div>
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
         <section>
-          <SectionHeading eyebrow="Overview" title="Product Overview" />
-          <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{product.overview}</p>
+          <SectionHeading eyebrow={t.overviewEyebrow} title={t.overviewTitle} />
+          <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
         </section>
 
         <section>
-          <SectionHeading eyebrow="Capabilities" title="Key Features" />
+          <SectionHeading eyebrow={t.featuresEyebrow} title={t.featuresTitle} />
           <div className="mt-8">
-            <FeatureGrid items={product.keyFeatures} />
+            <FeatureGrid items={content.keyFeatures} />
           </div>
         </section>
 
         <section>
-          <SectionHeading eyebrow="Specifications" title="Technical Specifications" />
+          <SectionHeading eyebrow={t.specsEyebrow} title={t.specsTitle} />
           <div className="mt-8">
-            <SpecTable groups={product.specGroups} />
+            <SpecTable groups={content.specGroups} />
           </div>
         </section>
 
         <section className="grid gap-10 md:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="Deployment" title="Applications" />
+            <SectionHeading eyebrow={t.applicationsEyebrow} title={t.applicationsTitle} />
             <ul className="mt-6 space-y-2">
-              {product.applications.map((a) => (
+              {content.applications.map((a) => (
                 <li key={a} className="flex items-start gap-2 text-ink-600">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-500" aria-hidden />
                   {a}
@@ -175,9 +186,9 @@ function ProductDetail({ slug }: { slug: string }) {
             </ul>
           </div>
           <div>
-            <SectionHeading eyebrow="Configuration" title="Customization Options" />
+            <SectionHeading eyebrow={t.customizationEyebrow} title={t.customizationTitle} />
             <ul className="mt-6 space-y-2">
-              {product.customizationOptions.map((c) => (
+              {content.customizationOptions.map((c) => (
                 <li key={c} className="flex items-start gap-2 text-ink-600">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-500" aria-hidden />
                   {c}
@@ -187,11 +198,11 @@ function ProductDetail({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {product.standards.length > 0 ? (
+        {content.standards.length > 0 ? (
           <section>
-            <SectionHeading eyebrow="Standards" title="Compliance & Standards" />
+            <SectionHeading eyebrow={t.standardsEyebrow} title={t.standardsTitle} />
             <div className="mt-6 flex flex-wrap gap-3">
-              {product.standards.map((s) => (
+              {content.standards.map((s) => (
                 <span
                   key={s}
                   className="rounded-full border border-line-200 px-4 py-1.5 text-sm font-medium text-ink-900"
@@ -204,19 +215,19 @@ function ProductDetail({ slug }: { slug: string }) {
         ) : null}
 
         <section>
-          <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" />
+          <SectionHeading eyebrow={t.faqEyebrow} title={t.faqTitle} />
           <div className="mt-8 max-w-3xl">
-            <Accordion items={product.faqs} />
+            <Accordion items={content.faqs} />
           </div>
         </section>
 
         <section>
-          <InquiryCTA productName={product.name} />
+          <InquiryCTA productName={content.name} />
         </section>
 
         {product.relatedSolutionSlugs.length > 0 ? (
           <section>
-            <SectionHeading eyebrow="Solutions" title="Related Solutions" />
+            <SectionHeading eyebrow={t.relatedSolutionsEyebrow} title={t.relatedSolutionsTitle} />
             <div className="mt-8">
               <RelatedSolutions slugs={product.relatedSolutionSlugs} />
             </div>
@@ -225,7 +236,7 @@ function ProductDetail({ slug }: { slug: string }) {
 
         {product.relatedProductSlugs.length > 0 ? (
           <section>
-            <SectionHeading eyebrow="Explore More" title="Related Products" />
+            <SectionHeading eyebrow={t.relatedProductsEyebrow} title={t.relatedProductsTitle} />
             <div className="mt-8">
               <RelatedProducts slugs={product.relatedProductSlugs} />
             </div>
