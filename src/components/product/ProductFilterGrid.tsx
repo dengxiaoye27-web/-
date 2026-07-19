@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Product, ProductCategory } from "@/data/types";
+import { useLocale } from "@/i18n/LocaleContext";
+import { getProductContent } from "@/i18n/content/products";
+import { getCommonMessages } from "@/i18n/messages";
 
 export function ProductFilterGrid({
   products,
@@ -11,6 +14,8 @@ export function ProductFilterGrid({
   products: Product[];
   categories: ProductCategory[];
 }) {
+  const locale = useLocale();
+  const common = getCommonMessages(locale);
   const [active, setActive] = useState<string>("all");
 
   const filtered = active === "all" ? products : products.filter((p) => p.category === active);
@@ -27,7 +32,7 @@ export function ProductFilterGrid({
               : "border border-line-200 text-ink-600 hover:border-accent-500"
           }`}
         >
-          All Products
+          {common.nav.products}
         </button>
         {categories.map((c) => (
           <button
@@ -46,13 +51,16 @@ export function ProductFilterGrid({
       </div>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((product) => (
-          <Card key={product.slug} href={`/products/${product.slug}`}>
-            <p className="eyebrow mb-2">{product.shortName}</p>
-            <h3 className="text-lg font-semibold text-ink-900">{product.name}</h3>
-            <p className="mt-2 text-sm text-ink-600 leading-relaxed">{product.tagline}</p>
-          </Card>
-        ))}
+        {filtered.map((product) => {
+          const content = getProductContent(product.slug, locale, product);
+          return (
+            <Card key={product.slug} href={`/products/${product.slug}`}>
+              <p className="eyebrow mb-2">{content.shortName}</p>
+              <h3 className="text-lg font-semibold text-ink-900">{content.name}</h3>
+              <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+            </Card>
+          );
+        })}
       </div>
     </div>
   );

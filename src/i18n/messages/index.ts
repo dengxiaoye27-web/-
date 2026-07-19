@@ -4,6 +4,7 @@ import { homeMessages } from "./home";
 import { aboutMessages } from "./about";
 import { contactMessages } from "./contact";
 import { solutionsUiMessages } from "./solutionsUi";
+import { productsUiMessages } from "./productsUi";
 
 export function getCommonMessages(locale: Locale) {
   return commonMessages[locale];
@@ -23,6 +24,10 @@ export function getContactMessages(locale: Locale) {
 
 export function getSolutionsUiMessages(locale: Locale) {
   return solutionsUiMessages[locale];
+}
+
+export function getProductsUiMessages(locale: Locale) {
+  return productsUiMessages[locale];
 }
 
 export * from "./types";
