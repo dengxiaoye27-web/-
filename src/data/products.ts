@@ -208,6 +208,318 @@ export const products: Product[] = [
     relatedProductSlugs: ["intelligent-pdu", "pdu", "modular-ups"],
     relatedSolutionSlugs: ["ai-data-center", "critical-power"],
   },
+  {
+    slug: "metered-pdu",
+    category: "power-distribution",
+    name: "Metered PDU",
+    shortName: "Metered PDU",
+    tagline: "Rack PDU with local current and voltage display for on-site load visibility.",
+    overview:
+      "The Haisen Metered PDU adds a built-in digital display to a standard rack PDU, showing current and/or voltage draw at a glance without requiring network access — a straightforward upgrade for sites that need load visibility during installation and maintenance but don't require remote monitoring.",
+    keyFeatures: [
+      "Local LCD/LED display of current and voltage",
+      "Single-phase and three-phase configurations",
+      "No network dependency for basic load readings",
+      "Same rugged busbar and outlet options as the base Rack PDU",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "200–250V / 380–415V" },
+          { label: "Rated Current", value: "16A / 32A / 63A" },
+          { label: "Display", value: "Local digital current/voltage meter" },
+        ],
+      },
+      {
+        title: "Mechanical",
+        specs: [
+          { label: "Mounting", value: "0U vertical / horizontal" },
+          { label: "Outlet Options", value: "IEC C13/C19, country-specific" },
+        ],
+      },
+    ],
+    applications: ["Server rooms without DCIM integration", "Installation and commissioning load checks", "Small IT closets"],
+    customizationOptions: ["Outlet type and quantity", "Display placement", "Input plug"],
+    standards: ["Designed to IEC 60320 connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Is a metered PDU enough, or do I need a monitored PDU?",
+        answer:
+          "A metered PDU is sufficient if on-site staff only need an occasional visual load check. If you need to see power data remotely without a site visit, a monitored PDU is the right upgrade — a metered PDU has no network connectivity.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "intelligent-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution"],
+  },
+  {
+    slug: "monitored-pdu",
+    category: "power-distribution",
+    name: "Monitored PDU",
+    shortName: "Monitored PDU",
+    tagline: "Network-connected PDU reporting current, voltage, power and energy data remotely.",
+    overview:
+      "The Haisen Monitored PDU reports current, voltage, power and energy consumption over the network via SNMP or Modbus, giving facility and IT teams remote visibility into rack-level power usage without on-site checks — without the outlet-switching capability of a fully intelligent PDU.",
+    keyFeatures: [
+      "Remote current, voltage, power and energy monitoring",
+      "SNMP and Modbus RTU/TCP connectivity",
+      "Web-based monitoring interface",
+      "Threshold alarm notifications",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "200–250V / 380–415V" },
+          { label: "Rated Current", value: "16A / 32A / 63A" },
+        ],
+      },
+      {
+        title: "Monitoring & Communication",
+        specs: [
+          { label: "Protocols", value: "SNMP v1/v2c/v3, Modbus RTU/TCP" },
+          { label: "Monitoring Points", value: "Voltage, current, power, energy" },
+          { label: "Switching", value: "Not included — see Switched PDU" },
+        ],
+      },
+    ],
+    applications: ["Multi-tenant colocation billing/reporting", "PUE tracking", "Remote facility monitoring"],
+    customizationOptions: ["Outlet count and type", "Communication protocol", "Alarm thresholds"],
+    standards: ["Designed to IEC 60320 connector standards", "SNMP MIB-II compliant", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Metered PDU vs monitored PDU — what's the difference?",
+        answer:
+          "A metered PDU only shows readings locally on a built-in display. A monitored PDU adds network connectivity so those readings — and often energy consumption over time — can be viewed remotely without a site visit.",
+      },
+    ],
+    relatedProductSlugs: ["intelligent-pdu", "switched-pdu", "pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution"],
+  },
+  {
+    slug: "switched-pdu",
+    category: "power-distribution",
+    name: "Switched PDU",
+    shortName: "Switched PDU",
+    tagline: "Monitored PDU with remote, individually addressable outlet switching.",
+    overview:
+      "The Haisen Switched PDU includes everything a monitored PDU offers — remote current, voltage, power and energy visibility — plus individually addressable outlet control, so administrators can remotely power-cycle a single device or sequence a rack's power-up without a site visit.",
+    keyFeatures: [
+      "Remote monitoring at unit and outlet level",
+      "Individually addressable outlet on/off control",
+      "Sequenced power-up to manage inrush current",
+      "SNMP, Modbus and web management",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "200–250V / 380–415V" },
+          { label: "Rated Current", value: "16A / 32A / 63A" },
+        ],
+      },
+      {
+        title: "Monitoring & Control",
+        specs: [
+          { label: "Switching", value: "Per-outlet remote on/off, sequenced start" },
+          { label: "Protocols", value: "SNMP, Modbus RTU/TCP, web interface" },
+        ],
+      },
+    ],
+    applications: ["Unattended / remote sites needing remote reboot", "Sequenced rack power-up", "Edge data centers"],
+    customizationOptions: ["Outlet count and grouping", "Communication protocol", "Sequencing profile"],
+    standards: ["Designed to IEC 60320 connector standards", "SNMP MIB-II compliant", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When do I need a switched PDU instead of a monitored PDU?",
+        answer:
+          "Choose a switched PDU whenever you need to remotely power-cycle equipment or sequence rack power-up — for example, unattended edge sites where a hung server would otherwise require a truck roll to reset.",
+      },
+    ],
+    relatedProductSlugs: ["intelligent-pdu", "monitored-pdu", "ats-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution", "edge-data-center"],
+  },
+  {
+    slug: "three-phase-pdu",
+    category: "power-distribution",
+    name: "Three Phase PDU",
+    shortName: "Three Phase PDU",
+    tagline: "Balanced three-phase power distribution for higher-capacity racks.",
+    overview:
+      "The Haisen Three Phase PDU distributes three-phase input across balanced single-phase outlet groups, giving racks with moderate-to-high power draw a higher-capacity feed than a single-phase PDU can provide, while keeping phase loading even across L1/L2/L3.",
+    keyFeatures: [
+      "Three-phase input with balanced single-phase outlet grouping",
+      "Per-phase current display on monitored variants",
+      "Delta and wye (star) configurations available",
+      "0U vertical mounting for high outlet counts",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "380–415V three-phase" },
+          { label: "Rated Current", value: "16A / 32A per phase" },
+          { label: "Configuration", value: "Delta or Wye (star)" },
+        ],
+      },
+      {
+        title: "Mechanical",
+        specs: [
+          { label: "Mounting", value: "0U vertical" },
+          { label: "Outlet Options", value: "IEC C13/C19, custom" },
+        ],
+      },
+    ],
+    applications: ["Mixed-load racks above single-phase capacity", "Colocation cage-level distribution", "Enterprise server rooms"],
+    customizationOptions: ["Phase configuration", "Outlet mix per phase", "Monitoring level"],
+    standards: ["Designed to IEC 60309 connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Why use a three-phase PDU instead of multiple single-phase PDUs?",
+        answer:
+          "A three-phase PDU delivers more total capacity through a single, higher-capacity circuit and simplifies balanced load planning across phases, rather than requiring separate single-phase circuits and PDUs to reach the same total power.",
+      },
+    ],
+    relatedProductSlugs: ["high-power-pdu", "intelligent-pdu"],
+    relatedSolutionSlugs: ["critical-power", "ai-data-center"],
+  },
+  {
+    slug: "ats-pdu",
+    category: "power-distribution",
+    name: "ATS PDU",
+    shortName: "ATS PDU",
+    tagline: "Rack PDU with a built-in automatic transfer switch for dual-feed redundancy.",
+    overview:
+      "The Haisen ATS PDU combines a rack PDU with an automatic transfer switch, accepting two independent power inputs — such as utility and generator, or A/B utility feeds — and automatically switching to the live source if the primary feed fails, protecting single-corded equipment without requiring a separate transfer switch panel.",
+    keyFeatures: [
+      "Dual power input with automatic failover",
+      "Protects single-corded equipment with feed-level redundancy",
+      "Transfer time fast enough for most IT power supplies to ride through",
+      "Remote monitoring available on intelligent variants",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "200–250V" },
+          { label: "Rated Current", value: "16A / 32A" },
+          { label: "Transfer Time", value: "Typically under 1 cycle to a few ms" },
+        ],
+      },
+      {
+        title: "Redundancy",
+        specs: [
+          { label: "Inputs", value: "Dual, independent A/B feeds" },
+          { label: "Switching", value: "Automatic, source-loss triggered" },
+        ],
+      },
+    ],
+    applications: ["Single-corded equipment needing feed redundancy", "Telecom equipment rooms with dual feeds", "Racks fed from utility + generator"],
+    customizationOptions: ["Outlet count and type", "Transfer sensitivity", "Monitoring level"],
+    standards: ["Designed to IEC 60309 connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is an ATS PDU used for in telecom sites?",
+        answer:
+          "An ATS (automatic transfer switch) PDU automatically switches load between two independent power feeds — typically utility and generator, or dual utility feeds — without manual intervention, maintaining uptime if one feed fails.",
+      },
+      {
+        question: "Do I need an ATS PDU if my equipment already has dual power supplies?",
+        answer:
+          "Dual-corded equipment can typically be fed from two separate standard PDUs directly. An ATS PDU is most valuable for single-corded equipment, which otherwise has no way to benefit from a redundant feed.",
+      },
+    ],
+    relatedProductSlugs: ["sts", "automatic-transfer-switch", "pdu"],
+    relatedSolutionSlugs: ["critical-power", "telecom-data-center"],
+  },
+  {
+    slug: "sts",
+    category: "power-distribution",
+    name: "STS (Static Transfer Switch)",
+    shortName: "STS",
+    tagline: "Solid-state transfer switch for near-instantaneous switching between two power sources.",
+    overview:
+      "The Haisen STS (Static Transfer Switch) uses solid-state switching to transfer load between two independent power sources in a fraction of a cycle — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption, typically deployed ahead of PDUs or UPS distribution in critical facilities.",
+    keyFeatures: [
+      "Solid-state switching, sub-cycle transfer time",
+      "Dual independent source inputs",
+      "Continuous source-quality monitoring on both feeds",
+      "Panel or rack-mount form factors",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "200–415V" },
+          { label: "Rated Current", value: "Up to 400A (model dependent)" },
+          { label: "Transfer Time", value: "Sub-cycle (typically <4 ms)" },
+        ],
+      },
+      {
+        title: "Monitoring",
+        specs: [
+          { label: "Source Monitoring", value: "Continuous voltage/frequency quality checks on both feeds" },
+          { label: "Communication", value: "SNMP, Modbus, dry contact alarms" },
+        ],
+      },
+    ],
+    applications: ["Facilities requiring zero-interruption transfer", "Upstream of critical PDU/UPS distribution", "Data centers with dual utility feeds"],
+    customizationOptions: ["Current rating", "Form factor (panel / rack-mount)", "Monitoring package"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is the difference between an ATS and an STS?",
+        answer:
+          "An ATS (automatic transfer switch) mechanically switches load between two power sources, typically with a brief transfer time, while an STS (static transfer switch) uses solid-state switching for near-instantaneous transfer, used where even momentary interruption is unacceptable.",
+      },
+    ],
+    relatedProductSlugs: ["ats-pdu", "automatic-transfer-switch", "modular-ups"],
+    relatedSolutionSlugs: ["critical-power"],
+  },
+  {
+    slug: "automatic-transfer-switch",
+    category: "power-distribution",
+    name: "Automatic Transfer Switch",
+    shortName: "ATS",
+    tagline: "Panel-level automatic transfer switch for facility and generator failover.",
+    overview:
+      "The Haisen Automatic Transfer Switch is a panel-level device that automatically transfers a facility or distribution board load between a primary source and a backup source — typically utility and standby generator — without manual intervention, sized for branch, panel or facility-level loads rather than a single rack.",
+    keyFeatures: [
+      "Automatic source-loss detection and transfer",
+      "Generator start signal output",
+      "Manual bypass/override for maintenance",
+      "Facility and panel-level current ratings",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "380–415V three-phase" },
+          { label: "Rated Current", value: "100A – 3000A (model dependent)" },
+          { label: "Transfer Time", value: "Seconds (mechanical transfer, generator-start compatible)" },
+        ],
+      },
+      {
+        title: "Control",
+        specs: [
+          { label: "Control Logic", value: "Automatic source-loss detection, generator start signal" },
+          { label: "Bypass", value: "Manual bypass/isolation for maintenance" },
+        ],
+      },
+    ],
+    applications: ["Facility/generator failover", "Distribution board level redundancy", "Data center site power backup"],
+    customizationOptions: ["Current rating", "Enclosure type", "Control/monitoring package"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How is an automatic transfer switch different from an ATS PDU?",
+        answer:
+          "A panel-level automatic transfer switch handles facility, distribution board or generator-level failover for a whole branch of the electrical system, while an ATS PDU is a rack-mounted device that applies the same automatic-switching principle to a single rack's power feed.",
+      },
+    ],
+    relatedProductSlugs: ["sts", "ats-pdu", "modular-ups"],
+    relatedSolutionSlugs: ["critical-power"],
+  },
 
   // ---------------- UPS Systems ----------------
   {
@@ -319,6 +631,168 @@ export const products: Product[] = [
       },
     ],
     relatedProductSlugs: ["rack-mount-ups", "high-power-pdu"],
+    relatedSolutionSlugs: ["critical-power", "data-center-infrastructure"],
+  },
+  {
+    slug: "tower-ups",
+    category: "ups-systems",
+    name: "Tower UPS",
+    shortName: "Tower UPS",
+    tagline: "Free-standing online UPS for server rooms and small equipment areas without a rack.",
+    overview:
+      "The Haisen Tower UPS delivers the same online double-conversion protection as the rack mount range in a free-standing tower enclosure, suited to server rooms, retail back-offices and equipment areas that don't use a 19-inch rack.",
+    keyFeatures: [
+      "True online double-conversion topology",
+      "Free-standing tower enclosure",
+      "Optional rack-mount conversion kit on select models",
+      "LCD status panel and audible alarms",
+    ],
+    specGroups: [
+      {
+        title: "Power",
+        specs: [
+          { label: "Power Capacity", value: "1 kVA – 10 kVA" },
+          { label: "Input Voltage", value: "220/230/240V single-phase" },
+          { label: "Output Voltage", value: "220/230/240V ±1%" },
+          { label: "Efficiency", value: "Up to 93% (online mode)" },
+        ],
+      },
+      {
+        title: "Communication",
+        specs: [
+          { label: "Interfaces", value: "RS232, USB, SNMP card (optional)" },
+        ],
+      },
+    ],
+    applications: ["Server rooms without racks", "Retail back-office IT", "Small equipment areas"],
+    customizationOptions: ["Battery runtime package", "Rack-conversion kit", "Communication card"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Can a tower UPS be converted to rack mount later?",
+        answer:
+          "Select Haisen tower UPS models support an optional rack-mount conversion kit, letting the same unit move into a 19-inch rack if the site is upgraded later — confirm compatibility for the specific model with our engineering team.",
+      },
+    ],
+    relatedProductSlugs: ["rack-mount-ups", "online-ups"],
+    relatedSolutionSlugs: ["critical-power"],
+  },
+  {
+    slug: "online-ups",
+    category: "ups-systems",
+    name: "Online UPS",
+    shortName: "Online UPS",
+    tagline: "Double-conversion UPS providing continuous, regulated power with zero transfer time.",
+    overview:
+      "The Haisen Online UPS uses true double-conversion topology, continuously regenerating output power from its inverter rather than switching to battery on disturbance, so connected equipment always sees a clean, regulated waveform with zero transfer time — the standard choice for critical IT and data center loads.",
+    keyFeatures: [
+      "True online double-conversion topology",
+      "Zero transfer time to battery",
+      "Wide input voltage window reduces battery cycling",
+      "Rack-mount and tower form factors available",
+    ],
+    specGroups: [
+      {
+        title: "Power",
+        specs: [
+          { label: "Power Capacity", value: "1 kVA – 40 kVA" },
+          { label: "Input Voltage Window", value: "Wide range, reduces on-battery transfers" },
+          { label: "Power Factor", value: "0.9–1.0 (model dependent)" },
+          { label: "Efficiency", value: "Up to 95% (online mode)" },
+        ],
+      },
+    ],
+    applications: ["Data center IT racks", "Critical process control equipment", "Telecom and networking equipment"],
+    customizationOptions: ["Power rating", "Battery runtime", "Form factor"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is an online UPS?",
+        answer:
+          "An online (double-conversion) UPS continuously converts incoming AC power to DC and back to AC, providing a constant, regulated output with zero transfer time to battery, which is why it is the standard topology for data center and critical IT loads.",
+      },
+    ],
+    relatedProductSlugs: ["rack-mount-ups", "tower-ups", "modular-ups"],
+    relatedSolutionSlugs: ["critical-power"],
+  },
+  {
+    slug: "industrial-ups",
+    category: "ups-systems",
+    name: "Industrial UPS",
+    shortName: "Industrial UPS",
+    tagline: "Ruggedized UPS for harsh-environment industrial and process-control power protection.",
+    overview:
+      "The Haisen Industrial UPS is built for environments outside typical data center conditions — wider operating temperature range, higher ingress protection, and tolerance for dust, vibration and less stable input power — protecting process control, SCADA and industrial IT equipment in factories, plants and remote industrial sites.",
+    keyFeatures: [
+      "Extended operating temperature range",
+      "Higher IP-rated enclosure options for dusty/humid environments",
+      "Wide input voltage tolerance for unstable grids",
+      "Vibration-resistant construction",
+    ],
+    specGroups: [
+      {
+        title: "Power",
+        specs: [
+          { label: "Power Capacity", value: "1 kVA – 100 kVA" },
+          { label: "Operating Temperature", value: "Extended range vs. standard IT UPS" },
+          { label: "IP Rating", value: "Up to IP54 enclosure options" },
+        ],
+      },
+    ],
+    applications: ["Factory process control", "SCADA / industrial automation", "Oil & gas and mining site power"],
+    customizationOptions: ["Enclosure IP rating", "Power rating", "Extended battery runtime"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How is an industrial UPS different from a standard data center UPS?",
+        answer:
+          "An industrial UPS is built to tolerate wider temperature swings, dust, vibration and less stable incoming power than a typical data center UPS, and is often housed in a higher IP-rated enclosure suited to factory or outdoor industrial environments.",
+      },
+    ],
+    relatedProductSlugs: ["rack-mount-ups", "battery-energy-storage-system"],
+    relatedSolutionSlugs: ["critical-power"],
+  },
+  {
+    slug: "high-power-ups",
+    category: "ups-systems",
+    name: "High Power UPS",
+    shortName: "High Power UPS",
+    tagline: "Large-capacity three-phase UPS for data center and facility-level critical power.",
+    overview:
+      "The Haisen High Power UPS delivers large-capacity, three-phase double-conversion protection for full data halls and facility-level critical loads, available in standalone frames or as the building block for a modular, parallel-redundant power plant.",
+    keyFeatures: [
+      "Large-capacity three-phase double-conversion topology",
+      "Parallel operation for capacity and redundancy",
+      "High efficiency at partial and full load",
+      "Full digital control and remote monitoring",
+    ],
+    specGroups: [
+      {
+        title: "Power",
+        specs: [
+          { label: "Power Capacity", value: "60 kVA – 800 kVA" },
+          { label: "Input/Output Voltage", value: "380/400/415V three-phase" },
+          { label: "Efficiency", value: "Up to 96% (online mode)" },
+        ],
+      },
+      {
+        title: "Redundancy",
+        specs: [
+          { label: "Parallel Capability", value: "Multiple units for capacity/redundancy" },
+        ],
+      },
+    ],
+    applications: ["Data center facility-level power", "Large industrial and commercial critical loads", "Colocation power plants"],
+    customizationOptions: ["Power rating", "Parallel configuration", "Battery cabinet integration"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When is a high power UPS needed instead of a modular UPS?",
+        answer:
+          "A high power (monolithic) UPS suits facilities with a stable, well-defined large load from day one. A modular UPS is often preferred when load will grow over time, since capacity can be added module-by-module rather than in large fixed steps.",
+      },
+    ],
+    relatedProductSlugs: ["modular-ups", "high-power-pdu"],
     relatedSolutionSlugs: ["critical-power", "data-center-infrastructure"],
   },
 
@@ -434,6 +908,212 @@ export const products: Product[] = [
     relatedProductSlugs: ["network-cabinet", "cold-aisle-cabinet", "intelligent-cabinet"],
     relatedSolutionSlugs: ["data-center-infrastructure", "ai-data-center"],
   },
+  {
+    slug: "server-rack",
+    category: "network-server-cabinets",
+    name: "Server Rack",
+    shortName: "Server Rack",
+    tagline: "19-inch server rack built for server and storage weight loads and airflow.",
+    overview:
+      "The Haisen Server Rack is a 19-inch enclosure sized and reinforced for server and storage equipment rather than lighter network gear — deeper chassis clearance, stronger static load rating and airflow-optimized doors for compute-dense deployments.",
+    keyFeatures: [
+      "19-inch EIA-standard mounting, front and rear",
+      "Deep chassis clearance for server/storage hardware",
+      "High static load rating",
+      "Perforated doors for front-to-back airflow",
+    ],
+    specGroups: [
+      {
+        title: "Structure & Dimensions",
+        specs: [
+          { label: "Rack Units", value: "24U – 47U" },
+          { label: "Depth", value: "900 – 1200 mm" },
+          { label: "Load Capacity", value: "Up to 1000 kg (static)" },
+        ],
+      },
+      {
+        title: "Construction",
+        specs: [
+          { label: "Material", value: "Cold-rolled steel" },
+          { label: "Door", value: "Perforated (≥65% open area) standard" },
+        ],
+      },
+    ],
+    applications: ["Server rooms", "Storage deployments", "Enterprise IT closets"],
+    customizationOptions: ["Height / depth", "Load rating", "Door and side panel options"],
+    standards: ["Designed to IEC 60297 (19-inch rack) standard", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What's the difference between a server rack and a network cabinet?",
+        answer:
+          "Both follow the same 19-inch standard, but a server rack is typically deeper and rated for heavier static loads to support servers and storage chassis, while a network cabinet is optimized for lighter switching/patching equipment and cable management density.",
+      },
+    ],
+    relatedProductSlugs: ["network-cabinet", "data-center-cabinet", "19-inch-rack"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "19-inch-rack",
+    category: "network-server-cabinets",
+    name: "19 Inch Rack",
+    shortName: "19-Inch Rack",
+    tagline: "Standard EIA 19-inch rack enclosure for general IT and network equipment mounting.",
+    overview:
+      "The Haisen 19 Inch Rack is a standard EIA-310 compliant enclosure sized for general-purpose IT, networking and telecom equipment mounting where a full server-rack or network-cabinet specification isn't required — a flexible base configuration for smaller deployments.",
+    keyFeatures: [
+      "EIA-310 standard 19-inch mounting rails",
+      "Open-frame and enclosed cabinet options",
+      "Configurable rack unit height",
+      "Compatible with standard rack-mount accessories",
+    ],
+    specGroups: [
+      {
+        title: "Structure & Dimensions",
+        specs: [
+          { label: "Rack Units", value: "9U – 42U" },
+          { label: "Width", value: "600 mm" },
+          { label: "Depth", value: "600 – 1000 mm" },
+        ],
+      },
+    ],
+    applications: ["General IT equipment mounting", "Telecom equipment rooms", "Lab and test environments"],
+    customizationOptions: ["Open-frame vs. enclosed", "Height / depth", "Accessory rails"],
+    standards: ["Designed to IEC 60297 / EIA-310 (19-inch) standard", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What does '19-inch rack' actually refer to?",
+        answer:
+          "It refers to the EIA-310 standard 19-inch width of the mounting rail opening, common across server racks, network cabinets and most rack-mount IT equipment — the term describes the mounting standard rather than one specific enclosure design.",
+      },
+    ],
+    relatedProductSlugs: ["network-cabinet", "server-rack"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "cold-aisle-cabinet",
+    category: "network-server-cabinets",
+    name: "Cold Aisle Cabinet",
+    shortName: "Cold Aisle Cabinet",
+    tagline: "Cabinet engineered for cold aisle containment airflow separation.",
+    overview:
+      "The Haisen Cold Aisle Cabinet is designed for deployment within a cold aisle containment layout, with sealed panel interfaces and door gasketing that keep supply air on the cold-aisle side separated from hot exhaust air, improving cooling efficiency across the row.",
+    keyFeatures: [
+      "Sealed panel and door interfaces for containment integrity",
+      "Compatible with standard containment roof/door systems",
+      "Brush-strip cable entry to limit air bypass",
+      "Blanking panel kit included for unused rack space",
+    ],
+    specGroups: [
+      {
+        title: "Structure & Dimensions",
+        specs: [
+          { label: "Rack Units", value: "42U / 45U / 47U" },
+          { label: "Width", value: "600 mm / 800 mm" },
+          { label: "Containment Interface", value: "Compatible with standard aisle containment systems" },
+        ],
+      },
+    ],
+    applications: ["Hot/cold aisle containment data halls", "High-density colocation rows", "PUE optimization retrofits"],
+    customizationOptions: ["Containment interface type", "Width", "Blanking panel kit"],
+    standards: ["Designed to IEC 60297 (19-inch rack) standard", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Do I need special cabinets for cold aisle containment, or just a containment roof/doors?",
+        answer:
+          "Containment only works if the row of cabinets itself seals well — gaps around doors, side panels and cable entries let air bypass the containment. Cold aisle cabinets are built with that sealing in mind, in addition to the roof/door containment system spanning the aisle.",
+      },
+    ],
+    relatedProductSlugs: ["data-center-cabinet", "network-cabinet", "row-based-cooling"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "intelligent-cabinet",
+    category: "network-server-cabinets",
+    name: "Intelligent Cabinet",
+    shortName: "Intelligent Cabinet",
+    tagline: "Cabinet with integrated environmental and access monitoring for lights-out sites.",
+    overview:
+      "The Haisen Intelligent Cabinet integrates environmental sensors, door access control and power monitoring at the cabinet level, giving operators visibility and control over individual cabinets in unattended or multi-tenant environments without a separate micro module.",
+    keyFeatures: [
+      "Integrated temperature/humidity monitoring",
+      "Electronic door access control and door-open alarms",
+      "Compatible with intelligent PDU integration",
+      "Remote monitoring dashboard",
+    ],
+    specGroups: [
+      {
+        title: "Monitoring",
+        specs: [
+          { label: "Sensors", value: "Temperature, humidity, door status" },
+          { label: "Access Control", value: "Card / PIN / biometric options" },
+          { label: "Communication", value: "Network-connected monitoring module" },
+        ],
+      },
+      {
+        title: "Structure",
+        specs: [
+          { label: "Rack Units", value: "42U / 45U / 47U" },
+          { label: "Width", value: "600 mm / 800 mm" },
+        ],
+      },
+    ],
+    applications: ["Unattended equipment rooms", "Multi-tenant colocation cabinets", "High-security IT deployments"],
+    customizationOptions: ["Sensor package", "Access control method", "PDU integration"],
+    standards: ["Designed to IEC 60297 (19-inch rack) standard", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How is an intelligent cabinet different from a micro modular data center?",
+        answer:
+          "An intelligent cabinet adds monitoring and access control to a single enclosure, while a micro modular data center integrates power, cooling, fire suppression and monitoring across a full row or module — an intelligent cabinet is a lighter-weight option when you only need visibility into one cabinet.",
+      },
+    ],
+    relatedProductSlugs: ["intelligent-pdu", "data-center-cabinet", "smart-micro-module"],
+    relatedSolutionSlugs: ["smart-power-distribution", "data-center-infrastructure"],
+  },
+  {
+    slug: "outdoor-cabinet",
+    category: "network-server-cabinets",
+    name: "Outdoor Cabinet",
+    shortName: "Outdoor Cabinet",
+    tagline: "Weatherproof cabinet for outdoor telecom and network equipment deployment.",
+    overview:
+      "The Haisen Outdoor Cabinet houses network and telecom equipment in outdoor or exposed environments, with a weatherproof enclosure, thermal management and cable entry glanding rated for sun, rain and dust exposure at cell sites, roadside cabinets and remote installations.",
+    keyFeatures: [
+      "High IP-rated weatherproof enclosure",
+      "Integrated thermal management (vented or air-conditioned options)",
+      "Sealed cable entry glands",
+      "Corrosion-resistant coating for outdoor exposure",
+    ],
+    specGroups: [
+      {
+        title: "Environmental",
+        specs: [
+          { label: "IP Rating", value: "IP55 / IP65 (model dependent)" },
+          { label: "Operating Temperature", value: "Extended outdoor range" },
+          { label: "Cooling", value: "Passive vented or air-conditioned options" },
+        ],
+      },
+      {
+        title: "Structure",
+        specs: [
+          { label: "Mounting", value: "Wall-mount, pole-mount or floor-standing" },
+          { label: "Finish", value: "Corrosion-resistant powder coat" },
+        ],
+      },
+    ],
+    applications: ["Telecom base station sites", "Roadside / outdoor network cabinets", "Remote monitoring stations"],
+    customizationOptions: ["IP rating", "Cooling method", "Mounting type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What IP rating does an outdoor telecom cabinet need?",
+        answer:
+          "IP55 is a common minimum for outdoor telecom cabinets, protecting against dust ingress and water jets; IP65 provides a higher level of dust and water protection for more exposed sites — the right rating depends on the specific site's exposure conditions.",
+      },
+    ],
+    relatedProductSlugs: ["network-cabinet", "20ft-container-data-center"],
+    relatedSolutionSlugs: ["telecom-data-center", "edge-data-center"],
+  },
 
   // ---------------- Micro Modular Data Center ----------------
   {
@@ -488,6 +1168,117 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["intelligent-cabinet", "intelligent-pdu", "in-row-cooling"],
     relatedSolutionSlugs: ["micro-modular-data-center", "data-center-infrastructure"],
+  },
+  {
+    slug: "single-row-micro-data-center",
+    category: "micro-modular-data-center",
+    name: "Single Row Micro Data Center",
+    shortName: "Single Row Micro DC",
+    tagline: "Compact micro module with cabinets arranged in a single row for small deployments.",
+    overview:
+      "The Haisen Single Row Micro Data Center arranges IT cabinets in a single row with rear or side power and cooling infrastructure, sized for small equipment rooms and branch sites where a full dual-row containment layout isn't needed.",
+    keyFeatures: [
+      "Single-row cabinet layout for compact footprint",
+      "Integrated UPS, PDU and cooling",
+      "Factory pre-integration and testing",
+      "Fire suppression and access control included",
+    ],
+    specGroups: [
+      {
+        title: "System Composition",
+        specs: [
+          { label: "Layout", value: "Single row, 2–6 cabinets typical" },
+          { label: "Power", value: "Rack mount or modular UPS + intelligent PDU" },
+          { label: "Cooling", value: "In-row or precision air conditioning" },
+        ],
+      },
+    ],
+    applications: ["Small branch data rooms", "Retail back-office IT", "Regional office server rooms"],
+    customizationOptions: ["Cabinet count", "Power redundancy level", "Cooling type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When is a single row micro data center enough, versus dual row?",
+        answer:
+          "A single row layout suits smaller IT loads (typically under 6 cabinets) where floor space is limited and full aisle containment isn't required — dual row becomes more efficient as cabinet count and cooling density increase.",
+      },
+    ],
+    relatedProductSlugs: ["smart-micro-module", "dual-row-micro-data-center"],
+    relatedSolutionSlugs: ["micro-modular-data-center"],
+  },
+  {
+    slug: "dual-row-micro-data-center",
+    category: "micro-modular-data-center",
+    name: "Dual Row Micro Data Center",
+    shortName: "Dual Row Micro DC",
+    tagline: "Micro module with cabinets facing in two rows and hot/cold aisle containment.",
+    overview:
+      "The Haisen Dual Row Micro Data Center arranges IT cabinets in two facing rows with hot or cold aisle containment between them, improving cooling efficiency over a single-row layout for mid-size deployments with higher cabinet counts or density.",
+    keyFeatures: [
+      "Dual-row layout with hot/cold aisle containment",
+      "Higher cabinet density per footprint than single row",
+      "Integrated UPS, PDU, cooling and fire suppression",
+      "Centralized monitoring across both rows",
+    ],
+    specGroups: [
+      {
+        title: "System Composition",
+        specs: [
+          { label: "Layout", value: "Dual row, containment aisle between" },
+          { label: "Power", value: "Modular UPS + intelligent PDU" },
+          { label: "Cooling", value: "In-row cooling within the containment aisle" },
+        ],
+      },
+    ],
+    applications: ["Mid-size enterprise data rooms", "Regional data centers", "Higher-density branch deployments"],
+    customizationOptions: ["Row length / cabinet count", "Containment type", "Redundancy level"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is a micro modular data center?",
+        answer:
+          "A micro modular data center is a factory pre-integrated system combining IT cabinets, power distribution, UPS, cooling, fire suppression, access control and monitoring into a single standardized unit, reducing on-site construction time compared to a traditional built data room.",
+      },
+    ],
+    relatedProductSlugs: ["smart-micro-module", "single-row-micro-data-center", "in-row-cooling"],
+    relatedSolutionSlugs: ["micro-modular-data-center"],
+  },
+  {
+    slug: "all-in-one-micro-data-center",
+    category: "micro-modular-data-center",
+    name: "All-in-One Micro Data Center",
+    shortName: "All-in-One Micro DC",
+    tagline: "Single enclosure integrating rack, UPS, PDU and cooling for the smallest deployments.",
+    overview:
+      "The Haisen All-in-One Micro Data Center packages IT rack space, UPS, PDU and cooling into a single self-contained enclosure — the smallest step up from a standard cabinet, suited to sites with only a handful of servers and no dedicated equipment room.",
+    keyFeatures: [
+      "Single self-contained enclosure — rack, power and cooling in one unit",
+      "Compact footprint for spaces without a dedicated server room",
+      "Built-in fire detection",
+      "Plug-and-play factory integration",
+    ],
+    specGroups: [
+      {
+        title: "System Composition",
+        specs: [
+          { label: "IT Space", value: "6U – 24U usable, model dependent" },
+          { label: "Power", value: "Integrated UPS + PDU" },
+          { label: "Cooling", value: "Integrated close-control cooling unit" },
+        ],
+      },
+    ],
+    applications: ["Small offices without a server room", "Retail / branch locations", "Edge compute at small sites"],
+    customizationOptions: ["Usable rack space", "Battery runtime", "Cooling capacity"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Is an all-in-one micro data center the same as a server cabinet with a UPS?",
+        answer:
+          "It goes further — beyond just housing a UPS inside a cabinet, an all-in-one micro data center integrates power, precision cooling and often fire detection as one factory-engineered and tested system, rather than components assembled on site.",
+      },
+    ],
+    relatedProductSlugs: ["single-row-micro-data-center", "smart-micro-module"],
+    relatedSolutionSlugs: ["micro-modular-data-center", "edge-data-center"],
   },
 
   // ---------------- Containerized Data Center ----------------
@@ -555,6 +1346,125 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["smart-micro-module", "intelligent-pdu", "modular-ups"],
     relatedSolutionSlugs: ["containerized-data-center", "edge-data-center"],
+  },
+  {
+    slug: "20ft-container-data-center",
+    category: "containerized-data-center",
+    name: "20ft Container Data Center",
+    shortName: "20ft Container DC",
+    tagline: "Compact containerized data center in a 20-foot ISO shell for smaller or space-constrained sites.",
+    overview:
+      "The Haisen 20ft Container Data Center packages IT cabinets, power distribution, UPS, cooling, fire protection and monitoring into a standard 20-foot ISO container — a smaller footprint than the 40ft option, suited to space-constrained sites, smaller IT loads, or edge deployments where a full 40ft unit isn't justified.",
+    keyFeatures: [
+      "Complete IT + power + cooling integration in a compact 20ft footprint",
+      "Reinforced, insulated container structure rated for outdoor deployment",
+      "Faster crane/transport logistics than a 40ft unit at tight sites",
+      "Scalable — deploy additional containers as load grows",
+    ],
+    specGroups: [
+      {
+        title: "Container Structure",
+        specs: [
+          { label: "Container Size", value: "20ft standard ISO" },
+          { label: "Insulation", value: "Thermal + acoustic insulated panel wall" },
+          { label: "IP Rating", value: "IP55 (outdoor deployment)" },
+        ],
+      },
+      {
+        title: "IT & Power",
+        specs: [
+          { label: "IT Cabinets", value: "Configurable rack count per layout" },
+          { label: "Power Distribution", value: "Intelligent PDU, rack mount or modular UPS" },
+          { label: "Cooling", value: "Precision air conditioning" },
+        ],
+      },
+    ],
+    applications: ["Edge computing", "Space-constrained telecom sites", "Small-to-mid mining/oil & gas sites"],
+    customizationOptions: ["Rack count and layout", "Power redundancy", "Cooling type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "20ft vs 40ft container data center — which should I choose?",
+        answer:
+          "A 20ft container suits smaller IT loads or edge sites with limited space and typically holds fewer racks, while a 40ft container offers roughly double the internal footprint for higher rack counts, larger power/cooling plant, or walk-in maintenance aisles — the right choice depends on target IT load and available site space.",
+      },
+    ],
+    relatedProductSlugs: ["40ft-container-data-center", "edge-data-center", "smart-micro-module"],
+    relatedSolutionSlugs: ["containerized-data-center", "edge-data-center"],
+  },
+  {
+    slug: "modular-container-data-center",
+    category: "containerized-data-center",
+    name: "Modular Container Data Center",
+    shortName: "Modular Container DC",
+    tagline: "Multiple interconnected containers scaling to larger capacity than a single unit.",
+    overview:
+      "The Haisen Modular Container Data Center links multiple 20ft or 40ft container modules — IT, power and cooling units — into a larger, coordinated facility, letting capacity scale beyond what a single container can hold while keeping the factory-built, rapid-deployment model of containerized infrastructure.",
+    keyFeatures: [
+      "Multiple container modules interconnected for larger capacity",
+      "Dedicated or shared power/cooling modules across the group",
+      "Phased deployment — add container modules as load grows",
+      "Unified monitoring across all connected modules",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Configuration", value: "Multiple 20ft/40ft modules, interconnected" },
+          { label: "Power & Cooling", value: "Dedicated per-module or shared central plant" },
+          { label: "Monitoring", value: "Unified DCIM-compatible monitoring across modules" },
+        ],
+      },
+    ],
+    applications: ["Growing telecom/edge networks", "Multi-phase remote site buildouts", "Large temporary/emergency deployments"],
+    customizationOptions: ["Number and size of modules", "Shared vs. dedicated power/cooling", "Interconnect layout"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Can capacity be added later to a modular container data center?",
+        answer:
+          "Yes — additional container modules can be added and interconnected to the existing deployment as IT load grows, avoiding the need to size and build a single large facility on day one.",
+      },
+    ],
+    relatedProductSlugs: ["20ft-container-data-center", "40ft-container-data-center"],
+    relatedSolutionSlugs: ["containerized-data-center"],
+  },
+  {
+    slug: "edge-data-center",
+    category: "containerized-data-center",
+    name: "Edge Data Center",
+    shortName: "Edge Data Center",
+    tagline: "Compact, factory-built data center for compute deployed close to the network edge.",
+    overview:
+      "The Haisen Edge Data Center is a compact containerized or micro modular unit purpose-built for edge computing sites — small footprint, remote/unattended monitoring, and resilient power sized for locations without a traditional data center facility nearby.",
+    keyFeatures: [
+      "Compact footprint for constrained edge sites",
+      "Remote, unattended monitoring for lights-out operation",
+      "Resilient UPS and intelligent PDU power design",
+      "Rapid factory-to-site deployment",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Form Factor", value: "20ft container or micro module" },
+          { label: "Power", value: "UPS + intelligent PDU, remote switching" },
+          { label: "Monitoring", value: "Full remote monitoring for unattended sites" },
+        ],
+      },
+    ],
+    applications: ["CDN / edge compute nodes", "Telecom base station sites", "Retail and industrial edge locations"],
+    customizationOptions: ["Form factor", "IT capacity", "Monitoring package"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How is an edge data center different from a containerized data center?",
+        answer:
+          "Edge data centers prioritize compact footprint and remote/unattended operation for distributed sites, while larger containerized data centers are typically sized for more self-contained capacity at a single remote location — Haisen's 20ft containers and micro modules serve as the building blocks for edge deployments.",
+      },
+    ],
+    relatedProductSlugs: ["20ft-container-data-center", "smart-micro-module", "intelligent-pdu"],
+    relatedSolutionSlugs: ["edge-data-center"],
   },
 
   // ---------------- Cooling Solutions ----------------
@@ -675,6 +1585,115 @@ export const products: Product[] = [
     relatedProductSlugs: ["liquid-cooling", "precision-air-conditioner"],
     relatedSolutionSlugs: ["liquid-cooling", "ai-data-center"],
   },
+  {
+    slug: "row-based-cooling",
+    category: "cooling-solutions",
+    name: "Row-Based Cooling",
+    shortName: "Row-Based Cooling",
+    tagline: "Cooling units placed at the row level for shorter, more efficient airflow paths.",
+    overview:
+      "Haisen Row-Based Cooling places cooling capacity within the row of IT cabinets rather than around the perimeter of the room, shortening the airflow path to the load and improving cooling efficiency and predictability at medium-to-high rack densities.",
+    keyFeatures: [
+      "Cooling capacity distributed within the cabinet row",
+      "Shorter airflow path than perimeter (room) cooling",
+      "Scales incrementally as row density increases",
+      "Works with hot/cold aisle containment",
+    ],
+    specGroups: [
+      {
+        title: "Performance",
+        specs: [
+          { label: "Cooling Capacity", value: "10 kW – 40 kW per unit" },
+          { label: "Airflow", value: "Row-level, front-to-back with the cabinet row" },
+        ],
+      },
+    ],
+    applications: ["Medium-to-high density data halls", "Containment-based cooling upgrades", "Colocation row deployments"],
+    customizationOptions: ["Capacity per unit", "Redundancy (N+1 units per row)", "Containment interface"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What's the difference between row-based and in-row cooling?",
+        answer:
+          "The terms are largely interchangeable in the industry — both describe cooling units positioned within the cabinet row rather than around the room perimeter. Haisen uses \"row-based\" for the broader category and \"in-row\" for units that sit directly between cabinets in the row.",
+      },
+    ],
+    relatedProductSlugs: ["in-row-cooling", "precision-air-conditioner", "cold-aisle-cabinet"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "in-row-cooling",
+    category: "cooling-solutions",
+    name: "In-Row Cooling",
+    shortName: "In-Row Cooling",
+    tagline: "Cooling unit installed directly within the cabinet row, next to the IT load it serves.",
+    overview:
+      "Haisen In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level.",
+    keyFeatures: [
+      "Cabinet-footprint form factor fits directly into the row",
+      "Close-coupled to the IT load for tight temperature control",
+      "N+1 unit redundancy within a row",
+      "Compatible with hot/cold aisle containment",
+    ],
+    specGroups: [
+      {
+        title: "Performance",
+        specs: [
+          { label: "Cooling Capacity", value: "10 kW – 35 kW per unit" },
+          { label: "Form Factor", value: "Standard cabinet footprint" },
+          { label: "Redundancy", value: "N+1 unit-level redundancy supported" },
+        ],
+      },
+    ],
+    applications: ["High-density colocation rows", "Micro modular data centers", "Containment-based cooling designs"],
+    customizationOptions: ["Capacity", "Redundancy level", "Refrigerant type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Why choose in-row cooling over a traditional room air conditioner?",
+        answer:
+          "In-row cooling places capacity directly next to the IT load rather than relying on room-wide air mixing, giving tighter temperature control, shorter airflow paths and better support for the higher densities seen in modern racks.",
+      },
+    ],
+    relatedProductSlugs: ["row-based-cooling", "cdu", "smart-micro-module"],
+    relatedSolutionSlugs: ["data-center-infrastructure", "micro-modular-data-center"],
+  },
+  {
+    slug: "room-cooling",
+    category: "cooling-solutions",
+    name: "Room Cooling",
+    shortName: "Room Cooling",
+    tagline: "Perimeter precision cooling for the whole data hall or equipment room.",
+    overview:
+      "Haisen Room Cooling units condition the whole data hall or equipment room from the room perimeter — the traditional data center cooling approach, well suited to lower-density rooms or as a baseline layer alongside row-based/in-row cooling at higher densities.",
+    keyFeatures: [
+      "Room-wide, perimeter-mounted cooling",
+      "Downflow or upflow air distribution",
+      "Cost-effective for lower-density rooms",
+      "Can be combined with row-based cooling for hybrid designs",
+    ],
+    specGroups: [
+      {
+        title: "Performance",
+        specs: [
+          { label: "Cooling Capacity", value: "7 kW – 150 kW per unit" },
+          { label: "Air Distribution", value: "Downflow / Upflow, room-wide" },
+        ],
+      },
+    ],
+    applications: ["Lower-density equipment rooms", "Telecom rooms", "Baseline cooling in hybrid designs"],
+    customizationOptions: ["Capacity", "Air distribution direction", "Refrigerant type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Is room cooling still relevant with row-based and in-row cooling available?",
+        answer:
+          "Yes — room cooling remains a cost-effective baseline for lower-density rooms, and is sometimes combined with row-based or in-row units at higher densities to handle general room load while row-level units target hot spots.",
+      },
+    ],
+    relatedProductSlugs: ["precision-air-conditioner", "row-based-cooling"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
 
   // ---------------- Raised Floor ----------------
   {
@@ -713,6 +1732,118 @@ export const products: Product[] = [
       },
     ],
     relatedProductSlugs: ["cable-tray", "precision-air-conditioner"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "calcium-sulphate-raised-floor",
+    category: "raised-floor",
+    name: "Calcium Sulphate Raised Floor",
+    shortName: "Calcium Sulphate Floor",
+    tagline: "High-strength calcium sulphate core raised floor panel for heavy load environments.",
+    overview:
+      "Haisen Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel.",
+    keyFeatures: [
+      "High-density calcium sulphate core for load strength",
+      "Dimensionally stable under humidity variation",
+      "High fire-resistance rating",
+      "Compatible with standard anti-static and HPL finishes",
+    ],
+    specGroups: [
+      {
+        title: "Panel Specification",
+        specs: [
+          { label: "Panel Size", value: "600 x 600 mm" },
+          { label: "Core Material", value: "Calcium sulphate, steel-encased" },
+          { label: "Load Rating", value: "Up to 1250 kg concentrated load (model dependent)" },
+          { label: "Fire Rating", value: "Non-combustible core" },
+        ],
+      },
+    ],
+    applications: ["High-load data halls", "Fire-rated equipment rooms", "Heavy equipment mounting areas"],
+    customizationOptions: ["Panel thickness", "Finish", "Pedestal system"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When should I choose calcium sulphate over a steel raised floor panel?",
+        answer:
+          "Calcium sulphate core panels are typically chosen when higher load capacity, better fire resistance, or greater dimensional stability under humidity change is needed compared to a standard steel-encased honeycomb panel.",
+      },
+    ],
+    relatedProductSlugs: ["anti-static-raised-floor", "steel-cementitious-raised-floor"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "steel-cementitious-raised-floor",
+    category: "raised-floor",
+    name: "Steel Cementitious Raised Floor",
+    shortName: "Steel Cementitious Floor",
+    tagline: "Steel-encased cementitious-core raised floor panel for standard data center loads.",
+    overview:
+      "Haisen Steel Cementitious Raised Floor panels use a lightweight cementitious core fully encased in galvanized steel, providing a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
+    keyFeatures: [
+      "Fully steel-encased cementitious core",
+      "Cost-effective for standard load requirements",
+      "Consistent panel-to-panel dimensional tolerance",
+      "Wide compatibility with standard pedestal/stringer systems",
+    ],
+    specGroups: [
+      {
+        title: "Panel Specification",
+        specs: [
+          { label: "Panel Size", value: "600 x 600 mm" },
+          { label: "Core Material", value: "Cementitious, steel-encased" },
+          { label: "Load Rating", value: "Up to 900 kg concentrated load (model dependent)" },
+        ],
+      },
+    ],
+    applications: ["Standard data center white space", "Equipment rooms", "General commercial raised floor applications"],
+    customizationOptions: ["Panel thickness", "Finish", "Pedestal height"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Is steel cementitious raised floor suitable for a typical data center?",
+        answer:
+          "Yes — it's one of the most widely used raised floor constructions for standard data center loads, offering a cost-effective balance of load capacity, availability and compatibility with common pedestal systems.",
+      },
+    ],
+    relatedProductSlugs: ["calcium-sulphate-raised-floor", "anti-static-raised-floor"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "airflow-floor",
+    category: "raised-floor",
+    name: "Airflow Floor",
+    shortName: "Airflow Floor",
+    tagline: "Perforated raised floor panel engineered for underfloor cold-air distribution.",
+    overview:
+      "Haisen Airflow Floor panels are perforated raised floor tiles engineered to deliver a controlled volume of underfloor cold air into the cold aisle, with adjustable or fixed open-area options to balance airflow across the data hall.",
+    keyFeatures: [
+      "Perforated panel for controlled underfloor air delivery",
+      "Adjustable damper options to balance airflow by zone",
+      "Compatible with standard 600x600mm raised floor grid",
+      "Available in a range of open-area percentages",
+    ],
+    specGroups: [
+      {
+        title: "Panel Specification",
+        specs: [
+          { label: "Panel Size", value: "600 x 600 mm" },
+          { label: "Open Area", value: "25% / 40% / 56% (model dependent)" },
+          { label: "Damper", value: "Fixed or adjustable options" },
+        ],
+      },
+    ],
+    applications: ["Cold aisle underfloor air delivery", "Data center airflow balancing", "Raised-floor cooled equipment rooms"],
+    customizationOptions: ["Open-area percentage", "Damper type", "Finish"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How do I choose the right open-area percentage for airflow floor tiles?",
+        answer:
+          "Higher open-area tiles deliver more airflow per tile and suit higher-density cold aisles; lower open-area tiles are used where less airflow is needed, to avoid over-pressurizing low-density areas. Airflow modeling or a qualified engineer should size tile placement for the specific room.",
+      },
+    ],
+    relatedProductSlugs: ["anti-static-raised-floor", "row-based-cooling"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
 
@@ -758,6 +1889,87 @@ export const products: Product[] = [
     relatedProductSlugs: ["anti-static-raised-floor", "network-cabinet"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
+  {
+    slug: "wire-mesh-cable-tray",
+    category: "cable-management",
+    name: "Wire Mesh Cable Tray",
+    shortName: "Wire Mesh Tray",
+    tagline: "Lightweight welded wire mesh tray for structured, field-modifiable cable pathways.",
+    overview:
+      "Haisen Wire Mesh Cable Tray is a welded wire construction that's lightweight, ventilated and easy to cut and reconfigure on site, making it a common choice for structured data and fiber cabling pathways above racks or along containment routes.",
+    keyFeatures: [
+      "Welded wire construction — lightweight and highly ventilated",
+      "Field-cuttable and reconfigurable without special tools",
+      "Wide range of standard widths",
+      "Zinc-plated or stainless finish options",
+    ],
+    specGroups: [
+      {
+        title: "Construction",
+        specs: [
+          { label: "Type", value: "Welded wire mesh" },
+          { label: "Width", value: "50 – 600 mm" },
+          { label: "Finish", value: "Zinc-plated / stainless steel" },
+        ],
+      },
+    ],
+    applications: ["Structured data/fiber cabling", "Overhead cabling above racks", "Telecom rooms"],
+    customizationOptions: ["Width", "Finish", "Accessory splices"],
+    standards: [
+      "UL Certified — cable trays (CSA C22.2 No. 126.1, NFPA 70)",
+      "TÜV SÜD Attestation of Conformity — cable tray system",
+    ],
+    faqs: [
+      {
+        question: "Wire mesh vs ladder cable tray — which is better for a data center?",
+        answer:
+          "Wire mesh tray is lightweight, easy to modify on site and well suited to structured data/fiber cabling, while ladder tray offers higher load capacity and better heat dissipation for heavier power cable runs — many data centers use both, segregated by cable type.",
+      },
+    ],
+    relatedProductSlugs: ["ladder-cable-tray", "cable-tray", "network-cabinet"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "ladder-cable-tray",
+    category: "cable-management",
+    name: "Ladder Cable Tray",
+    shortName: "Ladder Tray",
+    tagline: "High-capacity ladder-type tray for heavier power cable runs.",
+    overview:
+      "Haisen Ladder Cable Tray uses a rung-and-rail construction rated for higher cable fill and load capacity than wire mesh, with good heat dissipation for heavier power cable runs across data centers, telecom rooms and industrial facilities.",
+    keyFeatures: [
+      "Rung-and-rail construction for high load capacity",
+      "Good heat dissipation for power cable bundles",
+      "Bolted or tool-free section connectors",
+      "Wide range of standard widths and rung spacing",
+    ],
+    specGroups: [
+      {
+        title: "Construction",
+        specs: [
+          { label: "Type", value: "Ladder (rung-and-rail)" },
+          { label: "Width", value: "100 – 900 mm" },
+          { label: "Finish", value: "Zinc-plated / hot-dip galvanized" },
+        ],
+      },
+    ],
+    applications: ["Power cable runs", "Industrial cabling pathways", "Telecom and data center backbone routing"],
+    customizationOptions: ["Width", "Rung spacing", "Finish"],
+    standards: [
+      "CE (LVD 2014/35/EU, EN 61537:2007) — Certificate No. M.2021.206.C67668",
+      "TÜV SÜD Attestation of Conformity — cable tray & cable ladder system",
+      "UL Certified — cable trays (CSA C22.2 No. 126.1, NFPA 70)",
+    ],
+    faqs: [
+      {
+        question: "When should I use ladder tray instead of wire mesh?",
+        answer:
+          "Ladder tray is generally preferred for heavier power cable bundles and longer unsupported spans, since its rung-and-rail construction offers higher load capacity and better heat dissipation than lightweight wire mesh tray.",
+      },
+    ],
+    relatedProductSlugs: ["wire-mesh-cable-tray", "cable-tray"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
 
   // ---------------- Energy Storage ----------------
   {
@@ -797,6 +2009,154 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["solar-power-system", "modular-ups"],
     relatedSolutionSlugs: ["energy-storage", "critical-power"],
+  },
+  {
+    slug: "solar-power-system",
+    category: "energy-storage",
+    name: "Solar Power System",
+    shortName: "Solar Power System",
+    tagline: "Grid-tied or off-grid solar generation paired with site energy storage.",
+    overview:
+      "The Haisen Solar Power System combines PV generation with inverters and, where required, battery storage to supply site power for grid-tied offset or off-grid operation — sized for data center auxiliary loads, telecom sites and industrial facilities looking to reduce grid dependence.",
+    keyFeatures: [
+      "Grid-tied or off-grid configuration",
+      "PV array with string or central inverters",
+      "Optional battery storage integration for off-grid/backup use",
+      "Remote monitoring of generation and consumption",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Configuration", value: "Grid-tied / off-grid / hybrid" },
+          { label: "Components", value: "PV array, inverter(s), optional battery storage" },
+          { label: "Monitoring", value: "Remote generation/consumption dashboard" },
+        ],
+      },
+    ],
+    applications: ["Telecom site power offset", "Remote/off-grid facility power", "Data center renewable integration"],
+    customizationOptions: ["Array capacity", "Grid-tied vs. off-grid design", "Battery storage integration"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Can a solar power system fully replace grid power for a data center?",
+        answer:
+          "For most data centers, solar is deployed to offset a portion of grid consumption or support auxiliary/backup loads rather than fully replace utility power, given the load consistency data centers require — off-grid solar-plus-storage is more common for smaller or remote sites such as telecom base stations.",
+      },
+    ],
+    relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-system"],
+    relatedSolutionSlugs: ["energy-storage"],
+  },
+  {
+    slug: "energy-storage-system",
+    category: "energy-storage",
+    name: "Energy Storage System (ESS)",
+    shortName: "ESS",
+    tagline: "General-purpose energy storage system combining battery, PCS and EMS.",
+    overview:
+      "The Haisen Energy Storage System (ESS) is the general building block behind Haisen's cabinet and containerized energy storage products — battery racks, a power conversion system (PCS) and an energy management system (EMS) configured to the site's capacity and operating strategy, whether that's backup power, peak shaving or renewable integration.",
+    keyFeatures: [
+      "Configurable battery, PCS and EMS building blocks",
+      "Operating strategy configurable via EMS (backup / peak shaving / renewables)",
+      "Cabinet or containerized deployment options",
+      "Remote monitoring and safety management",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Components", value: "Battery racks, PCS, EMS" },
+          { label: "Deployment", value: "Cabinet or containerized form factor" },
+          { label: "Operating Strategy", value: "Configurable via EMS" },
+        ],
+      },
+    ],
+    applications: ["Data center resilience", "Industrial peak shaving", "Renewable energy integration"],
+    customizationOptions: ["Energy capacity", "PCS rating", "Operating strategy configuration"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What's the difference between an ESS and a BESS?",
+        answer:
+          "BESS (Battery Energy Storage System) specifically refers to battery-based storage. ESS (Energy Storage System) is the broader term for the overall system — battery, PCS and EMS — that Haisen configures for a given site; in practice the terms are often used interchangeably for battery-based deployments.",
+      },
+    ],
+    relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-cabinet"],
+    relatedSolutionSlugs: ["energy-storage"],
+  },
+  {
+    slug: "energy-storage-cabinet",
+    category: "energy-storage",
+    name: "Energy Storage Cabinet",
+    shortName: "ESS Cabinet",
+    tagline: "Cabinet-format battery energy storage for indoor or protected installation.",
+    overview:
+      "The Haisen Energy Storage Cabinet packages battery racks, PCS and EMS into a standard cabinet footprint for indoor or protected-space installation, suited to sites that have equipment room space available but don't require a full outdoor containerized unit.",
+    keyFeatures: [
+      "Standard cabinet footprint for indoor installation",
+      "Integrated PCS and EMS",
+      "Compatible with standard cabinet row layouts",
+      "Remote monitoring and alarm management",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Form Factor", value: "Standard cabinet footprint" },
+          { label: "Components", value: "Battery racks, PCS, EMS" },
+          { label: "Installation", value: "Indoor / protected space" },
+        ],
+      },
+    ],
+    applications: ["Data center equipment rooms", "Indoor industrial facilities", "Sites without outdoor container space"],
+    customizationOptions: ["Energy capacity", "PCS rating", "Cabinet finish"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When should I choose a cabinet ESS over a containerized ESS?",
+        answer:
+          "A cabinet-format ESS suits sites with available indoor equipment room space and no need for a self-contained outdoor unit; a containerized ESS is preferred when outdoor, site-independent deployment or larger capacity is required.",
+      },
+    ],
+    relatedProductSlugs: ["battery-energy-storage-system", "containerized-energy-storage-system"],
+    relatedSolutionSlugs: ["energy-storage"],
+  },
+  {
+    slug: "containerized-energy-storage-system",
+    category: "energy-storage",
+    name: "Containerized Energy Storage System",
+    shortName: "Containerized ESS",
+    tagline: "Outdoor-rated containerized battery energy storage for site-independent deployment.",
+    overview:
+      "The Haisen Containerized Energy Storage System packages battery racks, PCS, EMS, thermal management and fire suppression inside an outdoor-rated ISO container, for site-independent deployment where indoor space isn't available or larger storage capacity is required.",
+    keyFeatures: [
+      "Outdoor-rated container structure",
+      "Integrated thermal management and fire suppression",
+      "Factory-tested as a complete system before shipment",
+      "Scalable — deploy multiple containers for larger capacity",
+    ],
+    specGroups: [
+      {
+        title: "System",
+        specs: [
+          { label: "Form Factor", value: "Standard ISO container, outdoor-rated" },
+          { label: "Components", value: "Battery racks, PCS, EMS, thermal management, fire suppression" },
+          { label: "Scalability", value: "Multiple containers interconnected for larger capacity" },
+        ],
+      },
+    ],
+    applications: ["Utility-scale / site-level energy storage", "Renewable energy integration", "Industrial and data center backup"],
+    customizationOptions: ["Energy capacity", "PCS rating", "Thermal management type"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Why choose a containerized ESS over a cabinet-based system?",
+        answer:
+          "A containerized ESS is outdoor-rated and self-contained, making it suitable for sites without indoor space or for larger capacity requirements than a cabinet-format system can practically house.",
+      },
+    ],
+    relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-cabinet", "40ft-container-data-center"],
+    relatedSolutionSlugs: ["energy-storage"],
   },
 ];
 
