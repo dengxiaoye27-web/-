@@ -6,6 +6,13 @@ import { solutions } from "@/data/solutions";
 import { projects } from "@/data/projects";
 import { articles } from "@/data/articles";
 
+// Only the default locale (English) is submitted here — the other
+// locales in src/i18n/config.ts currently serve the same English
+// content at a localized URL and are intentionally left out of the
+// sitemap until real translations exist, to avoid signaling duplicate
+// content. Each page's <html lang> and hreflang alternates (see
+// src/app/[locale]/layout.tsx) already make those URLs discoverable and
+// crawlable on their own.
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
