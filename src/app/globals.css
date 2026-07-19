@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy-950: #05070d;
+  --color-navy-900: #0a0e1a;
+  --color-navy-800: #121728;
+  --color-navy-700: #1c2338;
+  --color-ink-900: #0b0d12;
+  --color-ink-600: #4b5262;
+  --color-paper-0: #ffffff;
+  --color-paper-50: #f5f7fa;
+  --color-line-200: #e3e7ee;
+  --color-accent-500: #0091ff;
+  --color-accent-400: #39b8ff;
+  --color-cyan-400: #22d3ee;
+
+  --background: var(--color-paper-0);
+  --foreground: var(--color-ink-900);
+}
+
+@theme inline {
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-600: var(--color-ink-600);
+  --color-paper-0: var(--color-paper-0);
+  --color-paper-50: var(--color-paper-50);
+  --color-line-200: var(--color-line-200);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-400: var(--color-accent-400);
+  --color-cyan-400: var(--color-cyan-400);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.container-page {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent-500);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
