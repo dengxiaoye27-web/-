@@ -7,5 +7,5 @@ export const siteConfig = {
   email: "sales@haisen-dc.com",
   whatsapp: "https://wa.me/8600000000000",
   phone: "+86 000 0000 0000",
-  address: "Guangdong, China",
+  address: "Room 535, No.1630, Airport Road, Baiyun District, Guangzhou, 510080, Guangdong, China",
 };

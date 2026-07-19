@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Button } from "@/components/ui/Button";
 import { certifications } from "@/data/certifications";
+import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -92,6 +93,13 @@ export default function AboutPage() {
                 <p className="mt-1 text-xs text-ink-600">{cert.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <p className="text-sm text-ink-600 mb-6">
+              Certificates and test reports on file — click any card to view
+              the full document.
+            </p>
+            <CertificateGallery />
           </div>
         </section>
 

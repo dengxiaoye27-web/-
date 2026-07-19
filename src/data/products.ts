@@ -59,7 +59,7 @@ export const products: Product[] = [
       "Custom branding / labeling",
       "OEM / ODM packaging",
     ],
-    standards: ["CE", "RoHS", "IEC 60320", "IEC 60309"],
+    standards: ["Designed to IEC 60320 / IEC 60309 connector standards", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a rack PDU used for?",
@@ -136,7 +136,7 @@ export const products: Product[] = [
       "Firmware / SNMP MIB customization",
       "Environmental sensor kit selection",
     ],
-    standards: ["CE", "RoHS", "IEC 60320", "SNMP MIB-II"],
+    standards: ["Designed to IEC 60320 connector standards", "SNMP MIB-II compliant", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a smart PDU?",
@@ -197,7 +197,7 @@ export const products: Product[] = [
     ],
     applications: ["AI / GPU compute racks", "High-density colocation", "Blade server enclosures"],
     customizationOptions: ["Phase balancing layout", "Outlet mix", "Monitoring module"],
-    standards: ["CE", "RoHS", "IEC 60309"],
+    standards: ["Designed to IEC 60309 connector standards", "Certification available on request per project spec"],
     faqs: [
       {
         question: "When is a high power PDU required instead of a standard PDU?",
@@ -254,7 +254,7 @@ export const products: Product[] = [
     ],
     applications: ["Server and network racks", "Telecom equipment rooms", "SME data rooms"],
     customizationOptions: ["Rack height (2U/3U/6U)", "Battery runtime package", "Communication card"],
-    standards: ["CE", "RoHS", "IEC 62040"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is an online UPS?",
@@ -310,7 +310,7 @@ export const products: Product[] = [
       "Sites with phased IT load growth",
     ],
     customizationOptions: ["Module power rating", "Frame slot count", "Battery cabinet integration"],
-    standards: ["CE", "RoHS", "IEC 62040"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is N+1 redundancy?",
@@ -367,7 +367,11 @@ export const products: Product[] = [
       "Cable management accessories",
       "Color / branding",
     ],
-    standards: ["CE", "RoHS", "IEC 60297 (19-inch)"],
+    standards: [
+      "CE (LVD 2014/35/EC, EN IEC 62368-1:2020) — K series cabinets",
+      "IEC 62368-1 / UL 60950-1 tested (Report No. EED35R800398)",
+      "IEC 60297 (19-inch rack format)",
+    ],
     faqs: [
       {
         question: "What is a network cabinet used for?",
@@ -419,7 +423,7 @@ export const products: Product[] = [
     ],
     applications: ["Hyperscale and colocation data halls", "Enterprise server rooms", "High-density storage deployments"],
     customizationOptions: ["Load rating", "Aisle containment interface", "PDU channel configuration"],
-    standards: ["CE", "RoHS", "IEC 60297"],
+    standards: ["Designed to IEC 60297 (19-inch rack) standard", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What load capacity does a data center cabinet need?",
@@ -469,7 +473,7 @@ export const products: Product[] = [
     ],
     applications: ["Enterprise IT rooms", "Bank branch data rooms", "Edge / regional data centers"],
     customizationOptions: ["Row configuration", "Power redundancy level", "Cooling type", "Fire suppression agent"],
-    standards: ["CE", "RoHS", "IEC 62040"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a micro modular data center?",
@@ -531,7 +535,7 @@ export const products: Product[] = [
     ],
     applications: ["Telecom network expansion", "Mining sites", "Oil & gas remote operations", "Edge computing", "Government / emergency data centers"],
     customizationOptions: ["Rack count and layout", "Power redundancy", "Cooling type", "Exterior paint / branding"],
-    standards: ["CE", "RoHS", "ISO container structural standards"],
+    standards: ["Built on standard ISO container structural dimensions", "Certification available on request per project spec"],
     faqs: [
       {
         question: "20ft vs 40ft container data center — which should I choose?",
@@ -580,7 +584,7 @@ export const products: Product[] = [
     ],
     applications: ["Data center white space", "Telecom equipment rooms", "Control rooms"],
     customizationOptions: ["Capacity", "Air distribution direction", "Refrigerant type"],
-    standards: ["CE", "RoHS"],
+    standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a precision air conditioner?",
@@ -618,7 +622,7 @@ export const products: Product[] = [
     ],
     applications: ["AI training clusters", "HPC compute racks", "High-density GPU deployments"],
     customizationOptions: ["CDU capacity", "Loop configuration", "Rack manifold layout"],
-    standards: ["CE", "RoHS"],
+    standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a CDU in liquid cooling?",
@@ -660,7 +664,7 @@ export const products: Product[] = [
     ],
     applications: ["AI / HPC data centers", "High-density colocation"],
     customizationOptions: ["Capacity", "Form factor (rack-mount / standalone)", "Redundancy level"],
-    standards: ["CE", "RoHS"],
+    standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "Why is a CDU needed instead of connecting facility water directly to servers?",
@@ -700,7 +704,7 @@ export const products: Product[] = [
     ],
     applications: ["Data center white space", "Control rooms", "Clean rooms"],
     customizationOptions: ["Panel core type", "Finish", "Pedestal height"],
-    standards: ["CE", "RoHS"],
+    standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "What is anti-static raised flooring used for in a data center?",
@@ -739,7 +743,11 @@ export const products: Product[] = [
     ],
     applications: ["Data center overhead cabling", "Telecom rooms", "Industrial cabling pathways"],
     customizationOptions: ["Width", "Finish", "Accessory set"],
-    standards: ["CE", "RoHS"],
+    standards: [
+      "CE (LVD 2014/35/EU, EN 61537:2007) — ladder, trough and optical fiber raceway lines",
+      "TÜV SÜD Attestation of Conformity — cable tray & cable ladder system",
+      "UL Certified — cable trays (CSA C22.2 No. 126.1, NFPA 70) and optical fiber raceway (UL 2024)",
+    ],
     faqs: [
       {
         question: "Wire mesh vs ladder cable tray — which is better for a data center?",
@@ -779,7 +787,7 @@ export const products: Product[] = [
     ],
     applications: ["Data center backup / peak shaving", "Industrial facilities", "Renewable energy integration sites"],
     customizationOptions: ["Energy capacity", "PCS rating", "Form factor (cabinet / container)"],
-    standards: ["CE", "RoHS"],
+    standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a battery energy storage system used for in a data center?",
