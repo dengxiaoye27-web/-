@@ -221,6 +221,15 @@ export interface ProjectsUIMessages {
   ctaButton: string;
 }
 
+export interface ResourcesUIMessages {
+  hubEyebrow: string;
+  hubTitle: string;
+  hubSubtitle: string;
+  faqTitle: string;
+  ctaTitle: string;
+  ctaButton: string;
+}
+
 export interface ContactMessages {
   hero: {
     title: string;

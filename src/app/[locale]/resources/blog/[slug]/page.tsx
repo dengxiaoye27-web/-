@@ -7,6 +7,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticle, articles } from "@/data/articles";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
+import { getArticleContent } from "@/i18n/content/articles";
+import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
+import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -17,12 +20,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const article = getArticle(slug);
   if (!article) return {};
+  const content = getArticleContent(slug, locale, article);
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: content.title,
+    description: content.excerpt,
     alternates: { canonical: `/resources/blog/${article.slug}` },
   };
 }
@@ -32,14 +37,19 @@ export default async function ArticlePage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const article = getArticle(slug);
   if (!article) notFound();
 
+  const content = getArticleContent(slug, locale, article);
+  const t = getResourcesUiMessages(locale);
+  const common = getCommonMessages(locale);
+
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Resources", href: "/resources" },
-    { label: article.title },
+    { label: common.nav.home, href: "/" },
+    { label: common.nav.resources, href: "/resources" },
+    { label: content.title },
   ];
   const url = `${siteConfig.url}/resources/blog/${article.slug}`;
 
@@ -48,12 +58,12 @@ export default async function ArticlePage({
       <JsonLd
         data={[
           articleSchema({
-            title: article.title,
-            description: article.excerpt,
+            title: content.title,
+            description: content.excerpt,
             datePublished: article.publishedAt,
             url,
           }),
-          faqSchema(article.faqs),
+          faqSchema(content.faqs),
           breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` }))),
         ]}
       />
@@ -61,19 +71,19 @@ export default async function ArticlePage({
       <div className="bg-navy-950 text-white py-16 md:py-24">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
-          <p className="eyebrow mt-6 mb-3">{article.category}</p>
+          <p className="eyebrow mt-6 mb-3">{content.category}</p>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            {article.title}
+            {content.title}
           </h1>
           <p className="mt-4 text-white/60 text-sm">
-            {article.publishedAt} · {article.readingTime}
+            {article.publishedAt} · {content.readingTime}
           </p>
         </div>
       </div>
 
       <div className="container-page py-16 md:py-20">
         <article className="max-w-3xl space-y-10">
-          {article.body.map((section) => (
+          {content.body.map((section) => (
             <div key={section.heading}>
               <h2 className="text-2xl font-semibold text-ink-900">{section.heading}</h2>
               <p className="mt-4 text-ink-600 leading-relaxed">{section.content}</p>
@@ -82,14 +92,14 @@ export default async function ArticlePage({
         </article>
 
         <div className="max-w-3xl mt-16">
-          <h2 className="text-2xl font-semibold text-ink-900 mb-6">Frequently Asked Questions</h2>
-          <Accordion items={article.faqs} />
+          <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.faqTitle}</h2>
+          <Accordion items={content.faqs} />
         </div>
 
         <div className="max-w-3xl mt-16 rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 text-center">
-          <h3 className="text-xl font-semibold">Have a related project?</h3>
+          <h3 className="text-xl font-semibold">{t.ctaTitle}</h3>
           <div className="mt-6 flex justify-center">
-            <Button href="/contact">Talk to Our Engineering Team</Button>
+            <Button href="/contact">{t.ctaButton}</Button>
           </div>
         </div>
       </div>
