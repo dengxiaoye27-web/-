@@ -197,6 +197,30 @@ export interface ProductsUIMessages {
   categoryComingSoon: string;
 }
 
+export interface ProjectsUIMessages {
+  hubEyebrow: string;
+  hubTitle: string;
+  hubSubtitle: string;
+  backgroundEyebrow: string;
+  backgroundTitle: string;
+  challengeEyebrow: string;
+  challengeTitle: string;
+  requirementsEyebrow: string;
+  requirementsTitle: string;
+  solutionEyebrow: string;
+  solutionTitle: string;
+  productsEyebrow: string;
+  productsTitle: string;
+  configEyebrow: string;
+  configTitle: string;
+  implementationEyebrow: string;
+  implementationTitle: string;
+  resultsEyebrow: string;
+  resultsTitle: string;
+  ctaTitle: string;
+  ctaButton: string;
+}
+
 export interface ContactMessages {
   hero: {
     title: string;

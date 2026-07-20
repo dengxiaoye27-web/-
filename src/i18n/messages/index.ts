@@ -5,6 +5,7 @@ import { aboutMessages } from "./about";
 import { contactMessages } from "./contact";
 import { solutionsUiMessages } from "./solutionsUi";
 import { productsUiMessages } from "./productsUi";
+import { projectsUiMessages } from "./projectsUi";
 
 export function getCommonMessages(locale: Locale) {
   return commonMessages[locale];
@@ -28,6 +29,10 @@ export function getSolutionsUiMessages(locale: Locale) {
 
 export function getProductsUiMessages(locale: Locale) {
   return productsUiMessages[locale];
+}
+
+export function getProjectsUiMessages(locale: Locale) {
+  return projectsUiMessages[locale];
 }
 
 export * from "./types";
