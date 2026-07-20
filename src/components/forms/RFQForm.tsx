@@ -16,9 +16,10 @@ export function RFQForm({ messages: f }: { messages: ContactMessages["form"] }) 
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("submitting");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
     payload.inquiryType = inquiryType;
 
@@ -30,7 +31,7 @@ export function RFQForm({ messages: f }: { messages: ContactMessages["form"] }) 
       });
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch {
       setStatus("error");
     }
