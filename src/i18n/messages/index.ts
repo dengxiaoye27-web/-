@@ -6,6 +6,7 @@ import { contactMessages } from "./contact";
 import { solutionsUiMessages } from "./solutionsUi";
 import { productsUiMessages } from "./productsUi";
 import { projectsUiMessages } from "./projectsUi";
+import { resourcesUiMessages } from "./resourcesUi";
 
 export function getCommonMessages(locale: Locale) {
   return commonMessages[locale];
@@ -33,6 +34,10 @@ export function getProductsUiMessages(locale: Locale) {
 
 export function getProjectsUiMessages(locale: Locale) {
   return projectsUiMessages[locale];
+}
+
+export function getResourcesUiMessages(locale: Locale) {
+  return resourcesUiMessages[locale];
 }
 
 export * from "./types";

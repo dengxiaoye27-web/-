@@ -1,0 +1,53 @@
+import { Locale } from "../config";
+import { ResourcesUIMessages } from "./types";
+
+export const resourcesUiMessages: Record<Locale, ResourcesUIMessages> = {
+  en: {
+    hubEyebrow: "Knowledge Center",
+    hubTitle: "Resources & Knowledge Center",
+    hubSubtitle: "Technical guides and answers to the questions data center, telecom and procurement teams ask most.",
+    faqTitle: "Frequently Asked Questions",
+    ctaTitle: "Have a related project?",
+    ctaButton: "Talk to Our Engineering Team",
+  },
+  ar: {
+    hubEyebrow: "مركز المعرفة",
+    hubTitle: "الموارد ومركز المعرفة",
+    hubSubtitle: "أدلة تقنية وإجابات على الأسئلة التي تطرحها فرق مراكز البيانات والاتصالات والمشتريات الأكثر شيوعاً.",
+    faqTitle: "الأسئلة المتكررة",
+    ctaTitle: "هل لديك مشروع ذو صلة؟",
+    ctaButton: "تحدث مع فريقنا الهندسي",
+  },
+  fr: {
+    hubEyebrow: "Centre de connaissances",
+    hubTitle: "Ressources et centre de connaissances",
+    hubSubtitle: "Guides techniques et réponses aux questions les plus fréquentes des équipes de centres de données, de télécommunications et d'achats.",
+    faqTitle: "Questions fréquentes",
+    ctaTitle: "Vous avez un projet connexe ?",
+    ctaButton: "Parlez à notre équipe d'ingénierie",
+  },
+  es: {
+    hubEyebrow: "Centro de conocimiento",
+    hubTitle: "Recursos y centro de conocimiento",
+    hubSubtitle: "Guías técnicas y respuestas a las preguntas más frecuentes de los equipos de centros de datos, telecomunicaciones y compras.",
+    faqTitle: "Preguntas frecuentes",
+    ctaTitle: "¿Tiene un proyecto relacionado?",
+    ctaButton: "Hable con nuestro equipo de ingeniería",
+  },
+  ru: {
+    hubEyebrow: "Центр знаний",
+    hubTitle: "Ресурсы и центр знаний",
+    hubSubtitle: "Технические руководства и ответы на самые частые вопросы команд ЦОД, телекоммуникаций и закупок.",
+    faqTitle: "Часто задаваемые вопросы",
+    ctaTitle: "Есть связанный проект?",
+    ctaButton: "Свяжитесь с нашей инженерной командой",
+  },
+  zh: {
+    hubEyebrow: "知识中心",
+    hubTitle: "资源与知识中心",
+    hubSubtitle: "面向数据中心、电信及采购团队最常提出问题的技术指南与解答。",
+    faqTitle: "常见问题解答",
+    ctaTitle: "有相关项目需求？",
+    ctaButton: "联系我们的工程团队",
+  },
+};

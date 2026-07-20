@@ -9,6 +9,7 @@ import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
+import { getArticleContent } from "@/i18n/content/articles";
 import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
@@ -239,13 +240,16 @@ export default async function HomePage({
             <SectionHeading eyebrow={t.insights.eyebrow} title={t.insights.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {latestArticles.map((article) => (
-              <Card key={article.slug} href={`/resources/blog/${article.slug}`}>
-                <p className="eyebrow mb-2">{article.category}</p>
-                <h3 className="text-lg font-semibold text-ink-900">{article.title}</h3>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{article.excerpt}</p>
-              </Card>
-            ))}
+            {latestArticles.map((article) => {
+              const content = getArticleContent(article.slug, locale, article);
+              return (
+                <Card key={article.slug} href={`/resources/blog/${article.slug}`}>
+                  <p className="eyebrow mb-2">{content.category}</p>
+                  <h3 className="text-lg font-semibold text-ink-900">{content.title}</h3>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.excerpt}</p>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
