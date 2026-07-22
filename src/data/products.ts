@@ -77,7 +77,7 @@ export const products: Product[] = [
           "Yes. Wandtung is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu", "uk-pdu"],
+    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu", "uk-pdu", "iec-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
@@ -435,6 +435,91 @@ export const products: Product[] = [
       },
     ],
     relatedProductSlugs: ["pdu", "schuko-pdu", "nema-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
+  },
+  {
+    slug: "iec-pdu",
+    category: "power-distribution",
+    name: "IEC Standard PDU (C13/C19)",
+    shortName: "IEC PDU",
+    tagline: "1U rack-mount PDU with IEC C13 and C19 outlets for global data center cabinets.",
+    overview:
+      "The Wandtung IEC PDU is a 1U rack-mount power distribution unit fitted with IEC 60320 C13 and C19 outlets, an integrated illuminated power switch and automatic overload protection, built for data center and telecom cabinets worldwide. It mounts vertically (0U) or horizontally, uses a heavy-duty copper core power cord rated to 1875W, and installs with built-in mounting ears for a secure, versatile fit.",
+    featured: true,
+    images: [
+      "/products/iec-pdu/01-main.png",
+      "/products/iec-pdu/02-spec-annotated.png",
+      "/products/iec-pdu/03-c13-c19-detail.png",
+      "/products/iec-pdu/04-copper-busbar.png",
+      "/products/iec-pdu/05-aluminum-shell.png",
+      "/products/iec-pdu/06-copper-core-cable.png",
+      "/products/iec-pdu/07-mounting-scene.png",
+    ],
+    keyFeatures: [
+      "Mixed IEC 60320 C13 and C19 outlets (e.g. 6× C13 and 2× C19) for server and network equipment",
+      "Illuminated power switch with automatic overload protection",
+      "Robust black metal housing for vertical (0U) or horizontal rack mounting",
+      "Built-in mounting ears for secure, versatile installation",
+      "14 AWG / 2.08mm² heavy-duty copper core cable, 1875W capacity, UL-standard construction",
+      "OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "100–125V / 200–250V" },
+          { label: "Rated Power", value: "1875W" },
+          { label: "Rated Frequency", value: "50/60 Hz" },
+        ],
+      },
+      {
+        title: "Input / Output",
+        specs: [
+          { label: "Output Sockets", value: "IEC 60320 C13 and C19, custom mix available" },
+          { label: "Cable", value: "14 AWG / 2.08mm² copper core, UL-standard construction" },
+        ],
+      },
+      {
+        title: "Mechanical & Protection",
+        specs: [
+          { label: "Mounting", value: "0U vertical or horizontal rack, built-in mounting ears" },
+          { label: "Housing Material", value: "Robust black metal housing" },
+          { label: "Protection", value: "Illuminated switch with automatic overload protection" },
+        ],
+      },
+    ],
+    applications: [
+      "Data center IT racks worldwide",
+      "Server rooms requiring mixed C13/C19 equipment power cords",
+      "Telecom and network equipment cabinets",
+      "Colocation cabinets",
+    ],
+    customizationOptions: [
+      "C13/C19 outlet count and mix",
+      "Input plug and cable length",
+      "Mounting orientation",
+      "Custom branding / labeling",
+      "OEM / ODM packaging",
+    ],
+    standards: ["Designed to IEC 60320 connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is the difference between a C13 and a C19 outlet?",
+        answer:
+          "C13 is the standard IEC outlet used by most servers, switches and network equipment power cords; C19 is a higher-current outlet used by equipment with heavier power draw, such as blade enclosures and some UPS units. Mixing both on one PDU lets a single unit serve equipment of both power cord types.",
+      },
+      {
+        question: "Can the IEC PDU be mounted vertically in the rack?",
+        answer:
+          "Yes. The unit is designed for either 0U vertical mounting along the side of the rack or horizontal 1U mounting, with built-in mounting ears for a secure fit either way.",
+      },
+      {
+        question: "Can Wandtung customize the C13/C19 outlet mix?",
+        answer:
+          "Yes. Wandtung is a factory-direct manufacturer and configures the C13/C19 outlet count and mix, input plug and cable length to match each project's rack and equipment specification, including OEM/ODM.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "schuko-pdu", "uk-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
