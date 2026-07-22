@@ -15,7 +15,7 @@ export function SiteFooter() {
     <footer className="bg-navy-950 border-t border-navy-800 text-white/70">
       <div className="container-page py-16 grid gap-10 md:grid-cols-5">
         <div className="md:col-span-2">
-          <p className="text-xl font-semibold text-white tracking-tight">HAISEN</p>
+          <p className="text-xl font-semibold text-white tracking-tight">{siteConfig.name.toUpperCase()}</p>
           <p className="mt-3 text-sm max-w-xs leading-relaxed">
             {siteConfig.legalName} — {t.footer.tagline}.
           </p>

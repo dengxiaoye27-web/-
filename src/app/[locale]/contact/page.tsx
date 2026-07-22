@@ -9,7 +9,7 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Contact & Request a Quote",
   description:
-    "Contact Haisen's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
+    "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
   alternates: { canonical: "/contact" },
 };
 

@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
       </h1>
       <div className="mt-8 max-w-3xl space-y-6 text-ink-600 leading-relaxed">
         <p>
-          {siteConfig.legalName} (&quot;Haisen&quot;, &quot;we&quot;, &quot;us&quot;) collects information
+          {siteConfig.legalName} (&quot;Wandtung&quot;, &quot;we&quot;, &quot;us&quot;) collects information
           submitted through this website&apos;s inquiry and request-a-quote forms
           — including name, company, country, email, WhatsApp number and
           project details — solely to respond to product and project

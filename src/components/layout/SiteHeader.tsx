@@ -8,6 +8,7 @@ import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getCommonMessages } from "@/i18n/messages";
+import { siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   const locale = useLocale();
@@ -20,7 +21,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-navy-700 bg-navy-950/95 backdrop-blur">
       <div className="container-page flex h-16 md:h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-white">
-          <span className="text-xl font-semibold tracking-tight">HAISEN</span>
+          <span className="text-xl font-semibold tracking-tight">{siteConfig.name.toUpperCase()}</span>
           <span className="hidden md:inline text-xs text-white/50 border-l border-white/20 pl-2 ml-1">
             {t.nav.headerTagline}
           </span>

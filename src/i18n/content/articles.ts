@@ -183,7 +183,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "التكوينات النموذجية", content: "تتوفر الوحدات الصغيرة عادة بتكوينات صف واحد (خزانات على جانب واحد من ممر مركزي) وصفين (خزانات متقابلة مع احتواء ممر ساخن/بارد)، بأحجام من حفنة راكات إلى غرفة بيانات صغيرة كاملة." },
       ],
       faqs: [
-        { question: "هل تقدم هايسِن حلول مراكز بيانات الوحدة الصغيرة؟", answer: "نعم. تصمم هايسِن وتصنّع مراكز بيانات وحدة صغيرة بصف واحد وصفين وشاملة الكل، مع طاقة وتبريد وإخماد حريق ومراقبة متكاملة، مصممة ومُختبرة في المصنع كنظام كامل قبل النشر." },
+        { question: "هل تقدم واندتونغ حلول مراكز بيانات الوحدة الصغيرة؟", answer: "نعم. تصمم واندتونغ وتصنّع مراكز بيانات وحدة صغيرة بصف واحد وصفين وشاملة الكل، مع طاقة وتبريد وإخماد حريق ومراقبة متكاملة، مصممة ومُختبرة في المصنع كنظام كامل قبل النشر." },
       ],
     },
     fr: {
@@ -197,7 +197,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Configurations typiques", content: "Les micro-modules sont généralement disponibles en configurations à rangée unique (armoires d'un côté d'une allée centrale) et à double rangée (armoires face à face avec confinement d'allée chaude/froide), dimensionnés d'une poignée de racks jusqu'à une petite salle informatique complète." },
       ],
       faqs: [
-        { question: "Haisen propose-t-il des solutions de data center micro-modulaire ?", answer: "Oui. Haisen conçoit et fabrique des data centers micro-modulaires à une rangée, deux rangées et tout-en-un avec alimentation, refroidissement, extinction incendie et surveillance intégrés, conçus et testés en usine comme un système complet avant déploiement." },
+        { question: "Wandtung propose-t-il des solutions de data center micro-modulaire ?", answer: "Oui. Wandtung conçoit et fabrique des data centers micro-modulaires à une rangée, deux rangées et tout-en-un avec alimentation, refroidissement, extinction incendie et surveillance intégrés, conçus et testés en usine comme un système complet avant déploiement." },
       ],
     },
     es: {
@@ -211,7 +211,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Configuraciones típicas", content: "Los micro módulos suelen estar disponibles en configuraciones de una fila (armarios a un lado de un pasillo central) y de dos filas (armarios enfrentados con contención de pasillo caliente/frío), dimensionados desde un puñado de racks hasta una sala de datos pequeña completa." },
       ],
       faqs: [
-        { question: "¿Ofrece Haisen soluciones de centro de datos micro modular?", answer: "Sí. Haisen diseña y fabrica centros de datos micro modulares de una fila, dos filas y todo en uno con energía, refrigeración, extinción de incendios y monitoreo integrados, diseñados y probados en fábrica como sistema completo antes del despliegue." },
+        { question: "¿Ofrece Wandtung soluciones de centro de datos micro modular?", answer: "Sí. Wandtung diseña y fabrica centros de datos micro modulares de una fila, dos filas y todo en uno con energía, refrigeración, extinción de incendios y monitoreo integrados, diseñados y probados en fábrica como sistema completo antes del despliegue." },
       ],
     },
     ru: {
@@ -225,7 +225,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Типичные конфигурации", content: "Микромодули обычно доступны в однорядной (шкафы с одной стороны центрального прохода) и двухрядной (шкафы друг напротив друга с изоляцией горячего/холодного коридора) конфигурациях, рассчитанных от нескольких стоек до полноценного небольшого машинного зала." },
       ],
       faqs: [
-        { question: "Предлагает ли Haisen решения микромодульных ЦОД?", answer: "Да. Haisen проектирует и производит одно-, двухрядные и моноблочные микромодульные ЦОД со встроенным питанием, охлаждением, пожаротушением и мониторингом, спроектированные и протестированные на заводе как единая система перед развёртыванием." },
+        { question: "Предлагает ли Wandtung решения микромодульных ЦОД?", answer: "Да. Wandtung проектирует и производит одно-, двухрядные и моноблочные микромодульные ЦОД со встроенным питанием, охлаждением, пожаротушением и мониторингом, спроектированные и протестированные на заводе как единая система перед развёртыванием." },
       ],
     },
     zh: {
@@ -239,7 +239,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "典型配置", content: "微模块通常提供单排配置(机柜位于中央通道一侧)及双排配置(机柜面对面布置并配备冷/热通道封闭),规模从少量机架到完整的小型机房均可覆盖。" },
       ],
       faqs: [
-        { question: "海森是否提供微模块数据中心解决方案？", answer: "是的。海森设计并制造单排、双排及一体式微模块数据中心,集成电力、制冷、消防及监控系统,在部署前作为完整系统于工厂完成设计与测试。" },
+        { question: "万电通是否提供微模块数据中心解决方案？", answer: "是的。万电通设计并制造单排、双排及一体式微模块数据中心,集成电力、制冷、消防及监控系统,在部署前作为完整系统于工厂完成设计与测试。" },
       ],
     },
   },
@@ -327,7 +327,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "ما الذي تراقبه CDU", content: "تشمل مراقبة CDU النموذجية درجة حرارة التزويد/العودة، ومعدل التدفق، والضغط، وحالة كشف التسرب، والمبلَّغ عنها لنظام مراقبة المنشأة." },
       ],
       faqs: [
-        { question: "هل تقدم هايسِن حلول التبريد السائل وCDU؟", answer: "نعم. تقدم هايسِن أنظمة تبريد سائل بلوحة باردة مع حلقات أساسية/ثانوية تديرها CDU، وكشف تسرب ومراقبة لعمليات نشر الذكاء الاصطناعي والحوسبة فائقة الكثافة." },
+        { question: "هل تقدم واندتونغ حلول التبريد السائل وCDU؟", answer: "نعم. تقدم واندتونغ أنظمة تبريد سائل بلوحة باردة مع حلقات أساسية/ثانوية تديرها CDU، وكشف تسرب ومراقبة لعمليات نشر الذكاء الاصطناعي والحوسبة فائقة الكثافة." },
       ],
     },
     fr: {
@@ -341,7 +341,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Ce que surveille une CDU", content: "La surveillance typique d'une CDU comprend la température d'alimentation/retour, le débit, la pression et l'état de détection de fuite, rapportés au système de surveillance de l'installation." },
       ],
       faqs: [
-        { question: "Haisen propose-t-il des solutions de refroidissement liquide et de CDU ?", answer: "Oui. Haisen propose des systèmes de refroidissement liquide à plaque froide avec boucles primaire/secondaire gérées par CDU, détection de fuite et surveillance pour les déploiements IA et de calcul haute densité." },
+        { question: "Wandtung propose-t-il des solutions de refroidissement liquide et de CDU ?", answer: "Oui. Wandtung propose des systèmes de refroidissement liquide à plaque froide avec boucles primaire/secondaire gérées par CDU, détection de fuite et surveillance pour les déploiements IA et de calcul haute densité." },
       ],
     },
     es: {
@@ -355,7 +355,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Qué monitorea una CDU", content: "El monitoreo típico de una CDU incluye la temperatura de suministro/retorno, el caudal, la presión y el estado de detección de fugas, informados al sistema de monitoreo de la instalación." },
       ],
       faqs: [
-        { question: "¿Ofrece Haisen soluciones de refrigeración líquida y CDU?", answer: "Sí. Haisen ofrece sistemas de refrigeración líquida de placa fría con circuitos primario/secundario gestionados por CDU, detección de fugas y monitoreo para despliegues de IA y cómputo de alta densidad." },
+        { question: "¿Ofrece Wandtung soluciones de refrigeración líquida y CDU?", answer: "Sí. Wandtung ofrece sistemas de refrigeración líquida de placa fría con circuitos primario/secundario gestionados por CDU, detección de fugas y monitoreo para despliegues de IA y cómputo de alta densidad." },
       ],
     },
     ru: {
@@ -369,7 +369,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "Что контролирует CDU", content: "Типичный мониторинг CDU включает температуру подачи/обратки, расход, давление и статус обнаружения утечек, передаваемые в систему мониторинга объекта." },
       ],
       faqs: [
-        { question: "Предлагает ли Haisen решения жидкостного охлаждения и CDU?", answer: "Да. Haisen предлагает системы жидкостного охлаждения холодными пластинами с первичным/вторичным контурами под управлением CDU, обнаружением утечек и мониторингом для развёртываний ИИ и высокоплотных вычислений." },
+        { question: "Предлагает ли Wandtung решения жидкостного охлаждения и CDU?", answer: "Да. Wandtung предлагает системы жидкостного охлаждения холодными пластинами с первичным/вторичным контурами под управлением CDU, обнаружением утечек и мониторингом для развёртываний ИИ и высокоплотных вычислений." },
       ],
     },
     zh: {
@@ -383,7 +383,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "CDU监测哪些内容", content: "CDU的典型监测项包括供回水温度、流量、压力及漏液检测状态,并上报至设施监控系统。" },
       ],
       faqs: [
-        { question: "海森是否提供液冷及CDU解决方案？", answer: "是的。海森提供冷板式液冷系统,配备CDU管理的一次侧/二次侧回路、漏液检测及监控功能,适用于AI及高密度计算部署。" },
+        { question: "万电通是否提供液冷及CDU解决方案？", answer: "是的。万电通提供冷板式液冷系统,配备CDU管理的一次侧/二次侧回路、漏液检测及监控功能,适用于AI及高密度计算部署。" },
       ],
     },
   },
@@ -481,7 +481,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "2N و2N+1", content: "يكرر 2N مسار الطاقة بالكامل — نظامان مستقلان تماماً، كل منهما بحجم الحمل الكامل — للمنشآت التي لا يمكنها تحمل أي نقطة فشل واحدة. يضيف 2N+1 وحدة تكرار إضافية فوق ذلك." },
       ],
       faqs: [
-        { question: "هل تصمم هايسِن أنظمة وفق مستوى تكرار محدد؟", answer: "تصمم هايسِن بنية الطاقة وفق مستوى التكرار (N، N+1، 2N) المحدد للمشروع — يجعل UPS المعياري ومفاتيح تحويل ATS/STS تنفيذ التكرار على مستوى الوحدة أو النظام أو المسار الكامل أمراً عملياً." },
+        { question: "هل تصمم واندتونغ أنظمة وفق مستوى تكرار محدد؟", answer: "تصمم واندتونغ بنية الطاقة وفق مستوى التكرار (N، N+1، 2N) المحدد للمشروع — يجعل UPS المعياري ومفاتيح تحويل ATS/STS تنفيذ التكرار على مستوى الوحدة أو النظام أو المسار الكامل أمراً عملياً." },
       ],
     },
     fr: {
@@ -495,7 +495,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "2N et 2N+1", content: "2N duplique l'intégralité du chemin d'alimentation — deux systèmes entièrement indépendants, chacun dimensionné pour la charge complète — pour les installations qui ne peuvent tolérer aucun point de défaillance unique. 2N+1 ajoute un module de redondance supplémentaire par-dessus." },
       ],
       faqs: [
-        { question: "Haisen conçoit-il des systèmes selon un niveau de redondance spécifique ?", answer: "Haisen conçoit l'architecture d'alimentation selon le niveau de redondance (N, N+1, 2N) spécifié par le projet — l'onduleur modulaire et la commutation de transfert ATS/STS rendent pratique la mise en œuvre de la redondance au niveau du module, du système ou du chemin complet." },
+        { question: "Wandtung conçoit-il des systèmes selon un niveau de redondance spécifique ?", answer: "Wandtung conçoit l'architecture d'alimentation selon le niveau de redondance (N, N+1, 2N) spécifié par le projet — l'onduleur modulaire et la commutation de transfert ATS/STS rendent pratique la mise en œuvre de la redondance au niveau du module, du système ou du chemin complet." },
       ],
     },
     es: {
@@ -509,7 +509,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "2N y 2N+1", content: "2N duplica toda la ruta de energía —dos sistemas totalmente independientes, cada uno dimensionado para la carga completa— para instalaciones que no pueden tolerar ningún punto único de fallo. 2N+1 añade un módulo adicional de redundancia sobre eso." },
       ],
       faqs: [
-        { question: "¿Diseña Haisen sistemas según un nivel de redundancia específico?", answer: "Haisen diseña la arquitectura de energía según el nivel de redundancia (N, N+1, 2N) especificado por el proyecto; el SAI modular y la conmutación de transferencia ATS/STS hacen práctico implementar la redundancia a nivel de módulo, sistema o ruta completa." },
+        { question: "¿Diseña Wandtung sistemas según un nivel de redundancia específico?", answer: "Wandtung diseña la arquitectura de energía según el nivel de redundancia (N, N+1, 2N) especificado por el proyecto; el SAI modular y la conmutación de transferencia ATS/STS hacen práctico implementar la redundancia a nivel de módulo, sistema o ruta completa." },
       ],
     },
     ru: {
@@ -523,7 +523,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "2N и 2N+1", content: "2N дублирует весь путь питания — две полностью независимые системы, каждая рассчитана на полную нагрузку — для объектов, которые не могут допустить ни одной единой точки отказа. 2N+1 добавляет дополнительный модуль резервирования сверх этого." },
       ],
       faqs: [
-        { question: "Проектирует ли Haisen системы под конкретный уровень резервирования?", answer: "Haisen проектирует архитектуру питания под уровень резервирования (N, N+1, 2N), указанный проектом — модульные ИБП и переключение ATS/STS делают практичной реализацию резервирования на уровне модуля, системы или всего пути." },
+        { question: "Проектирует ли Wandtung системы под конкретный уровень резервирования?", answer: "Wandtung проектирует архитектуру питания под уровень резервирования (N, N+1, 2N), указанный проектом — модульные ИБП и переключение ATS/STS делают практичной реализацию резервирования на уровне модуля, системы или всего пути." },
       ],
     },
     zh: {
@@ -537,7 +537,7 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { heading: "2N与2N+1", content: "2N对整条电力路径进行复制——两套完全独立的系统,每套均按满负载容量配置——适用于不能容忍任何单点故障的设施。2N+1则在此基础上再增加一个冗余模块。" },
       ],
       faqs: [
-        { question: "海森是否按特定冗余等级设计系统？", answer: "海森根据项目所规定的冗余等级(N、N+1、2N)设计电力架构——模块化UPS及ATS/STS切换开关使得在模块级、系统级或全路径级实现冗余变得切实可行。" },
+        { question: "万电通是否按特定冗余等级设计系统？", answer: "万电通根据项目所规定的冗余等级(N、N+1、2N)设计电力架构——模块化UPS及ATS/STS切换开关使得在模块级、系统级或全路径级实现冗余变得切实可行。" },
       ],
     },
   },

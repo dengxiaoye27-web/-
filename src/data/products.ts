@@ -9,7 +9,7 @@ export const products: Product[] = [
     shortName: "Rack PDU",
     tagline: "Reliable rack-level power distribution for data center and telecom cabinets.",
     overview:
-      "The Haisen Rack PDU distributes utility or UPS power to IT equipment inside a cabinet. It is manufactured in basic, metered, monitored and switched variants, in single-phase and three-phase configurations, and is available in vertical (0U) and horizontal rack-mount formats for data center, telecom and industrial environments.",
+      "The Wandtung Rack PDU distributes utility or UPS power to IT equipment inside a cabinet. It is manufactured in basic, metered, monitored and switched variants, in single-phase and three-phase configurations, and is available in vertical (0U) and horizontal rack-mount formats for data center, telecom and industrial environments.",
     featured: true,
     keyFeatures: [
       "Single-phase and three-phase configurations",
@@ -72,9 +72,9 @@ export const products: Product[] = [
           "A basic PDU only distributes power. A metered PDU adds a local current/voltage display. A monitored PDU adds remote, network-based monitoring of power and environmental data. A switched PDU adds the ability to remotely turn individual outlets on or off.",
       },
       {
-        question: "Can Haisen customize PDU outlet configuration?",
+        question: "Can Wandtung customize PDU outlet configuration?",
         answer:
-          "Yes. Haisen is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
+          "Yes. Wandtung is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
     relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu"],
@@ -87,7 +87,7 @@ export const products: Product[] = [
     shortName: "Schuko PDU",
     tagline: "1U rack-mount PDU with German standard Schuko outlets for European and CEE-market cabinets.",
     overview:
-      "The Haisen Schuko PDU is a 1U rack-mount power distribution unit fitted with German standard (Schuko/CEE 7/3) outlets, an illuminated overload-protected power switch and an integrated surge protection module, built for European and CEE-market data center and telecom cabinets. It mounts horizontally or vertically, ships with a heavy-duty Schuko power cord, and is available in standard black or a custom orange housing.",
+      "The Wandtung Schuko PDU is a 1U rack-mount power distribution unit fitted with German standard (Schuko/CEE 7/3) outlets, an illuminated overload-protected power switch and an integrated surge protection module, built for European and CEE-market data center and telecom cabinets. It mounts horizontally or vertically, ships with a heavy-duty Schuko power cord, and is available in standard black or a custom orange housing.",
     featured: true,
     images: [
       "/products/schuko-pdu/01-main.png",
@@ -163,7 +163,7 @@ export const products: Product[] = [
       {
         question: "Can the housing color or outlet layout be customized?",
         answer:
-          "Yes. Haisen is a factory-direct manufacturer and offers the Schuko PDU in standard black or a custom orange housing, with outlet count, cable length and branding configured per project, including OEM/ODM.",
+          "Yes. Wandtung is a factory-direct manufacturer and offers the Schuko PDU in standard black or a custom orange housing, with outlet count, cable length and branding configured per project, including OEM/ODM.",
       },
     ],
     relatedProductSlugs: ["pdu", "intelligent-pdu", "network-cabinet"],
@@ -176,7 +176,7 @@ export const products: Product[] = [
     shortName: "NEMA PDU",
     tagline: "1U rack-mount PDU with US standard NEMA 5-15R outlets for North American cabinets.",
     overview:
-      "The Haisen NEMA PDU is a 1U rack-mount power distribution unit fitted with US standard NEMA 5-15R outlets, a dual-pole illuminated power switch under a protective cover and an integrated SPD surge protection module in a fire-retardant shell, built for North American data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a NEMA 5-15P power cord, and is available in standard black or a custom orange housing.",
+      "The Wandtung NEMA PDU is a 1U rack-mount power distribution unit fitted with US standard NEMA 5-15R outlets, a dual-pole illuminated power switch under a protective cover and an integrated SPD surge protection module in a fire-retardant shell, built for North American data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a NEMA 5-15P power cord, and is available in standard black or a custom orange housing.",
     featured: true,
     images: [
       "/products/nema-pdu/01-main.png",
@@ -254,7 +254,7 @@ export const products: Product[] = [
       {
         question: "Can the housing color or input plug be customized?",
         answer:
-          "Yes. Haisen is a factory-direct manufacturer and offers the NEMA PDU in standard black or a custom orange housing, with the input plug configurable to NEMA, IEC, Schuko, UK, AU, CN and other regional standards per project, including OEM/ODM.",
+          "Yes. Wandtung is a factory-direct manufacturer and offers the NEMA PDU in standard black or a custom orange housing, with the input plug configurable to NEMA, IEC, Schuko, UK, AU, CN and other regional standards per project, including OEM/ODM.",
       },
     ],
     relatedProductSlugs: ["pdu", "schuko-pdu", "intelligent-pdu"],
@@ -267,7 +267,7 @@ export const products: Product[] = [
     shortName: "Multi-Function PDU",
     tagline: "1U rack PDU with universal multi-standard sockets and a 360° rotatable mounting bracket.",
     overview:
-      "The Haisen Multi-Function PDU is a 1U, 19-inch rack power strip fitted with six universal multi-standard sockets, a dual power switch and an integrated SPD surge protection module with a green LED safety indicator. A 360° rotatable, tool-free heavy-duty steel mounting bracket allows flexible orientation in the rack, while child-safety shutters rated to 75N add protection in mixed-use environments.",
+      "The Wandtung Multi-Function PDU is a 1U, 19-inch rack power strip fitted with six universal multi-standard sockets, a dual power switch and an integrated SPD surge protection module with a green LED safety indicator. A 360° rotatable, tool-free heavy-duty steel mounting bracket allows flexible orientation in the rack, while child-safety shutters rated to 75N add protection in mixed-use environments.",
     featured: true,
     images: [
       "/products/multi-function-pdu/01-main.jpg",
@@ -353,7 +353,7 @@ export const products: Product[] = [
     shortName: "Intelligent PDU",
     tagline: "Network-managed rack power distribution with monitoring, metering and remote switching.",
     overview:
-      "The Haisen Intelligent PDU is a network-managed power distribution unit built for data centers that require visibility and control at the outlet level. It combines current, voltage, power and energy monitoring, temperature & humidity sensing, and remote outlet switching, accessible via SNMP, Modbus, RS485 and a web management interface.",
+      "The Wandtung Intelligent PDU is a network-managed power distribution unit built for data centers that require visibility and control at the outlet level. It combines current, voltage, power and energy monitoring, temperature & humidity sensing, and remote outlet switching, accessible via SNMP, Modbus, RS485 and a web management interface.",
     featured: true,
     keyFeatures: [
       "Outlet-level current, voltage and power monitoring",
@@ -415,9 +415,9 @@ export const products: Product[] = [
           "A metered PDU reports power usage locally or remotely but cannot control outlets. A switched PDU includes everything a metered PDU offers plus remote, individually addressable outlet control, useful for remote reboot of hung equipment and sequenced power-up.",
       },
       {
-        question: "Does Haisen manufacture intelligent PDUs?",
+        question: "Does Wandtung manufacture intelligent PDUs?",
         answer:
-          "Yes. Haisen designs and manufactures intelligent PDUs with outlet-level monitoring, SNMP/Modbus/RS485 connectivity and remote switching for data center, telecom and industrial customers worldwide, including OEM/ODM programs.",
+          "Yes. Wandtung designs and manufactures intelligent PDUs with outlet-level monitoring, SNMP/Modbus/RS485 connectivity and remote switching for data center, telecom and industrial customers worldwide, including OEM/ODM programs.",
       },
       {
         question: "How do I choose a data center PDU?",
@@ -435,7 +435,7 @@ export const products: Product[] = [
     shortName: "High Power PDU",
     tagline: "High-current three-phase PDU for dense compute and AI training racks.",
     overview:
-      "The Haisen High Power PDU is designed for high-density racks such as AI training clusters, GPU servers and blade enclosures, supporting three-phase input up to 63A and high outlet counts with reinforced busbar and thermal design.",
+      "The Wandtung High Power PDU is designed for high-density racks such as AI training clusters, GPU servers and blade enclosures, supporting three-phase input up to 63A and high outlet counts with reinforced busbar and thermal design.",
     keyFeatures: [
       "Three-phase input up to 63A",
       "Reinforced copper busbar for low heat rise under sustained high load",
@@ -481,7 +481,7 @@ export const products: Product[] = [
     shortName: "Metered PDU",
     tagline: "Rack PDU with local current and voltage display for on-site load visibility.",
     overview:
-      "The Haisen Metered PDU adds a built-in digital display to a standard rack PDU, showing current and/or voltage draw at a glance without requiring network access — a straightforward upgrade for sites that need load visibility during installation and maintenance but don't require remote monitoring.",
+      "The Wandtung Metered PDU adds a built-in digital display to a standard rack PDU, showing current and/or voltage draw at a glance without requiring network access — a straightforward upgrade for sites that need load visibility during installation and maintenance but don't require remote monitoring.",
     keyFeatures: [
       "Local LCD/LED display of current and voltage",
       "Single-phase and three-phase configurations",
@@ -525,7 +525,7 @@ export const products: Product[] = [
     shortName: "Monitored PDU",
     tagline: "Network-connected PDU reporting current, voltage, power and energy data remotely.",
     overview:
-      "The Haisen Monitored PDU reports current, voltage, power and energy consumption over the network via SNMP or Modbus, giving facility and IT teams remote visibility into rack-level power usage without on-site checks — without the outlet-switching capability of a fully intelligent PDU.",
+      "The Wandtung Monitored PDU reports current, voltage, power and energy consumption over the network via SNMP or Modbus, giving facility and IT teams remote visibility into rack-level power usage without on-site checks — without the outlet-switching capability of a fully intelligent PDU.",
     keyFeatures: [
       "Remote current, voltage, power and energy monitoring",
       "SNMP and Modbus RTU/TCP connectivity",
@@ -569,7 +569,7 @@ export const products: Product[] = [
     shortName: "Switched PDU",
     tagline: "Monitored PDU with remote, individually addressable outlet switching.",
     overview:
-      "The Haisen Switched PDU includes everything a monitored PDU offers — remote current, voltage, power and energy visibility — plus individually addressable outlet control, so administrators can remotely power-cycle a single device or sequence a rack's power-up without a site visit.",
+      "The Wandtung Switched PDU includes everything a monitored PDU offers — remote current, voltage, power and energy visibility — plus individually addressable outlet control, so administrators can remotely power-cycle a single device or sequence a rack's power-up without a site visit.",
     keyFeatures: [
       "Remote monitoring at unit and outlet level",
       "Individually addressable outlet on/off control",
@@ -612,7 +612,7 @@ export const products: Product[] = [
     shortName: "Three Phase PDU",
     tagline: "Balanced three-phase power distribution for higher-capacity racks.",
     overview:
-      "The Haisen Three Phase PDU distributes three-phase input across balanced single-phase outlet groups, giving racks with moderate-to-high power draw a higher-capacity feed than a single-phase PDU can provide, while keeping phase loading even across L1/L2/L3.",
+      "The Wandtung Three Phase PDU distributes three-phase input across balanced single-phase outlet groups, giving racks with moderate-to-high power draw a higher-capacity feed than a single-phase PDU can provide, while keeping phase loading even across L1/L2/L3.",
     keyFeatures: [
       "Three-phase input with balanced single-phase outlet grouping",
       "Per-phase current display on monitored variants",
@@ -656,7 +656,7 @@ export const products: Product[] = [
     shortName: "ATS PDU",
     tagline: "Rack PDU with a built-in automatic transfer switch for dual-feed redundancy.",
     overview:
-      "The Haisen ATS PDU combines a rack PDU with an automatic transfer switch, accepting two independent power inputs — such as utility and generator, or A/B utility feeds — and automatically switching to the live source if the primary feed fails, protecting single-corded equipment without requiring a separate transfer switch panel.",
+      "The Wandtung ATS PDU combines a rack PDU with an automatic transfer switch, accepting two independent power inputs — such as utility and generator, or A/B utility feeds — and automatically switching to the live source if the primary feed fails, protecting single-corded equipment without requiring a separate transfer switch panel.",
     keyFeatures: [
       "Dual power input with automatic failover",
       "Protects single-corded equipment with feed-level redundancy",
@@ -705,7 +705,7 @@ export const products: Product[] = [
     shortName: "STS",
     tagline: "Solid-state transfer switch for near-instantaneous switching between two power sources.",
     overview:
-      "The Haisen STS (Static Transfer Switch) uses solid-state switching to transfer load between two independent power sources in a fraction of a cycle — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption, typically deployed ahead of PDUs or UPS distribution in critical facilities.",
+      "The Wandtung STS (Static Transfer Switch) uses solid-state switching to transfer load between two independent power sources in a fraction of a cycle — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption, typically deployed ahead of PDUs or UPS distribution in critical facilities.",
     keyFeatures: [
       "Solid-state switching, sub-cycle transfer time",
       "Dual independent source inputs",
@@ -749,7 +749,7 @@ export const products: Product[] = [
     shortName: "ATS",
     tagline: "Panel-level automatic transfer switch for facility and generator failover.",
     overview:
-      "The Haisen Automatic Transfer Switch is a panel-level device that automatically transfers a facility or distribution board load between a primary source and a backup source — typically utility and standby generator — without manual intervention, sized for branch, panel or facility-level loads rather than a single rack.",
+      "The Wandtung Automatic Transfer Switch is a panel-level device that automatically transfers a facility or distribution board load between a primary source and a backup source — typically utility and standby generator — without manual intervention, sized for branch, panel or facility-level loads rather than a single rack.",
     keyFeatures: [
       "Automatic source-loss detection and transfer",
       "Generator start signal output",
@@ -795,7 +795,7 @@ export const products: Product[] = [
     shortName: "Rack Mount UPS",
     tagline: "Online double-conversion UPS for rack-mounted deployment in data center and telecom environments.",
     overview:
-      "The Haisen Rack Mount UPS is a double-conversion online UPS packaged in a standard 19-inch rack format, providing clean, regulated backup power for IT and network equipment with flexible battery run-time configurations.",
+      "The Wandtung Rack Mount UPS is a double-conversion online UPS packaged in a standard 19-inch rack format, providing clean, regulated backup power for IT and network equipment with flexible battery run-time configurations.",
     featured: true,
     keyFeatures: [
       "True online double-conversion topology",
@@ -855,7 +855,7 @@ export const products: Product[] = [
     shortName: "Modular UPS",
     tagline: "Hot-swappable power module UPS for scalable, high-availability critical power.",
     overview:
-      "The Haisen Modular UPS uses hot-swappable power modules within a common frame, allowing capacity to scale with IT load growth and redundancy (N+1/N+X) to be built in without oversizing day-one investment.",
+      "The Wandtung Modular UPS uses hot-swappable power modules within a common frame, allowing capacity to scale with IT load growth and redundancy (N+1/N+X) to be built in without oversizing day-one investment.",
     keyFeatures: [
       "Hot-swappable power modules",
       "N+X redundancy without full system shutdown",
@@ -906,7 +906,7 @@ export const products: Product[] = [
     shortName: "Tower UPS",
     tagline: "Free-standing online UPS for server rooms and small equipment areas without a rack.",
     overview:
-      "The Haisen Tower UPS delivers the same online double-conversion protection as the rack mount range in a free-standing tower enclosure, suited to server rooms, retail back-offices and equipment areas that don't use a 19-inch rack.",
+      "The Wandtung Tower UPS delivers the same online double-conversion protection as the rack mount range in a free-standing tower enclosure, suited to server rooms, retail back-offices and equipment areas that don't use a 19-inch rack.",
     keyFeatures: [
       "True online double-conversion topology",
       "Free-standing tower enclosure",
@@ -937,7 +937,7 @@ export const products: Product[] = [
       {
         question: "Can a tower UPS be converted to rack mount later?",
         answer:
-          "Select Haisen tower UPS models support an optional rack-mount conversion kit, letting the same unit move into a 19-inch rack if the site is upgraded later — confirm compatibility for the specific model with our engineering team.",
+          "Select Wandtung tower UPS models support an optional rack-mount conversion kit, letting the same unit move into a 19-inch rack if the site is upgraded later — confirm compatibility for the specific model with our engineering team.",
       },
     ],
     relatedProductSlugs: ["rack-mount-ups", "online-ups"],
@@ -950,7 +950,7 @@ export const products: Product[] = [
     shortName: "Online UPS",
     tagline: "Double-conversion UPS providing continuous, regulated power with zero transfer time.",
     overview:
-      "The Haisen Online UPS uses true double-conversion topology, continuously regenerating output power from its inverter rather than switching to battery on disturbance, so connected equipment always sees a clean, regulated waveform with zero transfer time — the standard choice for critical IT and data center loads.",
+      "The Wandtung Online UPS uses true double-conversion topology, continuously regenerating output power from its inverter rather than switching to battery on disturbance, so connected equipment always sees a clean, regulated waveform with zero transfer time — the standard choice for critical IT and data center loads.",
     keyFeatures: [
       "True online double-conversion topology",
       "Zero transfer time to battery",
@@ -988,7 +988,7 @@ export const products: Product[] = [
     shortName: "Industrial UPS",
     tagline: "Ruggedized UPS for harsh-environment industrial and process-control power protection.",
     overview:
-      "The Haisen Industrial UPS is built for environments outside typical data center conditions — wider operating temperature range, higher ingress protection, and tolerance for dust, vibration and less stable input power — protecting process control, SCADA and industrial IT equipment in factories, plants and remote industrial sites.",
+      "The Wandtung Industrial UPS is built for environments outside typical data center conditions — wider operating temperature range, higher ingress protection, and tolerance for dust, vibration and less stable input power — protecting process control, SCADA and industrial IT equipment in factories, plants and remote industrial sites.",
     keyFeatures: [
       "Extended operating temperature range",
       "Higher IP-rated enclosure options for dusty/humid environments",
@@ -1025,7 +1025,7 @@ export const products: Product[] = [
     shortName: "High Power UPS",
     tagline: "Large-capacity three-phase UPS for data center and facility-level critical power.",
     overview:
-      "The Haisen High Power UPS delivers large-capacity, three-phase double-conversion protection for full data halls and facility-level critical loads, available in standalone frames or as the building block for a modular, parallel-redundant power plant.",
+      "The Wandtung High Power UPS delivers large-capacity, three-phase double-conversion protection for full data halls and facility-level critical loads, available in standalone frames or as the building block for a modular, parallel-redundant power plant.",
     keyFeatures: [
       "Large-capacity three-phase double-conversion topology",
       "Parallel operation for capacity and redundancy",
@@ -1070,7 +1070,7 @@ export const products: Product[] = [
     shortName: "Network Cabinet",
     tagline: "19-inch network cabinet engineered for structured cabling and network equipment.",
     overview:
-      "The Haisen Network Cabinet is a 19-inch enclosure for switches, patch panels and network equipment, built with reinforced steel frame, adjustable mounting rails, and configurable cable management, ventilation and door options for telecom rooms and IT closets.",
+      "The Wandtung Network Cabinet is a 19-inch enclosure for switches, patch panels and network equipment, built with reinforced steel frame, adjustable mounting rails, and configurable cable management, ventilation and door options for telecom rooms and IT closets.",
     featured: true,
     keyFeatures: [
       "19-inch EIA-standard mounting rails, front and rear",
@@ -1121,7 +1121,7 @@ export const products: Product[] = [
       {
         question: "What steel thickness should a data center cabinet use?",
         answer:
-          "Frame components are typically 1.5–2.0 mm cold-rolled steel for structural load-bearing members, with 1.0–1.2 mm acceptable for doors and side panels — Haisen specifies thickness per model and can reinforce frames for heavier static/dynamic load ratings on request.",
+          "Frame components are typically 1.5–2.0 mm cold-rolled steel for structural load-bearing members, with 1.0–1.2 mm acceptable for doors and side panels — Wandtung specifies thickness per model and can reinforce frames for heavier static/dynamic load ratings on request.",
       },
     ],
     relatedProductSlugs: ["server-rack", "data-center-cabinet", "cold-aisle-cabinet", "wall-mount-cabinet"],
@@ -1134,7 +1134,7 @@ export const products: Product[] = [
     shortName: "DC Cabinet",
     tagline: "High-load-capacity server cabinet for data center white space deployment.",
     overview:
-      "The Haisen Data Center Cabinet is purpose-built for data hall deployment, supporting high static and dynamic load ratings, hot/cold aisle containment compatibility, and integrated cable and PDU management for dense server and storage deployments.",
+      "The Wandtung Data Center Cabinet is purpose-built for data hall deployment, supporting high static and dynamic load ratings, hot/cold aisle containment compatibility, and integrated cable and PDU management for dense server and storage deployments.",
     keyFeatures: [
       "High static load rating for dense server/storage stacks",
       "Hot aisle / cold aisle containment compatible",
@@ -1168,7 +1168,7 @@ export const products: Product[] = [
       {
         question: "What load capacity does a data center cabinet need?",
         answer:
-          "Load capacity should exceed the fully populated weight of servers, storage, cabling and PDUs with margin — Haisen data center cabinets are rated up to 1200 kg static load to support dense compute and storage deployments.",
+          "Load capacity should exceed the fully populated weight of servers, storage, cabling and PDUs with margin — Wandtung data center cabinets are rated up to 1200 kg static load to support dense compute and storage deployments.",
       },
     ],
     relatedProductSlugs: ["network-cabinet", "cold-aisle-cabinet", "intelligent-cabinet"],
@@ -1181,7 +1181,7 @@ export const products: Product[] = [
     shortName: "Server Rack",
     tagline: "19-inch server rack built for server and storage weight loads and airflow.",
     overview:
-      "The Haisen Server Rack is a 19-inch enclosure sized and reinforced for server and storage equipment rather than lighter network gear — deeper chassis clearance, stronger static load rating and airflow-optimized doors for compute-dense deployments.",
+      "The Wandtung Server Rack is a 19-inch enclosure sized and reinforced for server and storage equipment rather than lighter network gear — deeper chassis clearance, stronger static load rating and airflow-optimized doors for compute-dense deployments.",
     keyFeatures: [
       "19-inch EIA-standard mounting, front and rear",
       "Deep chassis clearance for server/storage hardware",
@@ -1225,7 +1225,7 @@ export const products: Product[] = [
     shortName: "19-Inch Rack",
     tagline: "Standard EIA 19-inch rack enclosure for general IT and network equipment mounting.",
     overview:
-      "The Haisen 19 Inch Rack is a standard EIA-310 compliant enclosure sized for general-purpose IT, networking and telecom equipment mounting where a full server-rack or network-cabinet specification isn't required — a flexible base configuration for smaller deployments.",
+      "The Wandtung 19 Inch Rack is a standard EIA-310 compliant enclosure sized for general-purpose IT, networking and telecom equipment mounting where a full server-rack or network-cabinet specification isn't required — a flexible base configuration for smaller deployments.",
     keyFeatures: [
       "EIA-310 standard 19-inch mounting rails",
       "Open-frame and enclosed cabinet options",
@@ -1262,7 +1262,7 @@ export const products: Product[] = [
     shortName: "Cold Aisle Cabinet",
     tagline: "Cabinet engineered for cold aisle containment airflow separation.",
     overview:
-      "The Haisen Cold Aisle Cabinet is designed for deployment within a cold aisle containment layout, with sealed panel interfaces and door gasketing that keep supply air on the cold-aisle side separated from hot exhaust air, improving cooling efficiency across the row.",
+      "The Wandtung Cold Aisle Cabinet is designed for deployment within a cold aisle containment layout, with sealed panel interfaces and door gasketing that keep supply air on the cold-aisle side separated from hot exhaust air, improving cooling efficiency across the row.",
     keyFeatures: [
       "Sealed panel and door interfaces for containment integrity",
       "Compatible with standard containment roof/door systems",
@@ -1299,7 +1299,7 @@ export const products: Product[] = [
     shortName: "Intelligent Cabinet",
     tagline: "Cabinet with integrated environmental and access monitoring for lights-out sites.",
     overview:
-      "The Haisen Intelligent Cabinet integrates environmental sensors, door access control and power monitoring at the cabinet level, giving operators visibility and control over individual cabinets in unattended or multi-tenant environments without a separate micro module.",
+      "The Wandtung Intelligent Cabinet integrates environmental sensors, door access control and power monitoring at the cabinet level, giving operators visibility and control over individual cabinets in unattended or multi-tenant environments without a separate micro module.",
     keyFeatures: [
       "Integrated temperature/humidity monitoring",
       "Electronic door access control and door-open alarms",
@@ -1343,7 +1343,7 @@ export const products: Product[] = [
     shortName: "Outdoor Cabinet",
     tagline: "Weatherproof cabinet for outdoor telecom and network equipment deployment.",
     overview:
-      "The Haisen Outdoor Cabinet houses network and telecom equipment in outdoor or exposed environments, with a weatherproof enclosure, thermal management and cable entry glanding rated for sun, rain and dust exposure at cell sites, roadside cabinets and remote installations.",
+      "The Wandtung Outdoor Cabinet houses network and telecom equipment in outdoor or exposed environments, with a weatherproof enclosure, thermal management and cable entry glanding rated for sun, rain and dust exposure at cell sites, roadside cabinets and remote installations.",
     keyFeatures: [
       "High IP-rated weatherproof enclosure",
       "Integrated thermal management (vented or air-conditioned options)",
@@ -1387,7 +1387,7 @@ export const products: Product[] = [
     shortName: "Wall Mount Cabinet",
     tagline: "Compact wall-mounted network cabinet for space-constrained equipment rooms.",
     overview:
-      "The Haisen Wall Mount Cabinet packages a 6U–12U 19-inch enclosure with a 5mm tempered glass door, reinforced cold-rolled steel frame and removable cable entry into a compact wall-mounted footprint, suited to small equipment rooms, offices and telecom closets where floor space isn't available for a full-size cabinet.",
+      "The Wandtung Wall Mount Cabinet packages a 6U–12U 19-inch enclosure with a 5mm tempered glass door, reinforced cold-rolled steel frame and removable cable entry into a compact wall-mounted footprint, suited to small equipment rooms, offices and telecom closets where floor space isn't available for a full-size cabinet.",
     featured: true,
     images: [
       "/products/wall-mount-cabinet/01-main.jpg",
@@ -1431,12 +1431,12 @@ export const products: Product[] = [
       {
         question: "How is a wall mount cabinet different from a floor-standing network cabinet?",
         answer:
-          "A wall mount cabinet is smaller (typically 6U–12U) and installs directly on a wall rather than the floor, making it suited to smaller equipment loads and rooms without space for a full-size floor-standing cabinet — Haisen's network cabinet line covers the larger 12U–47U floor-standing range.",
+          "A wall mount cabinet is smaller (typically 6U–12U) and installs directly on a wall rather than the floor, making it suited to smaller equipment loads and rooms without space for a full-size floor-standing cabinet — Wandtung's network cabinet line covers the larger 12U–47U floor-standing range.",
       },
       {
         question: "Does the wall mount cabinet support OEM/ODM customization?",
         answer:
-          "Yes. Haisen supports OEM/ODM for the wall mount cabinet, including rack unit height, door type, color and branding to match a customer's specification.",
+          "Yes. Wandtung supports OEM/ODM for the wall mount cabinet, including rack unit height, door type, color and branding to match a customer's specification.",
       },
     ],
     relatedProductSlugs: ["network-cabinet", "19-inch-rack"],
@@ -1451,7 +1451,7 @@ export const products: Product[] = [
     shortName: "Smart Micro Module",
     tagline: "Factory-integrated micro data center combining cabinets, power, cooling and monitoring.",
     overview:
-      "The Haisen Smart Micro Module integrates IT cabinets, UPS, PDU, precision cooling, battery, fire suppression, access control and environmental monitoring into a single pre-engineered, factory-tested system, deployable in single-row or dual-row configuration for small to mid-size data rooms.",
+      "The Wandtung Smart Micro Module integrates IT cabinets, UPS, PDU, precision cooling, battery, fire suppression, access control and environmental monitoring into a single pre-engineered, factory-tested system, deployable in single-row or dual-row configuration for small to mid-size data rooms.",
     featured: true,
     keyFeatures: [
       "Factory pre-integration and testing before shipment",
@@ -1489,9 +1489,9 @@ export const products: Product[] = [
           "A micro modular data center is a factory pre-integrated system combining IT cabinets, power distribution, UPS, cooling, fire suppression, access control and monitoring into a single standardized unit, reducing on-site construction time compared to a traditional built data room.",
       },
       {
-        question: "Does Haisen provide micro modular data center solutions?",
+        question: "Does Wandtung provide micro modular data center solutions?",
         answer:
-          "Yes. Haisen designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
+          "Yes. Wandtung designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
       },
     ],
     relatedProductSlugs: ["intelligent-cabinet", "intelligent-pdu", "in-row-cooling"],
@@ -1504,7 +1504,7 @@ export const products: Product[] = [
     shortName: "Single Row Micro DC",
     tagline: "Compact micro module with cabinets arranged in a single row for small deployments.",
     overview:
-      "The Haisen Single Row Micro Data Center arranges IT cabinets in a single row with rear or side power and cooling infrastructure, sized for small equipment rooms and branch sites where a full dual-row containment layout isn't needed.",
+      "The Wandtung Single Row Micro Data Center arranges IT cabinets in a single row with rear or side power and cooling infrastructure, sized for small equipment rooms and branch sites where a full dual-row containment layout isn't needed.",
     keyFeatures: [
       "Single-row cabinet layout for compact footprint",
       "Integrated UPS, PDU and cooling",
@@ -1541,7 +1541,7 @@ export const products: Product[] = [
     shortName: "Dual Row Micro DC",
     tagline: "Micro module with cabinets facing in two rows and hot/cold aisle containment.",
     overview:
-      "The Haisen Dual Row Micro Data Center arranges IT cabinets in two facing rows with hot or cold aisle containment between them, improving cooling efficiency over a single-row layout for mid-size deployments with higher cabinet counts or density.",
+      "The Wandtung Dual Row Micro Data Center arranges IT cabinets in two facing rows with hot or cold aisle containment between them, improving cooling efficiency over a single-row layout for mid-size deployments with higher cabinet counts or density.",
     keyFeatures: [
       "Dual-row layout with hot/cold aisle containment",
       "Higher cabinet density per footprint than single row",
@@ -1578,7 +1578,7 @@ export const products: Product[] = [
     shortName: "All-in-One Micro DC",
     tagline: "Single enclosure integrating rack, UPS, PDU and cooling for the smallest deployments.",
     overview:
-      "The Haisen All-in-One Micro Data Center packages IT rack space, UPS, PDU and cooling into a single self-contained enclosure — the smallest step up from a standard cabinet, suited to sites with only a handful of servers and no dedicated equipment room.",
+      "The Wandtung All-in-One Micro Data Center packages IT rack space, UPS, PDU and cooling into a single self-contained enclosure — the smallest step up from a standard cabinet, suited to sites with only a handful of servers and no dedicated equipment room.",
     keyFeatures: [
       "Single self-contained enclosure — rack, power and cooling in one unit",
       "Compact footprint for spaces without a dedicated server room",
@@ -1617,7 +1617,7 @@ export const products: Product[] = [
     shortName: "40ft Container DC",
     tagline: "Fully pre-integrated 40-foot containerized data center for rapid, large-scale deployment.",
     overview:
-      "The Haisen 40ft Container Data Center is a complete, factory-built data center in a standard 40-foot ISO container shell, pre-installed with IT cabinets, power distribution, UPS, cooling, fire protection, security and monitoring — engineered for telecom, mining, oil & gas, edge computing and emergency deployment where speed and site independence matter.",
+      "The Wandtung 40ft Container Data Center is a complete, factory-built data center in a standard 40-foot ISO container shell, pre-installed with IT cabinets, power distribution, UPS, cooling, fire protection, security and monitoring — engineered for telecom, mining, oil & gas, edge computing and emergency deployment where speed and site independence matter.",
     keyFeatures: [
       "Complete IT + power + cooling integration inside a standard ISO container",
       "Reinforced, insulated container structure rated for outdoor deployment",
@@ -1662,9 +1662,9 @@ export const products: Product[] = [
           "A 20ft container suits smaller IT loads or edge sites with limited space and typically holds fewer racks, while a 40ft container offers roughly double the internal footprint for higher rack counts, larger power/cooling plant, or walk-in maintenance aisles — the right choice depends on target IT load and available site space.",
       },
       {
-        question: "Does Haisen provide containerized data centers?",
+        question: "Does Wandtung provide containerized data centers?",
         answer:
-          "Yes. Haisen manufactures 20ft and 40ft containerized data centers pre-integrated with IT cabinets, power distribution, UPS, cooling, fire protection and monitoring for telecom, mining, oil & gas, edge computing and government deployments.",
+          "Yes. Wandtung manufactures 20ft and 40ft containerized data centers pre-integrated with IT cabinets, power distribution, UPS, cooling, fire protection and monitoring for telecom, mining, oil & gas, edge computing and government deployments.",
       },
       {
         question: "How fast can a container data center be deployed?",
@@ -1682,7 +1682,7 @@ export const products: Product[] = [
     shortName: "20ft Container DC",
     tagline: "Compact containerized data center in a 20-foot ISO shell for smaller or space-constrained sites.",
     overview:
-      "The Haisen 20ft Container Data Center packages IT cabinets, power distribution, UPS, cooling, fire protection and monitoring into a standard 20-foot ISO container — a smaller footprint than the 40ft option, suited to space-constrained sites, smaller IT loads, or edge deployments where a full 40ft unit isn't justified.",
+      "The Wandtung 20ft Container Data Center packages IT cabinets, power distribution, UPS, cooling, fire protection and monitoring into a standard 20-foot ISO container — a smaller footprint than the 40ft option, suited to space-constrained sites, smaller IT loads, or edge deployments where a full 40ft unit isn't justified.",
     keyFeatures: [
       "Complete IT + power + cooling integration in a compact 20ft footprint",
       "Reinforced, insulated container structure rated for outdoor deployment",
@@ -1727,7 +1727,7 @@ export const products: Product[] = [
     shortName: "Modular Container DC",
     tagline: "Multiple interconnected containers scaling to larger capacity than a single unit.",
     overview:
-      "The Haisen Modular Container Data Center links multiple 20ft or 40ft container modules — IT, power and cooling units — into a larger, coordinated facility, letting capacity scale beyond what a single container can hold while keeping the factory-built, rapid-deployment model of containerized infrastructure.",
+      "The Wandtung Modular Container Data Center links multiple 20ft or 40ft container modules — IT, power and cooling units — into a larger, coordinated facility, letting capacity scale beyond what a single container can hold while keeping the factory-built, rapid-deployment model of containerized infrastructure.",
     keyFeatures: [
       "Multiple container modules interconnected for larger capacity",
       "Dedicated or shared power/cooling modules across the group",
@@ -1764,7 +1764,7 @@ export const products: Product[] = [
     shortName: "Edge Data Center",
     tagline: "Compact, factory-built data center for compute deployed close to the network edge.",
     overview:
-      "The Haisen Edge Data Center is a compact containerized or micro modular unit purpose-built for edge computing sites — small footprint, remote/unattended monitoring, and resilient power sized for locations without a traditional data center facility nearby.",
+      "The Wandtung Edge Data Center is a compact containerized or micro modular unit purpose-built for edge computing sites — small footprint, remote/unattended monitoring, and resilient power sized for locations without a traditional data center facility nearby.",
     keyFeatures: [
       "Compact footprint for constrained edge sites",
       "Remote, unattended monitoring for lights-out operation",
@@ -1788,7 +1788,7 @@ export const products: Product[] = [
       {
         question: "How is an edge data center different from a containerized data center?",
         answer:
-          "Edge data centers prioritize compact footprint and remote/unattended operation for distributed sites, while larger containerized data centers are typically sized for more self-contained capacity at a single remote location — Haisen's 20ft containers and micro modules serve as the building blocks for edge deployments.",
+          "Edge data centers prioritize compact footprint and remote/unattended operation for distributed sites, while larger containerized data centers are typically sized for more self-contained capacity at a single remote location — Wandtung's 20ft containers and micro modules serve as the building blocks for edge deployments.",
       },
     ],
     relatedProductSlugs: ["20ft-container-data-center", "smart-micro-module", "intelligent-pdu"],
@@ -1803,7 +1803,7 @@ export const products: Product[] = [
     shortName: "Precision AC",
     tagline: "Close-control precision cooling for data center and telecom equipment rooms.",
     overview:
-      "The Haisen Precision Air Conditioner provides tight temperature and humidity control for data halls and telecom rooms, with downflow or upflow air distribution and capacities suited to small equipment rooms through large data center white space.",
+      "The Wandtung Precision Air Conditioner provides tight temperature and humidity control for data halls and telecom rooms, with downflow or upflow air distribution and capacities suited to small equipment rooms through large data center white space.",
     keyFeatures: [
       "Precise temperature and humidity control",
       "Downflow / upflow air distribution options",
@@ -1840,7 +1840,7 @@ export const products: Product[] = [
     shortName: "Liquid Cooling",
     tagline: "Cold plate liquid cooling for high-density AI and HPC compute racks.",
     overview:
-      "Haisen's liquid cooling solution combines cold plate liquid cooling at the server level with a coolant distribution unit (CDU) managing primary and secondary loops, enabling data centers to cool high-density AI training and HPC racks beyond the practical limits of air cooling.",
+      "Wandtung's liquid cooling solution combines cold plate liquid cooling at the server level with a coolant distribution unit (CDU) managing primary and secondary loops, enabling data centers to cool high-density AI training and HPC racks beyond the practical limits of air cooling.",
     featured: true,
     keyFeatures: [
       "Cold plate direct-to-chip liquid cooling",
@@ -1868,9 +1868,9 @@ export const products: Product[] = [
           "A CDU (Coolant Distribution Unit) is the equipment that separates and manages the primary (facility) cooling loop from the secondary (rack/server) loop in a liquid cooling system, controlling coolant flow, temperature and pressure while isolating facility water from IT hardware.",
       },
       {
-        question: "Does Haisen provide liquid cooling and CDU solutions?",
+        question: "Does Wandtung provide liquid cooling and CDU solutions?",
         answer:
-          "Yes. Haisen provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
+          "Yes. Wandtung provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
       },
     ],
     relatedProductSlugs: ["cdu", "precision-air-conditioner"],
@@ -1883,7 +1883,7 @@ export const products: Product[] = [
     shortName: "CDU",
     tagline: "Coolant distribution unit managing primary and secondary liquid cooling loops.",
     overview:
-      "The Haisen CDU manages coolant distribution between the facility (primary) loop and the rack-level (secondary) loop in a liquid cooling deployment, providing pumping, heat exchange, filtration, leak detection and monitoring in a single rack-mountable or standalone unit.",
+      "The Wandtung CDU manages coolant distribution between the facility (primary) loop and the rack-level (secondary) loop in a liquid cooling deployment, providing pumping, heat exchange, filtration, leak detection and monitoring in a single rack-mountable or standalone unit.",
     keyFeatures: [
       "Primary/secondary loop isolation via heat exchanger",
       "Redundant pumps for continuous operation",
@@ -1920,7 +1920,7 @@ export const products: Product[] = [
     shortName: "Row-Based Cooling",
     tagline: "Cooling units placed at the row level for shorter, more efficient airflow paths.",
     overview:
-      "Haisen Row-Based Cooling places cooling capacity within the row of IT cabinets rather than around the perimeter of the room, shortening the airflow path to the load and improving cooling efficiency and predictability at medium-to-high rack densities.",
+      "Wandtung Row-Based Cooling places cooling capacity within the row of IT cabinets rather than around the perimeter of the room, shortening the airflow path to the load and improving cooling efficiency and predictability at medium-to-high rack densities.",
     keyFeatures: [
       "Cooling capacity distributed within the cabinet row",
       "Shorter airflow path than perimeter (room) cooling",
@@ -1943,7 +1943,7 @@ export const products: Product[] = [
       {
         question: "What's the difference between row-based and in-row cooling?",
         answer:
-          "The terms are largely interchangeable in the industry — both describe cooling units positioned within the cabinet row rather than around the room perimeter. Haisen uses \"row-based\" for the broader category and \"in-row\" for units that sit directly between cabinets in the row.",
+          "The terms are largely interchangeable in the industry — both describe cooling units positioned within the cabinet row rather than around the room perimeter. Wandtung uses \"row-based\" for the broader category and \"in-row\" for units that sit directly between cabinets in the row.",
       },
     ],
     relatedProductSlugs: ["in-row-cooling", "precision-air-conditioner", "cold-aisle-cabinet"],
@@ -1956,7 +1956,7 @@ export const products: Product[] = [
     shortName: "In-Row Cooling",
     tagline: "Cooling unit installed directly within the cabinet row, next to the IT load it serves.",
     overview:
-      "Haisen In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level.",
+      "Wandtung In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level.",
     keyFeatures: [
       "Cabinet-footprint form factor fits directly into the row",
       "Close-coupled to the IT load for tight temperature control",
@@ -1993,7 +1993,7 @@ export const products: Product[] = [
     shortName: "Room Cooling",
     tagline: "Perimeter precision cooling for the whole data hall or equipment room.",
     overview:
-      "Haisen Room Cooling units condition the whole data hall or equipment room from the room perimeter — the traditional data center cooling approach, well suited to lower-density rooms or as a baseline layer alongside row-based/in-row cooling at higher densities.",
+      "Wandtung Room Cooling units condition the whole data hall or equipment room from the room perimeter — the traditional data center cooling approach, well suited to lower-density rooms or as a baseline layer alongside row-based/in-row cooling at higher densities.",
     keyFeatures: [
       "Room-wide, perimeter-mounted cooling",
       "Downflow or upflow air distribution",
@@ -2031,7 +2031,7 @@ export const products: Product[] = [
     shortName: "Anti-Static Raised Floor",
     tagline: "Raised access flooring for airflow management and cable routing in data center white space.",
     overview:
-      "Haisen anti-static raised floor panels provide an elevated, load-rated deck for underfloor air distribution and cable routing, with a static-dissipative surface finish suited to data center and control room environments.",
+      "Wandtung anti-static raised floor panels provide an elevated, load-rated deck for underfloor air distribution and cable routing, with a static-dissipative surface finish suited to data center and control room environments.",
     keyFeatures: [
       "Static-dissipative HPL or PVC surface finish",
       "Steel or calcium sulphate core options",
@@ -2069,7 +2069,7 @@ export const products: Product[] = [
     shortName: "Calcium Sulphate Floor",
     tagline: "High-strength calcium sulphate core raised floor panel for heavy load environments.",
     overview:
-      "Haisen Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel.",
+      "Wandtung Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel.",
     keyFeatures: [
       "High-density calcium sulphate core for load strength",
       "Dimensionally stable under humidity variation",
@@ -2107,7 +2107,7 @@ export const products: Product[] = [
     shortName: "Steel Cementitious Floor",
     tagline: "Steel-encased cementitious-core raised floor panel for standard data center loads.",
     overview:
-      "Haisen Steel Cementitious Raised Floor panels use a lightweight cementitious core fully encased in galvanized steel, providing a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
+      "Wandtung Steel Cementitious Raised Floor panels use a lightweight cementitious core fully encased in galvanized steel, providing a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
     keyFeatures: [
       "Fully steel-encased cementitious core",
       "Cost-effective for standard load requirements",
@@ -2144,7 +2144,7 @@ export const products: Product[] = [
     shortName: "Airflow Floor",
     tagline: "Perforated raised floor panel engineered for underfloor cold-air distribution.",
     overview:
-      "Haisen Airflow Floor panels are perforated raised floor tiles engineered to deliver a controlled volume of underfloor cold air into the cold aisle, with adjustable or fixed open-area options to balance airflow across the data hall.",
+      "Wandtung Airflow Floor panels are perforated raised floor tiles engineered to deliver a controlled volume of underfloor cold air into the cold aisle, with adjustable or fixed open-area options to balance airflow across the data hall.",
     keyFeatures: [
       "Perforated panel for controlled underfloor air delivery",
       "Adjustable damper options to balance airflow by zone",
@@ -2183,7 +2183,7 @@ export const products: Product[] = [
     shortName: "Cable Tray",
     tagline: "Wire mesh and ladder cable trays for structured data center cable pathways.",
     overview:
-      "Haisen cable trays provide structured, serviceable pathways for power and data cabling above racks or under raised floors, available in wire mesh and ladder-type construction for different load and cable-fill requirements.",
+      "Wandtung cable trays provide structured, serviceable pathways for power and data cabling above racks or under raised floors, available in wire mesh and ladder-type construction for different load and cable-fill requirements.",
     keyFeatures: [
       "Wire mesh and ladder-type construction",
       "Tool-free or bolted section connectors",
@@ -2224,7 +2224,7 @@ export const products: Product[] = [
     shortName: "Wire Mesh Tray",
     tagline: "Lightweight welded wire mesh tray for structured, field-modifiable cable pathways.",
     overview:
-      "Haisen Wire Mesh Cable Tray is a welded wire construction that's lightweight, ventilated and easy to cut and reconfigure on site, making it a common choice for structured data and fiber cabling pathways above racks or along containment routes.",
+      "Wandtung Wire Mesh Cable Tray is a welded wire construction that's lightweight, ventilated and easy to cut and reconfigure on site, making it a common choice for structured data and fiber cabling pathways above racks or along containment routes.",
     keyFeatures: [
       "Welded wire construction — lightweight and highly ventilated",
       "Field-cuttable and reconfigurable without special tools",
@@ -2264,7 +2264,7 @@ export const products: Product[] = [
     shortName: "Ladder Tray",
     tagline: "High-capacity ladder-type tray for heavier power cable runs.",
     overview:
-      "Haisen Ladder Cable Tray uses a rung-and-rail construction rated for higher cable fill and load capacity than wire mesh, with good heat dissipation for heavier power cable runs across data centers, telecom rooms and industrial facilities.",
+      "Wandtung Ladder Cable Tray uses a rung-and-rail construction rated for higher cable fill and load capacity than wire mesh, with good heat dissipation for heavier power cable runs across data centers, telecom rooms and industrial facilities.",
     keyFeatures: [
       "Rung-and-rail construction for high load capacity",
       "Good heat dissipation for power cable bundles",
@@ -2307,7 +2307,7 @@ export const products: Product[] = [
     shortName: "BESS",
     tagline: "Containerized and cabinet-based battery energy storage for resilient site power.",
     overview:
-      "The Haisen Battery Energy Storage System integrates battery racks, a power conversion system (PCS) and an energy management system (EMS) in cabinet or containerized form factors, supporting peak shaving, backup power and renewable energy integration for data centers and industrial sites.",
+      "The Wandtung Battery Energy Storage System integrates battery racks, a power conversion system (PCS) and an energy management system (EMS) in cabinet or containerized form factors, supporting peak shaving, backup power and renewable energy integration for data centers and industrial sites.",
     keyFeatures: [
       "Cabinet or containerized form factor",
       "Integrated PCS and EMS",
@@ -2345,7 +2345,7 @@ export const products: Product[] = [
     shortName: "Solar Power System",
     tagline: "Grid-tied or off-grid solar generation paired with site energy storage.",
     overview:
-      "The Haisen Solar Power System combines PV generation with inverters and, where required, battery storage to supply site power for grid-tied offset or off-grid operation — sized for data center auxiliary loads, telecom sites and industrial facilities looking to reduce grid dependence.",
+      "The Wandtung Solar Power System combines PV generation with inverters and, where required, battery storage to supply site power for grid-tied offset or off-grid operation — sized for data center auxiliary loads, telecom sites and industrial facilities looking to reduce grid dependence.",
     keyFeatures: [
       "Grid-tied or off-grid configuration",
       "PV array with string or central inverters",
@@ -2382,7 +2382,7 @@ export const products: Product[] = [
     shortName: "ESS",
     tagline: "General-purpose energy storage system combining battery, PCS and EMS.",
     overview:
-      "The Haisen Energy Storage System (ESS) is the general building block behind Haisen's cabinet and containerized energy storage products — battery racks, a power conversion system (PCS) and an energy management system (EMS) configured to the site's capacity and operating strategy, whether that's backup power, peak shaving or renewable integration.",
+      "The Wandtung Energy Storage System (ESS) is the general building block behind Wandtung's cabinet and containerized energy storage products — battery racks, a power conversion system (PCS) and an energy management system (EMS) configured to the site's capacity and operating strategy, whether that's backup power, peak shaving or renewable integration.",
     keyFeatures: [
       "Configurable battery, PCS and EMS building blocks",
       "Operating strategy configurable via EMS (backup / peak shaving / renewables)",
@@ -2406,7 +2406,7 @@ export const products: Product[] = [
       {
         question: "What's the difference between an ESS and a BESS?",
         answer:
-          "BESS (Battery Energy Storage System) specifically refers to battery-based storage. ESS (Energy Storage System) is the broader term for the overall system — battery, PCS and EMS — that Haisen configures for a given site; in practice the terms are often used interchangeably for battery-based deployments.",
+          "BESS (Battery Energy Storage System) specifically refers to battery-based storage. ESS (Energy Storage System) is the broader term for the overall system — battery, PCS and EMS — that Wandtung configures for a given site; in practice the terms are often used interchangeably for battery-based deployments.",
       },
     ],
     relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-cabinet"],
@@ -2419,7 +2419,7 @@ export const products: Product[] = [
     shortName: "ESS Cabinet",
     tagline: "Cabinet-format battery energy storage for indoor or protected installation.",
     overview:
-      "The Haisen Energy Storage Cabinet packages battery racks, PCS and EMS into a standard cabinet footprint for indoor or protected-space installation, suited to sites that have equipment room space available but don't require a full outdoor containerized unit.",
+      "The Wandtung Energy Storage Cabinet packages battery racks, PCS and EMS into a standard cabinet footprint for indoor or protected-space installation, suited to sites that have equipment room space available but don't require a full outdoor containerized unit.",
     keyFeatures: [
       "Standard cabinet footprint for indoor installation",
       "Integrated PCS and EMS",
@@ -2456,7 +2456,7 @@ export const products: Product[] = [
     shortName: "Containerized ESS",
     tagline: "Outdoor-rated containerized battery energy storage for site-independent deployment.",
     overview:
-      "The Haisen Containerized Energy Storage System packages battery racks, PCS, EMS, thermal management and fire suppression inside an outdoor-rated ISO container, for site-independent deployment where indoor space isn't available or larger storage capacity is required.",
+      "The Wandtung Containerized Energy Storage System packages battery racks, PCS, EMS, thermal management and fire suppression inside an outdoor-rated ISO container, for site-independent deployment where indoor space isn't available or larger storage capacity is required.",
     keyFeatures: [
       "Outdoor-rated container structure",
       "Integrated thermal management and fire suppression",

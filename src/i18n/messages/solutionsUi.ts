@@ -7,7 +7,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
       eyebrow: "Solutions",
       title: "Data Center & Critical Power Solutions",
       subtitle:
-        "Haisen designs systems, not just products — engineered around the problem a customer needs to solve, then built from our own manufactured power, cooling and enclosure products.",
+        "Wandtung designs systems, not just products — engineered around the problem a customer needs to solve, then built from our own manufactured power, cooling and enclosure products.",
       browseTitle: "Browse Solutions",
       viewSolution: "View solution",
     },
@@ -41,7 +41,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
       eyebrow: "الحلول",
       title: "حلول مركز البيانات والطاقة الحرجة",
       subtitle:
-        "لا تصمم هايسِن منتجات فقط — بل أنظمة مصممة هندسياً حول المشكلة التي يحتاج العميل لحلها، ثم تُبنى من منتجات الطاقة والتبريد والخزانات المصنعة لدينا.",
+        "لا تصمم واندتونغ منتجات فقط — بل أنظمة مصممة هندسياً حول المشكلة التي يحتاج العميل لحلها، ثم تُبنى من منتجات الطاقة والتبريد والخزانات المصنعة لدينا.",
       browseTitle: "استعرض الحلول",
       viewSolution: "عرض الحل",
     },
@@ -75,7 +75,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
       eyebrow: "Solutions",
       title: "Solutions pour centres de données et alimentation critique",
       subtitle:
-        "Haisen conçoit des systèmes, pas seulement des produits — pensés autour du problème que le client doit résoudre, puis construits à partir de nos propres produits d'alimentation, de refroidissement et d'enceintes.",
+        "Wandtung conçoit des systèmes, pas seulement des produits — pensés autour du problème que le client doit résoudre, puis construits à partir de nos propres produits d'alimentation, de refroidissement et d'enceintes.",
       browseTitle: "Parcourir les solutions",
       viewSolution: "Voir la solution",
     },
@@ -109,7 +109,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
       eyebrow: "Soluciones",
       title: "Soluciones para centros de datos y energía crítica",
       subtitle:
-        "Haisen diseña sistemas, no solo productos, pensados en torno al problema que el cliente necesita resolver, y luego construidos a partir de nuestros propios productos de energía, refrigeración y gabinetes.",
+        "Wandtung diseña sistemas, no solo productos, pensados en torno al problema que el cliente necesita resolver, y luego construidos a partir de nuestros propios productos de energía, refrigeración y gabinetes.",
       browseTitle: "Explorar soluciones",
       viewSolution: "Ver solución",
     },
@@ -143,7 +143,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
       eyebrow: "Решения",
       title: "Решения для ЦОД и критического электропитания",
       subtitle:
-        "Haisen проектирует системы, а не просто продукты — вокруг проблемы, которую нужно решить клиенту, а затем создаёт их из собственной продукции по питанию, охлаждению и корпусам.",
+        "Wandtung проектирует системы, а не просто продукты — вокруг проблемы, которую нужно решить клиенту, а затем создаёт их из собственной продукции по питанию, охлаждению и корпусам.",
       browseTitle: "Обзор решений",
       viewSolution: "Смотреть решение",
     },
@@ -176,7 +176,7 @@ export const solutionsUiMessages: Record<Locale, SolutionsUIMessages> = {
     hub: {
       eyebrow: "解决方案",
       title: "数据中心与关键电力解决方案",
-      subtitle: "海森设计的是系统,而非单一产品——围绕客户需要解决的问题进行设计,并基于我们自主生产的电力、制冷与机柜产品构建。",
+      subtitle: "万电通设计的是系统,而非单一产品——围绕客户需要解决的问题进行设计,并基于我们自主生产的电力、制冷与机柜产品构建。",
       browseTitle: "浏览解决方案",
       viewSolution: "查看方案",
     },

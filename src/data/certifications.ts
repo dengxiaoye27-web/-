@@ -1,6 +1,6 @@
 import { Certification } from "./types";
 
-// Real certificates on file for Haisen. Each entry is backed by a scanned
+// Real certificates on file for Wandtung. Each entry is backed by a scanned
 // certificate/test report in /public/certifications — do not add entries
 // here without a corresponding document, and keep `products` scoped to
 // what the certificate actually covers (see each product's `standards`

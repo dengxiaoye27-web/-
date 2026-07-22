@@ -107,9 +107,9 @@ export const articles: Article[] = [
     ],
     faqs: [
       {
-        question: "Does Haisen provide micro modular data center solutions?",
+        question: "Does Wandtung provide micro modular data center solutions?",
         answer:
-          "Yes. Haisen designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
+          "Yes. Wandtung designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
       },
     ],
   },
@@ -171,9 +171,9 @@ export const articles: Article[] = [
     ],
     faqs: [
       {
-        question: "Does Haisen provide liquid cooling and CDU solutions?",
+        question: "Does Wandtung provide liquid cooling and CDU solutions?",
         answer:
-          "Yes. Haisen provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
+          "Yes. Wandtung provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
       },
     ],
   },
@@ -245,9 +245,9 @@ export const articles: Article[] = [
     ],
     faqs: [
       {
-        question: "Does Haisen design systems to a specific redundancy tier?",
+        question: "Does Wandtung design systems to a specific redundancy tier?",
         answer:
-          "Haisen designs power architecture to the redundancy level (N, N+1, 2N) specified by the project — modular UPS and ATS/STS transfer switching make it practical to implement redundancy at the module, system or full-path level.",
+          "Wandtung designs power architecture to the redundancy level (N, N+1, 2N) specified by the project — modular UPS and ATS/STS transfer switching make it practical to implement redundancy at the module, system or full-path level.",
       },
     ],
   },

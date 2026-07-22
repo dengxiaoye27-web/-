@@ -4,7 +4,7 @@ import { ProductsUIMessages } from "./types";
 export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   en: {
     hubTitle: "Data Center Infrastructure Products",
-    hubSubtitle: "Power distribution, UPS, cabinets, modular and containerized data centers, cooling, flooring, cable management and energy storage — manufactured by Haisen for data center, telecom and industrial deployment.",
+    hubSubtitle: "Power distribution, UPS, cabinets, modular and containerized data centers, cooling, flooring, cable management and energy storage — manufactured by Wandtung for data center, telecom and industrial deployment.",
     categoriesEyebrow: "Categories",
     categoriesTitle: "Browse by Category",
     catalogEyebrow: "Full Catalog",
@@ -31,7 +31,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   },
   ar: {
     hubTitle: "منتجات البنية التحتية لمراكز البيانات",
-    hubSubtitle: "توزيع الطاقة، أنظمة UPS، الخزانات، مراكز البيانات المعيارية والحاوية، التبريد، الأرضيات، إدارة الكابلات وتخزين الطاقة — تصنعها هايسِن لنشر مراكز البيانات والاتصالات والصناعة.",
+    hubSubtitle: "توزيع الطاقة، أنظمة UPS، الخزانات، مراكز البيانات المعيارية والحاوية، التبريد، الأرضيات، إدارة الكابلات وتخزين الطاقة — تصنعها واندتونغ لنشر مراكز البيانات والاتصالات والصناعة.",
     categoriesEyebrow: "الفئات",
     categoriesTitle: "تصفح حسب الفئة",
     catalogEyebrow: "الكتالوج الكامل",
@@ -58,7 +58,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   },
   fr: {
     hubTitle: "Produits d'infrastructure pour centres de données",
-    hubSubtitle: "Distribution électrique, onduleurs, baies, centres de données modulaires et conteneurisés, refroidissement, planchers, gestion des câbles et stockage d'énergie — fabriqués par Haisen pour les déploiements de centres de données, télécoms et industriels.",
+    hubSubtitle: "Distribution électrique, onduleurs, baies, centres de données modulaires et conteneurisés, refroidissement, planchers, gestion des câbles et stockage d'énergie — fabriqués par Wandtung pour les déploiements de centres de données, télécoms et industriels.",
     categoriesEyebrow: "Catégories",
     categoriesTitle: "Parcourir par catégorie",
     catalogEyebrow: "Catalogue complet",
@@ -85,7 +85,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   },
   es: {
     hubTitle: "Productos de infraestructura para centros de datos",
-    hubSubtitle: "Distribución de energía, SAI, gabinetes, centros de datos modulares y en contenedores, refrigeración, pisos, gestión de cables y almacenamiento de energía — fabricados por Haisen para despliegues de centros de datos, telecomunicaciones e industriales.",
+    hubSubtitle: "Distribución de energía, SAI, gabinetes, centros de datos modulares y en contenedores, refrigeración, pisos, gestión de cables y almacenamiento de energía — fabricados por Wandtung para despliegues de centros de datos, telecomunicaciones e industriales.",
     categoriesEyebrow: "Categorías",
     categoriesTitle: "Explorar por categoría",
     catalogEyebrow: "Catálogo completo",
@@ -112,7 +112,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   },
   ru: {
     hubTitle: "Продукция для инфраструктуры ЦОД",
-    hubSubtitle: "Распределение питания, ИБП, шкафы, модульные и контейнерные дата-центры, охлаждение, фальшполы, кабельный менеджмент и системы накопления энергии — производятся Haisen для проектов ЦОД, телекоммуникаций и промышленности.",
+    hubSubtitle: "Распределение питания, ИБП, шкафы, модульные и контейнерные дата-центры, охлаждение, фальшполы, кабельный менеджмент и системы накопления энергии — производятся Wandtung для проектов ЦОД, телекоммуникаций и промышленности.",
     categoriesEyebrow: "Категории",
     categoriesTitle: "Обзор по категориям",
     catalogEyebrow: "Полный каталог",
@@ -139,7 +139,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
   },
   zh: {
     hubTitle: "数据中心基础设施产品",
-    hubSubtitle: "配电、UPS、机柜、模块化及集装箱数据中心、制冷、地板、线缆管理与储能系统——由海森制造,服务于数据中心、电信及工业部署。",
+    hubSubtitle: "配电、UPS、机柜、模块化及集装箱数据中心、制冷、地板、线缆管理与储能系统——由万电通制造,服务于数据中心、电信及工业部署。",
     categoriesEyebrow: "产品分类",
     categoriesTitle: "按分类浏览",
     catalogEyebrow: "完整目录",

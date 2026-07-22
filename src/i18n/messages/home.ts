@@ -11,7 +11,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "Request a Quote",
     },
     trustedPartner: {
-      eyebrow: "About Haisen",
+      eyebrow: "About Wandtung",
       title: "Trusted Data Center Infrastructure Partner",
       description:
         "Guangdong Haisen New Building Materials Technology Co., Ltd. designs and manufactures data center infrastructure and critical power products — from rack PDUs to full containerized data centers — supplying data center operators, telecom operators, system integrators and EPC contractors across global markets.",
@@ -40,18 +40,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "System Architecture",
       title: "One-Stop Data Center Solution",
-      description: "Haisen doesn't sell a single product — we engineer the full path from grid power to the rack.",
+      description: "Wandtung doesn't sell a single product — we engineer the full path from grid power to the rack.",
       nodes: ["Grid Power", "UPS", "PDU", "Rack", "Cooling", "Monitoring", "Fire Protection", "Liquid Cooling", "Energy Storage"],
-      caption: "One coordinated system — from utility power to the rack — engineered, manufactured and monitored by Haisen.",
+      caption: "One coordinated system — from utility power to the rack — engineered, manufactured and monitored by Wandtung.",
     },
     industries: {
       eyebrow: "Who We Serve",
       title: "Industries We Serve",
       items: ["Data Centers", "Telecommunications", "Banking", "Government", "Energy", "Industrial", "Cloud Computing", "Edge Computing"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "Why Choose Us",
-      title: "Why Haisen",
+      title: "Why Wandtung",
       items: [
         { title: "Manufacturing Capability", description: "Factory-direct production of power, enclosure and cooling systems at scale." },
         { title: "Engineering Expertise", description: "In-house engineering for power, thermal and system architecture design." },
@@ -64,7 +64,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "Global Reach",
       title: "Global Projects",
-      description: "Haisen infrastructure is deployed across data center, telecom and government projects in key growth markets.",
+      description: "Wandtung infrastructure is deployed across data center, telecom and government projects in key growth markets.",
       markets: ["Middle East", "Africa", "Southeast Asia", "Europe", "South America", "Central Asia"],
       viewProjects: "View project case studies",
     },
@@ -81,7 +81,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "طلب عرض سعر",
     },
     trustedPartner: {
-      eyebrow: "عن هايسِن",
+      eyebrow: "عن واندتونغ",
       title: "شريكك الموثوق للبنية التحتية لمراكز البيانات",
       description:
         "تقوم شركة قوانغدونغ هايسِن الجديدة لتكنولوجيا مواد البناء بتصميم وتصنيع منتجات البنية التحتية لمراكز البيانات والطاقة الحرجة — من وحدات توزيع الطاقة للراك إلى مراكز البيانات الحاوية الكاملة — لتزويد مشغلي مراكز البيانات، ومشغلي الاتصالات، وشركات التكامل، ومقاولي EPC في مختلف الأسواق العالمية.",
@@ -110,18 +110,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "بنية النظام",
       title: "الحل المتكامل لمركز البيانات",
-      description: "هايسِن لا تبيع منتجاً واحداً — نحن نصمم المسار الكامل من طاقة الشبكة إلى الراك.",
+      description: "واندتونغ لا تبيع منتجاً واحداً — نحن نصمم المسار الكامل من طاقة الشبكة إلى الراك.",
       nodes: ["طاقة الشبكة", "UPS", "PDU", "الراك", "التبريد", "المراقبة", "الحماية من الحريق", "التبريد السائل", "تخزين الطاقة"],
-      caption: "نظام واحد متكامل — من طاقة المرافق إلى الراك — تصممه هايسِن وتصنّعه وتراقبه.",
+      caption: "نظام واحد متكامل — من طاقة المرافق إلى الراك — تصممه واندتونغ وتصنّعه وتراقبه.",
     },
     industries: {
       eyebrow: "من نخدم",
       title: "القطاعات التي نخدمها",
       items: ["مراكز البيانات", "الاتصالات", "القطاع المصرفي", "القطاع الحكومي", "الطاقة", "القطاع الصناعي", "الحوسبة السحابية", "الحوسبة الطرفية"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "لماذا تختارنا",
-      title: "لماذا هايسِن",
+      title: "لماذا واندتونغ",
       items: [
         { title: "القدرة التصنيعية", description: "إنتاج مباشر من المصنع لأنظمة الطاقة والهياكل والتبريد على نطاق واسع." },
         { title: "الخبرة الهندسية", description: "هندسة داخلية لتصميم الطاقة والحرارة وبنية الأنظمة." },
@@ -134,7 +134,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "حضور عالمي",
       title: "مشاريع عالمية",
-      description: "تُستخدم بنية هايسِن التحتية في مشاريع مراكز البيانات والاتصالات والحكومة في أسواق النمو الرئيسية.",
+      description: "تُستخدم بنية واندتونغ التحتية في مشاريع مراكز البيانات والاتصالات والحكومة في أسواق النمو الرئيسية.",
       markets: ["الشرق الأوسط", "أفريقيا", "جنوب شرق آسيا", "أوروبا", "أمريكا الجنوبية", "آسيا الوسطى"],
       viewProjects: "عرض دراسات حالة المشاريع",
     },
@@ -151,7 +151,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "Demander un devis",
     },
     trustedPartner: {
-      eyebrow: "À propos de Haisen",
+      eyebrow: "À propos de Wandtung",
       title: "Partenaire de confiance pour l'infrastructure des centres de données",
       description:
         "Guangdong Haisen New Building Materials Technology Co., Ltd. conçoit et fabrique des produits d'infrastructure de centres de données et d'alimentation critique — des PDU en rack aux centres de données conteneurisés complets — pour les opérateurs de centres de données, les opérateurs télécoms, les intégrateurs de systèmes et les entreprises EPC sur les marchés internationaux.",
@@ -180,18 +180,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "Architecture système",
       title: "Solution intégrée pour centre de données",
-      description: "Haisen ne vend pas un produit unique — nous concevons l'ensemble du parcours, du réseau électrique jusqu'à la baie.",
+      description: "Wandtung ne vend pas un produit unique — nous concevons l'ensemble du parcours, du réseau électrique jusqu'à la baie.",
       nodes: ["Réseau électrique", "Onduleur (UPS)", "PDU", "Baie", "Refroidissement", "Surveillance", "Protection incendie", "Refroidissement liquide", "Stockage d'énergie"],
-      caption: "Un système coordonné — du réseau électrique jusqu'à la baie — conçu, fabriqué et surveillé par Haisen.",
+      caption: "Un système coordonné — du réseau électrique jusqu'à la baie — conçu, fabriqué et surveillé par Wandtung.",
     },
     industries: {
       eyebrow: "Nos secteurs",
       title: "Secteurs desservis",
       items: ["Centres de données", "Télécommunications", "Banque", "Secteur public", "Énergie", "Industrie", "Cloud computing", "Edge computing"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "Pourquoi nous choisir",
-      title: "Pourquoi Haisen",
+      title: "Pourquoi Wandtung",
       items: [
         { title: "Capacité de fabrication", description: "Production directe en usine de systèmes d'alimentation, d'enceintes et de refroidissement à grande échelle." },
         { title: "Expertise en ingénierie", description: "Ingénierie interne pour la conception de l'alimentation, thermique et de l'architecture système." },
@@ -204,7 +204,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "Présence mondiale",
       title: "Projets internationaux",
-      description: "L'infrastructure Haisen est déployée dans des projets de centres de données, de télécommunications et gouvernementaux sur les principaux marchés en croissance.",
+      description: "L'infrastructure Wandtung est déployée dans des projets de centres de données, de télécommunications et gouvernementaux sur les principaux marchés en croissance.",
       markets: ["Moyen-Orient", "Afrique", "Asie du Sud-Est", "Europe", "Amérique du Sud", "Asie centrale"],
       viewProjects: "Voir les études de cas",
     },
@@ -221,7 +221,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "Solicitar cotización",
     },
     trustedPartner: {
-      eyebrow: "Sobre Haisen",
+      eyebrow: "Sobre Wandtung",
       title: "Socio de confianza en infraestructura para centros de datos",
       description:
         "Guangdong Haisen New Building Materials Technology Co., Ltd. diseña y fabrica productos de infraestructura para centros de datos y energía crítica — desde PDU de rack hasta centros de datos en contenedores completos — abasteciendo a operadores de centros de datos, operadores de telecomunicaciones, integradores de sistemas y contratistas EPC en mercados de todo el mundo.",
@@ -250,18 +250,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "Arquitectura del sistema",
       title: "Solución integral para centros de datos",
-      description: "Haisen no vende un solo producto: diseñamos toda la ruta, desde la red eléctrica hasta el rack.",
+      description: "Wandtung no vende un solo producto: diseñamos toda la ruta, desde la red eléctrica hasta el rack.",
       nodes: ["Red eléctrica", "SAI (UPS)", "PDU", "Rack", "Refrigeración", "Monitoreo", "Protección contra incendios", "Refrigeración líquida", "Almacenamiento de energía"],
-      caption: "Un sistema coordinado — desde la energía de la red hasta el rack — diseñado, fabricado y monitoreado por Haisen.",
+      caption: "Un sistema coordinado — desde la energía de la red hasta el rack — diseñado, fabricado y monitoreado por Wandtung.",
     },
     industries: {
       eyebrow: "A quién servimos",
       title: "Sectores a los que damos servicio",
       items: ["Centros de datos", "Telecomunicaciones", "Banca", "Gobierno", "Energía", "Industrial", "Computación en la nube", "Edge computing"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "Por qué elegirnos",
-      title: "Por qué Haisen",
+      title: "Por qué Wandtung",
       items: [
         { title: "Capacidad de fabricación", description: "Producción directa de fábrica de sistemas de energía, gabinetes y refrigeración a gran escala." },
         { title: "Experiencia en ingeniería", description: "Ingeniería interna para el diseño de energía, térmico y de arquitectura de sistemas." },
@@ -274,7 +274,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "Alcance global",
       title: "Proyectos globales",
-      description: "La infraestructura de Haisen se implementa en proyectos de centros de datos, telecomunicaciones y gobierno en los principales mercados en crecimiento.",
+      description: "La infraestructura de Wandtung se implementa en proyectos de centros de datos, telecomunicaciones y gobierno en los principales mercados en crecimiento.",
       markets: ["Oriente Medio", "África", "Sudeste Asiático", "Europa", "Sudamérica", "Asia Central"],
       viewProjects: "Ver casos de estudio",
     },
@@ -291,7 +291,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "Запросить предложение",
     },
     trustedPartner: {
-      eyebrow: "О компании Haisen",
+      eyebrow: "О компании Wandtung",
       title: "Надёжный партнёр в области инфраструктуры ЦОД",
       description:
         "Guangdong Haisen New Building Materials Technology Co., Ltd. разрабатывает и производит оборудование для инфраструктуры ЦОД и критического электропитания — от стоечных PDU до полностью готовых контейнерных дата-центров — для операторов ЦОД, телеком-операторов, системных интеграторов и EPC-подрядчиков на международных рынках.",
@@ -320,18 +320,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "Архитектура системы",
       title: "Комплексное решение для ЦОД",
-      description: "Haisen не продаёт отдельные продукты — мы проектируем весь путь от сетевого электропитания до стойки.",
+      description: "Wandtung не продаёт отдельные продукты — мы проектируем весь путь от сетевого электропитания до стойки.",
       nodes: ["Сетевое питание", "ИБП", "PDU", "Стойка", "Охлаждение", "Мониторинг", "Пожарная защита", "Жидкостное охлаждение", "Накопители энергии"],
-      caption: "Единая согласованная система — от электросети до стойки — спроектированная, изготовленная и контролируемая Haisen.",
+      caption: "Единая согласованная система — от электросети до стойки — спроектированная, изготовленная и контролируемая Wandtung.",
     },
     industries: {
       eyebrow: "Кому мы помогаем",
       title: "Отрасли, которые мы обслуживаем",
       items: ["Дата-центры", "Телекоммуникации", "Банковский сектор", "Государственный сектор", "Энергетика", "Промышленность", "Облачные вычисления", "Периферийные вычисления"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "Почему выбирают нас",
-      title: "Почему Haisen",
+      title: "Почему Wandtung",
       items: [
         { title: "Производственные возможности", description: "Прямое заводское производство систем питания, корпусов и охлаждения в промышленных масштабах." },
         { title: "Инженерная экспертиза", description: "Собственная инженерная команда для проектирования питания, теплового режима и архитектуры систем." },
@@ -344,7 +344,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "Глобальное присутствие",
       title: "Международные проекты",
-      description: "Инфраструктура Haisen применяется в проектах ЦОД, телекоммуникаций и госсектора на ключевых растущих рынках.",
+      description: "Инфраструктура Wandtung применяется в проектах ЦОД, телекоммуникаций и госсектора на ключевых растущих рынках.",
       markets: ["Ближний Восток", "Африка", "Юго-Восточная Азия", "Европа", "Южная Америка", "Центральная Азия"],
       viewProjects: "Смотреть примеры проектов",
     },
@@ -361,7 +361,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
       ctaSecondary: "获取报价",
     },
     trustedPartner: {
-      eyebrow: "关于海森",
+      eyebrow: "关于万电通",
       title: "值得信赖的数据中心基础设施合作伙伴",
       description:
         "广东海森新型建材科技有限公司专注于数据中心基础设施与关键电力产品的设计与制造——从机柜配电单元(PDU)到完整的集装箱数据中心——为全球市场的数据中心运营商、电信运营商、系统集成商及 EPC 总承包商提供产品与服务。",
@@ -390,18 +390,18 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     architecture: {
       eyebrow: "系统架构",
       title: "一站式数据中心解决方案",
-      description: "海森提供的不是单一产品——我们设计的是从市电到机柜的完整链路。",
+      description: "万电通提供的不是单一产品——我们设计的是从市电到机柜的完整链路。",
       nodes: ["市电输入", "UPS", "PDU", "机柜", "制冷", "监控", "消防", "液冷", "储能"],
-      caption: "一套协同运作的完整系统——从市电到机柜——由海森设计、制造并持续监控。",
+      caption: "一套协同运作的完整系统——从市电到机柜——由万电通设计、制造并持续监控。",
     },
     industries: {
       eyebrow: "服务对象",
       title: "我们服务的行业",
       items: ["数据中心", "电信", "金融", "政府", "能源", "工业", "云计算", "边缘计算"],
     },
-    whyHaisen: {
+    whyWandtung: {
       eyebrow: "为什么选择我们",
-      title: "为什么选择海森",
+      title: "为什么选择万电通",
       items: [
         { title: "制造能力", description: "工厂直营,大规模生产电力、机柜与制冷系统。" },
         { title: "工程能力", description: "自有工程团队负责电力、热设计与系统架构设计。" },
@@ -414,7 +414,7 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     globalProjects: {
       eyebrow: "全球布局",
       title: "全球项目",
-      description: "海森的基础设施产品已应用于多个重点增长市场的数据中心、电信及政府项目。",
+      description: "万电通的基础设施产品已应用于多个重点增长市场的数据中心、电信及政府项目。",
       markets: ["中东", "非洲", "东南亚", "欧洲", "南美洲", "中亚"],
       viewProjects: "查看项目案例",
     },
