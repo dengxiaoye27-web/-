@@ -1060,6 +1060,368 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     },
   },
 
+  "multi-function-pdu": {
+    ar: {
+      name: "PDU بمقابس عالمية متعددة الوظائف",
+      shortName: "PDU متعدد الوظائف",
+      tagline: "شريط طاقة للراك 1U بمقابس عالمية متعددة المعايير وحامل تركيب دوّار 360 درجة.",
+      overview:
+        "وحدة PDU متعددة الوظائف من هايسِن هي شريط طاقة للراك بارتفاع 1U ومقاس 19 بوصة، مزود بستة مقابس عالمية متعددة المعايير، ومفتاح طاقة مزدوج، ووحدة حماية SPD من التيار المفاجئ مدمجة مع مؤشر أمان أخضر LED. يسمح حامل التركيب الفولاذي المتين الدوّار بزاوية 360 درجة (بدون أدوات) بتوجيه مرن داخل الراك، بينما تضيف مصاريع الأمان للأطفال (بمقاومة تصل إلى 75 نيوتن) حماية إضافية في البيئات متعددة الاستخدامات.",
+      keyFeatures: [
+        "ستة مقابس عالمية متعددة المعايير تقبل أنواع القوابس الشائعة ثنائية وثلاثية السن",
+        "مفتاح طاقة مزدوج مع حماية SPD من التيار المفاجئ ومؤشر أمان أخضر LED",
+        "حامل تركيب فولاذي متين دوّار بزاوية 360 درجة، بدون أدوات",
+        "كابل بنواة نحاسية 1.5 مم² لنقل تيار عالٍ ومستقر",
+        "مصاريع أمان للأطفال بمقاومة تصل إلى 75 نيوتن",
+        "تركيب راك 19 بوصة 1U؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "الهيكل والأبعاد",
+          specs: [
+            { label: "التركيب", value: "راك 19 بوصة، 1U" },
+            { label: "العرض الكلي", value: "483 مم" },
+            { label: "مسافة فتحات التركيب", value: "436 مم" },
+            { label: "الارتفاع", value: "45 مم" },
+          ],
+        },
+        {
+          title: "الكهرباء والحماية",
+          specs: [
+            { label: "منافذ الخرج", value: "6 × مقابس عالمية متعددة المعايير" },
+            { label: "المفتاح", value: "مفتاح طاقة مزدوج مضاء" },
+            { label: "حماية التيار المفاجئ", value: "وحدة SPD مدمجة مع مؤشر LED أخضر" },
+            { label: "الكابل", value: "نواة نحاسية 1.5 مم²" },
+            { label: "أمان الأطفال", value: "مصاريع بمقاومة تصل إلى 75 نيوتن" },
+          ],
+        },
+        {
+          title: "التركيب",
+          specs: [
+            { label: "الحامل", value: "دوّار بزاوية 360 درجة، تركيب بدون أدوات" },
+            { label: "مادة الحامل", value: "فولاذ متين" },
+          ],
+        },
+      ],
+      applications: [
+        "خزانات مراكز البيانات",
+        "غرف المعدات متعددة المناطق التي تتطلب توافق مقابس مختلط",
+        "خزانات الاتصالات",
+        "غرف الخوادم وخزانات الشبكات",
+      ],
+      customizationOptions: [
+        "عدد المنافذ وتخطيطها",
+        "قابس الدخل وطول الكابل",
+        "اتجاه الحامل / طقم التركيب",
+        "علامة تجارية/تصنيف مخصص",
+        "تعبئة OEM/ODM",
+      ],
+      standards: ["الشهادات متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ماذا تعني \"المقابس العالمية\" في هذه الوحدة؟",
+          answer:
+            "كل منفذ في وحدة PDU متعددة الوظائف مصمم لقبول أنواع القوابس الشائعة ثنائية وثلاثية السن، بحيث يمكن لوحدة واحدة خدمة معدات مزودة بكابلات طاقة إقليمية مختلفة دون الحاجة إلى محولات.",
+        },
+        {
+          question: "ما فائدة الحامل الدوّار بزاوية 360 درجة؟",
+          answer:
+            "يدور حامل التركيب الفولاذي المتين بزاوية كاملة 360 درجة ويُركَّب دون أدوات، مما يتيح توجيه وحدة PDU لتناسب تخطيطات راك مختلفة واحتياجات توجيه الكابلات.",
+        },
+        {
+          question: "هل تتضمن حماية من التيار المفاجئ؟",
+          answer:
+            "نعم. تحتوي الوحدة على وحدة حماية SPD مدمجة مع مؤشر LED أخضر، إلى جانب مفتاح طاقة مزدوج ومصاريع منافذ لأمان الأطفال بمقاومة تصل إلى 75 نيوتن.",
+        },
+      ],
+    },
+    fr: {
+      name: "PDU multifonction à prises universelles",
+      shortName: "PDU multifonction",
+      tagline: "Bandeau d'alimentation de rack 1U à prises universelles multi-normes et support de fixation rotatif à 360°.",
+      overview:
+        "Le PDU multifonction Haisen est un bandeau d'alimentation de rack 1U de 19 pouces équipé de six prises universelles multi-normes, d'un double interrupteur d'alimentation et d'un module de protection contre les surtensions SPD intégré avec indicateur de sécurité LED vert. Un support de fixation en acier robuste, rotatif à 360° et sans outil, permet une orientation flexible dans le rack, tandis que des volets de sécurité enfant, résistants jusqu'à 75N, ajoutent une protection dans les environnements à usage mixte.",
+      keyFeatures: [
+        "Six prises universelles multi-normes acceptant les types de fiches courants à 2 et 3 broches",
+        "Double interrupteur d'alimentation avec protection SPD contre les surtensions et indicateur de sécurité LED vert",
+        "Support de fixation en acier robuste, rotatif à 360°, sans outil",
+        "Câble à âme cuivre de 1,5 mm² pour une transmission stable à fort courant",
+        "Volets de sécurité enfant résistants jusqu'à 75N",
+        "Montage en rack 19 pouces 1U ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Structure et dimensions",
+          specs: [
+            { label: "Montage", value: "Rack 19 pouces, 1U" },
+            { label: "Largeur totale", value: "483 mm" },
+            { label: "Écart des trous de fixation", value: "436 mm" },
+            { label: "Hauteur", value: "45 mm" },
+          ],
+        },
+        {
+          title: "Électrique et protection",
+          specs: [
+            { label: "Prises de sortie", value: "6 × prises universelles multi-normes" },
+            { label: "Interrupteur", value: "Double interrupteur d'alimentation, lumineux" },
+            { label: "Protection contre les surtensions", value: "SPD intégré avec indicateur LED vert" },
+            { label: "Câble", value: "Âme cuivre 1,5 mm²" },
+            { label: "Sécurité enfant", value: "Volets résistants jusqu'à 75N" },
+          ],
+        },
+        {
+          title: "Fixation",
+          specs: [
+            { label: "Support", value: "Rotatif à 360°, installation sans outil" },
+            { label: "Matériau du support", value: "Acier robuste" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centres de données",
+        "Salles techniques multi-régions nécessitant une compatibilité de fiches mixte",
+        "Armoires de télécommunications",
+        "Salles serveurs et locaux techniques réseau",
+      ],
+      customizationOptions: [
+        "Nombre et disposition des prises",
+        "Fiche d'entrée et longueur de câble",
+        "Orientation du support / kit de fixation",
+        "Marquage / étiquetage personnalisé",
+        "Conditionnement OEM / ODM",
+      ],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Que signifie « prise universelle » sur ce PDU ?",
+          answer:
+            "Chaque prise du PDU multifonction est conçue pour accepter les types de fiches courants à 2 et 3 broches, permettant à une seule unité de desservir des équipements dotés de cordons d'alimentation régionaux différents sans adaptateur.",
+        },
+        {
+          question: "À quoi sert le support rotatif à 360° ?",
+          answer:
+            "Le support de fixation en acier robuste tourne à 360° et s'installe sans outil, permettant d'orienter le PDU pour s'adapter à différentes configurations de rack et besoins de cheminement de câbles.",
+        },
+        {
+          question: "Inclut-il une protection contre les surtensions ?",
+          answer:
+            "Oui. L'unité dispose d'un module SPD (dispositif de protection contre les surtensions) intégré avec indicateur LED vert, ainsi que d'un double interrupteur d'alimentation et de volets de sécurité enfant résistants jusqu'à 75N.",
+        },
+      ],
+    },
+    es: {
+      name: "PDU multifunción con tomas universales",
+      shortName: "PDU multifunción",
+      tagline: "Regleta de rack 1U con tomas universales multi-estándar y soporte de montaje giratorio a 360°.",
+      overview:
+        "El PDU multifunción de Haisen es una regleta de rack 1U de 19 pulgadas equipada con seis tomas universales multi-estándar, un interruptor de encendido doble y un módulo de protección contra sobretensiones SPD integrado con indicador de seguridad LED verde. Un soporte de montaje de acero resistente, giratorio a 360° y sin herramientas, permite una orientación flexible en el rack, mientras que las persianas de seguridad infantil, resistentes hasta 75N, añaden protección en entornos de uso mixto.",
+      keyFeatures: [
+        "Seis tomas universales multi-estándar que aceptan tipos de enchufe comunes de 2 y 3 clavijas",
+        "Interruptor de encendido doble con protección SPD contra sobretensiones e indicador de seguridad LED verde",
+        "Soporte de montaje de acero resistente, giratorio a 360°, sin herramientas",
+        "Cable con núcleo de cobre de 1,5 mm² para una transmisión estable de alta corriente",
+        "Persianas de seguridad infantil resistentes hasta 75N",
+        "Montaje en rack de 19 pulgadas 1U; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Estructura y dimensiones",
+          specs: [
+            { label: "Montaje", value: "Rack de 19 pulgadas, 1U" },
+            { label: "Ancho total", value: "483 mm" },
+            { label: "Separación de orificios de montaje", value: "436 mm" },
+            { label: "Altura", value: "45 mm" },
+          ],
+        },
+        {
+          title: "Eléctrico y protección",
+          specs: [
+            { label: "Tomas de salida", value: "6 × tomas universales multi-estándar" },
+            { label: "Interruptor", value: "Interruptor de encendido doble, iluminado" },
+            { label: "Protección contra sobretensiones", value: "SPD integrado con indicador LED verde" },
+            { label: "Cable", value: "Núcleo de cobre 1,5 mm²" },
+            { label: "Seguridad infantil", value: "Persianas resistentes hasta 75N" },
+          ],
+        },
+        {
+          title: "Montaje",
+          specs: [
+            { label: "Soporte", value: "Giratorio a 360°, instalación sin herramientas" },
+            { label: "Material del soporte", value: "Acero resistente" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centros de datos",
+        "Salas de equipos multirregionales que requieren compatibilidad de enchufes mixta",
+        "Gabinetes de telecomunicaciones",
+        "Salas de servidores y armarios de red",
+      ],
+      customizationOptions: [
+        "Cantidad y disposición de tomas",
+        "Enchufe de entrada y longitud del cable",
+        "Orientación del soporte / kit de montaje",
+        "Marca / etiquetado personalizado",
+        "Empaque OEM / ODM",
+      ],
+      standards: ["Certificación disponible bajo pedido según las especificaciones del proyecto"],
+      faqs: [
+        {
+          question: "¿Qué significa \"toma universal\" en este PDU?",
+          answer:
+            "Cada toma del PDU multifunción está diseñada para aceptar tipos de enchufe comunes de 2 y 3 clavijas, de modo que una sola unidad puede dar servicio a equipos con cables de alimentación regionales diferentes sin necesidad de adaptadores.",
+        },
+        {
+          question: "¿Para qué sirve el soporte giratorio a 360°?",
+          answer:
+            "El soporte de montaje de acero resistente gira 360° completos y se instala sin herramientas, permitiendo orientar el PDU para adaptarse a diferentes disposiciones de rack y necesidades de enrutamiento de cables.",
+        },
+        {
+          question: "¿Incluye protección contra sobretensiones?",
+          answer:
+            "Sí. La unidad tiene un módulo SPD (dispositivo de protección contra sobretensiones) integrado con indicador LED verde, además de un interruptor de encendido doble y persianas de seguridad infantil resistentes hasta 75N.",
+        },
+      ],
+    },
+    ru: {
+      name: "Многофункциональный PDU с универсальными розетками",
+      shortName: "Многофункциональный PDU",
+      tagline: "Стоечный блок PDU высотой 1U с универсальными многостандартными розетками и поворотным на 360° монтажным кронштейном.",
+      overview:
+        "Многофункциональный PDU Haisen — это 19-дюймовая стоечная колодка высотой 1U с шестью универсальными многостандартными розетками, двойным выключателем питания и встроенным модулем защиты от перенапряжения SPD с зелёным светодиодным индикатором безопасности. Прочный стальной монтажный кронштейн, поворачивающийся на 360° без инструментов, обеспечивает гибкую ориентацию в стойке, а защитные шторки для детской безопасности с сопротивлением до 75Н добавляют защиту в помещениях смешанного использования.",
+      keyFeatures: [
+        "Шесть универсальных многостандартных розеток, принимающих распространённые 2- и 3-контактные вилки",
+        "Двойной выключатель питания с защитой SPD от перенапряжения и зелёным светодиодным индикатором безопасности",
+        "Прочный стальной монтажный кронштейн, поворачивающийся на 360° без инструментов",
+        "Кабель с медной жилой 1,5 мм² для стабильной передачи высокого тока",
+        "Защитные шторки для детской безопасности с сопротивлением до 75Н",
+        "Монтаж в 19-дюймовую стойку 1U; доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Конструкция и размеры",
+          specs: [
+            { label: "Монтаж", value: "19-дюймовая стойка, 1U" },
+            { label: "Общая ширина", value: "483 мм" },
+            { label: "Расстояние между монтажными отверстиями", value: "436 мм" },
+            { label: "Высота", value: "45 мм" },
+          ],
+        },
+        {
+          title: "Электрика и защита",
+          specs: [
+            { label: "Выходные розетки", value: "6 × универсальных многостандартных розеток" },
+            { label: "Выключатель", value: "Двойной подсвечиваемый выключатель питания" },
+            { label: "Защита от перенапряжения", value: "Встроенный SPD с зелёным светодиодным индикатором" },
+            { label: "Кабель", value: "Медная жила 1,5 мм²" },
+            { label: "Детская безопасность", value: "Шторки с сопротивлением до 75Н" },
+          ],
+        },
+        {
+          title: "Монтаж",
+          specs: [
+            { label: "Кронштейн", value: "Поворотный на 360°, монтаж без инструментов" },
+            { label: "Материал кронштейна", value: "Прочная сталь" },
+          ],
+        },
+      ],
+      applications: [
+        "Стойки центров обработки данных",
+        "Многорегиональные помещения с оборудованием, требующие совместимости со смешанными вилками",
+        "Телекоммуникационные шкафы",
+        "Серверные и сетевые помещения",
+      ],
+      customizationOptions: [
+        "Количество и расположение розеток",
+        "Входная вилка и длина кабеля",
+        "Ориентация кронштейна / монтажный комплект",
+        "Индивидуальный брендинг / маркировка",
+        "Упаковка OEM / ODM",
+      ],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Что означает «универсальная розетка» в этом PDU?",
+          answer:
+            "Каждая розетка многофункционального PDU рассчитана на приём распространённых 2- и 3-контактных вилок, поэтому один блок может обслуживать оборудование с разными региональными кабелями питания без переходников.",
+        },
+        {
+          question: "Для чего нужен поворотный на 360° кронштейн?",
+          answer:
+            "Прочный стальной монтажный кронштейн поворачивается на полные 360° и устанавливается без инструментов, позволяя ориентировать PDU под разные конфигурации стойки и потребности прокладки кабелей.",
+        },
+        {
+          question: "Включена ли защита от перенапряжения?",
+          answer:
+            "Да. Блок имеет встроенный модуль SPD (устройство защиты от перенапряжения) с зелёным светодиодным индикатором, а также двойной выключатель питания и защитные шторки для детской безопасности с сопротивлением до 75Н.",
+        },
+      ],
+    },
+    zh: {
+      name: "多功能万用孔PDU",
+      shortName: "多功能PDU",
+      tagline: "配备万用孔多标准插座及360度旋转安装支架的1U机架式PDU。",
+      overview:
+        "海森多功能PDU是一款19英寸1U机架式电源插座条，配备六路万用孔多标准插座、双电源开关，以及内置SPD浪涌保护模块（带绿色LED安全指示灯）。360度旋转、免工具安装的加厚钢制安装支架可灵活调整机架内朝向，同时配备75N耐力的儿童安全保护门，为混合使用环境提供额外保护。",
+      keyFeatures: [
+        "六路万用孔多标准插座，兼容常见两孔及三孔插头",
+        "双电源开关，配SPD浪涌保护及绿色LED安全指示灯",
+        "360度旋转、免工具安装的加厚钢制安装支架",
+        "1.5mm²铜芯线缆，传输稳定大电流",
+        "儿童安全保护门，耐力达75N",
+        "19英寸1U机架安装；支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "结构与尺寸",
+          specs: [
+            { label: "安装方式", value: "19英寸，1U机架" },
+            { label: "整体宽度", value: "483mm" },
+            { label: "安装孔间距", value: "436mm" },
+            { label: "高度", value: "45mm" },
+          ],
+        },
+        {
+          title: "电气与保护",
+          specs: [
+            { label: "输出插座", value: "6×万用孔多标准插座" },
+            { label: "开关", value: "双电源开关，带指示灯" },
+            { label: "浪涌保护", value: "内置SPD，绿色LED指示灯" },
+            { label: "线缆", value: "1.5mm²铜芯" },
+            { label: "儿童安全", value: "保护门耐力达75N" },
+          ],
+        },
+        {
+          title: "安装",
+          specs: [
+            { label: "支架", value: "360度旋转，免工具安装" },
+            { label: "支架材质", value: "加厚钢材" },
+          ],
+        },
+      ],
+      applications: ["数据中心IT机架", "需要混合插头兼容性的多地区设备间", "电信机柜", "服务器机房与网络配线间"],
+      customizationOptions: ["插座数量与布局", "输入插头与线缆长度", "支架朝向/安装套件", "定制品牌/标识", "OEM/ODM包装"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "这款PDU的“万用孔”是什么意思？",
+          answer:
+            "多功能PDU的每个插座均设计为兼容常见的两孔及三孔插头，因此一台设备即可为配备不同地区电源线的设备供电，无需转换插头。",
+        },
+        {
+          question: "360度旋转支架有什么作用？",
+          answer:
+            "加厚钢制安装支架可整圈360度旋转，且无需工具即可安装，方便根据不同机架布局及走线需求调整PDU朝向。",
+        },
+        {
+          question: "是否包含浪涌保护？",
+          answer:
+            "是的。该设备内置SPD（浪涌保护装置）模块并配有绿色LED指示灯，同时配备双电源开关及耐力达75N的儿童安全插座保护门。",
+        },
+      ],
+    },
+  },
+
   "intelligent-pdu": {
     ar: {
       name: "PDU ذكي",
