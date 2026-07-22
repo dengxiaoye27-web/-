@@ -77,7 +77,7 @@ export const products: Product[] = [
           "Yes. Haisen is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu"],
+    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
@@ -167,6 +167,97 @@ export const products: Product[] = [
       },
     ],
     relatedProductSlugs: ["pdu", "intelligent-pdu", "network-cabinet"],
+    relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
+  },
+  {
+    slug: "nema-pdu",
+    category: "power-distribution",
+    name: "American Standard (NEMA) PDU",
+    shortName: "NEMA PDU",
+    tagline: "1U rack-mount PDU with US standard NEMA 5-15R outlets for North American cabinets.",
+    overview:
+      "The Haisen NEMA PDU is a 1U rack-mount power distribution unit fitted with US standard NEMA 5-15R outlets, a dual-pole illuminated power switch under a protective cover and an integrated SPD surge protection module in a fire-retardant shell, built for North American data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a NEMA 5-15P power cord, and is available in standard black or a custom orange housing.",
+    featured: true,
+    images: [
+      "/products/nema-pdu/01-main.png",
+      "/products/nema-pdu/02-hero.png",
+      "/products/nema-pdu/03-outlet-count.png",
+      "/products/nema-pdu/04-spd-protection.png",
+      "/products/nema-pdu/05-copper-busbar.png",
+      "/products/nema-pdu/06-aluminum-shell.png",
+      "/products/nema-pdu/07-copper-core-cable.png",
+      "/products/nema-pdu/08-input-plugs.png",
+      "/products/nema-pdu/09-orange-series.png",
+    ],
+    keyFeatures: [
+      "Eight US standard NEMA 5-15R outlets, UL-listed style",
+      "Dual-pole illuminated power switch under a protective safety cover",
+      "Integrated SPD surge protection module with fire-retardant shell",
+      "99.9% pure red copper busbar for low impedance and heat rise",
+      "1.5mm heavy-duty aluminum shell, flame-retardant and impact-resistant",
+      "NEMA 5-15P power cord with 1.5mm² heavy-duty copper core, UL compliant",
+      "Standard black or custom orange housing; OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "125V" },
+          { label: "Rated Current", value: "15A" },
+          { label: "Rated Frequency", value: "60 Hz" },
+        ],
+      },
+      {
+        title: "Input / Output",
+        specs: [
+          { label: "Input Plug", value: "NEMA 5-15P" },
+          { label: "Output Sockets", value: "8 × NEMA 5-15R, UL-listed style" },
+          { label: "Cable", value: "1.5mm² copper core, UL-compliant, custom lengths available" },
+        ],
+      },
+      {
+        title: "Mechanical & Protection",
+        specs: [
+          { label: "Mounting", value: "1U rack, horizontal" },
+          { label: "Housing Material", value: "1.5mm heavy-duty aluminum shell" },
+          { label: "Busbar Material", value: "99.9% pure red copper" },
+          { label: "Housing Color", value: "Black (standard) / Orange (custom)" },
+          { label: "Protection", value: "Dual-pole illuminated switch with safety cover, SPD surge protection, fire-retardant shell" },
+        ],
+      },
+    ],
+    applications: [
+      "North American data center racks",
+      "US-standard telecom equipment rooms",
+      "Colocation cabinets",
+      "Industrial and network control cabinets",
+    ],
+    customizationOptions: [
+      "Housing color (black / orange / custom)",
+      "Outlet count and cable length",
+      "Input plug and cord length (NEMA, IEC, Schuko, UK, AU, CN and other regional standards)",
+      "Custom branding / labeling",
+      "OEM / ODM packaging",
+    ],
+    standards: ["Designed to NEMA 5-15 connector standards, UL-listed style construction", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is a NEMA PDU and where is it used?",
+        answer:
+          "A NEMA PDU is a rack power distribution unit fitted with US standard NEMA 5-15R outlets, the standard socket type used across North America. It is used to distribute rack power to IT equipment fitted with NEMA 5-15P power cords.",
+      },
+      {
+        question: "Does the NEMA PDU include surge protection?",
+        answer:
+          "Yes. Each unit includes an integrated SPD (surge protection device) module with a fire-retardant shell, alongside a dual-pole illuminated switch protected by a hinged safety cover.",
+      },
+      {
+        question: "Can the housing color or input plug be customized?",
+        answer:
+          "Yes. Haisen is a factory-direct manufacturer and offers the NEMA PDU in standard black or a custom orange housing, with the input plug configurable to NEMA, IEC, Schuko, UK, AU, CN and other regional standards per project, including OEM/ODM.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "schuko-pdu", "intelligent-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {

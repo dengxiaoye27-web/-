@@ -693,6 +693,373 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     },
   },
 
+  "nema-pdu": {
+    ar: {
+      name: "وحدة PDU بمعيار أمريكي (NEMA)",
+      shortName: "PDU أمريكي NEMA",
+      tagline: "وحدة توزيع طاقة للراك 1U بمنافذ NEMA 5-15R أمريكية القياس لخزانات أمريكا الشمالية.",
+      overview:
+        "وحدة PDU الأمريكية من هايسِن هي وحدة توزيع طاقة للراك بارتفاع 1U مزودة بمنافذ أمريكية قياسية (NEMA 5-15R)، ومفتاح طاقة مضاء ثنائي القطب تحت غطاء حماية، ووحدة حماية SPD من التيار المفاجئ مدمجة بهيكل مقاوم للحريق، مصممة لخزانات مراكز البيانات والاتصالات في أمريكا الشمالية. تستخدم قضيب نحاس أحمر نقي بنسبة 99.9%، وهيكل ألومنيوم متين بسماكة 1.5 مم، وتأتي بكابل طاقة NEMA 5-15P، ومتوفرة بهيكل أسود قياسي أو هيكل برتقالي مخصص.",
+      keyFeatures: [
+        "ثمانية منافذ أمريكية قياسية NEMA 5-15R، بطراز معتمد UL",
+        "مفتاح طاقة مضاء ثنائي القطب تحت غطاء حماية واقٍ",
+        "وحدة حماية SPD من التيار المفاجئ مدمجة بهيكل مقاوم للحريق",
+        "قضيب نحاس أحمر نقي بنسبة 99.9% لمقاومة منخفضة وارتفاع حراري أقل",
+        "هيكل ألومنيوم متين بسماكة 1.5 مم، مقاوم للهب والصدمات",
+        "كابل طاقة NEMA 5-15P بنواة نحاسية متينة 1.5 مم²، متوافق مع UL",
+        "هيكل أسود قياسي أو برتقالي مخصص؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "المعاملات الكهربائية",
+          specs: [
+            { label: "الجهد المقنن", value: "125 فولت" },
+            { label: "التيار المقنن", value: "15A" },
+            { label: "التردد المقنن", value: "60 هرتز" },
+          ],
+        },
+        {
+          title: "الدخل / الخرج",
+          specs: [
+            { label: "قابس الدخل", value: "NEMA 5-15P" },
+            { label: "منافذ الخرج", value: "8 × منافذ NEMA 5-15R، بطراز معتمد UL" },
+            { label: "الكابل", value: "نواة نحاسية 1.5 مم²، متوافق مع UL، أطوال مخصصة متاحة" },
+          ],
+        },
+        {
+          title: "الهيكل والحماية",
+          specs: [
+            { label: "التركيب", value: "راك 1U، أفقي" },
+            { label: "مادة الهيكل", value: "هيكل ألومنيوم متين بسماكة 1.5 مم" },
+            { label: "مادة القضيب الناقل", value: "نحاس أحمر نقي بنسبة 99.9%" },
+            { label: "لون الهيكل", value: "أسود (قياسي) / برتقالي (مخصص)" },
+            { label: "الحماية", value: "مفتاح مضاء ثنائي القطب بغطاء حماية، حماية SPD من التيار المفاجئ، هيكل مقاوم للحريق" },
+          ],
+        },
+      ],
+      applications: [
+        "خزانات مراكز البيانات في أمريكا الشمالية",
+        "غرف معدات الاتصالات بالمعيار الأمريكي",
+        "خزانات الاستضافة المشتركة",
+        "خزانات التحكم الصناعي والشبكي",
+      ],
+      customizationOptions: [
+        "لون الهيكل (أسود / برتقالي / مخصص)",
+        "عدد المنافذ وطول الكابل",
+        "قابس الدخل وطول السلك (NEMA وIEC وشوكو والمملكة المتحدة وأستراليا والصين ومعايير إقليمية أخرى)",
+        "علامة تجارية/تصنيف مخصص",
+        "تعبئة OEM/ODM",
+      ],
+      standards: ["مصمم وفق معايير موصلات NEMA 5-15، بطراز بناء معتمد UL", "الشهادات متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ما هي وحدة PDU الأمريكية (NEMA) وأين تُستخدم؟",
+          answer:
+            "وحدة PDU أمريكية هي وحدة توزيع طاقة للراك مزودة بمنافذ أمريكية قياسية (NEMA 5-15R)، وهي نوع المقبس القياسي المستخدم في جميع أنحاء أمريكا الشمالية. تُستخدم لتوزيع طاقة الراك على معدات تقنية المعلومات المزودة بكابلات طاقة NEMA 5-15P.",
+        },
+        {
+          question: "هل تتضمن وحدة PDU الأمريكية حماية من التيار المفاجئ؟",
+          answer:
+            "نعم. تتضمن كل وحدة وحدة حماية SPD (جهاز حماية من التيار المفاجئ) مدمجة بهيكل مقاوم للحريق، إلى جانب مفتاح مضاء ثنائي القطب محمي بغطاء أمان مفصلي.",
+        },
+        {
+          question: "هل يمكن تخصيص لون الهيكل أو قابس الدخل؟",
+          answer:
+            "نعم. هايسِن مُصنّع مباشر من المصنع، ويوفر وحدة PDU الأمريكية بهيكل أسود قياسي أو برتقالي مخصص، مع إمكانية تكوين قابس الدخل بمعايير NEMA أو IEC أو شوكو أو المملكة المتحدة أو أستراليا أو الصين أو معايير إقليمية أخرى حسب كل مشروع، بما في ذلك OEM/ODM.",
+        },
+      ],
+    },
+    fr: {
+      name: "PDU aux normes américaines (NEMA)",
+      shortName: "PDU NEMA",
+      tagline: "PDU montable en rack 1U à prises NEMA 5-15R aux normes américaines pour armoires nord-américaines.",
+      overview:
+        "Le PDU NEMA Haisen est une unité de distribution d'énergie montable en rack 1U équipée de prises aux normes américaines (NEMA 5-15R), d'un interrupteur lumineux bipolaire sous un capot de protection et d'un module de protection contre les surtensions SPD intégré dans une coque ignifuge, conçu pour les armoires de centres de données et de télécommunications nord-américaines. Il utilise un jeu de barres en cuivre rouge pur à 99,9 % et un boîtier en aluminium robuste de 1,5 mm, est livré avec un cordon d'alimentation NEMA 5-15P, et est disponible en boîtier noir standard ou orange personnalisé.",
+      keyFeatures: [
+        "Huit prises aux normes américaines NEMA 5-15R, construction de type UL Listed",
+        "Interrupteur bipolaire lumineux sous un capot de protection",
+        "Module de protection contre les surtensions (SPD) intégré à coque ignifuge",
+        "Jeu de barres en cuivre rouge pur à 99,9 % pour une faible impédance et un échauffement réduit",
+        "Boîtier en aluminium robuste de 1,5 mm, ignifuge et résistant aux chocs",
+        "Cordon d'alimentation NEMA 5-15P à âme cuivre robuste de 1,5 mm², conforme UL",
+        "Boîtier noir standard ou orange personnalisé ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Paramètres électriques",
+          specs: [
+            { label: "Tension nominale", value: "125V" },
+            { label: "Courant nominal", value: "15A" },
+            { label: "Fréquence nominale", value: "60 Hz" },
+          ],
+        },
+        {
+          title: "Entrée / Sortie",
+          specs: [
+            { label: "Fiche d'entrée", value: "NEMA 5-15P" },
+            { label: "Prises de sortie", value: "8 × prises NEMA 5-15R, construction de type UL Listed" },
+            { label: "Câble", value: "Âme cuivre 1,5 mm², conforme UL, longueurs personnalisées disponibles" },
+          ],
+        },
+        {
+          title: "Mécanique et protection",
+          specs: [
+            { label: "Montage", value: "Rack 1U, horizontal" },
+            { label: "Matériau du boîtier", value: "Boîtier aluminium robuste de 1,5 mm" },
+            { label: "Matériau du jeu de barres", value: "Cuivre rouge pur à 99,9 %" },
+            { label: "Couleur du boîtier", value: "Noir (standard) / Orange (personnalisé)" },
+            { label: "Protection", value: "Interrupteur bipolaire lumineux avec capot de protection, protection SPD contre les surtensions, coque ignifuge" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centres de données nord-américains",
+        "Salles techniques télécoms aux normes américaines",
+        "Armoires de colocation",
+        "Armoires de contrôle industriel et réseau",
+      ],
+      customizationOptions: [
+        "Couleur du boîtier (noir / orange / personnalisée)",
+        "Nombre de prises et longueur de câble",
+        "Fiche d'entrée et longueur de cordon (NEMA, IEC, Schuko, UK, AU, CN et autres normes régionales)",
+        "Marquage / étiquetage personnalisé",
+        "Conditionnement OEM / ODM",
+      ],
+      standards: ["Conçu selon les normes de connecteurs NEMA 5-15, construction de type UL Listed", "Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Qu'est-ce qu'un PDU NEMA et où est-il utilisé ?",
+          answer:
+            "Un PDU NEMA est une unité de distribution d'énergie de rack équipée de prises aux normes américaines (NEMA 5-15R), le type de prise standard utilisé dans toute l'Amérique du Nord. Il sert à distribuer l'alimentation du rack aux équipements informatiques dotés de cordons d'alimentation NEMA 5-15P.",
+        },
+        {
+          question: "Le PDU NEMA inclut-il une protection contre les surtensions ?",
+          answer:
+            "Oui. Chaque unité inclut un module SPD (dispositif de protection contre les surtensions) intégré à coque ignifuge, ainsi qu'un interrupteur bipolaire lumineux protégé par un capot de sécurité articulé.",
+        },
+        {
+          question: "La couleur du boîtier ou la fiche d'entrée peuvent-elles être personnalisées ?",
+          answer:
+            "Oui. Haisen est un fabricant direct d'usine et propose le PDU NEMA en boîtier noir standard ou orange personnalisé, avec une fiche d'entrée configurable selon les normes NEMA, IEC, Schuko, UK, AU, CN et autres normes régionales selon chaque projet, y compris en OEM/ODM.",
+        },
+      ],
+    },
+    es: {
+      name: "PDU de estándar americano (NEMA)",
+      shortName: "PDU NEMA",
+      tagline: "PDU de montaje en rack 1U con tomas NEMA 5-15R de estándar americano para gabinetes norteamericanos.",
+      overview:
+        "El PDU NEMA de Haisen es una unidad de distribución de energía de montaje en rack 1U equipada con tomas de estándar americano (NEMA 5-15R), un interruptor bipolar iluminado bajo una tapa de protección y un módulo de protección contra sobretensiones SPD integrado en una carcasa ignífuga, diseñado para gabinetes de centros de datos y telecomunicaciones norteamericanos. Utiliza una barra colectora de cobre rojo puro al 99,9 % y una carcasa de aluminio resistente de 1,5 mm, incluye un cable de alimentación NEMA 5-15P y está disponible en carcasa negra estándar o naranja personalizada.",
+      keyFeatures: [
+        "Ocho tomas de estándar americano NEMA 5-15R, construcción de tipo UL Listed",
+        "Interruptor bipolar iluminado bajo una tapa de protección",
+        "Módulo de protección contra sobretensiones (SPD) integrado con carcasa ignífuga",
+        "Barra colectora de cobre rojo puro al 99,9 % para baja impedancia y menor aumento de temperatura",
+        "Carcasa de aluminio resistente de 1,5 mm, ignífuga y resistente a impactos",
+        "Cable de alimentación NEMA 5-15P con núcleo de cobre resistente de 1,5 mm², conforme a UL",
+        "Carcasa negra estándar o naranja personalizada; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Parámetros eléctricos",
+          specs: [
+            { label: "Tensión nominal", value: "125V" },
+            { label: "Corriente nominal", value: "15A" },
+            { label: "Frecuencia nominal", value: "60 Hz" },
+          ],
+        },
+        {
+          title: "Entrada / Salida",
+          specs: [
+            { label: "Enchufe de entrada", value: "NEMA 5-15P" },
+            { label: "Tomas de salida", value: "8 × tomas NEMA 5-15R, construcción de tipo UL Listed" },
+            { label: "Cable", value: "Núcleo de cobre 1,5 mm², conforme a UL, longitudes personalizadas disponibles" },
+          ],
+        },
+        {
+          title: "Mecánica y protección",
+          specs: [
+            { label: "Montaje", value: "Rack 1U, horizontal" },
+            { label: "Material de la carcasa", value: "Carcasa de aluminio resistente de 1,5 mm" },
+            { label: "Material de la barra colectora", value: "Cobre rojo puro al 99,9 %" },
+            { label: "Color de la carcasa", value: "Negro (estándar) / Naranja (personalizado)" },
+            { label: "Protección", value: "Interruptor bipolar iluminado con tapa de protección, protección SPD contra sobretensiones, carcasa ignífuga" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centros de datos norteamericanos",
+        "Salas de equipos de telecomunicaciones con estándar americano",
+        "Gabinetes de colocación",
+        "Gabinetes de control industrial y de red",
+      ],
+      customizationOptions: [
+        "Color de la carcasa (negro / naranja / personalizado)",
+        "Cantidad de tomas y longitud del cable",
+        "Enchufe de entrada y longitud del cable (NEMA, IEC, Schuko, UK, AU, CN y otros estándares regionales)",
+        "Marca / etiquetado personalizado",
+        "Empaque OEM / ODM",
+      ],
+      standards: ["Diseñado según los estándares de conectores NEMA 5-15, construcción de tipo UL Listed", "Certificación disponible bajo pedido según las especificaciones del proyecto"],
+      faqs: [
+        {
+          question: "¿Qué es un PDU NEMA y dónde se utiliza?",
+          answer:
+            "Un PDU NEMA es una unidad de distribución de energía de rack equipada con tomas de estándar americano (NEMA 5-15R), el tipo de toma estándar utilizado en toda Norteamérica. Se utiliza para distribuir la energía del rack a equipos de TI con cables de alimentación NEMA 5-15P.",
+        },
+        {
+          question: "¿El PDU NEMA incluye protección contra sobretensiones?",
+          answer:
+            "Sí. Cada unidad incluye un módulo SPD (dispositivo de protección contra sobretensiones) integrado con carcasa ignífuga, además de un interruptor bipolar iluminado protegido por una tapa de seguridad abisagrada.",
+        },
+        {
+          question: "¿Se puede personalizar el color de la carcasa o el enchufe de entrada?",
+          answer:
+            "Sí. Haisen es un fabricante directo de fábrica y ofrece el PDU NEMA en carcasa negra estándar o naranja personalizada, con el enchufe de entrada configurable a los estándares NEMA, IEC, Schuko, UK, AU, CN y otros estándares regionales según cada proyecto, incluyendo OEM/ODM.",
+        },
+      ],
+    },
+    ru: {
+      name: "PDU американского стандарта (NEMA)",
+      shortName: "PDU NEMA",
+      tagline: "Монтируемый в стойку блок PDU высотой 1U с розетками NEMA 5-15R американского стандарта для североамериканских шкафов.",
+      overview:
+        "PDU NEMA Haisen — это монтируемый в стойку блок распределения питания высотой 1U, оснащённый розетками американского стандарта (NEMA 5-15R), подсвечиваемым двухполюсным выключателем под защитной крышкой и встроенным модулем защиты от перенапряжения SPD в огнестойком корпусе, разработанный для шкафов центров обработки данных и телекоммуникационного оборудования Северной Америки. Использует шину из чистой красной меди 99,9% и прочный алюминиевый корпус толщиной 1,5 мм, поставляется с кабелем питания NEMA 5-15P и доступен в стандартном чёрном или индивидуальном оранжевом корпусе.",
+      keyFeatures: [
+        "Восемь розеток американского стандарта NEMA 5-15R, конструкция типа UL Listed",
+        "Подсвечиваемый двухполюсный выключатель под защитной крышкой",
+        "Встроенный модуль защиты от перенапряжения (SPD) с огнестойким корпусом",
+        "Шина из чистой красной меди 99,9% для низкого импеданса и меньшего нагрева",
+        "Прочный алюминиевый корпус толщиной 1,5 мм, огнестойкий и ударопрочный",
+        "Кабель питания NEMA 5-15P с прочной медной жилой 1,5 мм², соответствует UL",
+        "Стандартный чёрный или индивидуальный оранжевый корпус; доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Электрические параметры",
+          specs: [
+            { label: "Номинальное напряжение", value: "125В" },
+            { label: "Номинальный ток", value: "15A" },
+            { label: "Номинальная частота", value: "60 Гц" },
+          ],
+        },
+        {
+          title: "Вход / Выход",
+          specs: [
+            { label: "Входная вилка", value: "NEMA 5-15P" },
+            { label: "Выходные розетки", value: "8 × розеток NEMA 5-15R, конструкция типа UL Listed" },
+            { label: "Кабель", value: "Медная жила 1,5 мм², соответствует UL, доступны индивидуальные длины" },
+          ],
+        },
+        {
+          title: "Механика и защита",
+          specs: [
+            { label: "Монтаж", value: "Стойка 1U, горизонтально" },
+            { label: "Материал корпуса", value: "Прочный алюминиевый корпус 1,5 мм" },
+            { label: "Материал шины", value: "Чистая красная медь 99,9%" },
+            { label: "Цвет корпуса", value: "Чёрный (стандарт) / Оранжевый (на заказ)" },
+            { label: "Защита", value: "Подсвечиваемый двухполюсный выключатель с защитной крышкой, защита SPD от перенапряжения, огнестойкий корпус" },
+          ],
+        },
+      ],
+      applications: [
+        "Стойки центров обработки данных Северной Америки",
+        "Помещения телекоммуникационного оборудования американского стандарта",
+        "Шкафы колокации",
+        "Шкафы промышленного и сетевого управления",
+      ],
+      customizationOptions: [
+        "Цвет корпуса (чёрный / оранжевый / на заказ)",
+        "Количество розеток и длина кабеля",
+        "Входная вилка и длина шнура (NEMA, IEC, Schuko, UK, AU, CN и другие региональные стандарты)",
+        "Индивидуальный брендинг / маркировка",
+        "Упаковка OEM / ODM",
+      ],
+      standards: ["Разработан в соответствии со стандартами разъёмов NEMA 5-15, конструкция типа UL Listed", "Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Что такое PDU NEMA и где он используется?",
+          answer:
+            "PDU NEMA — это блок распределения питания для стойки, оснащённый розетками американского стандарта (NEMA 5-15R) — стандартным типом розеток, используемым по всей Северной Америке. Он используется для распределения питания стойки на ИТ-оборудование с кабелями питания NEMA 5-15P.",
+        },
+        {
+          question: "Включена ли в PDU NEMA защита от перенапряжения?",
+          answer:
+            "Да. Каждый блок включает встроенный модуль SPD (устройство защиты от перенапряжения) с огнестойким корпусом, а также подсвечиваемый двухполюсный выключатель, защищённый откидной предохранительной крышкой.",
+        },
+        {
+          question: "Можно ли настроить цвет корпуса или входную вилку?",
+          answer:
+            "Да. Haisen является прямым производителем и предлагает PDU NEMA в стандартном чёрном или индивидуальном оранжевом корпусе, с входной вилкой, настраиваемой под стандарты NEMA, IEC, Schuko, UK, AU, CN и другие региональные стандарты под каждый проект, включая OEM/ODM.",
+        },
+      ],
+    },
+    zh: {
+      name: "美标（NEMA）PDU",
+      shortName: "美标PDU",
+      tagline: "配备美标NEMA 5-15R插座的1U机架式PDU，适用于北美市场机柜。",
+      overview:
+        "海森美标PDU是一款1U机架式配电单元，配备美国标准（NEMA 5-15R）插座、带保护罩的双极发光电源开关，以及内置SPD浪涌保护模块（阻燃外壳），专为北美数据中心与电信机柜设计。采用99.9%纯红铜排，1.5mm加厚铝合金外壳，配备NEMA 5-15P电源线，提供标准黑色或定制橙色外壳。",
+      keyFeatures: [
+        "八路美标NEMA 5-15R插座，UL认证款式",
+        "带保护盖的双极发光电源开关",
+        "内置SPD浪涌保护模块，配阻燃外壳",
+        "99.9%纯红铜排，低阻抗、低温升",
+        "1.5mm加厚铝合金外壳，阻燃耐冲击",
+        "NEMA 5-15P电源线，1.5mm²加厚铜芯，符合UL标准",
+        "标准黑色或定制橙色外壳；支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "电气参数",
+          specs: [
+            { label: "额定电压", value: "125V" },
+            { label: "额定电流", value: "15A" },
+            { label: "额定频率", value: "60Hz" },
+          ],
+        },
+        {
+          title: "输入/输出",
+          specs: [
+            { label: "输入插头", value: "NEMA 5-15P" },
+            { label: "输出插座", value: "8×NEMA 5-15R，UL认证款式" },
+            { label: "线缆", value: "1.5mm²铜芯，符合UL标准，可定制长度" },
+          ],
+        },
+        {
+          title: "机械结构与保护",
+          specs: [
+            { label: "安装方式", value: "1U机架，水平安装" },
+            { label: "外壳材质", value: "1.5mm加厚铝合金外壳" },
+            { label: "铜排材质", value: "99.9%纯红铜" },
+            { label: "外壳颜色", value: "黑色（标准）/橙色（定制）" },
+            { label: "保护", value: "带保护盖的双极发光开关、SPD浪涌保护、阻燃外壳" },
+          ],
+        },
+      ],
+      applications: ["北美市场数据中心机架", "美标电信设备间", "托管机柜", "工业与网络控制柜"],
+      customizationOptions: ["外壳颜色（黑色/橙色/定制）", "插座数量与线缆长度", "输入插头与线缆长度（NEMA、IEC、德标、英标、澳标、国标等区域标准）", "定制品牌/标识", "OEM/ODM包装"],
+      standards: ["按NEMA 5-15连接器标准设计，UL认证款式结构", "认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "什么是美标PDU？用在哪里？",
+          answer:
+            "美标PDU是配备美国标准（NEMA 5-15R）插座的机架式配电单元，这是北美地区通用的标准插座类型。用于将机架电力分配给配备NEMA 5-15P电源线的IT设备。",
+        },
+        {
+          question: "美标PDU是否包含浪涌保护？",
+          answer:
+            "是的。每台设备均内置SPD（浪涌保护装置）模块并配有阻燃外壳，同时配备带铰链式安全保护盖的双极发光开关。",
+        },
+        {
+          question: "外壳颜色或输入插头可以定制吗？",
+          answer:
+            "可以。海森是工厂直营制造商，美标PDU提供标准黑色或定制橙色外壳，输入插头可根据项目定制为NEMA、IEC、德标、英标、澳标、国标等区域标准，包括OEM/ODM。",
+        },
+      ],
+    },
+  },
+
   "intelligent-pdu": {
     ar: {
       name: "PDU ذكي",
