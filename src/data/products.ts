@@ -77,7 +77,7 @@ export const products: Product[] = [
           "Yes. Haisen is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu"],
+    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
@@ -258,6 +258,92 @@ export const products: Product[] = [
       },
     ],
     relatedProductSlugs: ["pdu", "schuko-pdu", "intelligent-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
+  },
+  {
+    slug: "multi-function-pdu",
+    category: "power-distribution",
+    name: "Multi-Function Universal Socket PDU",
+    shortName: "Multi-Function PDU",
+    tagline: "1U rack PDU with universal multi-standard sockets and a 360° rotatable mounting bracket.",
+    overview:
+      "The Haisen Multi-Function PDU is a 1U, 19-inch rack power strip fitted with six universal multi-standard sockets, a dual power switch and an integrated SPD surge protection module with a green LED safety indicator. A 360° rotatable, tool-free heavy-duty steel mounting bracket allows flexible orientation in the rack, while child-safety shutters rated to 75N add protection in mixed-use environments.",
+    featured: true,
+    images: [
+      "/products/multi-function-pdu/01-main.jpg",
+      "/products/multi-function-pdu/04-features-overview.jpg",
+      "/products/multi-function-pdu/02-rotating-bracket.jpg",
+      "/products/multi-function-pdu/03-dimensions.jpg",
+      "/products/multi-function-pdu/05-data-center-scene.jpg",
+    ],
+    keyFeatures: [
+      "Six universal multi-standard sockets accepting common 2-pin and 3-pin plug types",
+      "Dual power switch with SPD surge protection and green LED safety indicator",
+      "360° rotatable, tool-free heavy-duty steel mounting bracket",
+      "1.5mm² copper core cable for stable high-current transmission",
+      "Child safety shutters rated to 75N resistance",
+      "19-inch 1U rack mount; OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Structure & Dimensions",
+        specs: [
+          { label: "Mounting", value: "19-inch, 1U rack" },
+          { label: "Overall Width", value: "483 mm" },
+          { label: "Mounting Hole Span", value: "436 mm" },
+          { label: "Height", value: "45 mm" },
+        ],
+      },
+      {
+        title: "Electrical & Protection",
+        specs: [
+          { label: "Output Sockets", value: "6 × universal multi-standard sockets" },
+          { label: "Switch", value: "Dual power switch, illuminated" },
+          { label: "Surge Protection", value: "Integrated SPD with green LED indicator" },
+          { label: "Cable", value: "1.5mm² copper core" },
+          { label: "Child Safety", value: "Shutters rated to 75N resistance" },
+        ],
+      },
+      {
+        title: "Mounting",
+        specs: [
+          { label: "Bracket", value: "360° rotatable, tool-free installation" },
+          { label: "Bracket Material", value: "Heavy-duty steel" },
+        ],
+      },
+    ],
+    applications: [
+      "Data center IT racks",
+      "Multi-region equipment rooms requiring mixed plug compatibility",
+      "Telecom cabinets",
+      "Server rooms and network closets",
+    ],
+    customizationOptions: [
+      "Outlet count and layout",
+      "Input plug and cable length",
+      "Bracket orientation / mounting kit",
+      "Custom branding / labeling",
+      "OEM / ODM packaging",
+    ],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What does 'universal socket' mean on this PDU?",
+        answer:
+          "Each outlet on the Multi-Function PDU is designed to accept common 2-pin and 3-pin plug types, so a single unit can serve equipment fitted with different regional power cords without needing adapters.",
+      },
+      {
+        question: "What is the 360° rotatable bracket for?",
+        answer:
+          "The heavy-duty steel mounting bracket rotates a full 360° and installs without tools, letting the PDU be oriented to fit different rack layouts and cable routing needs.",
+      },
+      {
+        question: "Does it include surge protection?",
+        answer:
+          "Yes. The unit has an integrated SPD (surge protection device) module with a green LED indicator, alongside a dual power switch and child-safety outlet shutters rated to 75N.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "schuko-pdu", "nema-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
