@@ -6801,6 +6801,273 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "fiber-optic-cable-tray": {
+    ar: {
+      name: "مجرى كابلات ألياف بصرية بوليمري",
+      shortName: "مجرى ألياف بصرية",
+      tagline: "نظام مجاري بوليمرية معياري يحمي نصف قطر انحناء كابل الألياف البصرية عبر المسار الكامل.",
+      overview:
+        "مجرى كابلات الألياف البصرية البوليمري من واندتونغ هو نظام مجاري بلاستيكية معياري مقاوم للهب بمعيار UL94-V0، بقنوات داخلية ناعمة ومستديرة تحمي كابل الألياف البصرية من الانحناءات الحادة والاحتكاك على طول المسار بالكامل. تتوفر مجموعة كاملة من التركيبات المعيارية - أقسام مستقيمة بعروض متعددة، وكوعات بزاوية 90 و45 درجة، ووصلات تفرع، ومقلصات، وأعمدة رأسية - تتصل ببعضها بوصلات سريعة بدون أدوات لبناء مسار محاط بالكامل للألياف بين الراكات والغرف والطوابق.",
+      keyFeatures: [
+        "بناء بوليمري مقاوم للهب بمعيار UL94-V0",
+        "قناة داخلية ناعمة ومستديرة تحمي نصف قطر انحناء الألياف على طول المسار بالكامل",
+        "مجموعة تركيبات معيارية كاملة: أقسام مستقيمة، كوعات 90/45 درجة، وصلات تفرع، مقلصات، أعمدة رأسية",
+        "وصلات سريعة بدون أدوات بين الأقسام",
+        "أقسام مستقيمة متوفرة بعروض 120 و240 و360 مم (عمق 100 مم)",
+        "تركيبات مصغرة (50×50 مم) للتوجيه في المساحات الضيقة",
+      ],
+      specGroups: [
+        {
+          title: "البناء",
+          specs: [
+            { label: "المادة", value: "بوليمر مقاوم للهب بمعيار UL94-V0" },
+            { label: "عروض الأقسام المستقيمة", value: "120 / 240 / 360 مم (عمق 100 مم)" },
+            { label: "تركيبات مصغرة", value: "كوع 50 × 50 مم" },
+            { label: "التوصيل", value: "وصلة سريعة بدون أدوات" },
+          ],
+        },
+        {
+          title: "مجموعة التركيبات",
+          specs: [
+            { label: "الكوعات", value: "90 درجة أفقي، 45 درجة عمودي" },
+            { label: "الوصلات", value: "تفرع (عادي ومع منفذ توصيل)" },
+            { label: "الانتقالات", value: "مقلص، عمود رأسي، مجرى مستقيم مربع" },
+          ],
+        },
+      ],
+      applications: [
+        "مسارات كابلات الألياف البصرية بين الراكات والصفوف",
+        "توجيه العمود الفقري للألياف بين الغرف والطوابق",
+        "توزيع الألياف في مراكز البيانات والاتصالات",
+        "غرف الكابلات المنظمة التي تتطلب حماية نصف قطر الانحناء",
+      ],
+      customizationOptions: ["عرض القسم", "مزيج التركيبات", "اللون", "OEM/ODM"],
+      standards: ["مقاومة للهب بمعيار UL94-V0", "الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "لماذا استخدام مجرى مخصص لكابلات الألياف البصرية بدلاً من مجرى شبكي أو سلمي قياسي؟",
+          answer:
+            "يحيط المجرى البوليمري المخصص للألياف بالكابل بالكامل داخل قناة ناعمة ومستديرة تحافظ على الحد الأدنى لنصف قطر الانحناء وتحمي من الاحتكاك على طول المسار بالكامل، بينما تترك المجاري الشبكية أو السلمية المفتوحة الألياف مكشوفة وتعتمد على فني التركيب لإدارة نصف قطر الانحناء يدوياً عند كل منعطف.",
+        },
+        {
+          question: "ما أنواع التركيبات المتوفرة لنظام مجرى الألياف البوليمري؟",
+          answer:
+            "يشمل النظام أقساماً مستقيمة بعروض متعددة، وكوعات بزاوية 90 و45 درجة (بما في ذلك كوع مصغر 50×50 مم)، ووصلات تفرع (عادية ومع منفذ توصيل)، ومقلصات، وأعمدة رأسية، ومجاري مستقيمة مربعة، وتتصل جميعها بوصلات سريعة بدون أدوات لبناء مسار محاط بالكامل.",
+        },
+      ],
+    },
+    fr: {
+      name: "Chemin de câbles fibre optique en polymère",
+      shortName: "Chemin de câbles fibre optique",
+      tagline: "Système de chemin de câbles polymère modulaire protégeant le rayon de courbure de la fibre optique sur tout le trajet.",
+      overview:
+        "Le chemin de câbles fibre optique en polymère Wandtung est un système de chemin de câbles en plastique modulaire, ignifuge selon UL94-V0, avec des canaux internes lisses et arrondis qui protègent le câble à fibre optique des courbures serrées et de l'abrasion sur tout son parcours. La gamme complète de raccords modulaires — sections droites en plusieurs largeurs, coudes à 90° et 45°, tés, réducteurs et montants verticaux — s'assemble par connecteurs à clipsage sans outil pour construire un chemin de fibre entièrement clos entre les racks, les salles et les étages.",
+      keyFeatures: [
+        "Construction en polymère ignifuge UL94-V0",
+        "Canal interne lisse et arrondi protégeant le rayon de courbure de la fibre sur tout le trajet",
+        "Gamme complète de raccords modulaires : sections droites, coudes 90°/45°, tés, réducteurs, montants verticaux",
+        "Connecteurs à clipsage sans outil entre les sections",
+        "Sections droites disponibles en largeurs 120, 240 et 360 mm (profondeur 100 mm)",
+        "Raccords de taille réduite (50x50 mm) pour un routage plus serré",
+      ],
+      specGroups: [
+        {
+          title: "Construction",
+          specs: [
+            { label: "Matériau", value: "Polymère ignifuge UL94-V0" },
+            { label: "Largeurs des sections droites", value: "120 / 240 / 360 mm (profondeur 100 mm)" },
+            { label: "Raccords de taille réduite", value: "Coude 50 x 50 mm" },
+            { label: "Connexion", value: "Clipsage sans outil" },
+          ],
+        },
+        {
+          title: "Gamme de raccords",
+          specs: [
+            { label: "Coudes", value: "90° horizontal, montant 45°" },
+            { label: "Jonctions", value: "Té (simple et avec port de connexion)" },
+            { label: "Transitions", value: "Réducteur, montant vertical, conduit droit carré" },
+          ],
+        },
+      ],
+      applications: [
+        "Chemins de câbles fibre optique entre racks et rangées",
+        "Routage de la dorsale fibre inter-salles et inter-étages",
+        "Distribution de fibre en centre de données et télécoms",
+        "Salles de câblage structuré nécessitant une protection du rayon de courbure",
+      ],
+      customizationOptions: ["Largeur de section", "Mélange de raccords", "Couleur", "OEM/ODM"],
+      standards: ["Ignifugation UL94-V0", "Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Pourquoi utiliser un chemin de câbles fibre optique dédié plutôt qu'un chemin de câbles standard en treillis ou à échelle ?",
+          answer:
+            "Un chemin de câbles fibre polymère dédié enferme complètement le câble dans un canal lisse et arrondi qui maintient le rayon de courbure minimum et protège contre l'abrasion sur tout le parcours, alors que les chemins de câbles ouverts en treillis ou à échelle laissent la fibre exposée et dépendent de l'installateur pour gérer manuellement le rayon de courbure à chaque virage.",
+        },
+        {
+          question: "Quels types de raccords sont disponibles pour le système de chemin de câbles fibre en polymère ?",
+          answer:
+            "Le système comprend des sections droites en plusieurs largeurs, des coudes à 90° et 45° (dont un coude réduit 50x50 mm), des jonctions en té (simples et avec port de connexion), des réducteurs, des montants verticaux et des conduits droits carrés, tous connectés par des joints à clipsage sans outil pour construire un chemin entièrement clos.",
+        },
+      ],
+    },
+    es: {
+      name: "Bandeja de cables de fibra óptica de polímero",
+      shortName: "Bandeja de fibra óptica",
+      tagline: "Sistema de bandeja de cables de polímero modular que protege el radio de curvatura de la fibra óptica en todo el trayecto.",
+      overview:
+        "La bandeja de cables de fibra óptica de polímero de Wandtung es un sistema de bandeja de cables de plástico modular, ignífugo según UL94-V0, con canales internos lisos y redondeados que protegen el cable de fibra óptica de curvas cerradas y abrasión a lo largo de toda su ruta. La gama completa de accesorios modulares —secciones rectas en varios anchos, codos de 90° y 45°, tés, reductores y montantes verticales— se ensambla con conectores a presión sin herramientas para construir una ruta de fibra completamente cerrada entre racks, salas y pisos.",
+      keyFeatures: [
+        "Construcción de polímero ignífugo UL94-V0",
+        "Canal interno liso y redondeado que protege el radio de curvatura de la fibra en toda la ruta",
+        "Gama completa de accesorios modulares: secciones rectas, codos 90°/45°, tés, reductores, montantes verticales",
+        "Conectores a presión sin herramientas entre secciones",
+        "Secciones rectas disponibles en anchos de 120, 240 y 360 mm (profundidad de 100 mm)",
+        "Accesorios de tamaño reducido (50x50 mm) para enrutamiento más ajustado",
+      ],
+      specGroups: [
+        {
+          title: "Construcción",
+          specs: [
+            { label: "Material", value: "Polímero ignífugo UL94-V0" },
+            { label: "Anchos de sección recta", value: "120 / 240 / 360 mm (profundidad de 100 mm)" },
+            { label: "Accesorios de tamaño reducido", value: "Codo de 50 x 50 mm" },
+            { label: "Conexión", value: "A presión, sin herramientas" },
+          ],
+        },
+        {
+          title: "Gama de accesorios",
+          specs: [
+            { label: "Codos", value: "90° horizontal, montante 45°" },
+            { label: "Uniones", value: "Té (simple y con puerto de conexión)" },
+            { label: "Transiciones", value: "Reductor, montante vertical, conducto recto cuadrado" },
+          ],
+        },
+      ],
+      applications: [
+        "Rutas de cables de fibra óptica entre racks y filas",
+        "Enrutamiento de troncal de fibra entre salas y pisos",
+        "Distribución de fibra en centros de datos y telecomunicaciones",
+        "Salas de cableado estructurado que requieren protección del radio de curvatura",
+      ],
+      customizationOptions: ["Ancho de sección", "Combinación de accesorios", "Color", "OEM/ODM"],
+      standards: ["Ignifugación UL94-V0", "Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        {
+          question: "¿Por qué usar una bandeja de cables de fibra óptica dedicada en lugar de una bandeja de malla o escalera estándar?",
+          answer:
+            "Una bandeja de fibra de polímero dedicada encierra completamente el cable en un canal liso y redondeado que mantiene el radio de curvatura mínimo y protege contra la abrasión en toda la ruta, mientras que las bandejas de malla o escalera abiertas dejan la fibra expuesta y dependen del instalador para gestionar manualmente el radio de curvatura en cada giro.",
+        },
+        {
+          question: "¿Qué tipos de accesorios están disponibles para el sistema de bandeja de fibra de polímero?",
+          answer:
+            "El sistema incluye secciones rectas en varios anchos, codos de 90° y 45° (incluido un codo reducido de 50x50 mm), uniones en té (simples y con puerto de conexión), reductores, montantes verticales y conductos rectos cuadrados, todos conectados con juntas a presión sin herramientas para construir una ruta completamente cerrada.",
+        },
+      ],
+    },
+    ru: {
+      name: "Полимерный лоток для оптоволоконного кабеля",
+      shortName: "Лоток для оптоволокна",
+      tagline: "Модульная система полимерных лотков, защищающая радиус изгиба оптоволоконного кабеля на всём протяжении трассы.",
+      overview:
+        "Полимерный лоток для оптоволоконного кабеля Wandtung — это модульная система пластиковых лотков, огнестойкая по стандарту UL94-V0, с гладкими закруглёнными внутренними каналами, защищающими оптоволоконный кабель от резких изгибов и истирания по всей трассе. Полный набор модульных фитингов — прямые секции разной ширины, углы 90° и 45°, тройники, переходники и вертикальные стояки — соединяются защёлкивающимися разъёмами без инструментов, формируя полностью закрытую трассу для оптоволокна между стойками, помещениями и этажами.",
+      keyFeatures: [
+        "Огнестойкая полимерная конструкция по стандарту UL94-V0",
+        "Гладкий закруглённый внутренний канал защищает радиус изгиба волокна по всей трассе",
+        "Полный набор модульных фитингов: прямые секции, углы 90°/45°, тройники, переходники, вертикальные стояки",
+        "Защёлкивающиеся разъёмы без инструментов между секциями",
+        "Прямые секции доступны шириной 120, 240 и 360 мм (глубина 100 мм)",
+        "Фитинги уменьшенного размера (50x50 мм) для более плотной прокладки",
+      ],
+      specGroups: [
+        {
+          title: "Конструкция",
+          specs: [
+            { label: "Материал", value: "Огнестойкий полимер UL94-V0" },
+            { label: "Ширина прямых секций", value: "120 / 240 / 360 мм (глубина 100 мм)" },
+            { label: "Фитинги уменьшенного размера", value: "Угол 50 x 50 мм" },
+            { label: "Соединение", value: "Защёлкивающееся, без инструментов" },
+          ],
+        },
+        {
+          title: "Набор фитингов",
+          specs: [
+            { label: "Углы", value: "90° горизонтальный, 45° стояк" },
+            { label: "Соединения", value: "Тройник (простой и с портом подключения)" },
+            { label: "Переходы", value: "Переходник, вертикальный стояк, квадратный прямой канал" },
+          ],
+        },
+      ],
+      applications: [
+        "Трассы оптоволоконного кабеля между стойками и рядами",
+        "Прокладка магистрального оптоволокна между помещениями и этажами",
+        "Распределение оптоволокна в ЦОД и телекоммуникациях",
+        "Помещения структурированной кабельной системы, требующие защиты радиуса изгиба",
+      ],
+      customizationOptions: ["Ширина секции", "Набор фитингов", "Цвет", "OEM/ODM"],
+      standards: ["Огнестойкость по UL94-V0", "Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Зачем использовать специализированный лоток для оптоволокна вместо стандартного сетчатого или лестничного лотка?",
+          answer:
+            "Специализированный полимерный лоток для оптоволокна полностью закрывает кабель в гладком закруглённом канале, поддерживающем минимальный радиус изгиба и защищающем от истирания по всей трассе, тогда как открытые сетчатые или лестничные лотки оставляют волокно незащищённым и требуют от монтажника вручную контролировать радиус изгиба на каждом повороте.",
+        },
+        {
+          question: "Какие типы фитингов доступны для полимерной системы лотков для оптоволокна?",
+          answer:
+            "Система включает прямые секции разной ширины, углы 90° и 45° (включая уменьшенный угол 50x50 мм), тройниковые соединения (простые и с портом подключения), переходники, вертикальные стояки и квадратные прямые каналы — все соединяются защёлкивающимися разъёмами без инструментов для формирования полностью закрытой трассы.",
+        },
+      ],
+    },
+    zh: {
+      name: "高分子光纤滑道",
+      shortName: "光纤滑道",
+      tagline: "模块化高分子线槽系统,全程保护光纤弯曲半径。",
+      overview:
+        "万电通高分子光纤滑道是一款模块化、符合UL94-V0阻燃标准的塑料线槽系统,内部采用光滑圆弧通道,在整个布线路径上保护光纤免受锐角弯曲及磨损。全系列模块化配件——多规格直线段、90度及45度弯头、三通、变径接头及垂直立管——通过免工具卡扣连接,构建机架、机房及楼层之间完全封闭的光纤通道。",
+      keyFeatures: [
+        "符合UL94-V0阻燃标准的高分子材料构造",
+        "光滑圆弧内通道,全程保护光纤弯曲半径",
+        "全系列模块化配件:直线段、90度/45度弯头、三通、变径接头、垂直立管",
+        "各段之间采用免工具卡扣连接",
+        "直线段提供120mm、240mm及360mm多种宽度(深度100mm)",
+        "配备缩小规格(50×50mm)配件,适应狭窄空间布线",
+      ],
+      specGroups: [
+        {
+          title: "结构",
+          specs: [
+            { label: "材质", value: "符合UL94-V0阻燃标准的高分子材料" },
+            { label: "直线段宽度", value: "120/240/360mm(深度100mm)" },
+            { label: "缩小规格配件", value: "50×50mm弯头" },
+            { label: "连接方式", value: "免工具卡扣连接" },
+          ],
+        },
+        {
+          title: "配件系列",
+          specs: [
+            { label: "弯头", value: "90度水平弯头、45度立管弯头" },
+            { label: "接口", value: "三通(普通及带连接端口)" },
+            { label: "过渡件", value: "变径接头、垂直立管、方形直线线槽" },
+          ],
+        },
+      ],
+      applications: ["机架及机排间光纤布线路径", "机房间及楼层间光纤主干布线", "数据中心及电信光纤配线", "需要弯曲半径保护的结构化布线机房"],
+      customizationOptions: ["段宽规格", "配件组合", "颜色", "OEM/ODM"],
+      standards: ["符合UL94-V0阻燃标准", "认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "为什么要使用专用光纤滑道而非标准桥架或梯架？",
+          answer:
+            "专用高分子光纤滑道将光纤完全封闭在光滑圆弧通道内,在整个布线路径上维持最小弯曲半径并防止磨损;而开放式桥架或梯架会使光纤暴露在外,需要安装人员在每个转弯处手动控制弯曲半径。",
+        },
+        {
+          question: "高分子光纤滑道系统提供哪些配件类型？",
+          answer:
+            "该系统包含多规格直线段、90度及45度弯头(含缩小规格50×50mm弯头)、三通接口(普通及带连接端口)、变径接头、垂直立管及方形直线线槽,均采用免工具卡扣接头连接,构建完全封闭的布线通道。",
+        },
+      ],
+    },
+  },
   "wire-mesh-cable-tray": {
     ar: {
       name: "مجرى كابلات شبكي سلكي",
