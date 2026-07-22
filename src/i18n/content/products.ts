@@ -1422,6 +1422,369 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     },
   },
 
+  "uk-pdu": {
+    ar: {
+      name: "وحدة PDU بمعيار بريطاني (BS1363)",
+      shortName: "PDU بريطاني",
+      tagline: "وحدة توزيع طاقة للراك 1U بمنافذ BS1363 البريطانية القياسية لخزانات المملكة المتحدة ومنطقة CEE.",
+      overview:
+        "وحدة PDU البريطانية من واندتونغ هي وحدة توزيع طاقة للراك بارتفاع 1U مزودة بمنافذ بريطانية قياسية (BS1363)، ومفتاح مضاء ثنائي القطب تحت غطاء مقاوم للغبار، وقاطع دائرة مدمج، ووحدة حماية SPD من التيار المفاجئ مع مؤشر LED أخضر، مصممة لخزانات مراكز البيانات والاتصالات في المملكة المتحدة ومنطقة CEE. تستخدم قضيب نحاس أحمر نقي بنسبة 99.9%، وهيكل ألومنيوم متين بسماكة 1.5 مم، وتأتي بكابل طاقة بتصنيف 13A، ومتوفرة بتكوينات 6 أو 8 أو 10 أو 12 منفذاً وأنواع قوابس دخل مخصصة.",
+      keyFeatures: [
+        "منافذ بريطانية قياسية BS1363، بتكوينات 6/8/10/12 منفذاً",
+        "مفتاح مضاء ثنائي القطب تحت غطاء واقٍ من الغبار، يقطع الخط الحي والمحايد في آن واحد",
+        "قاطع دائرة مدمج وحماية SPD من التيار المفاجئ مع مؤشر LED أخضر",
+        "قضيب نحاس أحمر نقي بنسبة 99.9% لمقاومة منخفضة وارتفاع حراري أقل",
+        "هيكل ألومنيوم متين بسماكة 1.5 مم، مقاوم للهب والصدمات",
+        "كابل طاقة بتصنيف 13A، نواة نحاسية متينة 1.5 مم²، بقدرة 2500 واط، مقاوم للحرارة",
+        "أنواع قوابس دخل مخصصة (BS1363، NEMA، شوكو، AS3112، IEC C14/C20)؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "المعاملات الكهربائية",
+          specs: [
+            { label: "الجهد المقنن", value: "230 فولت" },
+            { label: "التيار المقنن", value: "13A" },
+            { label: "القدرة المقننة", value: "2500 واط" },
+            { label: "التردد المقنن", value: "50 هرتز" },
+          ],
+        },
+        {
+          title: "الدخل / الخرج",
+          specs: [
+            { label: "قابس الدخل", value: "BS1363 (متوفر NEMA وشوكو وAS3112 وIEC C14/C20 حسب الطلب)" },
+            { label: "منافذ الخرج", value: "6 / 8 / 10 / 12 × منافذ BS1363" },
+            { label: "الكابل", value: "نواة نحاسية 1.5 مم²، مقاومة للحرارة، أطوال مخصصة متاحة" },
+          ],
+        },
+        {
+          title: "الهيكل والحماية",
+          specs: [
+            { label: "التركيب", value: "راك 1U، أفقي" },
+            { label: "مادة الهيكل", value: "هيكل ألومنيوم متين بسماكة 1.5 مم" },
+            { label: "مادة القضيب الناقل", value: "نحاس أحمر نقي بنسبة 99.9%" },
+            { label: "الحماية", value: "مفتاح مضاء ثنائي القطب بغطاء مقاوم للغبار، قاطع دائرة مدمج، حماية SPD من التيار المفاجئ" },
+          ],
+        },
+      ],
+      applications: [
+        "خزانات مراكز البيانات في المملكة المتحدة ومنطقة CEE",
+        "غرف معدات الاتصالات بالمعيار البريطاني",
+        "خزانات الاستضافة المشتركة",
+        "خزانات التحكم الصناعي والشبكي",
+      ],
+      customizationOptions: [
+        "عدد المنافذ (6 / 8 / 10 / 12)",
+        "قابس الدخل وطول السلك (BS1363 وNEMA وشوكو وAS3112 وIEC C14/C20 ومعايير إقليمية أخرى)",
+        "علامة تجارية/تصنيف مخصص",
+        "تعبئة OEM/ODM",
+      ],
+      standards: ["مصمم وفق معايير موصلات BS1363", "الشهادات متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ما هي وحدة PDU البريطانية وأين تُستخدم؟",
+          answer:
+            "وحدة PDU بريطانية هي وحدة توزيع طاقة للراك مزودة بمنافذ BS1363، وهي نوع المقبس القياسي المستخدم في المملكة المتحدة وعدة دول في منطقة CEE. تُستخدم لتوزيع طاقة الراك على معدات تقنية المعلومات المزودة بكابلات طاقة من نوع BS1363.",
+        },
+        {
+          question: "هل تتضمن وحدة PDU البريطانية حماية من التيار المفاجئ؟",
+          answer:
+            "نعم. تتضمن كل وحدة وحدة حماية SPD (جهاز حماية من التيار المفاجئ) مدمجة مع مؤشر LED أخضر وقاطع دائرة مدمج، إلى جانب مفتاح مضاء ثنائي القطب تحت غطاء مقاوم للغبار يقطع الخط الحي والمحايد في آن واحد.",
+        },
+        {
+          question: "هل يمكن تخصيص عدد المنافذ أو قابس الدخل؟",
+          answer:
+            "نعم. واندتونغ مُصنّع مباشر من المصنع، ويوفر وحدة PDU البريطانية بـ 6 أو 8 أو 10 أو 12 منفذاً، مع إمكانية تكوين قابس الدخل بمعايير BS1363 أو NEMA أو شوكو أو AS3112 أو IEC C14/C20 أو معايير إقليمية أخرى حسب كل مشروع، بما في ذلك OEM/ODM.",
+        },
+      ],
+    },
+    fr: {
+      name: "PDU aux normes britanniques (BS1363)",
+      shortName: "PDU britannique",
+      tagline: "PDU montable en rack 1U à prises BS1363 aux normes britanniques pour armoires britanniques et des marchés CEE.",
+      overview:
+        "Le PDU britannique Wandtung est une unité de distribution d'énergie montable en rack 1U équipée de prises aux normes britanniques (BS1363), d'un interrupteur bipolaire lumineux sous un capot anti-poussière, d'un disjoncteur intégré et d'un module de protection contre les surtensions SPD avec indicateur LED vert, conçu pour les armoires de centres de données et de télécommunications britanniques et des marchés CEE. Il utilise un jeu de barres en cuivre rouge pur à 99,9 % et un boîtier en aluminium robuste de 1,5 mm, est livré avec un cordon d'alimentation classé 13A, et est disponible avec 6, 8, 10 ou 12 prises et des types de fiches d'entrée personnalisés.",
+      keyFeatures: [
+        "Prises aux normes britanniques BS1363, configurations 6/8/10/12 prises",
+        "Interrupteur bipolaire lumineux sous un capot anti-poussière, coupe simultanément la phase et le neutre",
+        "Disjoncteur intégré et protection SPD contre les surtensions avec indicateur LED vert",
+        "Jeu de barres en cuivre rouge pur à 99,9 % pour une faible impédance et un échauffement réduit",
+        "Boîtier en aluminium robuste de 1,5 mm, ignifuge et résistant aux chocs",
+        "Cordon d'alimentation classé 13A, âme cuivre robuste de 1,5 mm², capacité 2500W, résistant à la chaleur",
+        "Types de fiches d'entrée personnalisés (BS1363, NEMA, Schuko, AS3112, IEC C14/C20) ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Paramètres électriques",
+          specs: [
+            { label: "Tension nominale", value: "230V" },
+            { label: "Courant nominal", value: "13A" },
+            { label: "Puissance nominale", value: "2500W" },
+            { label: "Fréquence nominale", value: "50 Hz" },
+          ],
+        },
+        {
+          title: "Entrée / Sortie",
+          specs: [
+            { label: "Fiche d'entrée", value: "BS1363 (NEMA, Schuko, AS3112, IEC C14/C20 disponibles sur demande)" },
+            { label: "Prises de sortie", value: "6 / 8 / 10 / 12 × prises BS1363" },
+            { label: "Câble", value: "Âme cuivre 1,5 mm², résistant à la chaleur, longueurs personnalisées disponibles" },
+          ],
+        },
+        {
+          title: "Mécanique et protection",
+          specs: [
+            { label: "Montage", value: "Rack 1U, horizontal" },
+            { label: "Matériau du boîtier", value: "Boîtier aluminium robuste de 1,5 mm" },
+            { label: "Matériau du jeu de barres", value: "Cuivre rouge pur à 99,9 %" },
+            { label: "Protection", value: "Interrupteur bipolaire lumineux avec capot anti-poussière, disjoncteur intégré, protection SPD contre les surtensions" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centres de données britanniques et des marchés CEE",
+        "Salles techniques télécoms aux normes britanniques",
+        "Armoires de colocation",
+        "Armoires de contrôle industriel et réseau",
+      ],
+      customizationOptions: [
+        "Nombre de prises (6 / 8 / 10 / 12)",
+        "Fiche d'entrée et longueur de cordon (BS1363, NEMA, Schuko, AS3112, IEC C14/C20 et autres normes régionales)",
+        "Marquage / étiquetage personnalisé",
+        "Conditionnement OEM / ODM",
+      ],
+      standards: ["Conçu selon les normes de connecteurs BS1363", "Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Qu'est-ce qu'un PDU britannique et où est-il utilisé ?",
+          answer:
+            "Un PDU britannique est une unité de distribution d'énergie de rack équipée de prises BS1363, le type de prise standard utilisé au Royaume-Uni et dans plusieurs pays des marchés CEE. Il sert à distribuer l'alimentation du rack aux équipements informatiques dotés de cordons d'alimentation de type BS1363.",
+        },
+        {
+          question: "Le PDU britannique inclut-il une protection contre les surtensions ?",
+          answer:
+            "Oui. Chaque unité inclut un module SPD (dispositif de protection contre les surtensions) intégré avec indicateur LED vert et un disjoncteur intégré, ainsi qu'un interrupteur bipolaire lumineux sous un capot anti-poussière qui coupe simultanément la phase et le neutre.",
+        },
+        {
+          question: "Le nombre de prises ou la fiche d'entrée peuvent-ils être personnalisés ?",
+          answer:
+            "Oui. Wandtung est un fabricant direct d'usine et propose le PDU britannique avec 6, 8, 10 ou 12 prises, avec une fiche d'entrée configurable selon les normes BS1363, NEMA, Schuko, AS3112, IEC C14/C20 et autres normes régionales selon chaque projet, y compris en OEM/ODM.",
+        },
+      ],
+    },
+    es: {
+      name: "PDU de estándar británico (BS1363)",
+      shortName: "PDU británico",
+      tagline: "PDU de montaje en rack 1U con tomas BS1363 de estándar británico para gabinetes del Reino Unido y mercados CEE.",
+      overview:
+        "El PDU británico de Wandtung es una unidad de distribución de energía de montaje en rack 1U equipada con tomas de estándar británico (BS1363), un interruptor bipolar iluminado bajo una tapa antipolvo, un disyuntor integrado y un módulo de protección contra sobretensiones SPD con indicador LED verde, diseñado para gabinetes de centros de datos y telecomunicaciones del Reino Unido y mercados CEE. Utiliza una barra colectora de cobre rojo puro al 99,9 % y una carcasa de aluminio resistente de 1,5 mm, incluye un cable de alimentación con clasificación de 13A y está disponible con 6, 8, 10 o 12 tomas y tipos de enchufe de entrada personalizados.",
+      keyFeatures: [
+        "Tomas de estándar británico BS1363, configuraciones de 6/8/10/12 tomas",
+        "Interruptor bipolar iluminado bajo una tapa antipolvo, corta la fase y el neutro simultáneamente",
+        "Disyuntor integrado y protección SPD contra sobretensiones con indicador LED verde",
+        "Barra colectora de cobre rojo puro al 99,9 % para baja impedancia y menor aumento de temperatura",
+        "Carcasa de aluminio resistente de 1,5 mm, ignífuga y resistente a impactos",
+        "Cable de alimentación con clasificación de 13A, núcleo de cobre resistente de 1,5 mm², capacidad de 2500W, resistente al calor",
+        "Tipos de enchufe de entrada personalizados (BS1363, NEMA, Schuko, AS3112, IEC C14/C20); OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Parámetros eléctricos",
+          specs: [
+            { label: "Tensión nominal", value: "230V" },
+            { label: "Corriente nominal", value: "13A" },
+            { label: "Potencia nominal", value: "2500W" },
+            { label: "Frecuencia nominal", value: "50 Hz" },
+          ],
+        },
+        {
+          title: "Entrada / Salida",
+          specs: [
+            { label: "Enchufe de entrada", value: "BS1363 (NEMA, Schuko, AS3112, IEC C14/C20 disponibles bajo pedido)" },
+            { label: "Tomas de salida", value: "6 / 8 / 10 / 12 × tomas BS1363" },
+            { label: "Cable", value: "Núcleo de cobre 1,5 mm², resistente al calor, longitudes personalizadas disponibles" },
+          ],
+        },
+        {
+          title: "Mecánica y protección",
+          specs: [
+            { label: "Montaje", value: "Rack 1U, horizontal" },
+            { label: "Material de la carcasa", value: "Carcasa de aluminio resistente de 1,5 mm" },
+            { label: "Material de la barra colectora", value: "Cobre rojo puro al 99,9 %" },
+            { label: "Protección", value: "Interruptor bipolar iluminado con tapa antipolvo, disyuntor integrado, protección SPD contra sobretensiones" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centros de datos del Reino Unido y mercados CEE",
+        "Salas de equipos de telecomunicaciones con estándar británico",
+        "Gabinetes de colocación",
+        "Gabinetes de control industrial y de red",
+      ],
+      customizationOptions: [
+        "Cantidad de tomas (6 / 8 / 10 / 12)",
+        "Enchufe de entrada y longitud del cable (BS1363, NEMA, Schuko, AS3112, IEC C14/C20 y otros estándares regionales)",
+        "Marca / etiquetado personalizado",
+        "Empaque OEM / ODM",
+      ],
+      standards: ["Diseñado según los estándares de conectores BS1363", "Certificación disponible bajo pedido según las especificaciones del proyecto"],
+      faqs: [
+        {
+          question: "¿Qué es un PDU británico y dónde se utiliza?",
+          answer:
+            "Un PDU británico es una unidad de distribución de energía de rack equipada con tomas BS1363, el tipo de toma estándar utilizado en el Reino Unido y varios países de mercados CEE. Se utiliza para distribuir la energía del rack a equipos de TI con cables de alimentación tipo BS1363.",
+        },
+        {
+          question: "¿El PDU británico incluye protección contra sobretensiones?",
+          answer:
+            "Sí. Cada unidad incluye un módulo SPD (dispositivo de protección contra sobretensiones) integrado con indicador LED verde y un disyuntor integrado, además de un interruptor bipolar iluminado bajo una tapa antipolvo que corta la fase y el neutro simultáneamente.",
+        },
+        {
+          question: "¿Se puede personalizar la cantidad de tomas o el enchufe de entrada?",
+          answer:
+            "Sí. Wandtung es un fabricante directo de fábrica y ofrece el PDU británico con 6, 8, 10 o 12 tomas, con el enchufe de entrada configurable a los estándares BS1363, NEMA, Schuko, AS3112, IEC C14/C20 y otros estándares regionales según cada proyecto, incluyendo OEM/ODM.",
+        },
+      ],
+    },
+    ru: {
+      name: "PDU британского стандарта (BS1363)",
+      shortName: "PDU британский",
+      tagline: "Монтируемый в стойку блок PDU высотой 1U с розетками BS1363 британского стандарта для шкафов Великобритании и CEE-рынков.",
+      overview:
+        "Британский PDU Wandtung — это монтируемый в стойку блок распределения питания высотой 1U, оснащённый розетками британского стандарта (BS1363), подсвечиваемым двухполюсным выключателем под пылезащитной крышкой, встроенным автоматическим выключателем и модулем защиты от перенапряжения SPD с зелёным светодиодным индикатором, разработанный для шкафов центров обработки данных и телекоммуникационного оборудования Великобритании и CEE-рынков. Использует шину из чистой красной меди 99,9% и прочный алюминиевый корпус толщиной 1,5 мм, поставляется с кабелем питания на 13A и доступен с 6, 8, 10 или 12 розетками и индивидуальными типами входных вилок.",
+      keyFeatures: [
+        "Розетки британского стандарта BS1363, конфигурации на 6/8/10/12 розеток",
+        "Подсвечиваемый двухполюсный выключатель под пылезащитной крышкой, одновременно размыкает фазу и нейтраль",
+        "Встроенный автоматический выключатель и защита SPD от перенапряжения с зелёным светодиодным индикатором",
+        "Шина из чистой красной меди 99,9% для низкого импеданса и меньшего нагрева",
+        "Прочный алюминиевый корпус толщиной 1,5 мм, огнестойкий и ударопрочный",
+        "Кабель питания на 13A, прочная медная жила 1,5 мм², мощность 2500Вт, термостойкий",
+        "Индивидуальные типы входных вилок (BS1363, NEMA, Schuko, AS3112, IEC C14/C20); доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Электрические параметры",
+          specs: [
+            { label: "Номинальное напряжение", value: "230В" },
+            { label: "Номинальный ток", value: "13A" },
+            { label: "Номинальная мощность", value: "2500Вт" },
+            { label: "Номинальная частота", value: "50 Гц" },
+          ],
+        },
+        {
+          title: "Вход / Выход",
+          specs: [
+            { label: "Входная вилка", value: "BS1363 (доступны NEMA, Schuko, AS3112, IEC C14/C20 по запросу)" },
+            { label: "Выходные розетки", value: "6 / 8 / 10 / 12 × розеток BS1363" },
+            { label: "Кабель", value: "Медная жила 1,5 мм², термостойкий, доступны индивидуальные длины" },
+          ],
+        },
+        {
+          title: "Механика и защита",
+          specs: [
+            { label: "Монтаж", value: "Стойка 1U, горизонтально" },
+            { label: "Материал корпуса", value: "Прочный алюминиевый корпус 1,5 мм" },
+            { label: "Материал шины", value: "Чистая красная медь 99,9%" },
+            { label: "Защита", value: "Подсвечиваемый двухполюсный выключатель с пылезащитной крышкой, встроенный автоматический выключатель, защита SPD от перенапряжения" },
+          ],
+        },
+      ],
+      applications: [
+        "Стойки центров обработки данных Великобритании и CEE-рынков",
+        "Помещения телекоммуникационного оборудования британского стандарта",
+        "Шкафы колокации",
+        "Шкафы промышленного и сетевого управления",
+      ],
+      customizationOptions: [
+        "Количество розеток (6 / 8 / 10 / 12)",
+        "Входная вилка и длина шнура (BS1363, NEMA, Schuko, AS3112, IEC C14/C20 и другие региональные стандарты)",
+        "Индивидуальный брендинг / маркировка",
+        "Упаковка OEM / ODM",
+      ],
+      standards: ["Разработан в соответствии со стандартами разъёмов BS1363", "Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Что такое британский PDU и где он используется?",
+          answer:
+            "Британский PDU — это блок распределения питания для стойки, оснащённый розетками BS1363 — стандартным типом розеток, используемым в Великобритании и ряде стран CEE-рынка. Он используется для распределения питания стойки на ИТ-оборудование с кабелями питания типа BS1363.",
+        },
+        {
+          question: "Включена ли в британский PDU защита от перенапряжения?",
+          answer:
+            "Да. Каждый блок включает встроенный модуль SPD (устройство защиты от перенапряжения) с зелёным светодиодным индикатором и встроенный автоматический выключатель, а также подсвечиваемый двухполюсный выключатель под пылезащитной крышкой, одновременно размыкающий фазу и нейтраль.",
+        },
+        {
+          question: "Можно ли настроить количество розеток или входную вилку?",
+          answer:
+            "Да. Wandtung является прямым производителем и предлагает британский PDU с 6, 8, 10 или 12 розетками, с входной вилкой, настраиваемой под стандарты BS1363, NEMA, Schuko, AS3112, IEC C14/C20 и другие региональные стандарты под каждый проект, включая OEM/ODM.",
+        },
+      ],
+    },
+    zh: {
+      name: "英标（BS1363）PDU",
+      shortName: "英标PDU",
+      tagline: "配备英标BS1363插座的1U机架式PDU，适用于英国及CEE市场机柜。",
+      overview:
+        "万电通英标PDU是一款1U机架式配电单元，配备英国标准（BS1363）插座、带防尘罩的双极发光开关、内置断路器，以及带绿色LED指示灯的SPD浪涌保护模块，专为英国及CEE市场的数据中心与电信机柜设计。采用99.9%纯红铜排，1.5mm加厚铝合金外壳，配备13A额定电源线，提供6/8/10/12路插座及定制输入插头选项。",
+      keyFeatures: [
+        "英标BS1363插座，提供6/8/10/12路配置",
+        "带防尘罩的双极发光开关，可同时切断火线与零线",
+        "内置断路器及带绿色LED指示灯的SPD浪涌保护",
+        "99.9%纯红铜排，低阻抗、低温升",
+        "1.5mm加厚铝合金外壳，阻燃耐冲击",
+        "13A额定电源线，1.5mm²加厚铜芯，2500W容量，耐高温",
+        "定制输入插头类型（BS1363、NEMA、德标、AS3112、IEC C14/C20）；支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "电气参数",
+          specs: [
+            { label: "额定电压", value: "230V" },
+            { label: "额定电流", value: "13A" },
+            { label: "额定功率", value: "2500W" },
+            { label: "额定频率", value: "50Hz" },
+          ],
+        },
+        {
+          title: "输入/输出",
+          specs: [
+            { label: "输入插头", value: "BS1363（可定制NEMA、德标、AS3112、IEC C14/C20）" },
+            { label: "输出插座", value: "6/8/10/12×BS1363插座" },
+            { label: "线缆", value: "1.5mm²铜芯，耐高温，可定制长度" },
+          ],
+        },
+        {
+          title: "机械结构与保护",
+          specs: [
+            { label: "安装方式", value: "1U机架，水平安装" },
+            { label: "外壳材质", value: "1.5mm加厚铝合金外壳" },
+            { label: "铜排材质", value: "99.9%纯红铜" },
+            { label: "保护", value: "带防尘罩的双极发光开关、内置断路器、SPD浪涌保护" },
+          ],
+        },
+      ],
+      applications: ["英国及CEE市场数据中心机架", "英标电信设备间", "托管机柜", "工业与网络控制柜"],
+      customizationOptions: ["插座数量（6/8/10/12）", "输入插头与线缆长度（BS1363、NEMA、德标、AS3112、IEC C14/C20等区域标准）", "定制品牌/标识", "OEM/ODM包装"],
+      standards: ["按BS1363连接器标准设计", "认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "什么是英标PDU？用在哪里？",
+          answer:
+            "英标PDU是配备BS1363插座的机架式配电单元，这是英国及多个CEE市场国家使用的标准插座类型。用于将机架电力分配给配备BS1363电源线的IT设备。",
+        },
+        {
+          question: "英标PDU是否包含浪涌保护？",
+          answer:
+            "是的。每台设备均内置带绿色LED指示灯的SPD（浪涌保护装置）模块及内置断路器，同时配备带防尘罩的双极发光开关，可同时切断火线与零线。",
+        },
+        {
+          question: "插座数量或输入插头可以定制吗？",
+          answer:
+            "可以。万电通是工厂直营制造商，英标PDU提供6、8、10或12路插座，输入插头可根据项目定制为BS1363、NEMA、德标、AS3112、IEC C14/C20等区域标准，包括OEM/ODM。",
+        },
+      ],
+    },
+  },
+
   "intelligent-pdu": {
     ar: {
       name: "PDU ذكي",
