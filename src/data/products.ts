@@ -77,7 +77,7 @@ export const products: Product[] = [
           "Yes. Wandtung is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu"],
+    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu", "uk-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
@@ -341,6 +341,97 @@ export const products: Product[] = [
         question: "Does it include surge protection?",
         answer:
           "Yes. The unit has an integrated SPD (surge protection device) module with a green LED indicator, alongside a dual power switch and child-safety outlet shutters rated to 75N.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "schuko-pdu", "nema-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
+  },
+  {
+    slug: "uk-pdu",
+    category: "power-distribution",
+    name: "UK Standard (BS1363) PDU",
+    shortName: "UK PDU",
+    tagline: "1U rack-mount PDU with UK standard BS1363 outlets for British and CEE-market cabinets.",
+    overview:
+      "The Wandtung UK PDU is a 1U rack-mount power distribution unit fitted with UK standard BS1363 outlets, a double-pole illuminated switch under a dust-proof cover, an integrated circuit breaker and an SPD surge protection module with a green LED indicator, built for British and CEE-market data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a 13A-rated power cord, and is available with 6, 8, 10 or 12 outlets and custom input plug types.",
+    featured: true,
+    images: [
+      "/products/uk-pdu/01-main.png",
+      "/products/uk-pdu/02-overview.png",
+      "/products/uk-pdu/10-server-room-scene.png",
+      "/products/uk-pdu/03-double-pole-spd.png",
+      "/products/uk-pdu/04-copper-busbar.png",
+      "/products/uk-pdu/05-aluminum-shell.png",
+      "/products/uk-pdu/06-copper-core-cable.png",
+      "/products/uk-pdu/07-custom-outlet-qty.png",
+      "/products/uk-pdu/08-custom-plug-types.png",
+      "/products/uk-pdu/09-global-socket-standards.png",
+    ],
+    keyFeatures: [
+      "UK standard BS1363 outlets, 6/8/10/12-outlet configurations",
+      "Double-pole illuminated switch under a dust-proof protective cover, cuts live and neutral simultaneously",
+      "Integrated circuit breaker and SPD surge protection with green LED indicator",
+      "99.9% pure red copper busbar for low impedance and heat rise",
+      "1.5mm heavy-duty aluminum shell, flame-retardant and impact-resistant",
+      "13A-rated power cord, 1.5mm² heavy-duty copper core, 2500W capacity, heat resistant",
+      "Custom input plug types (BS1363, NEMA, Schuko, AS3112, IEC C14/C20); OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "230V" },
+          { label: "Rated Current", value: "13A" },
+          { label: "Rated Power", value: "2500W" },
+          { label: "Rated Frequency", value: "50 Hz" },
+        ],
+      },
+      {
+        title: "Input / Output",
+        specs: [
+          { label: "Input Plug", value: "BS1363 (custom NEMA, Schuko, AS3112, IEC C14/C20 available)" },
+          { label: "Output Sockets", value: "6 / 8 / 10 / 12 × BS1363 outlets" },
+          { label: "Cable", value: "1.5mm² copper core, heat resistant, custom lengths available" },
+        ],
+      },
+      {
+        title: "Mechanical & Protection",
+        specs: [
+          { label: "Mounting", value: "1U rack, horizontal" },
+          { label: "Housing Material", value: "1.5mm heavy-duty aluminum shell" },
+          { label: "Busbar Material", value: "99.9% pure red copper" },
+          { label: "Protection", value: "Double-pole illuminated switch with dust-proof cover, integrated circuit breaker, SPD surge protection" },
+        ],
+      },
+    ],
+    applications: [
+      "UK and CEE-market data center racks",
+      "British-standard telecom equipment rooms",
+      "Colocation cabinets",
+      "Industrial and network control cabinets",
+    ],
+    customizationOptions: [
+      "Outlet quantity (6 / 8 / 10 / 12)",
+      "Input plug and cord length (BS1363, NEMA, Schuko, AS3112, IEC C14/C20 and other regional standards)",
+      "Custom branding / labeling",
+      "OEM / ODM packaging",
+    ],
+    standards: ["Designed to BS1363 connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is a UK PDU and where is it used?",
+        answer:
+          "A UK PDU is a rack power distribution unit fitted with BS1363 outlets, the standard socket type used across the United Kingdom and several CEE-market countries. It is used to distribute rack power to IT equipment fitted with BS1363-style power cords.",
+      },
+      {
+        question: "Does the UK PDU include surge protection?",
+        answer:
+          "Yes. Each unit includes an integrated SPD (surge protection device) module with a green LED indicator and an integrated circuit breaker, alongside a double-pole illuminated switch under a dust-proof cover that cuts both live and neutral simultaneously.",
+      },
+      {
+        question: "Can the outlet quantity or input plug be customized?",
+        answer:
+          "Yes. Wandtung is a factory-direct manufacturer and offers the UK PDU with 6, 8, 10 or 12 outlets, with the input plug configurable to BS1363, NEMA, Schuko, AS3112, IEC C14/C20 and other regional standards per project, including OEM/ODM.",
       },
     ],
     relatedProductSlugs: ["pdu", "schuko-pdu", "nema-pdu"],
