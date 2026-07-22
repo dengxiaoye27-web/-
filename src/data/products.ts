@@ -2280,7 +2280,70 @@ export const products: Product[] = [
           "Anti-static raised flooring creates a void beneath the data hall floor for underfloor air distribution and cable routing, while its static-dissipative surface reduces the risk of electrostatic discharge damaging sensitive IT equipment.",
       },
     ],
-    relatedProductSlugs: ["cable-tray", "precision-air-conditioner"],
+    relatedProductSlugs: ["cable-tray", "precision-air-conditioner", "glass-raised-floor"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "glass-raised-floor",
+    category: "raised-floor",
+    name: "Glass Anti-Static Raised Floor",
+    shortName: "Glass Raised Floor",
+    tagline: "Transparent tempered glass access floor combining anti-static protection with a decorative, see-through finish.",
+    overview:
+      "The Wandtung Glass Anti-Static Raised Floor pairs a 12mm tempered glass surface with a precision aluminum alloy edge frame and height-adjustable galvanized pedestal, giving data center white space, network operations centers, offices and exhibition spaces an elevated access floor that is both anti-static and visually transparent, exposing the cable routing beneath.",
+    featured: true,
+    images: [
+      "/products/glass-raised-floor/01-main.jpg",
+      "/products/glass-raised-floor/02-key-selling-points.jpg",
+      "/products/glass-raised-floor/03-product-detail.jpg",
+      "/products/glass-raised-floor/04-pedestal-detail.jpg",
+      "/products/glass-raised-floor/05-installation-scene.jpg",
+      "/products/glass-raised-floor/06-office-showroom-scene.jpg",
+    ],
+    keyFeatures: [
+      "12mm tempered glass surface, anti-static resistance 10^6–10^9 Ω",
+      "See-through design exposing underfloor cable routing",
+      "Precision aluminum alloy edge frame",
+      "Height-adjustable galvanized pedestal, 100–500mm",
+      "High load bearing, 800–1000 kg/m²",
+      "Elegant, decorative finish for modern offices and showrooms",
+      "Custom panel sizes; OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Panel Specification",
+        specs: [
+          { label: "Panel Size", value: "600 x 600 mm (standard), custom sizes available" },
+          { label: "Surface Material", value: "12mm tempered glass" },
+          { label: "Edge Frame", value: "Precision aluminum alloy" },
+          { label: "Load Rating", value: "800–1000 kg/m²" },
+          { label: "Surface Resistance", value: "10^6–10^9 Ω (anti-static)" },
+        ],
+      },
+      {
+        title: "Pedestal",
+        specs: [
+          { label: "Material", value: "Galvanized steel" },
+          { label: "Height Range", value: "100–500mm, adjustable" },
+        ],
+      },
+    ],
+    applications: ["Data center white space with visible cable routing", "Network operations centers", "Modern offices", "Showrooms and exhibitions"],
+    customizationOptions: ["Panel size", "Pedestal height", "Load rating", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Is a glass raised floor as strong as a standard anti-static raised floor?",
+        answer:
+          "Yes. The 12mm tempered glass surface with aluminum alloy edge frame is rated for 800–1000 kg/m², comparable to standard steel or calcium sulphate core anti-static floor panels, while adding a transparent, decorative finish.",
+      },
+      {
+        question: "Where is a glass raised floor typically used instead of a standard raised floor?",
+        answer:
+          "Glass raised floors are chosen where the underfloor cable routing or infrastructure is meant to be visible as a design feature — modern office lobbies, showrooms, exhibition spaces and network operations centers — while standard opaque anti-static floors are used in general data center white space.",
+      },
+    ],
+    relatedProductSlugs: ["anti-static-raised-floor", "cable-tray"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
   {
