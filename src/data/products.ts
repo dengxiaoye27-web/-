@@ -1216,39 +1216,67 @@ export const products: Product[] = [
     category: "ups-systems",
     name: "High Power UPS",
     shortName: "High Power UPS",
-    tagline: "Large-capacity three-phase UPS for data center and facility-level critical power.",
+    tagline: "Large-capacity three-phase tower UPS for data center, industrial and medical critical power.",
     overview:
-      "The Wandtung High Power UPS delivers large-capacity, three-phase double-conversion protection for full data halls and facility-level critical loads, available in standalone frames or as the building block for a modular, parallel-redundant power plant.",
+      "The Wandtung High Power UPS is a three-phase, online double-conversion tower UPS delivering 10 kVA to 200 kVA, built for data halls, industrial facilities and medical environments that need pure sine wave output with zero transfer time to battery. It solves the nine most common power quality problems — outages, sags, surges, harmonic distortion, transients, frequency fluctuation, EMI interference, over- and under-voltage — through a single unit, with full digital control and remote monitoring.",
+    images: [
+      "/products/high-power-ups/01-main.jpg",
+      "/products/high-power-ups/02-front-rear-view.jpg",
+      "/products/high-power-ups/03-nine-power-problems.jpg",
+      "/products/high-power-ups/04-key-features.jpg",
+      "/products/high-power-ups/05-selling-points.jpg",
+      "/products/high-power-ups/06-application-scene.jpg",
+    ],
     keyFeatures: [
-      "Large-capacity three-phase double-conversion topology",
-      "Parallel operation for capacity and redundancy",
-      "High efficiency at partial and full load",
-      "Full digital control and remote monitoring",
+      "Three-phase in / three-phase out, online double-conversion topology",
+      "10 kVA – 200 kVA power capacity in a tower format",
+      "Pure sine wave output, THD < 3%",
+      "0ms transfer time to battery — zero interruption",
+      "Auto battery switchover on utility failure with auto-restart, no manual intervention",
+      "EMI/RFI shielded to EN50091-3 / IEC 61000-4",
+      "Triple high-flow cooling fans and full-perforated rear ventilation panel",
+      "SNMP / RS232 / RS485 remote monitoring; heavy-duty casters for mobility",
     ],
     specGroups: [
       {
         title: "Power",
         specs: [
-          { label: "Power Capacity", value: "60 kVA – 800 kVA" },
+          { label: "Power Capacity", value: "10 kVA – 200 kVA" },
           { label: "Input/Output Voltage", value: "380/400/415V three-phase" },
-          { label: "Efficiency", value: "Up to 96% (online mode)" },
+          { label: "Efficiency", value: ">95% (online mode)" },
+          { label: "Output Waveform", value: "Pure sine wave, THD < 3%" },
+          { label: "Transfer Time", value: "0ms (zero interruption)" },
         ],
       },
       {
-        title: "Redundancy",
+        title: "Monitoring & Communication",
         specs: [
+          { label: "Interfaces", value: "RS232, RS485, SNMP" },
+          { label: "Display", value: "Front-panel LCD/touchscreen control panel" },
+        ],
+      },
+      {
+        title: "Mechanical & Protection",
+        specs: [
+          { label: "Cooling", value: "Triple high-flow fans, full-perforated ventilation panel" },
+          { label: "Mobility", value: "Heavy-duty casters" },
           { label: "Parallel Capability", value: "Multiple units for capacity/redundancy" },
         ],
       },
     ],
-    applications: ["Data center facility-level power", "Large industrial and commercial critical loads", "Colocation power plants"],
+    applications: ["Data center facility-level power", "Medical facility critical power", "Large industrial and commercial critical loads", "Colocation power plants"],
     customizationOptions: ["Power rating", "Parallel configuration", "Battery cabinet integration"],
-    standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
+    standards: ["Designed to IEC 62040 UPS performance standards", "EMI/RFI shielding to EN50091-3 / IEC 61000-4", "CE / IEC certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "When is a high power UPS needed instead of a modular UPS?",
         answer:
           "A high power (monolithic) UPS suits facilities with a stable, well-defined large load from day one. A modular UPS is often preferred when load will grow over time, since capacity can be added module-by-module rather than in large fixed steps.",
+      },
+      {
+        question: "What power problems does the High Power UPS protect against?",
+        answer:
+          "It protects connected equipment against the nine most common power quality issues: outages, voltage sags, voltage surges, lightning surges, harmonic distortion, voltage transients, frequency fluctuation, EMI interference, and over/under-voltage — through online double-conversion with zero transfer time to battery.",
       },
     ],
     relatedProductSlugs: ["modular-ups", "high-power-pdu"],
