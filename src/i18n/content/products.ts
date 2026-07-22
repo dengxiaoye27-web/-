@@ -3961,7 +3961,7 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       shortName: "UPS راك",
       tagline: "UPS مزدوج التحويل عبر الإنترنت للنشر بتركيب راك في بيئات مراكز البيانات والاتصالات.",
       overview: "يُعبَّأ UPS بتركيب راك من واندتونغ، وهو UPS مزدوج التحويل عبر الإنترنت، بصيغة راك قياسية 19 بوصة، ويوفر طاقة احتياطية نظيفة ومنظمة لمعدات تكنولوجيا المعلومات والشبكات مع تكوينات مرنة لوقت تشغيل البطارية.",
-      keyFeatures: ["طوبولوجيا مزدوجة التحويل عبر الإنترنت حقيقية", "صيغ تركيب راك 2U–6U", "خيارات حزمة بطارية موسعة لوقت تشغيل أطول", "اتصال RS232 / USB / SNMP / تلامس جاف", "تجاوز تلقائي عند الحمل الزائد أو الخلل"],
+      keyFeatures: ["طوبولوجيا مزدوجة التحويل عبر الإنترنت حقيقية", "صيغ تركيب راك 2U–6U", "لوحة عرض LCD لمراقبة الدخل/الخرج/البطارية/الحمل في الوقت الفعلي", "خيارات حزمة بطارية موسعة لوقت تشغيل أطول", "منفذ RS232 قياسي، قابل للتوسيع عبر فتحة بطاقة ذكية إلى RS485 أو تلامس جاف أو SNMP", "مراقبة عن بُعد عبر SNMP / RS232 / تطبيق الجوال مع تنبيهات فورية عند انقطاع التيار", "تجاوز تلقائي عند الحمل الزائد أو الخلل"],
       specGroups: [
         { title: "الطاقة", specs: [{ label: "سعة الطاقة", value: "1 – 20 كيلو فولت أمبير" }, { label: "جهد الدخل", value: "110/220/230/240 فولت أحادي الطور" }, { label: "جهد الخرج", value: "220/230/240 فولت ±1%" }, { label: "معامل القدرة", value: "0.9" }, { label: "الكفاءة", value: "حتى 94% (وضع عبر الإنترنت)" }] },
         { title: "البطارية ووقت التشغيل", specs: [{ label: "تكوين البطارية", value: "داخلي + خزانة بطارية موسعة خارجية" }, { label: "وقت الاحتياط", value: "5 دقائق – عدة ساعات (يعتمد على الحمل)" }] },
@@ -3980,7 +3980,7 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       shortName: "Onduleur en rack",
       tagline: "Onduleur en ligne à double conversion pour déploiement en rack dans les environnements de centres de données et télécoms.",
       overview: "L'onduleur en rack Wandtung est un onduleur en ligne à double conversion au format rack 19 pouces standard, fournissant une alimentation de secours propre et régulée pour les équipements informatiques et réseau avec des configurations d'autonomie de batterie flexibles.",
-      keyFeatures: ["Véritable topologie en ligne à double conversion", "Formats de montage en rack 2U–6U", "Options de batteries étendues pour une plus grande autonomie", "Communication RS232 / USB / SNMP / contact sec", "Bypass automatique en cas de surcharge ou de défaut"],
+      keyFeatures: ["Véritable topologie en ligne à double conversion", "Formats de montage en rack 2U–6U", "Panneau LCD avec surveillance en temps réel de l'entrée/sortie/batterie/charge", "Options de batteries étendues pour une plus grande autonomie", "RS232 standard, extensible via emplacement de carte intelligente vers RS485, contact sec ou SNMP", "Surveillance à distance via SNMP / RS232 / application mobile avec alertes instantanées de coupure de courant", "Bypass automatique en cas de surcharge ou de défaut"],
       specGroups: [
         { title: "Alimentation", specs: [{ label: "Capacité de puissance", value: "1 – 20 kVA" }, { label: "Tension d'entrée", value: "110/220/230/240V monophasé" }, { label: "Tension de sortie", value: "220/230/240V ±1%" }, { label: "Facteur de puissance", value: "0,9" }, { label: "Efficacité", value: "Jusqu'à 94% (mode en ligne)" }] },
         { title: "Batterie et autonomie", specs: [{ label: "Configuration de batterie", value: "Interne + armoire de batteries étendue externe" }, { label: "Autonomie", value: "5 min – plusieurs heures (selon la charge)" }] },
@@ -3999,7 +3999,7 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       shortName: "SAI de rack",
       tagline: "SAI en línea de doble conversión para despliegue en rack en entornos de centros de datos y telecomunicaciones.",
       overview: "El SAI de montaje en rack de Wandtung es un SAI en línea de doble conversión empaquetado en formato de rack estándar de 19 pulgadas, que proporciona energía de respaldo limpia y regulada para equipos de TI y red con configuraciones flexibles de autonomía de batería.",
-      keyFeatures: ["Topología en línea de doble conversión verdadera", "Formatos de montaje en rack de 2U a 6U", "Opciones de baterías extendidas para mayor autonomía", "Comunicación RS232 / USB / SNMP / contacto seco", "Bypass automático ante sobrecarga o fallo"],
+      keyFeatures: ["Topología en línea de doble conversión verdadera", "Formatos de montaje en rack de 2U a 6U", "Panel LCD con monitoreo en tiempo real de entrada/salida/batería/carga", "Opciones de baterías extendidas para mayor autonomía", "RS232 estándar, ampliable mediante ranura de tarjeta inteligente a RS485, contacto seco o SNMP", "Monitoreo remoto vía SNMP / RS232 / app móvil con alertas instantáneas de corte de energía", "Bypass automático ante sobrecarga o fallo"],
       specGroups: [
         { title: "Energía", specs: [{ label: "Capacidad de potencia", value: "1 – 20 kVA" }, { label: "Voltaje de entrada", value: "110/220/230/240V monofásico" }, { label: "Voltaje de salida", value: "220/230/240V ±1%" }, { label: "Factor de potencia", value: "0,9" }, { label: "Eficiencia", value: "Hasta 94% (modo en línea)" }] },
         { title: "Batería y autonomía", specs: [{ label: "Configuración de batería", value: "Interna + gabinete de batería extendida externo" }, { label: "Tiempo de respaldo", value: "5 min – varias horas (según la carga)" }] },
@@ -4018,7 +4018,7 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       shortName: "Стоечный ИБП",
       tagline: "Онлайн ИБП двойного преобразования для стоечного размещения в дата-центрах и телекоммуникационных объектах.",
       overview: "Стоечный ИБП Wandtung — это онлайн ИБП двойного преобразования в стандартном 19-дюймовом стоечном форм-факторе, обеспечивающий чистое, стабилизированное резервное питание для ИТ- и сетевого оборудования с гибкими вариантами времени автономной работы.",
-      keyFeatures: ["Настоящая онлайн-топология двойного преобразования", "Стоечные форм-факторы 2U–6U", "Варианты расширенных батарей для увеличения времени автономной работы", "Связь по RS232 / USB / SNMP / сухой контакт", "Автоматический байпас при перегрузке или неисправности"],
+      keyFeatures: ["Настоящая онлайн-топология двойного преобразования", "Стоечные форм-факторы 2U–6U", "ЖК-панель с мониторингом входа/выхода/батареи/нагрузки в реальном времени", "Варианты расширенных батарей для увеличения времени автономной работы", "Стандартный RS232, расширяемый через слот smart-карты до RS485, сухого контакта или SNMP", "Удалённый мониторинг через SNMP / RS232 / мобильное приложение с мгновенными оповещениями об отключении питания", "Автоматический байпас при перегрузке или неисправности"],
       specGroups: [
         { title: "Питание", specs: [{ label: "Мощность", value: "1 – 20 кВА" }, { label: "Входное напряжение", value: "110/220/230/240В однофазное" }, { label: "Выходное напряжение", value: "220/230/240В ±1%" }, { label: "Коэффициент мощности", value: "0,9" }, { label: "КПД", value: "До 94% (онлайн режим)" }] },
         { title: "Батарея и время работы", specs: [{ label: "Конфигурация батареи", value: "Внутренняя + внешний шкаф расширенных батарей" }, { label: "Время резервирования", value: "5 мин – несколько часов (в зависимости от нагрузки)" }] },
@@ -4037,7 +4037,7 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       shortName: "机架式UPS",
       tagline: "面向数据中心与电信环境机架部署的在线双转换UPS。",
       overview: "万电通机架式UPS是一款标准19英寸机架式在线双转换UPS,为IT与网络设备提供纯净、稳压的备用电力,并支持灵活的电池续航配置。",
-      keyFeatures: ["真正的在线双转换拓扑", "2U–6U机架安装形式", "可选扩展电池组,延长续航时间", "支持RS232 / USB / SNMP / 干接点通信", "过载或故障时自动旁路"],
+      keyFeatures: ["真正的在线双转换拓扑", "2U–6U机架安装形式", "LCD显示面板,实时监控输入/输出/电池/负载", "可选扩展电池组,延长续航时间", "标配RS232,可通过智能卡插槽扩展至RS485、干接点或SNMP", "支持SNMP / RS232 / 手机APP远程监控,断电即时告警", "过载或故障时自动旁路"],
       specGroups: [
         { title: "电力", specs: [{ label: "功率容量", value: "1–20 kVA" }, { label: "输入电压", value: "110/220/230/240V单相" }, { label: "输出电压", value: "220/230/240V ±1%" }, { label: "功率因数", value: "0.9" }, { label: "效率", value: "最高94%(在线模式)" }] },
         { title: "电池与续航", specs: [{ label: "电池配置", value: "内置+外接扩展电池柜" }, { label: "备用时间", value: "5分钟至数小时(视负载而定)" }] },
