@@ -6221,6 +6221,258 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "glass-raised-floor": {
+    ar: {
+      name: "أرضية مرفوعة زجاجية مضادة للكهرباء الساكنة",
+      shortName: "أرضية زجاجية مرفوعة",
+      tagline: "أرضية وصول زجاجية مقساة شفافة تجمع بين الحماية من الكهرباء الساكنة وتشطيب شفاف زخرفي.",
+      overview:
+        "تجمع الأرضية المرفوعة الزجاجية المضادة للكهرباء الساكنة من واندتونغ بين سطح زجاجي مقسى بسماكة 12 مم وإطار حافة من سبيكة الألومنيوم الدقيقة وقاعدة مجلفنة قابلة لتعديل الارتفاع، لتمنح المساحة البيضاء لمركز البيانات ومراكز عمليات الشبكة والمكاتب والمساحات المعروضة أرضية وصول مرفوعة مضادة للكهرباء الساكنة وشفافة بصرياً في آن واحد، تكشف عن توجيه الكابلات أسفلها.",
+      keyFeatures: [
+        "سطح زجاجي مقسى بسماكة 12 مم، مقاومة مضادة للسكون 10^6–10^9 أوم",
+        "تصميم شفاف يكشف توجيه الكابلات تحت الأرضية",
+        "إطار حافة من سبيكة الألومنيوم الدقيقة",
+        "قاعدة مجلفنة قابلة لتعديل الارتفاع، 100–500 مم",
+        "تحمل عالٍ للحمل، 800–1000 كجم/م²",
+        "تشطيب أنيق وزخرفي للمكاتب الحديثة والمعارض",
+        "أحجام ألواح مخصصة؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "مواصفات اللوح",
+          specs: [
+            { label: "حجم اللوح", value: "600 × 600 مم (قياسي)، أحجام مخصصة متاحة" },
+            { label: "مادة السطح", value: "زجاج مقسى بسماكة 12 مم" },
+            { label: "إطار الحافة", value: "سبيكة ألومنيوم دقيقة" },
+            { label: "تصنيف الحمل", value: "800–1000 كجم/م²" },
+            { label: "مقاومة السطح", value: "10^6–10^9 أوم (مضاد للسكون)" },
+          ],
+        },
+        {
+          title: "القاعدة",
+          specs: [
+            { label: "المادة", value: "فولاذ مجلفن" },
+            { label: "نطاق الارتفاع", value: "100–500 مم، قابل للتعديل" },
+          ],
+        },
+      ],
+      applications: ["المساحة البيضاء لمركز البيانات مع توجيه كابلات مرئي", "مراكز عمليات الشبكة", "المكاتب الحديثة", "صالات العرض والمعارض"],
+      customizationOptions: ["حجم اللوح", "ارتفاع القاعدة", "تصنيف الحمل", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "هل الأرضية الزجاجية المرفوعة قوية بقدر الأرضية المرفوعة القياسية المضادة للكهرباء الساكنة؟",
+          answer:
+            "نعم. السطح الزجاجي المقسى بسماكة 12 مم مع إطار حافة الألومنيوم مصنف لتحمل 800–1000 كجم/م²، وهو مماثل لألواح الأرضية القياسية المضادة للسكون ذات نواة الفولاذ أو كبريتات الكالسيوم، مع إضافة تشطيب شفاف وزخرفي.",
+        },
+        {
+          question: "أين تُستخدم الأرضية الزجاجية المرفوعة عادةً بدلاً من الأرضية المرفوعة القياسية؟",
+          answer:
+            "تُختار الأرضيات الزجاجية المرفوعة عندما يُراد إظهار توجيه الكابلات أو البنية التحتية أسفل الأرضية كعنصر تصميمي - في ردهات المكاتب الحديثة وصالات العرض والمعارض ومراكز عمليات الشبكة - بينما تُستخدم الأرضيات المضادة للسكون غير الشفافة القياسية في المساحة البيضاء العامة لمراكز البيانات.",
+        },
+      ],
+    },
+    fr: {
+      name: "Plancher surélevé en verre antistatique",
+      shortName: "Plancher en verre surélevé",
+      tagline: "Plancher technique en verre trempé transparent alliant protection antistatique et finition décorative transparente.",
+      overview:
+        "Le plancher surélevé en verre antistatique Wandtung associe une surface en verre trempé de 12 mm à un cadre de bordure en alliage d'aluminium de précision et un piédestal galvanisé à hauteur réglable, offrant à l'espace blanc du centre de données, aux centres d'exploitation réseau, aux bureaux et aux espaces d'exposition un plancher technique à la fois antistatique et visuellement transparent, révélant le cheminement des câbles en dessous.",
+      keyFeatures: [
+        "Surface en verre trempé de 12 mm, résistance antistatique 10^6–10^9 Ω",
+        "Design transparent révélant le cheminement des câbles sous plancher",
+        "Cadre de bordure en alliage d'aluminium de précision",
+        "Piédestal galvanisé à hauteur réglable, 100–500 mm",
+        "Charge élevée, 800–1000 kg/m²",
+        "Finition élégante et décorative pour bureaux modernes et salles d'exposition",
+        "Tailles de panneaux personnalisées ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Spécification du panneau",
+          specs: [
+            { label: "Taille du panneau", value: "600 x 600 mm (standard), tailles personnalisées disponibles" },
+            { label: "Matériau de surface", value: "Verre trempé de 12 mm" },
+            { label: "Cadre de bordure", value: "Alliage d'aluminium de précision" },
+            { label: "Classification de charge", value: "800–1000 kg/m²" },
+            { label: "Résistance de surface", value: "10^6–10^9 Ω (antistatique)" },
+          ],
+        },
+        {
+          title: "Piédestal",
+          specs: [
+            { label: "Matériau", value: "Acier galvanisé" },
+            { label: "Plage de hauteur", value: "100–500 mm, réglable" },
+          ],
+        },
+      ],
+      applications: ["Espace blanc de centre de données avec cheminement de câbles visible", "Centres d'exploitation réseau", "Bureaux modernes", "Salles d'exposition"],
+      customizationOptions: ["Taille du panneau", "Hauteur du piédestal", "Classification de charge", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Un plancher en verre surélevé est-il aussi résistant qu'un plancher surélevé antistatique standard ?",
+          answer:
+            "Oui. La surface en verre trempé de 12 mm avec cadre de bordure en alliage d'aluminium est classée pour 800–1000 kg/m², comparable aux panneaux de plancher antistatique standard à noyau acier ou sulfate de calcium, tout en ajoutant une finition transparente et décorative.",
+        },
+        {
+          question: "Où un plancher en verre surélevé est-il généralement utilisé plutôt qu'un plancher surélevé standard ?",
+          answer:
+            "Les planchers en verre surélevés sont choisis lorsque le cheminement des câbles ou l'infrastructure sous plancher est destiné à être visible comme élément de design — halls de bureaux modernes, salles d'exposition, espaces d'exposition et centres d'exploitation réseau — tandis que les planchers antistatiques opaques standard sont utilisés dans l'espace blanc général des centres de données.",
+        },
+      ],
+    },
+    es: {
+      name: "Piso elevado de vidrio antiestático",
+      shortName: "Piso de vidrio elevado",
+      tagline: "Piso de acceso de vidrio templado transparente que combina protección antiestática con un acabado decorativo transparente.",
+      overview:
+        "El piso elevado de vidrio antiestático de Wandtung combina una superficie de vidrio templado de 12 mm con un marco de borde de aleación de aluminio de precisión y un pedestal galvanizado de altura ajustable, ofreciendo al espacio blanco del centro de datos, centros de operaciones de red, oficinas y espacios de exhibición un piso de acceso elevado que es tanto antiestático como visualmente transparente, dejando ver el enrutamiento de cables debajo.",
+      keyFeatures: [
+        "Superficie de vidrio templado de 12 mm, resistencia antiestática 10^6–10^9 Ω",
+        "Diseño transparente que deja ver el enrutamiento de cables bajo el piso",
+        "Marco de borde de aleación de aluminio de precisión",
+        "Pedestal galvanizado de altura ajustable, 100–500 mm",
+        "Alta capacidad de carga, 800–1000 kg/m²",
+        "Acabado elegante y decorativo para oficinas modernas y showrooms",
+        "Tamaños de panel personalizados; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Especificación del panel",
+          specs: [
+            { label: "Tamaño del panel", value: "600 x 600 mm (estándar), tamaños personalizados disponibles" },
+            { label: "Material de superficie", value: "Vidrio templado de 12 mm" },
+            { label: "Marco de borde", value: "Aleación de aluminio de precisión" },
+            { label: "Clasificación de carga", value: "800–1000 kg/m²" },
+            { label: "Resistencia superficial", value: "10^6–10^9 Ω (antiestático)" },
+          ],
+        },
+        {
+          title: "Pedestal",
+          specs: [
+            { label: "Material", value: "Acero galvanizado" },
+            { label: "Rango de altura", value: "100–500 mm, ajustable" },
+          ],
+        },
+      ],
+      applications: ["Espacio blanco de centro de datos con enrutamiento de cables visible", "Centros de operaciones de red", "Oficinas modernas", "Salas de exhibición"],
+      customizationOptions: ["Tamaño del panel", "Altura del pedestal", "Clasificación de carga", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        {
+          question: "¿Es un piso de vidrio elevado tan resistente como un piso elevado antiestático estándar?",
+          answer:
+            "Sí. La superficie de vidrio templado de 12 mm con marco de borde de aluminio está clasificada para 800–1000 kg/m², comparable a los paneles de piso antiestático estándar con núcleo de acero o sulfato de calcio, además de añadir un acabado transparente y decorativo.",
+        },
+        {
+          question: "¿Dónde se usa típicamente un piso de vidrio elevado en lugar de uno estándar?",
+          answer:
+            "Los pisos de vidrio elevados se eligen cuando se busca que el enrutamiento de cables o la infraestructura bajo el piso sea visible como elemento de diseño: vestíbulos de oficinas modernas, showrooms, espacios de exhibición y centros de operaciones de red, mientras que los pisos antiestáticos opacos estándar se usan en el espacio blanco general del centro de datos.",
+        },
+      ],
+    },
+    ru: {
+      name: "Стеклянный антистатический фальшпол",
+      shortName: "Стеклянный фальшпол",
+      tagline: "Прозрачный фальшпол из закалённого стекла, сочетающий антистатическую защиту с декоративной прозрачной отделкой.",
+      overview:
+        "Стеклянный антистатический фальшпол Wandtung сочетает поверхность из закалённого стекла толщиной 12 мм с прецизионной рамой из алюминиевого сплава и регулируемой по высоте оцинкованной опорой, обеспечивая машинному залу ЦОД, центрам управления сетью, офисам и выставочным пространствам приподнятый пол доступа, который одновременно антистатичен и визуально прозрачен, открывая прокладку кабелей внизу.",
+      keyFeatures: [
+        "Поверхность из закалённого стекла толщиной 12 мм, антистатическое сопротивление 10^6–10^9 Ом",
+        "Прозрачный дизайн, открывающий прокладку кабелей под полом",
+        "Прецизионная рама из алюминиевого сплава",
+        "Регулируемая по высоте оцинкованная опора, 100–500 мм",
+        "Высокая несущая способность, 800–1000 кг/м²",
+        "Элегантная декоративная отделка для современных офисов и шоурумов",
+        "Индивидуальные размеры панелей; доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Спецификация панели",
+          specs: [
+            { label: "Размер панели", value: "600 x 600 мм (стандарт), доступны индивидуальные размеры" },
+            { label: "Материал поверхности", value: "Закалённое стекло 12 мм" },
+            { label: "Рама", value: "Прецизионный алюминиевый сплав" },
+            { label: "Класс нагрузки", value: "800–1000 кг/м²" },
+            { label: "Поверхностное сопротивление", value: "10^6–10^9 Ом (антистатическое)" },
+          ],
+        },
+        {
+          title: "Опора",
+          specs: [
+            { label: "Материал", value: "Оцинкованная сталь" },
+            { label: "Диапазон высоты", value: "100–500 мм, регулируемая" },
+          ],
+        },
+      ],
+      applications: ["Машинный зал ЦОД с видимой прокладкой кабелей", "Центры управления сетью", "Современные офисы", "Шоурумы и выставки"],
+      customizationOptions: ["Размер панели", "Высота опоры", "Класс нагрузки", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Такой же прочный стеклянный фальшпол, как стандартный антистатический фальшпол?",
+          answer:
+            "Да. Поверхность из закалённого стекла толщиной 12 мм с рамой из алюминиевого сплава рассчитана на 800–1000 кг/м², что сопоставимо со стандартными антистатическими напольными панелями со стальным сердечником или сердечником из сульфата кальция, при этом добавляя прозрачную декоративную отделку.",
+        },
+        {
+          question: "Где обычно используется стеклянный фальшпол вместо стандартного?",
+          answer:
+            "Стеклянные фальшполы выбирают там, где прокладка кабелей или инфраструктура под полом должны быть видны как элемент дизайна — в холлах современных офисов, шоурумах, выставочных пространствах и центрах управления сетью, тогда как стандартные непрозрачные антистатические полы используются в общем машинном зале ЦОД.",
+        },
+      ],
+    },
+    zh: {
+      name: "玻璃防静电活动地板",
+      shortName: "玻璃活动地板",
+      tagline: "透明钢化玻璃活动地板,兼具防静电保护与通透装饰效果。",
+      overview:
+        "万电通玻璃防静电活动地板采用12mm钢化玻璃面层,搭配精密铝合金边框与高度可调镀锌支架,为数据中心白空间、网络运维中心、办公空间及展厅提供既防静电又视觉通透的架空地板,可透视地板下方的线缆布放。",
+      keyFeatures: [
+        "12mm钢化玻璃面层,防静电电阻10^6–10^9 Ω",
+        "通透设计,可透视地板下方线缆布放",
+        "精密铝合金边框",
+        "镀锌支架高度可调,100–500mm",
+        "承重能力强,800–1000 kg/m²",
+        "典雅装饰性面层,适用于现代办公空间及展厅",
+        "支持定制板材尺寸;支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "板材规格",
+          specs: [
+            { label: "板材尺寸", value: "600×600mm(标准),可定制尺寸" },
+            { label: "面层材质", value: "12mm钢化玻璃" },
+            { label: "边框", value: "精密铝合金" },
+            { label: "承重等级", value: "800–1000 kg/m²" },
+            { label: "表面电阻", value: "10^6–10^9 Ω(防静电)" },
+          ],
+        },
+        {
+          title: "支架",
+          specs: [
+            { label: "材质", value: "镀锌钢" },
+            { label: "高度范围", value: "100–500mm,可调节" },
+          ],
+        },
+      ],
+      applications: ["需要展示线缆布放的数据中心白空间", "网络运维中心", "现代办公空间", "展厅与展览"],
+      customizationOptions: ["板材尺寸", "支架高度", "承重等级", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "玻璃活动地板的承重是否与标准防静电活动地板一样强？",
+          answer:
+            "是的。12mm钢化玻璃面层搭配铝合金边框,承重等级达800–1000 kg/m²,与标准钢基或硫酸钙基防静电地板板材相当,同时增加了通透装饰效果。",
+        },
+        {
+          question: "玻璃活动地板通常用在哪些场景，而非标准活动地板？",
+          answer:
+            "当希望将地板下方的线缆布放或基础设施作为设计元素展示时会选用玻璃活动地板——如现代办公大堂、展厅、展览空间及网络运维中心；而标准不透明防静电地板则用于一般数据中心白空间。",
+        },
+      ],
+    },
+  },
   "calcium-sulphate-raised-floor": {
     ar: {
       name: "أرضية مرفوعة بكبريتات الكالسيوم",
