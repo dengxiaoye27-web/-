@@ -77,7 +77,96 @@ export const products: Product[] = [
           "Yes. Haisen is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet"],
+    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu"],
+    relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
+  },
+  {
+    slug: "schuko-pdu",
+    category: "power-distribution",
+    name: "German Standard (Schuko) PDU",
+    shortName: "Schuko PDU",
+    tagline: "1U rack-mount PDU with German standard Schuko outlets for European and CEE-market cabinets.",
+    overview:
+      "The Haisen Schuko PDU is a 1U rack-mount power distribution unit fitted with German standard (Schuko/CEE 7/3) outlets, an illuminated overload-protected power switch and an integrated surge protection module, built for European and CEE-market data center and telecom cabinets. It mounts horizontally or vertically, ships with a heavy-duty Schuko power cord, and is available in standard black or a custom orange housing.",
+    featured: true,
+    images: [
+      "/products/schuko-pdu/01-main.png",
+      "/products/schuko-pdu/08-spec-annotated.png",
+      "/products/schuko-pdu/07-switch-detail.png",
+      "/products/schuko-pdu/03-spd-protection.png",
+      "/products/schuko-pdu/04-plug-cable.png",
+      "/products/schuko-pdu/05-mounting-show.png",
+      "/products/schuko-pdu/02-orange-series.png",
+      "/products/schuko-pdu/06-overview-scene.png",
+    ],
+    keyFeatures: [
+      "Eight German standard (Schuko/CEE 7/3) outlets",
+      "Illuminated rocker power switch with automatic overload protection",
+      "Integrated SPD surge protection module with fireproof shell",
+      "Durable aluminum shell for 1U horizontal or vertical rack mounting",
+      "16A Schuko power cord, 1.5mm² copper core, VDE-style plug shell",
+      "Standard black or custom orange housing; OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Electrical Parameters",
+        specs: [
+          { label: "Rated Voltage", value: "230V" },
+          { label: "Rated Current", value: "16A" },
+          { label: "Rated Power", value: "4000W" },
+          { label: "Rated Frequency", value: "50 Hz" },
+        ],
+      },
+      {
+        title: "Input / Output",
+        specs: [
+          { label: "Input Plug", value: "16A Schuko (CEE 7/7) angled plug" },
+          { label: "Output Sockets", value: "8 × German standard Schuko (CEE 7/3)" },
+          { label: "Cable", value: "1.5mm² copper core, VDE-style shell, custom lengths available" },
+        ],
+      },
+      {
+        title: "Mechanical & Protection",
+        specs: [
+          { label: "Mounting", value: "1U rack, vertical or horizontal" },
+          { label: "Housing Material", value: "Aluminum alloy shell" },
+          { label: "Housing Color", value: "Black (standard) / Orange (custom)" },
+          { label: "Protection", value: "Illuminated overload switch, SPD surge protection, fireproof shell" },
+        ],
+      },
+    ],
+    applications: [
+      "European and CEE-market data center racks",
+      "Telecom equipment rooms in Schuko-standard regions",
+      "Colocation cabinets",
+      "Industrial and network control cabinets",
+    ],
+    customizationOptions: [
+      "Housing color (black / orange / custom)",
+      "Outlet count and cable length",
+      "Input plug and cord length",
+      "Custom branding / labeling",
+      "OEM / ODM packaging",
+    ],
+    standards: ["Designed to CEE 7/3 (Schuko) and VDE connector standards", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is a Schuko PDU and where is it used?",
+        answer:
+          "A Schuko PDU is a rack power distribution unit fitted with German standard (Schuko/CEE 7/3) outlets, the standard socket type used across Germany and much of continental Europe. It is used to distribute rack power to IT equipment fitted with Schuko-style power cords.",
+      },
+      {
+        question: "Does the Schuko PDU include surge protection?",
+        answer:
+          "Yes. Each unit includes an integrated SPD (surge protection device) module with a fireproof shell, alongside an illuminated rocker switch with automatic overload protection.",
+      },
+      {
+        question: "Can the housing color or outlet layout be customized?",
+        answer:
+          "Yes. Haisen is a factory-direct manufacturer and offers the Schuko PDU in standard black or a custom orange housing, with outlet count, cable length and branding configured per project, including OEM/ODM.",
+      },
+    ],
+    relatedProductSlugs: ["pdu", "intelligent-pdu", "network-cabinet"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {
