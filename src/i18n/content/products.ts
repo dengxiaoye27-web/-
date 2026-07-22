@@ -1785,6 +1785,353 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     },
   },
 
+  "iec-pdu": {
+    ar: {
+      name: "وحدة PDU بمعيار IEC (C13/C19)",
+      shortName: "PDU معياري IEC",
+      tagline: "وحدة توزيع طاقة للراك 1U بمنافذ IEC من نوعي C13 وC19 لخزانات مراكز البيانات حول العالم.",
+      overview:
+        "وحدة PDU المعيارية IEC من واندتونغ هي وحدة توزيع طاقة للراك بارتفاع 1U مزودة بمنافذ IEC 60320 من نوعي C13 وC19، ومفتاح طاقة مضاء مدمج، وحماية تلقائية من الحمل الزائد، مصممة لخزانات مراكز البيانات والاتصالات حول العالم. تُركَّب رأسياً (0U) أو أفقياً، وتستخدم كابل طاقة متيناً بنواة نحاسية بقدرة تصل إلى 1875 واط، وتُركَّب بواسطة آذان تثبيت مدمجة لتوفير تركيب آمن ومتعدد الاستخدامات.",
+      keyFeatures: [
+        "مزيج من منافذ IEC 60320 من نوعي C13 وC19 (مثال: 6×C13 و2×C19) لمعدات الخوادم والشبكات",
+        "مفتاح طاقة مضاء بحماية تلقائية من الحمل الزائد",
+        "هيكل معدني أسود متين للتركيب الرأسي (0U) أو الأفقي في الراك",
+        "آذان تثبيت مدمجة لتركيب آمن ومتعدد الاستخدامات",
+        "كابل بنواة نحاسية متينة بمقياس 14 AWG / 2.08 مم²، بقدرة 1875 واط، بنية وفق معيار UL",
+        "متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "المعاملات الكهربائية",
+          specs: [
+            { label: "الجهد المقنن", value: "100–125 فولت / 200–250 فولت" },
+            { label: "القدرة المقننة", value: "1875 واط" },
+            { label: "التردد المقنن", value: "50/60 هرتز" },
+          ],
+        },
+        {
+          title: "الدخل / الخرج",
+          specs: [
+            { label: "منافذ الخرج", value: "IEC 60320 من نوعي C13 وC19، مزيج مخصص متاح" },
+            { label: "الكابل", value: "نواة نحاسية 14 AWG / 2.08 مم²، بنية وفق معيار UL" },
+          ],
+        },
+        {
+          title: "الهيكل والحماية",
+          specs: [
+            { label: "التركيب", value: "راك 0U رأسي أو أفقي، آذان تثبيت مدمجة" },
+            { label: "مادة الهيكل", value: "هيكل معدني أسود متين" },
+            { label: "الحماية", value: "مفتاح مضاء بحماية تلقائية من الحمل الزائد" },
+          ],
+        },
+      ],
+      applications: [
+        "خزانات مراكز البيانات حول العالم",
+        "غرف الخوادم التي تتطلب كابلات معدات مختلطة C13/C19",
+        "خزانات معدات الاتصالات والشبكات",
+        "خزانات الاستضافة المشتركة",
+      ],
+      customizationOptions: [
+        "عدد ومزيج منافذ C13/C19",
+        "قابس الدخل وطول الكابل",
+        "اتجاه التركيب",
+        "علامة تجارية/تصنيف مخصص",
+        "تعبئة OEM/ODM",
+      ],
+      standards: ["مصمم وفق معايير موصلات IEC 60320", "الشهادات متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ما الفرق بين منفذ C13 ومنفذ C19؟",
+          answer:
+            "C13 هو منفذ IEC القياسي المستخدم في معظم كابلات الخوادم والمحولات ومعدات الشبكات؛ أما C19 فهو منفذ بتيار أعلى يُستخدم لمعدات ذات استهلاك طاقة أكبر، مثل حاويات الخوادم النصلية وبعض وحدات UPS. يتيح الجمع بين النوعين في وحدة واحدة خدمة معدات بكلا نوعي كابلات الطاقة.",
+        },
+        {
+          question: "هل يمكن تركيب وحدة PDU المعيارية IEC رأسياً في الراك؟",
+          answer:
+            "نعم. الوحدة مصممة للتركيب الرأسي 0U على جانب الراك أو التركيب الأفقي 1U، مع آذان تثبيت مدمجة لتوفير تركيب آمن في كلتا الحالتين.",
+        },
+        {
+          question: "هل يمكن لواندتونغ تخصيص مزيج منافذ C13/C19؟",
+          answer:
+            "نعم. واندتونغ مُصنّع مباشر من المصنع، ويقوم بتكوين عدد ومزيج منافذ C13/C19 وقابس الدخل وطول الكابل بما يتناسب مع مواصفات الراك والمعدات لكل مشروع، بما في ذلك OEM/ODM.",
+        },
+      ],
+    },
+    fr: {
+      name: "PDU aux normes IEC (C13/C19)",
+      shortName: "PDU IEC",
+      tagline: "PDU montable en rack 1U à prises IEC C13 et C19 pour armoires de centres de données du monde entier.",
+      overview:
+        "Le PDU IEC Wandtung est une unité de distribution d'énergie montable en rack 1U équipée de prises IEC 60320 C13 et C19, d'un interrupteur d'alimentation lumineux intégré et d'une protection automatique contre les surcharges, conçu pour les armoires de centres de données et de télécommunications du monde entier. Il se monte verticalement (0U) ou horizontalement, utilise un cordon d'alimentation robuste à âme cuivre d'une capacité de 1875W, et s'installe avec des pattes de fixation intégrées pour un ajustement sûr et polyvalent.",
+      keyFeatures: [
+        "Mélange de prises IEC 60320 C13 et C19 (par ex. 6× C13 et 2× C19) pour équipements serveurs et réseau",
+        "Interrupteur d'alimentation lumineux avec protection automatique contre les surcharges",
+        "Boîtier métallique noir robuste pour montage en rack vertical (0U) ou horizontal",
+        "Pattes de fixation intégrées pour une installation sûre et polyvalente",
+        "Câble à âme cuivre robuste 14 AWG / 2,08 mm², capacité 1875W, construction aux normes UL",
+        "OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Paramètres électriques",
+          specs: [
+            { label: "Tension nominale", value: "100–125V / 200–250V" },
+            { label: "Puissance nominale", value: "1875W" },
+            { label: "Fréquence nominale", value: "50/60 Hz" },
+          ],
+        },
+        {
+          title: "Entrée / Sortie",
+          specs: [
+            { label: "Prises de sortie", value: "IEC 60320 C13 et C19, mélange personnalisé disponible" },
+            { label: "Câble", value: "Âme cuivre 14 AWG / 2,08 mm², construction aux normes UL" },
+          ],
+        },
+        {
+          title: "Mécanique et protection",
+          specs: [
+            { label: "Montage", value: "Rack 0U vertical ou horizontal, pattes de fixation intégrées" },
+            { label: "Matériau du boîtier", value: "Boîtier métallique noir robuste" },
+            { label: "Protection", value: "Interrupteur lumineux avec protection automatique contre les surcharges" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centres de données dans le monde entier",
+        "Salles serveurs nécessitant des cordons d'équipement C13/C19 mixtes",
+        "Armoires d'équipement télécoms et réseau",
+        "Armoires de colocation",
+      ],
+      customizationOptions: [
+        "Nombre et mélange de prises C13/C19",
+        "Fiche d'entrée et longueur de câble",
+        "Orientation de montage",
+        "Marquage / étiquetage personnalisé",
+        "Conditionnement OEM / ODM",
+      ],
+      standards: ["Conçu selon les normes de connecteurs IEC 60320", "Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Quelle est la différence entre une prise C13 et une prise C19 ?",
+          answer:
+            "C13 est la prise IEC standard utilisée par la plupart des cordons d'alimentation de serveurs, commutateurs et équipements réseau ; C19 est une prise à courant plus élevé utilisée par les équipements à consommation plus importante, comme certains châssis lame et onduleurs. Combiner les deux sur un même PDU permet à une seule unité de desservir des équipements des deux types de cordon.",
+        },
+        {
+          question: "Le PDU IEC peut-il être monté verticalement dans le rack ?",
+          answer:
+            "Oui. L'unité est conçue pour un montage vertical 0U le long du rack ou un montage horizontal 1U, avec des pattes de fixation intégrées pour un ajustement sûr dans les deux cas.",
+        },
+        {
+          question: "Wandtung peut-il personnaliser le mélange de prises C13/C19 ?",
+          answer:
+            "Oui. Wandtung est un fabricant direct d'usine et configure le nombre et le mélange de prises C13/C19, la fiche d'entrée et la longueur de câble selon les spécifications de rack et d'équipement de chaque projet, y compris en OEM/ODM.",
+        },
+      ],
+    },
+    es: {
+      name: "PDU de estándar IEC (C13/C19)",
+      shortName: "PDU IEC",
+      tagline: "PDU de montaje en rack 1U con tomas IEC C13 y C19 para gabinetes de centros de datos de todo el mundo.",
+      overview:
+        "El PDU IEC de Wandtung es una unidad de distribución de energía de montaje en rack 1U equipada con tomas IEC 60320 C13 y C19, un interruptor de encendido iluminado integrado y protección automática contra sobrecargas, diseñado para gabinetes de centros de datos y telecomunicaciones de todo el mundo. Se monta vertical (0U) u horizontalmente, utiliza un cable de alimentación resistente con núcleo de cobre con capacidad de 1875W, y se instala con orejetas de montaje integradas para un ajuste seguro y versátil.",
+      keyFeatures: [
+        "Combinación de tomas IEC 60320 C13 y C19 (p. ej. 6× C13 y 2× C19) para equipos de servidores y red",
+        "Interruptor de encendido iluminado con protección automática contra sobrecargas",
+        "Carcasa metálica negra robusta para montaje en rack vertical (0U) u horizontal",
+        "Orejetas de montaje integradas para una instalación segura y versátil",
+        "Cable con núcleo de cobre resistente 14 AWG / 2,08 mm², capacidad de 1875W, construcción según norma UL",
+        "OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Parámetros eléctricos",
+          specs: [
+            { label: "Tensión nominal", value: "100–125V / 200–250V" },
+            { label: "Potencia nominal", value: "1875W" },
+            { label: "Frecuencia nominal", value: "50/60 Hz" },
+          ],
+        },
+        {
+          title: "Entrada / Salida",
+          specs: [
+            { label: "Tomas de salida", value: "IEC 60320 C13 y C19, combinación personalizada disponible" },
+            { label: "Cable", value: "Núcleo de cobre 14 AWG / 2,08 mm², construcción según norma UL" },
+          ],
+        },
+        {
+          title: "Mecánica y protección",
+          specs: [
+            { label: "Montaje", value: "Rack 0U vertical u horizontal, orejetas de montaje integradas" },
+            { label: "Material de la carcasa", value: "Carcasa metálica negra robusta" },
+            { label: "Protección", value: "Interruptor iluminado con protección automática contra sobrecargas" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centros de datos de todo el mundo",
+        "Salas de servidores que requieren cables de equipo mixtos C13/C19",
+        "Gabinetes de equipos de telecomunicaciones y red",
+        "Gabinetes de colocación",
+      ],
+      customizationOptions: [
+        "Cantidad y combinación de tomas C13/C19",
+        "Enchufe de entrada y longitud del cable",
+        "Orientación de montaje",
+        "Marca / etiquetado personalizado",
+        "Empaque OEM / ODM",
+      ],
+      standards: ["Diseñado según los estándares de conectores IEC 60320", "Certificación disponible bajo pedido según las especificaciones del proyecto"],
+      faqs: [
+        {
+          question: "¿Cuál es la diferencia entre una toma C13 y una C19?",
+          answer:
+            "C13 es la toma IEC estándar utilizada por la mayoría de los cables de servidores, switches y equipos de red; C19 es una toma de mayor corriente utilizada por equipos con mayor consumo, como chasis blade y algunas UPS. Combinar ambas en un mismo PDU permite que una sola unidad dé servicio a equipos con ambos tipos de cable.",
+        },
+        {
+          question: "¿Se puede montar el PDU IEC verticalmente en el rack?",
+          answer:
+            "Sí. La unidad está diseñada para montaje vertical 0U a lo largo del rack o montaje horizontal 1U, con orejetas de montaje integradas para un ajuste seguro en ambos casos.",
+        },
+        {
+          question: "¿Puede Wandtung personalizar la combinación de tomas C13/C19?",
+          answer:
+            "Sí. Wandtung es un fabricante directo de fábrica y configura la cantidad y combinación de tomas C13/C19, el enchufe de entrada y la longitud del cable según las especificaciones de rack y equipo de cada proyecto, incluyendo OEM/ODM.",
+        },
+      ],
+    },
+    ru: {
+      name: "PDU стандарта IEC (C13/C19)",
+      shortName: "PDU IEC",
+      tagline: "Монтируемый в стойку блок PDU высотой 1U с розетками IEC C13 и C19 для шкафов центров обработки данных по всему миру.",
+      overview:
+        "PDU IEC Wandtung — это монтируемый в стойку блок распределения питания высотой 1U, оснащённый розетками IEC 60320 C13 и C19, встроенным подсвечиваемым выключателем питания и автоматической защитой от перегрузки, разработанный для шкафов центров обработки данных и телекоммуникационного оборудования по всему миру. Устанавливается вертикально (0U) или горизонтально, использует прочный кабель питания с медной жилой мощностью до 1875Вт и монтируется с помощью встроенных монтажных ушек для надёжной и универсальной установки.",
+      keyFeatures: [
+        "Смешанные розетки IEC 60320 C13 и C19 (например, 6× C13 и 2× C19) для серверного и сетевого оборудования",
+        "Подсвечиваемый выключатель питания с автоматической защитой от перегрузки",
+        "Прочный чёрный металлический корпус для вертикального (0U) или горизонтального монтажа в стойку",
+        "Встроенные монтажные ушки для надёжной и универсальной установки",
+        "Прочный медный кабель 14 AWG / 2,08 мм², мощность 1875Вт, конструкция по стандарту UL",
+        "Доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Электрические параметры",
+          specs: [
+            { label: "Номинальное напряжение", value: "100–125В / 200–250В" },
+            { label: "Номинальная мощность", value: "1875Вт" },
+            { label: "Номинальная частота", value: "50/60 Гц" },
+          ],
+        },
+        {
+          title: "Вход / Выход",
+          specs: [
+            { label: "Выходные розетки", value: "IEC 60320 C13 и C19, доступна индивидуальная комбинация" },
+            { label: "Кабель", value: "Медная жила 14 AWG / 2,08 мм², конструкция по стандарту UL" },
+          ],
+        },
+        {
+          title: "Механика и защита",
+          specs: [
+            { label: "Монтаж", value: "Стойка 0U вертикально или горизонтально, встроенные монтажные ушки" },
+            { label: "Материал корпуса", value: "Прочный чёрный металлический корпус" },
+            { label: "Защита", value: "Подсвечиваемый выключатель с автоматической защитой от перегрузки" },
+          ],
+        },
+      ],
+      applications: [
+        "Стойки центров обработки данных по всему миру",
+        "Серверные помещения, требующие смешанных кабелей оборудования C13/C19",
+        "Шкафы телекоммуникационного и сетевого оборудования",
+        "Шкафы колокации",
+      ],
+      customizationOptions: [
+        "Количество и комбинация розеток C13/C19",
+        "Входная вилка и длина кабеля",
+        "Ориентация монтажа",
+        "Индивидуальный брендинг / маркировка",
+        "Упаковка OEM / ODM",
+      ],
+      standards: ["Разработан в соответствии со стандартами разъёмов IEC 60320", "Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "В чём разница между розетками C13 и C19?",
+          answer:
+            "C13 — это стандартная розетка IEC, используемая большинством кабелей серверов, коммутаторов и сетевого оборудования; C19 — розетка с более высоким током, используемая оборудованием с большим энергопотреблением, например блейд-шасси и некоторыми ИБП. Совмещение обоих типов на одном PDU позволяет одному блоку обслуживать оборудование с обоими типами кабелей.",
+        },
+        {
+          question: "Можно ли установить PDU IEC вертикально в стойке?",
+          answer:
+            "Да. Блок рассчитан на вертикальный монтаж 0U вдоль стойки или горизонтальный монтаж 1U, со встроенными монтажными ушками для надёжной установки в обоих случаях.",
+        },
+        {
+          question: "Может ли Wandtung настроить комбинацию розеток C13/C19?",
+          answer:
+            "Да. Wandtung является прямым производителем и настраивает количество и комбинацию розеток C13/C19, входную вилку и длину кабеля под спецификацию стойки и оборудования каждого проекта, включая OEM/ODM.",
+        },
+      ],
+    },
+    zh: {
+      name: "IEC标准PDU（C13/C19）",
+      shortName: "IEC标准PDU",
+      tagline: "配备IEC C13及C19插座的1U机架式PDU，适用于全球数据中心机柜。",
+      overview:
+        "万电通IEC标准PDU是一款1U机架式配电单元，配备IEC 60320 C13及C19插座、内置发光电源开关及自动过载保护，专为全球数据中心与电信机柜设计。可垂直（0U）或水平安装，采用额定功率达1875W的加厚铜芯电源线，配备内置安装耳片，实现安全、灵活的多种安装方式。",
+      keyFeatures: [
+        "混合配置IEC 60320 C13及C19插座（如6路C13+2路C19），适配服务器与网络设备",
+        "发光电源开关，带自动过载保护",
+        "坚固黑色金属外壳，支持机架垂直（0U）或水平安装",
+        "内置安装耳片，实现安全、灵活的安装方式",
+        "14 AWG / 2.08mm²加厚铜芯线缆，1875W容量，符合UL标准结构",
+        "支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "电气参数",
+          specs: [
+            { label: "额定电压", value: "100–125V / 200–250V" },
+            { label: "额定功率", value: "1875W" },
+            { label: "额定频率", value: "50/60Hz" },
+          ],
+        },
+        {
+          title: "输入/输出",
+          specs: [
+            { label: "输出插座", value: "IEC 60320 C13及C19，可定制混合配置" },
+            { label: "线缆", value: "14 AWG / 2.08mm²铜芯，符合UL标准结构" },
+          ],
+        },
+        {
+          title: "机械结构与保护",
+          specs: [
+            { label: "安装方式", value: "0U垂直或水平机架安装，内置安装耳片" },
+            { label: "外壳材质", value: "坚固黑色金属外壳" },
+            { label: "保护", value: "发光开关，带自动过载保护" },
+          ],
+        },
+      ],
+      applications: ["全球数据中心IT机架", "需要混合C13/C19设备电源线的服务器机房", "电信与网络设备机柜", "托管机柜"],
+      customizationOptions: ["C13/C19插座数量与混合配置", "输入插头与线缆长度", "安装方向", "定制品牌/标识", "OEM/ODM包装"],
+      standards: ["按IEC 60320连接器标准设计", "认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "C13插座和C19插座有什么区别？",
+          answer:
+            "C13是大多数服务器、交换机及网络设备电源线使用的标准IEC插座；C19则是电流规格更高的插座，用于功耗更大的设备，如刀片服务器机箱及部分UPS设备。在一台PDU上混合配置两种插座，可让单台设备同时为两种电源线类型的设备供电。",
+        },
+        {
+          question: "IEC标准PDU可以垂直安装在机架上吗？",
+          answer:
+            "可以。该设备既支持沿机架侧面垂直（0U）安装，也支持水平（1U）安装，两种方式均配备内置安装耳片以确保安装牢固。",
+        },
+        {
+          question: "万电通能否定制C13/C19插座混合配置？",
+          answer:
+            "可以。万电通是工厂直营制造商，可根据每个项目的机架与设备规格定制C13/C19插座数量与混合配置、输入插头及线缆长度，包括OEM/ODM。",
+        },
+      ],
+    },
+  },
+
   "intelligent-pdu": {
     ar: {
       name: "PDU ذكي",
