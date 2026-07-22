@@ -980,11 +980,21 @@ export const products: Product[] = [
     overview:
       "The Wandtung Rack Mount UPS is a double-conversion online UPS packaged in a standard 19-inch rack format, providing clean, regulated backup power for IT and network equipment with flexible battery run-time configurations.",
     featured: true,
+    images: [
+      "/products/rack-mount-ups/01-main.jpg",
+      "/products/rack-mount-ups/02-banner.jpg",
+      "/products/rack-mount-ups/03-lcd-panel.jpg",
+      "/products/rack-mount-ups/04-rear-interfaces.jpg",
+      "/products/rack-mount-ups/05-remote-monitoring.jpg",
+      "/products/rack-mount-ups/06-data-center-scene.jpg",
+    ],
     keyFeatures: [
       "True online double-conversion topology",
       "Rack-mount 2U–6U formats",
+      "LCD display panel with real-time input/output/battery/load monitoring",
       "Extended battery pack options for longer runtime",
-      "RS232 / USB / SNMP / dry-contact communication",
+      "RS232 standard, expandable via smart card slot to RS485, dry contact or SNMP",
+      "Remote monitoring via SNMP / RS232 / mobile app with instant power outage alerts",
       "Automatic bypass on overload or fault",
     ],
     specGroups: [
