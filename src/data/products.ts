@@ -2548,7 +2548,79 @@ export const products: Product[] = [
           "Wire mesh tray is lightweight, easy to modify on site and well suited to structured data/fiber cabling, while ladder tray offers higher load capacity and better heat dissipation for heavier power cable runs — many data centers use both, segregated by cable type.",
       },
     ],
-    relatedProductSlugs: ["anti-static-raised-floor", "network-cabinet"],
+    relatedProductSlugs: ["anti-static-raised-floor", "network-cabinet", "fiber-optic-cable-tray"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "fiber-optic-cable-tray",
+    category: "cable-management",
+    name: "Polymer Fiber Optic Cable Tray",
+    shortName: "Fiber Optic Cable Tray",
+    tagline: "Modular polymer raceway system protecting fiber optic cable bend radius through the full pathway.",
+    overview:
+      "The Wandtung Polymer Fiber Optic Cable Tray is a modular, UL94-V0 flame-retardant plastic raceway system with smooth, rounded internal channels that protect fiber optic cable from sharp bends and abrasion along its entire route. The modular fitting range — straight sections in multiple widths, 90° and 45° elbows, tees, reducers and vertical risers — snap together with tool-free connectors to build a complete enclosed fiber pathway between racks, rooms and floors.",
+    featured: true,
+    images: [
+      "/products/fiber-optic-cable-tray/01-straight-120x100.png",
+      "/products/fiber-optic-cable-tray/04-90deg-elbow.png",
+      "/products/fiber-optic-cable-tray/08-tee-with-connector.png",
+      "/products/fiber-optic-cable-tray/11-vertical-riser.png",
+      "/products/fiber-optic-cable-tray/06-45deg-up.png",
+      "/products/fiber-optic-cable-tray/07-reducer.png",
+      "/products/fiber-optic-cable-tray/02-straight-240x100.png",
+      "/products/fiber-optic-cable-tray/03-straight-360x100.png",
+      "/products/fiber-optic-cable-tray/05-tee-100x100.png",
+      "/products/fiber-optic-cable-tray/09-90deg-elbow-50x50.png",
+      "/products/fiber-optic-cable-tray/10-square-straight.png",
+    ],
+    keyFeatures: [
+      "UL94-V0 flame-retardant polymer construction",
+      "Smooth, rounded internal channel protects fiber bend radius along the full route",
+      "Full modular fitting range: straight sections, 90°/45° elbows, tees, reducers, vertical risers",
+      "Snap-fit, tool-free connectors between sections",
+      "Straight sections available in 120mm, 240mm and 360mm widths (100mm depth)",
+      "Reduced-size (50x50mm) fittings for tighter routing",
+    ],
+    specGroups: [
+      {
+        title: "Construction",
+        specs: [
+          { label: "Material", value: "UL94-V0 flame-retardant polymer" },
+          { label: "Straight Section Widths", value: "120 / 240 / 360 mm (100mm depth)" },
+          { label: "Reduced-Size Fittings", value: "50 x 50 mm elbow" },
+          { label: "Connection", value: "Snap-fit, tool-free" },
+        ],
+      },
+      {
+        title: "Fitting Range",
+        specs: [
+          { label: "Elbows", value: "90° horizontal, 45° riser" },
+          { label: "Junctions", value: "Tee (plain and with connector port)" },
+          { label: "Transitions", value: "Reducer, vertical riser, square straight duct" },
+        ],
+      },
+    ],
+    applications: [
+      "Fiber optic cable pathways between racks and rows",
+      "Inter-room and inter-floor fiber backbone routing",
+      "Data center and telecom fiber distribution",
+      "Structured cabling rooms requiring bend-radius protection",
+    ],
+    customizationOptions: ["Section width", "Fitting mix", "Color", "OEM/ODM"],
+    standards: ["UL94-V0 flame retardancy", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Why use a dedicated fiber optic cable tray instead of a standard wire mesh or ladder tray?",
+        answer:
+          "A dedicated polymer fiber tray fully encloses the cable in a smooth, rounded channel that maintains minimum bend radius and protects against abrasion along the entire route, whereas open wire mesh or ladder trays leave fiber exposed and rely on the installer to manage bend radius manually at every turn.",
+      },
+      {
+        question: "What fitting types are available for the polymer fiber tray system?",
+        answer:
+          "The system includes straight sections in multiple widths, 90° and 45° elbows (including a reduced 50x50mm elbow), tee junctions (plain and with a connector port), reducers, vertical risers and square straight ducts, all connecting with tool-free snap-fit joints to build a complete enclosed pathway.",
+      },
+    ],
+    relatedProductSlugs: ["cable-tray", "wire-mesh-cable-tray"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
   {
