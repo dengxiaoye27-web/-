@@ -2252,32 +2252,57 @@ export const products: Product[] = [
     shortName: "Anti-Static Raised Floor",
     tagline: "Raised access flooring for airflow management and cable routing in data center white space.",
     overview:
-      "Wandtung anti-static raised floor panels provide an elevated, load-rated deck for underfloor air distribution and cable routing, with a static-dissipative surface finish suited to data center and control room environments.",
+      "Wandtung anti-static raised floor panels provide an elevated, load-rated deck for underfloor air distribution and cable routing, with a static-dissipative surface finish suited to data center and control room environments. Steel panels use 2.0mm cold-rolled SPCC steel with a powder-coated finish and precision corner lock system, available in solid or ventilated (25% open area) versions, on a height-adjustable galvanized pedestal and heavy-duty cross stringer system.",
+    images: [
+      "/products/anti-static-raised-floor/01-main.jpg",
+      "/products/anti-static-raised-floor/02-ventilated-panel.jpg",
+      "/products/anti-static-raised-floor/03-panel-structure.jpg",
+      "/products/anti-static-raised-floor/04-system-overview.jpg",
+      "/products/anti-static-raised-floor/05-cleanroom-scene.jpg",
+      "/products/anti-static-raised-floor/06-data-center-scene.jpg",
+    ],
     keyFeatures: [
-      "Static-dissipative HPL or PVC surface finish",
+      "Static-dissipative HPL, PVC or powder-coated steel surface finish",
       "Steel or calcium sulphate core options",
-      "Adjustable pedestal height",
+      "Ventilated panel option with 25% open area for underfloor airflow",
+      "2.0mm cold-rolled SPCC steel with precision corner lock system",
+      "Height-adjustable galvanized pedestal and heavy-duty cross stringer frame",
       "High point-load and uniform-load rating",
     ],
     specGroups: [
       {
         title: "Panel Specification",
         specs: [
-          { label: "Panel Size", value: "600 x 600 mm" },
+          { label: "Panel Size", value: "600 x 600 mm (standard), custom sizes available" },
           { label: "Core Material", value: "Steel-encased / calcium sulphate" },
-          { label: "Load Rating", value: "Up to 1000 kg concentrated load (model dependent)" },
+          { label: "Steel Thickness", value: "2.0mm cold-rolled SPCC (steel panels)" },
+          { label: "Load Rating", value: "1000–1500 kg/m² (model dependent)" },
           { label: "Surface Resistance", value: "10^6–10^9 Ω (anti-static)" },
+          { label: "Ventilated Option", value: "25% open area airflow panel" },
+        ],
+      },
+      {
+        title: "Pedestal & Frame",
+        specs: [
+          { label: "Pedestal Material", value: "Galvanized steel, adjustable" },
+          { label: "Height Range", value: "100–500mm, adjustable" },
+          { label: "Frame", value: "Heavy-duty cross stringer system" },
         ],
       },
     ],
-    applications: ["Data center white space", "Control rooms", "Clean rooms"],
-    customizationOptions: ["Panel core type", "Finish", "Pedestal height"],
-    standards: ["Certification available on request per project spec"],
+    applications: ["Data center white space", "Control rooms", "Clean rooms", "Server rooms"],
+    customizationOptions: ["Panel core type", "Finish", "Solid or ventilated panel", "Pedestal height"],
+    standards: ["CE certified", "ISO 9001", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is anti-static raised flooring used for in a data center?",
         answer:
           "Anti-static raised flooring creates a void beneath the data hall floor for underfloor air distribution and cable routing, while its static-dissipative surface reduces the risk of electrostatic discharge damaging sensitive IT equipment.",
+      },
+      {
+        question: "What is a ventilated raised floor panel used for?",
+        answer:
+          "A ventilated (perforated) raised floor panel has roughly 25% open area to direct underfloor cold air up into targeted cold aisles or equipment rows, and is typically mixed with solid panels across a data hall rather than used throughout.",
       },
     ],
     relatedProductSlugs: ["cable-tray", "precision-air-conditioner", "glass-raised-floor"],
