@@ -531,6 +531,13 @@ export const products: Product[] = [
     overview:
       "The Wandtung Intelligent PDU is a network-managed power distribution unit built for data centers that require visibility and control at the outlet level. It combines current, voltage, power and energy monitoring, temperature & humidity sensing, and remote outlet switching, accessible via SNMP, Modbus, RS485 and a web management interface.",
     featured: true,
+    images: [
+      "/products/intelligent-pdu/01-main.png",
+      "/products/intelligent-pdu/02-lcd-monitoring.png",
+      "/products/intelligent-pdu/03-power-analytics.jpg",
+      "/products/intelligent-pdu/04-anti-shedding-sockets.png",
+      "/products/intelligent-pdu/05-surge-protection.png",
+    ],
     keyFeatures: [
       "Outlet-level current, voltage and power monitoring",
       "Cumulative energy consumption logging",
