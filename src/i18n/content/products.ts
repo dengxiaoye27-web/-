@@ -331,6 +331,368 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     },
   },
 
+  "schuko-pdu": {
+    ar: {
+      name: "وحدة PDU بمقبس ألماني (شوكو)",
+      shortName: "PDU شوكو",
+      tagline: "وحدة توزيع طاقة للراك 1U بمنافذ شوكو الألمانية القياسية لخزانات الأسواق الأوروبية وCEE.",
+      overview:
+        "وحدة PDU شوكو من هايسِن هي وحدة توزيع طاقة للراك بارتفاع 1U مزودة بمنافذ ألمانية قياسية (شوكو/CEE 7/3)، ومفتاح طاقة مضاء محمي من الحمل الزائد، ووحدة حماية من التيار المفاجئ (SPD) مدمجة، مصممة لخزانات مراكز البيانات والاتصالات في الأسواق الأوروبية ومنطقة CEE. تُركَّب أفقياً أو رأسياً، وتأتي بكابل طاقة شوكو متين، ومتوفرة بهيكل أسود قياسي أو هيكل برتقالي مخصص.",
+      keyFeatures: [
+        "ثمانية منافذ ألمانية قياسية (شوكو/CEE 7/3)",
+        "مفتاح طاقة مضاء بحماية تلقائية من الحمل الزائد",
+        "وحدة حماية SPD من التيار المفاجئ مدمجة بهيكل مقاوم للحريق",
+        "هيكل ألومنيوم متين للتركيب في الراك بارتفاع 1U أفقياً أو رأسياً",
+        "كابل طاقة شوكو 16A، نواة نحاسية 1.5 مم²، هيكل قابس بمعيار VDE",
+        "هيكل أسود قياسي أو برتقالي مخصص؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "المعاملات الكهربائية",
+          specs: [
+            { label: "الجهد المقنن", value: "230 فولت" },
+            { label: "التيار المقنن", value: "16A" },
+            { label: "القدرة المقننة", value: "4000 واط" },
+            { label: "التردد المقنن", value: "50 هرتز" },
+          ],
+        },
+        {
+          title: "الدخل / الخرج",
+          specs: [
+            { label: "قابس الدخل", value: "قابس شوكو (CEE 7/7) بزاوية 16A" },
+            { label: "منافذ الخرج", value: "8 × منافذ ألمانية قياسية (شوكو CEE 7/3)" },
+            { label: "الكابل", value: "نواة نحاسية 1.5 مم²، هيكل بمعيار VDE، أطوال مخصصة متاحة" },
+          ],
+        },
+        {
+          title: "الهيكل والحماية",
+          specs: [
+            { label: "التركيب", value: "راك 1U، أفقي أو رأسي" },
+            { label: "مادة الهيكل", value: "سبيكة ألومنيوم" },
+            { label: "لون الهيكل", value: "أسود (قياسي) / برتقالي (مخصص)" },
+            { label: "الحماية", value: "مفتاح مضاء بحماية من الحمل الزائد، حماية SPD من التيار المفاجئ، هيكل مقاوم للحريق" },
+          ],
+        },
+      ],
+      applications: [
+        "خزانات مراكز البيانات في الأسواق الأوروبية وCEE",
+        "غرف معدات الاتصالات في مناطق معيار شوكو",
+        "خزانات الاستضافة المشتركة",
+        "خزانات التحكم الصناعي والشبكي",
+      ],
+      customizationOptions: [
+        "لون الهيكل (أسود / برتقالي / مخصص)",
+        "عدد المنافذ وطول الكابل",
+        "قابس الدخل وطول السلك",
+        "علامة تجارية/تصنيف مخصص",
+        "تعبئة OEM/ODM",
+      ],
+      standards: ["مصمم وفق معايير موصلات CEE 7/3 (شوكو) وVDE", "الشهادات متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ما هي وحدة PDU شوكو وأين تُستخدم؟",
+          answer:
+            "وحدة PDU شوكو هي وحدة توزيع طاقة للراك مزودة بمنافذ ألمانية قياسية (شوكو/CEE 7/3)، وهي نوع المقبس القياسي المستخدم في ألمانيا ومعظم أوروبا القارية. تُستخدم لتوزيع طاقة الراك على معدات تقنية المعلومات المزودة بكابلات طاقة من نوع شوكو.",
+        },
+        {
+          question: "هل تتضمن وحدة PDU شوكو حماية من التيار المفاجئ؟",
+          answer:
+            "نعم. تتضمن كل وحدة وحدة حماية SPD (جهاز حماية من التيار المفاجئ) مدمجة بهيكل مقاوم للحريق، إلى جانب مفتاح مضاء بحماية تلقائية من الحمل الزائد.",
+        },
+        {
+          question: "هل يمكن تخصيص لون الهيكل أو تخطيط المنافذ؟",
+          answer:
+            "نعم. هايسِن مُصنّع مباشر من المصنع، ويوفر وحدة PDU شوكو بهيكل أسود قياسي أو برتقالي مخصص، مع تكوين عدد المنافذ وطول الكابل والعلامة التجارية حسب كل مشروع، بما في ذلك OEM/ODM.",
+        },
+      ],
+    },
+    fr: {
+      name: "PDU aux normes allemandes (Schuko)",
+      shortName: "PDU Schuko",
+      tagline: "PDU montable en rack 1U à prises Schuko aux normes allemandes pour armoires des marchés européens et CEE.",
+      overview:
+        "Le PDU Schuko Haisen est une unité de distribution d'énergie montable en rack 1U équipée de prises aux normes allemandes (Schuko/CEE 7/3), d'un interrupteur lumineux protégé contre les surcharges et d'un module de protection contre les surtensions intégré, conçu pour les armoires de centres de données et de télécommunications des marchés européens et CEE. Il se monte horizontalement ou verticalement, est livré avec un cordon d'alimentation Schuko robuste, et est disponible en boîtier noir standard ou orange personnalisé.",
+      keyFeatures: [
+        "Huit prises aux normes allemandes (Schuko/CEE 7/3)",
+        "Interrupteur à bascule lumineux avec protection automatique contre les surcharges",
+        "Module de protection contre les surtensions (SPD) intégré à coque ignifuge",
+        "Boîtier en aluminium durable pour montage en rack 1U horizontal ou vertical",
+        "Cordon d'alimentation Schuko 16A, âme cuivre 1,5 mm², coque de fiche de type VDE",
+        "Boîtier noir standard ou orange personnalisé ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Paramètres électriques",
+          specs: [
+            { label: "Tension nominale", value: "230V" },
+            { label: "Courant nominal", value: "16A" },
+            { label: "Puissance nominale", value: "4000W" },
+            { label: "Fréquence nominale", value: "50 Hz" },
+          ],
+        },
+        {
+          title: "Entrée / Sortie",
+          specs: [
+            { label: "Fiche d'entrée", value: "Fiche Schuko coudée (CEE 7/7) 16A" },
+            { label: "Prises de sortie", value: "8 × prises aux normes allemandes (Schuko CEE 7/3)" },
+            { label: "Câble", value: "Âme cuivre 1,5 mm², coque de type VDE, longueurs personnalisées disponibles" },
+          ],
+        },
+        {
+          title: "Mécanique et protection",
+          specs: [
+            { label: "Montage", value: "Rack 1U, vertical ou horizontal" },
+            { label: "Matériau du boîtier", value: "Alliage d'aluminium" },
+            { label: "Couleur du boîtier", value: "Noir (standard) / Orange (personnalisé)" },
+            { label: "Protection", value: "Interrupteur lumineux contre les surcharges, protection SPD contre les surtensions, coque ignifuge" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centres de données des marchés européens et CEE",
+        "Salles techniques télécoms dans les régions à norme Schuko",
+        "Armoires de colocation",
+        "Armoires de contrôle industriel et réseau",
+      ],
+      customizationOptions: [
+        "Couleur du boîtier (noir / orange / personnalisée)",
+        "Nombre de prises et longueur de câble",
+        "Fiche d'entrée et longueur de cordon",
+        "Marquage / étiquetage personnalisé",
+        "Conditionnement OEM / ODM",
+      ],
+      standards: ["Conçu selon les normes de connecteurs CEE 7/3 (Schuko) et VDE", "Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Qu'est-ce qu'un PDU Schuko et où est-il utilisé ?",
+          answer:
+            "Un PDU Schuko est une unité de distribution d'énergie de rack équipée de prises aux normes allemandes (Schuko/CEE 7/3), le type de prise standard utilisé en Allemagne et dans une grande partie de l'Europe continentale. Il sert à distribuer l'alimentation du rack aux équipements informatiques dotés de cordons d'alimentation de type Schuko.",
+        },
+        {
+          question: "Le PDU Schuko inclut-il une protection contre les surtensions ?",
+          answer:
+            "Oui. Chaque unité inclut un module SPD (dispositif de protection contre les surtensions) intégré à coque ignifuge, ainsi qu'un interrupteur à bascule lumineux avec protection automatique contre les surcharges.",
+        },
+        {
+          question: "La couleur du boîtier ou la disposition des prises peuvent-elles être personnalisées ?",
+          answer:
+            "Oui. Haisen est un fabricant direct d'usine et propose le PDU Schuko en boîtier noir standard ou orange personnalisé, avec le nombre de prises, la longueur du câble et le marquage configurés selon chaque projet, y compris en OEM/ODM.",
+        },
+      ],
+    },
+    es: {
+      name: "PDU de estándar alemán (Schuko)",
+      shortName: "PDU Schuko",
+      tagline: "PDU de montaje en rack 1U con tomas Schuko de estándar alemán para gabinetes de mercados europeos y CEE.",
+      overview:
+        "El PDU Schuko de Haisen es una unidad de distribución de energía de montaje en rack 1U equipada con tomas de estándar alemán (Schuko/CEE 7/3), un interruptor de encendido iluminado con protección contra sobrecargas y un módulo de protección contra sobretensiones integrado, diseñado para gabinetes de centros de datos y telecomunicaciones de mercados europeos y CEE. Se monta horizontal o verticalmente, incluye un cable de alimentación Schuko de servicio pesado y está disponible en carcasa negra estándar o naranja personalizada.",
+      keyFeatures: [
+        "Ocho tomas de estándar alemán (Schuko/CEE 7/3)",
+        "Interruptor basculante iluminado con protección automática contra sobrecargas",
+        "Módulo de protección contra sobretensiones (SPD) integrado con carcasa ignífuga",
+        "Carcasa de aluminio duradera para montaje en rack 1U horizontal o vertical",
+        "Cable de alimentación Schuko de 16A, núcleo de cobre de 1,5 mm², carcasa de enchufe tipo VDE",
+        "Carcasa negra estándar o naranja personalizada; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Parámetros eléctricos",
+          specs: [
+            { label: "Tensión nominal", value: "230V" },
+            { label: "Corriente nominal", value: "16A" },
+            { label: "Potencia nominal", value: "4000W" },
+            { label: "Frecuencia nominal", value: "50 Hz" },
+          ],
+        },
+        {
+          title: "Entrada / Salida",
+          specs: [
+            { label: "Enchufe de entrada", value: "Enchufe Schuko acodado (CEE 7/7) de 16A" },
+            { label: "Tomas de salida", value: "8 × tomas de estándar alemán (Schuko CEE 7/3)" },
+            { label: "Cable", value: "Núcleo de cobre de 1,5 mm², carcasa tipo VDE, longitudes personalizadas disponibles" },
+          ],
+        },
+        {
+          title: "Mecánica y protección",
+          specs: [
+            { label: "Montaje", value: "Rack 1U, vertical u horizontal" },
+            { label: "Material de la carcasa", value: "Aleación de aluminio" },
+            { label: "Color de la carcasa", value: "Negro (estándar) / Naranja (personalizado)" },
+            { label: "Protección", value: "Interruptor iluminado con protección contra sobrecargas, protección SPD contra sobretensiones, carcasa ignífuga" },
+          ],
+        },
+      ],
+      applications: [
+        "Racks de centros de datos de mercados europeos y CEE",
+        "Salas de equipos de telecomunicaciones en regiones con estándar Schuko",
+        "Gabinetes de colocación",
+        "Gabinetes de control industrial y de red",
+      ],
+      customizationOptions: [
+        "Color de la carcasa (negro / naranja / personalizado)",
+        "Cantidad de tomas y longitud del cable",
+        "Enchufe de entrada y longitud del cable",
+        "Marca / etiquetado personalizado",
+        "Empaque OEM / ODM",
+      ],
+      standards: ["Diseñado según los estándares de conectores CEE 7/3 (Schuko) y VDE", "Certificación disponible bajo pedido según las especificaciones del proyecto"],
+      faqs: [
+        {
+          question: "¿Qué es un PDU Schuko y dónde se utiliza?",
+          answer:
+            "Un PDU Schuko es una unidad de distribución de energía de rack equipada con tomas de estándar alemán (Schuko/CEE 7/3), el tipo de toma estándar utilizado en Alemania y gran parte de Europa continental. Se utiliza para distribuir la energía del rack a equipos de TI con cables de alimentación tipo Schuko.",
+        },
+        {
+          question: "¿El PDU Schuko incluye protección contra sobretensiones?",
+          answer:
+            "Sí. Cada unidad incluye un módulo SPD (dispositivo de protección contra sobretensiones) integrado con carcasa ignífuga, además de un interruptor basculante iluminado con protección automática contra sobrecargas.",
+        },
+        {
+          question: "¿Se puede personalizar el color de la carcasa o la disposición de las tomas?",
+          answer:
+            "Sí. Haisen es un fabricante directo de fábrica y ofrece el PDU Schuko en carcasa negra estándar o naranja personalizada, con la cantidad de tomas, la longitud del cable y la marca configuradas según cada proyecto, incluyendo OEM/ODM.",
+        },
+      ],
+    },
+    ru: {
+      name: "PDU немецкого стандарта (Schuko)",
+      shortName: "PDU Schuko",
+      tagline: "Монтируемый в стойку блок PDU высотой 1U с розетками Schuko немецкого стандарта для шкафов европейского и CEE-рынков.",
+      overview:
+        "PDU Schuko Haisen — это монтируемый в стойку блок распределения питания высотой 1U, оснащённый розетками немецкого стандарта (Schuko/CEE 7/3), подсвечиваемым выключателем питания с защитой от перегрузки и встроенным модулем защиты от перенапряжения, разработанный для шкафов центров обработки данных и телекоммуникационного оборудования на европейском и CEE-рынках. Устанавливается горизонтально или вертикально, поставляется с прочным кабелем питания Schuko и доступен в стандартном чёрном или индивидуальном оранжевом корпусе.",
+      keyFeatures: [
+        "Восемь розеток немецкого стандарта (Schuko/CEE 7/3)",
+        "Подсвечиваемый клавишный выключатель с автоматической защитой от перегрузки",
+        "Встроенный модуль защиты от перенапряжения (SPD) с огнестойким корпусом",
+        "Прочный алюминиевый корпус для монтажа в стойку 1U горизонтально или вертикально",
+        "Кабель питания Schuko 16A, медная жила 1,5 мм², корпус вилки стандарта VDE",
+        "Стандартный чёрный или индивидуальный оранжевый корпус; доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Электрические параметры",
+          specs: [
+            { label: "Номинальное напряжение", value: "230В" },
+            { label: "Номинальный ток", value: "16A" },
+            { label: "Номинальная мощность", value: "4000Вт" },
+            { label: "Номинальная частота", value: "50 Гц" },
+          ],
+        },
+        {
+          title: "Вход / Выход",
+          specs: [
+            { label: "Входная вилка", value: "Угловая вилка Schuko (CEE 7/7) 16A" },
+            { label: "Выходные розетки", value: "8 × розеток немецкого стандарта (Schuko CEE 7/3)" },
+            { label: "Кабель", value: "Медная жила 1,5 мм², корпус стандарта VDE, доступны индивидуальные длины" },
+          ],
+        },
+        {
+          title: "Механика и защита",
+          specs: [
+            { label: "Монтаж", value: "Стойка 1U, вертикально или горизонтально" },
+            { label: "Материал корпуса", value: "Алюминиевый сплав" },
+            { label: "Цвет корпуса", value: "Чёрный (стандарт) / Оранжевый (на заказ)" },
+            { label: "Защита", value: "Подсвечиваемый выключатель с защитой от перегрузки, защита SPD от перенапряжения, огнестойкий корпус" },
+          ],
+        },
+      ],
+      applications: [
+        "Стойки центров обработки данных европейского и CEE-рынков",
+        "Помещения телекоммуникационного оборудования в регионах со стандартом Schuko",
+        "Шкафы колокации",
+        "Шкафы промышленного и сетевого управления",
+      ],
+      customizationOptions: [
+        "Цвет корпуса (чёрный / оранжевый / на заказ)",
+        "Количество розеток и длина кабеля",
+        "Входная вилка и длина шнура",
+        "Индивидуальный брендинг / маркировка",
+        "Упаковка OEM / ODM",
+      ],
+      standards: ["Разработан в соответствии со стандартами разъёмов CEE 7/3 (Schuko) и VDE", "Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Что такое PDU Schuko и где он используется?",
+          answer:
+            "PDU Schuko — это блок распределения питания для стойки, оснащённый розетками немецкого стандарта (Schuko/CEE 7/3) — стандартным типом розеток, используемым в Германии и большей части континентальной Европы. Он используется для распределения питания стойки на ИТ-оборудование с кабелями питания типа Schuko.",
+        },
+        {
+          question: "Включена ли в PDU Schuko защита от перенапряжения?",
+          answer:
+            "Да. Каждый блок включает встроенный модуль SPD (устройство защиты от перенапряжения) с огнестойким корпусом, а также подсвечиваемый клавишный выключатель с автоматической защитой от перегрузки.",
+        },
+        {
+          question: "Можно ли настроить цвет корпуса или расположение розеток?",
+          answer:
+            "Да. Haisen является прямым производителем и предлагает PDU Schuko в стандартном чёрном или индивидуальном оранжевом корпусе, с настройкой количества розеток, длины кабеля и брендинга под каждый проект, включая OEM/ODM.",
+        },
+      ],
+    },
+    zh: {
+      name: "德标（Schuko）PDU",
+      shortName: "德标PDU",
+      tagline: "配备德标Schuko插座的1U机架式PDU，适用于欧洲及CEE市场机柜。",
+      overview:
+        "海森德标PDU是一款1U机架式配电单元，配备德国标准（Schuko/CEE 7/3）插座、带过载保护功能的发光电源开关，以及内置浪涌保护模块，专为欧洲及CEE市场的数据中心与电信机柜设计。可水平或垂直安装，配备重型德标电源线，提供标准黑色或定制橙色外壳。",
+      keyFeatures: [
+        "八路德国标准（Schuko/CEE 7/3）插座",
+        "带自动过载保护功能的发光跷板电源开关",
+        "内置SPD浪涌保护模块，配阻燃外壳",
+        "耐用铝合金外壳，支持1U水平或垂直机架安装",
+        "16A德标电源线，1.5mm²铜芯，VDE标准插头外壳",
+        "标准黑色或定制橙色外壳；支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "电气参数",
+          specs: [
+            { label: "额定电压", value: "230V" },
+            { label: "额定电流", value: "16A" },
+            { label: "额定功率", value: "4000W" },
+            { label: "额定频率", value: "50Hz" },
+          ],
+        },
+        {
+          title: "输入/输出",
+          specs: [
+            { label: "输入插头", value: "16A德标弯头插头（CEE 7/7）" },
+            { label: "输出插座", value: "8×德国标准插座（Schuko CEE 7/3）" },
+            { label: "线缆", value: "1.5mm²铜芯，VDE标准外壳，可定制长度" },
+          ],
+        },
+        {
+          title: "机械结构与保护",
+          specs: [
+            { label: "安装方式", value: "1U机架，垂直或水平" },
+            { label: "外壳材质", value: "铝合金外壳" },
+            { label: "外壳颜色", value: "黑色（标准）/橙色（定制）" },
+            { label: "保护", value: "发光过载保护开关、SPD浪涌保护、阻燃外壳" },
+          ],
+        },
+      ],
+      applications: ["欧洲及CEE市场数据中心机架", "德标地区电信设备间", "托管机柜", "工业与网络控制柜"],
+      customizationOptions: ["外壳颜色（黑色/橙色/定制）", "插座数量与线缆长度", "输入插头与线缆长度", "定制品牌/标识", "OEM/ODM包装"],
+      standards: ["按CEE 7/3（德标）及VDE连接器标准设计", "认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "什么是德标PDU？用在哪里？",
+          answer:
+            "德标PDU是配备德国标准（Schuko/CEE 7/3）插座的机架式配电单元，这是德国及欧洲大陆大部分地区使用的标准插座类型。用于将机架电力分配给配备德标电源线的IT设备。",
+        },
+        {
+          question: "德标PDU是否包含浪涌保护？",
+          answer:
+            "是的。每台设备均内置SPD（浪涌保护装置）模块并配有阻燃外壳，同时配备带自动过载保护功能的发光跷板开关。",
+        },
+        {
+          question: "外壳颜色或插座布局可以定制吗？",
+          answer:
+            "可以。海森是工厂直营制造商，德标PDU提供标准黑色或定制橙色外壳，插座数量、线缆长度及品牌标识均可根据项目定制，包括OEM/ODM。",
+        },
+      ],
+    },
+  },
+
   "intelligent-pdu": {
     ar: {
       name: "PDU ذكي",
