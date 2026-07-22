@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/ui/LocaleLink";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -123,6 +124,17 @@ export default async function HomePage({
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {featuredProducts.map((product) => (
               <Card key={product.slug} href={`/products/${product.slug}`}>
+                {product.images?.[0] ? (
+                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden">
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-6"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  </div>
+                ) : null}
                 <p className="eyebrow mb-2">{product.shortName}</p>
                 <h3 className="text-lg font-semibold text-ink-900">{product.name}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{product.tagline}</p>

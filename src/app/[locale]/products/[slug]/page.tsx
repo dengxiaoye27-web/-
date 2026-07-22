@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "@/components/ui/LocaleLink";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpecTable } from "@/components/ui/SpecTable";
 import { Accordion } from "@/components/ui/Accordion";
 import { FeatureGrid } from "@/components/product/FeatureGrid";
+import { ProductGallery } from "@/components/product/ProductGallery";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { RelatedSolutions } from "@/components/product/RelatedSolutions";
 import { InquiryCTA } from "@/components/product/InquiryCTA";
@@ -101,11 +103,24 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
+                  className="group block overflow-hidden rounded-2xl border border-line-200 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
                 >
-                  <p className="eyebrow mb-2">{content.shortName}</p>
-                  <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
-                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+                  {p.images?.[0] ? (
+                    <div className="relative aspect-square bg-paper-50">
+                      <Image
+                        src={p.images[0]}
+                        alt={content.name}
+                        fill
+                        className="object-contain p-6"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="p-6 md:p-8">
+                    <p className="eyebrow mb-2">{content.shortName}</p>
+                    <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                    <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+                  </div>
                 </Link>
               );
             })}
@@ -154,9 +169,12 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
-        <section>
-          <SectionHeading eyebrow={t.overviewEyebrow} title={t.overviewTitle} />
-          <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
+        <section className={product.images?.length ? "grid gap-10 lg:grid-cols-2 lg:items-start" : undefined}>
+          {product.images?.length ? <ProductGallery images={product.images} alt={content.name} /> : null}
+          <div>
+            <SectionHeading eyebrow={t.overviewEyebrow} title={t.overviewTitle} />
+            <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
+          </div>
         </section>
 
         <section>

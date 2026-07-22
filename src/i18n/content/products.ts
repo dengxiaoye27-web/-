@@ -5202,6 +5202,98 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "wall-mount-cabinet": {
+    ar: {
+      name: "خزانة حائطية",
+      shortName: "خزانة حائطية",
+      tagline: "خزانة شبكة حائطية مدمجة لغرف المعدات محدودة المساحة.",
+      overview: "تعبّئ الخزانة الحائطية من هايسِن غلافاً بحجم 19 بوصة من 6U إلى 12U مع باب زجاجي مقسّى بسماكة 5 مم، وإطار فولاذي معزز مدرفل على البارد، ومدخل كابل قابل للإزالة، في مساحة حائطية مدمجة، مناسبة لغرف المعدات الصغيرة والمكاتب وخزائن الاتصالات حيث لا تتوفر مساحة أرضية لخزانة بحجم كامل.",
+      keyFeatures: ["باب أمامي زجاجي مقسّى بسماكة 5 مم للرؤية والمتانة", "إطار وأعمدة تركيب فولاذية SPCC مدرفلة على البارد بسماكة 1.5 مم", "إطار حافة من الألمنيوم حول الباب الزجاجي", "فتحة تهوية مروحة في اللوحة العلوية", "لوحة مدخل كابل علوية قابلة للإزالة", "باب قابل للقفل بمفتاح"],
+      specGroups: [
+        { title: "الهيكل والأبعاد", specs: [{ label: "وحدات الراك", value: "6U – 12U" }, { label: "التركيب", value: "حائطي" }, { label: "الباب", value: "زجاج مقسّى 5 مم، قابل للقفل" }] },
+        { title: "البناء", specs: [{ label: "مادة الإطار", value: "فولاذ SPCC مدرفل على البارد 1.5 مم" }, { label: "إطار الباب", value: "إطار حافة من الألمنيوم" }, { label: "التهوية", value: "فتحة مروحة في اللوحة العلوية" }, { label: "مدخل الكابل", value: "لوحة مدخل كابل علوية قابلة للإزالة" }] },
+      ],
+      applications: ["غرف معدات صغيرة", "خزائن شبكة المكاتب", "نقاط توزيع الاتصالات"],
+      customizationOptions: ["ارتفاع وحدة الراك (6U/9U/12U)", "نوع الباب (زجاجي/شبكي)", "اللون / العلامة التجارية", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        { question: "كيف تختلف الخزانة الحائطية عن خزانة الشبكة الأرضية؟", answer: "الخزانة الحائطية أصغر (عادة 6U–12U) وتُركَّب مباشرة على الحائط بدلاً من الأرضية، ما يجعلها مناسبة لأحمال معدات أصغر وغرف بلا مساحة لخزانة أرضية بحجم كامل — تغطي سلسلة خزانة الشبكة من هايسِن النطاق الأرضي الأكبر من 12U إلى 47U." },
+        { question: "هل تدعم الخزانة الحائطية تخصيص OEM/ODM؟", answer: "نعم. تدعم هايسِن تخصيص OEM/ODM للخزانة الحائطية، بما في ذلك ارتفاع وحدة الراك ونوع الباب واللون والعلامة التجارية لمطابقة مواصفات العميل." },
+      ],
+    },
+    fr: {
+      name: "Armoire murale",
+      shortName: "Armoire murale",
+      tagline: "Armoire réseau murale compacte pour locaux techniques à espace restreint.",
+      overview: "L'armoire murale Haisen regroupe un boîtier 19 pouces de 6U à 12U avec une porte en verre trempé de 5 mm, un cadre en acier renforcé laminé à froid et une entrée de câble amovible dans un encombrement mural compact, adapté aux petits locaux techniques, bureaux et locaux télécoms où l'espace au sol n'est pas disponible pour une armoire pleine taille.",
+      keyFeatures: ["Porte avant en verre trempé de 5 mm pour visibilité et durabilité", "Cadre et colonnes de montage en acier SPCC laminé à froid de 1,5 mm", "Cadre de bordure en alliage d'aluminium autour de la porte vitrée", "Ouverture de ventilation par ventilateur dans le panneau supérieur", "Panneau d'entrée de câble supérieur amovible", "Porte verrouillable à clé"],
+      specGroups: [
+        { title: "Structure et dimensions", specs: [{ label: "Unités de rack", value: "6U – 12U" }, { label: "Montage", value: "Mural" }, { label: "Porte", value: "Verre trempé 5 mm, verrouillable" }] },
+        { title: "Construction", specs: [{ label: "Matériau du cadre", value: "Acier SPCC laminé à froid 1,5 mm" }, { label: "Cadre de porte", value: "Cadre de bordure en alliage d'aluminium" }, { label: "Ventilation", value: "Ouverture de ventilateur en panneau supérieur" }, { label: "Entrée de câble", value: "Panneau d'entrée de câble supérieur amovible" }] },
+      ],
+      applications: ["Petits locaux techniques", "Locaux techniques réseau de bureau", "Points de distribution télécoms"],
+      customizationOptions: ["Hauteur d'unité de rack (6U/9U/12U)", "Type de porte (verre/grillage)", "Couleur / marquage", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        { question: "En quoi une armoire murale diffère-t-elle d'une armoire réseau au sol ?", answer: "Une armoire murale est plus petite (généralement 6U–12U) et s'installe directement sur un mur plutôt qu'au sol, ce qui la rend adaptée aux charges d'équipement plus petites et aux pièces sans espace pour une armoire au sol pleine taille — la gamme d'armoires réseau de Haisen couvre la plage au sol plus grande de 12U à 47U." },
+        { question: "L'armoire murale prend-elle en charge la personnalisation OEM/ODM ?", answer: "Oui. Haisen prend en charge l'OEM/ODM pour l'armoire murale, y compris la hauteur d'unité de rack, le type de porte, la couleur et le marquage selon les spécifications du client." },
+      ],
+    },
+    es: {
+      name: "Armario de pared",
+      shortName: "Armario de pared",
+      tagline: "Armario de red de pared compacto para salas de equipos con espacio limitado.",
+      overview: "El armario de pared de Haisen empaqueta una carcasa de 19 pulgadas de 6U a 12U con una puerta de vidrio templado de 5 mm, un marco de acero reforzado laminado en frío y una entrada de cables extraíble en una huella mural compacta, adecuado para pequeñas salas de equipos, oficinas y armarios de telecomunicaciones donde no hay espacio en el suelo para un armario de tamaño completo.",
+      keyFeatures: ["Puerta frontal de vidrio templado de 5 mm para visibilidad y durabilidad", "Marco y columnas de montaje de acero SPCC laminado en frío de 1,5 mm", "Marco de borde de aleación de aluminio alrededor de la puerta de vidrio", "Abertura de ventilación con ventilador en el panel superior", "Panel de entrada de cables superior extraíble", "Puerta con cerradura de llave"],
+      specGroups: [
+        { title: "Estructura y dimensiones", specs: [{ label: "Unidades de rack", value: "6U – 12U" }, { label: "Montaje", value: "De pared" }, { label: "Puerta", value: "Vidrio templado 5 mm, con cerradura" }] },
+        { title: "Construcción", specs: [{ label: "Material del marco", value: "Acero SPCC laminado en frío 1,5 mm" }, { label: "Marco de puerta", value: "Marco de borde de aleación de aluminio" }, { label: "Ventilación", value: "Abertura de ventilador en panel superior" }, { label: "Entrada de cables", value: "Panel de entrada de cables superior extraíble" }] },
+      ],
+      applications: ["Salas de equipos pequeñas", "Armarios de red de oficina", "Puntos de distribución de telecomunicaciones"],
+      customizationOptions: ["Altura de unidad de rack (6U/9U/12U)", "Tipo de puerta (vidrio/malla)", "Color / marca", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        { question: "¿En qué se diferencia un armario de pared de un armario de red de piso?", answer: "Un armario de pared es más pequeño (típicamente 6U–12U) y se instala directamente en una pared en lugar del suelo, lo que lo hace adecuado para cargas de equipos más pequeñas y salas sin espacio para un armario de piso de tamaño completo; la línea de armarios de red de Haisen cubre el rango de piso más grande de 12U a 47U." },
+        { question: "¿El armario de pared admite personalización OEM/ODM?", answer: "Sí. Haisen admite OEM/ODM para el armario de pared, incluyendo la altura de la unidad de rack, el tipo de puerta, el color y la marca según la especificación del cliente." },
+      ],
+    },
+    ru: {
+      name: "Настенный шкаф",
+      shortName: "Настенный шкаф",
+      tagline: "Компактный настенный сетевой шкаф для помещений с ограниченным пространством.",
+      overview: "Настенный шкаф Haisen объединяет 19-дюймовый корпус 6U–12U с дверью из закалённого стекла толщиной 5 мм, усиленной холоднокатаной стальной рамой и съёмным кабельным вводом в компактном настенном исполнении, подходящем для небольших технических помещений, офисов и телекоммуникационных шкафов, где нет напольного пространства для полноразмерного шкафа.",
+      keyFeatures: ["Передняя дверь из закалённого стекла толщиной 5 мм для обзора и долговечности", "Рама и монтажные стойки из холоднокатаной стали SPCC толщиной 1,5 мм", "Алюминиевая окантовка вокруг стеклянной двери", "Вентиляционное отверстие с вентилятором в верхней панели", "Съёмная верхняя панель кабельного ввода", "Запираемая дверь с ключом"],
+      specGroups: [
+        { title: "Конструкция и размеры", specs: [{ label: "Юниты стойки", value: "6U – 12U" }, { label: "Монтаж", value: "Настенный" }, { label: "Дверь", value: "Закалённое стекло 5 мм, запираемая" }] },
+        { title: "Исполнение", specs: [{ label: "Материал рамы", value: "Холоднокатаная сталь SPCC 1,5 мм" }, { label: "Рама двери", value: "Алюминиевая окантовка" }, { label: "Вентиляция", value: "Вентиляторное отверстие в верхней панели" }, { label: "Кабельный ввод", value: "Съёмная верхняя панель кабельного ввода" }] },
+      ],
+      applications: ["Небольшие технические помещения", "Офисные сетевые шкафы", "Точки распределения телекоммуникаций"],
+      customizationOptions: ["Высота юнита стойки (6U/9U/12U)", "Тип двери (стекло/сетка)", "Цвет / брендирование", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        { question: "Чем настенный шкаф отличается от напольного сетевого шкафа?", answer: "Настенный шкаф меньше (обычно 6U–12U) и монтируется непосредственно на стену, а не на пол, что делает его подходящим для меньших нагрузок оборудования и помещений без места для полноразмерного напольного шкафа — линейка сетевых шкафов Haisen охватывает больший напольный диапазон от 12U до 47U." },
+        { question: "Поддерживает ли настенный шкаф настройку OEM/ODM?", answer: "Да. Haisen поддерживает OEM/ODM для настенного шкафа, включая высоту юнита стойки, тип двери, цвет и брендирование в соответствии со спецификацией клиента." },
+      ],
+    },
+    zh: {
+      name: "壁挂式机柜",
+      shortName: "壁挂式机柜",
+      tagline: "面向空间受限设备间的紧凑型壁挂式网络机柜。",
+      overview: "海森壁挂式机柜将6U至12U的19英寸机箱、5mm钢化玻璃门、加固冷轧钢框架及可拆卸走线口整合于紧凑的壁挂形态中，适用于地面空间不足以安装全尺寸机柜的小型设备间、办公室及电信配线间。",
+      keyFeatures: ["5mm钢化玻璃前门，兼具可视性与耐用性", "1.5mm冷轧SPCC钢制框架及安装立柱", "玻璃门周边铝合金边框", "顶部面板风扇通风口", "可拆卸顶部走线面板", "带钥匙锁的柜门"],
+      specGroups: [
+        { title: "结构与尺寸", specs: [{ label: "机架单元", value: "6U–12U" }, { label: "安装方式", value: "壁挂式" }, { label: "柜门", value: "5mm钢化玻璃，可上锁" }] },
+        { title: "结构材质", specs: [{ label: "框架材质", value: "1.5mm冷轧SPCC钢" }, { label: "门框", value: "铝合金边框" }, { label: "通风", value: "顶部面板风扇开孔" }, { label: "走线口", value: "可拆卸顶部走线面板" }] },
+      ],
+      applications: ["小型设备间", "办公室网络配线间", "电信配线点"],
+      customizationOptions: ["机架单元高度(6U/9U/12U)", "柜门类型(玻璃/网孔)", "颜色/品牌定制", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        { question: "壁挂式机柜与落地式网络机柜有何区别？", answer: "壁挂式机柜尺寸更小(通常为6U–12U)，直接安装于墙面而非地面，适用于设备负载较小、且无地面空间安装全尺寸机柜的房间——海森网络机柜产品线则覆盖12U至47U更大规格的落地式范围。" },
+        { question: "壁挂式机柜是否支持OEM/ODM定制？", answer: "是的。海森支持壁挂式机柜的OEM/ODM定制，包括机架单元高度、柜门类型、颜色及品牌标识，可根据客户规格进行定制。" },
+      ],
+    },
+  },
 };
 
 export function getProductContent<T extends { name: string; shortName: string; tagline: string; overview: string; keyFeatures: string[]; specGroups: { title: string; specs: { label: string; value: string }[] }[]; applications: string[]; customizationOptions: string[]; standards: string[]; faqs: { question: string; answer: string }[] }>(
