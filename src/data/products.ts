@@ -2378,21 +2378,41 @@ export const products: Product[] = [
     shortName: "Calcium Sulphate Floor",
     tagline: "High-strength calcium sulphate core raised floor panel for heavy load environments.",
     overview:
-      "Wandtung Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel.",
+      "Wandtung Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel. Panels combine an HPL anti-static surface with precision black edge trim protection, a galvanized steel stringer frame, and a height-adjustable pedestal system.",
+    images: [
+      "/products/calcium-sulphate-raised-floor/01-main.jpg",
+      "/products/calcium-sulphate-raised-floor/02-top-view.jpg",
+      "/products/calcium-sulphate-raised-floor/03-structure-detail.jpg",
+      "/products/calcium-sulphate-raised-floor/04-edge-detail.jpg",
+      "/products/calcium-sulphate-raised-floor/05-installation-scene.jpg",
+      "/products/calcium-sulphate-raised-floor/06-data-center-scene.jpg",
+    ],
     keyFeatures: [
       "High-density calcium sulphate core for load strength",
+      "HPL anti-static surface, resistance 10^6–10^9 Ω",
+      "Precision black edge trim protection",
       "Dimensionally stable under humidity variation",
-      "High fire-resistance rating",
-      "Compatible with standard anti-static and HPL finishes",
+      "Class A fire rating, non-combustible core",
+      "Galvanized steel stringer frame and height-adjustable pedestal, 100–500mm",
     ],
     specGroups: [
       {
         title: "Panel Specification",
         specs: [
-          { label: "Panel Size", value: "600 x 600 mm" },
+          { label: "Panel Size", value: "600 x 600 mm (standard), custom sizes available" },
           { label: "Core Material", value: "Calcium sulphate, steel-encased" },
-          { label: "Load Rating", value: "Up to 1250 kg concentrated load (model dependent)" },
-          { label: "Fire Rating", value: "Non-combustible core" },
+          { label: "Surface Finish", value: "HPL anti-static laminate with black edge trim" },
+          { label: "Load Rating", value: "1200 kg/m² uniform load, up to 1250 kg concentrated load (model dependent)" },
+          { label: "Surface Resistance", value: "10^6–10^9 Ω (anti-static)" },
+          { label: "Fire Rating", value: "Class A, non-combustible core" },
+        ],
+      },
+      {
+        title: "Pedestal & Frame",
+        specs: [
+          { label: "Pedestal Material", value: "Galvanized steel, adjustable" },
+          { label: "Height Range", value: "100–500mm, adjustable" },
+          { label: "Frame", value: "Galvanized steel stringer system" },
         ],
       },
     ],
@@ -2404,6 +2424,11 @@ export const products: Product[] = [
         question: "When should I choose calcium sulphate over a steel raised floor panel?",
         answer:
           "Calcium sulphate core panels are typically chosen when higher load capacity, better fire resistance, or greater dimensional stability under humidity change is needed compared to a standard steel-encased honeycomb panel.",
+      },
+      {
+        question: "What fire rating does the calcium sulphate panel carry?",
+        answer:
+          "The calcium sulphate core is non-combustible and the panel carries a Class A fire rating, making it suitable for data halls and equipment rooms with stricter fire-safety requirements than a standard steel-encased panel.",
       },
     ],
     relatedProductSlugs: ["anti-static-raised-floor", "steel-cementitious-raised-floor"],
