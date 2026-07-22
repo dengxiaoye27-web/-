@@ -17,7 +17,7 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Data Center Infrastructure & Critical Power Solutions",
   description:
-    "Haisen is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
+    "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
   alternates: { canonical: "/" },
 };
 
@@ -185,14 +185,14 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 07 Why Haisen */}
+      {/* 07 Why Wandtung */}
       <section className="bg-paper-50 py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow={t.whyHaisen.eyebrow} title={t.whyHaisen.title} />
+            <SectionHeading eyebrow={t.whyWandtung.eyebrow} title={t.whyWandtung.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {t.whyHaisen.items.map((item) => (
+            {t.whyWandtung.items.map((item) => (
               <Card key={item.title}>
                 <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>

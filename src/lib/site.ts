@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Haisen",
+  name: "Wandtung",
   legalName: "Guangdong Haisen New Building Materials Technology Co., Ltd.",
   legalNameZh: "广东海森新型建材科技有限公司",
   tagline: "One-Stop Data Center Infrastructure & Critical Power Solution Provider",

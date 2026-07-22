@@ -66,7 +66,7 @@ export interface HomeMessages {
     title: string;
     items: string[];
   };
-  whyHaisen: {
+  whyWandtung: {
     eyebrow: string;
     title: string;
     items: { title: string; description: string }[];

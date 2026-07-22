@@ -11,7 +11,7 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Data Center Infrastructure Products",
   description:
-    "Browse Haisen's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
+    "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
   alternates: { canonical: "/products" },
 };
 

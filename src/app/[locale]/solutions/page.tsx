@@ -10,7 +10,7 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Data Center & Critical Power Solutions",
   description:
-    "Haisen designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions.",
+    "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions.",
   alternates: { canonical: "/solutions" },
 };
 

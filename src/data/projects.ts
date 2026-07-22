@@ -19,7 +19,7 @@ export const projects: ProjectCaseStudy[] = [
       "Phased cutover with no downtime to existing tenants",
     ],
     solution:
-      "Haisen supplied modular UPS frames configured for N+1 operation, intelligent PDUs for outlet-level tenant metering, and a standardized data center cabinet specification deployed across both halls, with a phased installation plan sequenced around existing tenant load.",
+      "Wandtung supplied modular UPS frames configured for N+1 operation, intelligent PDUs for outlet-level tenant metering, and a standardized data center cabinet specification deployed across both halls, with a phased installation plan sequenced around existing tenant load.",
     productsUsed: ["Modular UPS", "Intelligent PDU", "Data Center Cabinet"],
     technicalConfiguration: [
       { label: "Redundancy Level", value: "N+1" },
@@ -51,7 +51,7 @@ export const projects: ProjectCaseStudy[] = [
       "Rapid, repeatable rollout process across many sites",
     ],
     solution:
-      "Haisen supplied ATS PDUs for automatic feed switching and a standardized network cabinet template, enabling the operator's installation teams to replicate the same equipment room design at each new site.",
+      "Wandtung supplied ATS PDUs for automatic feed switching and a standardized network cabinet template, enabling the operator's installation teams to replicate the same equipment room design at each new site.",
     productsUsed: ["ATS PDU", "Network Cabinet"],
     technicalConfiguration: [
       { label: "Sites Deployed", value: "60+ equipment rooms" },
@@ -83,7 +83,7 @@ export const projects: ProjectCaseStudy[] = [
       "Deployment within weeks of order confirmation",
     ],
     solution:
-      "Haisen delivered a fully factory-integrated 40ft container data center with intelligent PDU and modular UPS power distribution, precision cooling, fire suppression and remote monitoring, tested at the factory before shipment.",
+      "Wandtung delivered a fully factory-integrated 40ft container data center with intelligent PDU and modular UPS power distribution, precision cooling, fire suppression and remote monitoring, tested at the factory before shipment.",
     productsUsed: ["40ft Container Data Center", "Intelligent PDU", "Modular UPS"],
     technicalConfiguration: [
       { label: "Container Size", value: "40ft ISO" },
@@ -91,7 +91,7 @@ export const projects: ProjectCaseStudy[] = [
       { label: "Cooling", value: "Precision air conditioning" },
     ],
     implementation:
-      "The container was fully integrated and function-tested at the Haisen factory, shipped by standard container logistics, and commissioned on site after foundation and utility connection.",
+      "The container was fully integrated and function-tested at the Wandtung factory, shipped by standard container logistics, and commissioned on site after foundation and utility connection.",
     results: [
       "Edge data center capacity live within weeks of factory completion",
       "Self-contained system required no additional building construction",

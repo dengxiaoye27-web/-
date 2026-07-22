@@ -39,7 +39,7 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description:
-      "Haisen designs and manufactures data center infrastructure and critical power solutions — PDUs, intelligent PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, and energy storage systems — for data center, telecom, government and industrial customers worldwide.",
+      "Wandtung designs and manufactures data center infrastructure and critical power solutions — PDUs, intelligent PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, and energy storage systems — for data center, telecom, government and industrial customers worldwide.",
     alternates: {
       canonical: locale === defaultLocale ? "/" : `/${locale}`,
       languages: Object.fromEntries(

@@ -10,7 +10,7 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Projects & Case Studies",
   description:
-    "Haisen data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments.",
+    "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments.",
   alternates: { canonical: "/projects" },
 };
 

@@ -6,7 +6,7 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.legalName,
-    alternateName: "Haisen",
+    alternateName: "Wandtung",
     url: siteConfig.url,
     email: siteConfig.email,
     description:
@@ -38,7 +38,7 @@ export function productSchema(product: Product) {
     "@type": "Product",
     name: product.name,
     description: product.overview,
-    brand: { "@type": "Brand", name: "Haisen" },
+    brand: { "@type": "Brand", name: "Wandtung" },
     manufacturer: { "@type": "Organization", name: siteConfig.legalName },
     additionalProperty: product.specGroups.flatMap((g) =>
       g.specs.map((s) => ({

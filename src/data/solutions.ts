@@ -8,7 +8,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Operators building or expanding a data hall must coordinate power distribution, UPS, cabinets, cooling, cable management and monitoring from multiple vendors — a process prone to integration gaps, mismatched capacity planning and schedule risk.",
     solutionArchitecture:
-      "Haisen designs the full infrastructure stack as one coordinated system: utility/generator input feeds redundant UPS, power is distributed to racks through intelligent PDUs, IT load sits in engineered cabinets with hot/cold aisle containment, precision or liquid cooling removes heat, and a monitoring layer ties power, environment and security together.",
+      "Wandtung designs the full infrastructure stack as one coordinated system: utility/generator input feeds redundant UPS, power is distributed to racks through intelligent PDUs, IT load sits in engineered cabinets with hot/cold aisle containment, precision or liquid cooling removes heat, and a monitoring layer ties power, environment and security together.",
     systemComponents: [
       { name: "UPS & Power Distribution", description: "Modular UPS and intelligent PDUs sized to redundancy target (N, N+1, 2N)." },
       { name: "Cabinets & Containment", description: "Data center cabinets with hot/cold aisle containment for airflow separation." },
@@ -38,9 +38,9 @@ export const solutions: Solution[] = [
     typicalApplications: ["Enterprise data centers", "Colocation facilities", "Government and financial data halls"],
     faqs: [
       {
-        question: "Does Haisen design complete data center infrastructure, not just individual products?",
+        question: "Does Wandtung design complete data center infrastructure, not just individual products?",
         answer:
-          "Yes. Haisen engineers coordinated power, cooling, enclosure and monitoring systems as a single infrastructure solution, sized and integrated together rather than sold as disconnected components.",
+          "Yes. Wandtung engineers coordinated power, cooling, enclosure and monitoring systems as a single infrastructure solution, sized and integrated together rather than sold as disconnected components.",
       },
     ],
     relatedProductSlugs: ["intelligent-pdu", "modular-ups", "data-center-cabinet", "precision-air-conditioner"],
@@ -52,7 +52,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Enterprises and banks need dedicated data rooms at branch or regional sites, but traditional construction of power, cooling and fire protection systems is slow, requires specialist contractors, and is hard to replicate consistently across many sites.",
     solutionArchitecture:
-      "Haisen pre-integrates IT cabinets, UPS, PDU, cooling, battery, fire suppression, access control and environmental monitoring into a standardized micro module, factory tested as a complete system and shipped ready for on-site placement and commissioning.",
+      "Wandtung pre-integrates IT cabinets, UPS, PDU, cooling, battery, fire suppression, access control and environmental monitoring into a standardized micro module, factory tested as a complete system and shipped ready for on-site placement and commissioning.",
     systemComponents: [
       { name: "IT Cabinets", description: "Single-row or dual-row cabinets with containment." },
       { name: "UPS & PDU", description: "Integrated power protection and distribution sized to module capacity." },
@@ -95,7 +95,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Telecom operators, mining and oil & gas companies often need data center capacity at remote or temporary sites where conventional building construction is slow, costly, or impossible.",
     solutionArchitecture:
-      "Haisen integrates IT cabinets, power distribution, UPS, cooling, fire protection, security and monitoring inside a reinforced, insulated ISO container shell, engineered for outdoor deployment and rapid connection to site power and network.",
+      "Wandtung integrates IT cabinets, power distribution, UPS, cooling, fire protection, security and monitoring inside a reinforced, insulated ISO container shell, engineered for outdoor deployment and rapid connection to site power and network.",
     systemComponents: [
       { name: "Container Structure", description: "Insulated, IP55-rated shell rated for outdoor deployment." },
       { name: "IT & Power", description: "Configurable IT cabinets with intelligent PDU and modular UPS." },
@@ -123,9 +123,9 @@ export const solutions: Solution[] = [
     typicalApplications: ["Telecom network expansion", "Mining and oil & gas sites", "Edge computing", "Emergency/government deployments"],
     faqs: [
       {
-        question: "Does Haisen provide containerized data centers?",
+        question: "Does Wandtung provide containerized data centers?",
         answer:
-          "Yes. Haisen manufactures 20ft and 40ft containerized data centers pre-integrated with IT cabinets, power distribution, UPS, cooling, fire protection and monitoring for telecom, mining, oil & gas, edge computing and government deployments.",
+          "Yes. Wandtung manufactures 20ft and 40ft containerized data centers pre-integrated with IT cabinets, power distribution, UPS, cooling, fire protection and monitoring for telecom, mining, oil & gas, edge computing and government deployments.",
       },
     ],
     relatedProductSlugs: ["40ft-container-data-center", "modular-ups", "intelligent-pdu"],
@@ -137,7 +137,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Low-latency applications and distributed content delivery require compute capacity close to end users, often at sites with limited space, unattended operation and inconsistent power quality.",
     solutionArchitecture:
-      "Haisen combines compact micro modules or containerized units with resilient power (UPS + battery), remote monitoring and lights-out management for unattended edge sites.",
+      "Wandtung combines compact micro modules or containerized units with resilient power (UPS + battery), remote monitoring and lights-out management for unattended edge sites.",
     systemComponents: [
       { name: "Compact Enclosure", description: "Micro module or small containerized footprint." },
       { name: "Resilient Power", description: "UPS with battery runtime sized for unattended operation." },
@@ -160,7 +160,7 @@ export const solutions: Solution[] = [
       {
         question: "How is an edge data center different from a containerized data center?",
         answer:
-          "Edge data centers prioritize compact footprint and remote/unattended operation for distributed sites, while containerized data centers are typically sized for larger, self-contained capacity at a single remote location — Haisen's micro modules and smaller containerized units serve as the building blocks for edge deployments.",
+          "Edge data centers prioritize compact footprint and remote/unattended operation for distributed sites, while containerized data centers are typically sized for larger, self-contained capacity at a single remote location — Wandtung's micro modules and smaller containerized units serve as the building blocks for edge deployments.",
       },
     ],
     relatedProductSlugs: ["smart-micro-module", "intelligent-pdu", "rack-mount-ups"],
@@ -172,7 +172,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Telecom operators require infrastructure that meets stringent uptime and DC power standards across central offices, base stations and network equipment rooms, often across large, geographically distributed networks.",
     solutionArchitecture:
-      "Haisen supplies rack and network cabinets, DC/AC power distribution, UPS and containerized options standardized for telecom equipment rooms and rapidly replicable across many sites.",
+      "Wandtung supplies rack and network cabinets, DC/AC power distribution, UPS and containerized options standardized for telecom equipment rooms and rapidly replicable across many sites.",
     systemComponents: [
       { name: "Network Cabinets", description: "19-inch cabinets sized for telecom transmission and switching equipment." },
       { name: "Power Distribution", description: "PDUs and ATS for redundant feed switching." },
@@ -206,7 +206,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "AI training and inference racks draw far more power per rack than traditional IT loads, exceeding what standard air cooling and PDU designs can support, and requiring careful electrical and thermal capacity planning.",
     solutionArchitecture:
-      "Haisen pairs high power three-phase PDUs and high-capacity UPS with liquid cooling (cold plate + CDU) to support dense GPU/AI racks, with monitoring tuned to track power and thermal headroom in real time.",
+      "Wandtung pairs high power three-phase PDUs and high-capacity UPS with liquid cooling (cold plate + CDU) to support dense GPU/AI racks, with monitoring tuned to track power and thermal headroom in real time.",
     systemComponents: [
       { name: "High Power PDU", description: "Three-phase, high-current distribution for GPU/AI racks." },
       { name: "High-Capacity UPS", description: "Sized for sustained high-density load." },
@@ -241,7 +241,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "As rack power density rises with AI and HPC workloads, air cooling alone can no longer remove heat efficiently or cost-effectively, risking thermal throttling and reliability issues.",
     solutionArchitecture:
-      "Haisen's liquid cooling solution applies cold plate direct-to-chip cooling at the server level, with a CDU isolating and managing the primary (facility) and secondary (rack) coolant loops, including leak detection and monitoring.",
+      "Wandtung's liquid cooling solution applies cold plate direct-to-chip cooling at the server level, with a CDU isolating and managing the primary (facility) and secondary (rack) coolant loops, including leak detection and monitoring.",
     systemComponents: [
       { name: "Cold Plates", description: "Direct-to-chip liquid cooling at the server/GPU level." },
       { name: "CDU", description: "Manages primary/secondary loop separation, flow and temperature." },
@@ -277,7 +277,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Mission-critical facilities cannot tolerate power interruption, requiring redundancy and monitoring at every stage from utility/generator input through UPS, distribution and the rack itself.",
     solutionArchitecture:
-      "Haisen designs redundant power architectures combining ATS/STS transfer switching, modular UPS, and intelligent PDUs, monitored end-to-end so operators can see and respond to issues before they affect load.",
+      "Wandtung designs redundant power architectures combining ATS/STS transfer switching, modular UPS, and intelligent PDUs, monitored end-to-end so operators can see and respond to issues before they affect load.",
     systemComponents: [
       { name: "ATS / STS", description: "Automatic and static transfer switching between power sources." },
       { name: "Modular UPS", description: "N+X redundant power protection." },
@@ -312,7 +312,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Facility and IT teams need visibility into power consumption and the ability to remotely manage load, but traditional PDUs offer no monitoring or remote control, forcing reliance on manual site visits.",
     solutionArchitecture:
-      "Haisen deploys intelligent PDUs with SNMP/Modbus/RS485 connectivity across the facility, feeding a centralized monitoring platform for real-time power, energy and environmental visibility with remote outlet control.",
+      "Wandtung deploys intelligent PDUs with SNMP/Modbus/RS485 connectivity across the facility, feeding a centralized monitoring platform for real-time power, energy and environmental visibility with remote outlet control.",
     systemComponents: [
       { name: "Intelligent PDU", description: "Outlet-level monitoring, metering and remote switching." },
       { name: "Environmental Sensors", description: "Temperature and humidity monitoring at the rack." },
@@ -332,9 +332,9 @@ export const solutions: Solution[] = [
     typicalApplications: ["Multi-tenant colocation", "Enterprise data centers", "Distributed telecom sites"],
     faqs: [
       {
-        question: "What communication protocols do Haisen intelligent PDUs support?",
+        question: "What communication protocols do Wandtung intelligent PDUs support?",
         answer:
-          "Haisen intelligent PDUs support SNMP (v1/v2c/v3), Modbus RTU/TCP, RS485 and TCP/IP, allowing integration with most DCIM and building management platforms.",
+          "Wandtung intelligent PDUs support SNMP (v1/v2c/v3), Modbus RTU/TCP, RS485 and TCP/IP, allowing integration with most DCIM and building management platforms.",
       },
     ],
     relatedProductSlugs: ["intelligent-pdu", "pdu"],
@@ -346,7 +346,7 @@ export const solutions: Solution[] = [
     customerChallenge:
       "Facilities facing unreliable grid power, high demand charges, or sustainability targets need energy storage that goes beyond traditional UPS batteries to provide longer-duration resilience and cost management.",
     solutionArchitecture:
-      "Haisen integrates battery racks, PCS and EMS into cabinet or containerized battery energy storage systems, configurable for backup power, peak shaving, or renewable (solar) integration.",
+      "Wandtung integrates battery racks, PCS and EMS into cabinet or containerized battery energy storage systems, configurable for backup power, peak shaving, or renewable (solar) integration.",
     systemComponents: [
       { name: "Battery Racks", description: "Lithium battery modules sized to required energy capacity." },
       { name: "PCS", description: "Power conversion system managing charge/discharge and grid interface." },

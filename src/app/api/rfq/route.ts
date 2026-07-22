@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await transporter.sendMail({
-      from: `"Haisen Website" <${user}>`,
+      from: `"Wandtung Website" <${user}>`,
       to: recipients.split(",").map((r) => r.trim()),
       replyTo: body.email,
       subject,
