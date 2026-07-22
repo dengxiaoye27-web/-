@@ -34,6 +34,7 @@ export interface Product {
   tagline: string;
   overview: string;
   featured?: boolean;
+  images?: string[];
   keyFeatures: string[];
   specGroups: SpecGroup[];
   applications: string[];

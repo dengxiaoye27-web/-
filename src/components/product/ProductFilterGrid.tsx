@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import { Product, ProductCategory } from "@/data/types";
 import { useLocale } from "@/i18n/LocaleContext";
@@ -55,6 +56,17 @@ export function ProductFilterGrid({
           const content = getProductContent(product.slug, locale, product);
           return (
             <Card key={product.slug} href={`/products/${product.slug}`}>
+              {product.images?.[0] ? (
+                <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden">
+                  <Image
+                    src={product.images[0]}
+                    alt={content.name}
+                    fill
+                    className="object-contain p-6"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+              ) : null}
               <p className="eyebrow mb-2">{content.shortName}</p>
               <h3 className="text-lg font-semibold text-ink-900">{content.name}</h3>
               <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>

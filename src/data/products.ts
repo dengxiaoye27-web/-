@@ -858,7 +858,7 @@ export const products: Product[] = [
           "Frame components are typically 1.5–2.0 mm cold-rolled steel for structural load-bearing members, with 1.0–1.2 mm acceptable for doors and side panels — Haisen specifies thickness per model and can reinforce frames for heavier static/dynamic load ratings on request.",
       },
     ],
-    relatedProductSlugs: ["server-rack", "data-center-cabinet", "cold-aisle-cabinet"],
+    relatedProductSlugs: ["server-rack", "data-center-cabinet", "cold-aisle-cabinet", "wall-mount-cabinet"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
   {
@@ -1113,6 +1113,68 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["network-cabinet", "20ft-container-data-center"],
     relatedSolutionSlugs: ["telecom-data-center", "edge-data-center"],
+  },
+  {
+    slug: "wall-mount-cabinet",
+    category: "network-server-cabinets",
+    name: "Wall Mount Cabinet",
+    shortName: "Wall Mount Cabinet",
+    tagline: "Compact wall-mounted network cabinet for space-constrained equipment rooms.",
+    overview:
+      "The Haisen Wall Mount Cabinet packages a 6U–12U 19-inch enclosure with a 5mm tempered glass door, reinforced cold-rolled steel frame and removable cable entry into a compact wall-mounted footprint, suited to small equipment rooms, offices and telecom closets where floor space isn't available for a full-size cabinet.",
+    featured: true,
+    images: [
+      "/products/wall-mount-cabinet/01-main.jpg",
+      "/products/wall-mount-cabinet/02-top-detail.jpg",
+      "/products/wall-mount-cabinet/03-tempered-glass-detail.jpg",
+      "/products/wall-mount-cabinet/04-column-thickness.jpg",
+      "/products/wall-mount-cabinet/05-application-scene.jpg",
+      "/products/wall-mount-cabinet/06-key-features-overview.jpg",
+    ],
+    keyFeatures: [
+      "5mm tempered glass front door for visibility and durability",
+      "1.5mm cold-rolled SPCC steel frame and mounting columns",
+      "Aluminum alloy edge frame around the glass door",
+      "Fan ventilation opening in the top panel",
+      "Removable top cable entry panel",
+      "Lockable door with key",
+    ],
+    specGroups: [
+      {
+        title: "Structure & Dimensions",
+        specs: [
+          { label: "Rack Units", value: "6U – 12U" },
+          { label: "Mounting", value: "Wall-mounted" },
+          { label: "Door", value: "5mm tempered glass, lockable" },
+        ],
+      },
+      {
+        title: "Construction",
+        specs: [
+          { label: "Frame Material", value: "1.5mm cold-rolled SPCC steel" },
+          { label: "Door Frame", value: "Aluminum alloy edge frame" },
+          { label: "Ventilation", value: "Top panel fan opening" },
+          { label: "Cable Entry", value: "Removable top cable entry panel" },
+        ],
+      },
+    ],
+    applications: ["Small equipment rooms", "Office network closets", "Telecom distribution points"],
+    customizationOptions: ["Rack unit height (6U/9U/12U)", "Door type (glass/mesh)", "Color / branding", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How is a wall mount cabinet different from a floor-standing network cabinet?",
+        answer:
+          "A wall mount cabinet is smaller (typically 6U–12U) and installs directly on a wall rather than the floor, making it suited to smaller equipment loads and rooms without space for a full-size floor-standing cabinet — Haisen's network cabinet line covers the larger 12U–47U floor-standing range.",
+      },
+      {
+        question: "Does the wall mount cabinet support OEM/ODM customization?",
+        answer:
+          "Yes. Haisen supports OEM/ODM for the wall mount cabinet, including rack unit height, door type, color and branding to match a customer's specification.",
+      },
+    ],
+    relatedProductSlugs: ["network-cabinet", "19-inch-rack"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
   },
 
   // ---------------- Micro Modular Data Center ----------------
