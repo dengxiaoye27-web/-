@@ -33,6 +33,7 @@ const coreSolutionHrefs = [
 
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
+  "/images/exhibitions/08-liquid-cooling-booth.png",
   "/images/exhibitions/05-equipment-briefing.png",
   "/images/exhibitions/04-energy-storage-briefing.png",
   "/images/exhibitions/07-booth-visit.png",
