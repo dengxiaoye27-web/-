@@ -131,6 +131,70 @@ export function IconQuality({ className = "" }: { className?: string }) {
   );
 }
 
+export function IconFloor({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <path d="M3 10 12 5.5 21 10l-9 4.5L3 10Z" />
+      <path d="M3 10v4l9 4.5 9-4.5v-4" />
+      <path d="M7.5 12.2v4M12 14.5v4M16.5 12.2v4" />
+    </svg>
+  );
+}
+
+export function IconCable({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <path d="M3 6h18M3 18h18" />
+      <path d="M6 6v12M10 6v12M14 6v12M18 6v12" />
+    </svg>
+  );
+}
+
+export function IconChip({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <rect x="6" y="6" width="12" height="12" rx="1.5" />
+      <rect x="9.5" y="9.5" width="5" height="5" rx="0.5" />
+      <path d="M9 6V3M15 6V3M9 21v-3M15 21v-3M6 9H3M6 15H3M21 9h-3M21 15h-3" />
+    </svg>
+  );
+}
+
+export function IconAntenna({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <path d="M12 8.5V21M8 21h8" />
+      <circle cx="12" cy="7" r="1.8" />
+      <path d="M7.7 2.7a6.2 6.2 0 0 0 0 8.6M16.3 2.7a6.2 6.2 0 0 1 0 8.6" />
+    </svg>
+  );
+}
+
+export const solutionIcons: Record<string, (props: { className?: string }) => React.ReactElement> = {
+  "data-center-infrastructure": IconModule,
+  "micro-modular-data-center": IconCabinet,
+  "containerized-data-center": IconContainer,
+  "edge-data-center": IconGlobe,
+  "telecom-data-center": IconAntenna,
+  "ai-data-center": IconChip,
+  "liquid-cooling": IconCooling,
+  "critical-power": IconPower,
+  "smart-power-distribution": IconPdu,
+  "energy-storage": IconBattery,
+};
+
+export const categoryIcons: Record<string, (props: { className?: string }) => React.ReactElement> = {
+  "power-distribution": IconPdu,
+  "ups-systems": IconPower,
+  "network-server-cabinets": IconCabinet,
+  "micro-modular-data-center": IconModule,
+  "containerized-data-center": IconContainer,
+  "cooling-solutions": IconCooling,
+  "raised-floor": IconFloor,
+  "cable-management": IconCable,
+  "energy-storage": IconBattery,
+};
+
 export const coreSolutionIcons = [
   IconPower,
   IconPdu,

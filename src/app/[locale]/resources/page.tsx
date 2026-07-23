@@ -26,7 +26,7 @@ export default async function ResourcesPage({
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.resources }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
@@ -45,7 +45,7 @@ export default async function ResourcesPage({
               <Link
                 key={a.slug}
                 href={`/resources/blog/${a.slug}`}
-                className="group block rounded-2xl border border-line-200 p-6 md:p-8 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
+                className="group block rounded-2xl border border-line-200 p-6 md:p-8 transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(11,13,18,0.18)]"
               >
                 <p className="eyebrow mb-2">{content.category}</p>
                 <h2 className="text-lg font-semibold text-ink-900">{content.title}</h2>

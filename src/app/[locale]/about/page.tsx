@@ -27,7 +27,7 @@ export default async function AboutPage({
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.about }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
@@ -44,9 +44,11 @@ export default async function AboutPage({
             <p className="text-ink-600 leading-relaxed">{t.overview.paragraph1}</p>
             <p className="text-ink-600 leading-relaxed">{t.overview.paragraph2}</p>
           </div>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl border border-line-200 bg-line-200 overflow-hidden">
             {t.overview.stats.map((stat) => (
-              <StatTile key={stat.label} value={stat.value} label={stat.label} />
+              <div key={stat.label} className="bg-white px-6 py-8 md:px-8 md:py-10">
+                <StatTile value={stat.value} label={stat.label} />
+              </div>
             ))}
           </div>
         </section>
@@ -65,7 +67,11 @@ export default async function AboutPage({
           <SectionHeading eyebrow={t.certifications.eyebrow} title={t.certifications.title} />
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert) => (
-              <div key={cert.name} className="rounded-xl border border-line-200 px-5 py-6 text-center">
+              <div
+                key={cert.name}
+                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
+              >
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <p className="text-lg font-semibold text-ink-900">{cert.name}</p>
                 <p className="mt-1 text-xs text-ink-600">{cert.description}</p>
               </div>
@@ -87,10 +93,20 @@ export default async function AboutPage({
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.engineering.paragraph}</p>
         </section>
 
-        <section className="rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center">
-          <h3 className="text-2xl font-semibold">{t.cta.title}</h3>
-          <div className="mt-6 flex justify-center">
-            <Button href="/contact">{t.cta.button}</Button>
+        <section className="relative overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center grid-texture">
+          <div
+            className="absolute inset-0 opacity-50"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 50% 130%, rgba(0,145,255,0.3), transparent 60%)",
+            }}
+            aria-hidden
+          />
+          <div className="relative">
+            <h3 className="text-2xl font-semibold">{t.cta.title}</h3>
+            <div className="mt-6 flex justify-center">
+              <Button href="/contact">{t.cta.button}</Button>
+            </div>
           </div>
         </section>
       </div>

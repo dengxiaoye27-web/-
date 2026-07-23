@@ -62,7 +62,7 @@ export default async function SolutionPage({
         ]}
       />
 
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
