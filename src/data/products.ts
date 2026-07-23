@@ -2266,8 +2266,78 @@ export const products: Product[] = [
           "Yes — room cooling remains a cost-effective baseline for lower-density rooms, and is sometimes combined with row-based or in-row units at higher densities to handle general room load while row-level units target hot spots.",
       },
     ],
-    relatedProductSlugs: ["precision-air-conditioner", "row-based-cooling"],
+    relatedProductSlugs: ["precision-air-conditioner", "row-based-cooling", "dry-cooler"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "dry-cooler",
+    category: "cooling-solutions",
+    name: "V-Type Dry Cooler",
+    shortName: "Dry Cooler",
+    tagline: "Zero water-loss V-type dry cooler for liquid cooling and chiller heat rejection.",
+    overview:
+      "The Wandtung V-Type Dry Cooler rejects heat from a liquid cooling or chilled water loop to ambient air with zero water consumption, using V-arranged copper-tube/aluminum-fin coils, EC axial fans with 10–100% variable speed, and a hot-dip galvanized steel frame. It scales from 120kW to 1400kW across a standard model range, supporting the primary or secondary loop of data center liquid cooling and industrial chiller systems.",
+    featured: true,
+    images: [
+      "/products/dry-cooler/01-main.jpg",
+      "/products/dry-cooler/02-banner.jpg",
+      "/products/dry-cooler/03-front-detail.jpg",
+      "/products/dry-cooler/04-side-structure.jpg",
+      "/products/dry-cooler/05-spec-table.jpg",
+      "/products/dry-cooler/06-materials-craftsmanship.png",
+      "/products/dry-cooler/07-roof-installation-scene.jpg",
+    ],
+    keyFeatures: [
+      "Zero water-loss dry cooling — no evaporative water consumption",
+      "V-type copper-tube, aluminum-fin coil arrangement",
+      "EC axial direct-drive fans, 10–100% variable speed",
+      "Hot-dip galvanized steel frame with protective fan guards",
+      "RS485 communication for BMS/monitoring integration",
+      "Model range from 120kW to 1400kW; OEM/ODM and custom capacity available",
+    ],
+    specGroups: [
+      {
+        title: "Performance (by model)",
+        specs: [
+          { label: "DC-120", value: "120kW, 2 fans, 3.6kW fan power, 60dB" },
+          { label: "DC-400", value: "400kW, 8 fans, 14.4kW fan power, 65dB" },
+          { label: "DC-800", value: "800kW, 18 fans, 32.4kW fan power, 68dB" },
+          { label: "DC-1400", value: "1400kW, 20 fans, 80kW fan power, 70dB" },
+        ],
+      },
+      {
+        title: "Construction",
+        specs: [
+          { label: "Coil Type", value: "Copper tube + aluminum fin, V-type arrangement" },
+          { label: "Fan Type", value: "EC axial direct drive, 10–100% variable speed" },
+          { label: "Frame", value: "Hot-dip galvanized steel" },
+          { label: "Design Pressure", value: "1.0 MPa" },
+          { label: "Communication", value: "RS485" },
+        ],
+      },
+    ],
+    applications: ["Data center liquid cooling loop heat rejection", "Chilled water system heat rejection", "Industrial process cooling", "Sites requiring zero water consumption for cooling"],
+    customizationOptions: ["Cooling capacity", "Fan count / configuration", "Coil coating", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "What is a dry cooler and how is it different from a cooling tower?",
+        answer:
+          "A dry cooler rejects heat to ambient air through a closed liquid loop and finned coil, using no evaporative water — unlike a cooling tower, which relies on water evaporation to reject heat. Dry coolers trade some efficiency in hot climates for zero water consumption and lower maintenance.",
+      },
+      {
+        question: "What is the V-type coil arrangement for?",
+        answer:
+          "Arranging the copper-tube/aluminum-fin coils in a V shape increases the heat exchange surface area within the same footprint compared to a flat coil arrangement, improving heat rejection capacity per unit of floor space.",
+      },
+      {
+        question: "What capacity range does the V-Type Dry Cooler cover?",
+        answer:
+          "The standard model range spans 120kW to 1400kW (DC-120 through DC-1400), with fan count and fan power scaled to each capacity tier; custom capacities and configurations are available on request.",
+      },
+    ],
+    relatedProductSlugs: ["liquid-cooling", "cdu", "precision-air-conditioner"],
+    relatedSolutionSlugs: ["data-center-infrastructure", "liquid-cooling"],
   },
 
   // ---------------- Raised Floor ----------------
