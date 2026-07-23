@@ -31,6 +31,16 @@ const coreSolutionHrefs = [
   "/solutions/energy-storage",
 ];
 
+const exhibitionImages = [
+  "/images/exhibitions/03-booth-presentation.png",
+  "/images/exhibitions/05-equipment-briefing.png",
+  "/images/exhibitions/04-energy-storage-briefing.png",
+  "/images/exhibitions/07-booth-visit.png",
+  "/images/exhibitions/01-hall-networking.png",
+  "/images/exhibitions/02-conference-networking.png",
+  "/images/exhibitions/06-industry-networking.png",
+];
+
 export default async function HomePage({
   params,
 }: {
@@ -224,6 +234,32 @@ export default async function HomePage({
             <Link href="/projects" className="text-sm font-medium text-accent-400 hover:text-accent-500">
               {t.globalProjects.viewProjects} →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 08b Exhibition Footprints */}
+      <section className="bg-paper-50 py-20 md:py-28">
+        <div className="container-page">
+          <Reveal>
+            <SectionHeading
+              eyebrow={t.exhibitions.eyebrow}
+              title={t.exhibitions.title}
+              description={t.exhibitions.description}
+            />
+          </Reveal>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {exhibitionImages.map((src) => (
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-navy-900">
+                <Image
+                  src={src}
+                  alt={t.exhibitions.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
