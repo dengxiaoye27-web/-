@@ -6169,6 +6169,288 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "dry-cooler": {
+    ar: {
+      name: "مبرد جاف بترتيب V",
+      shortName: "مبرد جاف",
+      tagline: "مبرد جاف بترتيب V وبدون فقدان مياه لرفض الحرارة من التبريد السائل والمبردات.",
+      overview:
+        "يقوم المبرد الجاف بترتيب V من واندتونغ برفض الحرارة من دائرة تبريد سائل أو مياه مبردة إلى الهواء المحيط دون أي استهلاك للمياه، باستخدام ملفات نحاسية/زعانف ألومنيوم مرتبة على شكل V، ومراوح محورية EC بسرعة متغيرة من 10% إلى 100%، وهيكل فولاذي مجلفن بالغمس الساخن. يتوسع نطاقه من 120 كيلوواط إلى 1400 كيلوواط عبر مجموعة طرازات قياسية، ويدعم الدائرة الأولية أو الثانوية لأنظمة التبريد السائل في مراكز البيانات وأنظمة التبريد الصناعية.",
+      keyFeatures: [
+        "تبريد جاف بدون فقدان مياه - لا استهلاك مياه تبخيري",
+        "ترتيب ملفات على شكل V بأنابيب نحاسية وزعانف ألومنيوم",
+        "مراوح محورية EC ذات دفع مباشر، سرعة متغيرة 10%-100%",
+        "هيكل فولاذي مجلفن بالغمس الساخن مع واقيات مروحة حماية",
+        "اتصال RS485 للتكامل مع أنظمة إدارة المباني/المراقبة",
+        "نطاق طرازات من 120 إلى 1400 كيلوواط؛ متوفر OEM/ODM وسعة مخصصة",
+      ],
+      specGroups: [
+        {
+          title: "الأداء (حسب الطراز)",
+          specs: [
+            { label: "DC-120", value: "120 كيلوواط، مروحتان، طاقة مراوح 3.6 كيلوواط، 60 ديسيبل" },
+            { label: "DC-400", value: "400 كيلوواط، 8 مراوح، طاقة مراوح 14.4 كيلوواط، 65 ديسيبل" },
+            { label: "DC-800", value: "800 كيلوواط، 18 مروحة، طاقة مراوح 32.4 كيلوواط، 68 ديسيبل" },
+            { label: "DC-1400", value: "1400 كيلوواط، 20 مروحة، طاقة مراوح 80 كيلوواط، 70 ديسيبل" },
+          ],
+        },
+        {
+          title: "البناء",
+          specs: [
+            { label: "نوع الملف", value: "أنبوب نحاسي + زعنفة ألومنيوم، ترتيب V" },
+            { label: "نوع المروحة", value: "محورية EC بدفع مباشر، سرعة متغيرة 10%-100%" },
+            { label: "الهيكل", value: "فولاذ مجلفن بالغمس الساخن" },
+            { label: "ضغط التصميم", value: "1.0 ميجاباسكال" },
+            { label: "الاتصال", value: "RS485" },
+          ],
+        },
+      ],
+      applications: ["رفض حرارة دائرة التبريد السائل في مراكز البيانات", "رفض حرارة نظام المياه المبردة", "التبريد الصناعي للعمليات", "المواقع التي تتطلب صفر استهلاك مياه للتبريد"],
+      customizationOptions: ["سعة التبريد", "عدد/تكوين المراوح", "طلاء الملف", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "ما هو المبرد الجاف وكيف يختلف عن برج التبريد؟",
+          answer:
+            "يرفض المبرد الجاف الحرارة إلى الهواء المحيط عبر دائرة سائل مغلقة وملف زعانف، دون أي تبخر مياه - على عكس برج التبريد الذي يعتمد على تبخر المياه لرفض الحرارة. تضحي المبردات الجافة ببعض الكفاءة في المناخات الحارة مقابل صفر استهلاك مياه وصيانة أقل.",
+        },
+        {
+          question: "ما فائدة ترتيب الملف على شكل V؟",
+          answer:
+            "يزيد ترتيب الملفات النحاسية/زعانف الألومنيوم على شكل V من مساحة سطح التبادل الحراري ضمن نفس المساحة مقارنة بترتيب الملف المسطح، ما يحسّن سعة رفض الحرارة لكل وحدة مساحة أرضية.",
+        },
+        {
+          question: "ما نطاق السعة الذي يغطيه المبرد الجاف بترتيب V؟",
+          answer:
+            "يمتد نطاق الطرازات القياسية من 120 إلى 1400 كيلوواط (من DC-120 إلى DC-1400)، مع تدرج عدد المراوح وطاقتها حسب كل مستوى سعة؛ تتوفر السعات والتكوينات المخصصة عند الطلب.",
+        },
+      ],
+    },
+    fr: {
+      name: "Dry cooler en V",
+      shortName: "Dry cooler",
+      tagline: "Dry cooler en V à zéro perte d'eau pour le rejet thermique du refroidissement liquide et des groupes froids.",
+      overview:
+        "Le dry cooler en V Wandtung rejette la chaleur d'une boucle de refroidissement liquide ou d'eau glacée vers l'air ambiant sans aucune consommation d'eau, à l'aide de batteries à tubes cuivre/ailettes aluminium disposées en V, de ventilateurs axiaux EC à vitesse variable de 10 à 100 % et d'un châssis en acier galvanisé à chaud. Il s'étend de 120 kW à 1400 kW sur une gamme de modèles standard, prenant en charge la boucle primaire ou secondaire du refroidissement liquide des centres de données et des systèmes de refroidissement industriels.",
+      keyFeatures: [
+        "Refroidissement à sec sans perte d'eau — aucune consommation d'eau évaporative",
+        "Batteries à tubes cuivre, ailettes aluminium disposées en V",
+        "Ventilateurs axiaux EC à entraînement direct, vitesse variable 10-100 %",
+        "Châssis en acier galvanisé à chaud avec grilles de protection des ventilateurs",
+        "Communication RS485 pour intégration GTB/supervision",
+        "Gamme de modèles de 120 kW à 1400 kW ; OEM/ODM et capacité personnalisée disponibles",
+      ],
+      specGroups: [
+        {
+          title: "Performance (par modèle)",
+          specs: [
+            { label: "DC-120", value: "120kW, 2 ventilateurs, puissance ventilateurs 3,6kW, 60dB" },
+            { label: "DC-400", value: "400kW, 8 ventilateurs, puissance ventilateurs 14,4kW, 65dB" },
+            { label: "DC-800", value: "800kW, 18 ventilateurs, puissance ventilateurs 32,4kW, 68dB" },
+            { label: "DC-1400", value: "1400kW, 20 ventilateurs, puissance ventilateurs 80kW, 70dB" },
+          ],
+        },
+        {
+          title: "Construction",
+          specs: [
+            { label: "Type de batterie", value: "Tube cuivre + ailette aluminium, disposition en V" },
+            { label: "Type de ventilateur", value: "Axial EC à entraînement direct, vitesse variable 10-100 %" },
+            { label: "Châssis", value: "Acier galvanisé à chaud" },
+            { label: "Pression de conception", value: "1,0 MPa" },
+            { label: "Communication", value: "RS485" },
+          ],
+        },
+      ],
+      applications: ["Rejet thermique de boucle de refroidissement liquide de centre de données", "Rejet thermique de système d'eau glacée", "Refroidissement de procédé industriel", "Sites nécessitant zéro consommation d'eau pour le refroidissement"],
+      customizationOptions: ["Capacité de refroidissement", "Nombre/configuration de ventilateurs", "Revêtement de batterie", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Qu'est-ce qu'un dry cooler et en quoi diffère-t-il d'une tour de refroidissement ?",
+          answer:
+            "Un dry cooler rejette la chaleur vers l'air ambiant via une boucle liquide fermée et une batterie à ailettes, sans consommation d'eau évaporative — contrairement à une tour de refroidissement, qui s'appuie sur l'évaporation de l'eau pour rejeter la chaleur. Les dry coolers sacrifient un peu d'efficacité dans les climats chauds en échange d'une consommation d'eau nulle et d'un entretien réduit.",
+        },
+        {
+          question: "À quoi sert la disposition en V des batteries ?",
+          answer:
+            "Disposer les batteries à tubes cuivre/ailettes aluminium en V augmente la surface d'échange thermique dans le même encombrement par rapport à une disposition plate, améliorant la capacité de rejet thermique par unité de surface au sol.",
+        },
+        {
+          question: "Quelle plage de capacité couvre le dry cooler en V ?",
+          answer:
+            "La gamme de modèles standard s'étend de 120 kW à 1400 kW (DC-120 à DC-1400), avec le nombre et la puissance des ventilateurs adaptés à chaque palier de capacité ; des capacités et configurations personnalisées sont disponibles sur demande.",
+        },
+      ],
+    },
+    es: {
+      name: "Dry cooler en V",
+      shortName: "Dry cooler",
+      tagline: "Dry cooler en V de cero pérdida de agua para el rechazo de calor de refrigeración líquida y enfriadoras.",
+      overview:
+        "El dry cooler en V de Wandtung rechaza el calor de un circuito de refrigeración líquida o agua enfriada hacia el aire ambiente sin ningún consumo de agua, utilizando baterías de tubo de cobre/aleta de aluminio dispuestas en V, ventiladores axiales EC de velocidad variable del 10 al 100% y un chasis de acero galvanizado en caliente. Su rango va de 120kW a 1400kW en una gama de modelos estándar, dando soporte al circuito primario o secundario de refrigeración líquida de centros de datos y sistemas de refrigeración industrial.",
+      keyFeatures: [
+        "Enfriamiento seco sin pérdida de agua: sin consumo de agua evaporativa",
+        "Baterías de tubo de cobre y aleta de aluminio dispuestas en V",
+        "Ventiladores axiales EC de accionamiento directo, velocidad variable 10-100%",
+        "Chasis de acero galvanizado en caliente con rejillas de protección de ventiladores",
+        "Comunicación RS485 para integración con BMS/monitoreo",
+        "Gama de modelos de 120kW a 1400kW; OEM/ODM y capacidad personalizada disponibles",
+      ],
+      specGroups: [
+        {
+          title: "Rendimiento (por modelo)",
+          specs: [
+            { label: "DC-120", value: "120kW, 2 ventiladores, potencia de ventiladores 3,6kW, 60dB" },
+            { label: "DC-400", value: "400kW, 8 ventiladores, potencia de ventiladores 14,4kW, 65dB" },
+            { label: "DC-800", value: "800kW, 18 ventiladores, potencia de ventiladores 32,4kW, 68dB" },
+            { label: "DC-1400", value: "1400kW, 20 ventiladores, potencia de ventiladores 80kW, 70dB" },
+          ],
+        },
+        {
+          title: "Construcción",
+          specs: [
+            { label: "Tipo de batería", value: "Tubo de cobre + aleta de aluminio, disposición en V" },
+            { label: "Tipo de ventilador", value: "Axial EC de accionamiento directo, velocidad variable 10-100%" },
+            { label: "Chasis", value: "Acero galvanizado en caliente" },
+            { label: "Presión de diseño", value: "1,0 MPa" },
+            { label: "Comunicación", value: "RS485" },
+          ],
+        },
+      ],
+      applications: ["Rechazo de calor de circuito de refrigeración líquida de centro de datos", "Rechazo de calor de sistema de agua enfriada", "Refrigeración de procesos industriales", "Sitios que requieren cero consumo de agua para refrigeración"],
+      customizationOptions: ["Capacidad de refrigeración", "Cantidad/configuración de ventiladores", "Recubrimiento de batería", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        {
+          question: "¿Qué es un dry cooler y en qué se diferencia de una torre de refrigeración?",
+          answer:
+            "Un dry cooler rechaza el calor hacia el aire ambiente a través de un circuito líquido cerrado y una batería con aletas, sin consumo de agua evaporativa, a diferencia de una torre de refrigeración, que depende de la evaporación del agua para rechazar el calor. Los dry coolers sacrifican algo de eficiencia en climas cálidos a cambio de cero consumo de agua y menor mantenimiento.",
+        },
+        {
+          question: "¿Para qué sirve la disposición en V de las baterías?",
+          answer:
+            "Disponer las baterías de tubo de cobre/aleta de aluminio en V aumenta la superficie de intercambio térmico dentro de la misma huella en comparación con una disposición plana, mejorando la capacidad de rechazo de calor por unidad de superficie.",
+        },
+        {
+          question: "¿Qué rango de capacidad cubre el dry cooler en V?",
+          answer:
+            "La gama de modelos estándar abarca de 120kW a 1400kW (DC-120 a DC-1400), con la cantidad y potencia de ventiladores escalada a cada nivel de capacidad; se dispone de capacidades y configuraciones personalizadas bajo pedido.",
+        },
+      ],
+    },
+    ru: {
+      name: "V-образный сухой охладитель",
+      shortName: "Сухой охладитель",
+      tagline: "V-образный сухой охладитель с нулевыми потерями воды для отвода тепла от жидкостного охлаждения и чиллеров.",
+      overview:
+        "V-образный сухой охладитель Wandtung отводит тепло от контура жидкостного охлаждения или охлаждённой воды в окружающий воздух без потребления воды, используя батареи медная трубка/алюминиевое ребро, расположенные V-образно, осевые вентиляторы EC с регулируемой скоростью 10–100% и раму из горячеоцинкованной стали. Диапазон моделей — от 120 до 1400 кВт, поддерживает первичный или вторичный контур систем жидкостного охлаждения ЦОД и промышленных систем охлаждения.",
+      keyFeatures: [
+        "Сухое охлаждение без потерь воды — отсутствие испарительного расхода воды",
+        "V-образное расположение батарей медная трубка/алюминиевое ребро",
+        "Осевые вентиляторы EC с прямым приводом, регулируемая скорость 10–100%",
+        "Рама из горячеоцинкованной стали с защитными решётками вентиляторов",
+        "Связь RS485 для интеграции с BMS/системами мониторинга",
+        "Диапазон моделей от 120 до 1400 кВт; доступны OEM/ODM и индивидуальная мощность",
+      ],
+      specGroups: [
+        {
+          title: "Производительность (по модели)",
+          specs: [
+            { label: "DC-120", value: "120кВт, 2 вентилятора, мощность вентиляторов 3,6кВт, 60дБ" },
+            { label: "DC-400", value: "400кВт, 8 вентиляторов, мощность вентиляторов 14,4кВт, 65дБ" },
+            { label: "DC-800", value: "800кВт, 18 вентиляторов, мощность вентиляторов 32,4кВт, 68дБ" },
+            { label: "DC-1400", value: "1400кВт, 20 вентиляторов, мощность вентиляторов 80кВт, 70дБ" },
+          ],
+        },
+        {
+          title: "Конструкция",
+          specs: [
+            { label: "Тип батареи", value: "Медная трубка + алюминиевое ребро, V-образное расположение" },
+            { label: "Тип вентилятора", value: "Осевой EC с прямым приводом, регулируемая скорость 10–100%" },
+            { label: "Рама", value: "Горячеоцинкованная сталь" },
+            { label: "Расчётное давление", value: "1,0 МПа" },
+            { label: "Связь", value: "RS485" },
+          ],
+        },
+      ],
+      applications: ["Отвод тепла контура жидкостного охлаждения ЦОД", "Отвод тепла системы охлаждённой воды", "Промышленное технологическое охлаждение", "Объекты, требующие нулевого расхода воды для охлаждения"],
+      customizationOptions: ["Холодопроизводительность", "Количество/конфигурация вентиляторов", "Покрытие батареи", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Что такое сухой охладитель и чем он отличается от градирни?",
+          answer:
+            "Сухой охладитель отводит тепло в окружающий воздух через замкнутый жидкостный контур и оребрённую батарею без испарительного расхода воды — в отличие от градирни, которая использует испарение воды для отвода тепла. Сухие охладители жертвуют частью эффективности в жарком климате в обмен на нулевой расход воды и меньшее обслуживание.",
+        },
+        {
+          question: "Для чего нужно V-образное расположение батарей?",
+          answer:
+            "V-образное расположение батарей медная трубка/алюминиевое ребро увеличивает площадь теплообмена в тех же габаритах по сравнению с плоским расположением, повышая холодопроизводительность на единицу площади пола.",
+        },
+        {
+          question: "Какой диапазон мощности охватывает V-образный сухой охладитель?",
+          answer:
+            "Стандартный модельный ряд охватывает от 120 до 1400 кВт (от DC-120 до DC-1400), с количеством и мощностью вентиляторов, масштабируемыми под каждый уровень мощности; индивидуальные мощности и конфигурации доступны по запросу.",
+        },
+      ],
+    },
+    zh: {
+      name: "V型干冷器",
+      shortName: "干冷器",
+      tagline: "零水耗V型干冷器，用于液冷及冷水机组散热。",
+      overview:
+        "万电通V型干冷器通过V型排列的铜管铝翅片盘管，将液冷或冷冻水回路的热量以零水耗方式散至环境空气中，配备10%~100%变频EC轴流风机及热浸镀锌钢架。标准机型覆盖120kW至1400kW功率范围，可支持数据中心液冷系统及工业冷水机组的一次或二次回路散热。",
+      keyFeatures: [
+        "零水耗干式散热——无蒸发耗水",
+        "铜管铝翅片盘管，V型排列",
+        "EC轴流直驱风机，10%~100%变频调速",
+        "热浸镀锌钢架，配保护性风机护罩",
+        "支持RS485通信，可接入BMS/监控系统",
+        "机型功率覆盖120kW至1400kW；支持OEM/ODM及定制容量",
+      ],
+      specGroups: [
+        {
+          title: "性能参数（按型号）",
+          specs: [
+            { label: "DC-120", value: "120kW，2台风机，风机功率3.6kW，噪音60dB" },
+            { label: "DC-400", value: "400kW，8台风机，风机功率14.4kW，噪音65dB" },
+            { label: "DC-800", value: "800kW，18台风机，风机功率32.4kW，噪音68dB" },
+            { label: "DC-1400", value: "1400kW，20台风机，风机功率80kW，噪音70dB" },
+          ],
+        },
+        {
+          title: "结构",
+          specs: [
+            { label: "盘管类型", value: "铜管+铝翅片，V型排列" },
+            { label: "风机类型", value: "EC轴流直驱，10%~100%变频调速" },
+            { label: "机架", value: "热浸镀锌钢材" },
+            { label: "设计压力", value: "1.0MPa" },
+            { label: "通信", value: "RS485" },
+          ],
+        },
+      ],
+      applications: ["数据中心液冷回路散热", "冷冻水系统散热", "工业过程冷却", "要求零耗水冷却的项目"],
+      customizationOptions: ["制冷量", "风机数量/配置", "盘管涂层", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "什么是干冷器？与冷却塔有何区别？",
+          answer:
+            "干冷器通过封闭液体回路及翅片盘管将热量散至环境空气中，不产生蒸发耗水；而冷却塔则依靠水分蒸发散热。干冷器在炎热气候下效率略低于冷却塔，但换来零水耗及更低的维护成本。",
+        },
+        {
+          question: "V型盘管排列有什么作用？",
+          answer:
+            "将铜管铝翅片盘管以V型排列，相比平板式排列可在相同占地面积内增大换热表面积，从而提升单位占地面积的散热能力。",
+        },
+        {
+          question: "V型干冷器的容量范围是多少？",
+          answer:
+            "标准机型范围为120kW至1400kW（DC-120至DC-1400），风机数量及功率随容量等级递增；如有需要，也可提供定制容量及配置。",
+        },
+      ],
+    },
+  },
   "anti-static-raised-floor": {
     ar: {
       name: "أرضية مرفوعة مضادة للكهرباء الساكنة",
