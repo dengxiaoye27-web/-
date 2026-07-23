@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -57,6 +58,9 @@ export default async function HomePage({
 
   return (
     <>
+      {/* 00 Hero Carousel */}
+      <HeroCarousel />
+
       {/* 01 Hero */}
       <section className="relative overflow-hidden bg-navy-950 text-white">
         <div
