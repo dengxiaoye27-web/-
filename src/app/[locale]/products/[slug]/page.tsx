@@ -77,7 +77,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs
             items={[
@@ -157,7 +157,7 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
         ]}
       />
 
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <p className="eyebrow mt-6 mb-3">{category?.name}</p>

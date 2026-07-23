@@ -25,7 +25,7 @@ export default async function ContactPage({
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24">
+      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
         <div className="container-page">
           <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.contact }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
@@ -44,17 +44,22 @@ export default async function ContactPage({
         </div>
 
         <div className="space-y-8">
-          <div className="rounded-2xl border border-line-200 p-6">
+          <div className="group relative overflow-hidden rounded-2xl border border-line-200 p-6 transition-all duration-300 hover:border-accent-500/60">
+            <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.email}</h3>
-            <p className="mt-2 text-ink-900">{siteConfig.email}</p>
+            <a href={`mailto:${siteConfig.email}`} className="mt-2 block text-ink-900 hover:text-accent-500 transition-colors">
+              {siteConfig.email}
+            </a>
           </div>
-          <div className="rounded-2xl border border-line-200 p-6">
+          <div className="group relative overflow-hidden rounded-2xl border border-line-200 p-6 transition-all duration-300 hover:border-accent-500/60">
+            <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.whatsapp}</h3>
             <a href={siteConfig.whatsapp} className="mt-2 block text-accent-500 hover:text-accent-400">
               {t.sidebar.whatsappCta}
             </a>
           </div>
-          <div className="rounded-2xl border border-line-200 p-6">
+          <div className="group relative overflow-hidden rounded-2xl border border-line-200 p-6 transition-all duration-300 hover:border-accent-500/60">
+            <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.location}</h3>
             <p className="mt-2 text-ink-900">{siteConfig.address}</p>
           </div>
