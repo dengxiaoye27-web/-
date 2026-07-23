@@ -2701,7 +2701,69 @@ export const products: Product[] = [
           "Ladder tray is generally preferred for heavier power cable bundles and longer unsupported spans, since its rung-and-rail construction offers higher load capacity and better heat dissipation than lightweight wire mesh tray.",
       },
     ],
-    relatedProductSlugs: ["wire-mesh-cable-tray", "cable-tray"],
+    relatedProductSlugs: ["wire-mesh-cable-tray", "cable-tray", "aluminum-cable-ladder"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
+  {
+    slug: "aluminum-cable-ladder",
+    category: "cable-management",
+    name: "Aluminum Alloy Cable Ladder",
+    shortName: "Aluminum Ladder Tray",
+    tagline: "Lightweight, corrosion-resistant aluminum ladder tray with tool-free T-slot assembly.",
+    overview:
+      "The Wandtung Aluminum Alloy Cable Ladder is built from 6063-T5 aluminum alloy extrusion with anodized surface treatment, giving it roughly a third of the weight of an equivalent steel ladder tray while remaining corrosion-resistant, with a precision T-slot connection system that assembles with M8 anti-corrosion bolts — no welding required — for fast, modular installation in data center and server room environments.",
+    featured: true,
+    images: [
+      "/products/aluminum-cable-ladder/01-main.jpg",
+      "/products/aluminum-cable-ladder/02-structure-detail.jpg",
+      "/products/aluminum-cable-ladder/03-profile-material.jpg",
+      "/products/aluminum-cable-ladder/04-manufacturing-process.jpg",
+      "/products/aluminum-cable-ladder/05-assembly-scene.jpg",
+    ],
+    keyFeatures: [
+      "6063-T5 aluminum alloy extrusion, anodized surface treatment",
+      "Lightweight — roughly 1/3 the weight of an equivalent steel ladder tray",
+      "Tensile strength ≥160MPa",
+      "Precision T-slot connection system, no welding required",
+      "Heavy-duty aluminum side rails and aluminum alloy cross rungs",
+      "M8 anti-corrosion bolted assembly for fast, modular installation",
+      "Corrosion resistant; OEM/ODM available",
+    ],
+    specGroups: [
+      {
+        title: "Construction",
+        specs: [
+          { label: "Type", value: "Ladder (rung-and-rail), aluminum alloy" },
+          { label: "Material", value: "6063-T5 aluminum alloy extrusion" },
+          { label: "Surface Treatment", value: "Anodized" },
+          { label: "Tensile Strength", value: "≥160MPa" },
+          { label: "Weight", value: "~1/3 of equivalent steel ladder tray" },
+        ],
+      },
+      {
+        title: "Assembly",
+        specs: [
+          { label: "Connection System", value: "Precision T-slot, tool-free profile fit" },
+          { label: "Fasteners", value: "M8 anti-corrosion bolts, no welding required" },
+        ],
+      },
+    ],
+    applications: ["Data center power cable runs", "Server rooms", "Telecom equipment rooms", "Corrosive or coastal environments requiring non-ferrous tray"],
+    customizationOptions: ["Width", "Rung spacing", "Finish", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Why choose an aluminum ladder tray over a steel ladder tray?",
+        answer:
+          "Aluminum ladder tray weighs roughly a third of an equivalent steel tray, simplifying overhead installation and reducing structural loading, while its anodized 6063-T5 aluminum construction resists corrosion without the zinc or hot-dip galvanizing steel trays require — useful in humid, coastal or corrosive environments.",
+      },
+      {
+        question: "Does the aluminum ladder tray require welding to assemble?",
+        answer:
+          "No. Sections connect through a precision T-slot system fastened with M8 anti-corrosion bolts, allowing fast, modular, tool-light installation without on-site welding.",
+      },
+    ],
+    relatedProductSlugs: ["ladder-cable-tray", "wire-mesh-cable-tray", "cable-tray"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
 

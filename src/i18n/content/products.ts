@@ -7212,6 +7212,258 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "aluminum-cable-ladder": {
+    ar: {
+      name: "سلم كابلات من سبيكة الألومنيوم",
+      shortName: "سلم ألومنيوم",
+      tagline: "سلم كابلات خفيف الوزن ومقاوم للتآكل من الألومنيوم، بتجميع سريع بدون أدوات بنظام تجويف على شكل T.",
+      overview:
+        "سلم الكابلات من سبيكة الألومنيوم من واندتونغ مصنوع من بثق سبيكة الألومنيوم 6063-T5 بمعالجة سطحية أنودة، ما يمنحه وزناً يبلغ نحو ثلث وزن سلم كابلات فولاذي مكافئ مع بقائه مقاوماً للتآكل، ويتميز بنظام اتصال دقيق بتجويف على شكل T يُجمَّع بمسامير مقاومة للتآكل بمقاس M8 - دون الحاجة إلى لحام - لتركيب سريع ومعياري في بيئات مراكز البيانات وغرف الخوادم.",
+      keyFeatures: [
+        "بثق سبيكة ألومنيوم 6063-T5، بمعالجة سطحية أنودة",
+        "خفيف الوزن - نحو 1/3 وزن سلم كابلات فولاذي مكافئ",
+        "مقاومة شد ≥160 ميجاباسكال",
+        "نظام اتصال دقيق بتجويف على شكل T، دون الحاجة إلى لحام",
+        "قضبان جانبية ألومنيوم متينة ودرجات عرضية من سبيكة الألومنيوم",
+        "تجميع بمسامير مقاومة للتآكل بمقاس M8 لتركيب سريع ومعياري",
+        "مقاوم للتآكل؛ متوفر OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "البناء",
+          specs: [
+            { label: "النوع", value: "سلمي (درجات وقضبان)، سبيكة ألومنيوم" },
+            { label: "المادة", value: "بثق سبيكة ألومنيوم 6063-T5" },
+            { label: "المعالجة السطحية", value: "أنودة" },
+            { label: "مقاومة الشد", value: "≥160 ميجاباسكال" },
+            { label: "الوزن", value: "نحو 1/3 وزن سلم كابلات فولاذي مكافئ" },
+          ],
+        },
+        {
+          title: "التجميع",
+          specs: [
+            { label: "نظام الاتصال", value: "تجويف دقيق على شكل T، تركيب بدون أدوات" },
+            { label: "المثبتات", value: "مسامير مقاومة للتآكل M8، دون الحاجة إلى لحام" },
+          ],
+        },
+      ],
+      applications: ["مسارات كابلات الطاقة في مراكز البيانات", "غرف الخوادم", "غرف معدات الاتصالات", "البيئات الساحلية أو المسببة للتآكل التي تتطلب سلماً غير حديدي"],
+      customizationOptions: ["العرض", "تباعد الدرجات", "التشطيب", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "لماذا اختيار سلم كابلات من الألومنيوم بدلاً من سلم فولاذي؟",
+          answer:
+            "يزن سلم الكابلات من الألومنيوم نحو ثلث وزن سلم فولاذي مكافئ، ما يبسّط التركيب العلوي ويقلل الحمل الإنشائي، بينما يقاوم بناؤه من الألومنيوم 6063-T5 المؤكسد بالأنودة التآكل دون الحاجة إلى الطلاء بالزنك أو التغليف بالجلفنة الساخنة التي تتطلبها السلالم الفولاذية - وهو مفيد في البيئات الرطبة أو الساحلية أو المسببة للتآكل.",
+        },
+        {
+          question: "هل يتطلب سلم الكابلات من الألومنيوم لحاماً للتجميع؟",
+          answer:
+            "لا. تتصل الأقسام عبر نظام تجويف دقيق على شكل T يُثبَّت بمسامير مقاومة للتآكل بمقاس M8، ما يتيح تركيباً سريعاً ومعيارياً وبأدوات بسيطة دون الحاجة إلى لحام في الموقع.",
+        },
+      ],
+    },
+    fr: {
+      name: "Échelle à câbles en alliage d'aluminium",
+      shortName: "Échelle en aluminium",
+      tagline: "Échelle à câbles en aluminium légère et résistante à la corrosion, à assemblage rapide sans outil par rainure en T.",
+      overview:
+        "L'échelle à câbles en alliage d'aluminium Wandtung est fabriquée en aluminium extrudé 6063-T5 avec traitement de surface anodisé, lui conférant environ un tiers du poids d'une échelle en acier équivalente tout en restant résistante à la corrosion, avec un système de connexion à rainure en T de précision qui s'assemble avec des boulons anticorrosion M8 — sans soudure requise — pour une installation rapide et modulaire dans les environnements de centres de données et de salles serveurs.",
+      keyFeatures: [
+        "Aluminium extrudé 6063-T5, traitement de surface anodisé",
+        "Léger — environ 1/3 du poids d'une échelle en acier équivalente",
+        "Résistance à la traction ≥160 MPa",
+        "Système de connexion à rainure en T de précision, sans soudure requise",
+        "Rails latéraux en aluminium robustes et barreaux transversaux en alliage d'aluminium",
+        "Assemblage par boulons anticorrosion M8 pour une installation rapide et modulaire",
+        "Résistant à la corrosion ; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Construction",
+          specs: [
+            { label: "Type", value: "Échelle (barreaux et rails), alliage d'aluminium" },
+            { label: "Matériau", value: "Aluminium extrudé 6063-T5" },
+            { label: "Traitement de surface", value: "Anodisé" },
+            { label: "Résistance à la traction", value: "≥160 MPa" },
+            { label: "Poids", value: "~1/3 d'une échelle en acier équivalente" },
+          ],
+        },
+        {
+          title: "Assemblage",
+          specs: [
+            { label: "Système de connexion", value: "Rainure en T de précision, ajustement sans outil" },
+            { label: "Fixations", value: "Boulons anticorrosion M8, sans soudure requise" },
+          ],
+        },
+      ],
+      applications: ["Cheminements de câbles d'alimentation en centre de données", "Salles serveurs", "Salles d'équipement télécoms", "Environnements corrosifs ou côtiers nécessitant une échelle non ferreuse"],
+      customizationOptions: ["Largeur", "Espacement des barreaux", "Finition", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Pourquoi choisir une échelle en aluminium plutôt qu'une échelle en acier ?",
+          answer:
+            "L'échelle en aluminium pèse environ un tiers d'une échelle en acier équivalente, simplifiant l'installation en hauteur et réduisant la charge structurelle, tandis que sa construction en aluminium 6063-T5 anodisé résiste à la corrosion sans le zingage ou la galvanisation à chaud que nécessitent les échelles en acier — utile dans les environnements humides, côtiers ou corrosifs.",
+        },
+        {
+          question: "L'échelle en aluminium nécessite-t-elle une soudure pour être assemblée ?",
+          answer:
+            "Non. Les sections se connectent via un système de rainure en T de précision fixé par des boulons anticorrosion M8, permettant une installation rapide, modulaire et avec un outillage léger, sans soudure sur site.",
+        },
+      ],
+    },
+    es: {
+      name: "Escalera de cables de aleación de aluminio",
+      shortName: "Escalera de aluminio",
+      tagline: "Escalera de cables de aluminio ligera y resistente a la corrosión, con montaje rápido sin herramientas mediante ranura en T.",
+      overview:
+        "La escalera de cables de aleación de aluminio de Wandtung está fabricada en aluminio extruido 6063-T5 con tratamiento de superficie anodizado, lo que le da aproximadamente un tercio del peso de una escalera de acero equivalente mientras permanece resistente a la corrosión, con un sistema de conexión de ranura en T de precisión que se ensambla con pernos anticorrosión M8 — sin necesidad de soldadura — para una instalación rápida y modular en entornos de centros de datos y salas de servidores.",
+      keyFeatures: [
+        "Aluminio extruido 6063-T5, tratamiento de superficie anodizado",
+        "Ligero: aproximadamente 1/3 del peso de una escalera de acero equivalente",
+        "Resistencia a la tracción ≥160 MPa",
+        "Sistema de conexión de ranura en T de precisión, sin necesidad de soldadura",
+        "Rieles laterales de aluminio resistentes y peldaños transversales de aleación de aluminio",
+        "Montaje con pernos anticorrosión M8 para una instalación rápida y modular",
+        "Resistente a la corrosión; OEM/ODM disponible",
+      ],
+      specGroups: [
+        {
+          title: "Construcción",
+          specs: [
+            { label: "Tipo", value: "Escalera (peldaños y rieles), aleación de aluminio" },
+            { label: "Material", value: "Aluminio extruido 6063-T5" },
+            { label: "Tratamiento de superficie", value: "Anodizado" },
+            { label: "Resistencia a la tracción", value: "≥160 MPa" },
+            { label: "Peso", value: "~1/3 de una escalera de acero equivalente" },
+          ],
+        },
+        {
+          title: "Montaje",
+          specs: [
+            { label: "Sistema de conexión", value: "Ranura en T de precisión, ajuste sin herramientas" },
+            { label: "Sujetadores", value: "Pernos anticorrosión M8, sin necesidad de soldadura" },
+          ],
+        },
+      ],
+      applications: ["Rutas de cables de energía en centros de datos", "Salas de servidores", "Salas de equipos de telecomunicaciones", "Entornos corrosivos o costeros que requieren una escalera no ferrosa"],
+      customizationOptions: ["Ancho", "Espaciado de peldaños", "Acabado", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        {
+          question: "¿Por qué elegir una escalera de aluminio en lugar de una escalera de acero?",
+          answer:
+            "La escalera de aluminio pesa aproximadamente un tercio de una escalera de acero equivalente, lo que simplifica la instalación aérea y reduce la carga estructural, mientras que su construcción de aluminio 6063-T5 anodizado resiste la corrosión sin necesitar el zincado o galvanizado en caliente que requieren las escaleras de acero, útil en entornos húmedos, costeros o corrosivos.",
+        },
+        {
+          question: "¿La escalera de aluminio requiere soldadura para su montaje?",
+          answer:
+            "No. Las secciones se conectan mediante un sistema de ranura en T de precisión fijado con pernos anticorrosión M8, lo que permite una instalación rápida, modular y con herramientas ligeras sin soldadura in situ.",
+        },
+      ],
+    },
+    ru: {
+      name: "Лестничный кабельный лоток из алюминиевого сплава",
+      shortName: "Алюминиевый лестничный лоток",
+      tagline: "Лёгкий, коррозионностойкий алюминиевый лестничный лоток с безынструментальной сборкой по системе Т-паза.",
+      overview:
+        "Лестничный кабельный лоток из алюминиевого сплава Wandtung изготовлен из экструдированного алюминиевого сплава 6063-T5 с анодированной поверхностью, что даёт ему примерно треть веса эквивалентного стального лестничного лотка при сохранении коррозионной стойкости, с прецизионной системой соединения по Т-пазу, собираемой антикоррозийными болтами M8 — без необходимости сварки — для быстрого модульного монтажа в ЦОД и серверных помещениях.",
+      keyFeatures: [
+        "Экструдированный алюминиевый сплав 6063-T5, анодированная поверхность",
+        "Лёгкий вес — примерно 1/3 веса эквивалентного стального лестничного лотка",
+        "Предел прочности на разрыв ≥160 МПа",
+        "Прецизионная система соединения по Т-пазу, без необходимости сварки",
+        "Прочные алюминиевые боковые направляющие и поперечные перекладины из алюминиевого сплава",
+        "Сборка на антикоррозийных болтах M8 для быстрого модульного монтажа",
+        "Коррозионностойкий; доступны OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "Конструкция",
+          specs: [
+            { label: "Тип", value: "Лестничный (перекладины и направляющие), алюминиевый сплав" },
+            { label: "Материал", value: "Экструдированный алюминиевый сплав 6063-T5" },
+            { label: "Обработка поверхности", value: "Анодирование" },
+            { label: "Предел прочности на разрыв", value: "≥160 МПа" },
+            { label: "Вес", value: "~1/3 веса эквивалентного стального лотка" },
+          ],
+        },
+        {
+          title: "Сборка",
+          specs: [
+            { label: "Система соединения", value: "Прецизионный Т-паз, безынструментальная подгонка" },
+            { label: "Крепёж", value: "Антикоррозийные болты M8, без необходимости сварки" },
+          ],
+        },
+      ],
+      applications: ["Трассы силовых кабелей в ЦОД", "Серверные помещения", "Помещения телекоммуникационного оборудования", "Влажные или прибрежные коррозионные среды, требующие неферромагнитного лотка"],
+      customizationOptions: ["Ширина", "Шаг перекладин", "Покрытие", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Почему стоит выбрать алюминиевый лестничный лоток вместо стального?",
+          answer:
+            "Алюминиевый лестничный лоток весит примерно треть от веса эквивалентного стального лотка, упрощая надпотолочный монтаж и снижая нагрузку на конструкцию, при этом его анодированная конструкция из алюминия 6063-T5 сопротивляется коррозии без цинкования или горячего оцинкования, необходимых стальным лоткам — что полезно во влажных, прибрежных или коррозионных средах.",
+        },
+        {
+          question: "Требуется ли сварка для сборки алюминиевого лестничного лотка?",
+          answer:
+            "Нет. Секции соединяются через прецизионную систему Т-паза, скрепляемую антикоррозийными болтами M8, что обеспечивает быстрый, модульный монтаж с минимальным набором инструментов без сварки на объекте.",
+        },
+      ],
+    },
+    zh: {
+      name: "铝合金电缆梯架",
+      shortName: "铝合金梯架",
+      tagline: "轻量化耐腐蚀铝合金梯架,T型槽免工具快速组装。",
+      overview:
+        "万电通铝合金电缆梯架采用6063-T5铝合金型材挤压成型,表面经阳极氧化处理,重量约为同规格钢制梯架的三分之一,同时保持耐腐蚀性能。精密T型槽连接系统采用M8防腐螺栓组装——无需焊接——实现数据中心及服务器机房环境下快速、模块化的安装。",
+      keyFeatures: [
+        "6063-T5铝合金型材挤压成型,表面阳极氧化处理",
+        "轻量化——约为同规格钢制梯架重量的1/3",
+        "抗拉强度≥160MPa",
+        "精密T型槽连接系统,无需焊接",
+        "重型铝合金侧梁及铝合金横档",
+        "M8防腐螺栓组装,实现快速模块化安装",
+        "耐腐蚀;支持OEM/ODM",
+      ],
+      specGroups: [
+        {
+          title: "结构",
+          specs: [
+            { label: "类型", value: "梯式(横档侧梁),铝合金材质" },
+            { label: "材质", value: "6063-T5铝合金型材" },
+            { label: "表面处理", value: "阳极氧化" },
+            { label: "抗拉强度", value: "≥160MPa" },
+            { label: "重量", value: "约为同规格钢制梯架的1/3" },
+          ],
+        },
+        {
+          title: "组装",
+          specs: [
+            { label: "连接系统", value: "精密T型槽,免工具型材配合" },
+            { label: "紧固件", value: "M8防腐螺栓,无需焊接" },
+          ],
+        },
+      ],
+      applications: ["数据中心电力线缆路径", "服务器机房", "电信设备间", "需要非铁质梯架的腐蚀性或沿海环境"],
+      customizationOptions: ["宽度", "横档间距", "表面处理", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "为什么选择铝合金梯架而非钢制梯架？",
+          answer:
+            "铝合金梯架重量约为同规格钢制梯架的三分之一,简化了高空安装并降低结构承重负担;其阳极氧化的6063-T5铝合金结构无需像钢制梯架那样进行镀锌或热浸镀锌处理即可耐腐蚀,适用于潮湿、沿海或腐蚀性环境。",
+        },
+        {
+          question: "铝合金梯架组装是否需要焊接？",
+          answer:
+            "不需要。各段通过精密T型槽系统连接,并使用M8防腐螺栓紧固,实现快速、模块化、轻工具化安装,无需现场焊接。",
+        },
+      ],
+    },
+  },
   "battery-energy-storage-system": {
     ar: {
       name: "نظام تخزين طاقة البطارية (BESS)",
