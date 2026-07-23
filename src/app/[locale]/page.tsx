@@ -8,6 +8,7 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { coreSolutionIcons, whyWandtungIcons } from "@/components/ui/SectionIcons";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -72,9 +73,11 @@ export default async function HomePage({
               description={t.trustedPartner.description}
             />
           </Reveal>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl border border-line-200 bg-line-200 overflow-hidden">
             {t.trustedPartner.stats.map((stat) => (
-              <StatTile key={stat.label} value={stat.value} label={stat.label} />
+              <div key={stat.label} className="bg-white px-6 py-8 md:px-8 md:py-10">
+                <StatTile value={stat.value} label={stat.label} />
+              </div>
             ))}
           </div>
         </div>
@@ -91,15 +94,21 @@ export default async function HomePage({
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {t.coreSolutions.items.map((item, i) => (
-              <Card key={item.title} href={coreSolutionHrefs[i]}>
-                <h3 className="text-xl font-semibold text-ink-900">{item.title}</h3>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
-                <span className="mt-4 inline-block text-sm font-medium text-accent-500 group-hover:translate-x-1 transition-transform">
-                  {common.nav.learnMore} →
-                </span>
-              </Card>
-            ))}
+            {t.coreSolutions.items.map((item, i) => {
+              const Icon = coreSolutionIcons[i] ?? coreSolutionIcons[0];
+              return (
+                <Card key={item.title} href={coreSolutionHrefs[i]}>
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-ink-900">{item.title}</h3>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
+                  <span className="mt-4 inline-block text-sm font-medium text-accent-500 group-hover:translate-x-1 transition-transform">
+                    {common.nav.learnMore} →
+                  </span>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -139,7 +148,7 @@ export default async function HomePage({
       </section>
 
       {/* 05 One-Stop Solution */}
-      <section className="bg-navy-950 py-20 md:py-28">
+      <section className="bg-navy-950 py-20 md:py-28 grid-texture">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -165,8 +174,9 @@ export default async function HomePage({
             {t.industries.items.map((industry) => (
               <div
                 key={industry}
-                className="rounded-xl border border-line-200 px-5 py-6 text-center hover:border-accent-500/60 transition-colors"
+                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
               >
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <p className="font-medium text-ink-900">{industry}</p>
               </div>
             ))}
@@ -181,12 +191,18 @@ export default async function HomePage({
             <SectionHeading eyebrow={t.whyWandtung.eyebrow} title={t.whyWandtung.title} />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {t.whyWandtung.items.map((item) => (
-              <Card key={item.title}>
-                <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
-              </Card>
-            ))}
+            {t.whyWandtung.items.map((item, i) => {
+              const Icon = whyWandtungIcons[i] ?? whyWandtungIcons[0];
+              return (
+                <Card key={item.title}>
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
+                    <Icon className="h-5.5 w-5.5" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-ink-900">{item.title}</h3>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{item.description}</p>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -204,7 +220,11 @@ export default async function HomePage({
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
             {t.globalProjects.markets.map((market) => (
-              <div key={market} className="rounded-xl border border-navy-700 bg-navy-900 px-5 py-6 text-center">
+              <div
+                key={market}
+                className="group relative overflow-hidden rounded-xl border border-navy-700 bg-navy-900 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5"
+              >
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <p className="font-medium">{market}</p>
               </div>
             ))}
@@ -229,12 +249,12 @@ export default async function HomePage({
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
             {exhibitionImages.map((src) => (
-              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-navy-900">
+              <div key={src} className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-navy-900">
                 <Image
                   src={src}
                   alt={t.exhibitions.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(min-width: 768px) 25vw, 50vw"
                 />
               </div>
@@ -251,7 +271,11 @@ export default async function HomePage({
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert) => (
-              <div key={cert.name} className="rounded-xl border border-line-200 px-5 py-6 text-center">
+              <div
+                key={cert.name}
+                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
+              >
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <p className="text-lg font-semibold text-ink-900">{cert.name}</p>
                 <p className="mt-1 text-xs text-ink-600">{cert.description}</p>
               </div>
@@ -282,8 +306,16 @@ export default async function HomePage({
       </section>
 
       {/* 11 Final CTA */}
-      <section className="bg-navy-950 py-20 md:py-28 text-white text-center">
-        <div className="container-page">
+      <section className="relative overflow-hidden bg-navy-950 py-20 md:py-28 text-white text-center grid-texture">
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 50% 120%, rgba(0,145,255,0.25), transparent 55%)",
+          }}
+          aria-hidden
+        />
+        <div className="container-page relative">
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
             {t.finalCta.title}
           </h2>

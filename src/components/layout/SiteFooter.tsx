@@ -12,15 +12,23 @@ export function SiteFooter() {
   const t = getCommonMessages(locale);
 
   return (
-    <footer className="bg-navy-950 border-t border-navy-800 text-white/70">
+    <footer className="bg-navy-950 border-t-2 border-accent-500/60 text-white/70">
       <div className="container-page py-16 grid gap-10 md:grid-cols-5">
         <div className="md:col-span-2">
           <p className="text-xl font-semibold text-white tracking-tight">{siteConfig.name.toUpperCase()}</p>
           <p className="mt-3 text-sm max-w-xs leading-relaxed">
             {siteConfig.legalName} — {t.footer.tagline}.
           </p>
-          <p className="mt-4 text-sm">{siteConfig.email}</p>
-          <p className="text-sm">{siteConfig.phone}</p>
+          <p className="mt-4 text-sm">
+            <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+              {siteConfig.email}
+            </a>
+          </p>
+          <p className="text-sm">
+            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
+              {siteConfig.phone}
+            </a>
+          </p>
         </div>
 
         <div>

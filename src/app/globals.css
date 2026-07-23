@@ -74,3 +74,39 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Subtle engineering-grid texture for dark sections */
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.grid-texture-light {
+  background-image:
+    linear-gradient(rgba(5, 7, 13, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 7, 13, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Accent keyline under section headings */
+.heading-keyline {
+  position: relative;
+  padding-bottom: 0.9rem;
+}
+
+.heading-keyline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--color-accent-500);
+}
+
+.heading-keyline-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
