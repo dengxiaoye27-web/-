@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 
 const slides = [
   { src: "/images/hero/01-smart-data-centers.jpg", alt: "Build Smart Data Centers — Fuel Global AI & HPC Development" },
@@ -11,7 +12,13 @@ const slides = [
   { src: "/images/hero/05-liquid-cooling-solution.jpg", alt: "Liquid Cooling Data Center One-Stop Solution" },
 ];
 
-export function HeroCarousel() {
+export function HeroCarousel({
+  ctaPrimary,
+  ctaSecondary,
+}: {
+  ctaPrimary: string;
+  ctaSecondary: string;
+}) {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -37,24 +44,34 @@ export function HeroCarousel() {
               fill
               className="object-cover"
               sizes="100vw"
+              quality={90}
               priority={i === 0}
             />
           </div>
         ))}
-      </div>
-      <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
-        {slides.map((slide, i) => (
-          <button
-            key={slide.src}
-            type="button"
-            onClick={() => setActive(i)}
-            aria-label={`Show slide ${i + 1}`}
-            aria-current={i === active}
-            className={`h-2 rounded-full transition-all ${
-              i === active ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/75"
-            }`}
-          />
-        ))}
+        <div className="absolute inset-x-0 bottom-0 h-24 sm:h-28 bg-gradient-to-t from-navy-950/80 to-transparent" />
+        <div className="absolute inset-x-0 bottom-4 sm:bottom-6 flex flex-col items-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button href="/solutions">{ctaPrimary}</Button>
+            <Button href="/contact" variant="outline" className="border-white text-white hover:bg-white/10">
+              {ctaSecondary}
+            </Button>
+          </div>
+          <div className="flex justify-center gap-2">
+            {slides.map((slide, i) => (
+              <button
+                key={slide.src}
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Show slide ${i + 1}`}
+                aria-current={i === active}
+                className={`h-2 rounded-full transition-all ${
+                  i === active ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/75"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

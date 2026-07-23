@@ -58,35 +58,9 @@ export default async function HomePage({
 
   return (
     <>
-      {/* 00 Hero Carousel */}
-      <HeroCarousel />
-
-      {/* 01 Hero */}
-      <section className="relative overflow-hidden bg-navy-950 text-white">
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, rgba(0,145,255,0.25), transparent 45%), radial-gradient(circle at 80% 60%, rgba(34,211,238,0.15), transparent 40%)",
-          }}
-          aria-hidden
-        />
-        <div className="container-page relative py-28 md:py-40">
-          <p className="eyebrow mb-6">{t.hero.eyebrow}</p>
-          <h1 className="max-w-4xl text-5xl md:text-7xl font-semibold tracking-tight">
-            {t.hero.title}
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed">
-            {t.hero.subtitle}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/solutions">{t.hero.ctaPrimary}</Button>
-            <Button href="/contact" variant="outline">
-              {t.hero.ctaSecondary}
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* 01 Hero Carousel (combines visual hero + primary CTAs) */}
+      <h1 className="sr-only">{t.hero.title}</h1>
+      <HeroCarousel ctaPrimary={t.hero.ctaPrimary} ctaSecondary={t.hero.ctaSecondary} />
 
       {/* 02 Trusted Partner */}
       <section className="bg-white py-20 md:py-28">
