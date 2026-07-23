@@ -78,6 +78,11 @@ export interface HomeMessages {
     markets: string[];
     viewProjects: string;
   };
+  exhibitions: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
   certifications: {
     eyebrow: string;
     title: string;
