@@ -2177,31 +2177,57 @@ export const products: Product[] = [
     shortName: "In-Row Cooling",
     tagline: "Cooling unit installed directly within the cabinet row, next to the IT load it serves.",
     overview:
-      "Wandtung In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level.",
+      "Wandtung In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level. The unit holds ±0.5°C temperature and ±5% RH humidity precision using variable-speed EC fans, with an intelligent controller for remote monitoring and 24/7 continuous-duty operation.",
+    images: [
+      "/products/in-row-cooling/01-main.jpg",
+      "/products/in-row-cooling/02-key-features.jpg",
+      "/products/in-row-cooling/03-front-detail.jpg",
+      "/products/in-row-cooling/04-side-detail.jpg",
+      "/products/in-row-cooling/05-selling-point.jpg",
+      "/products/in-row-cooling/06-data-center-scene.jpg",
+    ],
     keyFeatures: [
       "Cabinet-footprint form factor fits directly into the row",
       "Close-coupled to the IT load for tight temperature control",
+      "±0.5°C temperature and ±5% RH humidity precision",
+      "Variable-speed EC fans for energy-efficient airflow",
+      "Intelligent controller with remote monitoring",
       "N+1 unit redundancy within a row",
-      "Compatible with hot/cold aisle containment",
+      "24/7 continuous-duty operation; compatible with hot/cold aisle containment",
     ],
     specGroups: [
       {
         title: "Performance",
         specs: [
-          { label: "Cooling Capacity", value: "10 kW – 35 kW per unit" },
+          { label: "Cooling Capacity", value: "5 kW – 50 kW per unit" },
           { label: "Form Factor", value: "Standard cabinet footprint" },
+          { label: "Temperature Precision", value: "±0.5°C" },
+          { label: "Humidity Precision", value: "±5% RH" },
+          { label: "Air Distribution", value: "Under-floor / overhead" },
           { label: "Redundancy", value: "N+1 unit-level redundancy supported" },
+        ],
+      },
+      {
+        title: "Control",
+        specs: [
+          { label: "Fans", value: "Variable-speed EC fans" },
+          { label: "Controller", value: "Intelligent controller, remote monitoring" },
         ],
       },
     ],
     applications: ["High-density colocation rows", "Micro modular data centers", "Containment-based cooling designs"],
     customizationOptions: ["Capacity", "Redundancy level", "Refrigerant type"],
-    standards: ["Certification available on request per project spec"],
+    standards: ["CE certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "Why choose in-row cooling over a traditional room air conditioner?",
         answer:
           "In-row cooling places capacity directly next to the IT load rather than relying on room-wide air mixing, giving tighter temperature control, shorter airflow paths and better support for the higher densities seen in modern racks.",
+      },
+      {
+        question: "How precise is the temperature and humidity control?",
+        answer:
+          "The unit holds ±0.5°C temperature and ±5% RH humidity precision using variable-speed EC fans and an intelligent controller, running continuously in 24/7 duty-cycle operation with remote monitoring.",
       },
     ],
     relatedProductSlugs: ["row-based-cooling", "cdu", "smart-micro-module"],
