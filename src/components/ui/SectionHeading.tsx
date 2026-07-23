@@ -17,7 +17,7 @@ export function SectionHeading({
     >
       {eyebrow ? <p className="eyebrow mb-3">{eyebrow}</p> : null}
       <h2
-        className={`text-3xl md:text-5xl font-semibold tracking-tight ${
+        className={`heading-keyline ${align === "center" ? "heading-keyline-center" : ""} text-3xl md:text-5xl font-semibold tracking-tight ${
           light ? "text-white" : "text-ink-900"
         }`}
       >
