@@ -7464,6 +7464,248 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "solid-bottom-cable-tray": {
+    ar: {
+      name: "مجرى كابلات بقاع صلب (قناة)",
+      shortName: "مجرى قاع صلب",
+      tagline: "مجرى قناة محاط بالكامل بقاع صلب وغطاء لحماية مسارات الكابلات من الغبار والتلف المادي.",
+      overview:
+        "مجرى الكابلات ذو القاع الصلب من واندتونغ هو مجرى نوع قناة محاط بالكامل، بقاعدة صلبة وجدران جانبية مهواة وغطاء بتثبيت سريع، يمنح الكابلات حماية مادية من الغبار والحطام والتلامس العرضي على طول المسار بالكامل. يُصنَّع بأنواع فولاذ مقاوم للصدأ وسبيكة ألومنيوم ومجلفن بالغمس الساخن ومقاوم للحريق، ويأتي بمجموعة تركيبات كاملة تشمل الكوعات، ويُركَّب على السقف أو الحائط أو الدعامات الأفقية.",
+      keyFeatures: [
+        "قناة بقاع صلب محاطة بالكامل مع غطاء بتثبيت سريع",
+        "جدران جانبية مهواة لتدفق الهواء والوصول إلى الكابلات",
+        "متوفر بأنواع فولاذ مقاوم للصدأ وسبيكة ألومنيوم ومجلفن بالغمس الساخن ومقاوم للحريق",
+        "مجموعة تركيبات كاملة: كوعات وأغطية وموصلات",
+        "عرض وعمق مخصصان؛ OEM مقبول",
+        "طرق تركيب متعددة - سقف أو حائط أو أفقي",
+      ],
+      specGroups: [
+        {
+          title: "البناء",
+          specs: [
+            { label: "النوع", value: "قناة بقاع صلب مع غطاء" },
+            { label: "خيارات المادة", value: "فولاذ مقاوم للصدأ / سبيكة ألومنيوم / مجلفن بالغمس الساخن / مقاوم للحريق" },
+            { label: "الجدران الجانبية", value: "مهواة (بفتحات)" },
+            { label: "الأحجام", value: "عرض وعمق مخصصان متاحان" },
+          ],
+        },
+        {
+          title: "التركيبات والتثبيت",
+          specs: [
+            { label: "التركيبات", value: "كوعات وأغطية وموصلات - نظام كامل" },
+            { label: "التثبيت", value: "دعامة سقفية أو جدارية أو أفقية" },
+          ],
+        },
+      ],
+      applications: ["كابلات مراكز البيانات وغرف الخوادم التي تتطلب حماية من الغبار والتلف المادي", "غرف الاتصالات", "مسارات الكابلات الصناعية", "البيئات التي تتطلب توجيه كابلات محاط ومقاوم للعبث"],
+      customizationOptions: ["العرض", "العمق", "تشطيب المادة", "مجموعة التركيبات", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        {
+          question: "متى يجب اختيار مجرى بقاع صلب (قناة) بدلاً من مجرى شبكي أو سلمي مفتوح؟",
+          answer:
+            "يحيط مجرى القناة ذو القاع الصلب بالغطاء بمسار الكابل بالكامل، ما يحميه من الغبار والحطام والتلامس العرضي - وهو مفيد في المناطق ذات حركة السير أو البيئات المتربة أو حيث يجب إخفاء الكابلات عن الأنظار، بينما يُختار المجرى الشبكي أو السلمي المفتوح لسهولة الفحص والتهوية والتكلفة الأقل.",
+        },
+        {
+          question: "ما خيارات المواد المتوفرة لمجرى القاع الصلب؟",
+          answer:
+            "يُصنَّع المجرى بأنواع فولاذ مقاوم للصدأ وسبيكة ألومنيوم وفولاذ مجلفن بالغمس الساخن ومقاوم للحريق، تُختار بناءً على متطلبات التآكل والوزن وتصنيف الحريق لبيئة التركيب.",
+        },
+      ],
+    },
+    fr: {
+      name: "Chemin de câbles à fond plein (goulotte)",
+      shortName: "Chemin fond plein",
+      tagline: "Goulotte entièrement fermée à fond plein avec couvercle pour protection contre la poussière et les dommages physiques.",
+      overview:
+        "Le chemin de câbles à fond plein Wandtung est une goulotte entièrement fermée avec base pleine, parois latérales ventilées et couvercle à clipsage, offrant aux câbles une protection physique contre la poussière, les débris et les contacts accidentels sur tout le parcours. Il est fabriqué en acier inoxydable, alliage d'aluminium, acier galvanisé à chaud et versions ignifuges, livré avec une gamme complète de raccords incluant des coudes, et se monte au plafond, au mur ou sur supports horizontaux.",
+      keyFeatures: [
+        "Goulotte à fond plein entièrement fermée avec couvercle à clipsage",
+        "Parois latérales ventilées pour la circulation d'air et l'accès aux câbles",
+        "Disponible en acier inoxydable, alliage d'aluminium, acier galvanisé à chaud et versions ignifuges",
+        "Gamme complète de raccords : coudes, couvercles, connecteurs",
+        "Largeur et profondeur personnalisées ; OEM accepté",
+        "Plusieurs méthodes de montage — plafond, mur ou horizontal",
+      ],
+      specGroups: [
+        {
+          title: "Construction",
+          specs: [
+            { label: "Type", value: "Goulotte à fond plein avec couvercle" },
+            { label: "Options de matériau", value: "Acier inoxydable / alliage d'aluminium / galvanisé à chaud / ignifuge" },
+            { label: "Parois latérales", value: "Ventilées (à fentes)" },
+            { label: "Dimensions", value: "Largeur et profondeur personnalisées disponibles" },
+          ],
+        },
+        {
+          title: "Raccords et montage",
+          specs: [
+            { label: "Raccords", value: "Coudes, couvercles, connecteurs — système complet" },
+            { label: "Montage", value: "Support plafond, mural ou horizontal" },
+          ],
+        },
+      ],
+      applications: ["Câblage de centre de données et salle serveurs nécessitant une protection contre la poussière/les dommages physiques", "Salles télécoms", "Cheminements de câbles industriels", "Environnements nécessitant un routage de câbles fermé et anti-effraction"],
+      customizationOptions: ["Largeur", "Profondeur", "Finition du matériau", "Jeu de raccords", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        {
+          question: "Quand choisir un chemin à fond plein (goulotte) plutôt qu'un chemin grillagé ou échelle ouvert ?",
+          answer:
+            "Une goulotte à fond plein avec couvercle enferme entièrement le câblage, le protégeant de la poussière, des débris et des contacts accidentels — utile dans les zones à circulation piétonne, les environnements poussiéreux, ou lorsque les câbles doivent être dissimulés, tandis que le chemin grillagé ou échelle ouvert est choisi pour une inspection et une ventilation plus faciles et un coût moindre.",
+        },
+        {
+          question: "Quelles options de matériau sont disponibles pour le chemin à fond plein ?",
+          answer:
+            "Le chemin est fabriqué en acier inoxydable, alliage d'aluminium, acier galvanisé à chaud et versions ignifuges, sélectionnés selon les exigences de corrosion, de poids et de classement au feu de l'environnement d'installation.",
+        },
+      ],
+    },
+    es: {
+      name: "Bandeja de cables de fondo sólido (canal)",
+      shortName: "Bandeja fondo sólido",
+      tagline: "Canal completamente cerrado de fondo sólido con tapa para protección contra polvo y daños físicos.",
+      overview:
+        "La bandeja de cables de fondo sólido de Wandtung es una bandeja tipo canal completamente cerrada, con base sólida, paredes laterales ventiladas y una tapa a presión, que proporciona a los cables protección física contra el polvo, los desechos y el contacto accidental a lo largo de toda la ruta. Se fabrica en variantes de acero inoxidable, aleación de aluminio, acero galvanizado en caliente e ignífugo, incluye una gama completa de accesorios como codos, y se monta en techo, pared o soportes horizontales.",
+      keyFeatures: [
+        "Canal de fondo sólido completamente cerrado con tapa a presión",
+        "Paredes laterales ventiladas para flujo de aire y acceso a los cables",
+        "Disponible en variantes de acero inoxidable, aleación de aluminio, acero galvanizado en caliente e ignífugo",
+        "Gama completa de accesorios: codos, tapas, conectores",
+        "Ancho y profundidad personalizados; OEM aceptado",
+        "Múltiples métodos de montaje: techo, pared u horizontal",
+      ],
+      specGroups: [
+        {
+          title: "Construcción",
+          specs: [
+            { label: "Tipo", value: "Canal de fondo sólido con tapa" },
+            { label: "Opciones de material", value: "Acero inoxidable / aleación de aluminio / galvanizado en caliente / ignífugo" },
+            { label: "Paredes laterales", value: "Ventiladas (ranuradas)" },
+            { label: "Dimensiones", value: "Ancho y profundidad personalizados disponibles" },
+          ],
+        },
+        {
+          title: "Accesorios y montaje",
+          specs: [
+            { label: "Accesorios", value: "Codos, tapas, conectores — sistema completo" },
+            { label: "Montaje", value: "Soporte de techo, pared u horizontal" },
+          ],
+        },
+      ],
+      applications: ["Cableado de centros de datos y salas de servidores que requiere protección contra polvo/daños físicos", "Salas de telecomunicaciones", "Rutas de cableado industrial", "Entornos que requieren enrutamiento de cables cerrado y resistente a manipulaciones"],
+      customizationOptions: ["Ancho", "Profundidad", "Acabado del material", "Juego de accesorios", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        {
+          question: "¿Cuándo debo elegir una bandeja de fondo sólido (canal) en lugar de una bandeja de malla o escalera abierta?",
+          answer:
+            "Una bandeja de canal de fondo sólido con tapa encierra completamente el cableado, protegiéndolo del polvo, los desechos y el contacto accidental, útil en áreas de tránsito peatonal, entornos polvorientos, o donde los cables deben ocultarse a la vista, mientras que la bandeja de malla o escalera abierta se elige por su inspección y ventilación más sencillas y menor costo.",
+        },
+        {
+          question: "¿Qué opciones de material están disponibles para la bandeja de fondo sólido?",
+          answer:
+            "La bandeja se fabrica en variantes de acero inoxidable, aleación de aluminio, acero galvanizado en caliente e ignífugo, seleccionadas según los requisitos de corrosión, peso y clasificación contra incendios del entorno de instalación.",
+        },
+      ],
+    },
+    ru: {
+      name: "Кабельный лоток со сплошным дном (короб)",
+      shortName: "Лоток со сплошным дном",
+      tagline: "Полностью закрытый короб со сплошным дном и крышкой для защиты кабельных трасс от пыли и физических повреждений.",
+      overview:
+        "Кабельный лоток со сплошным дном Wandtung — это полностью закрытый лоток короба типа со сплошным основанием, вентилируемыми боковыми стенками и защёлкивающейся крышкой, обеспечивающий физическую защиту кабелей от пыли, мусора и случайного контакта по всей трассе. Изготавливается в вариантах из нержавеющей стали, алюминиевого сплава, горячеоцинкованной стали и огнестойком исполнении, поставляется с полным набором фитингов, включая углы, и монтируется на потолок, стену или горизонтальные опоры.",
+      keyFeatures: [
+        "Полностью закрытый короб со сплошным дном и защёлкивающейся крышкой",
+        "Вентилируемые боковые стенки для циркуляции воздуха и доступа к кабелям",
+        "Доступен в вариантах из нержавеющей стали, алюминиевого сплава, горячеоцинкованной стали и огнестойком исполнении",
+        "Полный набор фитингов: углы, крышки, соединители",
+        "Индивидуальная ширина и глубина; принимается OEM",
+        "Несколько методов монтажа — потолочный, настенный или горизонтальный",
+      ],
+      specGroups: [
+        {
+          title: "Конструкция",
+          specs: [
+            { label: "Тип", value: "Короб со сплошным дном и крышкой" },
+            { label: "Варианты материала", value: "Нержавеющая сталь / алюминиевый сплав / горячеоцинкованная сталь / огнестойкий" },
+            { label: "Боковые стенки", value: "Вентилируемые (с прорезями)" },
+            { label: "Размеры", value: "Доступны индивидуальная ширина и глубина" },
+          ],
+        },
+        {
+          title: "Фитинги и монтаж",
+          specs: [
+            { label: "Фитинги", value: "Углы, крышки, соединители — полная система" },
+            { label: "Монтаж", value: "Потолочная, настенная или горизонтальная опора" },
+          ],
+        },
+      ],
+      applications: ["Кабельная разводка ЦОД и серверных, требующая защиты от пыли/физических повреждений", "Телекоммуникационные помещения", "Промышленные кабельные трассы", "Среды, требующие закрытой, защищённой от несанкционированного доступа прокладки кабелей"],
+      customizationOptions: ["Ширина", "Глубина", "Отделка материала", "Комплект фитингов", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        {
+          question: "Когда стоит выбрать лоток со сплошным дном (короб) вместо открытого сетчатого или лестничного лотка?",
+          answer:
+            "Короб со сплошным дном и крышкой полностью закрывает кабельную трассу, защищая её от пыли, мусора и случайного контакта — полезно в зонах с пешеходным движением, пыльных средах или там, где кабели должны быть скрыты от глаз, тогда как открытый сетчатый или лестничный лоток выбирают для более лёгкого осмотра, вентиляции и меньшей стоимости.",
+        },
+        {
+          question: "Какие варианты материала доступны для лотка со сплошным дном?",
+          answer:
+            "Лоток изготавливается из нержавеющей стали, алюминиевого сплава, горячеоцинкованной стали и в огнестойком исполнении, выбираемых исходя из требований к коррозионной стойкости, весу и огнестойкости среды установки.",
+        },
+      ],
+    },
+    zh: {
+      name: "槽式（实底）电缆桥架",
+      shortName: "槽式桥架",
+      tagline: "全封闭实底槽式桥架配盖板，为线缆路径提供防尘及物理保护。",
+      overview:
+        "万电通槽式电缆桥架是一款全封闭槽式桥架，采用实心底板、通风侧壁及卡扣式盖板，为线缆全程提供防尘、防杂物及防意外接触的物理保护。产品提供不锈钢、铝合金、热浸镀锌及防火等多种材质版本，配备包括弯头在内的完整配件系统，可采用吊顶、壁挂或水平支架多种安装方式。",
+      keyFeatures: [
+        "全封闭实底槽式结构，配卡扣式盖板",
+        "通风侧壁，便于空气流通及线缆存取",
+        "提供不锈钢、铝合金、热浸镀锌及防火多种材质版本",
+        "完整配件系统：弯头、盖板、连接件",
+        "支持定制宽度及深度；接受OEM",
+        "多种安装方式——吊顶、壁挂或水平安装",
+      ],
+      specGroups: [
+        {
+          title: "结构",
+          specs: [
+            { label: "类型", value: "实底槽式，配盖板" },
+            { label: "材质选项", value: "不锈钢/铝合金/热浸镀锌/防火材质" },
+            { label: "侧壁", value: "通风（开槽）" },
+            { label: "尺寸", value: "支持定制宽度及深度" },
+          ],
+        },
+        {
+          title: "配件与安装",
+          specs: [
+            { label: "配件", value: "弯头、盖板、连接件——完整系统" },
+            { label: "安装方式", value: "吊顶、壁挂或水平支架" },
+          ],
+        },
+      ],
+      applications: ["需要防尘/物理保护的数据中心及服务器机房布线", "电信机房", "工业布线通道", "需要封闭式防拆线缆布放的环境"],
+      customizationOptions: ["宽度", "深度", "材质表面处理", "配件套装", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        {
+          question: "什么情况下应选择槽式（实底）桥架而非开放式网格或梯式桥架？",
+          answer:
+            "配盖板的实底槽式桥架将线缆完全封闭，可防尘、防杂物及意外接触——适用于人流较多区域、多尘环境，或需要隐藏线缆的场合；而开放式网格或梯式桥架则因便于检查、通风及成本更低而被选用。",
+        },
+        {
+          question: "槽式桥架有哪些材质选项？",
+          answer:
+            "该桥架提供不锈钢、铝合金、热浸镀锌钢材及防火等多种材质版本，可根据安装环境对耐腐蚀性、重量及防火等级的要求进行选择。",
+        },
+      ],
+    },
+  },
   "battery-energy-storage-system": {
     ar: {
       name: "نظام تخزين طاقة البطارية (BESS)",

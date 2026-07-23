@@ -2766,6 +2766,69 @@ export const products: Product[] = [
     relatedProductSlugs: ["ladder-cable-tray", "wire-mesh-cable-tray", "cable-tray"],
     relatedSolutionSlugs: ["data-center-infrastructure"],
   },
+  {
+    slug: "solid-bottom-cable-tray",
+    category: "cable-management",
+    name: "Solid Bottom (Trough) Cable Tray",
+    shortName: "Solid Bottom Tray",
+    tagline: "Fully enclosed solid-bottom trough tray with cover for dust and physical protection of cable runs.",
+    overview:
+      "The Wandtung Solid Bottom Cable Tray is a fully enclosed trough-type tray with a solid base, ventilated side walls and a snap-on cover, giving cables physical protection from dust, debris and accidental contact along the full run. It is manufactured in stainless steel, aluminum alloy, hot-dip galvanized and fireproof variants, ships with a complete fitting range including elbows, and mounts to ceiling, wall or horizontal supports.",
+    featured: true,
+    images: [
+      "/products/solid-bottom-cable-tray/01-main.png",
+      "/products/solid-bottom-cable-tray/02-elbow-fitting.jpg",
+      "/products/solid-bottom-cable-tray/03-complete-fittings.png",
+      "/products/solid-bottom-cable-tray/04-full-range-types.png",
+      "/products/solid-bottom-cable-tray/05-custom-sizes.png",
+      "/products/solid-bottom-cable-tray/06-easy-installation.png",
+      "/products/solid-bottom-cable-tray/07-stacked-detail.jpg",
+      "/products/solid-bottom-cable-tray/08-server-room-scene.png",
+    ],
+    keyFeatures: [
+      "Fully enclosed solid-bottom trough with snap-on cover",
+      "Ventilated side walls for airflow and cable access",
+      "Available in stainless steel, aluminum alloy, hot-dip galvanized and fireproof variants",
+      "Complete fitting range: elbows, covers, connectors",
+      "Custom width and depth; OEM accepted",
+      "Multiple mounting methods — ceiling, wall or horizontal",
+    ],
+    specGroups: [
+      {
+        title: "Construction",
+        specs: [
+          { label: "Type", value: "Solid-bottom trough with cover" },
+          { label: "Material Options", value: "Stainless steel / aluminum alloy / hot-dip galvanized / fireproof" },
+          { label: "Side Walls", value: "Ventilated (slotted)" },
+          { label: "Sizing", value: "Custom width and depth available" },
+        ],
+      },
+      {
+        title: "Fittings & Mounting",
+        specs: [
+          { label: "Fittings", value: "Elbows, covers, connectors — full system" },
+          { label: "Mounting", value: "Ceiling, wall or horizontal support" },
+        ],
+      },
+    ],
+    applications: ["Data center and server room cabling requiring dust/physical protection", "Telecom rooms", "Industrial cabling pathways", "Environments needing enclosed, tamper-resistant cable routing"],
+    customizationOptions: ["Width", "Depth", "Material finish", "Fitting set", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "When should I choose a solid-bottom (trough) tray over an open wire mesh or ladder tray?",
+        answer:
+          "A solid-bottom trough tray with cover fully encloses the cable run, protecting against dust, debris and accidental contact — useful in areas with foot traffic, dusty environments, or where cables need to be shielded from view, whereas open wire mesh or ladder tray is chosen for easier inspection, ventilation and lower cost.",
+      },
+      {
+        question: "What material options are available for the solid-bottom tray?",
+        answer:
+          "The tray is manufactured in stainless steel, aluminum alloy, hot-dip galvanized steel and fireproof variants, selected based on the corrosion, weight and fire-rating requirements of the installation environment.",
+      },
+    ],
+    relatedProductSlugs: ["cable-tray", "ladder-cable-tray", "wire-mesh-cable-tray"],
+    relatedSolutionSlugs: ["data-center-infrastructure"],
+  },
 
   // ---------------- Energy Storage ----------------
   {
