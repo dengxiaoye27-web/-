@@ -3081,33 +3081,68 @@ export const products: Product[] = [
     category: "energy-storage",
     name: "Containerized Energy Storage System",
     shortName: "Containerized ESS",
-    tagline: "Outdoor-rated containerized battery energy storage for site-independent deployment.",
+    tagline: "Outdoor-rated liquid-cooled LFP containerized energy storage, up to 3840 kWh per unit.",
     overview:
-      "The Wandtung Containerized Energy Storage System packages battery racks, PCS, EMS, thermal management and fire suppression inside an outdoor-rated ISO container, for site-independent deployment where indoor space isn't available or larger storage capacity is required.",
+      "The Wandtung Containerized Energy Storage System packages LFP battery racks, PCS, BMS/EMS, liquid-cooling thermal management and fire suppression inside an outdoor-rated (IP55) ISO container. Rated up to 3840 kWh per unit with precision liquid cooling holding cell-to-cell temperature difference to ΔT ≤ 3°C, it is built to UL/IEC international safety standards for utility-scale, renewable-integration and industrial energy storage, and is factory-tested as a complete system before shipment.",
+    featured: true,
+    images: [
+      "/products/containerized-energy-storage-system/01-main.jpg",
+      "/products/containerized-energy-storage-system/02-internal-structure.jpg",
+      "/products/containerized-energy-storage-system/03-key-features.jpg",
+      "/products/containerized-energy-storage-system/04-certifications-quality.jpg",
+      "/products/containerized-energy-storage-system/05-applications.jpg",
+      "/products/containerized-energy-storage-system/06-outdoor-installation.jpg",
+    ],
     keyFeatures: [
-      "Outdoor-rated container structure",
-      "Integrated thermal management and fire suppression",
-      "Factory-tested as a complete system before shipment",
+      "Up to 3840 kWh rated capacity per container",
+      "LFP (lithium iron phosphate) cells — safest battery chemistry",
+      "Liquid-cooling thermal management, cell-to-cell ΔT ≤ 3°C",
+      "IP55 outdoor-rated, weatherproof container structure",
+      "Integrated BMS, EMS, PCS interface and fire suppression",
+      "> 6000 cycle long calendar life",
+      "Built to UL / IEC international safety standards",
       "Scalable — deploy multiple containers for larger capacity",
     ],
     specGroups: [
       {
         title: "System",
         specs: [
-          { label: "Form Factor", value: "Standard ISO container, outdoor-rated" },
-          { label: "Components", value: "Battery racks, PCS, EMS, thermal management, fire suppression" },
+          { label: "Rated Capacity", value: "Up to 3840 kWh per container" },
+          { label: "Battery Chemistry", value: "LFP (lithium iron phosphate)" },
+          { label: "Form Factor", value: "Standard ISO container, IP55 outdoor-rated" },
+          { label: "Cycle Life", value: "> 6000 cycles" },
+        ],
+      },
+      {
+        title: "Thermal & Safety",
+        specs: [
+          { label: "Thermal Management", value: "Liquid cooling, cell-to-cell ΔT ≤ 3°C" },
+          { label: "Fire Suppression", value: "Integrated multi-level fire suppression system" },
+          { label: "Protection", value: "IP55 weatherproof enclosure" },
+          { label: "Standards", value: "UL / IEC international safety standards" },
+        ],
+      },
+      {
+        title: "Integration",
+        specs: [
+          { label: "Components", value: "LFP battery racks, PCS interface, BMS, EMS, liquid cooling unit, power distribution" },
           { label: "Scalability", value: "Multiple containers interconnected for larger capacity" },
         ],
       },
     ],
-    applications: ["Utility-scale / site-level energy storage", "Renewable energy integration", "Industrial and data center backup"],
-    customizationOptions: ["Energy capacity", "PCS rating", "Thermal management type"],
-    standards: ["Certification available on request per project spec"],
+    applications: ["Utility-scale / site-level energy storage", "Renewable energy (solar/wind) integration", "Peak shaving and load shifting", "Industrial and data center backup"],
+    customizationOptions: ["Energy capacity", "PCS rating", "Thermal management type", "OEM/ODM"],
+    standards: ["UL / IEC international safety standards", "IP55 outdoor protection", "Certification available on request per project spec"],
     faqs: [
       {
         question: "Why choose a containerized ESS over a cabinet-based system?",
         answer:
-          "A containerized ESS is outdoor-rated and self-contained, making it suitable for sites without indoor space or for larger capacity requirements than a cabinet-format system can practically house.",
+          "A containerized ESS is outdoor-rated (IP55) and self-contained, making it suitable for sites without indoor space or for larger capacity requirements — up to 3840 kWh per unit — than a cabinet-format system can practically house.",
+      },
+      {
+        question: "Why is liquid cooling important for a containerized battery system?",
+        answer:
+          "Liquid cooling holds the temperature difference between cells to ΔT ≤ 3°C, which is far tighter than air cooling can achieve. Even cell temperatures extend battery life, improve safety, and keep the whole system operating at consistent capacity.",
       },
     ],
     relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-cabinet", "40ft-container-data-center"],
