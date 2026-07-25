@@ -8152,6 +8152,328 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "solar-pv-module": {
+    ar: {
+      name: "لوح شمسي كهروضوئي",
+      shortName: "لوح شمسي",
+      tagline: "ألواح شمسية أحادية البلورة وثنائية الوجه عالية الكفاءة، من 380 واط إلى 700 واط، توريد متعدد العلامات التجارية.",
+      overview:
+        "تغطي مجموعة الألواح الشمسية الكهروضوئية من واندتونغ ألواحاً أحادية البلورة عالية الكفاءة - بما في ذلك سلسلة خلايا HPBC 2.0 بقدرة 640-670 واط وسلسلة نصف خلية ثنائية الوجه بزجاج مزدوج بقدرة 585-595 واط - مدعومة بضمان منتج لمدة 15 عاماً وضمان خرج طاقة خطي لمدة 30 عاماً، ومعتمدة وفق معايير TUV وCSA وCE. إلى جانب ألواحنا الخاصة، تقوم واندتونغ بتوريد ألواح العلامات التجارية الرئيسية الكاملة (Jinko وLONGI وTrina وJA Solar وRisen وAIKO) مع خدمات عينات وتغليف مخصص، ما يمنح مشتري المشاريع مصدراً واحداً لأجهزة التوليد الشمسي إلى جانب أنظمة التخزين والطاقة لدينا.",
+      keyFeatures: [
+        "لوح أحادي البلورة بقدرة 640-670 واط بتقنية خلايا HPBC 2.0",
+        "لوح ثنائي الوجه بزجاج مزدوج بقدرة 585-595 واط بتقنية نصف الخلية",
+        "خلايا PERC أحادية البلورة، كفاءة تحويل عالية",
+        "ضمان منتج لمدة 15 عاماً للمواد والصناعة",
+        "ضمان خرج طاقة خطي لمدة 30 عاماً",
+        "معتمد TUV وCSA وCE",
+        "توريد متعدد العلامات التجارية متاح - Jinko وLONGI وTrina وJA Solar وRisen وAIKO",
+        "خدمات عينات وتغليف مخصص",
+      ],
+      specGroups: [
+        {
+          title: "السلسلة أحادية البلورة",
+          specs: [
+            { label: "نطاق القدرة", value: "640 – 670 واط" },
+            { label: "تقنية الخلية", value: "HPBC 2.0" },
+            { label: "الأبعاد", value: "2382 × 1134 × 30 مم" },
+            { label: "تفاوت الأبعاد", value: "الطول/العرض ±2 مم" },
+          ],
+        },
+        {
+          title: "السلسلة ثنائية الوجه",
+          specs: [
+            { label: "نطاق القدرة", value: "585 – 595 واط" },
+            { label: "تقنية الخلية", value: "نصف خلية، PERC أحادية البلورة" },
+            { label: "نوع الزجاج", value: "زجاج مزدوج ثنائي الوجه" },
+          ],
+        },
+        {
+          title: "الضمان والاعتماد",
+          specs: [
+            { label: "ضمان المنتج", value: "15 عاماً، المواد والصناعة" },
+            { label: "ضمان خرج الطاقة", value: "ضمان خرج طاقة خطي لمدة 30 عاماً" },
+            { label: "الاعتماد", value: "TUV، CSA، CE" },
+          ],
+        },
+      ],
+      applications: ["محطات شمسية أرضية", "شمسية تجارية وصناعية على الأسطح", "دمج الطاقة المتجددة لمواقع مراكز البيانات والاتصالات", "أنظمة شمسية هجينة وخارج الشبكة"],
+      customizationOptions: ["مستوى خرج الطاقة", "سلسلة أحادية البلورة أو ثنائية الوجه", "اختيار العلامة التجارية (Jinko / LONGI / Trina / JA Solar / Risen / AIKO)", "التغليف", "OEM/ODM"],
+      standards: ["معتمد TUV", "معتمد CSA", "معتمد CE"],
+      faqs: [
+        {
+          question: "ما الفرق بين سلسلة الألواح أحادية البلورة وثنائية الوجه؟",
+          answer:
+            "سلسلة HPBC 2.0 أحادية البلورة (640-670 واط) هي لوح توليد أحادي الجانب من الأمام محسّن لأقصى طاقة ضمن مساحة قياسية. أما سلسلة نصف الخلية ثنائية الوجه بزجاج مزدوج (585-595 واط) فتولد أيضاً من الضوء المنعكس على وجهها الخلفي، ما يضيف إنتاجية إضافية في التركيبات الأرضية أو المرتفعة بأسطح عاكسة أسفلها.",
+        },
+        {
+          question: "هل تبيع واندتونغ ألواحها الشمسية الخاصة فقط؟",
+          answer:
+            "لا. إلى جانب سلسلتينا أحادية البلورة وثنائية الوجه، تقوم واندتونغ بتوريد ألواح شمسية للعلامات التجارية الرئيسية - بما في ذلك Jinko وLONGI وTrina وJA Solar وRisen وAIKO - مع خدمات عينات وتغليف مخصص، ما يتيح لمشتري المشاريع تحديد العلامة التجارية للوح ومستوى القدرة المناسب لمشروعهم من خلال مورد واحد.",
+        },
+        {
+          question: "ما الضمان المطبق على الألواح الشمسية؟",
+          answer:
+            "تحمل ألواحنا ذات العلامة التجارية الخاصة ضمان منتج لمدة 15 عاماً للمواد والصناعة، بالإضافة إلى ضمان خرج طاقة خطي لمدة 30 عاماً. تتبع شروط الضمان للعلامات التجارية الخارجية الموردة الضمان القياسي لكل مُصنّع.",
+        },
+      ],
+    },
+    fr: {
+      name: "Module photovoltaïque solaire",
+      shortName: "Module PV solaire",
+      tagline: "Panneaux solaires monocristallins et bifaciaux haute efficacité, de 380W à 700W, approvisionnement multi-marques.",
+      overview:
+        "La gamme de modules photovoltaïques solaires Wandtung couvre des panneaux monocristallins haute efficacité — dont une série à cellules HPBC 2.0 de 640 à 670W et une série bifaciale à double verre demi-cellule de 585 à 595W — soutenue par une garantie produit de 15 ans et une garantie de puissance de sortie linéaire de 30 ans, certifiée selon les normes TUV, CSA et CE. Au-delà de nos propres panneaux, Wandtung s'approvisionne et fournit toute la gamme de modules des grandes marques (Jinko, LONGI, Trina, JA Solar, Risen, AIKO) avec services d'échantillons et emballage personnalisé, offrant aux acheteurs de projets une source unique pour le matériel de production solaire aux côtés de nos systèmes de stockage et d'alimentation.",
+      keyFeatures: [
+        "Panneau monocristallin 640–670W à technologie de cellules HPBC 2.0",
+        "Panneau bifacial à double verre 585–595W à technologie demi-cellule",
+        "Cellules PERC monocristallines, rendement de conversion élevé",
+        "Garantie produit de 15 ans pour les matériaux et la fabrication",
+        "Garantie de puissance de sortie linéaire de 30 ans",
+        "Certifié TUV, CSA et CE",
+        "Approvisionnement multi-marques disponible — Jinko, LONGI, Trina, JA Solar, Risen, AIKO",
+        "Services d'échantillons et emballage personnalisé",
+      ],
+      specGroups: [
+        {
+          title: "Série monocristalline",
+          specs: [
+            { label: "Plage de puissance", value: "640 – 670 W" },
+            { label: "Technologie de cellule", value: "HPBC 2.0" },
+            { label: "Dimensions", value: "2382 x 1134 x 30 mm" },
+            { label: "Tolérance dimensionnelle", value: "Longueur/Largeur ±2mm" },
+          ],
+        },
+        {
+          title: "Série bifaciale",
+          specs: [
+            { label: "Plage de puissance", value: "585 – 595 W" },
+            { label: "Technologie de cellule", value: "Demi-cellule, PERC monocristallin" },
+            { label: "Type de verre", value: "Double verre bifacial" },
+          ],
+        },
+        {
+          title: "Garantie et certification",
+          specs: [
+            { label: "Garantie produit", value: "15 ans, matériaux et fabrication" },
+            { label: "Garantie de puissance de sortie", value: "Garantie de puissance de sortie linéaire de 30 ans" },
+            { label: "Certification", value: "TUV, CSA, CE" },
+          ],
+        },
+      ],
+      applications: ["Fermes solaires au sol", "Solaire commercial et industriel en toiture", "Intégration renouvelable pour sites de centres de données et télécoms", "Systèmes solaires hybrides et hors réseau"],
+      customizationOptions: ["Palier de puissance de sortie", "Série monocristalline ou bifaciale", "Choix de marque (Jinko / LONGI / Trina / JA Solar / Risen / AIKO)", "Emballage", "OEM/ODM"],
+      standards: ["Certifié TUV", "Certifié CSA", "Certifié CE"],
+      faqs: [
+        {
+          question: "Quelle est la différence entre la série de panneaux monocristallins et bifaciaux ?",
+          answer:
+            "La série monocristalline HPBC 2.0 (640–670W) est un panneau à génération frontale unilatérale optimisé pour une puissance maximale dans un encombrement standard. La série bifaciale à double verre demi-cellule (585–595W) génère également à partir de la lumière réfléchie sur sa face arrière, ajoutant un rendement supplémentaire dans les installations au sol ou surélevées avec des surfaces réfléchissantes en dessous.",
+        },
+        {
+          question: "Wandtung vend-il uniquement ses propres panneaux solaires ?",
+          answer:
+            "Non. Outre nos propres séries monocristallines et bifaciales, Wandtung s'approvisionne et fournit des modules solaires de grandes marques — dont Jinko, LONGI, Trina, JA Solar, Risen et AIKO — avec services d'échantillons et emballage personnalisé, permettant aux acheteurs de projets de spécifier la marque de panneau et le palier de puissance adaptés à leur projet auprès d'un fournisseur unique.",
+        },
+        {
+          question: "Quelle garantie s'applique aux panneaux solaires ?",
+          answer:
+            "Nos panneaux de marque propre bénéficient d'une garantie produit de 15 ans pour les matériaux et la fabrication, ainsi que d'une garantie de puissance de sortie linéaire de 30 ans. Les conditions de garantie pour les marques tierces approvisionnées suivent la garantie standard de chaque fabricant.",
+        },
+      ],
+    },
+    es: {
+      name: "Módulo fotovoltaico solar",
+      shortName: "Módulo FV solar",
+      tagline: "Paneles solares monocristalinos y bifaciales de alta eficiencia, de 380W a 700W, abastecimiento multimarca.",
+      overview:
+        "La gama de módulos fotovoltaicos solares de Wandtung abarca paneles monocristalinos de alta eficiencia — incluyendo una serie de celdas HPBC 2.0 de 640-670W y una serie bifacial de doble vidrio de media celda de 585-595W — respaldada por una garantía de producto de 15 años y una garantía de potencia de salida lineal de 30 años, certificada según las normas TUV, CSA y CE. Además de nuestros propios paneles, Wandtung abastece y suministra la gama completa de módulos de marcas principales (Jinko, LONGI, Trina, JA Solar, Risen, AIKO) con servicios de muestras y embalaje personalizado, dando a los compradores de proyectos una fuente única para el hardware de generación solar junto con nuestros sistemas de almacenamiento y energía.",
+      keyFeatures: [
+        "Panel monocristalino de 640–670W con tecnología de celdas HPBC 2.0",
+        "Panel bifacial de doble vidrio de 585–595W con tecnología de media celda",
+        "Celdas PERC monocristalinas, alta eficiencia de conversión",
+        "Garantía de producto de 15 años para materiales y mano de obra",
+        "Garantía de potencia de salida lineal de 30 años",
+        "Certificado TUV, CSA y CE",
+        "Abastecimiento multimarca disponible: Jinko, LONGI, Trina, JA Solar, Risen, AIKO",
+        "Servicios de muestras y embalaje personalizado",
+      ],
+      specGroups: [
+        {
+          title: "Serie monocristalina",
+          specs: [
+            { label: "Rango de potencia", value: "640 – 670 W" },
+            { label: "Tecnología de celda", value: "HPBC 2.0" },
+            { label: "Dimensiones", value: "2382 x 1134 x 30 mm" },
+            { label: "Tolerancia dimensional", value: "Largo/Ancho ±2mm" },
+          ],
+        },
+        {
+          title: "Serie bifacial",
+          specs: [
+            { label: "Rango de potencia", value: "585 – 595 W" },
+            { label: "Tecnología de celda", value: "Media celda, PERC monocristalina" },
+            { label: "Tipo de vidrio", value: "Doble vidrio bifacial" },
+          ],
+        },
+        {
+          title: "Garantía y certificación",
+          specs: [
+            { label: "Garantía de producto", value: "15 años, materiales y mano de obra" },
+            { label: "Garantía de potencia de salida", value: "Garantía de potencia de salida lineal de 30 años" },
+            { label: "Certificación", value: "TUV, CSA, CE" },
+          ],
+        },
+      ],
+      applications: ["Plantas solares de montaje en suelo", "Solar comercial e industrial en tejado", "Integración renovable para sitios de centros de datos y telecomunicaciones", "Sistemas solares híbridos y fuera de red"],
+      customizationOptions: ["Nivel de potencia de salida", "Serie monocristalina o bifacial", "Selección de marca (Jinko / LONGI / Trina / JA Solar / Risen / AIKO)", "Embalaje", "OEM/ODM"],
+      standards: ["Certificado TUV", "Certificado CSA", "Certificado CE"],
+      faqs: [
+        {
+          question: "¿Cuál es la diferencia entre la serie de paneles monocristalinos y bifaciales?",
+          answer:
+            "La serie monocristalina HPBC 2.0 (640–670W) es un panel de generación frontal unilateral optimizado para máxima potencia en una huella estándar. La serie bifacial de doble vidrio de media celda (585–595W) también genera a partir de la luz reflejada en su cara posterior, añadiendo rendimiento adicional en instalaciones a nivel del suelo o elevadas con superficies reflectantes debajo.",
+        },
+        {
+          question: "¿Wandtung solo vende sus propios paneles solares?",
+          answer:
+            "No. Además de nuestras propias series monocristalina y bifacial, Wandtung abastece y suministra módulos solares de marcas principales, incluyendo Jinko, LONGI, Trina, JA Solar, Risen y AIKO, con servicios de muestras y embalaje personalizado, para que los compradores de proyectos puedan especificar la marca de panel y el nivel de potencia adecuados para su proyecto a través de un único proveedor.",
+        },
+        {
+          question: "¿Qué garantía se aplica a los paneles solares?",
+          answer:
+            "Nuestros paneles de marca propia tienen una garantía de producto de 15 años para materiales y mano de obra, además de una garantía de potencia de salida lineal de 30 años. Las condiciones de garantía de las marcas de terceros abastecidas siguen la garantía estándar de cada fabricante.",
+        },
+      ],
+    },
+    ru: {
+      name: "Солнечный фотоэлектрический модуль",
+      shortName: "Солнечный ФЭ модуль",
+      tagline: "Высокоэффективные монокристаллические и двусторонние солнечные панели, от 380 до 700 Вт, поставка нескольких брендов.",
+      overview:
+        "Линейка солнечных фотоэлектрических модулей Wandtung охватывает высокоэффективные монокристаллические панели — включая серию с ячейками HPBC 2.0 мощностью 640–670 Вт и двустороннюю серию с двойным стеклом и полуячейками мощностью 585–595 Вт — с 15-летней гарантией на продукт и 30-летней линейной гарантией выходной мощности, сертифицированные по стандартам TUV, CSA и CE. Помимо собственных панелей, Wandtung закупает и поставляет полный ассортимент модулей ведущих брендов (Jinko, LONGI, Trina, JA Solar, Risen, AIKO) с услугами образцов и индивидуальной упаковкой, предоставляя закупщикам проектов единый источник оборудования солнечной генерации наряду с нашими системами накопления и питания.",
+      keyFeatures: [
+        "Монокристаллическая панель 640–670 Вт с технологией ячеек HPBC 2.0",
+        "Двусторонняя панель с двойным стеклом 585–595 Вт с технологией полуячеек",
+        "Монокристаллические ячейки PERC, высокий КПД преобразования",
+        "15-летняя гарантия на продукт по материалам и изготовлению",
+        "30-летняя линейная гарантия выходной мощности",
+        "Сертифицировано TUV, CSA и CE",
+        "Доступна поставка нескольких брендов — Jinko, LONGI, Trina, JA Solar, Risen, AIKO",
+        "Услуги образцов и индивидуальная упаковка",
+      ],
+      specGroups: [
+        {
+          title: "Монокристаллическая серия",
+          specs: [
+            { label: "Диапазон мощности", value: "640 – 670 Вт" },
+            { label: "Технология ячеек", value: "HPBC 2.0" },
+            { label: "Размеры", value: "2382 x 1134 x 30 мм" },
+            { label: "Допуск размеров", value: "Длина/ширина ±2мм" },
+          ],
+        },
+        {
+          title: "Двусторонняя серия",
+          specs: [
+            { label: "Диапазон мощности", value: "585 – 595 Вт" },
+            { label: "Технология ячеек", value: "Полуячейка, монокристаллический PERC" },
+            { label: "Тип стекла", value: "Двустороннее двойное стекло" },
+          ],
+        },
+        {
+          title: "Гарантия и сертификация",
+          specs: [
+            { label: "Гарантия на продукт", value: "15 лет, материалы и изготовление" },
+            { label: "Гарантия выходной мощности", value: "30-летняя линейная гарантия выходной мощности" },
+            { label: "Сертификация", value: "TUV, CSA, CE" },
+          ],
+        },
+      ],
+      applications: ["Наземные солнечные электростанции", "Коммерческая и промышленная солнечная энергетика на крышах", "Интеграция ВИЭ для объектов ЦОД и телекоммуникаций", "Гибридные и автономные солнечные системы накопления"],
+      customizationOptions: ["Уровень выходной мощности", "Монокристаллическая или двусторонняя серия", "Выбор бренда (Jinko / LONGI / Trina / JA Solar / Risen / AIKO)", "Упаковка", "OEM/ODM"],
+      standards: ["Сертифицировано TUV", "Сертифицировано CSA", "Сертифицировано CE"],
+      faqs: [
+        {
+          question: "В чём разница между монокристаллической и двусторонней сериями панелей?",
+          answer:
+            "Монокристаллическая серия HPBC 2.0 (640–670 Вт) — это односторонняя фронтально генерирующая панель, оптимизированная для максимальной мощности в стандартных габаритах. Двусторонняя серия с двойным стеклом и полуячейками (585–595 Вт) также генерирует энергию от света, отражённого на её заднюю сторону, добавляя дополнительную выработку при наземном или приподнятом монтаже с отражающими поверхностями внизу.",
+        },
+        {
+          question: "Продаёт ли Wandtung только собственные солнечные панели?",
+          answer:
+            "Нет. Помимо собственных монокристаллической и двусторонней серий, Wandtung закупает и поставляет солнечные модули ведущих брендов — включая Jinko, LONGI, Trina, JA Solar, Risen и AIKO — с услугами образцов и индивидуальной упаковкой, позволяя закупщикам проектов указать бренд панели и уровень мощности, подходящие для их проекта, через единого поставщика.",
+        },
+        {
+          question: "Какая гарантия распространяется на солнечные панели?",
+          answer:
+            "На наши панели собственного бренда предоставляется 15-летняя гарантия на продукт по материалам и изготовлению, а также 30-летняя линейная гарантия выходной мощности. Условия гарантии на закупаемые сторонние бренды следуют стандартной гарантии каждого производителя.",
+        },
+      ],
+    },
+    zh: {
+      name: "太阳能光伏组件",
+      shortName: "太阳能光伏组件",
+      tagline: "高效单晶及双面太阳能板，功率覆盖380W至700W，支持多品牌供货。",
+      overview:
+        "万电通太阳能光伏组件系列涵盖高效单晶面板——包括640-670W的HPBC 2.0电池系列，以及585-595W双面双玻半片电池系列——提供15年产品质保及30年线性功率输出保证，并通过TUV、CSA、CE认证。除自有品牌面板外，万电通还可采购供应各大品牌全系列组件（晶科Jinko、隆基LONGI、天合Trina、晶澳JA Solar、日升Risen、爱旭AIKO），提供打样服务及定制包装，让项目采购方通过单一供应商即可获得太阳能发电硬件，并与我们的储能及电力系统配套供应。",
+      keyFeatures: [
+        "640-670W单晶面板，采用HPBC 2.0电池技术",
+        "585-595W双面双玻面板，采用半片电池技术",
+        "单晶PERC电池，转换效率高",
+        "15年材料及工艺产品质保",
+        "30年线性功率输出保证",
+        "通过TUV、CSA、CE认证",
+        "支持多品牌供货——晶科、隆基、天合、晶澳、日升、爱旭",
+        "提供打样服务及定制包装",
+      ],
+      specGroups: [
+        {
+          title: "单晶系列",
+          specs: [
+            { label: "功率范围", value: "640–670W" },
+            { label: "电池技术", value: "HPBC 2.0" },
+            { label: "尺寸", value: "2382×1134×30mm" },
+            { label: "尺寸公差", value: "长/宽±2mm" },
+          ],
+        },
+        {
+          title: "双面系列",
+          specs: [
+            { label: "功率范围", value: "585–595W" },
+            { label: "电池技术", value: "半片,单晶PERC" },
+            { label: "玻璃类型", value: "双面双玻" },
+          ],
+        },
+        {
+          title: "质保与认证",
+          specs: [
+            { label: "产品质保", value: "15年,材料及工艺" },
+            { label: "功率输出保证", value: "30年线性功率输出保证" },
+            { label: "认证", value: "TUV、CSA、CE" },
+          ],
+        },
+      ],
+      applications: ["地面光伏电站", "商用及工业屋顶光伏", "数据中心及电信站点新能源接入", "离网及混合光储系统"],
+      customizationOptions: ["功率档位", "单晶或双面系列", "品牌选择（晶科/隆基/天合/晶澳/日升/爱旭）", "包装", "OEM/ODM"],
+      standards: ["通过TUV认证", "通过CSA认证", "通过CE认证"],
+      faqs: [
+        {
+          question: "单晶面板系列与双面面板系列有什么区别？",
+          answer:
+            "HPBC 2.0单晶系列（640-670W）为正面单侧发电面板，针对标准占地面积内的最大功率进行优化。双面双玻半片系列（585-595W）还能利用背面反射光发电，在地面安装或架高安装且下方有反射面的场景中可获得额外发电增益。",
+        },
+        {
+          question: "万电通是否只销售自有品牌的太阳能板？",
+          answer:
+            "不是。除自有单晶及双面系列外，万电通还可采购供应各大品牌太阳能组件——包括晶科、隆基、天合、晶澳、日升及爱旭——并提供打样服务及定制包装，让项目采购方可通过单一供应商指定符合项目需求的面板品牌及功率档位。",
+        },
+        {
+          question: "太阳能板适用什么质保？",
+          answer:
+            "我们自有品牌面板提供15年材料及工艺产品质保，另加30年线性功率输出保证。采购的第三方品牌质保条款按各制造商标准质保执行。",
+        },
+      ],
+    },
+  },
   "energy-storage-system": {
     ar: {
       name: "نظام تخزين الطاقة (ESS)",
