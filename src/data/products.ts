@@ -3076,7 +3076,76 @@ export const products: Product[] = [
           "Our own-brand panels carry a 15-year product warranty for materials and workmanship, plus a 30-year linear power output guarantee. Warranty terms for sourced third-party brands follow each manufacturer's standard warranty.",
       },
     ],
-    relatedProductSlugs: ["solar-power-system", "battery-energy-storage-system", "containerized-energy-storage-system"],
+    relatedProductSlugs: ["solar-power-system", "battery-energy-storage-system", "containerized-energy-storage-system", "solar-ground-mounting-system"],
+    relatedSolutionSlugs: ["energy-storage"],
+  },
+  {
+    slug: "solar-ground-mounting-system",
+    category: "energy-storage",
+    name: "Solar Ground Mounting System",
+    shortName: "Ground Mounting System",
+    tagline: "Aluminum alloy rail and hot-dip galvanized steel post ground-mount racking, 10kW to 10MW.",
+    overview:
+      "The Wandtung Solar Ground Mounting System pairs 6063-T5 aluminum alloy module rails with hot-dip galvanized steel posts and a triangulated wind-resistant brace, giving ground-mount solar arrays a bolt-fixed anchor base, custom tilt angle from 10° to 60°, and a rated wind load of ≥180km/h. The modular design scales from a single-post bracket for small arrays up to utility-scale layouts from 10kW to 10MW, with fast on-site assembly and a 25-year structural warranty.",
+    featured: true,
+    images: [
+      "/products/solar-ground-mounting-system/01-main.jpg",
+      "/products/solar-ground-mounting-system/02-single-post-structure.jpg",
+      "/products/solar-ground-mounting-system/03-dual-angle-view.jpg",
+      "/products/solar-ground-mounting-system/04-ground-installation.jpg",
+      "/products/solar-ground-mounting-system/05-utility-scale-installation.jpg",
+    ],
+    keyFeatures: [
+      "6063-T5 aluminum alloy module rail",
+      "Hot-dip galvanized steel vertical post",
+      "Triangulated / X-brace wind-resistant structure",
+      "Bolt-fixed anchor base plate",
+      "Custom tilt angle, 10° – 60°",
+      "Rated wind load ≥180km/h",
+      "Modular design for fast on-site assembly",
+      "25-year structural warranty",
+    ],
+    specGroups: [
+      {
+        title: "Structure",
+        specs: [
+          { label: "Rail Material", value: "6063-T5 aluminum alloy" },
+          { label: "Post Material", value: "Hot-dip galvanized steel" },
+          { label: "Bracing", value: "Triangulated / X-brace wind-resistant structure" },
+          { label: "Foundation", value: "Bolt-fixed anchor base plate" },
+        ],
+      },
+      {
+        title: "Performance & Scale",
+        specs: [
+          { label: "Tilt Angle", value: "Custom, 10° – 60°" },
+          { label: "Wind Load Rating", value: "≥180km/h" },
+          { label: "System Scale", value: "10kW – 10MW+" },
+          { label: "Structural Warranty", value: "25 years" },
+        ],
+      },
+    ],
+    applications: ["Utility-scale ground-mount solar farms", "Commercial and industrial ground-mount arrays", "Agrivoltaic / farmland solar installations", "Off-grid and remote-site solar arrays"],
+    customizationOptions: ["Tilt angle", "Post height / row spacing", "Single-post or multi-post layout", "Regional wind/snow load design", "OEM/ODM"],
+    standards: ["25-year structural warranty", "Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "Can the mounting system be customized for local wind and snow loads?",
+        answer:
+          "Yes. Post spacing, bracing and foundation sizing are engineered per project site conditions, and the standard structure is rated for wind loads of ≥180km/h — higher-load regional designs are available on request.",
+      },
+      {
+        question: "What tilt angle range does the system support?",
+        answer:
+          "The bracket system supports a custom tilt angle from 10° to 60°, set at installation to match the project's latitude and energy yield target.",
+      },
+      {
+        question: "What project scale does this mounting system suit?",
+        answer:
+          "The modular single-post and multi-post bracket design scales from small 10kW arrays up to utility-scale ground-mount solar farms of 10MW and above, using the same rail and post components.",
+      },
+    ],
+    relatedProductSlugs: ["solar-pv-module", "solar-power-system", "battery-energy-storage-system"],
     relatedSolutionSlugs: ["energy-storage"],
   },
   {
