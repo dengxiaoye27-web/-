@@ -2999,7 +2999,84 @@ export const products: Product[] = [
           "For most data centers, solar is deployed to offset a portion of grid consumption or support auxiliary/backup loads rather than fully replace utility power, given the load consistency data centers require — off-grid solar-plus-storage is more common for smaller or remote sites such as telecom base stations.",
       },
     ],
-    relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-system"],
+    relatedProductSlugs: ["battery-energy-storage-system", "energy-storage-system", "solar-pv-module"],
+    relatedSolutionSlugs: ["energy-storage"],
+  },
+  {
+    slug: "solar-pv-module",
+    category: "energy-storage",
+    name: "Solar PV Module",
+    shortName: "Solar PV Module",
+    tagline: "High-efficiency monocrystalline and bifacial solar panels, 380W to 700W, multi-brand sourcing.",
+    overview:
+      "The Wandtung Solar PV Module range covers high-efficiency monocrystalline panels — including a 640–670W HPBC 2.0 cell series and a 585–595W bifacial dual-glass half-cell series — backed by a 15-year product warranty and 30-year linear power output guarantee, and certified to TUV, CSA and CE standards. Beyond our own panels, Wandtung sources and supplies the full range of major-brand modules (Jinko, LONGI, Trina, JA Solar, Risen, AIKO) with sample services and customized packaging, giving project buyers a single source for solar generation hardware alongside our storage and power systems.",
+    featured: true,
+    images: [
+      "/products/solar-pv-module/01-main.jpg",
+      "/products/solar-pv-module/02-key-features.jpg",
+      "/products/solar-pv-module/03-dimensions.jpg",
+      "/products/solar-pv-module/04-brand-range.jpg",
+      "/products/solar-pv-module/05-ground-station-scene.jpg",
+      "/products/solar-pv-module/06-installation-scenes.jpg",
+    ],
+    keyFeatures: [
+      "640–670W monocrystalline panel with HPBC 2.0 cell technology",
+      "585–595W bifacial dual-glass panel with half-cell technology",
+      "Monocrystalline PERC cells, high conversion efficiency",
+      "15-year product warranty for materials and workmanship",
+      "30-year linear power output guarantee",
+      "TUV, CSA and CE certified",
+      "Multi-brand sourcing available — Jinko, LONGI, Trina, JA Solar, Risen, AIKO",
+      "Sample services and customized packaging",
+    ],
+    specGroups: [
+      {
+        title: "Monocrystalline Series",
+        specs: [
+          { label: "Power Range", value: "640 – 670 W" },
+          { label: "Cell Technology", value: "HPBC 2.0" },
+          { label: "Dimensions", value: "2382 x 1134 x 30 mm" },
+          { label: "Dimensional Tolerance", value: "Length/Width ±2mm" },
+        ],
+      },
+      {
+        title: "Bifacial Series",
+        specs: [
+          { label: "Power Range", value: "585 – 595 W" },
+          { label: "Cell Technology", value: "Half-cell, monocrystalline PERC" },
+          { label: "Glass Type", value: "Bifacial dual glass" },
+        ],
+      },
+      {
+        title: "Warranty & Certification",
+        specs: [
+          { label: "Product Warranty", value: "15 years, materials and workmanship" },
+          { label: "Power Output Guarantee", value: "30-year linear power output guarantee" },
+          { label: "Certification", value: "TUV, CSA, CE" },
+        ],
+      },
+    ],
+    applications: ["Ground-mounted solar farms", "Rooftop commercial and industrial solar", "Data center and telecom site renewable integration", "Off-grid and hybrid solar-storage systems"],
+    customizationOptions: ["Power output tier", "Monocrystalline or bifacial series", "Brand selection (Jinko / LONGI / Trina / JA Solar / Risen / AIKO)", "Packaging", "OEM/ODM"],
+    standards: ["TUV certified", "CSA certified", "CE certified"],
+    faqs: [
+      {
+        question: "What is the difference between the monocrystalline and bifacial panel series?",
+        answer:
+          "The monocrystalline HPBC 2.0 series (640–670W) is a single-sided, front-generating panel optimized for maximum power in a standard footprint. The bifacial dual-glass half-cell series (585–595W) also generates from light reflected onto its rear face, adding extra yield in ground-mount or elevated installations with reflective surfaces beneath.",
+      },
+      {
+        question: "Does Wandtung only sell its own solar panels?",
+        answer:
+          "No. Alongside our own monocrystalline and bifacial series, Wandtung sources and supplies major-brand solar modules — including Jinko, LONGI, Trina, JA Solar, Risen and AIKO — with sample services and customized packaging, so project buyers can specify the panel brand and power tier that fits their project through a single supplier.",
+      },
+      {
+        question: "What warranty applies to the solar panels?",
+        answer:
+          "Our own-brand panels carry a 15-year product warranty for materials and workmanship, plus a 30-year linear power output guarantee. Warranty terms for sourced third-party brands follow each manufacturer's standard warranty.",
+      },
+    ],
+    relatedProductSlugs: ["solar-power-system", "battery-energy-storage-system", "containerized-energy-storage-system"],
     relatedSolutionSlugs: ["energy-storage"],
   },
   {
