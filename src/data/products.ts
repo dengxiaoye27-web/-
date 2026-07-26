@@ -1696,38 +1696,49 @@ export const products: Product[] = [
     category: "micro-modular-data-center",
     name: "Smart Micro Module Data Center",
     shortName: "Smart Micro Module",
-    tagline: "Factory-integrated micro data center combining cabinets, power, cooling and monitoring.",
+    tagline: "All-in-one micro data center with integrated UPS, precision cooling and touchscreen monitoring, 1-5 bay expansion.",
     overview:
-      "The Wandtung Smart Micro Module integrates IT cabinets, UPS, PDU, precision cooling, battery, fire suppression, access control and environmental monitoring into a single pre-engineered, factory-tested system, deployable in single-row or dual-row configuration for small to mid-size data rooms.",
+      "The Wandtung Smart Micro Module integrates IT cabinets, UPS, PDU, precision air conditioning, fire/smoke detection, door access control and environmental monitoring into a single pre-engineered, factory-tested, plug-and-play system. A front touchscreen gives on-site access to the intelligent monitoring platform, and bays expand flexibly from a single cabinet up to a 5-bay row for small to mid-size data rooms.",
     featured: true,
+    images: [
+      "/products/smart-micro-module/01-main.png",
+      "/products/smart-micro-module/02-intelligent-monitoring.png",
+      "/products/smart-micro-module/03-all-in-one-integration.png",
+      "/products/smart-micro-module/04-precision-cooling.png",
+      "/products/smart-micro-module/05-smart-micro-module-overview.png",
+      "/products/smart-micro-module/06-flexible-bay-configuration.png",
+    ],
     keyFeatures: [
-      "Factory pre-integration and testing before shipment",
-      "Single-row or dual-row cabinet configuration",
-      "Hot/cold aisle containment built in",
-      "Integrated fire suppression and access control",
+      "Factory pre-integration, testing and plug-and-play deployment",
+      "Flexible bay expansion, 1 to 5 bays in a single row",
+      "Front touchscreen for on-site intelligent monitoring",
+      "Integrated UPS, PDU and high-efficiency precision cooling",
+      "Temperature/humidity, smoke and water-leak sensors",
+      "Electronic door lock and surveillance system integration",
+      "Airflow management components for optimized cooling delivery",
       "Centralized environmental and power monitoring platform",
     ],
     specGroups: [
       {
         title: "System Composition",
         specs: [
-          { label: "IT Cabinets", value: "42U / 47U, single or dual row" },
-          { label: "Power", value: "Modular UPS + intelligent PDU" },
-          { label: "Cooling", value: "In-row or precision air conditioning" },
-          { label: "Monitoring", value: "DCIM-compatible centralized monitoring" },
+          { label: "IT Cabinets", value: "42U, single-bay to 5-bay row configuration" },
+          { label: "Power", value: "Integrated UPS + PDU" },
+          { label: "Cooling", value: "High-efficiency precision air conditioning" },
+          { label: "Monitoring", value: "Front touchscreen + centralized DCIM-compatible platform" },
         ],
       },
       {
-        title: "Safety Systems",
+        title: "Safety & Sensing",
         specs: [
-          { label: "Fire Suppression", value: "Gas-based automatic suppression" },
-          { label: "Access Control", value: "Card / biometric access, door sensors" },
-          { label: "Leak Detection", value: "Optional water leak detection" },
+          { label: "Sensors", value: "Temperature/humidity, smoke, water-leak" },
+          { label: "Access Control", value: "Electronic door lock with door sensors" },
+          { label: "Surveillance", value: "Integrated surveillance system support" },
         ],
       },
     ],
     applications: ["Enterprise IT rooms", "Bank branch data rooms", "Edge / regional data centers"],
-    customizationOptions: ["Row configuration", "Power redundancy level", "Cooling type", "Fire suppression agent"],
+    customizationOptions: ["Number of bays (1-5)", "Power redundancy level", "Cooling type", "Sensor package"],
     standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
     faqs: [
       {
@@ -1739,6 +1750,11 @@ export const products: Product[] = [
         question: "Does Wandtung provide micro modular data center solutions?",
         answer:
           "Yes. Wandtung designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
+      },
+      {
+        question: "How many bays can the Smart Micro Module expand to?",
+        answer:
+          "The system supports flexible expansion from a single cabinet up to a 5-bay row, so capacity can be scaled by adding bays to an existing deployment rather than replacing it.",
       },
     ],
     relatedProductSlugs: ["intelligent-cabinet", "intelligent-pdu", "in-row-cooling"],
