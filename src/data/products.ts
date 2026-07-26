@@ -886,40 +886,57 @@ export const products: Product[] = [
     category: "power-distribution",
     name: "STS (Static Transfer Switch)",
     shortName: "STS",
-    tagline: "Solid-state transfer switch for near-instantaneous switching between two power sources.",
+    tagline: "1U rack-mount static transfer switch, dual-source redundancy with <10ms seamless transfer.",
     overview:
-      "The Wandtung STS (Static Transfer Switch) uses solid-state switching to transfer load between two independent power sources in a fraction of a cycle — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption, typically deployed ahead of PDUs or UPS distribution in critical facilities.",
+      "The Wandtung STS (Static Transfer Switch) is a 1U rack-mount solid-state transfer switch that seamlessly transfers load between two independent A/B power sources in under 10ms — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption. Front-panel Source 1/Source 2/Output status indicators and a mute button give at-a-glance status and alarm control, with terminal-block source and output connections on the rear panel.",
+    featured: true,
+    images: [
+      "/products/sts/01-main.png",
+      "/products/sts/02-front-panel.png",
+      "/products/sts/03-alt-view.png",
+      "/products/sts/04-rear-terminals.png",
+      "/products/sts/05-control-panel-detail.png",
+    ],
     keyFeatures: [
-      "Solid-state switching, sub-cycle transfer time",
-      "Dual independent source inputs",
-      "Continuous source-quality monitoring on both feeds",
-      "Panel or rack-mount form factors",
+      "Seamless transfer, <10ms switching time",
+      "Dual independent A/B source inputs for power redundancy",
+      "1U rack-mount form factor",
+      "Front-panel Source 1 / Source 2 / Output status LEDs",
+      "Mute button for audible alarm control",
+      "Terminal-block source and output connections",
+      "C13/C19 IEC output outlets (model dependent)",
     ],
     specGroups: [
       {
         title: "Electrical Parameters",
         specs: [
-          { label: "Rated Voltage", value: "200–415V" },
-          { label: "Rated Current", value: "Up to 400A (model dependent)" },
-          { label: "Transfer Time", value: "Sub-cycle (typically <4 ms)" },
+          { label: "Form Factor", value: "1U rack-mount" },
+          { label: "Inputs", value: "Dual independent A/B source (terminal block)" },
+          { label: "Transfer Time", value: "Seamless, <10ms" },
+          { label: "Output", value: "C13/C19 IEC outlets and/or terminal-block output" },
         ],
       },
       {
-        title: "Monitoring",
+        title: "Monitoring & Control",
         specs: [
-          { label: "Source Monitoring", value: "Continuous voltage/frequency quality checks on both feeds" },
-          { label: "Communication", value: "SNMP, Modbus, dry contact alarms" },
+          { label: "Status Indicators", value: "Source 1 / Source 2 / Output front-panel LEDs" },
+          { label: "Alarm Control", value: "Front-panel mute button" },
         ],
       },
     ],
     applications: ["Facilities requiring zero-interruption transfer", "Upstream of critical PDU/UPS distribution", "Data centers with dual utility feeds"],
-    customizationOptions: ["Current rating", "Form factor (panel / rack-mount)", "Monitoring package"],
+    customizationOptions: ["Current rating", "Output outlet configuration", "Monitoring package"],
     standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "What is the difference between an ATS and an STS?",
         answer:
           "An ATS (automatic transfer switch) mechanically switches load between two power sources, typically with a brief transfer time, while an STS (static transfer switch) uses solid-state switching for near-instantaneous transfer, used where even momentary interruption is unacceptable.",
+      },
+      {
+        question: "How fast does the STS transfer between sources?",
+        answer:
+          "The Wandtung STS performs a seamless transfer between Source 1 and Source 2 in under 10ms, fast enough that connected IT equipment does not register an interruption.",
       },
     ],
     relatedProductSlugs: ["ats-pdu", "automatic-transfer-switch", "modular-ups"],

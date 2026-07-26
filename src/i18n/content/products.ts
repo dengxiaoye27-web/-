@@ -3606,29 +3606,30 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
     ar: {
       name: "STS (مفتاح نقل ثابت)",
       shortName: "STS",
-      tagline: "مفتاح نقل بالحالة الصلبة لتبديل شبه فوري بين مصدري طاقة.",
+      tagline: "مفتاح نقل ثابت بتركيب راك 1U، ازدواجية مصدرين A/B بزمن نقل سلس أقل من 10 مللي ثانية.",
       overview:
-        "يستخدم STS من واندتونغ تبديلاً بالحالة الصلبة لنقل الحمل بين مصدري طاقة مستقلين في جزء من دورة — أسرع بكثير من ATS الميكانيكي — لحماية الأحمال التي لا يمكنها تحمل حتى انقطاع لحظي، وتُنشر عادةً أمام توزيع PDU أو UPS في المنشآت الحرجة.",
-      keyFeatures: ["تبديل بالحالة الصلبة، زمن نقل دون دورة واحدة", "مدخلا مصدر مستقلان مزدوجان", "مراقبة مستمرة لجودة المصدر على كلا التغذيتين", "صيغ لوحة أو تركيب راك"],
+        "STS من واندتونغ هو مفتاح نقل ثابت بالحالة الصلبة بتركيب راك 1U، ينقل الحمل بسلاسة بين مصدري طاقة مستقلين A/B في أقل من 10 مللي ثانية — أسرع بكثير من ATS الميكانيكي — لحماية الأحمال التي لا يمكنها تحمل حتى انقطاع لحظي. توفر مؤشرات حالة Source 1/Source 2/Output على اللوحة الأمامية وزر كتم صوت رؤية فورية للحالة والتحكم بالإنذار، مع توصيلات كتلة طرفية للمصدر والخرج على اللوحة الخلفية.",
+      keyFeatures: ["نقل سلس، زمن تبديل أقل من 10 مللي ثانية", "مدخلا مصدر A/B مستقلان مزدوجان لازدواجية الطاقة", "شكل تركيب راك 1U", "مؤشرات LED للحالة Source 1 / Source 2 / Output على اللوحة الأمامية", "زر كتم صوت للتحكم بالإنذار السمعي", "توصيلات كتلة طرفية للمصدر والخرج", "مخارج IEC C13/C19 (يعتمد على الطراز)"],
       specGroups: [
         {
           title: "المعاملات الكهربائية",
           specs: [
-            { label: "الجهد المقنن", value: "200–415 فولت" },
-            { label: "التيار المقنن", value: "حتى 400A (يعتمد على الطراز)" },
-            { label: "زمن النقل", value: "دون دورة (عادة أقل من 4 مللي ثانية)" },
+            { label: "الشكل", value: "تركيب راك 1U" },
+            { label: "المداخل", value: "مصدر A/B مستقل مزدوج (كتلة طرفية)" },
+            { label: "زمن النقل", value: "سلس، أقل من 10 مللي ثانية" },
+            { label: "الخرج", value: "مخارج IEC C13/C19 و/أو خرج كتلة طرفية" },
           ],
         },
         {
-          title: "المراقبة",
+          title: "المراقبة والتحكم",
           specs: [
-            { label: "مراقبة المصدر", value: "فحوصات جودة جهد/تردد مستمرة على كلا التغذيتين" },
-            { label: "الاتصال", value: "SNMP، Modbus، إنذارات تلامس جاف" },
+            { label: "مؤشرات الحالة", value: "مؤشرات LED أمامية Source 1 / Source 2 / Output" },
+            { label: "التحكم بالإنذار", value: "زر كتم صوت أمامي" },
           ],
         },
       ],
       applications: ["منشآت تتطلب نقلاً بدون انقطاع", "أمام توزيع PDU/UPS الحرج", "مراكز بيانات بتغذيتي مرافق مزدوجتين"],
-      customizationOptions: ["التصنيف الحالي", "الشكل (لوحة / تركيب راك)", "حزمة المراقبة"],
+      customizationOptions: ["التصنيف الحالي", "تكوين مخارج الخرج", "حزمة المراقبة"],
       standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
       faqs: [
         {
@@ -3636,34 +3637,40 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
           answer:
             "يُبدِّل ATS (مفتاح النقل التلقائي) الحمل ميكانيكياً بين مصدري طاقة، عادة بزمن نقل قصير، بينما يستخدم STS (مفتاح النقل الثابت) تبديلاً بالحالة الصلبة لنقل شبه فوري، يُستخدم حيث يكون حتى الانقطاع اللحظي غير مقبول.",
         },
+        {
+          question: "ما مدى سرعة نقل STS بين المصدرين؟",
+          answer:
+            "يُنفذ STS من واندتونغ نقلاً سلساً بين Source 1 وSource 2 في أقل من 10 مللي ثانية، وهو سريع بما يكفي بحيث لا تسجل معدات تكنولوجيا المعلومات المتصلة أي انقطاع.",
+        },
       ],
     },
     fr: {
       name: "STS (commutateur de transfert statique)",
       shortName: "STS",
-      tagline: "Commutateur de transfert à semi-conducteurs pour une commutation quasi instantanée entre deux sources d'alimentation.",
+      tagline: "Commutateur de transfert statique 1U rack, redondance à deux sources A/B avec transfert sans coupure <10ms.",
       overview:
-        "Le STS Wandtung utilise une commutation à semi-conducteurs pour transférer la charge entre deux sources d'alimentation indépendantes en une fraction de cycle — bien plus rapide qu'un ATS mécanique — protégeant les charges qui ne peuvent tolérer aucune interruption momentanée, généralement déployé en amont de la distribution PDU ou onduleur dans les installations critiques.",
-      keyFeatures: ["Commutation à semi-conducteurs, temps de transfert inférieur au cycle", "Double entrée de source indépendante", "Surveillance continue de la qualité de source sur les deux alimentations", "Formats panneau ou montage en rack"],
+        "Le STS Wandtung est un commutateur de transfert statique à semi-conducteurs au format 1U rack, qui transfère la charge sans coupure entre deux sources d'alimentation indépendantes A/B en moins de 10ms — bien plus rapide qu'un ATS mécanique — protégeant les charges qui ne peuvent tolérer aucune interruption momentanée. Des voyants d'état Source 1/Source 2/Output en façade et un bouton de coupure du son offrent un statut visible en un coup d'œil et un contrôle des alarmes, avec des connexions source et sortie à bornier en face arrière.",
+      keyFeatures: ["Transfert sans coupure, temps de commutation <10ms", "Double entrée de source indépendante A/B pour la redondance d'alimentation", "Format 1U montage en rack", "Voyants d'état Source 1 / Source 2 / Output en façade", "Bouton de coupure du son pour le contrôle des alarmes audibles", "Connexions source et sortie à bornier", "Prises de sortie IEC C13/C19 (selon le modèle)"],
       specGroups: [
         {
           title: "Paramètres électriques",
           specs: [
-            { label: "Tension nominale", value: "200–415V" },
-            { label: "Courant nominal", value: "Jusqu'à 400A (selon le modèle)" },
-            { label: "Temps de transfert", value: "Sous-cycle (généralement <4 ms)" },
+            { label: "Format", value: "1U montage en rack" },
+            { label: "Entrées", value: "Double source indépendante A/B (bornier)" },
+            { label: "Temps de transfert", value: "Sans coupure, <10ms" },
+            { label: "Sortie", value: "Prises IEC C13/C19 et/ou sortie à bornier" },
           ],
         },
         {
-          title: "Surveillance",
+          title: "Surveillance et contrôle",
           specs: [
-            { label: "Surveillance de source", value: "Contrôles continus de qualité tension/fréquence sur les deux alimentations" },
-            { label: "Communication", value: "SNMP, Modbus, alarmes à contact sec" },
+            { label: "Voyants d'état", value: "Voyants LED en façade Source 1 / Source 2 / Output" },
+            { label: "Contrôle des alarmes", value: "Bouton de coupure du son en façade" },
           ],
         },
       ],
       applications: ["Installations nécessitant un transfert sans interruption", "En amont de la distribution PDU/onduleur critique", "Centres de données à double alimentation réseau"],
-      customizationOptions: ["Calibre de courant", "Format (panneau / montage en rack)", "Package de surveillance"],
+      customizationOptions: ["Calibre de courant", "Configuration des prises de sortie", "Package de surveillance"],
       standards: ["Certification disponible sur demande selon les spécifications du projet"],
       faqs: [
         {
@@ -3671,34 +3678,40 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
           answer:
             "Un ATS (commutateur de transfert automatique) commute mécaniquement la charge entre deux sources d'alimentation, généralement avec un bref temps de transfert, tandis qu'un STS (commutateur de transfert statique) utilise une commutation à semi-conducteurs pour un transfert quasi instantané, utilisé lorsque même une interruption momentanée est inacceptable.",
         },
+        {
+          question: "À quelle vitesse le STS transfère-t-il entre les sources ?",
+          answer:
+            "Le STS Wandtung effectue un transfert sans coupure entre Source 1 et Source 2 en moins de 10ms, assez rapide pour que l'équipement informatique connecté ne détecte aucune interruption.",
+        },
       ],
     },
     es: {
       name: "STS (conmutador de transferencia estática)",
       shortName: "STS",
-      tagline: "Conmutador de transferencia de estado sólido para conmutación casi instantánea entre dos fuentes de energía.",
+      tagline: "Conmutador de transferencia estática de montaje en rack 1U, redundancia de doble fuente A/B con transferencia sin interrupción <10ms.",
       overview:
-        "El STS de Wandtung utiliza conmutación de estado sólido para transferir la carga entre dos fuentes de energía independientes en una fracción de ciclo —mucho más rápido que un ATS mecánico— protegiendo cargas que no pueden tolerar ni siquiera una interrupción momentánea, típicamente desplegado antes de la distribución de PDU o SAI en instalaciones críticas.",
-      keyFeatures: ["Conmutación de estado sólido, tiempo de transferencia sub-ciclo", "Doble entrada de fuente independiente", "Monitoreo continuo de calidad de fuente en ambas alimentaciones", "Formatos de panel o montaje en rack"],
+        "El STS de Wandtung es un conmutador de transferencia estática de estado sólido de montaje en rack 1U, que transfiere la carga sin interrupción entre dos fuentes de energía independientes A/B en menos de 10ms —mucho más rápido que un ATS mecánico— protegiendo cargas que no pueden tolerar ni siquiera una interrupción momentánea. Los indicadores de estado Source 1/Source 2/Output en el panel frontal y un botón de silencio ofrecen estado visible de un vistazo y control de alarmas, con conexiones de fuente y salida por bloque de terminales en el panel posterior.",
+      keyFeatures: ["Transferencia sin interrupción, tiempo de conmutación <10ms", "Doble entrada de fuente independiente A/B para redundancia de energía", "Formato de montaje en rack 1U", "Indicadores LED de estado Source 1 / Source 2 / Output en el panel frontal", "Botón de silencio para control de alarmas audibles", "Conexiones de fuente y salida por bloque de terminales", "Salidas IEC C13/C19 (según el modelo)"],
       specGroups: [
         {
           title: "Parámetros eléctricos",
           specs: [
-            { label: "Voltaje nominal", value: "200–415V" },
-            { label: "Corriente nominal", value: "Hasta 400A (según el modelo)" },
-            { label: "Tiempo de transferencia", value: "Sub-ciclo (típicamente <4 ms)" },
+            { label: "Formato", value: "Montaje en rack 1U" },
+            { label: "Entradas", value: "Doble fuente independiente A/B (bloque de terminales)" },
+            { label: "Tiempo de transferencia", value: "Sin interrupción, <10ms" },
+            { label: "Salida", value: "Salidas IEC C13/C19 y/o salida por bloque de terminales" },
           ],
         },
         {
-          title: "Monitoreo",
+          title: "Monitoreo y control",
           specs: [
-            { label: "Monitoreo de fuente", value: "Verificaciones continuas de calidad de voltaje/frecuencia en ambas alimentaciones" },
-            { label: "Comunicación", value: "SNMP, Modbus, alarmas de contacto seco" },
+            { label: "Indicadores de estado", value: "LEDs frontales Source 1 / Source 2 / Output" },
+            { label: "Control de alarmas", value: "Botón de silencio frontal" },
           ],
         },
       ],
       applications: ["Instalaciones que requieren transferencia sin interrupción", "Aguas arriba de distribución crítica de PDU/SAI", "Centros de datos con doble alimentación de red"],
-      customizationOptions: ["Capacidad de corriente", "Formato (panel / montaje en rack)", "Paquete de monitoreo"],
+      customizationOptions: ["Capacidad de corriente", "Configuración de salidas", "Paquete de monitoreo"],
       standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
       faqs: [
         {
@@ -3706,34 +3719,40 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
           answer:
             "Un ATS (interruptor de transferencia automática) conmuta mecánicamente la carga entre dos fuentes de energía, normalmente con un breve tiempo de transferencia, mientras que un STS (interruptor de transferencia estática) utiliza conmutación de estado sólido para una transferencia casi instantánea, utilizado donde ni siquiera una interrupción momentánea es aceptable.",
         },
+        {
+          question: "¿Qué tan rápido transfiere el STS entre fuentes?",
+          answer:
+            "El STS de Wandtung realiza una transferencia sin interrupción entre Source 1 y Source 2 en menos de 10ms, lo suficientemente rápido como para que el equipo de TI conectado no registre ninguna interrupción.",
+        },
       ],
     },
     ru: {
       name: "STS (статический переключатель резерва)",
       shortName: "STS",
-      tagline: "Твердотельный переключатель для практически мгновенного переключения между двумя источниками питания.",
+      tagline: "Статический переключатель резерва 1U для стойки, резервирование двух источников A/B с бесперебойным переключением <10 мс.",
       overview:
-        "STS Wandtung использует твердотельную коммутацию для переключения нагрузки между двумя независимыми источниками питания за долю цикла — значительно быстрее механического АВР — защищая нагрузки, которые не могут допустить даже кратковременного перерыва, обычно устанавливается перед распределением PDU или ИБП на критически важных объектах.",
-      keyFeatures: ["Твердотельная коммутация, время переключения менее цикла", "Два независимых входа источников", "Непрерывный контроль качества источника на обоих вводах", "Панельное или стоечное исполнение"],
+        "STS Wandtung — это твердотельный статический переключатель резерва форм-фактора 1U для стойки, который бесперебойно переключает нагрузку между двумя независимыми источниками питания A/B менее чем за 10 мс — значительно быстрее механического АВР — защищая нагрузки, которые не могут допустить даже кратковременного перерыва. Индикаторы состояния Source 1/Source 2/Output на передней панели и кнопка отключения звука дают наглядный статус и контроль сигнализации, а разъёмы источников и выхода на клеммных колодках расположены на задней панели.",
+      keyFeatures: ["Бесперебойное переключение, время коммутации <10 мс", "Два независимых входа источников A/B для резервирования питания", "Форм-фактор 1U для стойки", "Светодиодные индикаторы состояния Source 1 / Source 2 / Output на передней панели", "Кнопка отключения звука для управления сигнализацией", "Разъёмы источников и выхода на клеммных колодках", "Выходные розетки IEC C13/C19 (в зависимости от модели)"],
       specGroups: [
         {
           title: "Электрические параметры",
           specs: [
-            { label: "Номинальное напряжение", value: "200–415В" },
-            { label: "Номинальный ток", value: "До 400A (в зависимости от модели)" },
-            { label: "Время переключения", value: "Менее цикла (обычно <4 мс)" },
+            { label: "Форм-фактор", value: "1U для стойки" },
+            { label: "Входы", value: "Два независимых источника A/B (клеммная колодка)" },
+            { label: "Время переключения", value: "Бесперебойное, <10 мс" },
+            { label: "Выход", value: "Розетки IEC C13/C19 и/или выход на клеммной колодке" },
           ],
         },
         {
-          title: "Мониторинг",
+          title: "Мониторинг и управление",
           specs: [
-            { label: "Мониторинг источника", value: "Непрерывный контроль качества напряжения/частоты на обоих вводах" },
-            { label: "Связь", value: "SNMP, Modbus, сигнализация сухих контактов" },
+            { label: "Индикаторы состояния", value: "Светодиоды Source 1 / Source 2 / Output на передней панели" },
+            { label: "Управление сигнализацией", value: "Кнопка отключения звука на передней панели" },
           ],
         },
       ],
       applications: ["Объекты, требующие переключения без перерыва", "Перед критическим распределением PDU/ИБП", "ЦОД с двойным вводом от сети"],
-      customizationOptions: ["Номинальный ток", "Форм-фактор (панель / стойка)", "Пакет мониторинга"],
+      customizationOptions: ["Номинальный ток", "Конфигурация выходных розеток", "Пакет мониторинга"],
       standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
       faqs: [
         {
@@ -3741,39 +3760,49 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
           answer:
             "АВР (автоматический выключатель резерва) механически переключает нагрузку между двумя источниками питания, обычно с небольшим временем переключения, тогда как СВР (статический переключатель резерва) использует твердотельную коммутацию для практически мгновенного переключения — применяется там, где недопустим даже кратковременный перерыв.",
         },
+        {
+          question: "Насколько быстро STS переключается между источниками?",
+          answer:
+            "STS Wandtung выполняет бесперебойное переключение между Source 1 и Source 2 менее чем за 10 мс — достаточно быстро, чтобы подключённое ИТ-оборудование не зафиксировало прерывание.",
+        },
       ],
     },
     zh: {
       name: "STS(静态切换开关)",
       shortName: "STS",
-      tagline: "实现两路电源间近乎瞬时切换的固态转换开关。",
+      tagline: "1U机架式静态切换开关，A/B双路电源冗余，切换时间小于10毫秒无中断。",
       overview:
-        "万电通STS(静态切换开关)采用固态开关技术,可在不到一个周期的时间内完成两路独立电源间的负载切换——远快于机械式ATS——保护无法容忍片刻中断的负载,通常部署于关键设施PDU或UPS配电的上游。",
-      keyFeatures: ["固态开关,切换时间低于一个周期", "双路独立电源输入", "对两路电源持续进行电源质量监测", "面板式或机架式外形"],
+        "万电通STS(静态切换开关)是一款1U机架式固态静态切换开关，可在10毫秒以内实现两路独立A/B电源间的无中断负载切换——远快于机械式ATS——保护无法容忍片刻中断的负载。前面板配备Source 1/Source 2/Output状态指示灯及静音按钮，可一目了然地查看状态并控制告警，后面板配备端子式电源输入及输出接线端。",
+      keyFeatures: ["无中断切换，切换时间小于10毫秒", "A/B双路独立电源输入实现电源冗余", "1U机架式外形", "前面板Source 1/Source 2/Output状态LED指示灯", "静音按钮用于控制声音告警", "端子式电源及输出接线端", "C13/C19 IEC输出插座(视型号而定)"],
       specGroups: [
         {
           title: "电气参数",
           specs: [
-            { label: "额定电压", value: "200–415V" },
-            { label: "额定电流", value: "最高400A(视型号而定)" },
-            { label: "切换时间", value: "低于一个周期(通常<4毫秒)" },
+            { label: "外形", value: "1U机架式" },
+            { label: "输入", value: "A/B双路独立电源(端子式)" },
+            { label: "切换时间", value: "无中断，小于10毫秒" },
+            { label: "输出", value: "IEC C13/C19插座及/或端子式输出" },
           ],
         },
         {
-          title: "监控",
+          title: "监控与控制",
           specs: [
-            { label: "电源监测", value: "对两路电源持续进行电压/频率质量检测" },
-            { label: "通信", value: "SNMP、Modbus、干接点告警" },
+            { label: "状态指示", value: "前面板Source 1/Source 2/Output LED指示灯" },
+            { label: "告警控制", value: "前面板静音按钮" },
           ],
         },
       ],
       applications: ["需要零中断切换的设施", "关键PDU/UPS配电的上游", "具备双路市电输入的数据中心"],
-      customizationOptions: ["电流规格", "外形(面板式/机架式)", "监控套件"],
+      customizationOptions: ["电流规格", "输出插座配置", "监控套件"],
       standards: ["认证可根据项目规格按需提供"],
       faqs: [
         {
           question: "ATS与STS有何区别？",
           answer: "ATS(自动切换开关)以机械方式在两个电源间切换负载,通常存在短暂切换时间;而STS(静态切换开关)采用固态开关实现近乎瞬时的切换,适用于连片刻中断都无法接受的场景。",
+        },
+        {
+          question: "STS在两路电源间的切换速度有多快？",
+          answer: "万电通STS可在Source 1与Source 2之间实现小于10毫秒的无中断切换，速度快到已连接的IT设备不会察觉到任何中断。",
         },
       ],
     },
