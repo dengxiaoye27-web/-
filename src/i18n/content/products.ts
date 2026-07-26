@@ -5938,6 +5938,98 @@ export const productContentTranslations: Record<string, Partial<Record<Translate
       ],
     },
   },
+  "liquid-cooling-cabinet": {
+    ar: {
+      name: "خزانة التبريد السائل",
+      shortName: "خزانة التبريد السائل",
+      tagline: "خزانة راك تبريد سائل مباشر إلى الشريحة، 42U، 20-80 كيلوواط+ لكل راك، جاهزة لخوادم GPU للذكاء الاصطناعي.",
+      overview: "خزانة التبريد السائل من واندتونغ هي راك قياسي 42U مصمم خصيصاً للتبريد السائل المباشر إلى الشريحة لخوادم الذكاء الاصطناعي وGPU، تدعم 20-80 كيلوواط+ لكل راك. تدمج كل خزانة موزع سائل تبريد سريع الفصل، وألواح تبريد مباشرة إلى الشريحة بتصميم قنوات دقيقة، وأنابيب سائل تبريد من الفولاذ المقاوم للصدأ، ومبادل حراري بألواح نحاسية ملحومة بالنحاس، وتتصل بنظام تبريد سائل على مستوى المنشأة إلى جانب CDU ومبرد جاف أو برج تبريد وحلقة ثانوية.",
+      keyFeatures: ["راك قياسي 42U، سعة تبريد 20-80 كيلوواط+ لكل راك", "ألواح تبريد مباشرة إلى الشريحة بتصميم قنوات دقيقة", "موزع سائل تبريد سريع الفصل، بدون أدوات وبدون تسرب", "أنابيب سائل تبريد من الفولاذ المقاوم للصدأ", "مبادل حراري بألواح نحاسية ملحومة بالنحاس لكفاءة حرارية عالية", "باب أمامي فولاذي مثقب، تدفق هواء 75%، للتبريد الهجين هوائي/سائل", "هيكل من فولاذ SPCC مدرفل على البارد 2.0مم", "عجلات معززة للتنقل", "جاهزة لخوادم AI/GPU، جزء من نظام تبريد سائل متكامل (موزع، CDU، مبرد جاف/برج تبريد، حلقة ثانوية، كشف تسرب)"],
+      specGroups: [
+        { title: "أداء التبريد", specs: [{ label: "ارتفاع الراك", value: "42U قياسي" }, { label: "سعة التبريد", value: "20-80 كيلوواط+ لكل راك" }, { label: "لوح التبريد", value: "مباشر إلى الشريحة، تصميم قنوات دقيقة" }, { label: "المبادل الحراري", value: "مبادل حراري بألواح نحاسية ملحومة بالنحاس" }, { label: "التوصيل", value: "موزع سائل تبريد سريع الفصل، بدون أدوات/بدون تسرب" }] },
+        { title: "البناء", specs: [{ label: "المادة", value: "فولاذ SPCC مدرفل على البارد 2.0مم" }, { label: "أنابيب سائل التبريد", value: "فولاذ مقاوم للصدأ" }, { label: "الباب الأمامي", value: "فولاذ مثقب، تدفق هواء 75%" }, { label: "التنقل", value: "عجلات معززة" }] },
+      ],
+      applications: ["نشر خوادم GPU للذكاء الاصطناعي/الحوسبة عالية الأداء", "الاستضافة المشتركة عالية الكثافة", "تحديث مراكز البيانات للتبريد السائل", "التبريد المباشر إلى الشريحة للركائز الضخمة"],
+      customizationOptions: ["سعة التبريد لكل راك", "تكوين الموزع ولوح التبريد", "نوع الباب", "OEM/ODM"],
+      standards: ["الشهادة متاحة عند الطلب حسب مواصفات المشروع"],
+      faqs: [
+        { question: "كيف تتناسب خزانة التبريد السائل مع نظام تبريد سائل متكامل؟", answer: "تضم الخزانة ألواح التبريد المباشرة إلى الشريحة وموزع الفصل السريع على مستوى الراك (الحلقة الثانوية)، والتي تتصل بـCDU يعزل ويدير تبادل الحرارة مع حلقة المنشأة (الأساسية)، وينتهي بطرح الحرارة عبر مبرد جاف أو برج تبريد — كل ذلك يُراقب من خلال نظام مراقبة ذكي مع كشف التسرب." },
+        { question: "ما كثافة الخوادم التي تدعمها خزانة التبريد السائل؟", answer: "صُممت الخزانة لنشر خوادم AI وGPU عالية الكثافة، وتدعم 20-80 كيلوواط+ لكل راك — أعلى بكثير مما يمكن للتبريد الهوائي التقليدي تبديده — ما يجعلها مناسبة لعمليات النشر على نطاق الحوسبة الضخمة وعالية الأداء." },
+      ],
+    },
+    fr: {
+      name: "Armoire de refroidissement liquide",
+      shortName: "Armoire de refroidissement liquide",
+      tagline: "Armoire rack de refroidissement liquide direct-sur-puce, 42U, 20-80 kW+ par rack, prête pour serveurs GPU IA.",
+      overview: "L'armoire de refroidissement liquide Wandtung est un rack standard 42U conçu pour le refroidissement liquide direct-sur-puce des serveurs IA et GPU, supportant 20 à 80 kW+ par rack. Chaque armoire intègre un collecteur de liquide de refroidissement à déconnexion rapide, des plaques froides direct-sur-puce à conception micro-canaux, une tuyauterie de liquide de refroidissement en acier inoxydable et un échangeur de chaleur à plaques en cuivre brasé, se connectant à un système de refroidissement liquide au niveau de l'installation aux côtés d'un CDU, d'un dry cooler ou d'une tour de refroidissement et d'une boucle secondaire.",
+      keyFeatures: ["Rack standard 42U, capacité de refroidissement 20-80 kW+ par rack", "Plaques froides direct-sur-puce à conception micro-canaux", "Collecteur de liquide de refroidissement à déconnexion rapide, sans outil et sans fuite", "Tuyauterie de liquide de refroidissement en acier inoxydable", "Échangeur de chaleur à plaques en cuivre brasé pour une haute efficacité thermique", "Porte avant en acier perforé, 75% de flux d'air, pour refroidissement hybride air/liquide", "Construction en acier laminé à froid SPCC 2,0 mm", "Roulettes robustes pour la mobilité", "Prêt pour serveurs IA/GPU, élément d'un système de refroidissement liquide complet (collecteur, CDU, dry cooler / tour de refroidissement, boucle secondaire, détection de fuite)"],
+      specGroups: [
+        { title: "Performance de refroidissement", specs: [{ label: "Hauteur de rack", value: "42U standard" }, { label: "Capacité de refroidissement", value: "20 – 80 kW+ par rack" }, { label: "Plaque froide", value: "Direct-sur-puce, conception micro-canaux" }, { label: "Échangeur de chaleur", value: "Échangeur de chaleur à plaques en cuivre brasé" }, { label: "Raccordement", value: "Collecteur de liquide de refroidissement à déconnexion rapide, sans outil / sans fuite" }] },
+        { title: "Construction", specs: [{ label: "Matériau", value: "Acier laminé à froid SPCC 2,0 mm" }, { label: "Tuyauterie de liquide de refroidissement", value: "Acier inoxydable" }, { label: "Porte avant", value: "Acier perforé, 75% de flux d'air" }, { label: "Mobilité", value: "Roulettes robustes" }] },
+      ],
+      applications: ["Déploiements de serveurs GPU IA / HPC", "Colocation haute densité", "Rénovation de centres de données vers le refroidissement liquide", "Refroidissement direct-sur-puce pour racks hyperscale"],
+      customizationOptions: ["Capacité de refroidissement par rack", "Configuration du collecteur et des plaques froides", "Type de porte", "OEM/ODM"],
+      standards: ["Certification disponible sur demande selon les spécifications du projet"],
+      faqs: [
+        { question: "Comment l'armoire de refroidissement liquide s'intègre-t-elle dans un système de refroidissement liquide complet ?", answer: "L'armoire abrite les plaques froides direct-sur-puce et le collecteur à déconnexion rapide au niveau du rack (boucle secondaire), qui se connecte à un CDU isolant et gérant l'échange de chaleur avec la boucle de l'installation (primaire), rejetant finalement la chaleur via un dry cooler ou une tour de refroidissement — le tout surveillé par un système de surveillance intelligent avec détection de fuite." },
+        { question: "Quelle densité de serveurs l'armoire de refroidissement liquide supporte-t-elle ?", answer: "L'armoire est conçue pour les déploiements de serveurs IA et GPU à haute densité, supportant 20-80 kW+ par rack — bien au-delà de ce que le refroidissement par air traditionnel peut dissiper — la rendant adaptée aux déploiements hyperscale et HPC." },
+      ],
+    },
+    es: {
+      name: "Armario de refrigeración líquida",
+      shortName: "Armario de refrigeración líquida",
+      tagline: "Armario rack de refrigeración líquida directa al chip, 42U, 20-80 kW+ por rack, listo para servidores GPU de IA.",
+      overview: "El armario de refrigeración líquida de Wandtung es un rack estándar de 42U diseñado para la refrigeración líquida directa al chip de servidores de IA y GPU, con soporte de 20 a 80 kW+ por rack. Cada armario integra un colector de refrigerante de desconexión rápida, placas frías directas al chip con diseño de microcanales, tuberías de refrigerante de acero inoxidable y un intercambiador de calor de placas de cobre soldado, conectándose a un sistema de refrigeración líquida a nivel de instalación junto con un CDU, un dry cooler o una torre de refrigeración y un circuito secundario.",
+      keyFeatures: ["Rack estándar de 42U, capacidad de refrigeración de 20-80 kW+ por rack", "Placas frías directas al chip con diseño de microcanales", "Colector de refrigerante de desconexión rápida, sin herramientas y sin fugas", "Tuberías de refrigerante de acero inoxidable", "Intercambiador de calor de placas de cobre soldado para alta eficiencia térmica", "Puerta frontal de acero perforado, 75% de flujo de aire, para refrigeración híbrida aire/líquido", "Construcción en acero laminado en frío SPCC de 2,0 mm", "Ruedas resistentes para movilidad", "Listo para servidores IA/GPU, parte de un sistema de refrigeración líquida completo (colector, CDU, dry cooler / torre de refrigeración, circuito secundario, detección de fugas)"],
+      specGroups: [
+        { title: "Rendimiento de refrigeración", specs: [{ label: "Altura del rack", value: "42U estándar" }, { label: "Capacidad de refrigeración", value: "20 – 80 kW+ por rack" }, { label: "Placa fría", value: "Directa al chip, diseño de microcanales" }, { label: "Intercambiador de calor", value: "Intercambiador de calor de placas de cobre soldado" }, { label: "Acoplamiento", value: "Colector de refrigerante de desconexión rápida, sin herramientas / sin fugas" }] },
+        { title: "Construcción", specs: [{ label: "Material", value: "Acero laminado en frío SPCC de 2,0 mm" }, { label: "Tuberías de refrigerante", value: "Acero inoxidable" }, { label: "Puerta frontal", value: "Acero perforado, 75% de flujo de aire" }, { label: "Movilidad", value: "Ruedas resistentes" }] },
+      ],
+      applications: ["Despliegues de servidores GPU de IA / HPC", "Colocación de alta densidad", "Modernización de centros de datos hacia refrigeración líquida", "Refrigeración directa al chip para racks hyperscale"],
+      customizationOptions: ["Capacidad de refrigeración por rack", "Configuración del colector y placas frías", "Tipo de puerta", "OEM/ODM"],
+      standards: ["Certificación disponible bajo pedido según la especificación del proyecto"],
+      faqs: [
+        { question: "¿Cómo encaja el armario de refrigeración líquida en un sistema de refrigeración líquida completo?", answer: "El armario alberga las placas frías directas al chip y el colector de desconexión rápida a nivel de rack (circuito secundario), que se conecta a un CDU que aísla y gestiona el intercambio de calor con el circuito de la instalación (primario), rechazando finalmente el calor a través de un dry cooler o torre de refrigeración, todo ello supervisado mediante un sistema de monitoreo inteligente con detección de fugas." },
+        { question: "¿Qué densidad de servidores soporta el armario de refrigeración líquida?", answer: "El armario está diseñado para despliegues de servidores IA y GPU de alta densidad, soportando 20-80 kW+ por rack, muy por encima de lo que la refrigeración por aire tradicional puede disipar, lo que lo hace adecuado para despliegues hyperscale y HPC." },
+      ],
+    },
+    ru: {
+      name: "Шкаф жидкостного охлаждения",
+      shortName: "Шкаф жидкостного охлаждения",
+      tagline: "Шкаф-стойка прямого жидкостного охлаждения чипов, 42U, 20-80 кВт+ на стойку, готов для GPU-серверов ИИ.",
+      overview: "Шкаф жидкостного охлаждения Wandtung — это стандартная стойка 42U, специально разработанная для прямого жидкостного охлаждения чипов серверов ИИ и GPU, поддерживающая 20–80 кВт+ на стойку. Каждый шкаф объединяет коллектор хладагента с быстрым разъёмом, холодные пластины прямого охлаждения чипов с микроканальной конструкцией, трубопроводы хладагента из нержавеющей стали и паяный медный пластинчатый теплообменник, подключаясь к системе жидкостного охлаждения на уровне объекта вместе с CDU, сухим охладителем или градирней и вторичным контуром.",
+      keyFeatures: ["Стандартная стойка 42U, мощность охлаждения 20–80 кВт+ на стойку", "Холодные пластины прямого охлаждения чипов с микроканальной конструкцией", "Коллектор хладагента с быстрым разъёмом, без инструментов и без протечек", "Трубопроводы хладагента из нержавеющей стали", "Паяный медный пластинчатый теплообменник для высокой теплоэффективности", "Перфорированная передняя стальная дверь, 75% воздушного потока, для гибридного воздушно-жидкостного охлаждения", "Конструкция из холоднокатаной стали SPCC 2,0 мм", "Усиленные колёса для мобильности", "Готовность к серверам ИИ/GPU, часть комплексной системы жидкостного охлаждения (коллектор, CDU, сухой охладитель/градирня, вторичный контур, обнаружение утечек)"],
+      specGroups: [
+        { title: "Характеристики охлаждения", specs: [{ label: "Высота стойки", value: "42U стандарт" }, { label: "Мощность охлаждения", value: "20 – 80 кВт+ на стойку" }, { label: "Холодная пластина", value: "Прямое охлаждение чипа, микроканальная конструкция" }, { label: "Теплообменник", value: "Паяный медный пластинчатый теплообменник" }, { label: "Соединение", value: "Коллектор хладагента с быстрым разъёмом, без инструментов / без протечек" }] },
+        { title: "Конструкция", specs: [{ label: "Материал", value: "Холоднокатаная сталь SPCC 2,0 мм" }, { label: "Трубопроводы хладагента", value: "Нержавеющая сталь" }, { label: "Передняя дверь", value: "Перфорированная сталь, 75% воздушного потока" }, { label: "Мобильность", value: "Усиленные колёса" }] },
+      ],
+      applications: ["Развёртывание GPU-серверов ИИ/HPC", "Высокоплотный колокейшн", "Модернизация ЦОД под жидкостное охлаждение", "Прямое охлаждение чипов для гипермасштабируемых стоек"],
+      customizationOptions: ["Мощность охлаждения на стойку", "Конфигурация коллектора и холодных пластин", "Тип двери", "OEM/ODM"],
+      standards: ["Сертификация доступна по запросу в соответствии со спецификацией проекта"],
+      faqs: [
+        { question: "Как шкаф жидкостного охлаждения вписывается в комплексную систему жидкостного охлаждения?", answer: "Шкаф вмещает холодные пластины прямого охлаждения чипов и коллектор с быстрым разъёмом на уровне стойки (вторичный контур), который подключается к CDU, изолирующему и управляющему теплообменом с контуром объекта (первичным), в итоге отводя тепло через сухой охладитель или градирню — всё это контролируется интеллектуальной системой мониторинга с обнаружением утечек." },
+        { question: "Какую плотность серверов поддерживает шкаф жидкостного охлаждения?", answer: "Шкаф рассчитан на развёртывание высокоплотных серверов ИИ и GPU, поддерживая 20–80 кВт+ на стойку — значительно больше, чем может рассеять традиционное воздушное охлаждение, что делает его пригодным для гипермасштабируемых и HPC-развёртываний." },
+      ],
+    },
+    zh: {
+      name: "液冷机柜",
+      shortName: "液冷机柜",
+      tagline: "芯片级直接液冷机柜，42U，单机柜20-80kW+，AI GPU服务器专用。",
+      overview: "万电通液冷机柜是一款标准42U机柜，专为AI及GPU服务器的芯片级直接液冷设计，单机柜支持20至80kW+散热能力。每台机柜集成快速接头冷却液分液器、微通道设计的芯片级直冷板、不锈钢冷却液管路及钎焊铜板换热器，与CDU、干冷器或冷却塔及二次侧回路共同构成设施级液冷系统。",
+      keyFeatures: ["标准42U机柜，单机柜散热能力20-80kW+", "微通道设计芯片级直冷板", "快速接头冷却液分液器，免工具、无泄漏", "不锈钢冷却液管路", "钎焊铜板换热器，热交换效率高", "前置穿孔钢制柜门，75%通风率，支持风冷/液冷混合冷却", "2.0mm SPCC冷轧钢结构", "重型脚轮，便于移动", "AI/GPU服务器专用，属于完整液冷系统的一部分（分液器、CDU、干冷器/冷却塔、二次侧回路、漏液检测）"],
+      specGroups: [
+        { title: "制冷性能", specs: [{ label: "机柜高度", value: "标准42U" }, { label: "制冷能力", value: "单机柜20-80kW+" }, { label: "冷板", value: "芯片级直冷，微通道设计" }, { label: "换热器", value: "钎焊铜板换热器" }, { label: "接头方式", value: "快速接头冷却液分液器，免工具/无泄漏" }] },
+        { title: "结构材质", specs: [{ label: "材质", value: "2.0mm SPCC冷轧钢" }, { label: "冷却液管路", value: "不锈钢" }, { label: "前门", value: "穿孔钢板，75%通风率" }, { label: "移动方式", value: "重型脚轮" }] },
+      ],
+      applications: ["AI/HPC GPU服务器部署", "高密度托管机房", "数据中心液冷改造", "超大规模机柜芯片级冷却"],
+      customizationOptions: ["单机柜散热能力", "分液器与冷板配置", "柜门类型", "OEM/ODM"],
+      standards: ["认证可根据项目规格按需提供"],
+      faqs: [
+        { question: "液冷机柜如何融入完整的液冷系统？", answer: "机柜在机架层级（二次侧回路）容纳芯片级直冷板及快速接头分液器，并连接至CDU，由CDU隔离并管理与设施（一次侧）回路之间的热交换，最终通过干冷器或冷却塔排出热量——整个过程通过带漏液检测功能的智能监控系统进行监控。" },
+        { question: "液冷机柜支持什么样的服务器密度？", answer: "该机柜专为高密度AI及GPU服务器部署设计，单机柜支持20-80kW+散热能力——远超传统风冷所能承受的范围，适用于超大规模及高性能计算部署场景。" },
+      ],
+    },
+  },
   "row-based-cooling": {
     ar: {
       name: "تبريد على مستوى الصف",
