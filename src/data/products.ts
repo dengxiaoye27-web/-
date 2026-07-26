@@ -2157,7 +2157,74 @@ export const products: Product[] = [
           "A CDU isolates facility (primary) water — which can vary in quality and pressure — from the closed, controlled secondary loop that touches IT hardware, protecting servers from contamination and pressure fluctuations while enabling precise temperature control at the rack.",
       },
     ],
-    relatedProductSlugs: ["liquid-cooling", "precision-air-conditioner"],
+    relatedProductSlugs: ["liquid-cooling", "liquid-cooling-cabinet", "precision-air-conditioner"],
+    relatedSolutionSlugs: ["liquid-cooling", "ai-data-center"],
+  },
+  {
+    slug: "liquid-cooling-cabinet",
+    category: "cooling-solutions",
+    name: "Liquid Cooling Cabinet",
+    shortName: "Liquid Cooling Cabinet",
+    tagline: "Direct-to-chip liquid cooling rack cabinet, 42U, 20-80kW+ per rack, AI GPU server ready.",
+    overview:
+      "The Wandtung Liquid Cooling Cabinet is a 42U standard rack purpose-built for direct-to-chip liquid cooling of AI and GPU servers, supporting 20–80kW+ per rack. Each cabinet integrates a quick-disconnect coolant manifold, direct-to-chip cold plates with micro-channel design, stainless steel coolant piping and a brazed copper plate heat exchanger, connecting into a facility-level liquid cooling system alongside a CDU, dry cooler or cooling tower and secondary loop.",
+    featured: true,
+    images: [
+      "/products/liquid-cooling-cabinet/01-system-architecture.jpg",
+      "/products/liquid-cooling-cabinet/02-main-annotated.jpg",
+      "/products/liquid-cooling-cabinet/03-open-door-cooling-loop.jpg",
+      "/products/liquid-cooling-cabinet/04-core-components.jpg",
+      "/products/liquid-cooling-cabinet/05-key-features.jpg",
+      "/products/liquid-cooling-cabinet/06-angled-view-indicator-light.jpg",
+    ],
+    keyFeatures: [
+      "42U standard rack, 20–80kW+ per rack cooling capacity",
+      "Direct-to-chip cold plates with micro-channel design",
+      "Quick-disconnect coolant manifold, tool-free and leak-free",
+      "Stainless steel coolant piping",
+      "Brazed copper plate heat exchanger for high thermal efficiency",
+      "Perforated steel front door, 75% airflow, for hybrid air/liquid cooling",
+      "2.0mm SPCC cold-rolled steel construction",
+      "Heavy-duty casters for mobility",
+      "AI / GPU server ready, part of a complete liquid cooling system (manifold, CDU, dry cooler / cooling tower, secondary loop, leak detection)",
+    ],
+    specGroups: [
+      {
+        title: "Cooling Performance",
+        specs: [
+          { label: "Rack Height", value: "42U standard" },
+          { label: "Cooling Capacity", value: "20 – 80kW+ per rack" },
+          { label: "Cold Plate", value: "Direct-to-chip, micro-channel design" },
+          { label: "Heat Exchanger", value: "Brazed copper plate heat exchanger" },
+          { label: "Coupling", value: "Quick-disconnect coolant manifold, tool-free / leak-free" },
+        ],
+      },
+      {
+        title: "Construction",
+        specs: [
+          { label: "Material", value: "2.0mm SPCC cold-rolled steel" },
+          { label: "Coolant Piping", value: "Stainless steel" },
+          { label: "Front Door", value: "Perforated steel, 75% airflow" },
+          { label: "Mobility", value: "Heavy-duty casters" },
+        ],
+      },
+    ],
+    applications: ["AI / HPC GPU server deployments", "High-density colocation", "Data center liquid cooling retrofits", "Direct-to-chip cooling for hyperscale racks"],
+    customizationOptions: ["Cooling capacity per rack", "Manifold and cold plate configuration", "Door type", "OEM/ODM"],
+    standards: ["Certification available on request per project spec"],
+    faqs: [
+      {
+        question: "How does the Liquid Cooling Cabinet fit into a complete liquid cooling system?",
+        answer:
+          "The cabinet houses the direct-to-chip cold plates and quick-disconnect manifold at the rack level (secondary loop), which connects to a CDU that isolates and manages heat exchange with the facility (primary) loop, ultimately rejecting heat through a dry cooler or cooling tower — all monitored through an intelligent monitoring system with leak detection.",
+      },
+      {
+        question: "What server density does the Liquid Cooling Cabinet support?",
+        answer:
+          "The cabinet is designed for high-density AI and GPU server deployments, supporting 20–80kW+ per rack — well beyond what traditional air cooling can dissipate — making it suitable for hyperscale and HPC deployments.",
+      },
+    ],
+    relatedProductSlugs: ["cdu", "liquid-cooling", "dry-cooler", "network-cabinet"],
     relatedSolutionSlugs: ["liquid-cooling", "ai-data-center"],
   },
   {
