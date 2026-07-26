@@ -2661,21 +2661,35 @@ export const products: Product[] = [
     category: "raised-floor",
     name: "Steel Cementitious Raised Floor",
     shortName: "Steel Cementitious Floor",
-    tagline: "Steel-encased cementitious-core raised floor panel for standard data center loads.",
+    tagline: "HPL anti-static surface, steel-encased foaming cement core raised floor panel, honeycomb-reinforced base.",
     overview:
-      "Wandtung Steel Cementitious Raised Floor panels use a lightweight cementitious core fully encased in galvanized steel, providing a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
+      "Wandtung Steel Cementitious Raised Floor panels pair a high-pressure laminate (HPL) anti-static surface with a lightweight foaming cement core fully encased in a high-quality steel shell, reinforced by a welded honeycomb steel base structure. The panel sits on an adjustable pedestal and stringer system, giving a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
+    featured: true,
+    images: [
+      "/products/steel-cementitious-raised-floor/01-main.png",
+      "/products/steel-cementitious-raised-floor/02-cross-section.png",
+      "/products/steel-cementitious-raised-floor/03-pedestal-system.png",
+      "/products/steel-cementitious-raised-floor/04-edge-detail.png",
+      "/products/steel-cementitious-raised-floor/05-honeycomb-base.png",
+      "/products/steel-cementitious-raised-floor/06-installation-scene.png",
+    ],
     keyFeatures: [
-      "Fully steel-encased cementitious core",
+      "HPL (high-pressure laminate) anti-static surface layer",
+      "High-quality steel shell fully encasing the panel core",
+      "Internal foaming cement core for lightweight strength",
+      "Welded honeycomb steel base structure for load distribution",
       "Cost-effective for standard load requirements",
       "Consistent panel-to-panel dimensional tolerance",
-      "Wide compatibility with standard pedestal/stringer systems",
+      "Adjustable pedestal and stringer support system",
     ],
     specGroups: [
       {
         title: "Panel Specification",
         specs: [
           { label: "Panel Size", value: "600 x 600 mm" },
-          { label: "Core Material", value: "Cementitious, steel-encased" },
+          { label: "Surface", value: "HPL anti-static laminate" },
+          { label: "Core Material", value: "Foaming cement, steel-encased" },
+          { label: "Base Structure", value: "Welded honeycomb steel" },
           { label: "Load Rating", value: "Up to 900 kg concentrated load (model dependent)" },
         ],
       },
@@ -2688,6 +2702,11 @@ export const products: Product[] = [
         question: "Is steel cementitious raised floor suitable for a typical data center?",
         answer:
           "Yes — it's one of the most widely used raised floor constructions for standard data center loads, offering a cost-effective balance of load capacity, availability and compatibility with common pedestal systems.",
+      },
+      {
+        question: "What does the honeycomb steel base structure do?",
+        answer:
+          "The welded honeycomb steel base under the cement core distributes concentrated point loads evenly across the panel and pedestal supports, adding rigidity without significantly increasing panel weight.",
       },
     ],
     relatedProductSlugs: ["calcium-sulphate-raised-floor", "anti-static-raised-floor"],
