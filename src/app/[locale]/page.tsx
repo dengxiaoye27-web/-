@@ -8,7 +8,8 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
-import { coreSolutionIcons, whyWandtungIcons, productIcons, categoryIcons, IconModule } from "@/components/ui/SectionIcons";
+import { coreSolutionIcons, whyWandtungIcons } from "@/components/ui/SectionIcons";
+import { techIllustrations, productIllustrationKey, categoryIllustrationKey } from "@/components/ui/TechIllustration";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -133,10 +134,15 @@ export default async function HomePage({
                     />
                   </div>
                 ) : (
-                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 grid-texture-light rounded-t-2xl overflow-hidden flex items-center justify-center">
+                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 grid-texture-light rounded-t-2xl overflow-hidden">
                     {(() => {
-                      const Icon = productIcons[product.slug] ?? categoryIcons[product.category] ?? IconModule;
-                      return <Icon className="h-14 w-14 text-ink-600/30" />;
+                      const key = productIllustrationKey[product.slug] ?? categoryIllustrationKey[product.category] ?? "module";
+                      const Illustration = techIllustrations[key];
+                      return (
+                        <div className="absolute inset-0 p-6 text-navy-900/70">
+                          <Illustration />
+                        </div>
+                      );
                     })()}
                   </div>
                 )}
