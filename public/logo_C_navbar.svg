@@ -1,0 +1,10 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wandtung">
+  <rect x="0" y="4" width="12" height="32" rx="4" fill="#00D4AA" />
+  <circle cx="6" cy="12" r="2" fill="#05070D" />
+  <circle cx="6" cy="20" r="2" fill="#05070D" />
+  <circle cx="6" cy="28" r="2" fill="#05070D" />
+
+  <text x="22" y="27" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="0.5">
+    <tspan fill="#FFFFFF">WAND</tspan><tspan fill="#00D4AA">TUNG</tspan>
+  </text>
+</svg>
