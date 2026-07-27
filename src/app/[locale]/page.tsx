@@ -176,7 +176,7 @@ export default async function HomePage({
             {featuredProducts.map((product) => (
               <Card key={product.slug} href={`/products/${product.slug}`}>
                 {product.images?.[0] ? (
-                  <div className="relative mb-4 aspect-video -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
+                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
                     <Image
                       src={product.images[0]}
                       alt={product.name}

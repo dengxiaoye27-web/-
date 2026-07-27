@@ -110,7 +110,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                 >
                   {p.images?.[0] ? (
                     <div
-                      className={`relative aspect-video flex items-center justify-center overflow-hidden ${
+                      className={`relative aspect-square flex items-center justify-center overflow-hidden ${
                         isFirst ? "bg-navy-900" : "bg-paper-50"
                       }`}
                     >
