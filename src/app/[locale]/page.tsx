@@ -109,6 +109,9 @@ export default async function HomePage({
               const Icon = coreSolutionIcons[i] ?? coreSolutionIcons[0];
               return (
                 <Card key={item.title} href={coreSolutionHrefs[i]}>
+                  <div className="relative mb-5 -mx-6 -mt-6 md:-mx-8 md:-mt-8 aspect-video rounded-t-2xl bg-paper-50 overflow-hidden flex items-center justify-center">
+                    <Icon className="h-10 w-10 text-ink-600/20" />
+                  </div>
                   <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                     <Icon className="h-6 w-6" />
                   </div>
