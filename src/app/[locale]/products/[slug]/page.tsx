@@ -14,7 +14,7 @@ import { InquiryCTA } from "@/components/product/InquiryCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
-import { productIcons, categoryIcons, IconModule } from "@/components/ui/SectionIcons";
+import { techIllustrations, productIllustrationKey, categoryIllustrationKey } from "@/components/ui/TechIllustration";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { getProductContent } from "@/i18n/content/products";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
@@ -117,10 +117,15 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                       />
                     </div>
                   ) : (
-                    <div className="relative aspect-square bg-paper-50 grid-texture-light flex items-center justify-center">
+                    <div className="relative aspect-square bg-paper-50 grid-texture-light overflow-hidden">
                       {(() => {
-                        const Icon = productIcons[p.slug] ?? categoryIcons[p.category] ?? IconModule;
-                        return <Icon className="h-16 w-16 text-ink-600/30" />;
+                        const key = productIllustrationKey[p.slug] ?? categoryIllustrationKey[p.category] ?? "module";
+                        const Illustration = techIllustrations[key];
+                        return (
+                          <div className="absolute inset-0 p-8 text-navy-900/70">
+                            <Illustration />
+                          </div>
+                        );
                       })()}
                     </div>
                   )}
@@ -181,10 +186,15 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
           {product.images?.length ? (
             <ProductGallery images={product.images} alt={content.name} />
           ) : (
-            <div className="relative aspect-[4/3] rounded-2xl border border-line-200 bg-paper-50 grid-texture-light flex items-center justify-center">
+            <div className="relative aspect-[4/3] rounded-2xl border border-line-200 bg-paper-50 grid-texture-light overflow-hidden">
               {(() => {
-                const Icon = productIcons[product.slug] ?? categoryIcons[product.category] ?? IconModule;
-                return <Icon className="h-24 w-24 text-ink-600/25" />;
+                const key = productIllustrationKey[product.slug] ?? categoryIllustrationKey[product.category] ?? "module";
+                const Illustration = techIllustrations[key];
+                return (
+                  <div className="absolute inset-0 p-8 text-navy-900">
+                    <Illustration />
+                  </div>
+                );
               })()}
             </div>
           )}
