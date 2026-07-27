@@ -17,10 +17,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "Guangdong Haisen New Building Materials Technology Co., Ltd. designs and manufactures data center infrastructure and critical power products — from rack PDUs to full containerized data centers — supplying data center operators, telecom operators, system integrators and EPC contractors across global markets.",
       stats: [
         { value: "9", label: "Product Categories" },
-        { value: "50+", label: "Data Center Infrastructure Products" },
+        { value: "20+", label: "Years Experience" },
         { value: "6", label: "Target Regions Served" },
         { value: "OEM/ODM", label: "Factory-Direct Manufacturing" },
       ],
+      factoryPhotoPlaceholder: "Factory photo coming soon",
     },
     coreSolutions: {
       eyebrow: "What We Provide",
@@ -92,10 +93,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "تقوم شركة قوانغدونغ هايسِن الجديدة لتكنولوجيا مواد البناء بتصميم وتصنيع منتجات البنية التحتية لمراكز البيانات والطاقة الحرجة — من وحدات توزيع الطاقة للراك إلى مراكز البيانات الحاوية الكاملة — لتزويد مشغلي مراكز البيانات، ومشغلي الاتصالات، وشركات التكامل، ومقاولي EPC في مختلف الأسواق العالمية.",
       stats: [
         { value: "9", label: "فئات المنتجات" },
-        { value: "+50", label: "منتج بنية تحتية لمراكز البيانات" },
+        { value: "+20", label: "سنوات من الخبرة" },
         { value: "6", label: "أسواق مستهدفة" },
         { value: "OEM/ODM", label: "تصنيع مباشر من المصنع" },
       ],
+      factoryPhotoPlaceholder: "صورة المصنع قريبًا",
     },
     coreSolutions: {
       eyebrow: "ما نقدمه",
@@ -167,10 +169,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "Guangdong Haisen New Building Materials Technology Co., Ltd. conçoit et fabrique des produits d'infrastructure de centres de données et d'alimentation critique — des PDU en rack aux centres de données conteneurisés complets — pour les opérateurs de centres de données, les opérateurs télécoms, les intégrateurs de systèmes et les entreprises EPC sur les marchés internationaux.",
       stats: [
         { value: "9", label: "Catégories de produits" },
-        { value: "50+", label: "Produits d'infrastructure pour centres de données" },
+        { value: "20+", label: "Ans d'expérience" },
         { value: "6", label: "Régions cibles desservies" },
         { value: "OEM/ODM", label: "Fabrication directe en usine" },
       ],
+      factoryPhotoPlaceholder: "Photo de l'usine à venir",
     },
     coreSolutions: {
       eyebrow: "Notre offre",
@@ -242,10 +245,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "Guangdong Haisen New Building Materials Technology Co., Ltd. diseña y fabrica productos de infraestructura para centros de datos y energía crítica — desde PDU de rack hasta centros de datos en contenedores completos — abasteciendo a operadores de centros de datos, operadores de telecomunicaciones, integradores de sistemas y contratistas EPC en mercados de todo el mundo.",
       stats: [
         { value: "9", label: "Categorías de productos" },
-        { value: "50+", label: "Productos de infraestructura para centros de datos" },
+        { value: "20+", label: "Años de experiencia" },
         { value: "6", label: "Regiones objetivo atendidas" },
         { value: "OEM/ODM", label: "Fabricación directa de fábrica" },
       ],
+      factoryPhotoPlaceholder: "Foto de la fábrica próximamente",
     },
     coreSolutions: {
       eyebrow: "Lo que ofrecemos",
@@ -317,10 +321,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "Guangdong Haisen New Building Materials Technology Co., Ltd. разрабатывает и производит оборудование для инфраструктуры ЦОД и критического электропитания — от стоечных PDU до полностью готовых контейнерных дата-центров — для операторов ЦОД, телеком-операторов, системных интеграторов и EPC-подрядчиков на международных рынках.",
       stats: [
         { value: "9", label: "Категорий продукции" },
-        { value: "50+", label: "Изделий для инфраструктуры ЦОД" },
+        { value: "20+", label: "Лет опыта" },
         { value: "6", label: "Целевых регионов" },
         { value: "OEM/ODM", label: "Прямое производство на заводе" },
       ],
+      factoryPhotoPlaceholder: "Фото завода скоро появится",
     },
     coreSolutions: {
       eyebrow: "Что мы предлагаем",
@@ -392,10 +397,11 @@ export const homeMessages: Record<Locale, HomeMessages> = {
         "广东海森新型建材科技有限公司专注于数据中心基础设施与关键电力产品的设计与制造——从机柜配电单元(PDU)到完整的集装箱数据中心——为全球市场的数据中心运营商、电信运营商、系统集成商及 EPC 总承包商提供产品与服务。",
       stats: [
         { value: "9", label: "产品类别" },
-        { value: "50+", label: "数据中心基础设施产品" },
+        { value: "20+", label: "年行业经验" },
         { value: "6", label: "目标出口区域" },
         { value: "OEM/ODM", label: "工厂直营制造" },
       ],
+      factoryPhotoPlaceholder: "工厂实拍图即将上线",
     },
     coreSolutions: {
       eyebrow: "核心业务",

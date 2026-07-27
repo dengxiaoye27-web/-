@@ -11,7 +11,7 @@ export function StatTile({
     <div>
       <p
         className={`text-3xl md:text-4xl font-semibold tracking-tight ${
-          light ? "text-white" : "text-ink-900"
+          light ? "text-white" : "text-accent-500"
         }`}
       >
         {value}

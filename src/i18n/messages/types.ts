@@ -42,6 +42,7 @@ export interface HomeMessages {
     title: string;
     description: string;
     stats: { value: string; label: string }[];
+    factoryPhotoPlaceholder: string;
   };
   coreSolutions: {
     eyebrow: string;
