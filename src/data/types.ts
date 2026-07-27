@@ -88,12 +88,14 @@ export interface ProjectCaseStudy {
 export interface Article {
   slug: string;
   title: string;
+  metaTitle?: string;
   category: string;
   excerpt: string;
   publishedAt: string;
   readingTime: string;
   body: { heading: string; content: string }[];
   faqs: FaqItem[];
+  ctaLinks?: { label: string; href: string }[];
 }
 
 export interface Certification {

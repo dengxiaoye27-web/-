@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!article) return {};
   const content = getArticleContent(slug, locale, article);
   return {
-    title: content.title,
+    title: article.metaTitle ? { absolute: article.metaTitle } : content.title,
     description: content.excerpt,
     alternates: { canonical: `/resources/blog/${article.slug}` },
   };
@@ -90,6 +90,16 @@ export default async function ArticlePage({
             </div>
           ))}
         </article>
+
+        {article.ctaLinks?.length ? (
+          <div className="max-w-3xl mt-10 flex flex-wrap gap-3">
+            {article.ctaLinks.map((link, i) => (
+              <Button key={link.href} href={link.href} variant={i === 0 ? "solid" : "outline"}>
+                {link.label}
+              </Button>
+            ))}
+          </div>
+        ) : null}
 
         <div className="max-w-3xl mt-16">
           <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.faqTitle}</h2>
