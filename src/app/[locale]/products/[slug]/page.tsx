@@ -97,16 +97,23 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
       <div className="container-page py-20">
         {items.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((p) => {
+            {items.map((p, index) => {
               const content = getProductContent(p.slug, locale, p);
+              const isFirst = index === 0;
               return (
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-line-200 hover:border-accent-500/60 hover:-translate-y-1 transition-all"
+                  className={`group flex h-full flex-col overflow-hidden rounded-2xl border transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-ink-900/10 ${
+                    isFirst ? "border-navy-700 bg-navy-950" : "border-line-200 bg-white hover:border-accent-500/60"
+                  }`}
                 >
                   {p.images?.[0] ? (
-                    <div className="relative aspect-square bg-paper-50">
+                    <div
+                      className={`relative aspect-video flex items-center justify-center overflow-hidden ${
+                        isFirst ? "bg-navy-900" : "bg-paper-50"
+                      }`}
+                    >
                       <Image
                         src={p.images[0]}
                         alt={content.name}
@@ -117,9 +124,11 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                     </div>
                   ) : null}
                   <div className="p-6 md:p-8">
-                    <p className="eyebrow mb-2">{content.shortName}</p>
-                    <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
-                    <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>
+                    <p className={`eyebrow mb-2 ${isFirst ? "text-accent-400" : ""}`}>{content.shortName}</p>
+                    <h2 className={`text-lg font-semibold ${isFirst ? "text-white" : "text-ink-900"}`}>{content.name}</h2>
+                    <p className={`mt-2 text-sm leading-relaxed ${isFirst ? "text-white/70" : "text-ink-600"}`}>
+                      {content.tagline}
+                    </p>
                   </div>
                 </Link>
               );
