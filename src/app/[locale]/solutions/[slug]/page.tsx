@@ -6,7 +6,6 @@ import { Accordion } from "@/components/ui/Accordion";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { techIllustrations, solutionIllustrationKey } from "@/components/ui/TechIllustration";
 import { getSolution, solutions } from "@/data/solutions";
 import { getSolutionContent } from "@/i18n/content/solutions";
 import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
@@ -63,7 +62,7 @@ export default async function SolutionPage({
         ]}
       />
 
-      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
+      <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
@@ -74,20 +73,6 @@ export default async function SolutionPage({
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
-        <section className="rounded-2xl border border-line-200 bg-paper-50 grid-texture-light overflow-hidden">
-          <div className="relative aspect-[21/9]">
-            {(() => {
-              const key = solutionIllustrationKey[solution.slug] ?? "module";
-              const Illustration = techIllustrations[key];
-              return (
-                <div className="absolute inset-0 p-10 md:p-16 text-navy-900/70">
-                  <Illustration />
-                </div>
-              );
-            })()}
-          </div>
-        </section>
-
         <section className="grid gap-10 md:grid-cols-2">
           <div>
             <SectionHeading eyebrow={ui.detail.challengeEyebrow} title={ui.detail.challengeTitle} />

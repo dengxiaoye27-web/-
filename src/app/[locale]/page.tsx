@@ -9,7 +9,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { coreSolutionIcons, whyWandtungIcons } from "@/components/ui/SectionIcons";
-import { techIllustrations, productIllustrationKey, categoryIllustrationKey } from "@/components/ui/TechIllustration";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -133,19 +132,7 @@ export default async function HomePage({
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     />
                   </div>
-                ) : (
-                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 grid-texture-light rounded-t-2xl overflow-hidden">
-                    {(() => {
-                      const key = productIllustrationKey[product.slug] ?? categoryIllustrationKey[product.category] ?? "module";
-                      const Illustration = techIllustrations[key];
-                      return (
-                        <div className="absolute inset-0 p-6 text-navy-900/70">
-                          <Illustration />
-                        </div>
-                      );
-                    })()}
-                  </div>
-                )}
+                ) : null}
                 <p className="eyebrow mb-2">{product.shortName}</p>
                 <h3 className="text-lg font-semibold text-ink-900">{product.name}</h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">{product.tagline}</p>

@@ -90,6 +90,29 @@ body {
   background-size: 48px 48px;
 }
 
+/* Page hero band: colorful gradient + glow instead of a flat black-and-white block */
+.hero-band {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  color: white;
+  padding-block: 4rem;
+  background:
+    radial-gradient(900px circle at 88% -15%, rgba(0, 145, 255, 0.55), transparent 60%),
+    radial-gradient(700px circle at 8% 115%, rgba(34, 211, 238, 0.35), transparent 60%),
+    radial-gradient(1000px circle at 40% 40%, rgba(57, 184, 255, 0.12), transparent 70%),
+    linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 55%, #10233f 100%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, auto, auto, auto, 48px 48px, 48px 48px;
+}
+
+@media (min-width: 768px) {
+  .hero-band {
+    padding-block: 6rem;
+  }
+}
+
 /* Accent keyline under section headings */
 .heading-keyline {
   position: relative;

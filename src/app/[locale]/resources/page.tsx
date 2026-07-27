@@ -26,7 +26,7 @@ export default async function ResourcesPage({
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
+      <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.resources }]} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
