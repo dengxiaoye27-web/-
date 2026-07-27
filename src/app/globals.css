@@ -10,8 +10,8 @@
   --color-paper-0: #ffffff;
   --color-paper-50: #f5f7fa;
   --color-line-200: #e3e7ee;
-  --color-accent-500: #0091ff;
-  --color-accent-400: #39b8ff;
+  --color-accent-500: #00d4aa;
+  --color-accent-400: #33ddbb;
   --color-cyan-400: #22d3ee;
 
   --background: var(--color-paper-0);
@@ -98,9 +98,9 @@ body {
   color: white;
   padding-block: 4rem;
   background:
-    radial-gradient(900px circle at 88% -15%, rgba(0, 145, 255, 0.55), transparent 60%),
-    radial-gradient(700px circle at 8% 115%, rgba(34, 211, 238, 0.35), transparent 60%),
-    radial-gradient(1000px circle at 40% 40%, rgba(57, 184, 255, 0.12), transparent 70%),
+    radial-gradient(900px circle at 88% -15%, rgba(0, 212, 170, 0.5), transparent 60%),
+    radial-gradient(700px circle at 8% 115%, rgba(34, 211, 238, 0.3), transparent 60%),
+    radial-gradient(1000px circle at 40% 40%, rgba(0, 212, 170, 0.12), transparent 70%),
     linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 55%, #10233f 100%),
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
