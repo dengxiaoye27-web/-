@@ -48,7 +48,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "Who We Serve",
       title: "Industries We Serve",
-      items: ["Data Centers", "Telecommunications", "Banking", "Government", "Energy", "Industrial", "Cloud Computing", "Edge Computing"],
+      items: [
+        { name: "Data Centers", description: "Hyperscale & enterprise data centers" },
+        { name: "Telecommunications", description: "5G base stations & telecom facilities" },
+        { name: "Banking", description: "Bank & securities disaster recovery centers" },
+        { name: "Government", description: "Government cloud & secure IT facilities" },
+        { name: "Energy", description: "Power grid & renewable energy stations" },
+        { name: "Industrial", description: "Smart manufacturing & industrial edge" },
+        { name: "Cloud Computing", description: "Public & hybrid cloud infrastructure" },
+        { name: "Edge Computing", description: "Edge nodes & micro data centers" },
+      ],
     },
     whyWandtung: {
       eyebrow: "Why Choose Us",
@@ -124,7 +133,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "من نخدم",
       title: "القطاعات التي نخدمها",
-      items: ["مراكز البيانات", "الاتصالات", "القطاع المصرفي", "القطاع الحكومي", "الطاقة", "القطاع الصناعي", "الحوسبة السحابية", "الحوسبة الطرفية"],
+      items: [
+        { name: "مراكز البيانات", description: "مراكز بيانات ضخمة ومؤسسية" },
+        { name: "الاتصالات", description: "محطات 5G ومرافق الاتصالات" },
+        { name: "القطاع المصرفي", description: "مراكز التعافي من الكوارث للبنوك والأوراق المالية" },
+        { name: "القطاع الحكومي", description: "الحوسبة السحابية الحكومية ومرافق تقنية المعلومات الآمنة" },
+        { name: "الطاقة", description: "محطات الشبكة الكهربائية والطاقة المتجددة" },
+        { name: "القطاع الصناعي", description: "التصنيع الذكي والحوسبة الطرفية الصناعية" },
+        { name: "الحوسبة السحابية", description: "بنية تحتية سحابية عامة وهجينة" },
+        { name: "الحوسبة الطرفية", description: "عقد طرفية ومراكز بيانات مصغرة" },
+      ],
     },
     whyWandtung: {
       eyebrow: "لماذا تختارنا",
@@ -200,7 +218,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "Nos secteurs",
       title: "Secteurs desservis",
-      items: ["Centres de données", "Télécommunications", "Banque", "Secteur public", "Énergie", "Industrie", "Cloud computing", "Edge computing"],
+      items: [
+        { name: "Centres de données", description: "Centres de données hyperscale et d'entreprise" },
+        { name: "Télécommunications", description: "Stations de base 5G et installations télécoms" },
+        { name: "Banque", description: "Centres de reprise après sinistre bancaires et boursiers" },
+        { name: "Secteur public", description: "Cloud gouvernemental et installations informatiques sécurisées" },
+        { name: "Énergie", description: "Réseau électrique et sites d'énergies renouvelables" },
+        { name: "Industrie", description: "Fabrication intelligente et edge industriel" },
+        { name: "Cloud computing", description: "Infrastructure cloud publique et hybride" },
+        { name: "Edge computing", description: "Nœuds périphériques et micro data centers" },
+      ],
     },
     whyWandtung: {
       eyebrow: "Pourquoi nous choisir",
@@ -276,7 +303,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "A quién servimos",
       title: "Sectores a los que damos servicio",
-      items: ["Centros de datos", "Telecomunicaciones", "Banca", "Gobierno", "Energía", "Industrial", "Computación en la nube", "Edge computing"],
+      items: [
+        { name: "Centros de datos", description: "Centros de datos hiperescala y empresariales" },
+        { name: "Telecomunicaciones", description: "Estaciones base 5G e instalaciones de telecomunicaciones" },
+        { name: "Banca", description: "Centros de recuperación ante desastres bancarios y bursátiles" },
+        { name: "Gobierno", description: "Nube gubernamental e instalaciones de TI seguras" },
+        { name: "Energía", description: "Red eléctrica y plantas de energías renovables" },
+        { name: "Industrial", description: "Fabricación inteligente y edge industrial" },
+        { name: "Computación en la nube", description: "Infraestructura de nube pública e híbrida" },
+        { name: "Edge computing", description: "Nodos edge y micro centros de datos" },
+      ],
     },
     whyWandtung: {
       eyebrow: "Por qué elegirnos",
@@ -352,7 +388,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "Кому мы помогаем",
       title: "Отрасли, которые мы обслуживаем",
-      items: ["Дата-центры", "Телекоммуникации", "Банковский сектор", "Государственный сектор", "Энергетика", "Промышленность", "Облачные вычисления", "Периферийные вычисления"],
+      items: [
+        { name: "Дата-центры", description: "Гипермасштабируемые и корпоративные дата-центры" },
+        { name: "Телекоммуникации", description: "Базовые станции 5G и телекоммуникационные объекты" },
+        { name: "Банковский сектор", description: "Центры аварийного восстановления для банков и бирж" },
+        { name: "Государственный сектор", description: "Государственное облако и защищённые ИТ-объекты" },
+        { name: "Энергетика", description: "Энергосети и объекты возобновляемой энергетики" },
+        { name: "Промышленность", description: "Умное производство и промышленный edge" },
+        { name: "Облачные вычисления", description: "Публичная и гибридная облачная инфраструктура" },
+        { name: "Периферийные вычисления", description: "Периферийные узлы и микро дата-центры" },
+      ],
     },
     whyWandtung: {
       eyebrow: "Почему выбирают нас",
@@ -428,7 +473,16 @@ export const homeMessages: Record<Locale, HomeMessages> = {
     industries: {
       eyebrow: "服务对象",
       title: "我们服务的行业",
-      items: ["数据中心", "电信", "金融", "政府", "能源", "工业", "云计算", "边缘计算"],
+      items: [
+        { name: "数据中心", description: "超大规模与企业级数据中心" },
+        { name: "电信", description: "5G基站与通信机房" },
+        { name: "金融", description: "银行与证券灾备中心" },
+        { name: "政府", description: "政务云与信创机房" },
+        { name: "能源", description: "电力与新能源场站" },
+        { name: "工业", description: "智能制造与工业边缘" },
+        { name: "云计算", description: "公有云与混合云基础设施" },
+        { name: "边缘计算", description: "边缘节点与微型数据中心" },
+      ],
     },
     whyWandtung: {
       eyebrow: "为什么选择我们",

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import fs from "node:fs";
+import path from "node:path";
 import Link from "@/components/ui/LocaleLink";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -8,7 +10,18 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
-import { coreSolutionIcons, whyWandtungIcons, IconFactory } from "@/components/ui/SectionIcons";
+import {
+  coreSolutionIcons,
+  whyWandtungIcons,
+  IconFactory,
+  IconModule,
+  IconAntenna,
+  IconQuality,
+  IconCabinet,
+  IconBattery,
+  IconGlobe,
+  IconChip,
+} from "@/components/ui/SectionIcons";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -46,6 +59,17 @@ const architectureNodeHrefs = [
   "/solutions/liquid-cooling",
   "/products/energy-storage",
 ];
+
+// Matches t.industries.items order: Data Centers, Telecommunications,
+// Banking, Government, Energy, Industrial, Cloud Computing, Edge Computing
+const industrySlugs = ["datacenter", "telecom", "finance", "government", "energy", "industry", "cloud", "edge"];
+const industryIcons = [IconModule, IconAntenna, IconQuality, IconCabinet, IconBattery, IconFactory, IconGlobe, IconChip];
+
+function getIndustryImage(slug: string) {
+  const relPath = `/images/industries/${slug}.jpg`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
 
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
@@ -203,15 +227,35 @@ export default async function HomePage({
             <SectionHeading eyebrow={t.industries.eyebrow} title={t.industries.title} />
           </Reveal>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {t.industries.items.map((industry) => (
-              <div
-                key={industry}
-                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
-              >
-                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <p className="font-medium text-ink-900">{industry}</p>
-              </div>
-            ))}
+            {t.industries.items.map((industry, i) => {
+              const image = getIndustryImage(industrySlugs[i]);
+              const Icon = industryIcons[i] ?? industryIcons[0];
+              return (
+                <div
+                  key={industry.name}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-transparent transition-all duration-300 hover:border-accent-500 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(11,13,18,0.25)]"
+                >
+                  {image ? (
+                    <Image
+                      src={image}
+                      alt={industry.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(min-width: 768px) 25vw, 50vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-navy-800 to-navy-950">
+                      <Icon className="h-10 w-10 text-white/15" />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/40 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <p className="text-base font-bold text-white">{industry.name}</p>
+                    <p className="mt-0.5 text-xs text-accent-500">{industry.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
