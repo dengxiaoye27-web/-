@@ -170,6 +170,15 @@ export function IconAntenna({ className = "" }: { className?: string }) {
   );
 }
 
+export function IconPin({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <path d="M12 21s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12Z" />
+      <circle cx="12" cy="9" r="2.4" />
+    </svg>
+  );
+}
+
 export const solutionIcons: Record<string, (props: { className?: string }) => React.ReactElement> = {
   "data-center-infrastructure": IconModule,
   "micro-modular-data-center": IconCabinet,
