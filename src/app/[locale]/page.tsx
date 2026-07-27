@@ -33,6 +33,20 @@ const coreSolutionHrefs = [
   "/solutions/energy-storage",
 ];
 
+// Matches t.architecture.nodes order: Grid Power, UPS, PDU, Rack, Cooling,
+// Monitoring, Fire Protection, Liquid Cooling, Energy Storage
+const architectureNodeHrefs = [
+  "/solutions/critical-power",
+  "/products/ups-systems",
+  "/products/power-distribution",
+  "/products/network-server-cabinets",
+  "/products/cooling-solutions",
+  "/solutions/smart-power-distribution",
+  "/solutions/data-center-infrastructure",
+  "/solutions/liquid-cooling",
+  "/products/energy-storage",
+];
+
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
   "/images/exhibitions/08-liquid-cooling-booth.png",
@@ -162,7 +176,7 @@ export default async function HomePage({
       </section>
 
       {/* 05 One-Stop Solution */}
-      <section className="bg-navy-950 py-20 md:py-28 grid-texture">
+      <section className="bg-navy-950 py-12 md:py-16 grid-texture">
         <div className="container-page">
           <Reveal>
             <SectionHeading
@@ -172,8 +186,12 @@ export default async function HomePage({
               description={t.architecture.description}
             />
           </Reveal>
-          <div className="mt-12">
-            <ArchitectureDiagram nodes={t.architecture.nodes} caption={t.architecture.caption} />
+          <div className="mt-8">
+            <ArchitectureDiagram
+              nodes={t.architecture.nodes}
+              hrefs={architectureNodeHrefs}
+              caption={t.architecture.caption}
+            />
           </div>
         </div>
       </section>
