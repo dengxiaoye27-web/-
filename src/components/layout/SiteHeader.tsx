@@ -13,7 +13,7 @@ import { getCommonMessages } from "@/i18n/messages";
 export function SiteHeader() {
   const locale = useLocale();
   const t = getCommonMessages(locale);
-  const mainNav = getMainNav(t);
+  const mainNav = getMainNav(t, locale);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 

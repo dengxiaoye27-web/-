@@ -6,6 +6,8 @@ import { productCategories } from "@/data/categories";
 import { solutions } from "@/data/solutions";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getCommonMessages } from "@/i18n/messages";
+import { getCategoryContent } from "@/i18n/content/categories";
+import { getSolutionContent } from "@/i18n/content/solutions";
 
 export function SiteFooter() {
   const locale = useLocale();
@@ -39,7 +41,7 @@ export function SiteFooter() {
             {productCategories.slice(0, 6).map((c) => (
               <li key={c.slug}>
                 <Link href={`/products/${c.slug}`} className="hover:text-white">
-                  {c.name}
+                  {getCategoryContent(c.slug, locale, c).name}
                 </Link>
               </li>
             ))}
@@ -54,7 +56,7 @@ export function SiteFooter() {
             {solutions.slice(0, 6).map((s) => (
               <li key={s.slug}>
                 <Link href={`/solutions/${s.slug}`} className="hover:text-white">
-                  {s.name}
+                  {getSolutionContent(s.slug, locale, s).name}
                 </Link>
               </li>
             ))}

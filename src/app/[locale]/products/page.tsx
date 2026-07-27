@@ -6,6 +6,7 @@ import { categoryIcons } from "@/components/ui/SectionIcons";
 import { ProductFilterGrid } from "@/components/product/ProductFilterGrid";
 import { productCategories } from "@/data/categories";
 import { products } from "@/data/products";
+import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
@@ -43,6 +44,7 @@ export default async function ProductsPage({
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {productCategories.map((c) => {
             const Icon = categoryIcons[c.slug];
+            const content = getCategoryContent(c.slug, locale, c);
             return (
               <Link
                 key={c.slug}
@@ -54,8 +56,8 @@ export default async function ProductsPage({
                     <Icon className="h-5.5 w-5.5" />
                   </div>
                 ) : null}
-                <h2 className="text-lg font-semibold text-ink-900">{c.name}</h2>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{c.shortDescription}</p>
+                <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.shortDescription}</p>
               </Link>
             );
           })}

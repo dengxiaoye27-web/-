@@ -1,16 +1,9 @@
 import { productCategories } from "@/data/categories";
 import { solutions } from "@/data/solutions";
 import { CommonMessages } from "@/i18n/messages";
-
-export const productNavGroups = productCategories.map((c) => ({
-  label: c.name,
-  href: `/products/${c.slug}`,
-}));
-
-export const solutionNavItems = solutions.map((s) => ({
-  label: s.name,
-  href: `/solutions/${s.slug}`,
-}));
+import { getCategoryContent } from "@/i18n/content/categories";
+import { getSolutionContent } from "@/i18n/content/solutions";
+import { Locale } from "@/i18n/config";
 
 export interface NavItem {
   label: string;
@@ -18,10 +11,17 @@ export interface NavItem {
   children?: { label: string; href: string }[];
 }
 
-// Top-level labels are translated via CommonMessages; submenu items
-// (product categories / solutions) are data-driven and stay in English
-// until that content is translated per-locale.
-export function getMainNav(t: CommonMessages): NavItem[] {
+export function getMainNav(t: CommonMessages, locale: Locale): NavItem[] {
+  const productNavGroups = productCategories.map((c) => ({
+    label: getCategoryContent(c.slug, locale, c).name,
+    href: `/products/${c.slug}`,
+  }));
+
+  const solutionNavItems = solutions.map((s) => ({
+    label: getSolutionContent(s.slug, locale, s).name,
+    href: `/solutions/${s.slug}`,
+  }));
+
   return [
     { label: t.nav.home, href: "/" },
     { label: t.nav.products, href: "/products", children: productNavGroups },

@@ -16,6 +16,7 @@ import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { getProductContent } from "@/i18n/content/products";
+import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
@@ -44,9 +45,10 @@ export async function generateMetadata({
   }
   const category = getCategory(slug);
   if (category) {
+    const categoryContent = getCategoryContent(slug, locale, category);
     return {
-      title: category.name,
-      description: category.shortDescription,
+      title: categoryContent.name,
+      description: categoryContent.shortDescription,
       alternates: { canonical: `/products/${category.slug}` },
     };
   }
@@ -71,6 +73,7 @@ export default async function ProductOrCategoryPage({
 
 function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
   const category = getCategory(slug)!;
+  const categoryContent = getCategoryContent(slug, locale, category);
   const items = getProductsByCategory(slug);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
@@ -83,14 +86,14 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
             items={[
               { label: common.nav.home, href: "/" },
               { label: common.nav.products, href: "/products" },
-              { label: category.name },
+              { label: categoryContent.name },
             ]}
           />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            {category.name}
+            {categoryContent.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">{category.heroTagline}</p>
-          <p className="mt-4 max-w-2xl text-white/60">{category.shortDescription}</p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{categoryContent.heroTagline}</p>
+          <p className="mt-4 max-w-2xl text-white/60">{categoryContent.shortDescription}</p>
         </div>
       </div>
 
@@ -145,6 +148,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
 function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
   const product = getProduct(slug)!;
   const category = getCategory(product.category);
+  const categoryContent = category ? getCategoryContent(category.slug, locale, category) : null;
   const content = getProductContent(slug, locale, product);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
@@ -152,7 +156,7 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
   const breadcrumbItems = [
     { label: common.nav.home, href: "/" },
     { label: common.nav.products, href: "/products" },
-    ...(category ? [{ label: category.name, href: `/products/${category.slug}` }] : []),
+    ...(category && categoryContent ? [{ label: categoryContent.name, href: `/products/${category.slug}` }] : []),
     { label: content.name },
   ];
 
