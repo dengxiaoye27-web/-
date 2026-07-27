@@ -30,7 +30,7 @@ export function HeroCarousel({
 
   return (
     <div className="relative w-full overflow-hidden bg-navy-950">
-      <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/1]">
+      <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-[2.95/1]">
         {slides.map((slide, i) => (
           <div
             key={slide.src}
@@ -49,15 +49,15 @@ export function HeroCarousel({
             />
           </div>
         ))}
-        <div className="absolute inset-x-0 bottom-0 h-24 sm:h-28 bg-gradient-to-t from-navy-950/80 to-transparent" />
-        <div className="absolute inset-x-0 bottom-4 sm:bottom-6 flex flex-col items-center gap-4">
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="absolute left-0 bottom-0 w-full max-w-md h-32 sm:h-36 bg-gradient-to-tr from-navy-950/70 via-navy-950/25 to-transparent" />
+        <div className="absolute left-0 bottom-4 sm:bottom-6 pl-4 sm:pl-8 md:pl-12 flex flex-col items-start gap-4">
+          <div className="flex flex-wrap justify-start gap-3">
             <Button href="/solutions">{ctaPrimary}</Button>
             <Button href="/contact" variant="outline" className="border-white text-white hover:bg-white/10">
               {ctaSecondary}
             </Button>
           </div>
-          <div className="flex justify-center gap-2">
+          <div className="flex justify-start gap-2">
             {slides.map((slide, i) => (
               <button
                 key={slide.src}

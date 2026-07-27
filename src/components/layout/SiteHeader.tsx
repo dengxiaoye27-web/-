@@ -61,7 +61,7 @@ export function SiteHeader() {
                     <div className="mt-4 border-t border-navy-700 pt-4">
                       <Link
                         href={item.href}
-                        className="text-sm font-medium text-[#00D4AA] hover:text-[#00BF9A]"
+                        className="text-sm font-medium text-accent-400 hover:text-accent-500"
                       >
                         {t.nav.viewAll} {item.label} →
                       </Link>
@@ -75,7 +75,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <LanguageSwitcher className="hidden md:block" />
-          <Button href="/contact" variant="teal" className="hidden md:inline-flex">
+          <Button href="/contact" className="hidden md:inline-flex">
             {t.nav.requestQuote}
           </Button>
           <button
