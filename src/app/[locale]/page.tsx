@@ -21,6 +21,7 @@ import {
   IconBattery,
   IconGlobe,
   IconChip,
+  IconPin,
 } from "@/components/ui/SectionIcons";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
@@ -298,15 +299,15 @@ export default async function HomePage({
             {t.globalProjects.markets.map((market) => (
               <div
                 key={market}
-                className="group relative overflow-hidden rounded-xl border border-navy-700 bg-navy-900 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5"
+                className="group flex items-center justify-center gap-2 rounded-xl border border-navy-700 bg-navy-900 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500 hover:-translate-y-0.5"
               >
-                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <IconPin className="h-4 w-4 shrink-0 text-accent-500" />
                 <p className="font-medium">{market}</p>
               </div>
             ))}
           </div>
           <div className="mt-10">
-            <Link href="/projects" className="text-sm font-medium text-accent-400 hover:text-accent-500">
+            <Link href="/contact" className="text-sm font-medium text-accent-400 hover:text-accent-500">
               {t.globalProjects.viewProjects} →
             </Link>
           </div>
