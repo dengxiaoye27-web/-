@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/Card";
+import { productIcons, categoryIcons, IconModule } from "@/components/ui/SectionIcons";
 import { Product, ProductCategory } from "@/data/types";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getProductContent } from "@/i18n/content/products";
@@ -66,7 +67,14 @@ export function ProductFilterGrid({
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
                 </div>
-              ) : null}
+              ) : (
+                <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 grid-texture-light rounded-t-2xl overflow-hidden flex items-center justify-center">
+                  {(() => {
+                    const Icon = productIcons[product.slug] ?? categoryIcons[product.category] ?? IconModule;
+                    return <Icon className="h-14 w-14 text-ink-600/30" />;
+                  })()}
+                </div>
+              )}
               <p className="eyebrow mb-2">{content.shortName}</p>
               <h3 className="text-lg font-semibold text-ink-900">{content.name}</h3>
               <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.tagline}</p>

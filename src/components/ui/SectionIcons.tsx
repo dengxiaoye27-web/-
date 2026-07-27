@@ -170,6 +170,73 @@ export function IconAntenna({ className = "" }: { className?: string }) {
   );
 }
 
+export function IconSwitch({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <circle cx="5" cy="7" r="2" />
+      <circle cx="19" cy="17" r="2" />
+      <circle cx="5" cy="17" r="2" />
+      <path d="M7 7h4a3 3 0 0 1 3 3v0a3 3 0 0 0 3 3h2M7 17h10" />
+    </svg>
+  );
+}
+
+export function IconSolar({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} {...stroke} aria-hidden>
+      <path d="M4 11 12 6l8 5-8 5-8-5Z" />
+      <path d="M4 11v5l8 5 8-5v-5M8 8.5v5M12 6v10M16 8.5v5" />
+    </svg>
+  );
+}
+
+export const productIcons: Record<string, (props: { className?: string }) => React.ReactElement> = {
+  pdu: IconPdu,
+  "schuko-pdu": IconPdu,
+  "nema-pdu": IconPdu,
+  "multi-function-pdu": IconPdu,
+  "uk-pdu": IconPdu,
+  "iec-pdu": IconPdu,
+  "intelligent-pdu": IconPdu,
+  "high-power-pdu": IconPdu,
+  "metered-pdu": IconPdu,
+  "monitored-pdu": IconPdu,
+  "switched-pdu": IconPdu,
+  "three-phase-pdu": IconPdu,
+  "ats-pdu": IconSwitch,
+  sts: IconSwitch,
+  "automatic-transfer-switch": IconSwitch,
+  "modular-ups": IconPower,
+  "tower-ups": IconPower,
+  "online-ups": IconPower,
+  "industrial-ups": IconPower,
+  "data-center-cabinet": IconCabinet,
+  "server-rack": IconCabinet,
+  "19-inch-rack": IconCabinet,
+  "cold-aisle-cabinet": IconCabinet,
+  "intelligent-cabinet": IconCabinet,
+  "outdoor-cabinet": IconCabinet,
+  "single-row-micro-data-center": IconModule,
+  "dual-row-micro-data-center": IconModule,
+  "all-in-one-micro-data-center": IconModule,
+  "40ft-container-data-center": IconContainer,
+  "20ft-container-data-center": IconContainer,
+  "modular-container-data-center": IconContainer,
+  "edge-data-center": IconGlobe,
+  "precision-air-conditioner": IconCooling,
+  "liquid-cooling": IconCooling,
+  cdu: IconCooling,
+  "row-based-cooling": IconCooling,
+  "room-cooling": IconCooling,
+  "airflow-floor": IconFloor,
+  "cable-tray": IconCable,
+  "wire-mesh-cable-tray": IconCable,
+  "ladder-cable-tray": IconCable,
+  "battery-energy-storage-system": IconBattery,
+  "solar-power-system": IconSolar,
+  "energy-storage-system": IconBattery,
+};
+
 export const solutionIcons: Record<string, (props: { className?: string }) => React.ReactElement> = {
   "data-center-infrastructure": IconModule,
   "micro-modular-data-center": IconCabinet,
