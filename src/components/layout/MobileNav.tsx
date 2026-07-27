@@ -80,7 +80,7 @@ export function MobileNav({
           ))}
         </nav>
 
-        <Button href="/contact" className="mt-6 w-full">
+        <Button href="/contact" variant="teal" className="mt-6 w-full">
           {requestQuoteLabel}
         </Button>
       </div>

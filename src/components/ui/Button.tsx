@@ -1,7 +1,7 @@
 import Link from "@/components/ui/LocaleLink";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "solid" | "outline" | "ghost";
+type Variant = "solid" | "outline" | "ghost" | "teal";
 
 const variantClasses: Record<Variant, string> = {
   solid:
@@ -9,6 +9,7 @@ const variantClasses: Record<Variant, string> = {
   outline:
     "border border-current text-inherit hover:bg-white/10 focus-visible:outline-accent-500",
   ghost: "text-inherit hover:bg-white/10 focus-visible:outline-accent-500",
+  teal: "bg-[#00D4AA] text-navy-950 hover:bg-[#00BF9A] focus-visible:outline-[#00D4AA]",
 };
 
 const base =

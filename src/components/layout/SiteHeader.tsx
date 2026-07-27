@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/components/ui/LocaleLink";
+import Image from "next/image";
 import { useState } from "react";
 import { getMainNav } from "@/lib/nav";
 import { Button } from "@/components/ui/Button";
@@ -8,7 +9,6 @@ import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getCommonMessages } from "@/i18n/messages";
-import { siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   const locale = useLocale();
@@ -19,15 +19,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-navy-700 bg-navy-950/95 backdrop-blur">
-      <div className="container-page flex h-16 md:h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-white">
-          <span className="text-xl font-semibold tracking-tight">{siteConfig.name.toUpperCase()}</span>
-          <span className="hidden md:inline text-xs text-white/50 border-l border-white/20 pl-2 ml-1">
-            {t.nav.headerTagline}
-          </span>
+      <div className="container-page flex h-[72px] md:h-[88px] items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <Image src="/logo_C_navbar.svg" alt="Wandtung" width={160} height={36} className="h-8 md:h-9 w-auto" priority />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Main">
+        <nav className="hidden lg:flex items-center gap-2" aria-label="Main">
           {mainNav.map((item) => (
             <div
               key={item.href}
@@ -37,7 +34,7 @@ export function SiteHeader() {
             >
               <Link
                 href={item.href}
-                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
+                className="flex items-center gap-1 px-5 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
               >
                 {item.label}
                 {item.children ? (
@@ -64,7 +61,7 @@ export function SiteHeader() {
                     <div className="mt-4 border-t border-navy-700 pt-4">
                       <Link
                         href={item.href}
-                        className="text-sm font-medium text-accent-400 hover:text-accent-500"
+                        className="text-sm font-medium text-[#00D4AA] hover:text-[#00BF9A]"
                       >
                         {t.nav.viewAll} {item.label} →
                       </Link>
@@ -78,7 +75,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <LanguageSwitcher className="hidden md:block" />
-          <Button href="/contact" className="hidden md:inline-flex">
+          <Button href="/contact" variant="teal" className="hidden md:inline-flex">
             {t.nav.requestQuote}
           </Button>
           <button
