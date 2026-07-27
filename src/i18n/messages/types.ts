@@ -87,6 +87,8 @@ export interface HomeMessages {
   certifications: {
     eyebrow: string;
     title: string;
+    description: string;
+    heldByPartner: string;
   };
   insights: {
     eyebrow: string;
@@ -123,6 +125,8 @@ export interface AboutMessages {
   certifications: {
     eyebrow: string;
     title: string;
+    description: string;
+    heldByPartner: string;
     caption: string;
   };
   globalMarkets: {

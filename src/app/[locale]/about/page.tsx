@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Button } from "@/components/ui/Button";
-import { certifications } from "@/data/certifications";
+import { CertificationCards } from "@/components/sections/CertificationCards";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
@@ -64,18 +64,13 @@ export default async function AboutPage({
         </section>
 
         <section id="certifications">
-          <SectionHeading eyebrow={t.certifications.eyebrow} title={t.certifications.title} />
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certifications.map((cert) => (
-              <div
-                key={cert.name}
-                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
-              >
-                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <p className="text-lg font-semibold text-ink-900">{cert.name}</p>
-                <p className="mt-1 text-xs text-ink-600">{cert.description}</p>
-              </div>
-            ))}
+          <SectionHeading
+            eyebrow={t.certifications.eyebrow}
+            title={t.certifications.title}
+            description={t.certifications.description}
+          />
+          <div className="mt-8">
+            <CertificationCards heldByPartnerLabel={t.certifications.heldByPartner} />
           </div>
           <div className="mt-10">
             <p className="text-sm text-ink-600 mb-6">{t.certifications.caption}</p>
