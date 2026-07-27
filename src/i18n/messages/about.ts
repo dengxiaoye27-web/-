@@ -37,6 +37,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "Standards",
       title: "Certifications",
+      description: "Our data center infrastructure products are manufactured at partner facilities certified to CE, UL, TÜV SÜD and IEC/EN standards.",
+      heldByPartner: "Held by manufacturing partner",
       caption: "Certificates and test reports on file — click any card to view the full document.",
     },
     globalMarkets: {
@@ -88,6 +90,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "المعايير",
       title: "الشهادات",
+      description: "يتم تصنيع منتجات البنية التحتية لمراكز البيانات لدينا في منشآت شريكة حاصلة على شهادات CE وUL وTÜV SÜD ومعايير IEC/EN.",
+      heldByPartner: "الشهادة مملوكة لشريك التصنيع",
       caption: "شهادات وتقارير اختبار موثقة لدينا — انقر على أي بطاقة لعرض المستند الكامل.",
     },
     globalMarkets: {
@@ -139,6 +143,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "Normes",
       title: "Certifications",
+      description: "Nos produits d'infrastructure de centres de données sont fabriqués dans des usines partenaires certifiées CE, UL, TÜV SÜD et IEC/EN.",
+      heldByPartner: "Certification détenue par le partenaire de fabrication",
       caption: "Certificats et rapports d'essai disponibles — cliquez sur une fiche pour consulter le document complet.",
     },
     globalMarkets: {
@@ -190,6 +196,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "Normativas",
       title: "Certificaciones",
+      description: "Nuestros productos de infraestructura para centros de datos se fabrican en instalaciones asociadas certificadas según las normas CE, UL, TÜV SÜD e IEC/EN.",
+      heldByPartner: "Certificación en poder del socio fabricante",
       caption: "Certificados e informes de prueba disponibles — haga clic en cualquier tarjeta para ver el documento completo.",
     },
     globalMarkets: {
@@ -241,6 +249,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "Стандарты",
       title: "Сертификаты",
+      description: "Наша продукция для инфраструктуры ЦОД производится на партнёрских площадках, сертифицированных по стандартам CE, UL, TÜV SÜD и IEC/EN.",
+      heldByPartner: "Сертификат принадлежит производственному партнёру",
       caption: "Имеющиеся сертификаты и протоколы испытаний — нажмите на карточку, чтобы просмотреть полный документ.",
     },
     globalMarkets: {
@@ -292,6 +302,8 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
     certifications: {
       eyebrow: "标准认证",
       title: "资质认证",
+      description: "我们的数据中心基础设施产品，由通过 CE、UL、TÜV SÜD、IEC/EN 等国际认证的合作生产基地制造。",
+      heldByPartner: "认证由生产基地持有",
       caption: "以下为我们持有的真实认证证书与测试报告——点击卡片可查看完整文件。",
     },
     globalMarkets: {

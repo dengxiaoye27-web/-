@@ -10,6 +10,7 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { CertificationCards } from "@/components/sections/CertificationCards";
 import {
   coreSolutionIcons,
   whyWandtungIcons,
@@ -25,7 +26,6 @@ import {
 } from "@/components/ui/SectionIcons";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
-import { certifications } from "@/data/certifications";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
@@ -344,19 +344,14 @@ export default async function HomePage({
       <section className="bg-white py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading eyebrow={t.certifications.eyebrow} title={t.certifications.title} />
+            <SectionHeading
+              eyebrow={t.certifications.eyebrow}
+              title={t.certifications.title}
+              description={t.certifications.description}
+            />
           </Reveal>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certifications.map((cert) => (
-              <div
-                key={cert.name}
-                className="group relative overflow-hidden rounded-xl border border-line-200 px-5 py-6 text-center transition-all duration-300 hover:border-accent-500/60 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-12px_rgba(11,13,18,0.15)]"
-              >
-                <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <p className="text-lg font-semibold text-ink-900">{cert.name}</p>
-                <p className="mt-1 text-xs text-ink-600">{cert.description}</p>
-              </div>
-            ))}
+          <div className="mt-12">
+            <CertificationCards heldByPartnerLabel={t.certifications.heldByPartner} />
           </div>
         </div>
       </section>
