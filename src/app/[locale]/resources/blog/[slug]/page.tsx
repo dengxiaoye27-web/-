@@ -68,7 +68,7 @@ export default async function ArticlePage({
         ]}
       />
 
-      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
+      <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <p className="eyebrow mt-6 mb-3">{content.category}</p>

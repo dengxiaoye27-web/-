@@ -14,7 +14,6 @@ import { InquiryCTA } from "@/components/product/InquiryCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
-import { techIllustrations, productIllustrationKey, categoryIllustrationKey } from "@/components/ui/TechIllustration";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { getProductContent } from "@/i18n/content/products";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
@@ -78,7 +77,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
 
   return (
     <div className="bg-white">
-      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
+      <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs
             items={[
@@ -116,19 +115,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       />
                     </div>
-                  ) : (
-                    <div className="relative aspect-square bg-paper-50 grid-texture-light overflow-hidden">
-                      {(() => {
-                        const key = productIllustrationKey[p.slug] ?? categoryIllustrationKey[p.category] ?? "module";
-                        const Illustration = techIllustrations[key];
-                        return (
-                          <div className="absolute inset-0 p-8 text-navy-900/70">
-                            <Illustration />
-                          </div>
-                        );
-                      })()}
-                    </div>
-                  )}
+                  ) : null}
                   <div className="p-6 md:p-8">
                     <p className="eyebrow mb-2">{content.shortName}</p>
                     <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
@@ -170,7 +157,7 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
         ]}
       />
 
-      <div className="bg-navy-950 text-white py-16 md:py-24 grid-texture">
+      <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
           <p className="eyebrow mt-6 mb-3">{category?.name}</p>
@@ -182,22 +169,8 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
-        <section className="grid gap-10 lg:grid-cols-2 lg:items-start">
-          {product.images?.length ? (
-            <ProductGallery images={product.images} alt={content.name} />
-          ) : (
-            <div className="relative aspect-[4/3] rounded-2xl border border-line-200 bg-paper-50 grid-texture-light overflow-hidden">
-              {(() => {
-                const key = productIllustrationKey[product.slug] ?? categoryIllustrationKey[product.category] ?? "module";
-                const Illustration = techIllustrations[key];
-                return (
-                  <div className="absolute inset-0 p-8 text-navy-900">
-                    <Illustration />
-                  </div>
-                );
-              })()}
-            </div>
-          )}
+        <section className={product.images?.length ? "grid gap-10 lg:grid-cols-2 lg:items-start" : undefined}>
+          {product.images?.length ? <ProductGallery images={product.images} alt={content.name} /> : null}
           <div>
             <SectionHeading eyebrow={t.overviewEyebrow} title={t.overviewTitle} />
             <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
