@@ -14,6 +14,7 @@ import { InquiryCTA } from "@/components/product/InquiryCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
+import { productIcons, categoryIcons, IconModule } from "@/components/ui/SectionIcons";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { getProductContent } from "@/i18n/content/products";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
@@ -115,7 +116,14 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       />
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="relative aspect-square bg-paper-50 grid-texture-light flex items-center justify-center">
+                      {(() => {
+                        const Icon = productIcons[p.slug] ?? categoryIcons[p.category] ?? IconModule;
+                        return <Icon className="h-16 w-16 text-ink-600/30" />;
+                      })()}
+                    </div>
+                  )}
                   <div className="p-6 md:p-8">
                     <p className="eyebrow mb-2">{content.shortName}</p>
                     <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
@@ -169,8 +177,17 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
       </div>
 
       <div className="container-page py-16 md:py-20 space-y-20">
-        <section className={product.images?.length ? "grid gap-10 lg:grid-cols-2 lg:items-start" : undefined}>
-          {product.images?.length ? <ProductGallery images={product.images} alt={content.name} /> : null}
+        <section className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          {product.images?.length ? (
+            <ProductGallery images={product.images} alt={content.name} />
+          ) : (
+            <div className="relative aspect-[4/3] rounded-2xl border border-line-200 bg-paper-50 grid-texture-light flex items-center justify-center">
+              {(() => {
+                const Icon = productIcons[product.slug] ?? categoryIcons[product.category] ?? IconModule;
+                return <Icon className="h-24 w-24 text-ink-600/25" />;
+              })()}
+            </div>
+          )}
           <div>
             <SectionHeading eyebrow={t.overviewEyebrow} title={t.overviewTitle} />
             <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
