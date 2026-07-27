@@ -65,7 +65,7 @@ export interface HomeMessages {
   industries: {
     eyebrow: string;
     title: string;
-    items: string[];
+    items: { name: string; description: string }[];
   };
   whyWandtung: {
     eyebrow: string;
