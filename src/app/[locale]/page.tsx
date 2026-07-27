@@ -8,7 +8,7 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
-import { coreSolutionIcons, whyWandtungIcons } from "@/components/ui/SectionIcons";
+import { coreSolutionIcons, whyWandtungIcons, IconFactory } from "@/components/ui/SectionIcons";
 import { getFeaturedProducts } from "@/data/products";
 import { articles } from "@/data/articles";
 import { certifications } from "@/data/certifications";
@@ -67,15 +67,26 @@ export default async function HomePage({
       <section className="bg-white py-20 md:py-28">
         <div className="container-page">
           <Reveal>
-            <SectionHeading
-              eyebrow={t.trustedPartner.eyebrow}
-              title={t.trustedPartner.title}
-              description={t.trustedPartner.description}
-            />
+            <div className="grid gap-10 md:grid-cols-2 md:items-center">
+              <SectionHeading
+                eyebrow={t.trustedPartner.eyebrow}
+                title={t.trustedPartner.title}
+                description={t.trustedPartner.description}
+              />
+              <div className="relative aspect-[4/3] rounded-2xl bg-paper-50 shadow-lg shadow-ink-900/10 overflow-hidden flex items-center justify-center">
+                <div className="flex flex-col items-center gap-2 text-ink-600/50">
+                  <IconFactory className="h-12 w-12" />
+                  <span className="text-sm">{t.trustedPartner.factoryPhotoPlaceholder}</span>
+                </div>
+              </div>
+            </div>
           </Reveal>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl border border-line-200 bg-line-200 overflow-hidden">
+          <div className="mt-16 md:mt-20 flex flex-wrap gap-4">
             {t.trustedPartner.stats.map((stat) => (
-              <div key={stat.label} className="bg-white px-6 py-8 md:px-8 md:py-10">
+              <div
+                key={stat.label}
+                className="flex-1 min-w-[150px] rounded-2xl bg-paper-50 px-6 py-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink-900/10"
+              >
                 <StatTile value={stat.value} label={stat.label} />
               </div>
             ))}
