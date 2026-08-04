@@ -116,6 +116,7 @@ export interface AboutMessages {
     eyebrow: string;
     title: string;
     paragraph: string;
+    gallery: string[];
   };
   qualityControl: {
     eyebrow: string;

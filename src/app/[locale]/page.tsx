@@ -72,6 +72,12 @@ function getIndustryImage(slug: string) {
   return fs.existsSync(absPath) ? relPath : null;
 }
 
+function getFactoryImage() {
+  const relPath = `/images/factory/01-exterior.png`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
+
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
   "/images/exhibitions/08-liquid-cooling-booth.png",
@@ -113,10 +119,20 @@ export default async function HomePage({
                 description={t.trustedPartner.description}
               />
               <div className="relative aspect-[4/3] rounded-2xl bg-paper-50 shadow-lg shadow-ink-900/10 overflow-hidden flex items-center justify-center">
-                <div className="flex flex-col items-center gap-2 text-ink-600/50">
-                  <IconFactory className="h-12 w-12" />
-                  <span className="text-sm">{t.trustedPartner.factoryPhotoPlaceholder}</span>
-                </div>
+                {getFactoryImage() ? (
+                  <Image
+                    src={getFactoryImage()!}
+                    alt={t.trustedPartner.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center gap-2 text-ink-600/50">
+                    <IconFactory className="h-12 w-12" />
+                    <span className="text-sm">{t.trustedPartner.factoryPhotoPlaceholder}</span>
+                  </div>
+                )}
               </div>
             </div>
           </Reveal>

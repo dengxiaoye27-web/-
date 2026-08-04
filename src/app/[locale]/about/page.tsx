@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
@@ -7,6 +8,17 @@ import { CertificationCards } from "@/components/sections/CertificationCards";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+
+const factoryPhotos = [
+  "/images/factory/01-exterior.png",
+  "/images/factory/02-industrial-outdoor.png",
+  "/images/factory/03-pdu-production-line.jpg",
+  "/images/factory/04-coating-production-line.jpg",
+  "/images/factory/05-cable-tray-production-line.jpg",
+  "/images/factory/06-cabinet-assembly-workshop.jpg",
+  "/images/factory/07-cabinet-assembly-02.jpg",
+  "/images/factory/08-cabinet-assembly-03.jpg",
+];
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -56,6 +68,19 @@ export default async function AboutPage({
         <section id="factory">
           <SectionHeading eyebrow={t.factory.eyebrow} title={t.factory.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.factory.paragraph}</p>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {factoryPhotos.map((src, i) => (
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-paper-50">
+                <Image
+                  src={src}
+                  alt={t.factory.gallery[i] ?? t.factory.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                />
+              </div>
+            ))}
+          </div>
         </section>
 
         <section id="quality-control">
