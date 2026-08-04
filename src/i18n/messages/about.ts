@@ -27,6 +27,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Factory & Manufacturing",
       paragraph:
         "Wandtung operates factory-direct production for cabinets, power distribution and enclosure systems, with in-house engineering for electrical, mechanical and thermal design. Production is organized around standard catalog specifications as well as project-configured builds for micro modular and containerized data center orders.",
+      gallery: [
+        "Factory exterior",
+        "Industrial & outdoor working area",
+        "Rack PDU production line",
+        "Spray coating production line",
+        "Cable tray production line",
+        "Network cabinet assembly workshop",
+        "Network cabinet assembly line",
+        "Network cabinet assembly line",
+      ],
     },
     qualityControl: {
       eyebrow: "Assurance",
@@ -80,6 +90,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "المصنع والتصنيع",
       paragraph:
         "تدير واندتونغ إنتاجاً مباشراً من المصنع للخزانات وأنظمة توزيع الطاقة والهياكل، مع هندسة داخلية للتصميم الكهربائي والميكانيكي والحراري. يُنظَّم الإنتاج حول المواصفات القياسية للكتالوج، بالإضافة إلى الإنتاج المُهيأ حسب المشروع لطلبات مراكز البيانات المعيارية المصغرة والحاوية.",
+      gallery: [
+        "واجهة المصنع الخارجية",
+        "منطقة العمل الصناعية والخارجية",
+        "خط إنتاج PDU للراك",
+        "خط إنتاج الطلاء بالرش",
+        "خط إنتاج مدارج الكابلات",
+        "ورشة تجميع خزانات الشبكات",
+        "خط تجميع خزانات الشبكات",
+        "خط تجميع خزانات الشبكات",
+      ],
     },
     qualityControl: {
       eyebrow: "ضمان الجودة",
@@ -133,6 +153,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Usine et fabrication",
       paragraph:
         "Wandtung exploite une production directe en usine pour les baies, les systèmes de distribution électrique et les enceintes, avec une ingénierie interne pour la conception électrique, mécanique et thermique. La production est organisée autour des spécifications standards du catalogue ainsi que des configurations spécifiques aux projets pour les commandes de centres de données modulaires micro et conteneurisés.",
+      gallery: [
+        "Extérieur de l'usine",
+        "Zone de travail industrielle et extérieure",
+        "Ligne de production des PDU de rack",
+        "Ligne de production de peinture par pulvérisation",
+        "Ligne de production des chemins de câbles",
+        "Atelier d'assemblage des armoires réseau",
+        "Ligne d'assemblage des armoires réseau",
+        "Ligne d'assemblage des armoires réseau",
+      ],
     },
     qualityControl: {
       eyebrow: "Assurance",
@@ -186,6 +216,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Fábrica y fabricación",
       paragraph:
         "Wandtung opera producción directa de fábrica para gabinetes, sistemas de distribución de energía y recintos, con ingeniería interna para el diseño eléctrico, mecánico y térmico. La producción se organiza en torno a especificaciones estándar de catálogo, así como configuraciones específicas de proyecto para pedidos de centros de datos modulares micro y en contenedores.",
+      gallery: [
+        "Exterior de la fábrica",
+        "Área de trabajo industrial y exterior",
+        "Línea de producción de PDU de rack",
+        "Línea de producción de pintura por pulverización",
+        "Línea de producción de bandejas de cables",
+        "Taller de ensamblaje de gabinetes de red",
+        "Línea de ensamblaje de gabinetes de red",
+        "Línea de ensamblaje de gabinetes de red",
+      ],
     },
     qualityControl: {
       eyebrow: "Garantía",
@@ -239,6 +279,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Завод и производство",
       paragraph:
         "Wandtung осуществляет прямое заводское производство шкафов, систем распределения питания и корпусов, с собственной инженерной службой для электрического, механического и теплового проектирования. Производство организовано как по стандартным каталожным спецификациям, так и по индивидуальным проектным заказам для микромодульных и контейнерных дата-центров.",
+      gallery: [
+        "Внешний вид завода",
+        "Промышленная и открытая рабочая зона",
+        "Линия производства стоечных PDU",
+        "Линия покрасочного производства",
+        "Линия производства кабельных лотков",
+        "Цех сборки сетевых шкафов",
+        "Линия сборки сетевых шкафов",
+        "Линия сборки сетевых шкафов",
+      ],
     },
     qualityControl: {
       eyebrow: "Контроль",
@@ -292,6 +342,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "工厂与生产",
       paragraph:
         "万电通为机柜、配电系统及机箱产品提供工厂直营生产,并配备自有电气、机械与热设计工程团队。生产体系既涵盖标准目录规格产品,也支持微模块及集装箱数据中心订单的项目定制化生产。",
+      gallery: [
+        "工厂外景",
+        "工业与户外作业区",
+        "机架PDU生产线",
+        "喷涂生产线",
+        "槽式桥架生产线",
+        "网络机柜组装车间",
+        "网络机柜组装线",
+        "网络机柜组装线",
+      ],
     },
     qualityControl: {
       eyebrow: "质量保障",
