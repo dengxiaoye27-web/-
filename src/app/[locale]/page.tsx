@@ -47,6 +47,23 @@ const coreSolutionHrefs = [
   "/solutions/energy-storage",
 ];
 
+// Matches coreSolutionHrefs order.
+const coreSolutionSlugs = [
+  "critical-power",
+  "power-distribution",
+  "network-cabinets",
+  "micro-modular",
+  "containerized",
+  "liquid-cooling",
+  "energy-storage",
+];
+
+function getCoreSolutionImage(slug: string) {
+  const relPath = `/images/core-solutions/${slug}.jpg`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
+
 // Matches t.architecture.nodes order: Grid Power, UPS, PDU, Rack, Cooling,
 // Monitoring, Fire Protection, Liquid Cooling, Energy Storage
 const architectureNodeHrefs = [
@@ -162,10 +179,21 @@ export default async function HomePage({
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {t.coreSolutions.items.map((item, i) => {
               const Icon = coreSolutionIcons[i] ?? coreSolutionIcons[0];
+              const image = getCoreSolutionImage(coreSolutionSlugs[i]);
               return (
                 <Card key={item.title} href={coreSolutionHrefs[i]}>
                   <div className="relative mb-5 -mx-6 -mt-6 md:-mx-8 md:-mt-8 aspect-video rounded-t-2xl bg-paper-50 overflow-hidden flex items-center justify-center">
-                    <Icon className="h-10 w-10 text-ink-600/20" />
+                    {image ? (
+                      <Image
+                        src={image}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      />
+                    ) : (
+                      <Icon className="h-10 w-10 text-ink-600/20" />
+                    )}
                   </div>
                   <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                     <Icon className="h-6 w-6" />
