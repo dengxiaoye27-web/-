@@ -96,7 +96,7 @@ function getFactoryImage() {
 }
 
 function getGlobalMarketImage() {
-  const relPath = `/images/global-market/banner.jpg`;
+  const relPath = `/images/global-market/banner.png`;
   const absPath = path.join(process.cwd(), "public", relPath);
   return fs.existsSync(absPath) ? relPath : null;
 }
