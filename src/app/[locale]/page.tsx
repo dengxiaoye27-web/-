@@ -95,6 +95,12 @@ function getFactoryImage() {
   return fs.existsSync(absPath) ? relPath : null;
 }
 
+function getGlobalMarketImage() {
+  const relPath = `/images/global-market/banner.png`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
+
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
   "/images/exhibitions/08-liquid-cooling-booth.png",
@@ -339,6 +345,11 @@ export default async function HomePage({
               description={t.globalProjects.description}
             />
           </Reveal>
+          {getGlobalMarketImage() ? (
+            <div className="relative mt-10 aspect-[2/1] md:aspect-[21/9] w-full overflow-hidden rounded-2xl">
+              <Image src={getGlobalMarketImage()!} alt={t.globalProjects.title} fill className="object-cover" sizes="100vw" />
+            </div>
+          ) : null}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
             {t.globalProjects.markets.map((market) => (
               <div
