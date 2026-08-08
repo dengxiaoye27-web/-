@@ -10,7 +10,6 @@ import { StatTile } from "@/components/ui/StatTile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
-import { CertificationCards } from "@/components/sections/CertificationCards";
 import {
   coreSolutionIcons,
   whyWandtungIcons,
@@ -391,22 +390,6 @@ export default async function HomePage({
                 />
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 09 Certifications */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="container-page">
-          <Reveal>
-            <SectionHeading
-              eyebrow={t.certifications.eyebrow}
-              title={t.certifications.title}
-              description={t.certifications.description}
-            />
-          </Reveal>
-          <div className="mt-12">
-            <CertificationCards heldByPartnerLabel={t.certifications.heldByPartner} />
           </div>
         </div>
       </section>
