@@ -30,6 +30,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "From Our Blog",
     relatedArticlesTitle: "Related Articles",
     categoryComingSoon: "Detailed product pages for this category are being added. Contact our engineering team for current availability and specifications.",
+    categorySelectionCta: "Get Selection Advice →",
   },
   ar: {
     hubTitle: "منتجات البنية التحتية لمراكز البيانات",
@@ -59,6 +60,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "من مدونتنا",
     relatedArticlesTitle: "مقالات ذات صلة",
     categoryComingSoon: "يتم حالياً إضافة صفحات تفصيلية للمنتجات في هذه الفئة. تواصل مع فريقنا الهندسي للاطلاع على التوافر الحالي والمواصفات.",
+    categorySelectionCta: "احصل على استشارة الاختيار ←",
   },
   fr: {
     hubTitle: "Produits d'infrastructure pour centres de données",
@@ -88,6 +90,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "Depuis notre blog",
     relatedArticlesTitle: "Articles associés",
     categoryComingSoon: "Les pages détaillées des produits de cette catégorie sont en cours d'ajout. Contactez notre équipe d'ingénierie pour connaître la disponibilité actuelle et les spécifications.",
+    categorySelectionCta: "Obtenir des conseils de sélection →",
   },
   es: {
     hubTitle: "Productos de infraestructura para centros de datos",
@@ -117,6 +120,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "De nuestro blog",
     relatedArticlesTitle: "Artículos relacionados",
     categoryComingSoon: "Se están añadiendo páginas detalladas de productos para esta categoría. Contacte a nuestro equipo de ingeniería para conocer la disponibilidad actual y las especificaciones.",
+    categorySelectionCta: "Obtener asesoría de selección →",
   },
   ru: {
     hubTitle: "Продукция для инфраструктуры ЦОД",
@@ -146,6 +150,7 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "Из нашего блога",
     relatedArticlesTitle: "Похожие статьи",
     categoryComingSoon: "Подробные страницы товаров для этой категории добавляются. Свяжитесь с нашей инженерной командой, чтобы узнать о текущей доступности и характеристиках.",
+    categorySelectionCta: "Получить консультацию по выбору →",
   },
   zh: {
     hubTitle: "数据中心基础设施产品",
@@ -175,5 +180,6 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesEyebrow: "来自我们的博客",
     relatedArticlesTitle: "相关文章",
     categoryComingSoon: "该分类下的详细产品页面正在陆续添加中。请联系我们的工程团队了解当前可提供的产品及规格。",
+    categorySelectionCta: "获取选型建议 →",
   },
 };

@@ -4,6 +4,7 @@ export interface CategoryContent {
   name: string;
   shortDescription: string;
   heroTagline: string;
+  sellingPoints?: string[];
 }
 
 type TranslatedLocale = Exclude<Locale, "en">;
@@ -15,29 +16,64 @@ export const categoryContentTranslations: Record<string, Record<TranslatedLocale
       shortDescription:
         "وحدات PDU للراك، ووحدات PDU الذكية، ووحدات PDU عالية القدرة، ووحدات ATS PDU وSTS لتوزيع طاقة موثوق ومراقَب على مستوى الراك.",
       heroTagline: "توزيع طاقة دقيق لكل راك ولكل حمل.",
+      sellingPoints: [
+        "معايير مخارج متعددة — شوكو، NEMA، بريطاني، IEC",
+        "تركيب أفقي 1U أو رأسي 0U",
+        "حماية اختيارية من الارتفاع المفاجئ للتيار (SPD)",
+        "مستويات ذكاء متاحة: قياس، مراقبة أو تحكم بالتبديل",
+        "توريد مباشر من المصنع مع دعم التخصيص OEM/ODM",
+      ],
     },
     fr: {
       name: "Distribution électrique",
       shortDescription:
         "PDU de rack, PDU intelligents, PDU haute puissance, PDU ATS et STS pour une distribution électrique fiable et surveillée au niveau du rack.",
       heroTagline: "Une distribution électrique de précision pour chaque rack, chaque charge.",
+      sellingPoints: [
+        "Plusieurs normes de prises — Schuko, NEMA, UK, IEC",
+        "Montage horizontal 1U ou vertical 0U au choix",
+        "Protection contre les surtensions (SPD) en option",
+        "Niveaux d'intelligence disponibles : mesuré, surveillé ou commutable",
+        "Fourniture directe usine avec personnalisation OEM/ODM",
+      ],
     },
     es: {
       name: "Distribución de energía",
       shortDescription:
         "PDU de rack, PDU inteligentes, PDU de alta potencia, PDU ATS y STS para una distribución de energía fiable y monitoreada a nivel de rack.",
       heroTagline: "Distribución de energía de precisión para cada rack, cada carga.",
+      sellingPoints: [
+        "Múltiples estándares de toma — Schuko, NEMA, UK, IEC",
+        "Montaje horizontal 1U o vertical 0U a elegir",
+        "Protección contra sobretensiones (SPD) opcional",
+        "Niveles de inteligencia disponibles: medido, monitoreado o conmutable",
+        "Suministro directo de fábrica con personalización OEM/ODM",
+      ],
     },
     ru: {
       name: "Распределение питания",
       shortDescription:
         "Стоечные PDU, интеллектуальные PDU, PDU высокой мощности, ATS PDU и STS для надёжного и контролируемого распределения питания на уровне стойки.",
       heroTagline: "Точное распределение питания для каждой стойки и каждой нагрузки.",
+      sellingPoints: [
+        "Несколько стандартов розеток — Schuko, NEMA, UK, IEC",
+        "Монтаж 1U горизонтально или 0U вертикально на выбор",
+        "Опциональная защита от перенапряжения (SPD)",
+        "Доступны уровни интеллекта: с измерением, мониторингом или переключением",
+        "Прямая поставка с завода, поддержка OEM/ODM",
+      ],
     },
     zh: {
       name: "配电",
       shortDescription: "机架PDU、智能PDU、大功率PDU、ATS PDU及STS，为机架级配电提供可靠、可监控的解决方案。",
       heroTagline: "为每一个机架、每一份负载提供精准配电。",
+      sellingPoints: [
+        "多种插座标准（德标/美标/英标/IEC）",
+        "1U横装/0U竖装可选",
+        "可选浪涌保护（SPD）",
+        "支持计量/监控/可切换智能等级",
+        "工厂直供，支持OEM/ODM定制",
+      ],
     },
   },
   "ups-systems": {
@@ -287,11 +323,11 @@ export const categoryContentTranslations: Record<string, Record<TranslatedLocale
   },
 };
 
-export function getCategoryContent<T extends { name: string; shortDescription: string; heroTagline: string }>(
-  slug: string,
-  locale: Locale,
-  fallback: T
-): CategoryContent {
+export function getCategoryContent<
+  T extends { name: string; shortDescription: string; heroTagline: string; sellingPoints?: string[] },
+>(slug: string, locale: Locale, fallback: T): CategoryContent {
   if (locale === "en") return fallback;
-  return categoryContentTranslations[slug]?.[locale as TranslatedLocale] ?? fallback;
+  const translated = categoryContentTranslations[slug]?.[locale as TranslatedLocale];
+  if (!translated) return fallback;
+  return { ...translated, sellingPoints: translated.sellingPoints ?? fallback.sellingPoints };
 }
