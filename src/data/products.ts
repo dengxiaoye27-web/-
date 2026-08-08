@@ -2084,6 +2084,13 @@ export const products: Product[] = [
     tagline: "Close-control precision cooling for data center and telecom equipment rooms.",
     overview:
       "The Wandtung Precision Air Conditioner provides tight temperature and humidity control for data halls and telecom rooms, with downflow or upflow air distribution and capacities suited to small equipment rooms through large data center white space.",
+    images: [
+      "/products/precision-air-conditioner/01-main-view.jpg",
+      "/products/precision-air-conditioner/02-side-annotated.jpg",
+      "/products/precision-air-conditioner/03-front-annotated.jpg",
+      "/products/precision-air-conditioner/04-key-features.jpg",
+      "/products/precision-air-conditioner/05-six-features-overview.jpg",
+    ],
     keyFeatures: [
       "Precise temperature and humidity control",
       "Downflow / upflow air distribution options",
