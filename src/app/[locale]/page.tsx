@@ -57,6 +57,11 @@ const coreSolutionSlugs = [
   "energy-storage",
 ];
 
+// Images with baked-in title text/callouts (infographic-style uploads) must
+// never be cropped — object-contain guarantees nothing gets cut off. Plain
+// product photos use object-cover so they fill the card edge-to-edge.
+const coreSolutionContainSlugs = new Set(["critical-power", "power-distribution", "network-cabinets", "micro-modular"]);
+
 function getCoreSolutionImage(slug: string) {
   const relPath = `/images/core-solutions/${slug}.jpg`;
   const absPath = path.join(process.cwd(), "public", relPath);
@@ -184,7 +189,8 @@ export default async function HomePage({
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {t.coreSolutions.items.map((item, i) => {
               const Icon = coreSolutionIcons[i] ?? coreSolutionIcons[0];
-              const image = getCoreSolutionImage(coreSolutionSlugs[i]);
+              const slug = coreSolutionSlugs[i];
+              const image = getCoreSolutionImage(slug);
               return (
                 <Card key={item.title} href={coreSolutionHrefs[i]}>
                   <div className="relative mb-5 -mx-6 -mt-6 md:-mx-8 md:-mt-8 aspect-video rounded-t-2xl bg-paper-50 overflow-hidden flex items-center justify-center">
@@ -193,7 +199,7 @@ export default async function HomePage({
                         src={image}
                         alt={item.title}
                         fill
-                        className="object-cover"
+                        className={coreSolutionContainSlugs.has(slug) ? "object-contain" : "object-cover"}
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       />
                     ) : (
