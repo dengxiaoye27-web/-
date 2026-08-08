@@ -345,6 +345,48 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: "why-ai-clusters-need-integrated-liquid-cooling",
+    title: "Beyond Just Cooling: Why AI Data Centers Require an Integrated Liquid-to-Rack Architecture",
+    category: "Liquid Cooling",
+    excerpt:
+      "Traditional air cooling has hit the thermal wall. For NVIDIA H100/H200 clusters, liquid cooling isn't just an option—it's a requirement. Here is why Wandtung advocates for a coordinated D2C approach.",
+    publishedAt: "2026-08-08",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "The AI Power Wall: Why Air Cooling Fails at 20kW+",
+        content:
+          "As AI chips like the H100 push TDP (Thermal Design Power) beyond 700W, the heat density per rack is soaring past 40kW. At Wandtung, we've observed that standard air-cooled CRAC systems reach their physical limit at 20kW per rack. Pushing air faster only increases noise and energy waste without solving the core heat-stagnation problem at the chip level.",
+      },
+      {
+        heading: "Wandtung's Direct-to-Chip (D2C) Advantage",
+        content:
+          "We don't just sell cold plates. The Wandtung solution integrates the D2C manifold directly into our heavy-duty server cabinets. By delivering coolant to the heat source and removing 90% of IT heat through liquid, we help operators achieve a PUE (Power Usage Effectiveness) as low as 1.15—a benchmark air-cooled facilities simply cannot match.",
+      },
+      {
+        heading: "The Danger of Fragmented Infrastructure",
+        content:
+          "Many integrators source liquid cooling from one vendor and racks from another. This leads to poor cable management, compromised leak detection, and electrical interference. Wandtung's \"One Coordinated System\" ensures that the Liquid Cooling Cabinet, the Manifold, and the Intelligent PDU work as a single organism, with integrated sensors communicating on a unified dashboard.",
+      },
+      {
+        heading: "Future-Proofing for the 80kW+ Era",
+        content:
+          "AI evolution isn't slowing down. Our liquid cooling architecture is designed for scalability. Whether you are deploying 20kW today or planning for 100kW next year, the physical chassis remains the same. This modular engineering is what defines Wandtung's commitment to sustainable IDC growth.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can I retrofit air-cooled racks to liquid cooling?",
+        answer:
+          "While possible, it is inefficient. Wandtung recommends a \"Liquid-Ready\" rack architecture that supports hybrid cooling to ensure long-term structural integrity and leak safety.",
+      },
+    ],
+    ctaLinks: [
+      { label: "Explore Liquid Cooling Solutions", href: "/solutions/liquid-cooling" },
+      { label: "Consult Our Engineers", href: "/contact" },
+    ],
+  },
+  {
     slug: "how-to-choose-a-data-center-pdu",
     title: "How to Choose a Data Center PDU",
     category: "Power Distribution",
