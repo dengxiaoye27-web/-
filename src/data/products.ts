@@ -2314,12 +2314,11 @@ export const products: Product[] = [
     overview:
       "Wandtung In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level. The unit holds ±0.5°C temperature and ±5% RH humidity precision using variable-speed EC fans, with an intelligent controller for remote monitoring and 24/7 continuous-duty operation.",
     images: [
-      "/products/in-row-cooling/01-main.jpg",
-      "/products/in-row-cooling/02-key-features.jpg",
-      "/products/in-row-cooling/03-front-detail.jpg",
-      "/products/in-row-cooling/04-side-detail.jpg",
-      "/products/in-row-cooling/05-selling-point.jpg",
-      "/products/in-row-cooling/06-data-center-scene.jpg",
+      "/products/in-row-cooling/01-main-view.jpg",
+      "/products/in-row-cooling/02-front-view.jpg",
+      "/products/in-row-cooling/03-features-annotated.jpg",
+      "/products/in-row-cooling/04-key-features.jpg",
+      "/products/in-row-cooling/05-banner.jpg",
     ],
     keyFeatures: [
       "Cabinet-footprint form factor fits directly into the row",
@@ -2376,6 +2375,14 @@ export const products: Product[] = [
     tagline: "Perimeter precision cooling for the whole data hall or equipment room.",
     overview:
       "Wandtung Room Cooling units condition the whole data hall or equipment room from the room perimeter — the traditional data center cooling approach, well suited to lower-density rooms or as a baseline layer alongside row-based/in-row cooling at higher densities.",
+    images: [
+      "/products/room-cooling/01-main.jpg",
+      "/products/room-cooling/02-key-features.jpg",
+      "/products/room-cooling/03-front-detail.jpg",
+      "/products/room-cooling/04-side-detail.jpg",
+      "/products/room-cooling/05-selling-point.jpg",
+      "/products/room-cooling/06-data-center-scene.jpg",
+    ],
     keyFeatures: [
       "Room-wide, perimeter-mounted cooling",
       "Downflow or upflow air distribution",
