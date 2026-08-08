@@ -2,49 +2,6 @@ import { Article } from "./types";
 
 export const articles: Article[] = [
   {
-    slug: "what-is-a-smart-pdu",
-    title: "What Is a Smart PDU?",
-    category: "Power Distribution",
-    excerpt:
-      "A plain-language explanation of intelligent PDUs — what they monitor, how they communicate, and when a facility needs one.",
-    publishedAt: "2026-05-12",
-    readingTime: "5 min read",
-    body: [
-      {
-        heading: "Definition",
-        content:
-          "A smart (intelligent) PDU is a rack power distribution unit with built-in monitoring and network connectivity. Unlike a basic PDU, which only distributes power, a smart PDU measures current, voltage, power and energy consumption, and in switched models, allows remote control of individual outlets.",
-      },
-      {
-        heading: "What a Smart PDU Monitors",
-        content:
-          "Typical monitoring points include per-outlet or per-circuit current and voltage, total power draw, cumulative energy consumption for cost and PUE tracking, and — with optional sensor ports — rack-level temperature and humidity.",
-      },
-      {
-        heading: "Communication Protocols",
-        content:
-          "Smart PDUs commonly support SNMP for integration with network management systems, Modbus RTU/TCP for building/DCIM integration, RS485 for serial daisy-chaining, and a web interface for direct browser-based management.",
-      },
-      {
-        heading: "When You Need One",
-        content:
-          "A smart PDU is worth the investment whenever a facility needs remote visibility into power usage (multi-tenant colocation, PUE reporting), or remote control of equipment power (unattended/edge sites, remote reboot of hung servers).",
-      },
-    ],
-    faqs: [
-      {
-        question: "Is a smart PDU the same as a metered PDU?",
-        answer:
-          "Not exactly. A metered PDU adds local or remote power readings but not remote outlet control. \"Smart\" or \"intelligent\" PDU is often used as an umbrella term covering metered, monitored and switched capability — check the specific model's feature list.",
-      },
-      {
-        question: "Does a smart PDU require a network connection to function?",
-        answer:
-          "A smart PDU distributes power normally even without network connectivity — the network connection is only required to access monitoring data and remote switching features.",
-      },
-    ],
-  },
-  {
     slug: "what-is-intelligent-pdu",
     title: "What Is an Intelligent PDU? A Practical Guide for Data Center Buyers",
     metaTitle: "What Is an Intelligent PDU? A Data Center Buyer's Guide | WANDTUNG",
@@ -177,38 +134,6 @@ export const articles: Article[] = [
         question: "Do I need the same PDU tier on every rack?",
         answer:
           "Usually not. Mixing tiers — basic or metered on stable racks, monitored on the main floor, switched on critical or remote racks — controls cost while keeping visibility where it matters.",
-      },
-    ],
-  },
-  {
-    slug: "what-is-a-micro-modular-data-center",
-    title: "What Is a Micro Modular Data Center?",
-    category: "Micro Modular Data Center",
-    excerpt: "How factory-integrated micro modules compress data room construction from months to weeks.",
-    publishedAt: "2026-04-10",
-    readingTime: "5 min read",
-    body: [
-      {
-        heading: "Definition",
-        content:
-          "A micro modular data center is a factory pre-integrated system combining IT cabinets, power distribution, UPS, cooling, fire suppression, access control and monitoring into a single standardized unit.",
-      },
-      {
-        heading: "Why Use One Instead of Building a Data Room",
-        content:
-          "Traditional data room construction requires coordinating multiple specialist contractors on site — electrical, mechanical, fire protection, security — often over several months. A micro module is engineered and tested as one system at the factory, reducing on-site work to placement and connection.",
-      },
-      {
-        heading: "Typical Configurations",
-        content:
-          "Micro modules are commonly available in single-row (cabinets on one side of a central aisle) and dual-row (cabinets facing each other with hot/cold aisle containment) configurations, sized from a handful of racks up to a full small data room.",
-      },
-    ],
-    faqs: [
-      {
-        question: "Does Wandtung provide micro modular data center solutions?",
-        answer:
-          "Yes. Wandtung designs and manufactures single-row, dual-row and all-in-one micro modular data centers with integrated power, cooling, fire suppression and monitoring, engineered and factory-tested as a complete system before deployment.",
       },
     ],
   },

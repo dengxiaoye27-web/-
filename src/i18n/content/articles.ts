@@ -12,88 +12,6 @@ export interface ArticleContent {
 type TranslatedLocale = Exclude<Locale, "en">;
 
 export const articleContentTranslations: Record<string, Record<TranslatedLocale, ArticleContent>> = {
-  "what-is-a-smart-pdu": {
-    ar: {
-      title: "ما هو PDU الذكي؟",
-      category: "توزيع الطاقة",
-      excerpt: "شرح مبسط لوحدات توزيع الطاقة الذكية — ما الذي تراقبه، وكيف تتواصل، ومتى تحتاجها المنشأة.",
-      readingTime: "5 دقائق قراءة",
-      body: [
-        { heading: "التعريف", content: "PDU الذكي هو وحدة توزيع طاقة بالراك مزودة بمراقبة مدمجة واتصال بالشبكة. على عكس PDU الأساسي الذي يوزع الطاقة فقط، يقيس PDU الذكي التيار والجهد والطاقة واستهلاك الطاقة، وفي الطرازات القابلة للتبديل، يتيح التحكم عن بُعد بمنافذ فردية." },
-        { heading: "ما الذي يراقبه PDU الذكي", content: "تشمل نقاط المراقبة النموذجية التيار والجهد لكل منفذ أو دائرة، وإجمالي استهلاك الطاقة، واستهلاك الطاقة التراكمي لتتبع التكلفة وPUE، ومع منافذ استشعار اختيارية، درجة حرارة ورطوبة الراك." },
-        { heading: "بروتوكولات الاتصال", content: "تدعم وحدات PDU الذكية عادة SNMP للتكامل مع أنظمة إدارة الشبكة، وModbus RTU/TCP للتكامل مع أنظمة المبنى/DCIM، وRS485 للربط التسلسلي، وواجهة ويب للإدارة المباشرة عبر المتصفح." },
-        { heading: "متى تحتاج إليه", content: "يستحق PDU الذكي الاستثمار عندما تحتاج المنشأة إلى رؤية عن بُعد لاستخدام الطاقة (استضافة مشتركة متعددة المستأجرين، تقارير PUE)، أو تحكم عن بُعد بطاقة المعدات (مواقع طرفية/غير مأهولة، إعادة تشغيل عن بُعد للخوادم المعلقة)." },
-      ],
-      faqs: [
-        { question: "هل PDU الذكي هو نفسه PDU المقاس؟", answer: "ليس تماماً. يضيف PDU المقاس قراءات طاقة محلية أو عن بُعد لكن دون تحكم عن بُعد بالمنافذ. غالباً ما يُستخدم مصطلح PDU \"الذكي\" كمصطلح شامل يغطي إمكانيات القياس والمراقبة والتبديل — تحقق من قائمة ميزات الطراز المحدد." },
-        { question: "هل يتطلب PDU الذكي اتصالاً بالشبكة ليعمل؟", answer: "يوزع PDU الذكي الطاقة بشكل طبيعي حتى دون اتصال بالشبكة — يلزم الاتصال بالشبكة فقط للوصول إلى بيانات المراقبة وميزات التبديل عن بُعد." },
-      ],
-    },
-    fr: {
-      title: "Qu'est-ce qu'un PDU intelligent ?",
-      category: "Distribution électrique",
-      excerpt: "Une explication simple des PDU intelligents — ce qu'ils surveillent, comment ils communiquent, et quand une installation en a besoin.",
-      readingTime: "5 min de lecture",
-      body: [
-        { heading: "Définition", content: "Un PDU intelligent est une unité de distribution électrique de rack dotée d'une surveillance intégrée et d'une connectivité réseau. Contrairement à un PDU basique, qui ne fait que distribuer l'alimentation, un PDU intelligent mesure le courant, la tension, la puissance et la consommation d'énergie, et sur les modèles à commutation, permet le contrôle à distance des prises individuelles." },
-        { heading: "Ce que surveille un PDU intelligent", content: "Les points de surveillance typiques incluent le courant et la tension par prise ou par circuit, la puissance totale consommée, la consommation d'énergie cumulée pour le suivi des coûts et du PUE, et — avec des ports de capteurs optionnels — la température et l'humidité au niveau du rack." },
-        { heading: "Protocoles de communication", content: "Les PDU intelligents prennent généralement en charge SNMP pour l'intégration avec les systèmes de gestion réseau, Modbus RTU/TCP pour l'intégration bâtiment/DCIM, RS485 pour le chaînage série, et une interface web pour la gestion directe via navigateur." },
-        { heading: "Quand vous en avez besoin", content: "Un PDU intelligent vaut l'investissement chaque fois qu'une installation a besoin d'une visibilité à distance sur l'utilisation de l'énergie (colocation multi-locataires, rapports PUE), ou d'un contrôle à distance de l'alimentation des équipements (sites non surveillés/de périphérie, redémarrage à distance de serveurs bloqués)." },
-      ],
-      faqs: [
-        { question: "Un PDU intelligent est-il identique à un PDU mesuré ?", answer: "Pas exactement. Un PDU mesuré ajoute des relevés de puissance locaux ou à distance mais pas de contrôle de prise à distance. Le terme « intelligent » est souvent utilisé comme terme générique couvrant les capacités de mesure, de surveillance et de commutation — vérifiez la liste des fonctionnalités du modèle spécifique." },
-        { question: "Un PDU intelligent nécessite-t-il une connexion réseau pour fonctionner ?", answer: "Un PDU intelligent distribue l'alimentation normalement même sans connectivité réseau — la connexion réseau n'est nécessaire que pour accéder aux données de surveillance et aux fonctions de commutation à distance." },
-      ],
-    },
-    es: {
-      title: "¿Qué es un PDU inteligente?",
-      category: "Distribución de energía",
-      excerpt: "Una explicación sencilla de los PDU inteligentes: qué monitorean, cómo se comunican y cuándo una instalación necesita uno.",
-      readingTime: "5 min de lectura",
-      body: [
-        { heading: "Definición", content: "Un PDU inteligente es una unidad de distribución de energía de rack con monitoreo integrado y conectividad de red. A diferencia de un PDU básico, que solo distribuye energía, un PDU inteligente mide corriente, voltaje, potencia y consumo de energía, y en los modelos conmutados, permite el control remoto de tomas individuales." },
-        { heading: "Qué monitorea un PDU inteligente", content: "Los puntos de monitoreo típicos incluyen corriente y voltaje por toma o circuito, consumo total de energía, consumo de energía acumulado para el seguimiento de costos y PUE, y —con puertos de sensores opcionales— temperatura y humedad a nivel de rack." },
-        { heading: "Protocolos de comunicación", content: "Los PDU inteligentes suelen admitir SNMP para la integración con sistemas de gestión de red, Modbus RTU/TCP para la integración con edificios/DCIM, RS485 para el encadenamiento en serie, y una interfaz web para la gestión directa desde el navegador." },
-        { heading: "Cuándo lo necesita", content: "Un PDU inteligente vale la inversión siempre que una instalación necesite visibilidad remota del uso de energía (colocation multiinquilino, informes de PUE), o control remoto de la energía de los equipos (sitios no atendidos/de borde, reinicio remoto de servidores bloqueados)." },
-      ],
-      faqs: [
-        { question: "¿Es un PDU inteligente lo mismo que un PDU medido?", answer: "No exactamente. Un PDU medido añade lecturas de energía locales o remotas pero no control remoto de tomas. El término «inteligente» a menudo se usa como término general que cubre las capacidades de medición, monitoreo y conmutación; consulte la lista de funciones del modelo específico." },
-        { question: "¿Requiere un PDU inteligente una conexión de red para funcionar?", answer: "Un PDU inteligente distribuye energía normalmente incluso sin conectividad de red; la conexión de red solo es necesaria para acceder a los datos de monitoreo y las funciones de conmutación remota." },
-      ],
-    },
-    ru: {
-      title: "Что такое интеллектуальный PDU?",
-      category: "Распределение питания",
-      excerpt: "Простое объяснение интеллектуальных PDU — что они контролируют, как взаимодействуют и когда объекту нужен такой блок.",
-      readingTime: "5 мин на чтение",
-      body: [
-        { heading: "Определение", content: "Интеллектуальный PDU — это стоечный блок распределения питания со встроенным мониторингом и сетевым подключением. В отличие от базового PDU, который только распределяет питание, интеллектуальный PDU измеряет ток, напряжение, мощность и энергопотребление, а в коммутируемых моделях позволяет удалённо управлять отдельными розетками." },
-        { heading: "Что контролирует интеллектуальный PDU", content: "Типичные точки мониторинга включают ток и напряжение по розетке или цепи, общее потребление мощности, накопленное энергопотребление для учёта затрат и PUE, а также — при наличии опциональных портов датчиков — температуру и влажность на уровне стойки." },
-        { heading: "Протоколы связи", content: "Интеллектуальные PDU обычно поддерживают SNMP для интеграции с системами управления сетью, Modbus RTU/TCP для интеграции со зданием/DCIM, RS485 для последовательного соединения, а также веб-интерфейс для прямого управления через браузер." },
-        { heading: "Когда он нужен", content: "Интеллектуальный PDU оправдывает инвестиции всякий раз, когда объекту требуется удалённая видимость использования энергии (многоарендаторный колокейшн, отчётность по PUE) или удалённое управление питанием оборудования (необслуживаемые/периферийные объекты, удалённая перезагрузка зависших серверов)." },
-      ],
-      faqs: [
-        { question: "Является ли интеллектуальный PDU тем же самым, что и измерительный PDU?", answer: "Не совсем. Измерительный PDU добавляет локальные или удалённые показания мощности, но не удалённое управление розетками. Термин «интеллектуальный» часто используется как общий термин, охватывающий функции измерения, мониторинга и коммутации — проверьте список функций конкретной модели." },
-        { question: "Требуется ли интеллектуальному PDU сетевое подключение для работы?", answer: "Интеллектуальный PDU распределяет питание в обычном режиме даже без сетевого подключения — сетевое подключение требуется только для доступа к данным мониторинга и функциям удалённой коммутации." },
-      ],
-    },
-    zh: {
-      title: "什么是智能PDU？",
-      category: "配电",
-      excerpt: "通俗易懂地解读智能PDU——它监测什么、如何通信,以及设施何时需要配置一台。",
-      readingTime: "5分钟阅读",
-      body: [
-        { heading: "定义", content: "智能PDU是一种内置监测功能并具备网络连接能力的机架配电单元。与仅分配电力的基础型PDU不同,智能PDU可测量电流、电压、功率及能耗,而在可切换型号上还支持对单个插座进行远程控制。" },
-        { heading: "智能PDU监测哪些内容", content: "典型监测项包括每插座或每回路的电流与电压、总功耗、用于成本与PUE跟踪的累计能耗,以及在配备可选传感器接口时的机架级温湿度。" },
-        { heading: "通信协议", content: "智能PDU通常支持SNMP以与网络管理系统集成、Modbus RTU/TCP以与楼宇/DCIM系统集成、RS485用于串行菊花链连接,并提供网页界面便于直接通过浏览器管理。" },
-        { heading: "何时需要智能PDU", content: "当设施需要远程掌握用电情况(多租户托管、PUE报告),或需要远程控制设备电源(无人值守/边缘场地、远程重启无响应服务器)时,智能PDU的投入便物有所值。" },
-      ],
-      faqs: [
-        { question: "智能PDU与计量型PDU是一回事吗？", answer: "并不完全相同。计量型PDU增加了本地或远程电力读数,但不具备远程插座控制功能。“智能”PDU常作为涵盖计量、监控及切换能力的统称使用——请查看具体型号的功能列表以确认。" },
-        { question: "智能PDU运行是否需要网络连接？", answer: "即使没有网络连接,智能PDU也能正常分配电力——网络连接仅用于访问监控数据及远程切换功能。" },
-      ],
-    },
-  },
   "what-is-intelligent-pdu": {
     ar: {
       title: "ما هو PDU الذكي؟ دليل عملي لمشتري مراكز البيانات",
@@ -295,78 +213,6 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
         { question: "监控型PDU与计量型PDU是一回事吗？", answer: "不是。计量型PDU在本地显示读数；监控型PDU将这些读数接入网络，以便通过SNMP或DCIM平台进行远程查看和告警。" },
         { question: "哪种PDU最适合远程或无人值守站点？", answer: "可切换型PDU，因为远程插座控制可以在无需现场维护的情况下重启设备并管理电源。" },
         { question: "是否每个机架都需要相同层级的PDU？", answer: "通常不需要。混合使用不同层级——在稳定机架上使用基础型或计量型、在主生产区域使用监控型、在关键或远程机架上使用可切换型——既能控制成本，又能在关键之处保留可视性。" },
-      ],
-    },
-  },
-  "what-is-a-micro-modular-data-center": {
-    ar: {
-      title: "ما هو مركز البيانات الوحدة الصغيرة؟",
-      category: "مركز بيانات الوحدة الصغيرة",
-      excerpt: "كيف تختصر الوحدات الصغيرة المتكاملة من المصنع بناء غرفة البيانات من أشهر إلى أسابيع.",
-      readingTime: "5 دقائق قراءة",
-      body: [
-        { heading: "التعريف", content: "مركز البيانات الوحدة الصغيرة هو نظام متكامل مسبقاً من المصنع يجمع خزانات تكنولوجيا المعلومات وتوزيع الطاقة وUPS والتبريد وإخماد الحريق والتحكم بالوصول والمراقبة في وحدة موحدة واحدة." },
-        { heading: "لماذا تستخدم واحدة بدلاً من بناء غرفة بيانات", content: "يتطلب بناء غرفة البيانات التقليدية تنسيق عدة مقاولين متخصصين في الموقع — كهربائي وميكانيكي وحماية من الحريق وأمن — غالباً على مدى عدة أشهر. تُصمم الوحدة الصغيرة وتُختبر كنظام واحد في المصنع، ما يقلل العمل في الموقع إلى التوضع والتوصيل." },
-        { heading: "التكوينات النموذجية", content: "تتوفر الوحدات الصغيرة عادة بتكوينات صف واحد (خزانات على جانب واحد من ممر مركزي) وصفين (خزانات متقابلة مع احتواء ممر ساخن/بارد)، بأحجام من حفنة راكات إلى غرفة بيانات صغيرة كاملة." },
-      ],
-      faqs: [
-        { question: "هل تقدم واندتونغ حلول مراكز بيانات الوحدة الصغيرة؟", answer: "نعم. تصمم واندتونغ وتصنّع مراكز بيانات وحدة صغيرة بصف واحد وصفين وشاملة الكل، مع طاقة وتبريد وإخماد حريق ومراقبة متكاملة، مصممة ومُختبرة في المصنع كنظام كامل قبل النشر." },
-      ],
-    },
-    fr: {
-      title: "Qu'est-ce qu'un data center micro-modulaire ?",
-      category: "Data center micro-modulaire",
-      excerpt: "Comment les micro-modules intégrés en usine compressent la construction d'une salle informatique de plusieurs mois à quelques semaines.",
-      readingTime: "5 min de lecture",
-      body: [
-        { heading: "Définition", content: "Un data center micro-modulaire est un système pré-intégré en usine combinant armoires informatiques, distribution électrique, onduleur, refroidissement, extinction incendie, contrôle d'accès et surveillance en une seule unité standardisée." },
-        { heading: "Pourquoi en utiliser un plutôt que de construire une salle informatique", content: "La construction traditionnelle d'une salle informatique nécessite de coordonner plusieurs entrepreneurs spécialisés sur site — électricité, mécanique, protection incendie, sécurité — souvent sur plusieurs mois. Un micro-module est conçu et testé comme un seul système en usine, réduisant le travail sur site au placement et au raccordement." },
-        { heading: "Configurations typiques", content: "Les micro-modules sont généralement disponibles en configurations à rangée unique (armoires d'un côté d'une allée centrale) et à double rangée (armoires face à face avec confinement d'allée chaude/froide), dimensionnés d'une poignée de racks jusqu'à une petite salle informatique complète." },
-      ],
-      faqs: [
-        { question: "Wandtung propose-t-il des solutions de data center micro-modulaire ?", answer: "Oui. Wandtung conçoit et fabrique des data centers micro-modulaires à une rangée, deux rangées et tout-en-un avec alimentation, refroidissement, extinction incendie et surveillance intégrés, conçus et testés en usine comme un système complet avant déploiement." },
-      ],
-    },
-    es: {
-      title: "¿Qué es un centro de datos micro modular?",
-      category: "Centro de datos micro modular",
-      excerpt: "Cómo los micro módulos integrados en fábrica comprimen la construcción de una sala de datos de meses a semanas.",
-      readingTime: "5 min de lectura",
-      body: [
-        { heading: "Definición", content: "Un centro de datos micro modular es un sistema preintegrado en fábrica que combina armarios de TI, distribución de energía, SAI, refrigeración, extinción de incendios, control de acceso y monitoreo en una única unidad estandarizada." },
-        { heading: "Por qué usar uno en lugar de construir una sala de datos", content: "La construcción tradicional de una sala de datos requiere coordinar a múltiples contratistas especializados en el sitio —eléctrico, mecánico, protección contra incendios, seguridad— a menudo durante varios meses. Un micro módulo se diseña y prueba como un solo sistema en fábrica, reduciendo el trabajo en sitio a la colocación y conexión." },
-        { heading: "Configuraciones típicas", content: "Los micro módulos suelen estar disponibles en configuraciones de una fila (armarios a un lado de un pasillo central) y de dos filas (armarios enfrentados con contención de pasillo caliente/frío), dimensionados desde un puñado de racks hasta una sala de datos pequeña completa." },
-      ],
-      faqs: [
-        { question: "¿Ofrece Wandtung soluciones de centro de datos micro modular?", answer: "Sí. Wandtung diseña y fabrica centros de datos micro modulares de una fila, dos filas y todo en uno con energía, refrigeración, extinción de incendios y monitoreo integrados, diseñados y probados en fábrica como sistema completo antes del despliegue." },
-      ],
-    },
-    ru: {
-      title: "Что такое микромодульный ЦОД?",
-      category: "Микромодульный ЦОД",
-      excerpt: "Как заводские интегрированные микромодули сокращают строительство машинного зала с месяцев до недель.",
-      readingTime: "5 мин на чтение",
-      body: [
-        { heading: "Определение", content: "Микромодульный ЦОД — это предварительно интегрированная на заводе система, объединяющая ИТ-шкафы, распределение питания, ИБП, охлаждение, пожаротушение, контроль доступа и мониторинг в единый стандартизированный блок." },
-        { heading: "Почему использовать его вместо строительства машинного зала", content: "Традиционное строительство машинного зала требует координации нескольких специализированных подрядчиков на объекте — электрика, механика, противопожарная защита, безопасность — часто в течение нескольких месяцев. Микромодуль проектируется и тестируется как единая система на заводе, сводя работу на объекте к размещению и подключению." },
-        { heading: "Типичные конфигурации", content: "Микромодули обычно доступны в однорядной (шкафы с одной стороны центрального прохода) и двухрядной (шкафы друг напротив друга с изоляцией горячего/холодного коридора) конфигурациях, рассчитанных от нескольких стоек до полноценного небольшого машинного зала." },
-      ],
-      faqs: [
-        { question: "Предлагает ли Wandtung решения микромодульных ЦОД?", answer: "Да. Wandtung проектирует и производит одно-, двухрядные и моноблочные микромодульные ЦОД со встроенным питанием, охлаждением, пожаротушением и мониторингом, спроектированные и протестированные на заводе как единая система перед развёртыванием." },
-      ],
-    },
-    zh: {
-      title: "什么是微模块数据中心？",
-      category: "微模块数据中心",
-      excerpt: "工厂集成微模块如何将机房建设周期从数月压缩至数周。",
-      readingTime: "5分钟阅读",
-      body: [
-        { heading: "定义", content: "微模块数据中心是一种出厂预集成系统,将IT机柜、配电、UPS、制冷、消防、门禁及监控整合为一套标准化单元。" },
-        { heading: "为何选择微模块而非自建机房", content: "传统机房建设需要在现场协调多个专业承包商——电气、机械、消防、安防——往往耗时数月。微模块作为一套完整系统在工厂完成设计与测试,现场工作仅需进行就位与接线。" },
-        { heading: "典型配置", content: "微模块通常提供单排配置(机柜位于中央通道一侧)及双排配置(机柜面对面布置并配备冷/热通道封闭),规模从少量机架到完整的小型机房均可覆盖。" },
-      ],
-      faqs: [
-        { question: "万电通是否提供微模块数据中心解决方案？", answer: "是的。万电通设计并制造单排、双排及一体式微模块数据中心,集成电力、制冷、消防及监控系统,在部署前作为完整系统于工厂完成设计与测试。" },
       ],
     },
   },
@@ -613,6 +459,83 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
       ],
       faqs: [
         { question: "万电通是否提供液冷及CDU解决方案？", answer: "是的。万电通提供冷板式液冷系统,配备CDU管理的一次侧/二次侧回路、漏液检测及监控功能,适用于AI及高密度计算部署。" },
+      ],
+    },
+  },
+  "why-ai-clusters-need-integrated-liquid-cooling": {
+    ar: {
+      title: "أبعد من مجرد التبريد: لماذا تحتاج مراكز بيانات الذكاء الاصطناعي إلى بنية متكاملة من السائل إلى الراك",
+      category: "التبريد السائل",
+      excerpt: "وصل التبريد الهوائي التقليدي إلى الحائط الحراري. بالنسبة لمجموعات NVIDIA H100/H200، لم يعد التبريد السائل خياراً بل ضرورة. إليك لماذا تدعو واندتونغ إلى نهج D2C منسق.",
+      readingTime: "6 دقائق قراءة",
+      body: [
+        { heading: "حائط الطاقة في الذكاء الاصطناعي: لماذا يفشل التبريد الهوائي عند 20 كيلوواط فأكثر", content: "مع دفع رقائق الذكاء الاصطناعي مثل H100 لقدرة التصميم الحراري (TDP) إلى ما يتجاوز 700 واط، تتصاعد كثافة الحرارة لكل راك متجاوزة 40 كيلوواط. لاحظنا في واندتونغ أن أنظمة CRAC التقليدية المبردة بالهواء تصل إلى حدها الفيزيائي عند 20 كيلوواط لكل راك. دفع الهواء بشكل أسرع لا يزيد إلا من الضوضاء وهدر الطاقة دون حل مشكلة ركود الحرارة الأساسية عند مستوى الرقاقة." },
+        { heading: "ميزة واندتونغ في التبريد المباشر للرقاقة (D2C)", content: "نحن لا نبيع ألواح التبريد فقط. يدمج حل واندتونغ مشعب D2C مباشرة في خزانات الخوادم الثقيلة لدينا. من خلال توصيل سائل التبريد إلى مصدر الحرارة وإزالة 90% من حرارة تقنية المعلومات عبر السائل، نساعد المشغلين على تحقيق PUE (فعالية استخدام الطاقة) يصل إلى 1.15 — وهو معيار لا يمكن للمنشآت المبردة بالهواء مجاراته." },
+        { heading: "خطر البنية التحتية المجزأة", content: "يحصل العديد من المُدمجين على التبريد السائل من مورد والرفوف من مورد آخر. يؤدي هذا إلى إدارة كابلات ضعيفة، وكشف تسرب مُعرَّض للخطر، وتداخل كهربائي. يضمن نظام واندتونغ \"الموحد المنسق\" أن تعمل خزانة التبريد السائل والمشعب ووحدة PDU الذكية ككيان واحد، مع مستشعرات متكاملة تتواصل على لوحة تحكم موحدة." },
+        { heading: "الاستعداد للمستقبل لعصر 80 كيلوواط فأكثر", content: "لا يتباطأ تطور الذكاء الاصطناعي. تم تصميم بنية التبريد السائل لدينا لتكون قابلة للتوسع. سواء كنت تنشر 20 كيلوواط اليوم أو تخطط لـ 100 كيلوواط العام المقبل، يبقى الهيكل الفيزيائي كما هو. هذه الهندسة المعيارية هي ما يحدد التزام واندتونغ بنمو مراكز البيانات المستدام." },
+      ],
+      faqs: [
+        { question: "هل يمكنني تحديث الرفوف المبردة بالهواء إلى التبريد السائل؟", answer: "على الرغم من إمكانية ذلك، إلا أنه غير فعال. توصي واندتونغ ببنية راك \"جاهزة للسائل\" تدعم التبريد الهجين لضمان السلامة الهيكلية طويلة الأمد وسلامة التسرب." },
+      ],
+    },
+    fr: {
+      title: "Au-delà du simple refroidissement : pourquoi les data centers IA nécessitent une architecture liquide-vers-rack intégrée",
+      category: "Refroidissement liquide",
+      excerpt: "Le refroidissement par air traditionnel a atteint son mur thermique. Pour les clusters NVIDIA H100/H200, le refroidissement liquide n'est plus une option, c'est une nécessité. Voici pourquoi Wandtung préconise une approche D2C coordonnée.",
+      readingTime: "6 min de lecture",
+      body: [
+        { heading: "Le mur de puissance de l'IA : pourquoi le refroidissement par air échoue au-delà de 20 kW", content: "Alors que les puces IA comme le H100 poussent le TDP (Thermal Design Power) au-delà de 700 W, la densité thermique par rack dépasse les 40 kW. Chez Wandtung, nous avons observé que les systèmes CRAC refroidis par air standard atteignent leur limite physique à 20 kW par rack. Pousser l'air plus rapidement ne fait qu'augmenter le bruit et le gaspillage d'énergie sans résoudre le problème fondamental de stagnation thermique au niveau de la puce." },
+        { heading: "L'avantage Direct-to-Chip (D2C) de Wandtung", content: "Nous ne vendons pas seulement des cold plates. La solution Wandtung intègre le manifold D2C directement dans nos armoires serveur robustes. En acheminant le liquide de refroidissement jusqu'à la source de chaleur et en évacuant 90 % de la chaleur informatique par voie liquide, nous aidons les opérateurs à atteindre un PUE (Power Usage Effectiveness) aussi bas que 1,15 — une référence que les installations refroidies par air ne peuvent tout simplement pas égaler." },
+        { heading: "Le danger d'une infrastructure fragmentée", content: "De nombreux intégrateurs achètent le refroidissement liquide chez un fournisseur et les racks chez un autre. Cela entraîne une mauvaise gestion des câbles, une détection de fuite compromise et des interférences électriques. Le « système coordonné unique » de Wandtung garantit que l'armoire de refroidissement liquide, le manifold et le PDU intelligent fonctionnent comme un seul organisme, avec des capteurs intégrés communiquant sur un tableau de bord unifié." },
+        { heading: "Anticiper l'ère des 80 kW et plus", content: "L'évolution de l'IA ne ralentit pas. Notre architecture de refroidissement liquide est conçue pour l'évolutivité. Que vous déployiez 20 kW aujourd'hui ou que vous planifiiez 100 kW l'année prochaine, le châssis physique reste le même. Cette ingénierie modulaire définit l'engagement de Wandtung envers une croissance durable des IDC." },
+      ],
+      faqs: [
+        { question: "Puis-je adapter des racks refroidis par air au refroidissement liquide ?", answer: "Bien que possible, ce n'est pas efficace. Wandtung recommande une architecture de rack « prête pour le liquide » qui prend en charge le refroidissement hybride afin de garantir l'intégrité structurelle à long terme et la sécurité contre les fuites." },
+      ],
+    },
+    es: {
+      title: "Más allá de la refrigeración: por qué los centros de datos de IA requieren una arquitectura integrada de líquido a rack",
+      category: "Refrigeración líquida",
+      excerpt: "La refrigeración por aire tradicional ha alcanzado su límite térmico. Para los clústeres NVIDIA H100/H200, la refrigeración líquida ya no es una opción, es un requisito. Esta es la razón por la que Wandtung aboga por un enfoque D2C coordinado.",
+      readingTime: "6 min de lectura",
+      body: [
+        { heading: "El muro de potencia de la IA: por qué la refrigeración por aire falla a partir de 20kW", content: "A medida que los chips de IA como el H100 elevan el TDP (potencia de diseño térmico) más allá de los 700W, la densidad térmica por rack supera los 40kW. En Wandtung hemos observado que los sistemas CRAC refrigerados por aire estándar alcanzan su límite físico a los 20kW por rack. Impulsar el aire más rápido solo aumenta el ruido y el desperdicio de energía sin resolver el problema fundamental de estancamiento térmico a nivel del chip." },
+        { heading: "La ventaja Direct-to-Chip (D2C) de Wandtung", content: "No solo vendemos placas frías. La solución Wandtung integra el manifold D2C directamente en nuestros gabinetes de servidor de alta resistencia. Al llevar el refrigerante hasta la fuente de calor y eliminar el 90% del calor de TI mediante líquido, ayudamos a los operadores a lograr un PUE (Power Usage Effectiveness) tan bajo como 1.15, un estándar que las instalaciones refrigeradas por aire simplemente no pueden igualar." },
+        { heading: "El peligro de la infraestructura fragmentada", content: "Muchos integradores obtienen la refrigeración líquida de un proveedor y los racks de otro. Esto genera una gestión de cables deficiente, detección de fugas comprometida e interferencia eléctrica. El «Sistema Coordinado Único» de Wandtung garantiza que el gabinete de refrigeración líquida, el manifold y el PDU inteligente funcionen como un solo organismo, con sensores integrados que se comunican en un panel unificado." },
+        { heading: "Preparándose para la era de 80kW+", content: "La evolución de la IA no se está desacelerando. Nuestra arquitectura de refrigeración líquida está diseñada para la escalabilidad. Ya sea que esté implementando 20kW hoy o planificando 100kW el próximo año, el chasis físico sigue siendo el mismo. Esta ingeniería modular es lo que define el compromiso de Wandtung con el crecimiento sostenible de los IDC." },
+      ],
+      faqs: [
+        { question: "¿Puedo adaptar racks refrigerados por aire a refrigeración líquida?", answer: "Aunque es posible, es ineficiente. Wandtung recomienda una arquitectura de rack «lista para líquido» que admita refrigeración híbrida para garantizar la integridad estructural a largo plazo y la seguridad ante fugas." },
+      ],
+    },
+    ru: {
+      title: "Больше, чем просто охлаждение: почему дата-центрам ИИ нужна интегрированная архитектура «жидкость-в-стойку»",
+      category: "Жидкостное охлаждение",
+      excerpt: "Традиционное воздушное охлаждение достигло теплового предела. Для кластеров NVIDIA H100/H200 жидкостное охлаждение — это уже не опция, а необходимость. Вот почему Wandtung выступает за скоординированный подход D2C.",
+      readingTime: "6 мин на чтение",
+      body: [
+        { heading: "Стена мощности ИИ: почему воздушное охлаждение не справляется при 20 кВт+", content: "Поскольку чипы ИИ, такие как H100, увеличивают TDP (расчётную тепловую мощность) свыше 700 Вт, тепловая плотность на стойку превышает 40 кВт. В Wandtung мы наблюдали, что стандартные системы CRAC с воздушным охлаждением достигают своего физического предела при 20 кВт на стойку. Более интенсивная подача воздуха лишь увеличивает шум и потери энергии, не решая основную проблему застоя тепла на уровне чипа." },
+        { heading: "Преимущество прямого охлаждения чипа (D2C) от Wandtung", content: "Мы продаём не просто холодные пластины. Решение Wandtung интегрирует коллектор D2C непосредственно в наши прочные серверные шкафы. Доставляя хладагент к источнику тепла и отводя 90% тепла ИТ-оборудования жидкостью, мы помогаем операторам достигать PUE (эффективности использования энергии) на уровне до 1,15 — показателя, недостижимого для объектов с воздушным охлаждением." },
+        { heading: "Опасность фрагментированной инфраструктуры", content: "Многие интеграторы закупают жидкостное охлаждение у одного поставщика, а стойки — у другого. Это приводит к плохой организации кабелей, ненадёжному обнаружению утечек и электрическим помехам. «Единая скоординированная система» Wandtung гарантирует, что шкаф жидкостного охлаждения, коллектор и интеллектуальный PDU работают как единый организм, с интегрированными датчиками, передающими данные на единую панель управления." },
+        { heading: "Задел на будущее для эры 80 кВт+", content: "Развитие ИИ не замедляется. Наша архитектура жидкостного охлаждения спроектирована с расчётом на масштабируемость. Разворачиваете ли вы 20 кВт сегодня или планируете 100 кВт в следующем году, физическое шасси остаётся тем же. Именно эта модульная инженерия определяет приверженность Wandtung устойчивому росту дата-центров." },
+      ],
+      faqs: [
+        { question: "Можно ли модернизировать стойки с воздушным охлаждением до жидкостного?", answer: "Хотя это возможно, это неэффективно. Wandtung рекомендует архитектуру стоек, «готовых к жидкостному охлаждению», которая поддерживает гибридное охлаждение для обеспечения долгосрочной конструктивной целостности и безопасности от утечек." },
+      ],
+    },
+    zh: {
+      title: "不止于制冷：为何AI数据中心需要一体化的液冷到机架架构",
+      category: "液冷",
+      excerpt: "传统风冷已触及散热极限。对于NVIDIA H100/H200集群而言，液冷已不再是可选项，而是必需品。以下是万电通倡导协同式D2C方案的原因。",
+      readingTime: "6分钟阅读",
+      body: [
+        { heading: "AI功率墙：为何风冷在20kW+时失效", content: "随着H100等AI芯片的TDP（热设计功耗）突破700W，单机架热密度正飙升至40kW以上。万电通观察到，标准风冷CRAC系统在每机架20kW时便达到物理极限。加大风量只会增加噪音和能耗浪费，并不能解决芯片层面的核心散热瓶颈问题。" },
+        { heading: "万电通的芯片级直接冷却（D2C）优势", content: "我们不仅仅销售冷板。万电通的解决方案将D2C歧管直接集成到我们的重型服务器机柜中。通过将冷却液直接输送至热源，并以液体方式带走90%的IT热负荷，我们帮助运营商实现低至1.15的PUE（电源使用效率）——这是风冷设施根本无法企及的基准。" },
+        { heading: "碎片化基础设施的风险", content: "许多系统集成商从一家供应商采购液冷系统，从另一家采购机柜，这会导致走线混乱、漏液检测不可靠以及电气干扰等问题。万电通的“一体化协同系统”确保液冷机柜、歧管与智能PDU作为一个整体协同运行，内置传感器统一接入同一控制面板进行通信。" },
+        { heading: "面向80kW+时代的前瞻布局", content: "AI的演进步伐从未放缓。我们的液冷架构专为可扩展性而设计。无论您今天部署的是20kW，还是计划明年扩容至100kW，机柜物理结构都保持不变。这种模块化工程正是万电通对数据中心可持续发展承诺的体现。" },
+      ],
+      faqs: [
+        { question: "风冷机架能否改造为液冷？", answer: "虽然可行，但效率较低。万电通建议采用支持混合制冷的“液冷就绪”机架架构，以确保长期结构完整性与漏液安全。" },
       ],
     },
   },
