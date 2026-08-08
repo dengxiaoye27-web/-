@@ -268,6 +268,7 @@ export const articles: Article[] = [
           "Yes. Wandtung provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
       },
     ],
+    relatedArticleSlugs: ["why-ai-clusters-need-integrated-liquid-cooling"],
   },
   {
     slug: "why-ai-clusters-need-integrated-liquid-cooling",
@@ -310,6 +311,7 @@ export const articles: Article[] = [
       { label: "Explore Liquid Cooling Solutions", href: "/solutions/liquid-cooling" },
       { label: "Consult Our Engineers", href: "/contact" },
     ],
+    relatedArticleSlugs: ["what-is-a-cdu-in-liquid-cooling"],
   },
   {
     slug: "how-to-choose-a-data-center-pdu",

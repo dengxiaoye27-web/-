@@ -9,6 +9,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { FeatureGrid } from "@/components/product/FeatureGrid";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
+import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { RelatedSolutions } from "@/components/product/RelatedSolutions";
 import { InquiryCTA } from "@/components/product/InquiryCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -270,6 +271,15 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
             <SectionHeading eyebrow={t.relatedProductsEyebrow} title={t.relatedProductsTitle} />
             <div className="mt-8">
               <RelatedProducts slugs={product.relatedProductSlugs} />
+            </div>
+          </section>
+        ) : null}
+
+        {product.relatedArticleSlugs?.length ? (
+          <section>
+            <SectionHeading eyebrow={t.relatedArticlesEyebrow} title={t.relatedArticlesTitle} />
+            <div className="mt-8">
+              <RelatedArticles slugs={product.relatedArticleSlugs} locale={locale} />
             </div>
           </section>
         ) : null}

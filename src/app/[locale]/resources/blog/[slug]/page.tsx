@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
+import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticle, articles } from "@/data/articles";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
@@ -105,6 +106,14 @@ export default async function ArticlePage({
           <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.faqTitle}</h2>
           <Accordion items={content.faqs} />
         </div>
+
+        {article.relatedArticleSlugs?.length ? (
+          <div className="mt-16">
+            <p className="eyebrow mb-2">{t.relatedArticlesEyebrow}</p>
+            <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.relatedArticlesTitle}</h2>
+            <RelatedArticles slugs={article.relatedArticleSlugs} locale={locale} />
+          </div>
+        ) : null}
 
         <div className="max-w-3xl mt-16 rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 text-center">
           <h3 className="text-xl font-semibold">{t.ctaTitle}</h3>

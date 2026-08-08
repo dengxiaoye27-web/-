@@ -2192,6 +2192,7 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["liquid-cooling", "liquid-cooling-cabinet", "precision-air-conditioner"],
     relatedSolutionSlugs: ["liquid-cooling", "ai-data-center"],
+    relatedArticleSlugs: ["what-is-a-cdu-in-liquid-cooling", "why-ai-clusters-need-integrated-liquid-cooling"],
   },
   {
     slug: "liquid-cooling-cabinet",
@@ -2259,6 +2260,7 @@ export const products: Product[] = [
     ],
     relatedProductSlugs: ["cdu", "liquid-cooling", "dry-cooler", "network-cabinet"],
     relatedSolutionSlugs: ["liquid-cooling", "ai-data-center"],
+    relatedArticleSlugs: ["why-ai-clusters-need-integrated-liquid-cooling", "what-is-a-cdu-in-liquid-cooling"],
   },
   {
     slug: "row-based-cooling",

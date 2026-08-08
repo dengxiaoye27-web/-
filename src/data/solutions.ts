@@ -269,6 +269,7 @@ export const solutions: Solution[] = [
       },
     ],
     relatedProductSlugs: ["cdu", "liquid-cooling", "precision-air-conditioner"],
+    relatedArticleSlugs: ["why-ai-clusters-need-integrated-liquid-cooling", "what-is-a-cdu-in-liquid-cooling"],
   },
   {
     slug: "critical-power",
