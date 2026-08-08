@@ -2129,6 +2129,10 @@ export const products: Product[] = [
     overview:
       "Wandtung's liquid cooling solution combines cold plate liquid cooling at the server level with a coolant distribution unit (CDU) managing primary and secondary loops, enabling data centers to cool high-density AI training and HPC racks beyond the practical limits of air cooling.",
     featured: true,
+    images: [
+      "/products/liquid-cooling/01-system-architecture.jpg",
+      "/products/liquid-cooling/02-cooling-loop-detail.jpg",
+    ],
     keyFeatures: [
       "Cold plate direct-to-chip liquid cooling",
       "CDU-managed primary and secondary loop separation",
@@ -2211,12 +2215,10 @@ export const products: Product[] = [
       "The Wandtung Liquid Cooling Cabinet is a 42U standard rack purpose-built for direct-to-chip liquid cooling of AI and GPU servers, supporting 20–80kW+ per rack. Each cabinet integrates a quick-disconnect coolant manifold, direct-to-chip cold plates with micro-channel design, stainless steel coolant piping and a brazed copper plate heat exchanger, connecting into a facility-level liquid cooling system alongside a CDU, dry cooler or cooling tower and secondary loop.",
     featured: true,
     images: [
-      "/products/liquid-cooling-cabinet/01-system-architecture.jpg",
-      "/products/liquid-cooling-cabinet/02-main-annotated.jpg",
-      "/products/liquid-cooling-cabinet/03-open-door-cooling-loop.jpg",
-      "/products/liquid-cooling-cabinet/04-core-components.jpg",
-      "/products/liquid-cooling-cabinet/05-key-features.jpg",
-      "/products/liquid-cooling-cabinet/06-angled-view-indicator-light.jpg",
+      "/products/liquid-cooling-cabinet/01-main-annotated.jpg",
+      "/products/liquid-cooling-cabinet/02-core-components.jpg",
+      "/products/liquid-cooling-cabinet/03-key-features.jpg",
+      "/products/liquid-cooling-cabinet/04-angled-view-indicator-light.jpg",
     ],
     keyFeatures: [
       "42U standard rack, 20–80kW+ per rack cooling capacity",
