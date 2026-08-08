@@ -36,7 +36,9 @@ fi
 echo "$LOG_PREFIX New commit detected: $LOCAL_SHA -> $REMOTE_SHA"
 
 git pull origin "$BRANCH"
-npm ci --omit=dev --no-audit --no-fund || npm install --omit=dev --no-audit --no-fund
+# Full install (not --omit=dev): the Next.js build needs devDependencies
+# like @tailwindcss/postcss at build time, even though they're unused at runtime.
+npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 npm run build
 
 pm2 restart "$PM2_APP_NAME"
