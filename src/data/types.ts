@@ -100,8 +100,3 @@ export interface Article {
   ctaLinks?: { label: string; href: string }[];
   relatedArticleSlugs?: string[];
 }
-
-export interface Certification {
-  name: string;
-  description: string;
-}
