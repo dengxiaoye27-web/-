@@ -43,6 +43,7 @@ export interface Product {
   faqs: FaqItem[];
   relatedProductSlugs: string[];
   relatedSolutionSlugs: string[];
+  relatedArticleSlugs?: string[];
 }
 
 export interface Solution {
@@ -58,6 +59,7 @@ export interface Solution {
   typicalApplications: string[];
   faqs: FaqItem[];
   relatedProductSlugs: string[];
+  relatedArticleSlugs?: string[];
 }
 
 export type ProjectIndustry =
@@ -96,6 +98,7 @@ export interface Article {
   body: { heading: string; content: string }[];
   faqs: FaqItem[];
   ctaLinks?: { label: string; href: string }[];
+  relatedArticleSlugs?: string[];
 }
 
 export interface Certification {

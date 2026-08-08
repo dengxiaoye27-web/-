@@ -27,6 +27,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "Related Solutions",
     relatedProductsEyebrow: "Explore More",
     relatedProductsTitle: "Related Products",
+    relatedArticlesEyebrow: "From Our Blog",
+    relatedArticlesTitle: "Related Articles",
     categoryComingSoon: "Detailed product pages for this category are being added. Contact our engineering team for current availability and specifications.",
   },
   ar: {
@@ -54,6 +56,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "حلول ذات صلة",
     relatedProductsEyebrow: "استكشف المزيد",
     relatedProductsTitle: "منتجات ذات صلة",
+    relatedArticlesEyebrow: "من مدونتنا",
+    relatedArticlesTitle: "مقالات ذات صلة",
     categoryComingSoon: "يتم حالياً إضافة صفحات تفصيلية للمنتجات في هذه الفئة. تواصل مع فريقنا الهندسي للاطلاع على التوافر الحالي والمواصفات.",
   },
   fr: {
@@ -81,6 +85,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "Solutions associées",
     relatedProductsEyebrow: "En savoir plus",
     relatedProductsTitle: "Produits associés",
+    relatedArticlesEyebrow: "Depuis notre blog",
+    relatedArticlesTitle: "Articles associés",
     categoryComingSoon: "Les pages détaillées des produits de cette catégorie sont en cours d'ajout. Contactez notre équipe d'ingénierie pour connaître la disponibilité actuelle et les spécifications.",
   },
   es: {
@@ -108,6 +114,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "Soluciones relacionadas",
     relatedProductsEyebrow: "Explorar más",
     relatedProductsTitle: "Productos relacionados",
+    relatedArticlesEyebrow: "De nuestro blog",
+    relatedArticlesTitle: "Artículos relacionados",
     categoryComingSoon: "Se están añadiendo páginas detalladas de productos para esta categoría. Contacte a nuestro equipo de ingeniería para conocer la disponibilidad actual y las especificaciones.",
   },
   ru: {
@@ -135,6 +143,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "Смежные решения",
     relatedProductsEyebrow: "Смотреть также",
     relatedProductsTitle: "Похожие продукты",
+    relatedArticlesEyebrow: "Из нашего блога",
+    relatedArticlesTitle: "Похожие статьи",
     categoryComingSoon: "Подробные страницы товаров для этой категории добавляются. Свяжитесь с нашей инженерной командой, чтобы узнать о текущей доступности и характеристиках.",
   },
   zh: {
@@ -162,6 +172,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedSolutionsTitle: "相关解决方案",
     relatedProductsEyebrow: "了解更多",
     relatedProductsTitle: "相关产品",
+    relatedArticlesEyebrow: "来自我们的博客",
+    relatedArticlesTitle: "相关文章",
     categoryComingSoon: "该分类下的详细产品页面正在陆续添加中。请联系我们的工程团队了解当前可提供的产品及规格。",
   },
 };

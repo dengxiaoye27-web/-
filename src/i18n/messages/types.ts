@@ -174,6 +174,8 @@ export interface SolutionsUIMessages {
     appsTitle: string;
     faqEyebrow: string;
     faqTitle: string;
+    relatedArticlesEyebrow: string;
+    relatedArticlesTitle: string;
     ctaTitle: string;
     ctaDescription: string;
     ctaButton: string;
@@ -205,6 +207,8 @@ export interface ProductsUIMessages {
   relatedSolutionsTitle: string;
   relatedProductsEyebrow: string;
   relatedProductsTitle: string;
+  relatedArticlesEyebrow: string;
+  relatedArticlesTitle: string;
   categoryComingSoon: string;
 }
 
@@ -237,6 +241,8 @@ export interface ResourcesUIMessages {
   hubTitle: string;
   hubSubtitle: string;
   faqTitle: string;
+  relatedArticlesEyebrow: string;
+  relatedArticlesTitle: string;
   ctaTitle: string;
   ctaButton: string;
 }
