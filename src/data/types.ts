@@ -14,6 +14,7 @@ export interface ProductCategory {
   name: string;
   shortDescription: string;
   heroTagline: string;
+  sellingPoints?: string[];
 }
 
 export interface SpecGroup {

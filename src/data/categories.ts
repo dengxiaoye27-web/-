@@ -7,6 +7,13 @@ export const productCategories: ProductCategory[] = [
     shortDescription:
       "Rack PDUs, intelligent PDUs, high power PDUs, ATS PDUs and STS for reliable, monitored power distribution at the rack level.",
     heroTagline: "Precision power distribution for every rack, every load.",
+    sellingPoints: [
+      "Multiple outlet standards — Schuko, NEMA, UK, IEC",
+      "1U horizontal or 0U vertical mounting options",
+      "Optional surge protection (SPD)",
+      "Metered, monitored or switched intelligence levels available",
+      "Factory-direct supply with OEM/ODM customization",
+    ],
   },
   {
     slug: "ups-systems",

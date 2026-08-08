@@ -210,6 +210,7 @@ export interface ProductsUIMessages {
   relatedArticlesEyebrow: string;
   relatedArticlesTitle: string;
   categoryComingSoon: string;
+  categorySelectionCta: string;
 }
 
 export interface ProjectsUIMessages {
