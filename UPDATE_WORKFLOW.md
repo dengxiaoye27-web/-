@@ -26,20 +26,19 @@ Once merged, the deploy-watch script (see below) picks it up on its own within a
 ## One-time server setup (you or whoever has SSH access needs to do this once)
 
 1. Pull the latest `claude/claude-md-docs-81a9sj` so `scripts/deploy-watch.sh` is on the server.
-2. Open `scripts/deploy-watch.sh` and set `PROJECT_DIR` (the absolute path to this project on the server) and `PM2_APP_NAME` (run `pm2 list` if you're not sure of the exact name) to match your setup.
-3. Make it executable:
+2. Make it executable:
    ```bash
    chmod +x scripts/deploy-watch.sh
    ```
-4. Add a crontab entry to run it every 3 minutes:
+3. Add a crontab entry to run it every 3 minutes — **set `PROJECT_DIR` and `PM2_APP_NAME` as environment variables on the crontab line itself, don't edit the script file**. The script is tracked in git and overwritten by `git pull` on every run, so any values hardcoded directly in the file will conflict with the next update and silently stop deploys.
    ```bash
    crontab -e
    ```
-   Add this line (adjust the path):
+   Add this line (adjust the path and PM2 app name — run `pm2 list` if unsure):
    ```
-   */3 * * * * /home/admin/wandtung-app/scripts/deploy-watch.sh >> /home/admin/wandtung-app/deploy.log 2>&1
+   */3 * * * * PROJECT_DIR=/home/admin/wandtung-app PM2_APP_NAME=wandtung-app /home/admin/wandtung-app/scripts/deploy-watch.sh >> /home/admin/wandtung-app/deploy.log 2>&1
    ```
-5. Verify it's working: make any small merge, then watch `deploy.log` — you should see a `New commit detected` / `Deployed ... and restarted ...` line appear within 3 minutes, with no action from you.
+4. Verify it's working: make any small merge, then watch `deploy.log` — you should see a `New commit detected` / `Deployed ... and restarted ...` line appear within 3 minutes, with no action from you.
 
 The script is idempotent and quiet when there's nothing new, so it's safe to leave running indefinitely. If a deploy ever fails (bad `npm run build`, etc.), `set -euo pipefail` stops the script before `pm2 restart`, so the site keeps running the last-good build — check `deploy.log` for the error.
 
