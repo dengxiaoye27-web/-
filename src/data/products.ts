@@ -2896,6 +2896,13 @@ export const products: Product[] = [
     tagline: "Lightweight welded wire mesh tray for structured, field-modifiable cable pathways.",
     overview:
       "Wandtung Wire Mesh Cable Tray is a welded wire construction that's lightweight, ventilated and easy to cut and reconfigure on site, making it a common choice for structured data and fiber cabling pathways above racks or along containment routes.",
+    images: [
+      "/products/wire-mesh-cable-tray/01-main-view.jpg",
+      "/products/wire-mesh-cable-tray/02-top-view.jpg",
+      "/products/wire-mesh-cable-tray/03-installation-detail.jpg",
+      "/products/wire-mesh-cable-tray/04-continuous-run.jpg",
+      "/products/wire-mesh-cable-tray/05-mounting-options.jpg",
+    ],
     keyFeatures: [
       "Welded wire construction — lightweight and highly ventilated",
       "Field-cuttable and reconfigurable without special tools",
