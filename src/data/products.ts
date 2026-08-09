@@ -1785,6 +1785,13 @@ export const products: Product[] = [
     tagline: "Compact micro module with cabinets arranged in a single row for small deployments.",
     overview:
       "The Wandtung Single Row Micro Data Center arranges IT cabinets in a single row with rear or side power and cooling infrastructure, sized for small equipment rooms and branch sites where a full dual-row containment layout isn't needed.",
+    images: [
+      "/products/single-row-micro-data-center/01-main-view.jpg",
+      "/products/single-row-micro-data-center/02-rack-configuration.jpg",
+      "/products/single-row-micro-data-center/03-deployment-scene.jpg",
+      "/products/single-row-micro-data-center/04-key-specifications.jpg",
+      "/products/single-row-micro-data-center/05-component-integration.jpg",
+    ],
     keyFeatures: [
       "Single-row cabinet layout for compact footprint",
       "Integrated UPS, PDU and cooling",
@@ -1822,6 +1829,7 @@ export const products: Product[] = [
     tagline: "Micro module with cabinets facing in two rows and hot/cold aisle containment.",
     overview:
       "The Wandtung Dual Row Micro Data Center arranges IT cabinets in two facing rows with hot or cold aisle containment between them, improving cooling efficiency over a single-row layout for mid-size deployments with higher cabinet counts or density.",
+    images: ["/products/dual-row-micro-data-center/01-dual-row-layout.jpg"],
     keyFeatures: [
       "Dual-row layout with hot/cold aisle containment",
       "Higher cabinet density per footprint than single row",
