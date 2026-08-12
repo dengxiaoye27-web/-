@@ -387,6 +387,64 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "air-cooling-vs-liquid-cooling-ai-data-centers",
+    title: "Air Cooling vs Liquid Cooling for AI Data Centers",
+    metaTitle: "Air Cooling vs Liquid Cooling for AI Data Centers | WANDTUNG",
+    category: "Liquid Cooling",
+    excerpt:
+      "Air cooling vs liquid cooling for AI data centers: when precision AC and in-row cooling are enough, and when cold plate cooling with a CDU is needed.",
+    publishedAt: "2026-08-10",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Why AI Racks Are Changing Data Center Cooling Requirements",
+        content:
+          "For most of the industry's history, air cooling was simply the default. A raised floor, a row of precision air conditioners, and enough airflow to keep a few kilowatts per rack within range — that was the whole design problem. AI and HPC compute racks broke that assumption. GPU servers pack far more heat into the same footprint than traditional enterprise racks: where a conventional enterprise rack typically drew somewhere in the range of 3–8 kW, AI and GPU racks in new deployments now commonly run at 30–100 kW per rack, and dense training clusters can push higher still. The result is that \"how do we cool this rack\" is no longer a single answer. Air cooling hasn't become obsolete — plenty of infrastructure around and alongside AI clusters still runs comfortably on air. But above a certain density, air alone struggles to remove heat fast enough, and liquid cooling stops being an exotic option and becomes the practical one. Choosing correctly, rack by rack, is now a real engineering decision — not a default.",
+      },
+      {
+        heading: "Air Cooling: Precision AC and In-Row Cooling",
+        content:
+          "Air cooling covers the largest share of data center white space today, and for good reason: it's a mature, well-understood approach with a large base of installed expertise, and it remains the right choice for a wide range of rack densities. Precision (close-control) air conditioning — sometimes called CRAC — is built specifically for IT environments rather than general comfort cooling. It holds tighter temperature and humidity tolerances than a standard HVAC unit, runs continuously in 24/7 duty cycles, and moves far more air per ton of cooling capacity. Precision units are typically deployed at the room perimeter, distributing conditioned air under a raised floor or from overhead, and they remain a cost-effective baseline for lower-density rooms — data halls, telecom equipment rooms, and control rooms where rack loads stay within air's comfortable range. WANDTUNG precision air conditioners are available in a range of cooling capacities to match different room-level loads. In-row cooling takes the same underlying approach and moves it closer to the load. Instead of cooling the whole room from the perimeter, in-row units sit directly within the cabinet row, in the same footprint as an IT cabinet, placing cooling capacity immediately next to the racks generating heat. Paired with hot/cold aisle containment, this shortens the airflow path and gives tighter, more predictable temperature control at the row level — a meaningful step up in density over pure room cooling, without moving to liquid. Air cooling — whether room-level or row-level — is the right call when rack density stays within air's practical limits, when a facility needs to standardize on infrastructure with broad site experience, and when a lower-density room doesn't justify the added plumbing complexity of a liquid loop. As a general industry guideline, air-based cooling (including in-row) is most commonly applied up to around 15–20 kW per rack, though the practical limit depends on containment and airflow design.",
+      },
+      {
+        heading: "Liquid Cooling: Cold Plate and CDU",
+        content:
+          "Once rack power density crosses that threshold, air cooling runs into physics: there's a limit to how much heat a given volume of air can carry away per unit time, no matter how much airflow you add. Liquid cooling exists because liquid has far higher thermal capacity than air, letting it move much more heat through a much smaller footprint. Cold plate (direct-to-chip) liquid cooling attaches a liquid-cooled plate directly to the CPU, GPU, or other high-heat components inside the server, removing heat at the source rather than relying on air to carry it away from the whole chassis. This is the technology behind most high-density AI and GPU training deployments today, because it scales to power densities that air cooling — even in-row — cannot practically reach. Cold plate cooling doesn't work in isolation; it depends on a CDU (Coolant Distribution Unit), the equipment that manages the loop. A CDU separates and controls the primary (facility) cooling loop from the secondary (rack/server) loop, handling pumping, heat exchange, filtration, leak detection, and flow/temperature/pressure monitoring. This separation matters because it isolates facility water — which varies in quality, pressure, and cleanliness — from the closed, controlled loop that actually touches IT hardware, protecting servers while still allowing precise temperature control at the rack. Liquid cooling is the right call for AI training clusters, HPC racks, and any deployment where GPU density has pushed per-rack power beyond what air cooling can reject — accepting the added complexity of a coolant loop, leak detection, and CDU management in exchange for cooling capacity air simply cannot deliver at that density.",
+      },
+      {
+        heading: "How to Choose: Matching Cooling to Rack Power Density",
+        content:
+          "There's no universal cutover point that applies to every facility — the right answer depends on rack layout, containment, ambient conditions, and site infrastructure as much as on power density alone. But as a starting framework: lower-density rooms, where per-rack load stays roughly under 10 kW, are generally well served by precision (room-level) air conditioning as a baseline, especially in telecom rooms, control rooms, and smaller equipment spaces without dedicated high-density zones. Mid-to-higher density racks, in the range of roughly 10–20 kW per rack, typically benefit from moving to in-row cooling, which keeps the simplicity of an air-based system while closing the distance between cooling capacity and the load. High-density AI/GPU racks, above roughly 20 kW per rack, are where cold plate liquid cooling with a CDU becomes the practical choice, since air (room or row-level) can no longer reject heat fast enough regardless of airflow. These ranges are general industry guidelines, not fixed rules — the actual crossover for your facility depends on containment, airflow, and site conditions. Many real deployments don't pick one approach exclusively — a facility might run air cooling across its general enterprise floor while carving out a liquid-cooled zone for a dedicated AI cluster, or use room cooling as a baseline layer alongside row-based units at hot spots. Because WANDTUNG manufactures precision air conditioners, in-row cooling units, cold plate liquid cooling systems, and CDUs, we can help specify a design that covers the full range from air to liquid within a single project — including hybrid layouts — rather than treating it as an either/or decision made once for the whole facility.",
+      },
+    ],
+    ctaLinks: [
+      { label: "Explore our cooling solutions →", href: "/solutions" },
+      { label: "Request a quote →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "Is liquid cooling always better than air cooling for AI workloads?",
+        answer:
+          "Not automatically — \"better\" depends on rack density and site requirements. Liquid cooling handles higher power densities than air can reject, but it adds plumbing, leak detection, and CDU management that isn't necessary for racks air can already cool effectively. The right choice depends on the actual load per rack, not the workload type alone.",
+      },
+      {
+        question: "Can air cooling and liquid cooling be used in the same data center?",
+        answer:
+          "Yes. It's common to run air cooling — room-level or in-row — across general enterprise racks while using cold plate liquid cooling with a CDU in a dedicated zone for high-density AI or GPU racks, rather than converting an entire facility to one method.",
+      },
+      {
+        question: "What is a CDU and why does cold plate cooling need one?",
+        answer:
+          "A CDU (Coolant Distribution Unit) manages the coolant loop for cold plate liquid cooling, separating the facility (primary) water loop from the closed secondary loop that touches IT hardware, while handling pumping, heat exchange, filtration, leak detection, and monitoring. Without it, facility water quality and pressure variation would be a direct risk to server hardware.",
+      },
+      {
+        question: "At what rack power density should I consider switching from air to liquid cooling?",
+        answer:
+          "This depends on your specific rack layout, containment, and site conditions, so there's no single number that applies everywhere. As a general industry guideline, air-based cooling is common up to around 15–20 kW per rack, with cold plate liquid cooling becoming the practical choice above that. Our engineering team can review your target rack density and recommend whether air, liquid, or a hybrid approach fits your deployment.",
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
