@@ -21,7 +21,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-navy-700 bg-navy-950/95 backdrop-blur">
       <div className="container-page flex h-[72px] md:h-[88px] items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo_C_navbar.svg" alt="Wandtung" width={160} height={36} className="h-8 md:h-9 w-auto" priority />
+          <Image src="/logo_wandtung.png" alt="Wandtung" width={165} height={36} className="h-8 md:h-9 w-auto" priority />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-2" aria-label="Main">
