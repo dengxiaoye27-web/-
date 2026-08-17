@@ -18,7 +18,7 @@ export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-700 bg-navy-950/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line-200 bg-white/95 backdrop-blur">
       <div className="container-page flex h-[72px] md:h-[88px] items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image src="/logo_wandtung.png" alt="Wandtung" width={165} height={36} className="h-8 md:h-9 w-auto" priority />
@@ -34,11 +34,11 @@ export function SiteHeader() {
             >
               <Link
                 href={item.href}
-                className="flex items-center gap-1 px-5 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
+                className="flex items-center gap-1 px-5 py-2 text-sm font-medium text-ink-700 hover:text-ink-900 transition-colors"
               >
                 {item.label}
                 {item.children ? (
-                  <span aria-hidden className="text-xs text-white/40">
+                  <span aria-hidden className="text-xs text-ink-400">
                     ▾
                   </span>
                 ) : null}
@@ -46,22 +46,22 @@ export function SiteHeader() {
 
               {item.children && openMenu === item.label ? (
                 <div className="absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-2">
-                  <div className="rounded-2xl border border-navy-700 bg-navy-900 p-6 shadow-2xl">
+                  <div className="rounded-2xl border border-line-200 bg-white p-6 shadow-2xl">
                     <div className="grid grid-cols-2 gap-x-8 gap-y-1">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-navy-800 hover:text-white transition-colors"
+                          className="rounded-lg px-3 py-2 text-sm text-ink-600 hover:bg-paper-50 hover:text-ink-900 transition-colors"
                         >
                           {child.label}
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-4 border-t border-navy-700 pt-4">
+                    <div className="mt-4 border-t border-line-200 pt-4">
                       <Link
                         href={item.href}
-                        className="text-sm font-medium text-accent-400 hover:text-accent-500"
+                        className="text-sm font-medium text-accent-500 hover:opacity-80"
                       >
                         {t.nav.viewAll} {item.label} →
                       </Link>
@@ -80,7 +80,7 @@ export function SiteHeader() {
           </Button>
           <button
             type="button"
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-ink-900 p-2"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
           >
