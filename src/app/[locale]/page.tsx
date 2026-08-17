@@ -30,7 +30,7 @@ import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Data Center Infrastructure & Critical Power Solutions",
+  title: "Data Center Infrastructure & Critical Power Solutions | Wandtung",
   description:
     "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
   alternates: { canonical: "/" },
