@@ -46,22 +46,22 @@ export function SiteHeader() {
 
               {item.children && openMenu === item.label ? (
                 <div className="absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-2">
-                  <div className="rounded-2xl border border-line-200 bg-white p-6 shadow-2xl">
+                  <div className="rounded-2xl border border-navy-700 bg-navy-900 p-6 shadow-2xl">
                     <div className="grid grid-cols-2 gap-x-8 gap-y-1">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="rounded-lg px-3 py-2 text-sm text-ink-600 hover:bg-paper-50 hover:text-ink-900 transition-colors"
+                          className="rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-navy-800 hover:text-white transition-colors"
                         >
                           {child.label}
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-4 border-t border-line-200 pt-4">
+                    <div className="mt-4 border-t border-navy-700 pt-4">
                       <Link
                         href={item.href}
-                        className="text-sm font-medium text-accent-500 hover:opacity-80"
+                        className="text-sm font-medium text-accent-400 hover:text-accent-500"
                       >
                         {t.nav.viewAll} {item.label} →
                       </Link>

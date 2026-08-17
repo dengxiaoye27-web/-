@@ -32,14 +32,14 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
         <span aria-hidden className="text-xs text-ink-400">▾</span>
       </button>
       <div className="absolute right-0 top-full pt-2 hidden group-hover:block">
-        <div className="w-40 rounded-xl border border-line-200 bg-white p-2 shadow-2xl">
+        <div className="w-40 rounded-xl border border-navy-700 bg-navy-900 p-2 shadow-2xl">
           {locales.map((locale) => {
             const href = locale === defaultLocale ? bare : `/${locale}${bare}`;
             return (
               <a
                 key={locale}
                 href={href}
-                className="block rounded-lg px-3 py-2 text-sm text-ink-600 hover:bg-paper-50 hover:text-ink-900"
+                className="block rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-navy-800 hover:text-white"
               >
                 {localeNames[locale]}
               </a>
