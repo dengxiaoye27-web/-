@@ -5,7 +5,11 @@ export interface ArticleContent {
   category: string;
   excerpt: string;
   readingTime: string;
-  body: { heading: string; content: string }[];
+  body: {
+    heading: string;
+    content: string;
+    diagram?: { nodes: string[]; caption: string };
+  }[];
   faqs: { question: string; answer: string }[];
 }
 

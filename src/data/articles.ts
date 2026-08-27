@@ -445,6 +445,79 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "solar-storage-bess-data-center-guide",
+    title: "What Is a BESS (Battery Energy Storage System)? A Buyer's Guide for Data Centers & C&I Projects",
+    metaTitle: "What Is a BESS? A Buyer's Guide for Data Centers | WANDTUNG",
+    category: "Energy Storage",
+    excerpt:
+      "What is a BESS (Battery Energy Storage System)? A buyer's guide to solar + storage for data centers and C&I sites, covering sizing, specs and suppliers.",
+    publishedAt: "2026-08-18",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Overview",
+        content:
+          "Grid power in much of Southeast Asia and the Middle East wasn't built for the load profile modern data centers and industrial sites now demand — voltage sags, planned and unplanned outages, and rising peak-hour tariffs all cut into uptime and margin at once. A battery energy storage system (BESS), especially paired with solar generation, has become one of the most direct ways to buy back control over both problems. This guide covers what a BESS actually is, why data center and commercial and industrial (C&I) buyers are specifying one, the parameters that matter most when comparing systems, and what to check before choosing a supplier.",
+      },
+      {
+        heading: "What Is a Solar + Storage / BESS System?",
+        content:
+          "A BESS combines three core components: battery racks — almost always lithium iron phosphate (LFP) today, for its stability and cycle life over other lithium chemistries — a power conversion system (PCS) that converts between the battery's DC and the site's AC power, and an energy management system (EMS) that decides when the system charges, discharges, or islands from the grid. Pair that with a solar (PV) array and you have a solar-plus-storage system: the array generates during the day, the BESS stores what isn't used immediately, and the EMS releases it based on load, tariff schedule, or grid status. It's worth being clear about how this differs from equipment already on most sites. A UPS protects IT load for minutes during a transfer to backup power; a diesel generator provides long-duration backup but only after it starts and only while fuel lasts. A BESS does both — bridging the gap instantly like a UPS, but sustaining load for hours like a generator — while also working continuously for peak shaving and, when paired with solar, using clean generation instead of burning fuel.",
+        diagram: {
+          nodes: ["Solar PV Array", "Battery Racks (LFP)", "PCS", "EMS", "Site Load / Grid"],
+          caption:
+            "Simplified solar-plus-storage architecture — the PV array generates power, the PCS converts between DC and AC, and the EMS directs energy to site load, storage, or the grid based on demand and tariff conditions.",
+        },
+      },
+      {
+        heading: "Why Data Centers and C&I Sites Need BESS",
+        content:
+          "Three drivers keep coming up in buyer conversations. Grid reliability: in markets where the grid itself is a variable — voltage fluctuation, load shedding, or unplanned outages — a BESS provides ride-through and backup that doesn't depend on a generator start sequence. Energy cost management: many commercial tariff structures charge a demand rate based on peak draw, separate from consumption — a BESS can shave that peak by discharging during high-tariff windows, and in time-of-use markets it can charge on cheap off-peak power and discharge when rates are high. Compliance and sustainability targets: an increasing number of data center customers and industrial buyers face ESG reporting or customer audit requirements that favor renewable-backed power, and solar-plus-storage is one of the more straightforward ways to show progress against those targets. A BESS doesn't replace a data center's existing power and cooling infrastructure — it sits alongside the UPS, precision air conditioning and rack cabinets already on site, adding a layer of resilience and cost control rather than competing with what's already installed.",
+      },
+      {
+        heading: "Grid Conditions in Southeast Asia and the Middle East",
+        content:
+          "Grid conditions across Southeast Asia and the Middle East vary by country and even by industrial zone, but a few patterns come up repeatedly with prospective buyers in these markets. Distribution feeders serving newer industrial parks or rural sites are often more prone to voltage sags and brief interruptions than to long outages — exactly the failure mode a BESS rides through better than a generator that needs time to start. Commercial and industrial tariff structures in many of these markets separate a demand charge, based on peak draw, from the energy charge, based on total consumption, so a facility's peak load during a short window — not just its average draw — can drive a meaningful share of the power bill. And as solar adoption accelerates across the region, some utilities are asking new large loads to bring their own backup or storage capacity rather than drawing entirely from grid infrastructure that's still catching up to demand growth. None of this is universal — grid quality, tariff design and interconnection rules differ by country and by utility — which is why sizing a BESS starts with your own site's load profile and local grid conditions, not a generic regional assumption.",
+      },
+      {
+        heading: "Key Specifications to Check When Choosing a BESS",
+        content:
+          "Capacity (kWh/MWh): size the system to the load you actually need to carry and for how long — a backup-only application sized for 30 minutes of ride-through looks very different from a peak-shaving system sized to shift several hours of demand. Battery chemistry: LFP is now the standard choice for stationary storage because of its thermal stability and long cycle life compared to older lithium chemistries — our containerized systems, for example, are rated for more than 6,000 cycles. Form factor: a cabinet-format system — outdoor-rated, liquid-cooled, and built around a compact footprint — suits C&I sites that want to start small and add cabinets in parallel as load grows, typically covering roughly 250kW–1000kW per multi-cabinet system; a containerized system packages everything into a single outdoor ISO container and suits sites that need a large amount of capacity — up to several thousand kWh — in one self-contained unit. Grid mode: confirm whether you need grid-tied (offsetting consumption while staying connected), off-grid (fully independent), or hybrid operation, since this affects both the PCS and EMS configuration. Certifications: our battery energy storage and solar power systems are CE certified, and our containerized ESS is additionally built to UL/IEC international safety standards — for any given project, confirm which specific certifications apply to the exact model being quoted, since coverage can still vary by configuration. Exact ratings, dimensions and cycle-life figures for any specific configuration are confirmed in your project quotation.",
+      },
+      {
+        heading: "How to Choose a BESS Supplier",
+        content:
+          "Beyond the datasheet, the practical differences between suppliers show up in customization ability, lead time, after-sales support and spare parts availability in your region, and a track record you can actually verify. On that last point, be precise about what a supplier is telling you: a market a company is targeting or capable of serving is not the same claim as a project it has already delivered, and a buyer evaluating suppliers should ask which is which. Wandtung's own background is in cross-border industrial trade, and our energy storage and structural work benefits from an in-house aluminum processing base that supports the mounting structures, cabinets and enclosures built around the battery and power electronics — a manufacturing synergy that's genuinely part of how these systems get built, not a separate marketing claim. If you're evaluating a data center backup or C&I energy storage system for a project in Southeast Asia, the Middle East, or elsewhere, we're glad to review your load profile and site conditions and suggest a configuration to quote.",
+      },
+    ],
+    ctaLinks: [
+      { label: "Explore our Energy Storage & Solar products →", href: "/products/energy-storage" },
+      { label: "Request a quote →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "How long does a BESS typically last?",
+        answer:
+          "Lifespan is usually described in charge/discharge cycles rather than years alone, since it depends on how hard the system is used. LFP-based systems are generally rated for several thousand cycles at the pack level — our containerized ESS, for example, is rated above 6,000 cycles. Actual calendar life depends on operating conditions and duty cycle, and is confirmed for each configuration in the project quotation.",
+      },
+      {
+        question: "What's the difference between a containerized BESS and a cabinet-format BESS?",
+        answer:
+          "A containerized system packages the full battery, PCS, EMS and cooling inside a single outdoor ISO container and suits sites needing a large amount of capacity in one self-contained unit. A cabinet-format system is a smaller, outdoor-rated all-in-one unit that's easier to stage — you can start with one cabinet and parallel more as load grows, which suits many C&I sites better than committing to full container capacity upfront.",
+      },
+      {
+        question: "Can a solar-plus-storage system run fully off-grid, without the utility connection?",
+        answer:
+          "Yes, when the PCS and EMS are configured for off-grid (or hybrid) operation — but the array and battery capacity both need to be sized for the site's actual load and the local solar resource, not just peak demand, so that sizing exercise should happen before you request a quote, not after installation.",
+      },
+      {
+        question: "How long does it take to receive a BESS system after ordering?",
+        answer:
+          "Lead time depends on the capacity, form factor and level of customization ordered, so there's no single number that applies to every order — ask for a project-specific lead time as part of your quotation request.",
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {

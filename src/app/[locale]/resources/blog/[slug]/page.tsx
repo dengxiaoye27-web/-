@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
+import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
 import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticle, articles } from "@/data/articles";
@@ -88,6 +89,11 @@ export default async function ArticlePage({
             <div key={section.heading}>
               <h2 className="text-2xl font-semibold text-ink-900">{section.heading}</h2>
               <p className="mt-4 text-ink-600 leading-relaxed">{section.content}</p>
+              {section.diagram ? (
+                <div className="mt-6">
+                  <ArchitectureDiagram nodes={section.diagram.nodes} caption={section.diagram.caption} />
+                </div>
+              ) : null}
             </div>
           ))}
         </article>
