@@ -452,7 +452,7 @@ export const articles: Article[] = [
     category: "Energy Storage",
     excerpt:
       "What is a BESS (Battery Energy Storage System)? A buyer's guide to solar + storage for data centers and C&I sites, covering sizing, specs and suppliers.",
-    publishedAt: "2026-08-18",
+    publishedAt: "2026-08-27",
     readingTime: "7 min read",
     body: [
       {
