@@ -96,7 +96,11 @@ export interface Article {
   excerpt: string;
   publishedAt: string;
   readingTime: string;
-  body: { heading: string; content: string }[];
+  body: {
+    heading: string;
+    content: string;
+    diagram?: { nodes: string[]; caption: string };
+  }[];
   faqs: FaqItem[];
   ctaLinks?: { label: string; href: string }[];
   relatedArticleSlugs?: string[];

@@ -3130,7 +3130,7 @@ export const products: Product[] = [
     ],
     applications: ["Data center backup / peak shaving", "Industrial facilities", "Renewable energy integration sites"],
     customizationOptions: ["Energy capacity", "PCS rating", "Form factor (cabinet / container)"],
-    standards: ["Certification available on request per project spec"],
+    standards: ["CE certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What is a battery energy storage system used for in a data center?",
@@ -3167,7 +3167,7 @@ export const products: Product[] = [
     ],
     applications: ["Telecom site power offset", "Remote/off-grid facility power", "Data center renewable integration"],
     customizationOptions: ["Array capacity", "Grid-tied vs. off-grid design", "Battery storage integration"],
-    standards: ["Certification available on request per project spec"],
+    standards: ["CE certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "Can a solar power system fully replace grid power for a data center?",
@@ -3350,7 +3350,7 @@ export const products: Product[] = [
     ],
     applications: ["Data center resilience", "Industrial peak shaving", "Renewable energy integration"],
     customizationOptions: ["Energy capacity", "PCS rating", "Operating strategy configuration"],
-    standards: ["Certification available on request per project spec"],
+    standards: ["CE certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "What's the difference between an ESS and a BESS?",
@@ -3418,7 +3418,7 @@ export const products: Product[] = [
       "Utility-scale grid energy storage",
     ],
     customizationOptions: ["Energy capacity", "PCS rating", "Battery module capacity (280Ah/314Ah)", "OEM/ODM branding"],
-    standards: ["Certification available on request per project spec"],
+    standards: ["CE certified", "Certification available on request per project spec"],
     faqs: [
       {
         question: "When should I choose a cabinet ESS over a containerized ESS?",
@@ -3490,7 +3490,7 @@ export const products: Product[] = [
     ],
     applications: ["Utility-scale / site-level energy storage", "Renewable energy (solar/wind) integration", "Peak shaving and load shifting", "Industrial and data center backup"],
     customizationOptions: ["Energy capacity", "PCS rating", "Thermal management type", "OEM/ODM"],
-    standards: ["UL / IEC international safety standards", "IP55 outdoor protection", "Certification available on request per project spec"],
+    standards: ["CE certified", "UL / IEC international safety standards", "IP55 outdoor protection"],
     faqs: [
       {
         question: "Why choose a containerized ESS over a cabinet-based system?",
