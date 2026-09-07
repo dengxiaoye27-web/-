@@ -47,6 +47,17 @@ export function productSchema(product: Product) {
         value: s.value,
       }))
     ),
+    // Wandtung sells B2B/build-to-order with no published catalog price, so
+    // `offers` intentionally omits price/priceCurrency rather than inventing
+    // one — this only satisfies Google's requirement that Product markup
+    // declare at least one of offers/review/aggregateRating.
+    offers: {
+      "@type": "Offer",
+      url: `${siteConfig.url}/products/${product.slug}`,
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@type": "Organization", name: siteConfig.legalName },
+    },
   };
 }
 
