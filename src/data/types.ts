@@ -92,7 +92,7 @@ export interface Article {
   excerpt: string;
   publishedAt: string;
   readingTime: string;
-  body: { heading: string; content: string }[];
+  body: { heading: string; content: string; image?: { alt: string; caption: string } }[];
   faqs: FaqItem[];
 }
 

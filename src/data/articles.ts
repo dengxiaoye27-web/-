@@ -251,6 +251,78 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "aluminum-cable-tray-manufacturer-guide",
+    title: "Aluminum Cable Tray Manufacturer Guide (2026)",
+    category: "Cable Management",
+    excerpt:
+      "How aluminum cable tray compares to steel, why data centers and solar plants use it, and what a custom aluminum cable tray manufacturer can build to your spec.",
+    publishedAt: "2026-09-07",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "What Is an Aluminum Cable Tray?",
+        content:
+          "An aluminum cable tray is a cable-support system extruded from aluminum alloy profile (most commonly 6063-T5) rather than roll-formed or welded from carbon steel or pultruded from glass-fiber-reinforced plastic (FRP/GRP). The core difference is in the material itself: steel tray relies on a zinc or hot-dip galvanized coating for corrosion resistance and carries the most weight per meter of any tray type; FRP tray is fully non-conductive and corrosion-proof but has the lowest mechanical strength and can become brittle under UV exposure; aluminum tray sits between the two, offering natural corrosion resistance without a coating, roughly a third of the weight of an equivalent steel tray, and enough mechanical strength for most power and data cabling spans found in a data center or industrial site.",
+      },
+      {
+        heading: "Why Aluminum Cable Tray Suits Data Centers and Solar Power Plants",
+        content:
+          "Weight and corrosion resistance are the two properties that matter most in these environments. On a raised floor or overhead in a [data center cabinet](/products/network-cabinet) row, every kilogram of tray is dead load competing with structural and seismic bracing budgets — a lighter aluminum tray reduces that load and is easier for a two-person crew to lift and position without mechanical assistance, shortening installation time. In outdoor and rooftop [solar power system](/products/solar-power-system) installations, cable tray is exposed to rain, humidity and salt-laden air; aluminum's natural oxide layer resists corrosion without relying on a coating that can be scratched during transport or installation, which matters over a 20-25 year PV system design life. Aluminum is also non-magnetic and has lower electrical resistance than steel, which some EMI-sensitive data cabling runs specify directly.",
+      },
+      {
+        heading: "From Aluminum Extrusion to Finished Cable Tray: The Manufacturing Process",
+        content:
+          "Production starts with round or flat 6063 aluminum billet, which is heated and pushed through a custom steel die under extreme pressure — extrusion — to form the tray's structural profile (side rail, base or rung, in one continuous cross-section). The extruded lengths are then age-hardened (T5 temper) to reach final strength, cut to standard or ordered lengths, and CNC-punched or drilled for connector and support-bracket holes. Surface treatment follows: anodizing for a hard, corrosion-resistant, paintable oxide layer, or powder coating where a specific RAL color is required. Finished sections, connectors, covers and support brackets are then kitted and packed per project bill of materials before shipment.",
+        image: {
+          alt: "Aluminum cable tray extrusion press at Wandtung's Hongxiang Aluminum factory",
+          caption:
+            "Suggested factory photo: billet loading and the extrusion press forming the tray profile.",
+        },
+      },
+      {
+        heading: "Customization: Non-Standard Sizes, Surface Finishes and Tooling Lead Time",
+        content:
+          "Because the tray profile comes from a die rather than a fixed roll-forming line, non-standard widths, depths and rung spacing are a tooling and extrusion-run decision rather than a full re-engineering exercise — useful when a project's cable fill doesn't match a catalog width. Surface treatment options typically include clear or color anodizing, powder coating in custom RAL colors, and mill (untreated) finish for indoor, low-corrosion applications. New die development for a fully custom profile typically takes several weeks; projects that fit an existing die library ship from stock profile with no tooling lead time at all.",
+        image: {
+          alt: "Custom aluminum cable tray dies and finished profile samples",
+          caption: "Suggested factory photo: die library and anodized/powder-coated finish samples.",
+        },
+      },
+      {
+        heading: "How to Choose the Right Aluminum Cable Tray",
+        content:
+          "Selecting an aluminum cable tray comes down to matching three things to the installation: load, span and environment. Load capacity should be checked against the actual cable fill weight per meter, including growth margin, against the manufacturer's load-span table — not assumed from a steel-tray reference, since aluminum's lower material strength means a given profile may need closer support spacing to carry the same load as steel. Span is set by the support/hanger spacing the site allows; reducing support spacing is usually cheaper than stepping up to a heavier profile. Environment determines finish: anodized or powder-coated aluminum for outdoor, coastal or corrosive sites, and mill finish for dry indoor data halls where cost matters more than added corrosion margin.",
+      },
+      {
+        heading: "Factory-Direct Supply: Our Own Aluminum Extrusion Plant",
+        content:
+          "Wandtung's aluminum cable tray is produced at Hongxiang Aluminum (鸿翔铝业), our own aluminum extrusion facility, rather than sourced through a trading intermediary. That gives us direct control over billet quality, die tooling and anodizing, and it means custom widths, non-standard lengths and specific RAL finishes are a production scheduling question, not a quoting round-trip through a third-party mill. Combined with Wandtung's existing lines for cabinets and [rack PDUs](/products/pdu), a project sourcing aluminum cable tray alongside its cabinets and power distribution can consolidate that procurement with one factory-direct supplier instead of coordinating separate vendors for each product line.",
+      },
+      {
+        heading: "Get a Quote for Your Project",
+        content:
+          "For a closer look at load ratings and construction, see Wandtung's aluminum alloy cable ladder and general cable tray product pages. To get a quote for a specific project — standard profile or custom die — reach out through the form below with your required width, span and finish, and our engineering team will confirm load-span data and lead time.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is aluminum cable tray as strong as steel cable tray?",
+        answer:
+          "Not per unit weight-for-weight comparison of raw material strength, but a correctly specified aluminum profile carries typical data center and industrial cable loads reliably — the difference is usually addressed with slightly closer support spacing rather than by avoiding aluminum altogether. Always check the manufacturer's load-span table for the specific profile.",
+      },
+      {
+        question: "How much lighter is aluminum cable tray than steel?",
+        answer:
+          "Aluminum alloy cable tray typically weighs roughly a third of an equivalent steel tray, which reduces structural dead load and allows faster, less labor-intensive installation.",
+      },
+      {
+        question: "Can Wandtung produce non-standard aluminum cable tray sizes?",
+        answer:
+          "Yes. Because Wandtung's aluminum cable tray is produced in-house at our own extrusion facility, non-standard widths, lengths and finishes can be scheduled directly with our production line rather than requoted through a third-party mill.",
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {

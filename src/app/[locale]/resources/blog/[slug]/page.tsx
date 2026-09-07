@@ -1,15 +1,60 @@
 import type { Metadata } from "next";
+import { Fragment, type ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
+import { Link as LocaleLink } from "@/components/ui/LocaleLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticle, articles } from "@/data/articles";
-import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema, organizationSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+
+// Body paragraphs are plain data strings, but support a minimal
+// `[label](/href)` markdown-link syntax so articles can carry inline
+// links (internal product pages or external references) without the
+// template needing per-article JSX.
+function renderRichText(text: string) {
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(<Fragment key={key++}>{text.slice(lastIndex, match.index)}</Fragment>);
+    }
+    const [, label, href] = match;
+    if (href.startsWith("/")) {
+      nodes.push(
+        <LocaleLink key={key++} href={href} className="text-accent-600 underline underline-offset-2 hover:text-accent-500">
+          {label}
+        </LocaleLink>
+      );
+    } else {
+      nodes.push(
+        <a
+          key={key++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-600 underline underline-offset-2 hover:text-accent-500"
+        >
+          {label}
+        </a>
+      );
+    }
+    lastIndex = linkPattern.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(<Fragment key={key++}>{text.slice(lastIndex)}</Fragment>);
+  }
+  return nodes;
+}
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -65,6 +110,7 @@ export default async function ArticlePage({
           }),
           faqSchema(content.faqs),
           breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` }))),
+          organizationSchema(),
         ]}
       />
 
@@ -86,7 +132,13 @@ export default async function ArticlePage({
           {content.body.map((section) => (
             <div key={section.heading}>
               <h2 className="text-2xl font-semibold text-ink-900">{section.heading}</h2>
-              <p className="mt-4 text-ink-600 leading-relaxed">{section.content}</p>
+              <p className="mt-4 text-ink-600 leading-relaxed">{renderRichText(section.content)}</p>
+              {section.image ? (
+                <div className="mt-6 rounded-xl border border-dashed border-line-200 bg-ink-900/[0.03] p-8 text-center">
+                  <p className="text-sm font-medium text-ink-900">{section.image.alt}</p>
+                  <p className="mt-1 text-xs text-ink-600">{section.image.caption}</p>
+                </div>
+              ) : null}
             </div>
           ))}
         </article>
