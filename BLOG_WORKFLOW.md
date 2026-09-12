@@ -49,12 +49,21 @@ Once you confirm:
    - `body` — array of `{ heading, content }` sections (H2 sections as flowing prose paragraphs; the template has no markdown/rich-text renderer, so bold/bullets from the draft get flattened into prose, matching every existing article)
    - `ctaLinks` — `{ label, href }[]`, rendered as buttons between the body and FAQ
    - `faqs` — `{ question, answer }[]`
+   - `relatedArticleSlugs` — optional `string[]` of other article slugs to cross-link (see Step 4a below)
 3. The SEO metadata renders into the page's `<title>`/`<meta description>`/canonical URL via `generateMetadata` in `src/app/[locale]/resources/blog/[slug]/page.tsx` — it does not appear in the visible body copy.
 4. **No manual sitemap edit needed.** `src/app/sitemap.ts` builds `/sitemap.xml` dynamically from the `articles` array at build time, so a new entry in `src/data/articles.ts` is enough.
 5. Commit with a clear message naming the article title, push the branch, and open a PR against `claude/claude-md-docs-81a9sj` (with a build/lint/tsc check beforehand, per this repo's normal PR process).
 6. Claude will **not** merge the PR itself — that step is yours (see Step 5a). This matches how every other change in this repo has shipped: branch → PR → your explicit "合并" → squash merge.
 
 Note: the new article's non-English translations (`src/i18n/content/articles.ts`) are not part of this workflow — it will fall back to English content on `/ar`, `/fr`, `/es`, `/ru`, `/zh` until translated separately, same as any other untranslated article.
+
+#### 4a. Internal linking (do this for every new article)
+
+The site has a reusable `RelatedArticles` component (`src/components/product/RelatedArticles.tsx`) that renders a "Related Articles" section on product pages, solution pages, and other blog articles — driven entirely by an optional `relatedArticleSlugs: string[]` field. No template changes are ever needed; it's a one-line data addition per page:
+
+1. On the new article itself, set `relatedArticleSlugs` to 1–2 existing articles on the same topic (cross-link both directions: also add the new article's slug to the *older* article's `relatedArticleSlugs`).
+2. On the 1–3 most relevant product pages (`src/data/products.ts`) and/or solution pages (`src/data/solutions.ts`), add the new article's slug to their `relatedArticleSlugs` array (create the field if it doesn't exist yet on that entry).
+3. Rebuild and grep the static output to confirm the links landed (same check used in every PR — `grep -o "<slug>" .next/server/app/en/products/<slug>.html`) before opening the PR.
 
 ### 5. After publishing, Claude reminds you to
 
