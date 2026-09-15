@@ -591,6 +591,92 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "online-vs-line-interactive-vs-standby-ups",
+    title: "Online vs Line-Interactive vs Standby UPS: Which Does Your Data Center Need?",
+    metaTitle: "Online vs Line-Interactive vs Standby UPS | WANDTUNG",
+    category: "Critical Power",
+    excerpt:
+      "A practical comparison of the three UPS topologies to help you match the right one to your load, uptime, and budget requirements.",
+    publishedAt: "2026-09-15",
+    readingTime: "5 min read",
+    body: [
+      {
+        heading: "Overview",
+        content:
+          "Choosing the wrong UPS topology means one of two costly outcomes: paying for double-conversion protection a non-critical load never needed, or under-protecting a rack that can't tolerate even a brief transfer gap. The three topologies — standby, line-interactive and online — trade off cost, efficiency and protection level in predictable ways.",
+      },
+      {
+        heading: "1. Three UPS Topologies at a Glance",
+        content:
+          "Standby (offline) UPS units let utility power feed the load directly and only switch to battery when power fails, with a transfer time of roughly 2 to 10 milliseconds — the lowest-cost option, suited to non-critical loads that can tolerate a brief gap. Line-interactive UPS units add automatic voltage regulation (AVR) that corrects under- and over-voltage without switching to battery, a good fit for sites with an unstable grid but no fully critical, always-on load. Online (double-conversion) UPS units continuously convert incoming power to DC and back to AC, so output is completely isolated from the utility feed with zero transfer time — the standard for data center IT racks.",
+      },
+      {
+        heading: "2. Quick Comparison Table",
+        content: "The trade-offs are clearest side by side:",
+        table: {
+          columns: ["Standby (Offline)", "Line-Interactive", "Online (Double-Conversion)"],
+          rows: [
+            {
+              label: "Efficiency",
+              values: ["Highest (~97–99%)", "High (~95–98%)", "Lower (~90–96%)"],
+            },
+            {
+              label: "Transfer Time",
+              values: ["~2–10 ms", "~2–4 ms (AVR avoids most transfers)", "0 ms — no transfer"],
+            },
+            {
+              label: "Power Conditioning",
+              values: ["None", "AVR only", "Full — voltage, frequency, isolated output"],
+            },
+            {
+              label: "Typical Cost",
+              values: ["Lowest", "Moderate", "Highest"],
+            },
+            {
+              label: "Best-Fit Use Case",
+              values: [
+                "Non-critical loads, desktops, small offices",
+                "Edge nodes, small IT cabinets, moderate grid instability",
+                "Data center racks, mission-critical IT load",
+              ],
+            },
+          ],
+        },
+      },
+      {
+        heading: "3. How to Choose: 4 Decision Factors",
+        content:
+          "Four factors drive the decision. Load criticality and acceptable downtime: IT racks and production servers that cannot tolerate even a few milliseconds of gap need online double-conversion. Grid quality at your site: in markets with frequent voltage sags or surges — common across parts of Southeast Asia, the Middle East and Africa — a line-interactive UPS is a reasonable starting point even for non-fully-critical loads, since the built-in AVR handles most disturbances without draining the battery. Battery type: VRLA batteries cost less and are simple to maintain, while lithium-ion batteries cost more upfront but last longer and take up less space — a trade-off that increasingly favors lithium in dense data center deployments. Redundancy pairing: a UPS topology decision is separate from a redundancy decision — either topology can be deployed in an N+1 or 2N architecture depending on how much single-point-of-failure risk the facility can tolerate.",
+      },
+      {
+        heading: "4. Recommendation by Application",
+        content:
+          "As a starting point: small IT cabinets and edge nodes are usually well served by line-interactive UPS; enterprise and colocation data center racks should default to online double-conversion; and sites with unstable grid power plus generator backup should also use online UPS, since its isolated output and clean sine wave handle generator power quality better than the other two topologies.",
+      },
+    ],
+    ctaLinks: [
+      { label: "Explore our UPS Systems →", href: "/products/ups-systems" },
+      { label: "Talk to Our Engineering Team →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "Can a line-interactive UPS protect a data center rack?",
+        answer:
+          "It can for non-critical or edge loads, but critical IT equipment should use an online UPS — its zero transfer time and fully isolated output remove the brief gap a line-interactive unit still has during a voltage event outside its AVR range.",
+      },
+      {
+        question: "VRLA or lithium battery for a data center UPS?",
+        answer:
+          "VRLA is the lower-cost choice when budget is the priority. Lithium-ion costs more upfront but offers a longer service life and a smaller footprint, which is why it's increasingly preferred in space-constrained, high-density cabinet deployments.",
+      },
+    ],
+    relatedArticleSlugs: [
+      "what-is-n-plus-1-redundancy",
+      "how-to-choose-a-data-center-pdu",
+      "what-is-micro-modular-data-center",
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {

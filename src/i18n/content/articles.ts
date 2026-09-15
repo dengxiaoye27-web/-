@@ -9,6 +9,7 @@ export interface ArticleContent {
     heading: string;
     content: string;
     diagram?: { nodes: string[]; caption: string };
+    table?: { columns: string[]; rows: { label: string; values: string[] }[] };
   }[];
   faqs: { question: string; answer: string }[];
 }

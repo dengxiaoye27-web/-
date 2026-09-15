@@ -100,6 +100,7 @@ export interface Article {
     heading: string;
     content: string;
     diagram?: { nodes: string[]; caption: string };
+    table?: { columns: string[]; rows: { label: string; values: string[] }[] };
   }[];
   faqs: FaqItem[];
   ctaLinks?: { label: string; href: string }[];
