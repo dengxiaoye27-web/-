@@ -38,7 +38,7 @@ export function SiteFooter() {
             {t.footer.productsHeading}
           </p>
           <ul className="space-y-2 text-sm">
-            {productCategories.slice(0, 6).map((c) => (
+            {productCategories.map((c) => (
               <li key={c.slug}>
                 <Link href={`/products/${c.slug}`} className="hover:text-white">
                   {getCategoryContent(c.slug, locale, c).name}
@@ -53,7 +53,7 @@ export function SiteFooter() {
             {t.footer.solutionsHeading}
           </p>
           <ul className="space-y-2 text-sm">
-            {solutions.slice(0, 6).map((s) => (
+            {solutions.map((s) => (
               <li key={s.slug}>
                 <Link href={`/solutions/${s.slug}`} className="hover:text-white">
                   {getSolutionContent(s.slug, locale, s).name}
@@ -73,6 +73,7 @@ export function SiteFooter() {
             <li><Link href="/resources" className="hover:text-white">{t.nav.resources}</Link></li>
             <li><Link href="/contact" className="hover:text-white">{t.nav.contact}</Link></li>
             <li><Link href="/legal/privacy-policy" className="hover:text-white">{t.footer.privacyPolicy}</Link></li>
+            <li><Link href="/legal/terms-of-use" className="hover:text-white">{t.footer.termsOfUse}</Link></li>
           </ul>
         </div>
       </div>

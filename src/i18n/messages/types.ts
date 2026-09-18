@@ -140,6 +140,11 @@ export interface AboutMessages {
     title: string;
     paragraph: string;
   };
+  exploreLinks: {
+    caseStudies: string;
+    solutions: string;
+    products: string;
+  };
   cta: {
     title: string;
     button: string;
@@ -293,5 +298,9 @@ export interface ContactMessages {
     whatsapp: string;
     whatsappCta: string;
     location: string;
+  };
+  exploreLinks: {
+    caseStudies: string;
+    products: string;
   };
 }

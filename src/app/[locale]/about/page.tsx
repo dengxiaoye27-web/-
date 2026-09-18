@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Button } from "@/components/ui/Button";
+import Link from "@/components/ui/LocaleLink";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
@@ -112,11 +113,26 @@ export default async function AboutPage({
         <section id="global-markets">
           <SectionHeading eyebrow={t.globalMarkets.eyebrow} title={t.globalMarkets.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.globalMarkets.paragraph}</p>
+          <Link
+            href="/projects"
+            className="mt-4 inline-block text-sm font-medium text-accent-600 hover:text-accent-500"
+          >
+            {t.exploreLinks.caseStudies} →
+          </Link>
         </section>
 
         <section id="history">
           <SectionHeading eyebrow={t.engineering.eyebrow} title={t.engineering.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.engineering.paragraph}</p>
+        </section>
+
+        <section className="flex flex-wrap gap-x-8 gap-y-3">
+          <Link href="/solutions" className="text-sm font-medium text-accent-600 hover:text-accent-500">
+            {t.exploreLinks.solutions} →
+          </Link>
+          <Link href="/products" className="text-sm font-medium text-accent-600 hover:text-accent-500">
+            {t.exploreLinks.products} →
+          </Link>
         </section>
 
         <section className="relative overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center grid-texture">
