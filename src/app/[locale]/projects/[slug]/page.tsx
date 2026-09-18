@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import Link from "@/components/ui/LocaleLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProject, projects } from "@/data/projects";
+import { products } from "@/data/products";
 import { breadcrumbSchema } from "@/lib/schema";
 import { getProjectContent } from "@/i18n/content/projects";
 import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
@@ -106,11 +108,30 @@ export default async function ProjectPage({
           <div>
             <SectionHeading eyebrow={t.productsEyebrow} title={t.productsTitle} />
             <div className="mt-6 flex flex-wrap gap-3">
-              {content.productsUsed.map((p) => (
-                <span key={p} className="rounded-full border border-line-200 px-4 py-1.5 text-sm font-medium text-ink-900">
-                  {p}
-                </span>
-              ))}
+              {content.productsUsed.map((label, i) => {
+                // productsUsed is translated per locale, so match against
+                // the untranslated (English) list at the same index — the
+                // product's `name` field is only ever in English — and
+                // fall back to plain text (not a link) if a name doesn't
+                // match a real product, rather than guessing.
+                const match = products.find((prod) => prod.name === project.productsUsed[i]);
+                if (match) {
+                  return (
+                    <Link
+                      key={label}
+                      href={`/products/${match.slug}`}
+                      className="rounded-full border border-line-200 px-4 py-1.5 text-sm font-medium text-ink-900 transition-colors hover:border-accent-500 hover:text-accent-600"
+                    >
+                      {label}
+                    </Link>
+                  );
+                }
+                return (
+                  <span key={label} className="rounded-full border border-line-200 px-4 py-1.5 text-sm font-medium text-ink-900">
+                    {label}
+                  </span>
+                );
+              })}
             </div>
           </div>
           <div>
