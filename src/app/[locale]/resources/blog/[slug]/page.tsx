@@ -13,6 +13,7 @@ import { siteConfig } from "@/lib/site";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -31,7 +32,7 @@ export async function generateMetadata({
   return {
     title: article.metaTitle ? { absolute: article.metaTitle } : content.title,
     description: content.excerpt,
-    alternates: { canonical: `/resources/blog/${article.slug}` },
+    alternates: buildAlternates(locale, `/resources/blog/${article.slug}`),
   };
 }
 

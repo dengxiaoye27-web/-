@@ -21,6 +21,7 @@ import { getProductContent } from "@/i18n/content/products";
 import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
 export function generateStaticParams() {
   return [
@@ -42,7 +43,7 @@ export async function generateMetadata({
     return {
       title: content.name,
       description: content.overview,
-      alternates: { canonical: `/products/${product.slug}` },
+      alternates: buildAlternates(locale, `/products/${product.slug}`),
     };
   }
   const category = getCategory(slug);
@@ -51,7 +52,7 @@ export async function generateMetadata({
     return {
       title: categoryContent.name,
       description: categoryContent.shortDescription,
-      alternates: { canonical: `/products/${category.slug}` },
+      alternates: buildAlternates(locale, `/products/${category.slug}`),
     };
   }
   return {};

@@ -28,13 +28,23 @@ import { articles } from "@/data/articles";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Data Center Infrastructure & Critical Power Solutions | Wandtung",
-  description:
-    "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Data Center Infrastructure & Critical Power Solutions | Wandtung",
+    description:
+      "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
+    alternates: buildAlternates(locale, ""),
+  };
+}
 
 const coreSolutionHrefs = [
   "/solutions/critical-power",

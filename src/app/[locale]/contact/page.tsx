@@ -5,13 +5,23 @@ import { RFQForm } from "@/components/forms/RFQForm";
 import { siteConfig } from "@/lib/site";
 import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Contact & Request a Quote",
-  description:
-    "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
-  alternates: { canonical: "/contact" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Contact & Request a Quote",
+    description:
+      "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
+    alternates: buildAlternates(locale, "/contact"),
+  };
+}
 
 export default async function ContactPage({
   params,

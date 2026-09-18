@@ -6,13 +6,23 @@ import { articles } from "@/data/articles";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Resources & Knowledge Center",
-  description:
-    "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design.",
-  alternates: { canonical: "/resources" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Resources & Knowledge Center",
+    description:
+      "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design.",
+    alternates: buildAlternates(locale, "/resources"),
+  };
+}
 
 export default async function ResourcesPage({
   params,
