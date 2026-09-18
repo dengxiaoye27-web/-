@@ -347,12 +347,12 @@ export const solutions: Solution[] = [
     name: "Energy Storage Solution",
     tagline: "Battery energy storage for resilience, peak shaving and renewable integration.",
     customerChallenge:
-      "Facilities facing unreliable grid power, high demand charges, or sustainability targets need energy storage that goes beyond traditional UPS batteries to provide longer-duration resilience and cost management.",
+      "Facilities facing unreliable grid power, high demand charges, or sustainability targets need energy storage that goes beyond traditional UPS batteries to provide longer-duration resilience and cost management. UPS batteries are sized for short-duration ride-through; a BESS is sized for longer backup, peak shaving or renewable integration, which is a different engineering problem, not just a bigger battery.",
     solutionArchitecture:
-      "Wandtung integrates battery racks, PCS and EMS into cabinet or containerized battery energy storage systems, configurable for backup power, peak shaving, or renewable (solar) integration.",
+      "Wandtung integrates battery racks, PCS and EMS into cabinet or containerized battery energy storage systems, configurable for backup power, peak shaving, or renewable (solar) integration. A cabinet-format system starts around 261kWh per unit and paralleles to 250kW–1000kW for C&I sites that want to stage capacity growth; a containerized system packages up to 3840kWh in a single outdoor-rated (IP55) unit for sites that need a large amount of capacity in one self-contained deployment.",
     systemComponents: [
-      { name: "Battery Racks", description: "Lithium battery modules sized to required energy capacity." },
-      { name: "PCS", description: "Power conversion system managing charge/discharge and grid interface." },
+      { name: "Battery Racks", description: "LFP battery modules — 51.2V, 280Ah/314Ah per module in Wandtung's cabinet-format ESS, scaling to 3840kWh per container in the containerized format." },
+      { name: "PCS", description: "Power conversion system — 125kW per cabinet in Wandtung's liquid-cooled all-in-one design, paralleling to 250kW–1000kW at system level." },
       { name: "EMS", description: "Energy management system controlling operating strategy and monitoring." },
     ],
     howItWorks: [
@@ -360,7 +360,11 @@ export const solutions: Solution[] = [
       "The PCS converts stored DC energy to AC for site use, and manages charging.",
       "The EMS applies the operating strategy — backup, peak shaving, or renewable integration — and reports system status.",
     ],
-    technicalAdvantages: ["Configurable operating strategy via EMS", "Cabinet or containerized deployment options", "Renewable integration ready"],
+    technicalAdvantages: [
+      "Configurable operating strategy via EMS",
+      "Cabinet (261kWh, outdoor IP55, liquid-cooled) or containerized (up to 3840kWh) deployment options",
+      "Renewable integration ready",
+    ],
     deploymentProcess: [
       { step: "Energy & Use-Case Assessment", description: "Define required capacity and operating strategy." },
       { step: "System Sizing", description: "Size battery, PCS and EMS to the use case." },
@@ -374,8 +378,24 @@ export const solutions: Solution[] = [
         answer:
           "A BESS can supplement or, in some architectures, replace part of a traditional UPS battery system, but the two serve different primary purposes — UPS batteries are optimized for short-duration ride-through, while BESS is typically sized for longer-duration backup, peak shaving or renewable integration.",
       },
+      {
+        question: "Should I choose a cabinet-format or containerized battery system?",
+        answer:
+          "A cabinet-format system is a compact, outdoor-rated all-in-one unit well suited to C&I sites and staged capacity growth — multiple cabinets can be paralleled with a shared PCS, from 250kW up to 1000kW. A containerized system is preferred when a single self-contained unit needs to deliver very large capacity — up to 3840kWh — at one location.",
+      },
+      {
+        question: "Why does Wandtung use liquid cooling in its battery systems?",
+        answer:
+          "Liquid cooling holds cell-to-cell temperature variation to within ΔT ≤ 3°C, far tighter than air cooling achieves. Even cell temperatures extend battery cycle life, improve safety, and keep the system's usable capacity consistent over time.",
+      },
     ],
-    relatedProductSlugs: ["battery-energy-storage-system", "solar-power-system"],
+    relatedProductSlugs: [
+      "battery-energy-storage-system",
+      "energy-storage-cabinet",
+      "containerized-energy-storage-system",
+      "solar-power-system",
+    ],
+    relatedArticleSlugs: ["solar-storage-bess-data-center-guide"],
   },
 ];
 
