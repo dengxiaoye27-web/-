@@ -104,12 +104,12 @@ export const articles: Article[] = [
     readingTime: "4 min read",
     body: [
       {
-        heading: "Overview",
+        heading: "What Is the Difference Between Metered and Switched PDU?",
         content:
-          "\"Metered,\" \"monitored,\" \"switched\" — rack PDU datasheets throw these terms around as if buyers already know the difference. They don't always, and picking the wrong tier is expensive in both directions: over-specify and you pay for control you never use; under-specify and you lose the visibility or remote access you needed. This guide lays out exactly what separates the tiers and how to choose.",
+          "A metered PDU measures and displays power draw (read-only). A switched PDU includes everything a metered PDU offers plus remote, individually addressable control of each outlet, letting you power-cycle equipment without a site visit. \"Metered,\" \"monitored,\" \"switched\" — rack PDU datasheets throw these terms around as if buyers already know the difference. They don't always, and picking the wrong tier is expensive in both directions: over-specify and you pay for control you never use; under-specify and you lose the visibility or remote access you needed. This guide lays out exactly what separates the tiers and how to choose.",
       },
       {
-        heading: "The Four Rack PDU Tiers, Briefly",
+        heading: "What Are the Four Rack PDU Tiers?",
         content:
           "Rack PDUs sit on a ladder of capability, each rung adding to the one below. A basic PDU distributes power to multiple outlets with no measurement, no network — reliable and cheap for stable, low-density racks. A metered PDU adds measurement of current, voltage, and power, typically shown on a local digital display at the unit — you still read it in person, but you finally know each rack's real load against its breaker limit. A monitored PDU takes that same metering data onto the network, so you read every rack remotely through SNMP, a web page, or a DCIM dashboard, and set alerts instead of walking the floor. A switched PDU adds remote control of individual outlets on top of full monitoring — power-cycle a hung server, sequence startup after an outage, or disable unused outlets, all remotely.",
       },
@@ -119,23 +119,27 @@ export const articles: Article[] = [
           "The single distinction that matters most is read versus control. A metered PDU tells you what is happening — how much power the rack is drawing — a one-way flow of information, perfect when your goal is visibility and capacity planning: knowing how full a rack is, how close to the circuit limit, and how load trends over time. A switched PDU lets you act on it — remotely turning outlets on and off, two-way control that earns its higher price only when someone would otherwise have to physically visit the rack: rebooting frozen equipment, staging power-up sequences, or securing outlets in a shared facility. If nobody would ever need to remotely cut power to a specific outlet, you are paying for a switched PDU's capability without using it. If your team currently drives to a site just to reboot a device, a switched PDU pays for itself fast.",
       },
       {
-        heading: "A Simple Way to Choose",
+        heading: "How Do You Choose the Right Tier?",
         content:
           "Match the PDU tier to the rack's role, not to a blanket policy. Stable, low-density racks where load rarely changes need only a basic or metered PDU — a load reading, not a dashboard. The main production floor, with active capacity planning, calls for a monitored PDU, where remote visibility across every rack drives fill decisions and alerting. Remote sites, unmanned edge nodes, and mission-critical racks need a switched PDU, where remote power-cycling avoids costly, slow site visits. Multi-tenant or colocation environments billing tenants for power need a metered or monitored PDU with billing-grade (±1%) accuracy. Most real data centers mix tiers across the floor — that is the cost-efficient answer, not a compromise.",
       },
       {
-        heading: "Don't Forget the Physical Specs",
+        heading: "What Physical Specs Should You Also Check?",
         content:
-          "Whichever tier you choose, the fundamentals still have to match your site: outlet standard — Schuko, NEMA, IEC or universal, matched to region and equipment; rated current/voltage with headroom above peak load; form factor — 1U horizontal or zero-U vertical to preserve rack space; surge protection for unstable-grid regions; and network protocol — confirm SNMP/HTTPS/DCIM compatibility for monitored and switched units.",
+          "Whichever tier you choose, the fundamentals still have to match your site: outlet standard — Schuko, NEMA, IEC or universal, matched to region and equipment; rated current/voltage with headroom above peak load; form factor — 1U horizontal or zero-U vertical to preserve rack space; surge protection for unstable-grid regions; and network protocol — confirm SNMP (v1/v2c/v3), Modbus RTU/TCP or RS485 compatibility with your DCIM platform for monitored and switched units.",
       },
       {
-        heading: "WANDTUNG Rack PDUs Across Every Tier",
+        heading: "Does Wandtung Manufacture PDUs Across Every Tier?",
         content:
-          "WANDTUNG manufactures metered, monitored, and switched rack PDUs in Schuko, NEMA, and universal multi-standard configurations, in both 1U horizontal and zero-U vertical form factors. Because we are factory-direct, outlet type, count, rated current, interface, and surge protection can be customized to your project via OEM/ODM. If you are unsure which tier fits which rack, our engineers will help you map it out.",
+          "Yes. WANDTUNG manufactures metered, monitored, and switched rack PDUs in Schuko, NEMA, and universal multi-standard configurations, in both 1U horizontal and zero-U vertical form factors. Because we are factory-direct, outlet type, count, rated current, interface, and surge protection can be customized to your project via OEM/ODM. If you are unsure which tier fits which rack, our engineers will help you map it out.",
       },
     ],
     ctaLinks: [
-      { label: "Explore our Rack PDU range →", href: "/products/pdu" },
+      { label: "See Metered PDU specs →", href: "/products/metered-pdu" },
+      { label: "See Monitored PDU specs →", href: "/products/monitored-pdu" },
+      { label: "See Switched PDU specs →", href: "/products/switched-pdu" },
+      { label: "What is an intelligent PDU? →", href: "/resources/blog/what-is-intelligent-pdu" },
+      { label: "Explore Rack PDU range →", href: "/products/pdu" },
       { label: "Request a quote →", href: "/contact" },
     ],
     faqs: [
@@ -159,7 +163,18 @@ export const articles: Article[] = [
         answer:
           "Usually not. Mixing tiers — basic or metered on stable racks, monitored on the main floor, switched on critical or remote racks — controls cost while keeping visibility where it matters.",
       },
+      {
+        question: "How accurate does a PDU need to be for tenant billing?",
+        answer:
+          "Multi-tenant or colocation sites billing for power need billing-grade accuracy — typically ±1% on current and voltage — on the metered or monitored PDU used for that circuit.",
+      },
+      {
+        question: "What network protocols should a monitored or switched PDU support?",
+        answer:
+          "Confirm the unit supports what your DCIM or monitoring platform actually speaks — commonly SNMP (v1/v2c/v3), Modbus RTU/TCP, or RS485 — before specifying it, since not every platform supports every protocol.",
+      },
     ],
+    relatedArticleSlugs: ["what-is-intelligent-pdu"],
   },
   {
     slug: "what-is-micro-modular-data-center",
