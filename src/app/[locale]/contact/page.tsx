@@ -3,10 +3,12 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RFQForm } from "@/components/forms/RFQForm";
 import Link from "@/components/ui/LocaleLink";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export async function generateMetadata({
   params,
@@ -33,12 +35,16 @@ export default async function ContactPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getContactMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.contact }];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/contact" })))}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.contact }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hero.title}
           </h1>

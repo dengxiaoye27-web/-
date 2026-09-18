@@ -84,18 +84,22 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
   const items = getProductsByCategory(slug);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [
+    { label: common.nav.home, href: "/" },
+    { label: common.nav.products, href: "/products" },
+    { label: categoryContent.name },
+  ];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(
+          breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${category.slug}` }))
+        )}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs
-            items={[
-              { label: common.nav.home, href: "/" },
-              { label: common.nav.products, href: "/products" },
-              { label: categoryContent.name },
-            ]}
-          />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {categoryContent.name}
           </h1>
