@@ -40,9 +40,13 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (product) {
     const content = getProductContent(slug, locale, product);
+    const description =
+      locale === defaultLocale && product.metaDescription
+        ? product.metaDescription
+        : content.overview;
     return {
       title: content.name,
-      description: content.overview,
+      description,
       alternates: buildAlternates(locale, `/products/${product.slug}`),
     };
   }

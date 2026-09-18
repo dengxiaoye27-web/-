@@ -10,6 +10,8 @@ export const products: Product[] = [
     tagline: "Reliable rack-level power distribution for data center and telecom cabinets.",
     overview:
       "The Wandtung Rack PDU distributes utility or UPS power to IT equipment inside a cabinet. It is manufactured in basic, metered, monitored and switched variants, in single-phase and three-phase configurations, and is available in vertical (0U) and horizontal rack-mount formats for data center, telecom and industrial environments.",
+    metaDescription:
+      "Distributing utility or UPS power to a cabinet? Wandtung's Rack PDU comes in basic, metered, monitored and switched variants, single- or three-phase.",
     featured: true,
     keyFeatures: [
       "Single-phase and three-phase configurations",
@@ -88,6 +90,8 @@ export const products: Product[] = [
     tagline: "1U rack-mount PDU with German standard Schuko outlets for European and CEE-market cabinets.",
     overview:
       "The Wandtung Schuko PDU is a 1U rack-mount power distribution unit fitted with German standard (Schuko/CEE 7/3) outlets, an illuminated overload-protected power switch and an integrated surge protection module, built for European and CEE-market data center and telecom cabinets. It mounts horizontally or vertically, ships with a heavy-duty Schuko power cord, and is available in standard black or a custom orange housing.",
+    metaDescription:
+      "Need rack power for European or CEE cabinets? Wandtung's Schuko PDU delivers overload-protected outlets and surge protection, mounts horizontal or vertical.",
     featured: true,
     images: [
       "/products/schuko-pdu/01-main.png",
@@ -177,6 +181,8 @@ export const products: Product[] = [
     tagline: "1U rack-mount PDU with US standard NEMA 5-15R outlets for North American cabinets.",
     overview:
       "The Wandtung NEMA PDU is a 1U rack-mount power distribution unit fitted with US standard NEMA 5-15R outlets, a dual-pole illuminated power switch under a protective cover and an integrated SPD surge protection module in a fire-retardant shell, built for North American data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a NEMA 5-15P power cord, and is available in standard black or a custom orange housing.",
+    metaDescription:
+      "Need rack power for North American cabinets? Wandtung's NEMA PDU delivers 5-15R outlets with SPD surge protection and a copper busbar, factory-direct.",
     featured: true,
     images: [
       "/products/nema-pdu/01-main.png",
@@ -268,6 +274,8 @@ export const products: Product[] = [
     tagline: "1U rack PDU with universal multi-standard sockets and a 360° rotatable mounting bracket.",
     overview:
       "The Wandtung Multi-Function PDU is a 1U, 19-inch rack power strip fitted with six universal multi-standard sockets, a dual power switch and an integrated SPD surge protection module with a green LED safety indicator. A 360° rotatable, tool-free heavy-duty steel mounting bracket allows flexible orientation in the rack, while child-safety shutters rated to 75N add protection in mixed-use environments.",
+    metaDescription:
+      "Mixing equipment with different plug types in one rack? Wandtung's Multi-Function PDU offers universal multi-standard sockets on a 360° rotatable bracket.",
     featured: true,
     images: [
       "/products/multi-function-pdu/01-main.jpg",
@@ -354,6 +362,8 @@ export const products: Product[] = [
     tagline: "1U rack-mount PDU with UK standard BS1363 outlets for British and CEE-market cabinets.",
     overview:
       "The Wandtung UK PDU is a 1U rack-mount power distribution unit fitted with UK standard BS1363 outlets, a double-pole illuminated switch under a dust-proof cover, an integrated circuit breaker and an SPD surge protection module with a green LED indicator, built for British and CEE-market data center and telecom cabinets. It uses a 99.9% pure red copper busbar and a heavy-duty 1.5mm aluminum enclosure, ships with a 13A-rated power cord, and is available with 6, 8, 10 or 12 outlets and custom input plug types.",
+    metaDescription:
+      "Need rack power for UK/CEE-market cabinets? Wandtung's BS1363 PDU delivers 6-12 outlets, built-in SPD surge protection and a copper busbar, factory-direct.",
     featured: true,
     images: [
       "/products/uk-pdu/01-main.png",
@@ -445,6 +455,8 @@ export const products: Product[] = [
     tagline: "1U rack-mount PDU with IEC C13 and C19 outlets for global data center cabinets.",
     overview:
       "The Wandtung IEC PDU is a 1U rack-mount power distribution unit fitted with IEC 60320 C13 and C19 outlets, an integrated illuminated power switch and automatic overload protection, built for data center and telecom cabinets worldwide. It mounts vertically (0U) or horizontally, uses a heavy-duty copper core power cord rated to 1875W, and installs with built-in mounting ears for a secure, versatile fit.",
+    metaDescription:
+      "Shipping cabinets to multiple countries? Wandtung's IEC PDU fits C13/C19 outlets used worldwide, with overload protection and a 1875W-rated copper power cord.",
     featured: true,
     images: [
       "/products/iec-pdu/01-main.png",
@@ -530,6 +542,8 @@ export const products: Product[] = [
     tagline: "Network-managed rack power distribution with monitoring, metering and remote switching.",
     overview:
       "The Wandtung Intelligent PDU is a network-managed power distribution unit built for data centers that require visibility and control at the outlet level. It combines current, voltage, power and energy monitoring, temperature & humidity sensing, and remote outlet switching, accessible via SNMP, Modbus, RS485 and a web management interface.",
+    metaDescription:
+      "Need outlet-level visibility and control across a data hall? Wandtung's Intelligent PDU monitors power and switches outlets via SNMP, Modbus or web UI.",
     featured: true,
     images: [
       "/products/intelligent-pdu/01-main.png",
@@ -619,6 +633,8 @@ export const products: Product[] = [
     tagline: "High-current three-phase PDU for dense compute and AI training racks.",
     overview:
       "The Wandtung High Power PDU is designed for high-density racks such as AI training clusters, GPU servers and blade enclosures, supporting three-phase input up to 63A and high outlet counts with reinforced busbar and thermal design.",
+    metaDescription:
+      "Powering AI training clusters and GPU servers? Wandtung's High Power PDU supports three-phase input up to 63A with a reinforced busbar and thermal design.",
     keyFeatures: [
       "Three-phase input up to 63A",
       "Reinforced copper busbar for low heat rise under sustained high load",
@@ -665,6 +681,8 @@ export const products: Product[] = [
     tagline: "Rack PDU with local current and voltage display for on-site load visibility.",
     overview:
       "The Wandtung Metered PDU adds a built-in digital display to a standard rack PDU, showing current and/or voltage draw at a glance without requiring network access — a straightforward upgrade for sites that need load visibility during installation and maintenance but don't require remote monitoring.",
+    metaDescription:
+      "Need load visibility during install without a network build-out? Wandtung's Metered PDU adds a digital current/voltage display to a standard rack PDU.",
     keyFeatures: [
       "Local LCD/LED display of current and voltage",
       "Single-phase and three-phase configurations",
@@ -709,6 +727,8 @@ export const products: Product[] = [
     tagline: "Network-connected PDU reporting current, voltage, power and energy data remotely.",
     overview:
       "The Wandtung Monitored PDU reports current, voltage, power and energy consumption over the network via SNMP or Modbus, giving facility and IT teams remote visibility into rack-level power usage without on-site checks — without the outlet-switching capability of a fully intelligent PDU.",
+    metaDescription:
+      "Need remote power visibility without outlet switching? Wandtung's Monitored PDU reports current, voltage and energy consumption over SNMP or Modbus remotely.",
     keyFeatures: [
       "Remote current, voltage, power and energy monitoring",
       "SNMP and Modbus RTU/TCP connectivity",
@@ -753,6 +773,8 @@ export const products: Product[] = [
     tagline: "Monitored PDU with remote, individually addressable outlet switching.",
     overview:
       "The Wandtung Switched PDU includes everything a monitored PDU offers — remote current, voltage, power and energy visibility — plus individually addressable outlet control, so administrators can remotely power-cycle a single device or sequence a rack's power-up without a site visit.",
+    metaDescription:
+      "Need to power-cycle equipment without a site visit? Wandtung's Switched PDU adds individually addressable outlet control on top of full remote monitoring.",
     keyFeatures: [
       "Remote monitoring at unit and outlet level",
       "Individually addressable outlet on/off control",
@@ -796,6 +818,8 @@ export const products: Product[] = [
     tagline: "Balanced three-phase power distribution for higher-capacity racks.",
     overview:
       "The Wandtung Three Phase PDU distributes three-phase input across balanced single-phase outlet groups, giving racks with moderate-to-high power draw a higher-capacity feed than a single-phase PDU can provide, while keeping phase loading even across L1/L2/L3.",
+    metaDescription:
+      "Single-phase PDU running out of capacity for the rack? Wandtung's Three Phase PDU balances load evenly across L1/L2/L3 for moderate-to-high power draw.",
     keyFeatures: [
       "Three-phase input with balanced single-phase outlet grouping",
       "Per-phase current display on monitored variants",
@@ -840,6 +864,8 @@ export const products: Product[] = [
     tagline: "Rack PDU with a built-in automatic transfer switch for dual-feed redundancy.",
     overview:
       "The Wandtung ATS PDU combines a rack PDU with an automatic transfer switch, accepting two independent power inputs — such as utility and generator, or A/B utility feeds — and automatically switching to the live source if the primary feed fails, protecting single-corded equipment without requiring a separate transfer switch panel.",
+    metaDescription:
+      "Running single-corded gear off two power feeds? Wandtung's ATS PDU switches to the live source automatically on failure, no separate switch panel needed.",
     keyFeatures: [
       "Dual power input with automatic failover",
       "Protects single-corded equipment with feed-level redundancy",
@@ -889,6 +915,8 @@ export const products: Product[] = [
     tagline: "1U rack-mount static transfer switch, dual-source redundancy with <10ms seamless transfer.",
     overview:
       "The Wandtung STS (Static Transfer Switch) is a 1U rack-mount solid-state transfer switch that seamlessly transfers load between two independent A/B power sources in under 10ms — far faster than a mechanical ATS — protecting loads that cannot tolerate even momentary interruption. Front-panel Source 1/Source 2/Output status indicators and a mute button give at-a-glance status and alarm control, with terminal-block source and output connections on the rear panel.",
+    metaDescription:
+      "Load can't tolerate any interruption? Wandtung's STS transfers between two power sources in under 10ms, faster than a mechanical ATS, with front-panel alarms.",
     featured: true,
     images: [
       "/products/sts/01-main.png",
@@ -950,6 +978,8 @@ export const products: Product[] = [
     tagline: "Panel-level automatic transfer switch for facility and generator failover.",
     overview:
       "The Wandtung Automatic Transfer Switch is a panel-level device that automatically transfers a facility or distribution board load between a primary source and a backup source — typically utility and standby generator — without manual intervention, sized for branch, panel or facility-level loads rather than a single rack.",
+    metaDescription:
+      "Need a panel-level failover to backup generator power? Wandtung's Automatic Transfer Switch handles branch or facility loads without manual intervention.",
     keyFeatures: [
       "Automatic source-loss detection and transfer",
       "Generator start signal output",
@@ -996,6 +1026,8 @@ export const products: Product[] = [
     tagline: "Online double-conversion UPS for rack-mounted deployment in data center and telecom environments.",
     overview:
       "The Wandtung Rack Mount UPS is a double-conversion online UPS packaged in a standard 19-inch rack format, providing clean, regulated backup power for IT and network equipment with flexible battery run-time configurations.",
+    metaDescription:
+      "Need backup power inside a 19-inch rack? Wandtung's Rack Mount UPS delivers double-conversion online protection with flexible battery run-time options.",
     featured: true,
     images: [
       "/products/rack-mount-ups/01-main.jpg",
@@ -1066,6 +1098,8 @@ export const products: Product[] = [
     tagline: "Hot-swappable power module UPS for scalable, high-availability critical power.",
     overview:
       "The Wandtung Modular UPS uses hot-swappable power modules within a common frame, allowing capacity to scale with IT load growth and redundancy (N+1/N+X) to be built in without oversizing day-one investment.",
+    metaDescription:
+      "Sizing UPS capacity for IT load that will grow over time? Wandtung's Modular UPS uses hot-swappable power modules so capacity and redundancy scale as needed.",
     keyFeatures: [
       "Hot-swappable power modules",
       "N+X redundancy without full system shutdown",
@@ -1117,6 +1151,8 @@ export const products: Product[] = [
     tagline: "Free-standing online UPS for server rooms and small equipment areas without a rack.",
     overview:
       "The Wandtung Tower UPS delivers the same online double-conversion protection as the rack mount range in a free-standing tower enclosure, suited to server rooms, retail back-offices and equipment areas that don't use a 19-inch rack.",
+    metaDescription:
+      "No 19-inch rack in your server room? Wandtung's Tower UPS delivers the same online double-conversion protection as the rack range in a free-standing enclosure.",
     keyFeatures: [
       "True online double-conversion topology",
       "Free-standing tower enclosure",
@@ -1161,6 +1197,8 @@ export const products: Product[] = [
     tagline: "Double-conversion UPS providing continuous, regulated power with zero transfer time.",
     overview:
       "The Wandtung Online UPS uses true double-conversion topology, continuously regenerating output power from its inverter rather than switching to battery on disturbance, so connected equipment always sees a clean, regulated waveform with zero transfer time — the standard choice for critical IT and data center loads.",
+    metaDescription:
+      "Can't tolerate even a brief transfer to battery power? Wandtung's Online UPS uses true double-conversion so equipment always sees a clean, regulated waveform.",
     keyFeatures: [
       "True online double-conversion topology",
       "Zero transfer time to battery",
@@ -1199,6 +1237,8 @@ export const products: Product[] = [
     tagline: "Ruggedized UPS for harsh-environment industrial and process-control power protection.",
     overview:
       "The Wandtung Industrial UPS is built for environments outside typical data center conditions — wider operating temperature range, higher ingress protection, and tolerance for dust, vibration and less stable input power — protecting process control, SCADA and industrial IT equipment in factories, plants and remote industrial sites.",
+    metaDescription:
+      "Standard UPS specs don't survive dust, vibration or heat swings? Wandtung's Industrial UPS is built for wider operating ranges, protecting SCADA equipment.",
     keyFeatures: [
       "Extended operating temperature range",
       "Higher IP-rated enclosure options for dusty/humid environments",
@@ -1236,6 +1276,8 @@ export const products: Product[] = [
     tagline: "Large-capacity three-phase tower UPS for data center, industrial and medical critical power.",
     overview:
       "The Wandtung High Power UPS is a three-phase, online double-conversion tower UPS delivering 10 kVA to 200 kVA, built for data halls, industrial facilities and medical environments that need pure sine wave output with zero transfer time to battery. It solves the nine most common power quality problems — outages, sags, surges, harmonic distortion, transients, frequency fluctuation, EMI interference, over- and under-voltage — through a single unit, with full digital control and remote monitoring.",
+    metaDescription:
+      "Facing power quality issues in a data hall or plant? Wandtung's High Power UPS gives 10-200kVA online double-conversion with 0ms transfer, factory-direct.",
     images: [
       "/products/high-power-ups/01-main.jpg",
       "/products/high-power-ups/02-front-rear-view.jpg",
@@ -1309,6 +1351,8 @@ export const products: Product[] = [
     tagline: "19-inch floor-standing server cabinet with 2.0mm heavy-duty posts, up to 2000kg static load.",
     overview:
       "The Wandtung Network Cabinet is a 19-inch floor-standing enclosure for switches, patch panels, servers and network equipment, built with 2.0mm heavy-duty SPCC cold-rolled steel mounting posts, a top fan system, perforated shelves and a lockable tempered-glass door. Available in 18U/22U/32U/42U heights with 600/800/1000mm depth options, the reinforced internal frame supports a static load of 600–2000kg depending on configuration.",
+    metaDescription:
+      "Need a 19-inch cabinet for switches and servers? Wandtung's Network Cabinet spans 18U-42U with up to 2000kg load capacity, factory-direct, custom depth.",
     featured: true,
     images: [
       "/products/network-cabinet/01-main.jpg",
@@ -1399,6 +1443,8 @@ export const products: Product[] = [
     tagline: "High-load-capacity server cabinet for data center white space deployment.",
     overview:
       "The Wandtung Data Center Cabinet is purpose-built for data hall deployment, supporting high static and dynamic load ratings, hot/cold aisle containment compatibility, and integrated cable and PDU management for dense server and storage deployments.",
+    metaDescription:
+      "Deploying dense server and storage racks in a data hall? Wandtung's Data Center Cabinet supports high load ratings and hot/cold aisle containment compatibility.",
     keyFeatures: [
       "High static load rating for dense server/storage stacks",
       "Hot aisle / cold aisle containment compatible",
@@ -1446,6 +1492,8 @@ export const products: Product[] = [
     tagline: "19-inch server rack built for server and storage weight loads and airflow.",
     overview:
       "The Wandtung Server Rack is a 19-inch enclosure sized and reinforced for server and storage equipment rather than lighter network gear — deeper chassis clearance, stronger static load rating and airflow-optimized doors for compute-dense deployments.",
+    metaDescription:
+      "Network cabinet specs falling short for server and storage weight? Wandtung's Server Rack adds deeper clearance and a stronger static load rating.",
     keyFeatures: [
       "19-inch EIA-standard mounting, front and rear",
       "Deep chassis clearance for server/storage hardware",
@@ -1490,6 +1538,8 @@ export const products: Product[] = [
     tagline: "Standard EIA 19-inch rack enclosure for general IT and network equipment mounting.",
     overview:
       "The Wandtung 19 Inch Rack is a standard EIA-310 compliant enclosure sized for general-purpose IT, networking and telecom equipment mounting where a full server-rack or network-cabinet specification isn't required — a flexible base configuration for smaller deployments.",
+    metaDescription:
+      "Don't need a full server-rack or network-cabinet spec? Wandtung's 19 Inch Rack is an EIA-310 compliant base enclosure for general IT and telecom mounting.",
     keyFeatures: [
       "EIA-310 standard 19-inch mounting rails",
       "Open-frame and enclosed cabinet options",
@@ -1527,6 +1577,8 @@ export const products: Product[] = [
     tagline: "Cabinet engineered for cold aisle containment airflow separation.",
     overview:
       "The Wandtung Cold Aisle Cabinet is designed for deployment within a cold aisle containment layout, with sealed panel interfaces and door gasketing that keep supply air on the cold-aisle side separated from hot exhaust air, improving cooling efficiency across the row.",
+    metaDescription:
+      "Losing cooling efficiency to mixed hot/cold air? Wandtung's Cold Aisle Cabinet seals panel interfaces and door gaskets to keep containment airflow separated.",
     keyFeatures: [
       "Sealed panel and door interfaces for containment integrity",
       "Compatible with standard containment roof/door systems",
@@ -1564,6 +1616,8 @@ export const products: Product[] = [
     tagline: "Cabinet with integrated environmental and access monitoring for lights-out sites.",
     overview:
       "The Wandtung Intelligent Cabinet integrates environmental sensors, door access control and power monitoring at the cabinet level, giving operators visibility and control over individual cabinets in unattended or multi-tenant environments without a separate micro module.",
+    metaDescription:
+      "Managing unattended or multi-tenant cabinets at scale? Wandtung's Intelligent Cabinet integrates environmental sensors, access control and power monitoring.",
     keyFeatures: [
       "Integrated temperature/humidity monitoring",
       "Electronic door access control and door-open alarms",
@@ -1608,6 +1662,8 @@ export const products: Product[] = [
     tagline: "Weatherproof cabinet for outdoor telecom and network equipment deployment.",
     overview:
       "The Wandtung Outdoor Cabinet houses network and telecom equipment in outdoor or exposed environments, with a weatherproof enclosure, thermal management and cable entry glanding rated for sun, rain and dust exposure at cell sites, roadside cabinets and remote installations.",
+    metaDescription:
+      "Deploying network gear at a cell site or roadside location? Wandtung's Outdoor Cabinet is weatherproofed against sun, rain and dust, factory-direct.",
     keyFeatures: [
       "High IP-rated weatherproof enclosure",
       "Integrated thermal management (vented or air-conditioned options)",
@@ -1652,6 +1708,8 @@ export const products: Product[] = [
     tagline: "Compact wall-mounted network cabinet for space-constrained equipment rooms.",
     overview:
       "The Wandtung Wall Mount Cabinet packages a 6U–12U 19-inch enclosure with a 5mm tempered glass door, reinforced cold-rolled steel frame and removable cable entry into a compact wall-mounted footprint, suited to small equipment rooms, offices and telecom closets where floor space isn't available for a full-size cabinet.",
+    metaDescription:
+      "No floor space for a full-size cabinet? Wandtung's Wall Mount Cabinet fits 6U-12U of 19-inch gear behind a tempered-glass door in a compact footprint.",
     featured: true,
     images: [
       "/products/wall-mount-cabinet/01-main.jpg",
@@ -1716,6 +1774,8 @@ export const products: Product[] = [
     tagline: "All-in-one micro data center with integrated UPS, precision cooling and touchscreen monitoring, 1-5 bay expansion.",
     overview:
       "The Wandtung Smart Micro Module integrates IT cabinets, UPS, PDU, precision air conditioning, fire/smoke detection, door access control and environmental monitoring into a single pre-engineered, factory-tested, plug-and-play system. A front touchscreen gives on-site access to the intelligent monitoring platform, and bays expand flexibly from a single cabinet up to a 5-bay row for small to mid-size data rooms.",
+    metaDescription:
+      "Building a small data room without months of on-site construction? Wandtung's Smart Micro Module pre-integrates UPS and cooling into 1-5 expandable bays.",
     featured: true,
     images: [
       "/products/smart-micro-module/01-main.png",
@@ -1785,6 +1845,8 @@ export const products: Product[] = [
     tagline: "Compact micro module with cabinets arranged in a single row for small deployments.",
     overview:
       "The Wandtung Single Row Micro Data Center arranges IT cabinets in a single row with rear or side power and cooling infrastructure, sized for small equipment rooms and branch sites where a full dual-row containment layout isn't needed.",
+    metaDescription:
+      "Small equipment room, no room for dual-row containment? Wandtung's Single Row Micro Data Center fits cabinets in one row with rear or side infrastructure.",
     images: [
       "/products/single-row-micro-data-center/01-main-view.jpg",
       "/products/single-row-micro-data-center/02-rack-configuration.jpg",
@@ -1829,6 +1891,8 @@ export const products: Product[] = [
     tagline: "Micro module with cabinets facing in two rows and hot/cold aisle containment.",
     overview:
       "The Wandtung Dual Row Micro Data Center arranges IT cabinets in two facing rows with hot or cold aisle containment between them, improving cooling efficiency over a single-row layout for mid-size deployments with higher cabinet counts or density.",
+    metaDescription:
+      "Single-row layout not cooling efficiently enough? Wandtung's Dual Row Micro Data Center adds facing rows with hot/cold aisle containment for denser deployments.",
     images: ["/products/dual-row-micro-data-center/01-dual-row-layout.jpg"],
     keyFeatures: [
       "Dual-row layout with hot/cold aisle containment",
@@ -1867,6 +1931,8 @@ export const products: Product[] = [
     tagline: "Single enclosure integrating rack, UPS, PDU and cooling for the smallest deployments.",
     overview:
       "The Wandtung All-in-One Micro Data Center packages IT rack space, UPS, PDU and cooling into a single self-contained enclosure — the smallest step up from a standard cabinet, suited to sites with only a handful of servers and no dedicated equipment room.",
+    metaDescription:
+      "Only a handful of servers, no dedicated equipment room? Wandtung's All-in-One Micro Data Center packs rack space, UPS, PDU and cooling into one enclosure.",
     keyFeatures: [
       "Single self-contained enclosure — rack, power and cooling in one unit",
       "Compact footprint for spaces without a dedicated server room",
@@ -1906,6 +1972,8 @@ export const products: Product[] = [
     tagline: "Fully pre-integrated 40-foot containerized data center for rapid, large-scale deployment.",
     overview:
       "The Wandtung 40ft Container Data Center is a complete, factory-built data center in a standard 40-foot ISO container shell, pre-installed with IT cabinets, power distribution, UPS, cooling, fire protection, security and monitoring — engineered for telecom, mining, oil & gas, edge computing and emergency deployment where speed and site independence matter.",
+    metaDescription:
+      "Need a data center deployed in weeks? Wandtung's 40ft Container Data Center ships pre-integrated with IT, power, cooling and fire protection, factory-built.",
     keyFeatures: [
       "Complete IT + power + cooling integration inside a standard ISO container",
       "Reinforced, insulated container structure rated for outdoor deployment",
@@ -1971,6 +2039,8 @@ export const products: Product[] = [
     tagline: "Compact containerized data center in a 20-foot ISO shell for smaller or space-constrained sites.",
     overview:
       "The Wandtung 20ft Container Data Center packages IT cabinets, power distribution, UPS, cooling, fire protection and monitoring into a standard 20-foot ISO container — a smaller footprint than the 40ft option, suited to space-constrained sites, smaller IT loads, or edge deployments where a full 40ft unit isn't justified.",
+    metaDescription:
+      "Space-constrained site, smaller IT load? Wandtung's 20ft Container Data Center packs cabinets, power, cooling and monitoring into a compact ISO shell.",
     keyFeatures: [
       "Complete IT + power + cooling integration in a compact 20ft footprint",
       "Reinforced, insulated container structure rated for outdoor deployment",
@@ -2016,6 +2086,8 @@ export const products: Product[] = [
     tagline: "Multiple interconnected containers scaling to larger capacity than a single unit.",
     overview:
       "The Wandtung Modular Container Data Center links multiple 20ft or 40ft container modules — IT, power and cooling units — into a larger, coordinated facility, letting capacity scale beyond what a single container can hold while keeping the factory-built, rapid-deployment model of containerized infrastructure.",
+    metaDescription:
+      "One container isn't enough capacity? Wandtung's Modular Container Data Center links multiple 20ft/40ft units into one coordinated, rapidly deployed facility.",
     keyFeatures: [
       "Multiple container modules interconnected for larger capacity",
       "Dedicated or shared power/cooling modules across the group",
@@ -2053,6 +2125,8 @@ export const products: Product[] = [
     tagline: "Compact, factory-built data center for compute deployed close to the network edge.",
     overview:
       "The Wandtung Edge Data Center is a compact containerized or micro modular unit purpose-built for edge computing sites — small footprint, remote/unattended monitoring, and resilient power sized for locations without a traditional data center facility nearby.",
+    metaDescription:
+      "Deploying compute with no data center nearby? Wandtung's Edge Data Center is a compact containerized or micro modular unit built for remote, unattended sites.",
     keyFeatures: [
       "Compact footprint for constrained edge sites",
       "Remote, unattended monitoring for lights-out operation",
@@ -2092,6 +2166,8 @@ export const products: Product[] = [
     tagline: "Close-control precision cooling for data center and telecom equipment rooms.",
     overview:
       "The Wandtung Precision Air Conditioner provides tight temperature and humidity control for data halls and telecom rooms, with downflow or upflow air distribution and capacities suited to small equipment rooms through large data center white space.",
+    metaDescription:
+      "Standard HVAC can't hold data center tolerances? Wandtung's Precision Air Conditioner gives close-control temperature and humidity, small rooms to white space.",
     images: [
       "/products/precision-air-conditioner/01-main-view.jpg",
       "/products/precision-air-conditioner/02-side-annotated.jpg",
@@ -2136,6 +2212,8 @@ export const products: Product[] = [
     tagline: "Cold plate liquid cooling for high-density AI and HPC compute racks.",
     overview:
       "Wandtung's liquid cooling solution combines cold plate liquid cooling at the server level with a coolant distribution unit (CDU) managing primary and secondary loops, enabling data centers to cool high-density AI training and HPC racks beyond the practical limits of air cooling.",
+    metaDescription:
+      "AI training racks running hotter than air can handle? Wandtung's liquid cooling pairs server-level cold plates with a CDU managing primary and secondary loops.",
     featured: true,
     images: [
       "/products/liquid-cooling/01-system-architecture.jpg",
@@ -2183,6 +2261,8 @@ export const products: Product[] = [
     tagline: "Coolant distribution unit managing primary and secondary liquid cooling loops.",
     overview:
       "The Wandtung CDU manages coolant distribution between the facility (primary) loop and the rack-level (secondary) loop in a liquid cooling deployment, providing pumping, heat exchange, filtration, leak detection and monitoring in a single rack-mountable or standalone unit.",
+    metaDescription:
+      "Running a liquid cooling loop without contaminating IT hardware? Wandtung's CDU isolates facility and rack loops with pumping, filtration and leak detection.",
     keyFeatures: [
       "Primary/secondary loop isolation via heat exchanger",
       "Redundant pumps for continuous operation",
@@ -2221,6 +2301,8 @@ export const products: Product[] = [
     tagline: "Direct-to-chip liquid cooling rack cabinet, 42U, 20-80kW+ per rack, AI GPU server ready.",
     overview:
       "The Wandtung Liquid Cooling Cabinet is a 42U standard rack purpose-built for direct-to-chip liquid cooling of AI and GPU servers, supporting 20–80kW+ per rack. Each cabinet integrates a quick-disconnect coolant manifold, direct-to-chip cold plates with micro-channel design, stainless steel coolant piping and a brazed copper plate heat exchanger, connecting into a facility-level liquid cooling system alongside a CDU, dry cooler or cooling tower and secondary loop.",
+    metaDescription:
+      "Cooling AI/GPU racks beyond what air handles? Wandtung's Liquid Cooling Cabinet supports 20-80kW+ per rack with direct-to-chip cold plates, 42U standard.",
     featured: true,
     images: [
       "/products/liquid-cooling-cabinet/01-main-annotated.jpg",
@@ -2287,6 +2369,8 @@ export const products: Product[] = [
     tagline: "Cooling units placed at the row level for shorter, more efficient airflow paths.",
     overview:
       "Wandtung Row-Based Cooling places cooling capacity within the row of IT cabinets rather than around the perimeter of the room, shortening the airflow path to the load and improving cooling efficiency and predictability at medium-to-high rack densities.",
+    metaDescription:
+      "Room-level cooling losing precision at higher rack density? Wandtung's Row-Based Cooling shortens the airflow path by placing capacity within the cabinet row.",
     keyFeatures: [
       "Cooling capacity distributed within the cabinet row",
       "Shorter airflow path than perimeter (room) cooling",
@@ -2323,6 +2407,8 @@ export const products: Product[] = [
     tagline: "Cooling unit installed directly within the cabinet row, next to the IT load it serves.",
     overview:
       "Wandtung In-Row Cooling units install directly within the cabinet row — the same footprint as an IT cabinet — placing cooling capacity immediately next to the racks generating heat, for tight, predictable temperature control at the row level. The unit holds ±0.5°C temperature and ±5% RH humidity precision using variable-speed EC fans, with an intelligent controller for remote monitoring and 24/7 continuous-duty operation.",
+    metaDescription:
+      "Room cooling can't keep up with rack density? Wandtung's In-Row units sit inside the cabinet row for tighter ±0.5°C control and 24/7 continuous-duty operation.",
     images: [
       "/products/in-row-cooling/01-main-view.jpg",
       "/products/in-row-cooling/02-front-view.jpg",
@@ -2385,6 +2471,8 @@ export const products: Product[] = [
     tagline: "Perimeter precision cooling for the whole data hall or equipment room.",
     overview:
       "Wandtung Room Cooling units condition the whole data hall or equipment room from the room perimeter — the traditional data center cooling approach, well suited to lower-density rooms or as a baseline layer alongside row-based/in-row cooling at higher densities.",
+    metaDescription:
+      "Cooling a lower-density data hall or equipment room? Wandtung's Room Cooling conditions the space from the perimeter, the traditional data center approach.",
     images: [
       "/products/room-cooling/01-main.jpg",
       "/products/room-cooling/02-key-features.jpg",
@@ -2429,6 +2517,8 @@ export const products: Product[] = [
     tagline: "Zero water-loss V-type dry cooler for liquid cooling and chiller heat rejection.",
     overview:
       "The Wandtung V-Type Dry Cooler rejects heat from a liquid cooling or chilled water loop to ambient air with zero water consumption, using V-arranged copper-tube/aluminum-fin coils, EC axial fans with 10–100% variable speed, and a hot-dip galvanized steel frame. It scales from 120kW to 1400kW across a standard model range, supporting the primary or secondary loop of data center liquid cooling and industrial chiller systems.",
+    metaDescription:
+      "Rejecting heat without burning water? Wandtung's V-Type Dry Cooler uses EC fans and copper-tube coils for zero water loss, scaling from 120kW to 1400kW.",
     featured: true,
     images: [
       "/products/dry-cooler/01-main.jpg",
@@ -2501,6 +2591,8 @@ export const products: Product[] = [
     tagline: "Raised access flooring for airflow management and cable routing in data center white space.",
     overview:
       "Wandtung anti-static raised floor panels provide an elevated, load-rated deck for underfloor air distribution and cable routing, with an anti-static PVC surface finish (10^6–10^9 Ω) suited to data center, server room and office environments. Each panel uses a 3-layer construction — SPCC cold-rolled steel surface, deep-drawn coil steel dimple base and a high-density foamed cement core — joined with a precision interlocking cornerlock system, on a height-adjustable steel pedestal (100–500mm).",
+    metaDescription:
+      "Need underfloor airflow and cable routing? Wandtung's Anti-Static Raised Floor resists static (10^6-10^9 Ω) on an adjustable pedestal, CE/ISO certified.",
     images: [
       "/products/anti-static-raised-floor/01-main.jpg",
       "/products/anti-static-raised-floor/02-panel-structure.jpg",
@@ -2562,6 +2654,8 @@ export const products: Product[] = [
     tagline: "Transparent tempered glass access floor combining anti-static protection with a decorative, see-through finish.",
     overview:
       "The Wandtung Glass Anti-Static Raised Floor pairs a 12mm tempered glass surface with a precision aluminum alloy edge frame and height-adjustable galvanized pedestal, giving data center white space, network operations centers, offices and exhibition spaces an elevated access floor that is both anti-static and visually transparent, exposing the cable routing beneath.",
+    metaDescription:
+      "Want an access floor that still looks presentable in a NOC or lobby? Wandtung's Glass Raised Floor pairs 12mm tempered glass with anti-static protection.",
     featured: true,
     images: [
       "/products/glass-raised-floor/01-main.jpg",
@@ -2625,6 +2719,8 @@ export const products: Product[] = [
     tagline: "High-strength calcium sulphate core raised floor panel for heavy load environments.",
     overview:
       "Wandtung Calcium Sulphate Raised Floor panels use a dense calcium sulphate core for high load capacity and dimensional stability, suited to data halls and equipment rooms with heavy point loads or fire-rating requirements beyond a standard steel-encased panel. Panels combine an HPL anti-static surface with precision black edge trim protection, a galvanized steel stringer frame, and a height-adjustable pedestal system.",
+    metaDescription:
+      "Facing heavy point loads or fire-rating needs beyond a standard panel? Wandtung's Calcium Sulphate Floor pairs a dense core with an HPL anti-static surface.",
     images: [
       "/products/calcium-sulphate-raised-floor/01-main.jpg",
       "/products/calcium-sulphate-raised-floor/02-top-view.jpg",
@@ -2688,6 +2784,8 @@ export const products: Product[] = [
     tagline: "HPL anti-static surface, steel-encased foaming cement core raised floor panel, honeycomb-reinforced base.",
     overview:
       "Wandtung Steel Cementitious Raised Floor panels pair a high-pressure laminate (HPL) anti-static surface with a lightweight foaming cement core fully encased in a high-quality steel shell, reinforced by a welded honeycomb steel base structure. The panel sits on an adjustable pedestal and stringer system, giving a cost-effective, widely used raised floor option for standard data center and equipment room loads.",
+    metaDescription:
+      "Need a cost-effective raised floor for standard loads? Wandtung's Steel Cementitious panel encases a foamed cement core in steel with a welded honeycomb base.",
     featured: true,
     images: [
       "/products/steel-cementitious-raised-floor/01-main.png",
@@ -2744,6 +2842,8 @@ export const products: Product[] = [
     tagline: "Perforated raised floor panel engineered for underfloor cold-air distribution.",
     overview:
       "Wandtung Airflow Floor panels are perforated raised floor tiles engineered to deliver a controlled volume of underfloor cold air into the cold aisle, with adjustable or fixed open-area options to balance airflow across the data hall.",
+    metaDescription:
+      "Cold aisle not getting enough underfloor air? Wandtung's Airflow Floor panels are perforated tiles engineered to deliver a controlled volume of cold air.",
     keyFeatures: [
       "Perforated panel for controlled underfloor air delivery",
       "Adjustable damper options to balance airflow by zone",
@@ -2783,6 +2883,8 @@ export const products: Product[] = [
     tagline: "Wire mesh and ladder cable trays for structured data center cable pathways.",
     overview:
       "Wandtung cable trays provide structured, serviceable pathways for power and data cabling above racks or under raised floors, available in wire mesh and ladder-type construction for different load and cable-fill requirements.",
+    metaDescription:
+      "Choosing a cable pathway for power and data runs? Wandtung supplies wire mesh and ladder-type cable tray, sized to different load and cable-fill requirements.",
     keyFeatures: [
       "Wire mesh and ladder-type construction",
       "Tool-free or bolted section connectors",
@@ -2824,6 +2926,8 @@ export const products: Product[] = [
     tagline: "Modular polymer raceway system protecting fiber optic cable bend radius through the full pathway.",
     overview:
       "The Wandtung Polymer Fiber Optic Cable Tray is a modular, UL94-V0 flame-retardant plastic raceway system with smooth, rounded internal channels that protect fiber optic cable from sharp bends and abrasion along its entire route. The modular fitting range — straight sections in multiple widths, 90° and 45° elbows, tees, reducers and vertical risers — snap together with tool-free connectors to build a complete enclosed fiber pathway between racks, rooms and floors.",
+    metaDescription:
+      "Protecting fiber optic cable bend radius along its route? Wandtung's Polymer Fiber Optic Cable Tray is a UL94-V0 modular raceway with snap-fit fittings.",
     featured: true,
     images: [
       "/products/fiber-optic-cable-tray/01-straight-120x100.png",
@@ -2896,6 +3000,8 @@ export const products: Product[] = [
     tagline: "Lightweight welded wire mesh tray for structured, field-modifiable cable pathways.",
     overview:
       "Wandtung Wire Mesh Cable Tray is a welded wire construction that's lightweight, ventilated and easy to cut and reconfigure on site, making it a common choice for structured data and fiber cabling pathways above racks or along containment routes.",
+    metaDescription:
+      "Need cable pathways you can modify on site? Wandtung's Wire Mesh Tray is lightweight, ventilated, welded wire construction, easy to cut and reconfigure.",
     images: [
       "/products/wire-mesh-cable-tray/01-main-view-v2.jpg",
       "/products/wire-mesh-cable-tray/02-installation-detail-v2.jpg",
@@ -2943,6 +3049,8 @@ export const products: Product[] = [
     tagline: "High-capacity ladder-type tray for heavier power cable runs.",
     overview:
       "Wandtung Ladder Cable Tray uses a rung-and-rail construction rated for higher cable fill and load capacity than wire mesh, with good heat dissipation for heavier power cable runs across data centers, telecom rooms and industrial facilities.",
+    metaDescription:
+      "Wire mesh tray can't carry the cable load? Wandtung's Ladder Tray uses rung-and-rail construction for higher fill capacity and heat dissipation on power runs.",
     keyFeatures: [
       "Rung-and-rail construction for high load capacity",
       "Good heat dissipation for power cable bundles",
@@ -2984,6 +3092,8 @@ export const products: Product[] = [
     tagline: "Lightweight, corrosion-resistant aluminum ladder tray with tool-free T-slot assembly.",
     overview:
       "The Wandtung Aluminum Alloy Cable Ladder is built from 6063-T5 aluminum alloy extrusion with anodized surface treatment, giving it roughly a third of the weight of an equivalent steel ladder tray while remaining corrosion-resistant, with a precision T-slot connection system that assembles with M8 anti-corrosion bolts — no welding required — for fast, modular installation in data center and server room environments.",
+    metaDescription:
+      "Need a lighter alternative to steel cable tray? Wandtung's Aluminum Ladder Tray is anodized 6063-T5 extrusion, T-slot assembled with M8 bolts, no welding.",
     featured: true,
     images: [
       "/products/aluminum-cable-ladder/01-main.jpg",
@@ -3046,6 +3156,8 @@ export const products: Product[] = [
     tagline: "Fully enclosed solid-bottom trough tray with cover for dust and physical protection of cable runs.",
     overview:
       "The Wandtung Solid Bottom Cable Tray is a fully enclosed trough-type tray with a solid base, ventilated side walls and a snap-on cover, giving cables physical protection from dust, debris and accidental contact along the full run. It is manufactured in stainless steel, aluminum alloy, hot-dip galvanized and fireproof variants, ships with a complete fitting range including elbows, and mounts to ceiling, wall or horizontal supports.",
+    metaDescription:
+      "Need cable runs shielded from dust and contact? Wandtung's Solid Bottom Tray fully encloses cables with a snap-on cover, in steel or fireproof variants.",
     featured: true,
     images: [
       "/products/solid-bottom-cable-tray/01-main.png",
@@ -3111,6 +3223,8 @@ export const products: Product[] = [
     tagline: "Containerized and cabinet-based battery energy storage for resilient site power.",
     overview:
       "The Wandtung Battery Energy Storage System integrates battery racks, a power conversion system (PCS) and an energy management system (EMS) in cabinet or containerized form factors, supporting peak shaving, backup power and renewable energy integration for data centers and industrial sites.",
+    metaDescription:
+      "Evaluating BESS for backup power or peak shaving at your site? Wandtung integrates battery racks, PCS and EMS in cabinet or containerized formats.",
     keyFeatures: [
       "Cabinet or containerized form factor",
       "Integrated PCS and EMS",
@@ -3149,6 +3263,8 @@ export const products: Product[] = [
     tagline: "Grid-tied or off-grid solar generation paired with site energy storage.",
     overview:
       "The Wandtung Solar Power System combines PV generation with inverters and, where required, battery storage to supply site power for grid-tied offset or off-grid operation — sized for data center auxiliary loads, telecom sites and industrial facilities looking to reduce grid dependence.",
+    metaDescription:
+      "Reducing grid dependence at a telecom or industrial site? Wandtung's Solar Power System pairs PV generation with inverters and storage, grid-tied or off-grid.",
     keyFeatures: [
       "Grid-tied or off-grid configuration",
       "PV array with string or central inverters",
@@ -3186,6 +3302,8 @@ export const products: Product[] = [
     tagline: "High-efficiency monocrystalline and bifacial solar panels, 380W to 700W, multi-brand sourcing.",
     overview:
       "The Wandtung Solar PV Module range covers high-efficiency monocrystalline panels — including a 640–670W HPBC 2.0 cell series and a 585–595W bifacial dual-glass half-cell series — backed by a 15-year product warranty and 30-year linear power output guarantee, and certified to TUV, CSA and CE standards. Beyond our own panels, Wandtung sources and supplies the full range of major-brand modules (Jinko, LONGI, Trina, JA Solar, Risen, AIKO) with sample services and customized packaging, giving project buyers a single source for solar generation hardware alongside our storage and power systems.",
+    metaDescription:
+      "Sourcing solar panels for a ground-mount or rooftop project? Wandtung supplies its own 640-670W monocrystalline panels, plus Jinko, LONGI and Trina modules.",
     featured: true,
     images: [
       "/products/solar-pv-module/01-main.jpg",
@@ -3263,6 +3381,8 @@ export const products: Product[] = [
     tagline: "Aluminum alloy rail and hot-dip galvanized steel post ground-mount racking, 10kW to 10MW.",
     overview:
       "The Wandtung Solar Ground Mounting System pairs 6063-T5 aluminum alloy module rails with hot-dip galvanized steel posts and a triangulated wind-resistant brace, giving ground-mount solar arrays a bolt-fixed anchor base, custom tilt angle from 10° to 60°, and a rated wind load of ≥180km/h. The modular design scales from a single-post bracket for small arrays up to utility-scale layouts from 10kW to 10MW, with fast on-site assembly and a 25-year structural warranty.",
+    metaDescription:
+      "Anchoring a ground-mount solar array against wind load? Wandtung's racking pairs aluminum rails with galvanized posts, rated ≥180km/h, 10kW to 10MW scale.",
     featured: true,
     images: [
       "/products/solar-ground-mounting-system/01-main.jpg",
@@ -3332,6 +3452,8 @@ export const products: Product[] = [
     tagline: "General-purpose energy storage system combining battery, PCS and EMS.",
     overview:
       "The Wandtung Energy Storage System (ESS) is the general building block behind Wandtung's cabinet and containerized energy storage products — battery racks, a power conversion system (PCS) and an energy management system (EMS) configured to the site's capacity and operating strategy, whether that's backup power, peak shaving or renewable integration.",
+    metaDescription:
+      "Sizing storage for backup power, peak shaving or renewables? Wandtung's ESS configures battery racks, PCS and EMS to the site's actual capacity and strategy.",
     keyFeatures: [
       "Configurable battery, PCS and EMS building blocks",
       "Operating strategy configurable via EMS (backup / peak shaving / renewables)",
@@ -3369,6 +3491,8 @@ export const products: Product[] = [
     tagline: "Outdoor IP55 liquid-cooled all-in-one BESS cabinet, 51.2V LFP, scalable to utility scale.",
     overview:
       "The Wandtung Energy Storage Cabinet is an outdoor-rated (IP55), liquid-cooled all-in-one battery energy storage cabinet built around 51.2V LFP battery modules (280Ah/314Ah). Each cabinet integrates the battery modules, PCS, EMS, liquid-cooling unit, dehumidifier, fire composite detector and aerosol fire extinguishing device in a single 1350 x 1150 x 2420mm enclosure, and multiple cabinets can be paralleled with a PCS for commercial & industrial (C&I) and utility-scale systems from 250kW to 1000kW.",
+    metaDescription:
+      "Need outdoor battery storage that scales past a single site? Wandtung's Energy Storage Cabinet is a 51.2V LFP, liquid-cooled unit, paralleling to 1000kW.",
     featured: true,
     images: [
       "/products/energy-storage-cabinet/01-main.jpg",
@@ -3442,6 +3566,8 @@ export const products: Product[] = [
     tagline: "Outdoor-rated liquid-cooled LFP containerized energy storage, up to 3840 kWh per unit.",
     overview:
       "The Wandtung Containerized Energy Storage System packages LFP battery racks, PCS, BMS/EMS, liquid-cooling thermal management and fire suppression inside an outdoor-rated (IP55) ISO container. Rated up to 3840 kWh per unit with precision liquid cooling holding cell-to-cell temperature difference to ΔT ≤ 3°C, it is built to UL/IEC international safety standards for utility-scale, renewable-integration and industrial energy storage, and is factory-tested as a complete system before shipment.",
+    metaDescription:
+      "Need utility-scale storage in one self-contained unit? Wandtung's Containerized ESS packs LFP batteries and liquid cooling into an IP55 container, 3840kWh.",
     featured: true,
     images: [
       "/products/containerized-energy-storage-system/01-main.jpg",
