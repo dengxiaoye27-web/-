@@ -34,6 +34,13 @@ export interface Product {
   shortName: string;
   tagline: string;
   overview: string;
+  // SEO-only meta description (~150-160 chars). Distinct from `overview`
+  // (the on-page body paragraph, which is longer by design) so the two
+  // don't have to trade off against each other. English-only for now —
+  // other locales fall back to their translated `overview` until this
+  // gets translated too. Optional so untouched products keep their prior
+  // behavior (falling back to overview) rather than being blocked on this.
+  metaDescription?: string;
   featured?: boolean;
   images?: string[];
   keyFeatures: string[];

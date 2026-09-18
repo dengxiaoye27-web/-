@@ -7,7 +7,7 @@ export const articles: Article[] = [
     metaTitle: "What Is an Intelligent PDU? A Data Center Buyer's Guide | WANDTUNG",
     category: "Power Distribution",
     excerpt:
-      "Learn what an intelligent PDU is, how metered, monitored and switched rack PDUs differ, and when your data center needs one. A practical guide from a PDU manufacturer.",
+      "Learn what an intelligent PDU is, how metered, monitored and switched rack PDUs differ, and when your data center actually needs one, from a PDU manufacturer.",
     publishedAt: "2026-07-20",
     readingTime: "6 min read",
     body: [
@@ -275,7 +275,7 @@ export const articles: Article[] = [
     title: "Beyond Just Cooling: Why AI Data Centers Require an Integrated Liquid-to-Rack Architecture",
     category: "Liquid Cooling",
     excerpt:
-      "Traditional air cooling has hit the thermal wall. For NVIDIA H100/H200 clusters, liquid cooling isn't just an option—it's a requirement. Here is why Wandtung advocates for a coordinated D2C approach.",
+      "Air cooling hits a thermal wall with NVIDIA H100/H200 clusters. See why Wandtung advocates coordinated direct-to-chip liquid cooling architecture for AI racks.",
     publishedAt: "2026-08-08",
     readingTime: "6 min read",
     body: [
