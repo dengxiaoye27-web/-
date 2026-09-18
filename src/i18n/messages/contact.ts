@@ -43,6 +43,10 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "Something went wrong. Please try again or email us directly.",
     },
     sidebar: { email: "Email", whatsapp: "WhatsApp", whatsappCta: "Chat with us on WhatsApp", location: "Location" },
+    exploreLinks: {
+      caseStudies: "Read how we've delivered similar projects",
+      products: "Not sure what you need? Browse products first",
+    },
   },
   ar: {
     hero: {
@@ -85,6 +89,10 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "حدث خطأ ما. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر البريد الإلكتروني.",
     },
     sidebar: { email: "البريد الإلكتروني", whatsapp: "واتساب", whatsappCta: "تواصل معنا عبر واتساب", location: "الموقع" },
+    exploreLinks: {
+      caseStudies: "اطلع على كيفية تنفيذنا لمشاريع مماثلة",
+      products: "غير متأكد مما تحتاجه؟ تصفح المنتجات أولاً",
+    },
   },
   fr: {
     hero: {
@@ -127,6 +135,10 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par e-mail.",
     },
     sidebar: { email: "E-mail", whatsapp: "WhatsApp", whatsappCta: "Discutez avec nous sur WhatsApp", location: "Adresse" },
+    exploreLinks: {
+      caseStudies: "Découvrez comment nous avons réalisé des projets similaires",
+      products: "Pas sûr de ce dont vous avez besoin ? Parcourez nos produits",
+    },
   },
   es: {
     hero: {
@@ -169,6 +181,10 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "Algo salió mal. Inténtelo de nuevo o escríbanos directamente por correo electrónico.",
     },
     sidebar: { email: "Correo electrónico", whatsapp: "WhatsApp", whatsappCta: "Chatea con nosotros por WhatsApp", location: "Ubicación" },
+    exploreLinks: {
+      caseStudies: "Vea cómo hemos entregado proyectos similares",
+      products: "¿No está seguro de lo que necesita? Explore los productos primero",
+    },
   },
   ru: {
     hero: {
@@ -211,6 +227,10 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "Что-то пошло не так. Попробуйте снова или напишите нам напрямую по электронной почте.",
     },
     sidebar: { email: "Эл. почта", whatsapp: "WhatsApp", whatsappCta: "Написать нам в WhatsApp", location: "Адрес" },
+    exploreLinks: {
+      caseStudies: "Узнайте, как мы реализовали похожие проекты",
+      products: "Не уверены, что нужно? Сначала посмотрите продукцию",
+    },
   },
   zh: {
     hero: {
@@ -253,5 +273,9 @@ export const contactMessages: Record<Locale, ContactMessages> = {
       errorMessage: "提交出现问题,请重试,或直接发送邮件与我们联系。",
     },
     sidebar: { email: "邮箱", whatsapp: "WhatsApp", whatsappCta: "通过 WhatsApp 与我们聊天", location: "地址" },
+    exploreLinks: {
+      caseStudies: "了解我们交付的类似项目",
+      products: "还不确定需要什么？先浏览产品",
+    },
   },
 };

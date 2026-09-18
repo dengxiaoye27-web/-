@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RFQForm } from "@/components/forms/RFQForm";
+import Link from "@/components/ui/LocaleLink";
 import { siteConfig } from "@/lib/site";
 import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
@@ -72,6 +73,15 @@ export default async function ContactPage({
             <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.location}</h3>
             <p className="mt-2 text-ink-900">{siteConfig.address}</p>
+          </div>
+
+          <div className="space-y-2 pt-2 text-sm">
+            <Link href="/projects" className="block text-ink-600 hover:text-accent-500 transition-colors">
+              {t.exploreLinks.caseStudies} →
+            </Link>
+            <Link href="/products" className="block text-ink-600 hover:text-accent-500 transition-colors">
+              {t.exploreLinks.products} →
+            </Link>
           </div>
         </div>
       </div>

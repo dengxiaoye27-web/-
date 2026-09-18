@@ -63,6 +63,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       paragraph:
         "Beyond catalog products, Wandtung's engineering team supports project-specific configuration — from PDU outlet layout and cabinet dimensions to complete micro modular and containerized data center system design — backed by technical documentation and delivery coordination for overseas projects.",
     },
+        exploreLinks: {
+      caseStudies: "See our project case studies",
+      solutions: "Explore our solutions",
+      products: "Browse our product range",
+    },
     cta: { title: "Want to Work With Our Engineering Team?", button: "Contact Engineering Team" },
   },
   ar: {
@@ -125,6 +130,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "حلول مخصصة وتسليم المشاريع",
       paragraph:
         "بالإضافة إلى منتجات الكتالوج، يدعم فريق هندسة واندتونغ التكوين الخاص بكل مشروع — من تخطيط منافذ PDU وأبعاد الخزانات إلى تصميم أنظمة كاملة لمراكز البيانات المعيارية المصغرة والحاوية — مدعوماً بوثائق تقنية وتنسيق التسليم للمشاريع الخارجية.",
+    },
+        exploreLinks: {
+      caseStudies: "اطلع على دراسات حالة مشاريعنا",
+      solutions: "استكشف حلولنا",
+      products: "تصفح مجموعة منتجاتنا",
     },
     cta: { title: "هل ترغب بالعمل مع فريقنا الهندسي؟", button: "تواصل مع فريق الهندسة" },
   },
@@ -189,6 +199,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       paragraph:
         "Au-delà des produits du catalogue, l'équipe d'ingénierie de Wandtung accompagne la configuration spécifique à chaque projet — de la disposition des prises PDU et des dimensions des baies à la conception complète de systèmes de centres de données modulaires micro et conteneurisés — avec documentation technique et coordination de la livraison pour les projets à l'international.",
     },
+        exploreLinks: {
+      caseStudies: "Découvrez nos études de cas",
+      solutions: "Découvrez nos solutions",
+      products: "Parcourir notre gamme de produits",
+    },
     cta: { title: "Vous souhaitez travailler avec notre équipe d'ingénierie ?", button: "Contacter l'équipe d'ingénierie" },
   },
   es: {
@@ -251,6 +266,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Soluciones personalizadas y entrega de proyectos",
       paragraph:
         "Más allá de los productos de catálogo, el equipo de ingeniería de Wandtung apoya la configuración específica de cada proyecto — desde la disposición de las tomas del PDU y las dimensiones del gabinete hasta el diseño completo de sistemas de centros de datos modulares micro y en contenedores — respaldado por documentación técnica y coordinación de entrega para proyectos internacionales.",
+    },
+        exploreLinks: {
+      caseStudies: "Vea nuestros casos de estudio de proyectos",
+      solutions: "Explore nuestras soluciones",
+      products: "Explore nuestra gama de productos",
     },
     cta: { title: "¿Desea trabajar con nuestro equipo de ingeniería?", button: "Contactar al equipo de ingeniería" },
   },
@@ -315,6 +335,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       paragraph:
         "Помимо каталожной продукции, инженерная команда Wandtung поддерживает индивидуальную конфигурацию под конкретный проект — от компоновки розеток PDU и габаритов шкафов до полного проектирования систем микромодульных и контейнерных дата-центров — с технической документацией и координацией поставки для зарубежных проектов.",
     },
+        exploreLinks: {
+      caseStudies: "Посмотрите наши примеры проектов",
+      solutions: "Изучите наши решения",
+      products: "Просмотрите наш ассортимент продукции",
+    },
     cta: { title: "Хотите работать с нашей инженерной командой?", button: "Связаться с инженерной командой" },
   },
   zh: {
@@ -377,6 +402,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "定制方案与项目交付",
       paragraph:
         "除标准目录产品外,万电通工程团队还支持项目专属配置——从PDU出口布局、机柜尺寸,到完整的微模块及集装箱数据中心系统设计——并提供技术文档支持及海外项目交付协调。",
+    },
+        exploreLinks: {
+      caseStudies: "查看我们的项目案例",
+      solutions: "探索我们的解决方案",
+      products: "浏览我们的产品系列",
     },
     cta: { title: "希望与我们的工程团队合作？", button: "联系工程团队" },
   },
