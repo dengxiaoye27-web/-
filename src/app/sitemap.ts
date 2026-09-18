@@ -5,14 +5,25 @@ import { productCategories } from "@/data/categories";
 import { solutions } from "@/data/solutions";
 import { projects } from "@/data/projects";
 import { articles } from "@/data/articles";
+import { locales } from "@/i18n/config";
+import { hreflangCode, localizedPath } from "@/lib/alternates";
 
-// Only the default locale (English) is submitted here — the other
-// locales in src/i18n/config.ts currently serve the same English
-// content at a localized URL and are intentionally left out of the
-// sitemap until real translations exist, to avoid signaling duplicate
-// content. Each page's <html lang> and hreflang alternates (see
-// src/app/[locale]/layout.tsx) already make those URLs discoverable and
-// crawlable on their own.
+// Legal pages aren't translated — every non-English URL for them
+// canonicalizes back to the English page (see those page components), so
+// only the English URL is submitted here. Submitting the other 5 as
+// separate sitemap entries would contradict that canonical and add
+// duplicate-content noise with no unique content behind it.
+const untranslatedRoutes = new Set(["/legal/privacy-policy", "/legal/terms-of-use"]);
+
+function languageAlternates(route: string) {
+  const languages: Record<string, string> = {};
+  for (const l of locales) {
+    languages[hreflangCode(l)] = `${siteConfig.url}${localizedPath(l, route)}`;
+  }
+  languages["x-default"] = `${siteConfig.url}${route || "/"}`;
+  return languages;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
@@ -34,8 +45,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articles.map((a) => `/resources/blog/${a.slug}`),
   ];
 
-  return [...staticRoutes, ...dynamicRoutes].map((route) => ({
-    url: `${siteConfig.url}${route}`,
-    lastModified: new Date(),
-  }));
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const route of [...staticRoutes, ...dynamicRoutes]) {
+    if (untranslatedRoutes.has(route)) {
+      entries.push({
+        url: `${siteConfig.url}${route}`,
+        lastModified: new Date(),
+      });
+      continue;
+    }
+
+    for (const locale of locales) {
+      entries.push({
+        url: `${siteConfig.url}${localizedPath(locale, route)}`,
+        lastModified: new Date(),
+        alternates: { languages: languageAlternates(route) },
+      });
+    }
+  }
+
+  return entries;
 }
