@@ -7,13 +7,23 @@ import { solutions } from "@/data/solutions";
 import { getSolutionContent } from "@/i18n/content/solutions";
 import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Data Center & Critical Power Solutions",
-  description:
-    "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions.",
-  alternates: { canonical: "/solutions" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Data Center & Critical Power Solutions",
+    description:
+      "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions.",
+    alternates: buildAlternates(locale, "/solutions"),
+  };
+}
 
 export default async function SolutionsPage({
   params,

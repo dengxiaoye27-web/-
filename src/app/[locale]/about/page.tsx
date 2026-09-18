@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
 const factoryPhotos = [
   "/images/factory/01-exterior.png",
@@ -19,12 +20,21 @@ const factoryPhotos = [
   "/images/factory/08-cabinet-assembly-03.jpg",
 ];
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery.",
-  alternates: { canonical: "/about" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "About Us",
+    description:
+      "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery.",
+    alternates: buildAlternates(locale, "/about"),
+  };
+}
 
 export default async function AboutPage({
   params,

@@ -6,13 +6,23 @@ import { projects } from "@/data/projects";
 import { getProjectContent } from "@/i18n/content/projects";
 import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Projects & Case Studies",
-  description:
-    "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments.",
-  alternates: { canonical: "/projects" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Projects & Case Studies",
+    description:
+      "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments.",
+    alternates: buildAlternates(locale, "/projects"),
+  };
+}
 
 export default async function ProjectsPage({
   params,

@@ -11,6 +11,7 @@ import { getSolution, solutions } from "@/data/solutions";
 import { getSolutionContent } from "@/i18n/content/solutions";
 import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -30,7 +31,7 @@ export async function generateMetadata({
   return {
     title: content.name,
     description: content.tagline,
-    alternates: { canonical: `/solutions/${solution.slug}` },
+    alternates: buildAlternates(locale, `/solutions/${solution.slug}`),
   };
 }
 

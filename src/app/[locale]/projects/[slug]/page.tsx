@@ -9,6 +9,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { getProjectContent } from "@/i18n/content/projects";
 import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -27,7 +28,7 @@ export async function generateMetadata({
   return {
     title: content.title,
     description: content.summary,
-    alternates: { canonical: `/projects/${project.slug}` },
+    alternates: buildAlternates(locale, `/projects/${project.slug}`),
   };
 }
 

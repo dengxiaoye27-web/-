@@ -9,13 +9,23 @@ import { products } from "@/data/products";
 import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Data Center Infrastructure Products",
-  description:
-    "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
-  alternates: { canonical: "/products" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: "Data Center Infrastructure Products",
+    description:
+      "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
+    alternates: buildAlternates(locale, "/products"),
+  };
+}
 
 export default async function ProductsPage({
   params,
