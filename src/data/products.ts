@@ -2121,6 +2121,7 @@ export const products: Product[] = [
     slug: "edge-data-center",
     category: "containerized-data-center",
     name: "Edge Data Center",
+    metaTitle: "Edge Data Center Hardware | Wandtung",
     shortName: "Edge Data Center",
     tagline: "Compact, factory-built data center for compute deployed close to the network edge.",
     overview:
@@ -2208,6 +2209,7 @@ export const products: Product[] = [
     slug: "liquid-cooling",
     category: "cooling-solutions",
     name: "Liquid Cooling Solution",
+    metaTitle: "Liquid Cooling Products: Cold Plate & CDU | Wandtung",
     shortName: "Liquid Cooling",
     tagline: "Cold plate liquid cooling for high-density AI and HPC compute racks.",
     overview:

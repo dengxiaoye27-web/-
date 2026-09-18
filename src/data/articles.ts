@@ -4,7 +4,7 @@ export const articles: Article[] = [
   {
     slug: "what-is-intelligent-pdu",
     title: "What Is an Intelligent PDU? A Practical Guide for Data Center Buyers",
-    metaTitle: "What Is an Intelligent PDU? A Data Center Buyer's Guide | WANDTUNG",
+    metaTitle: "What Is an Intelligent PDU? Buyer's Guide | WANDTUNG",
     category: "Power Distribution",
     excerpt:
       "Learn what an intelligent PDU is, how metered, monitored and switched rack PDUs differ, and when your data center actually needs one, from a PDU manufacturer.",
@@ -140,7 +140,7 @@ export const articles: Article[] = [
   {
     slug: "what-is-micro-modular-data-center",
     title: "What Is a Micro Modular Data Center?",
-    metaTitle: "What Is a Micro Modular Data Center? Benefits & Use Cases | WANDTUNG",
+    metaTitle: "What Is a Micro Modular Data Center? | WANDTUNG",
     category: "Micro Modular Data Center",
     excerpt:
       "A micro modular data center integrates racks, power, cooling and monitoring into one prefabricated unit. Learn how it works, its benefits, and when to use one.",
@@ -208,6 +208,7 @@ export const articles: Article[] = [
   {
     slug: "20ft-vs-40ft-container-data-center",
     title: "20ft vs 40ft Container Data Center: Which Should You Choose?",
+    metaTitle: "20ft vs 40ft Container Data Center Comparison | WANDTUNG",
     category: "Containerized Data Center",
     excerpt: "A practical comparison to help size a containerized data center to your IT load and site constraints.",
     publishedAt: "2026-03-22",
@@ -281,6 +282,7 @@ export const articles: Article[] = [
   {
     slug: "why-ai-clusters-need-integrated-liquid-cooling",
     title: "Beyond Just Cooling: Why AI Data Centers Require an Integrated Liquid-to-Rack Architecture",
+    metaTitle: "Why AI Data Centers Need Liquid-to-Rack Cooling | WANDTUNG",
     category: "Liquid Cooling",
     excerpt:
       "Air cooling hits a thermal wall with NVIDIA H100/H200 clusters. See why Wandtung advocates coordinated direct-to-chip liquid cooling architecture for AI racks.",

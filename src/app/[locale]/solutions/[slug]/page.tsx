@@ -28,8 +28,12 @@ export async function generateMetadata({
   if (!solution) return {};
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const content = getSolutionContent(slug, locale, solution);
+  const title =
+    locale === defaultLocale && solution.metaTitle
+      ? { absolute: solution.metaTitle }
+      : content.name;
   return {
-    title: content.name,
+    title,
     description: content.tagline,
     alternates: buildAlternates(locale, `/solutions/${solution.slug}`),
   };

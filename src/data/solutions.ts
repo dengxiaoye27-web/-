@@ -133,6 +133,7 @@ export const solutions: Solution[] = [
   {
     slug: "edge-data-center",
     name: "Edge Data Center Solution",
+    metaTitle: "Edge Data Center Deployment Solution | Wandtung",
     tagline: "Compact, resilient infrastructure for compute at the network edge.",
     customerChallenge:
       "Low-latency applications and distributed content delivery require compute capacity close to end users, often at sites with limited space, unattended operation and inconsistent power quality.",
@@ -237,6 +238,7 @@ export const solutions: Solution[] = [
   {
     slug: "liquid-cooling",
     name: "Liquid Cooling Solution",
+    metaTitle: "AI Data Center Liquid Cooling Solution | Wandtung",
     tagline: "Cold plate liquid cooling and CDU systems for high-density thermal management.",
     customerChallenge:
       "As rack power density rises with AI and HPC workloads, air cooling alone can no longer remove heat efficiently or cost-effectively, risking thermal throttling and reliability issues.",
