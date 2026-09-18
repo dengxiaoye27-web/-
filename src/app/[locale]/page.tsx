@@ -137,7 +137,9 @@ export default async function HomePage({
   const common = getCommonMessages(locale);
 
   const featuredProducts = getFeaturedProducts();
-  const latestArticles = articles.slice(0, 3);
+  const latestArticles = [...articles]
+    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+    .slice(0, 3);
 
   return (
     <>
