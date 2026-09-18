@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "@/components/ui/LocaleLink";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { projects } from "@/data/projects";
 import { getProjectContent } from "@/i18n/content/projects";
 import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export async function generateMetadata({
   params,
@@ -33,12 +35,16 @@ export default async function ProjectsPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getProjectsUiMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.projects }];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/projects" })))}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.projects }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hubTitle}
           </h1>
