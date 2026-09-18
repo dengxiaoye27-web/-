@@ -39,7 +39,7 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Data Center Infrastructure & Critical Power Solutions | Wandtung",
+    title: "Data Center Infrastructure & Power Solutions | Wandtung",
     description:
       "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
     alternates: buildAlternates(locale, ""),

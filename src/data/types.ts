@@ -41,6 +41,12 @@ export interface Product {
   // gets translated too. Optional so untouched products keep their prior
   // behavior (falling back to overview) rather than being blocked on this.
   metaDescription?: string;
+  // SEO-only <title> override (~≤60 chars). Distinct from `name` (the H1
+  // and the label used in breadcrumbs/cards/related-product links, which
+  // stays a clean product name) — only needed where `name` alone would be
+  // too long or collide with another page's title. English-only, same
+  // fallback rationale as metaDescription.
+  metaTitle?: string;
   featured?: boolean;
   images?: string[];
   keyFeatures: string[];
@@ -57,6 +63,9 @@ export interface Product {
 export interface Solution {
   slug: string;
   name: string;
+  // SEO-only <title> override — see the matching field on Product for why
+  // this is separate from `name` (kept as the clean on-page H1/label).
+  metaTitle?: string;
   tagline: string;
   customerChallenge: string;
   solutionArchitecture: string;
