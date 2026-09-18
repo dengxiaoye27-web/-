@@ -187,38 +187,47 @@ export const articles: Article[] = [
     readingTime: "6 min read",
     body: [
       {
-        heading: "Overview",
+        heading: "What Is a Micro Modular Data Center?",
         content:
-          "Building a traditional data center room is slow. You pour into a shell, then bring in separate contractors for racks, power, cooling, fire suppression, and monitoring, and integrate them on site over months. A micro modular data center collapses that process into a single, factory-integrated product: racks, power distribution, precision cooling, monitoring, and fire safety, pre-assembled and tested before it ever reaches your site. The result is a self-contained data center you deploy in weeks instead of months, in spaces where a full data hall would never fit.",
+          "A micro modular data center is a prefabricated, self-contained data center that integrates racks, power distribution, precision cooling, monitoring, and fire safety into one factory-tested unit, deployable in weeks. Building a traditional data center room is slow — you pour into a shell, then bring in separate contractors for racks, power, cooling, fire suppression, and monitoring, and integrate them on site over months. A micro module collapses that process into a single, factory-integrated product, pre-assembled and tested before it ever reaches your site, in spaces where a full data hall would never fit.",
       },
       {
-        heading: "How a Micro Modular Data Center Works",
+        heading: "How Does a Micro Modular Data Center Work?",
         content:
           "A micro module packages the complete physical infrastructure stack into one enclosed system, typically one to a few racks up to a full row: racks and enclosures sealed for hot-aisle/cold-aisle containment so cooling isn't wasted on the surrounding room; power distribution — UPS, PDUs, and switchgear — integrated and pre-wired; precision cooling, in-row or in-rack, sized to the enclosed load and far more efficient than cooling an open room; monitoring and management through environmental sensors, power metering, and a controller, often with remote access built in; and fire detection and suppression plus physical security as integrated options. Because it is engineered and tested as one system at the factory, the module arrives as a known quantity. On site, the work is largely placing it, connecting power and network, and commissioning — not integrating a dozen separate trades.",
       },
       {
-        heading: "Why It Shortens Deployment From Months to Weeks",
+        heading: "Why Does It Shorten Deployment From Months to Weeks?",
         content:
           "The time saving comes from moving integration off the critical path. In a conventional build, each subsystem is installed and integrated sequentially at the site, and problems surface late, when they are expensive to fix. In a modular approach, that integration happens in parallel at the factory while the site is being prepared, and the module is validated before shipping. Site work shrinks to placement and connection. For operators facing AI-driven demand, this speed is often the deciding factor: capacity that arrives in weeks captures opportunity that capacity arriving in a year would miss.",
       },
       {
-        heading: "Where Micro Modular Data Centers Make Sense",
+        heading: "What Micro Modular Product Options Are There?",
+        content:
+          "Wandtung's micro modular range covers four form factors, roughly by scale: an All-in-One Micro Data Center packages rack space, UPS, PDU and cooling into a single enclosure for sites with only a handful of servers and no dedicated equipment room. A Single Row Micro Data Center arranges cabinets in one row with rear or side power and cooling, for small equipment rooms and branch sites. A Dual Row Micro Data Center faces cabinets in two rows with hot/cold aisle containment between them, improving cooling efficiency for mid-size deployments with higher cabinet counts. A Smart Micro Module adds a front touchscreen for on-site intelligent monitoring and expands flexibly from a single cabinet up to a 5-bay row. Which one fits depends on rack count and growth plans, not just current load.",
+      },
+      {
+        heading: "Where Do Micro Modular Data Centers Make Sense?",
         content:
           "They are not a replacement for every hyperscale hall — they excel in specific situations: edge and distributed compute, for retail, manufacturing, telecom sites, and 5G nodes that need local processing close to where data is generated, without a dedicated IT room; rapid capacity expansion, adding compute to an existing facility or standing up new capacity faster than a traditional build allows; space-constrained sites, such as offices, hospitals, or industrial floors where no purpose-built data hall exists; and standardized rollouts, where enterprises deploying identical compute to many locations benefit from a repeatable, pre-engineered unit rather than a bespoke build each time. For larger or mobile needs, the same principles scale up to containerized data centers, which house many racks in a shipping-container form factor for field deployment.",
       },
       {
-        heading: "What to Look for in a Supplier",
+        heading: "What Should You Look for in a Supplier?",
         content:
           "A micro module is only as good as the integration behind it. When evaluating suppliers, check that the cooling is sized to the real rack density you plan to run, including high-density and liquid-cooling-ready options; that power, cooling, and monitoring are genuinely integrated and factory-tested as one system, not loosely bundled; that components carry appropriate certifications and the supplier can support your target market's standards; and that the supplier can customize rack count, power capacity, and cooling type to your workload.",
       },
       {
-        heading: "WANDTUNG Modular Data Center Solutions",
+        heading: "Does Wandtung Manufacture Micro Modular Data Centers?",
         content:
-          "WANDTUNG designs and manufactures the complete physical infrastructure stack — racks, PDUs and UPS, precision and liquid cooling (including CDUs and cold plates), containment, and monitoring — which lets us integrate micro modular and containerized data centers as coordinated systems rather than assembled parts. Every module is engineered from our own product lines and factory-tested before delivery, with OEM/ODM customization of rack count, power, and cooling to match your workload and site.",
+          "Yes. WANDTUNG designs and manufactures the complete physical infrastructure stack — racks, PDUs and UPS, precision and liquid cooling (including CDUs and cold plates), containment, and monitoring — which lets us integrate micro modular and containerized data centers as coordinated systems rather than assembled parts. Every module is engineered from our own product lines and factory-tested before delivery, with OEM/ODM customization of rack count, power, and cooling to match your workload and site.",
       },
     ],
     ctaLinks: [
-      { label: "Explore our modular data center solutions →", href: "/solutions" },
+      { label: "See the All-in-One Micro Data Center →", href: "/products/all-in-one-micro-data-center" },
+      { label: "See the Single Row Micro Data Center →", href: "/products/single-row-micro-data-center" },
+      { label: "See the Dual Row Micro Data Center →", href: "/products/dual-row-micro-data-center" },
+      { label: "See the Smart Micro Module →", href: "/products/smart-micro-module" },
+      { label: "Explore Micro Modular Data Center Solutions →", href: "/solutions/micro-modular-data-center" },
       { label: "Request a quote →", href: "/contact" },
     ],
     faqs: [
@@ -242,7 +251,18 @@ export const articles: Article[] = [
         answer:
           "When you need edge/local compute, rapid capacity, deployment in a space-constrained site, or a repeatable standardized unit across many locations.",
       },
+      {
+        question: "What's the difference between single-row and dual-row micro modules?",
+        answer:
+          "A single-row module arranges cabinets in one row with rear or side infrastructure, suited to small equipment rooms. A dual-row module faces cabinets in two rows with hot/cold aisle containment between them, improving cooling efficiency for mid-size deployments with higher cabinet counts.",
+      },
+      {
+        question: "How many racks can a Smart Micro Module hold?",
+        answer:
+          "Wandtung's Smart Micro Module expands flexibly from a single cabinet up to a 5-bay row, so capacity can scale by adding bays to an existing deployment rather than replacing it.",
+      },
     ],
+    relatedArticleSlugs: ["20ft-vs-40ft-container-data-center"],
   },
   {
     slug: "20ft-vs-40ft-container-data-center",
