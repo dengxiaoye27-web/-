@@ -9,7 +9,11 @@ const hreflangOverrides: Partial<Record<Locale, string>> = {
   zh: "zh-Hans",
 };
 
-function localizedPath(locale: Locale, path: string) {
+export function hreflangCode(locale: Locale) {
+  return hreflangOverrides[locale] ?? locale;
+}
+
+export function localizedPath(locale: Locale, path: string) {
   return locale === defaultLocale ? path || "/" : `/${locale}${path}`;
 }
 
@@ -25,7 +29,7 @@ function localizedPath(locale: Locale, path: string) {
 export function buildAlternates(locale: Locale, path: string) {
   const languages: Record<string, string> = {};
   for (const l of locales) {
-    languages[hreflangOverrides[l] ?? l] = localizedPath(l, path);
+    languages[hreflangCode(l)] = localizedPath(l, path);
   }
   languages["x-default"] = path || "/";
 
