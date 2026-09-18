@@ -12,22 +12,22 @@ export const articles: Article[] = [
     readingTime: "6 min read",
     body: [
       {
-        heading: "Overview",
+        heading: "What Is an Intelligent PDU?",
         content:
-          "Every rack in a data center needs power delivered cleanly, safely, and in a way operators can actually see and control. That is the job of the PDU (Power Distribution Unit). But not all PDUs are equal. A basic PDU simply splits one input into many outlets. An intelligent PDU does that and adds measurement, monitoring, and in some cases remote control of the power at each rack. If you are sourcing power distribution for a data center, telecom room, or edge site, understanding where a basic PDU ends and an intelligent PDU begins will save you money on the racks that don't need one and prevent blind spots on the racks that do.",
+          "An intelligent PDU is a rack power distribution unit with built-in monitoring and network connectivity. It measures current, voltage and power at the unit or outlet level, and in switched models allows remote control of individual outlets. Every rack in a data center needs power delivered cleanly, safely, and in a way operators can actually see and control — that is the job of the PDU (Power Distribution Unit). A basic PDU simply splits one input into many outlets; an intelligent PDU does that and adds measurement, monitoring, and in some cases remote control of the power at each rack. If you are sourcing power distribution for a data center, telecom room, or edge site, understanding where a basic PDU ends and an intelligent PDU begins will save you money on the racks that don't need one and prevent blind spots on the racks that do.",
       },
       {
-        heading: "What \"Intelligent\" Actually Means",
+        heading: "What Are the Three Tiers of Intelligent PDU?",
         content:
-          "The word \"intelligent\" gets used loosely by suppliers. In practice it refers to any rack PDU that reports data or accepts remote commands over a network connection. Strip away the marketing and there are three real capability levels stacked on top of the basic unit. A metered PDU measures current, voltage, and power draw and shows it — either on a local digital display at the unit, or over the network — the entry point to \"intelligent,\" answering how much load is actually on a rack right now. A monitored (networked) PDU takes that metering and pushes it onto the network so it can be read remotely through SNMP, a web interface, or a DCIM platform, letting operators see every rack's power from one dashboard and set alert thresholds instead of walking the floor with a clamp meter. A switched PDU adds remote control of individual outlets — an operator can power-cycle a frozen server, sequence equipment startup after an outage, or lock unused outlets, all without sending someone to the site, which matters most for lights-out facilities and remote edge nodes. Higher tiers include everything below them: a switched PDU is also metered and monitored.",
+          "The word \"intelligent\" gets used loosely by suppliers. In practice it refers to any rack PDU that reports data or accepts remote commands over a network connection. Strip away the marketing and there are three real capability levels stacked on top of the basic unit. A metered PDU measures current, voltage, and power draw and shows it — either on a local digital display at the unit, or over the network — the entry point to \"intelligent,\" answering how much load is actually on a rack right now. A monitored (networked) PDU takes that metering and pushes it onto the network so it can be read remotely through SNMP, a web interface, or a DCIM platform, letting operators see every rack's power from one dashboard and set alert thresholds instead of walking the floor with a clamp meter. A switched PDU adds remote control of individual outlets — an operator can power-cycle a frozen server, sequence equipment startup after an outage, or lock unused outlets, all without sending someone to the site, which matters most for lights-out facilities and remote edge nodes. Higher tiers include everything below them: a switched PDU is also metered and monitored. For a deeper side-by-side comparison of the metered and switched tiers specifically, see our dedicated comparison below.",
       },
       {
-        heading: "Why Intelligent PDUs Matter for AI and High-Density Racks",
+        heading: "Why Do AI and High-Density Racks Need Intelligent PDUs?",
         content:
           "Traditional enterprise racks drew a few kilowatts. AI and GPU workloads push individual racks toward 30, 50, even 100 kW. At that density, two things change. First, the margin for error on power shrinks — a rack running near its circuit limit needs continuous measurement, not a monthly spot check. Second, the cost of downtime climbs, so remote power-cycling and outlet-level control pay for themselves quickly. This is why intelligent PDUs have moved from \"nice to have\" to standard specification in modern high-density and AI data center builds. Accurate per-rack power data also feeds capacity planning: you can't safely fill a row if you don't know what each rack is really drawing.",
       },
       {
-        heading: "Do You Need One on Every Rack?",
+        heading: "Do You Need an Intelligent PDU on Every Rack?",
         content:
           "No — and a good supplier will tell you that. A sensible approach mixes tiers: basic or metered PDUs on low-density, stable racks where load rarely changes; monitored PDUs across the main production floor where visibility drives capacity decisions; and switched PDUs on remote, unmanned, or mission-critical racks where remote control avoids costly site visits. Matching the PDU tier to the role of the rack controls cost without creating monitoring blind spots.",
       },
@@ -37,13 +37,22 @@ export const articles: Article[] = [
           "When comparing rack PDUs, look past the outlet count and confirm the input plug and outlet standard — Schuko (European/CEE), NEMA (North American), IEC, or a mix, matched to the region and the equipment it powers; rated current and voltage, which must comfortably exceed peak rack load with headroom; form factor — 1U horizontal, or zero-U vertical mounted in the rack side channel to save rack space; metering accuracy — billing-grade (±1%) if you charge tenants for power; network protocol — SNMP, HTTP/HTTPS, and DCIM compatibility for monitored and switched units; and surge protection (SPD), important in regions with unstable grid power.",
       },
       {
-        heading: "WANDTUNG Rack PDUs",
+        heading: "What Communication Protocols Do Intelligent PDUs Use?",
         content:
-          "WANDTUNG manufactures rack PDUs across all three intelligent tiers — metered, monitored, and switched — in Schuko, NEMA, and universal multi-standard outlet configurations for European, North American, and global markets. Units are available in 1U horizontal and zero-U vertical form factors, with optional surge protection and factory-direct OEM/ODM customization of outlet type, count, and interface. If you are specifying power distribution for a new build or expansion, our engineering team can help you match PDU tiers to your rack roles.",
+          "Wandtung's monitored and switched PDU lines communicate over SNMP (v1/v2c/v3), Modbus RTU/TCP, RS485, and a web-based management interface, so they integrate with standard DCIM platforms and building management systems rather than requiring a proprietary monitoring tool. Confirm which protocols your monitoring platform supports before specifying a unit — not every DCIM tool speaks every protocol.",
+      },
+      {
+        heading: "Does Wandtung Manufacture Intelligent PDUs?",
+        content:
+          "Yes. WANDTUNG manufactures rack PDUs across all three intelligent tiers — metered, monitored, and switched — in Schuko, NEMA, and universal multi-standard outlet configurations for European, North American, and global markets. Units are available in 1U horizontal and zero-U vertical form factors, with optional surge protection and factory-direct OEM/ODM customization of outlet type, count, and interface. If you are specifying power distribution for a new build or expansion, our engineering team can help you match PDU tiers to your rack roles.",
       },
     ],
     ctaLinks: [
-      { label: "Explore our Rack PDU range →", href: "/products/pdu" },
+      { label: "See Metered PDU specs →", href: "/products/metered-pdu" },
+      { label: "See Monitored PDU specs →", href: "/products/monitored-pdu" },
+      { label: "See Switched PDU specs →", href: "/products/switched-pdu" },
+      { label: "Compare Metered vs Switched PDU in depth →", href: "/resources/blog/metered-vs-switched-pdu" },
+      { label: "Explore Rack PDU range →", href: "/products/pdu" },
       { label: "Request a quote →", href: "/contact" },
     ],
     faqs: [
@@ -66,6 +75,21 @@ export const articles: Article[] = [
         question: "Are intelligent PDUs necessary for AI data centers?",
         answer:
           "At high rack densities typical of AI and GPU workloads, per-rack power visibility and remote control become essential for safety and capacity planning, making intelligent PDUs a standard specification.",
+      },
+      {
+        question: "What communication protocols do intelligent PDUs support?",
+        answer:
+          "Wandtung's monitored and switched PDUs support SNMP (v1/v2c/v3), Modbus RTU/TCP, RS485, and a web management interface, for integration with standard DCIM and building management platforms.",
+      },
+      {
+        question: "How accurate is the metering on an intelligent PDU?",
+        answer:
+          "Wandtung's Intelligent PDU line is rated to ±1% accuracy on current and voltage readings — accurate enough for internal capacity planning and, on many models, tenant billing.",
+      },
+      {
+        question: "Do I need a monitored PDU or a switched PDU?",
+        answer:
+          "A monitored PDU gives remote visibility only. A switched PDU includes everything a monitored PDU offers plus the ability to remotely turn individual outlets on or off — needed whenever you must power-cycle or sequence equipment without a site visit.",
       },
     ],
   },
