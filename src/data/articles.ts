@@ -236,6 +236,10 @@ export const articles: Article[] = [
           "Yes — both 20ft and 40ft containerized data centers can be deployed in multiples and interconnected for larger capacity requirements as load grows.",
       },
     ],
+    ctaLinks: [
+      { label: "View the 40ft Container Data Center", href: "/products/40ft-container-data-center" },
+      { label: "Explore Containerized Data Center Solutions", href: "/solutions/containerized-data-center" },
+    ],
   },
   {
     slug: "what-is-a-cdu-in-liquid-cooling",
@@ -267,6 +271,10 @@ export const articles: Article[] = [
         answer:
           "Yes. Wandtung provides cold plate liquid cooling systems with CDU-managed primary/secondary loops, leak detection and monitoring for AI and high-density compute deployments.",
       },
+    ],
+    ctaLinks: [
+      { label: "View the CDU Product Page", href: "/products/cdu" },
+      { label: "Explore Liquid Cooling Solutions", href: "/solutions/liquid-cooling" },
     ],
     relatedArticleSlugs: ["why-ai-clusters-need-integrated-liquid-cooling"],
   },
@@ -354,6 +362,10 @@ export const articles: Article[] = [
           "A basic PDU only distributes power. A metered PDU adds a local current/voltage display. A monitored PDU adds remote, network-based monitoring. A switched PDU adds remote outlet control on top of monitoring.",
       },
     ],
+    ctaLinks: [
+      { label: "Browse Rack PDU Options", href: "/products/pdu" },
+      { label: "See the Intelligent PDU", href: "/products/intelligent-pdu" },
+    ],
   },
   {
     slug: "what-is-n-plus-1-redundancy",
@@ -385,6 +397,10 @@ export const articles: Article[] = [
         answer:
           "Wandtung designs power architecture to the redundancy level (N, N+1, 2N) specified by the project — modular UPS and ATS/STS transfer switching make it practical to implement redundancy at the module, system or full-path level.",
       },
+    ],
+    ctaLinks: [
+      { label: "Explore Critical Power Solutions", href: "/solutions/critical-power" },
+      { label: "View the Modular UPS", href: "/products/modular-ups" },
     ],
   },
   {
