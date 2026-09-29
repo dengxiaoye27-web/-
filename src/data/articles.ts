@@ -759,3 +759,12 @@ export const articles: Article[] = [
 export function getArticle(slug: string) {
   return articles.find((a) => a.slug === slug);
 }
+
+// Reverse existing editorial links so the relation stays in sync with its source.
+export function getArticleSlugsForProduct(slug: string, explicit: string[] = []) {
+  const href = `/products/${slug}`;
+  return [...new Set([
+    ...explicit,
+    ...articles.filter((article) => article.ctaLinks?.some((link) => link.href === href)).map((article) => article.slug),
+  ])].filter((articleSlug) => Boolean(getArticle(articleSlug)));
+}

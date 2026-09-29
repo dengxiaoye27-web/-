@@ -20,9 +20,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Data Center & Critical Power Solutions",
-    description:
-      "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions.",
+    title: locale === defaultLocale ? "Data Center & Critical Power Solutions" : getSolutionsUiMessages(locale).hub.title,
+    description: locale === defaultLocale ? "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions." : getSolutionsUiMessages(locale).hub.subtitle,
     alternates: buildAlternates(locale, "/solutions"),
   };
 }
@@ -41,7 +40,7 @@ export default async function SolutionsPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/solutions" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/solutions" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">
