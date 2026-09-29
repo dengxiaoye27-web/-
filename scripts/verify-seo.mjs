@@ -35,7 +35,11 @@ for (const locale of locales) {
     for (const schema of schemas) {
       if (schema['@type'] === 'Product') {
         counts.products++;
-        assert.ok(!('offers' in schema), `${file}: unverified offer remains`);
+        // No published catalog price exists, so offers (if present) must not
+        // fabricate one — it may only assert availability/condition/seller.
+        if (schema.offers) {
+          assert.ok(!('price' in schema.offers) && !('priceCurrency' in schema.offers), `${file}: fabricated offer price`);
+        }
         assert.equal(schema.url, url, `${file}: product URL`);
         assert.equal(schema['@id'], `${origin}${route}#product`, `${file}: stable product ID`);
         assert.equal(schema.manufacturer['@id'], org['@id'], file);
