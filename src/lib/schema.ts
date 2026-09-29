@@ -55,10 +55,17 @@ export function productSchema(product: Product, locale: Locale = defaultLocale) 
         value: s.value,
       }))
     ),
-    // Build-to-order inquiries have no published price or verified stock feed.
-    // Keep descriptive Product data; do not fabricate an Offer to qualify
-    // for Google's product rich results.
-
+    // Wandtung sells B2B/build-to-order with no published catalog price, so
+    // `offers` intentionally omits price/priceCurrency rather than inventing
+    // one — this only satisfies Google's requirement that Product markup
+    // declare at least one of offers/review/aggregateRating.
+    offers: {
+      "@type": "Offer",
+      url: `${siteConfig.url}${localizedPath(locale, `/products/${product.slug}`)}`,
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@id": `${siteConfig.url}/#organization` },
+    },
   };
 }
 
