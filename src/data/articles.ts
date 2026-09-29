@@ -754,6 +754,95 @@ export const articles: Article[] = [
       "what-is-micro-modular-data-center",
     ],
   },
+  {
+    slug: "behind-the-meter-battery-storage-data-centers",
+    title: "Waiting on the Grid? Behind-the-Meter Battery Storage for Data Centers",
+    metaTitle: "Behind-the-Meter Battery Storage for Data Centers",
+    category: "Energy Storage",
+    excerpt:
+      "Grid connections now take years. Here's what an on-site battery can and can't do for a data center, plus a worked sizing example for edge sites.",
+    publishedAt: "2026-09-29",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Overview",
+        content:
+          "Grid capacity, not land and not chips, is what is holding up most data center projects right now. JLL's 2026 outlook puts the average wait for a grid connection in primary data center markets at more than four years. In Northern Virginia and parts of Texas, developers are quoting seven to ten. Hyperscalers answer this by building their own power plants. Most of our customers can't. A 400 kW edge site in East Africa or a colocation expansion in Eastern Europe is not going to get its own gas turbine. What it can get is a battery on its own side of the meter. This post covers what behind-the-meter battery storage actually does for a data center, where it stops being useful, and how to size one without guessing.",
+      },
+      {
+        heading: "What \"Behind the Meter\" Means",
+        content:
+          "A behind-the-meter (BTM) battery sits inside your electrical boundary, on the customer side of the utility revenue meter. The utility doesn't dispatch it. You do. That matters because it changes what the grid sees. Instead of asking the utility for your full peak demand, you ask for something closer to your average and let the battery cover the rest. A smaller request is easier to approve.",
+      },
+      {
+        heading: "Three Jobs a BTM Battery Does Well",
+        content:
+          "1. Peak shaving under a capped connection. The utility can give you 350 kW now and more \"later\". Your load peaks at 450 kW for a few hours a day. The battery covers the gap and recharges when the load drops. This is also the logic behind flexible grid connections, where a utility approves a large load sooner if it agrees to draw less when the grid is under stress. Aligned Data Centers did exactly this in the Pacific Northwest with a 31 MW / 62 MWh battery, sized to get the site connected years earlier than utility upgrades would have allowed. 2. Bridge power. Where there is no connection at all yet, a battery paired with solar or a generator runs the site until there is. Neither works well on its own. Solar produces nothing at night. A diesel generator idling at 30% load around the clock wastes fuel and wears out faster. With a battery in the loop, the generator can run near its efficient load, fill the battery, and shut off. 3. Smoothing AI load swings. GPU training clusters can move facility power up and down very quickly, and some utilities now ask large loads to limit how fast their demand ramps. A battery with a fast inverter absorbs those swings before they reach the grid.",
+      },
+      {
+        heading: "What It Is Not: A BESS Is Not a UPS",
+        content:
+          "This is the most common mix-up we see in RFQs. A UPS battery is built to carry the IT load for roughly 5 to 15 minutes with zero transfer time, long enough for the generator to start or for servers to shut down cleanly. A BTM battery is built to cycle every day, for hours at a time. The inverter, the controls and the expected cycle life are all different. Many commercial BESS inverters also take tens of milliseconds to switch into island mode. A building won't notice that. A server will. So keep the UPS. The battery sits upstream on the facility bus. If you really want one system doing both jobs, specify it that way from day one and ask the supplier for the transfer-time test report. Don't assume.",
+      },
+      {
+        heading: "A Worked Sizing Example",
+        content:
+          "Take an edge facility with these numbers: a utility connection available now of 350 kW, a facility peak of 450 kW for about 3 hours each afternoon, and a night-time load of around 250 kW. Energy. The shortfall is 100 kW for 3 hours, so you need 300 kWh of usable energy. At 90% usable depth of discharge that is about 335 kWh of nameplate capacity. Batteries lose capacity as they age, and many warranties are written to around 80% remaining, so divide by 0.8 and you land near 420 kWh nameplate. Round up, not down. Power. The inverter (PCS) has to deliver the 100 kW gap plus headroom for load steps. 150 kW is a reasonable choice here. Recharge. At night the site uses 250 kW of a 350 kW connection, leaving 100 kW spare. Putting back 300 kWh, plus conversion losses, takes about three and a half hours. That fits comfortably. Check the recharge step first, before anything else. If your night load sits close to the connection limit, the battery never refills and the whole plan falls apart. We have seen proposals sized carefully for discharge that never did this arithmetic.",
+      },
+      {
+        heading: "Five Questions to Settle Before Asking for a Quote",
+        content:
+          "1. What does your utility actually allow? Export or no export, ramp-rate limits, and whether a flexible connection agreement exists at all. 2. Is the battery for peak shaving, bridge power, or both? The answer changes the ratio between energy (kWh) and power (kW). 3. Where will it sit? A 20-ft container outdoors and a cabinet in the electrical room face very different fire-code requirements, and those differ again country by country. 4. Who controls it? The battery's EMS has to read your meter, and ideally your DCIM, or it will discharge at the wrong moment. 5. What chemistry? LFP is the default for stationary storage because of its thermal stability and cycle life. If a supplier offers something else, ask why.",
+      },
+      {
+        heading: "Where This Is Heading",
+        content:
+          "Batteries are only one piece. Large campuses are also looking at on-site gas, fuel cells and, further out, 800 V DC distribution inside the data hall. But for a site of a few megawatts that needs to open within a year, a correctly sized behind-the-meter battery is often the quickest lever the owner actually controls.",
+      },
+      {
+        heading: "Talk to Our Engineering Team",
+        content:
+          "Planning a site where the grid connection is capped or delayed? Send us your load profile, even a rough one, and our engineers will come back with a battery size, an inverter rating and a container layout you can take to your utility.",
+      },
+      {
+        heading: "Sources",
+        content:
+          "JLL, 2026 Global Data Center Outlook: https://www.jll.com/en-uk/insights/market-outlook/global-data-centers. Latitude Media, \"Data centers are beginning to embrace batteries for onsite power\" (Aligned Data Centers 31 MW / 62 MWh): https://www.latitudemedia.com/news/data-centers-are-beginning-to-embrace-batteries-for-onsite-power/. pv magazine USA, \"How on-site batteries are fast-tracking data center grid connections\": https://pv-magazine-usa.com/2026/03/18/how-on-site-batteries-are-fast-tracking-data-center-grid-connections/. Bricks & Bytes, grid interconnection wait times in major US hubs: https://bricks-bytes.com/blog/data-centers-building-own-power-plants-construction-opportunity/.",
+      },
+    ],
+    ctaLinks: [
+      { label: "Explore our Energy Storage & Solar products →", href: "/products/energy-storage" },
+      { label: "Request a quote →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "Can a battery replace the diesel generator?",
+        answer:
+          "For short outages, sometimes. For outages that last days, not unless it is paired with solar and sized far larger than peak shaving needs. Most sites keep the generator.",
+      },
+      {
+        question: "How long does a data center battery system last?",
+        answer:
+          "LFP systems are commonly warranted for a cycle count or a number of years, whichever comes first. At one cycle a day, the calendar limit usually arrives before the cycle limit does.",
+      },
+      {
+        question: "Can I add a BESS to a site that already has a UPS?",
+        answer:
+          "Yes. The battery connects on the facility side and doesn't need to be tied into the UPS. The two just need coordinated settings so they don't work against each other during a grid event.",
+      },
+      {
+        question: "Does the battery need its own room?",
+        answer:
+          "Containerized systems usually sit outdoors with their own fire suppression and air conditioning. Indoor installations need a separate fire-rated room in most jurisdictions.",
+      },
+    ],
+    relatedArticleSlugs: [
+      "online-vs-line-interactive-vs-standby-ups",
+      "20ft-vs-40ft-container-data-center",
+      "solar-storage-bess-data-center-guide",
+      "what-is-n-plus-1-redundancy",
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
