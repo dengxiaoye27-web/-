@@ -13,7 +13,7 @@ import { siteConfig } from "@/lib/site";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
-import { buildAlternates } from "@/lib/alternates";
+import { localizedPath, buildAlternates } from "@/lib/alternates";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!article) return {};
   const content = getArticleContent(slug, locale, article);
   return {
-    title: article.metaTitle ? { absolute: article.metaTitle } : content.title,
+    title: locale === defaultLocale && article.metaTitle ? { absolute: article.metaTitle } : content.title,
     description: content.excerpt,
     alternates: buildAlternates(locale, `/resources/blog/${article.slug}`),
   };
@@ -55,7 +55,7 @@ export default async function ArticlePage({
     { label: common.nav.resources, href: "/resources" },
     { label: content.title },
   ];
-  const url = `${siteConfig.url}/resources/blog/${article.slug}`;
+  const url = `${siteConfig.url}${localizedPath(locale, `/resources/blog/${article.slug}`)}`;
 
   return (
     <div className="bg-white">
@@ -68,7 +68,7 @@ export default async function ArticlePage({
             url,
           }),
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` }))),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` })), locale),
         ]}
       />
 

@@ -32,9 +32,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "About Us",
-    description:
-      "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery.",
+    title: locale === defaultLocale ? "About Us" : getAboutMessages(locale).hero.title,
+    description: locale === defaultLocale ? "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery." : getAboutMessages(locale).hero.subtitle,
     alternates: buildAlternates(locale, "/about"),
   };
 }
@@ -53,7 +52,7 @@ export default async function AboutPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/about" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/about" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">

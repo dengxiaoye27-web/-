@@ -1,3 +1,4 @@
+import { getProductContent } from "@/i18n/content/products";
 import type { Metadata } from "next";
 import Image from "next/image";
 import fs from "node:fs";
@@ -39,8 +40,15 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Data Center Infrastructure & Power Solutions | Wandtung",
-    description:
+    title: { absolute: {
+      en: "Data Center Infrastructure & Power Solutions | Wandtung",
+      ar: "البنية التحتية لمراكز البيانات وحلول الطاقة | Wandtung",
+      fr: "Infrastructure de centres de données et solutions électriques | Wandtung",
+      es: "Infraestructura de centros de datos y soluciones eléctricas | Wandtung",
+      ru: "Инфраструктура ЦОД и системы электропитания | Wandtung",
+      zh: "数据中心基础设施与电力解决方案 | Wandtung",
+    }[locale] },
+    description: locale !== defaultLocale ? getHomeMessages(locale).trustedPartner.description :
       "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
     alternates: buildAlternates(locale, ""),
   };
@@ -136,7 +144,7 @@ export default async function HomePage({
   const t = getHomeMessages(locale);
   const common = getCommonMessages(locale);
 
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = getFeaturedProducts().map((product) => ({ ...product, ...getProductContent(product.slug, locale, product) }));
   const latestArticles = [...articles]
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 3);

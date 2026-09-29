@@ -59,7 +59,7 @@ export default async function ProjectPage({
       <JsonLd
         data={breadcrumbSchema(
           breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/projects/${project.slug}` }))
-        )}
+        , locale)}
       />
 
       <div className="hero-band">

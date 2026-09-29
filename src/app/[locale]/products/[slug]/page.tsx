@@ -1,3 +1,6 @@
+import { projects } from "@/data/projects";
+import { RelatedProjects } from "@/components/product/RelatedProjects";
+import { getArticleSlugsForProduct } from "@/data/articles";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -99,7 +102,7 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
       <JsonLd
         data={breadcrumbSchema(
           breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${category.slug}` }))
-        )}
+        , locale)}
       />
       <div className="hero-band">
         <div className="container-page">
@@ -162,6 +165,7 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
   const category = getCategory(product.category);
   const categoryContent = category ? getCategoryContent(category.slug, locale, category) : null;
   const content = getProductContent(slug, locale, product);
+  const relatedArticleSlugs = getArticleSlugsForProduct(slug, product.relatedArticleSlugs);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
 
@@ -176,16 +180,16 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
     <div className="bg-white">
       <JsonLd
         data={[
-          productSchema({ ...product, ...content }),
+          productSchema({ ...product, ...content }, locale),
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${product.slug}` }))),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${product.slug}` })), locale),
         ]}
       />
 
       <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
-          <p className="eyebrow mt-6 mb-3">{category?.name}</p>
+          <p className="eyebrow mt-6 mb-3">{categoryContent?.name}</p>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {content.name}
           </h1>
@@ -265,14 +269,14 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
         </section>
 
         <section>
-          <InquiryCTA productName={content.name} />
+          <InquiryCTA productName={content.name} locale={locale} />
         </section>
 
         {product.relatedSolutionSlugs.length > 0 ? (
           <section>
             <SectionHeading eyebrow={t.relatedSolutionsEyebrow} title={t.relatedSolutionsTitle} />
             <div className="mt-8">
-              <RelatedSolutions slugs={product.relatedSolutionSlugs} />
+              <RelatedSolutions slugs={product.relatedSolutionSlugs} locale={locale} />
             </div>
           </section>
         ) : null}
@@ -281,16 +285,25 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
           <section>
             <SectionHeading eyebrow={t.relatedProductsEyebrow} title={t.relatedProductsTitle} />
             <div className="mt-8">
-              <RelatedProducts slugs={product.relatedProductSlugs} />
+              <RelatedProducts slugs={product.relatedProductSlugs} locale={locale} />
             </div>
           </section>
         ) : null}
 
-        {product.relatedArticleSlugs?.length ? (
+        {projects.some((project) => project.productsUsed.includes(product.name)) ? (
+          <section>
+            <SectionHeading title={common.nav.projects} />
+            <div className="mt-8">
+              <RelatedProjects productName={product.name} locale={locale} />
+            </div>
+          </section>
+        ) : null}
+
+        {relatedArticleSlugs.length ? (
           <section>
             <SectionHeading eyebrow={t.relatedArticlesEyebrow} title={t.relatedArticlesTitle} />
             <div className="mt-8">
-              <RelatedArticles slugs={product.relatedArticleSlugs} locale={locale} />
+              <RelatedArticles slugs={relatedArticleSlugs} locale={locale} />
             </div>
           </section>
         ) : null}

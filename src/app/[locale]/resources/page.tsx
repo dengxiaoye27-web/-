@@ -19,9 +19,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Resources & Knowledge Center",
-    description:
-      "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design.",
+    title: locale === defaultLocale ? "Resources & Knowledge Center" : getResourcesUiMessages(locale).hubTitle,
+    description: locale === defaultLocale ? "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design." : getResourcesUiMessages(locale).hubSubtitle,
     alternates: buildAlternates(locale, "/resources"),
   };
 }
@@ -40,7 +39,7 @@ export default async function ResourcesPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/resources" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/resources" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">

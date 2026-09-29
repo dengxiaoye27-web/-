@@ -19,9 +19,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Projects & Case Studies",
-    description:
-      "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments.",
+    title: locale === defaultLocale ? "Projects & Case Studies" : getProjectsUiMessages(locale).hubTitle,
+    description: locale === defaultLocale ? "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments." : getProjectsUiMessages(locale).hubSubtitle,
     alternates: buildAlternates(locale, "/projects"),
   };
 }
@@ -40,7 +39,7 @@ export default async function ProjectsPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/projects" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/projects" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">

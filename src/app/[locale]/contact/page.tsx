@@ -19,9 +19,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Contact & Request a Quote",
-    description:
-      "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
+    title: locale === defaultLocale ? "Contact & Request a Quote" : getContactMessages(locale).hero.title,
+    description: locale === defaultLocale ? "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage." : getContactMessages(locale).hero.subtitle,
     alternates: buildAlternates(locale, "/contact"),
   };
 }
@@ -40,7 +39,7 @@ export default async function ContactPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/contact" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/contact" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">

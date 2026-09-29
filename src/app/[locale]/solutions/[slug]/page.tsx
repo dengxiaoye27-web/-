@@ -64,7 +64,7 @@ export default async function SolutionPage({
       <JsonLd
         data={[
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/solutions/${solution.slug}` }))),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/solutions/${solution.slug}` })), locale),
         ]}
       />
 
@@ -119,7 +119,7 @@ export default async function SolutionPage({
         <section>
           <SectionHeading eyebrow={ui.detail.configEyebrow} title={ui.detail.configTitle} />
           <div className="mt-8">
-            <RelatedProducts slugs={solution.relatedProductSlugs} />
+            <RelatedProducts slugs={solution.relatedProductSlugs} locale={locale} />
           </div>
         </section>
 

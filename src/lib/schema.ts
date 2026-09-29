@@ -1,3 +1,6 @@
+import { Locale, defaultLocale } from "@/i18n/config";
+import { localizedPath } from "./alternates";
+
 import { siteConfig } from "./site";
 import { FaqItem, Product } from "@/data/types";
 
@@ -5,6 +8,8 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
+    logo: `${siteConfig.url}/logo_wandtung.png`,
     name: siteConfig.legalName,
     alternateName: "Wandtung",
     url: siteConfig.url,
@@ -32,14 +37,17 @@ export function organizationSchema() {
   };
 }
 
-export function productSchema(product: Product) {
+export function productSchema(product: Product, locale: Locale = defaultLocale) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${siteConfig.url}/products/${product.slug}#product`,
+    url: `${siteConfig.url}${localizedPath(locale, `/products/${product.slug}`)}`,
+    ...(product.images?.length ? { image: product.images.map((image) => new URL(image, siteConfig.url).href) } : {}),
     name: product.name,
     description: product.overview,
     brand: { "@type": "Brand", name: "Wandtung" },
-    manufacturer: { "@type": "Organization", name: siteConfig.legalName },
+    manufacturer: { "@id": `${siteConfig.url}/#organization` },
     additionalProperty: product.specGroups.flatMap((g) =>
       g.specs.map((s) => ({
         "@type": "PropertyValue",
@@ -47,17 +55,10 @@ export function productSchema(product: Product) {
         value: s.value,
       }))
     ),
-    // Wandtung sells B2B/build-to-order with no published catalog price, so
-    // `offers` intentionally omits price/priceCurrency rather than inventing
-    // one — this only satisfies Google's requirement that Product markup
-    // declare at least one of offers/review/aggregateRating.
-    offers: {
-      "@type": "Offer",
-      url: `${siteConfig.url}/products/${product.slug}`,
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: siteConfig.legalName },
-    },
+    // Build-to-order inquiries have no published price or verified stock feed.
+    // Keep descriptive Product data; do not fabricate an Offer to qualify
+    // for Google's product rich results.
+
   };
 }
 
@@ -76,7 +77,7 @@ export function faqSchema(faqs: FaqItem[]) {
   };
 }
 
-export function breadcrumbSchema(items: { label: string; href: string }[]) {
+export function breadcrumbSchema(items: { label: string; href: string }[], locale: Locale = defaultLocale) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -84,7 +85,7 @@ export function breadcrumbSchema(items: { label: string; href: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      item: `${siteConfig.url}${item.href}`,
+      item: `${siteConfig.url}${localizedPath(locale, item.href === "/" ? "" : item.href)}`,
     })),
   };
 }
@@ -98,11 +99,13 @@ export function articleSchema(params: {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${params.url}#article`,
+    url: params.url,
     headline: params.title,
     description: params.description,
     datePublished: params.datePublished,
-    author: { "@type": "Organization", name: siteConfig.legalName },
-    publisher: { "@type": "Organization", name: siteConfig.legalName },
+    author: { "@id": `${siteConfig.url}/#organization`, "@type": "Organization", name: siteConfig.legalName },
+    publisher: { "@id": `${siteConfig.url}/#organization`, "@type": "Organization", name: siteConfig.legalName },
     mainEntityOfPage: params.url,
   };
 }

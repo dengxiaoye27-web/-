@@ -22,9 +22,8 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
 
   return {
-    title: "Data Center Infrastructure Products",
-    description:
-      "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
+    title: locale === defaultLocale ? "Data Center Infrastructure Products" : getProductsUiMessages(locale).hubTitle,
+    description: locale === defaultLocale ? "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage." : getProductsUiMessages(locale).hubSubtitle,
     alternates: buildAlternates(locale, "/products"),
   };
 }
@@ -43,7 +42,7 @@ export default async function ProductsPage({
   return (
     <div className="bg-white">
       <JsonLd
-        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/products" })))}
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/products" })), locale)}
       />
       <div className="hero-band">
         <div className="container-page">
