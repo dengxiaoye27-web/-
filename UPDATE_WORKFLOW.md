@@ -42,6 +42,25 @@ Once merged, the deploy-watch script (see below) picks it up on its own within a
 
 The script is idempotent and quiet when there's nothing new, so it's safe to leave running indefinitely. If a deploy ever fails (bad `npm run build`, etc.), `set -euo pipefail` stops the script before `pm2 restart`, so the site keeps running the last-good build — check `deploy.log` for the error.
 
+## Sales file uploads (/admin/uploads)
+
+A small internal tool at `/admin/uploads` lets you upload a PDF (proposal, catalog, datasheet) and get back a permanent `wandtung.com/downloads/...` link to send customers, instead of a third-party file-sharing link. It's gated by a shared password (HTTP Basic Auth) and stores files outside the repo so they survive `git pull` deploys untouched.
+
+**One-time server setup** (in addition to the deploy-watch cron job above):
+
+1. Create a directory for uploads, outside the project directory, and make sure the PM2 process can write to it:
+   ```bash
+   mkdir -p /home/admin/wandtung-uploads
+   ```
+2. Add two environment variables alongside `PROJECT_DIR`/`PM2_APP_NAME` wherever the app's process environment is set (e.g. in PM2's env config or an `.env.local` file in `PROJECT_DIR` — **not** committed to git):
+   - `ADMIN_UPLOAD_PASSWORD` — the shared password for `/admin/uploads`. Pick something you wouldn't mind a colleague using; it is not tied to an individual account.
+   - `ADMIN_UPLOADS_DIR` — the absolute path to the directory created in step 1 (e.g. `/home/admin/wandtung-uploads`).
+3. Restart the app once (`pm2 restart wandtung-app`) so it picks up the new environment variables.
+
+Without `ADMIN_UPLOADS_DIR` set, the page shows a clear "uploads are disabled" message instead of erroring — so it's safe to deploy this feature before doing the server-side setup, and safe to leave `/admin/uploads` unconfigured if you decide not to use it.
+
+Once set up: visit `https://www.wandtung.com/admin/uploads`, log in with the shared password when the browser prompts, upload a PDF (25MB max), and copy the link it gives you. Files you delete there are gone for good — there's no trash/undo.
+
 ## What to expect going forward
 
 - Send Claude an image (or point it at a folder) → Claude crops/renames/wires it up → pushes and merges (image-only) or opens a PR and asks you to say "合并" (anything else) → within a few minutes of merge, the server auto-deploys → Claude tells you it's done and to go check.
