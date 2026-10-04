@@ -59,7 +59,7 @@ A small internal tool at `/admin/uploads` lets you upload a PDF (proposal, catal
 
 Without `ADMIN_UPLOADS_DIR` set, the page shows a clear "uploads are disabled" message instead of erroring — so it's safe to deploy this feature before doing the server-side setup, and safe to leave `/admin/uploads` unconfigured if you decide not to use it.
 
-Once set up: visit `https://www.wandtung.com/admin/uploads`, log in with the shared password when the browser prompts, upload a PDF (25MB max), and copy the link it gives you. Files you delete there are gone for good — there's no trash/undo.
+Once set up: visit `https://www.wandtung.com/admin/uploads`, log in with the shared password when the browser prompts, upload a PDF (100MB max — the server's Nginx config must also allow request bodies at least that large, via `client_max_body_size`), and copy the link it gives you. Files you delete there are gone for good — there's no trash/undo.
 
 ## What to expect going forward
 
