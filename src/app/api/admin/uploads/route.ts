@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Only PDF files are allowed." }, { status: 400 });
   }
   if (file.size > MAX_UPLOAD_BYTES) {
-    return NextResponse.json({ error: "File exceeds the 25MB limit." }, { status: 400 });
+    return NextResponse.json({ error: "File exceeds the 100MB limit." }, { status: 400 });
   }
 
   await fs.mkdir(dir, { recursive: true });

@@ -15,7 +15,7 @@ export default async function AdminUploadsPage() {
       <h1 className="text-2xl font-semibold text-ink-900">Sales File Uploads</h1>
       <p className="mt-2 text-sm text-ink-600">
         Upload a PDF (proposal, catalog, datasheet) to get a permanent wandtung.com link you can send to
-        customers. PDF only, 25MB max.
+        customers. PDF only, 100MB max.
       </p>
 
       {configError ? (

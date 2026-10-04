@@ -16,7 +16,7 @@ export function uploadsDir(): string {
   throw new Error("ADMIN_UPLOADS_DIR is not set.");
 }
 
-export const MAX_UPLOAD_BYTES = 25 * 1024 * 1024;
+export const MAX_UPLOAD_BYTES = 100 * 1024 * 1024;
 
 // Only bare filenames (no path separators or traversal) that look like a
 // PDF we generated are ever read back from disk.
