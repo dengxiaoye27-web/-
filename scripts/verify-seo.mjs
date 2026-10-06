@@ -35,8 +35,8 @@ for (const locale of locales) {
     for (const schema of schemas) {
       if (schema['@type'] === 'Product') {
         counts.products++;
-        // No published catalog price exists, so offers (if present) must not
-        // fabricate one — it may only assert availability/condition/seller.
+        // No published catalog price or fixed stock position exists, so
+        // offers (if present) must not fabricate either one.
         if (schema.offers) {
           assert.ok(!('price' in schema.offers) && !('priceCurrency' in schema.offers), `${file}: fabricated offer price`);
         }

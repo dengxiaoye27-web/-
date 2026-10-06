@@ -55,14 +55,14 @@ export function productSchema(product: Product, locale: Locale = defaultLocale) 
         value: s.value,
       }))
     ),
-    // Wandtung sells B2B/build-to-order with no published catalog price, so
-    // `offers` intentionally omits price/priceCurrency rather than inventing
-    // one — this only satisfies Google's requirement that Product markup
-    // declare at least one of offers/review/aggregateRating.
+    // Wandtung sells B2B/build-to-order with no published catalog price and
+    // no fixed stock position, so `offers` intentionally omits both
+    // price/priceCurrency and availability rather than inventing them — this
+    // only satisfies Google's requirement that Product markup declare at
+    // least one of offers/review/aggregateRating.
     offers: {
       "@type": "Offer",
       url: `${siteConfig.url}${localizedPath(locale, `/products/${product.slug}`)}`,
-      availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@id": `${siteConfig.url}/#organization` },
     },
