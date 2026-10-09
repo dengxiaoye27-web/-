@@ -544,6 +544,563 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
       ],
     },
   },
+  "how-to-choose-a-data-center-pdu": {
+    ar: {
+      title: "كيف تختار PDU للراك في مركز بياناتك: قائمة تحقق للمشتري",
+      category: "توزيع الطاقة",
+      excerpt: "هل تشتري PDU للراك؟ تغطي قائمة تحقق المشتري هذه إمداد الكهرباء والمخارج ومستوى المراقبة وملاءمة الراك والتكرار، مع نموذج طلب عرض سعر جاهز للنسخ.",
+      readingTime: "8 دقائق قراءة",
+      body: [
+        {
+          heading: "نظرة عامة",
+          content:
+            "اختيار PDU للراك ليس مجرد مسألة عد المخارج أو مقارنة الأسعار. يجب أن تتطابق الوحدة مع إمداد الكهرباء لديك، وموصلات الطاقة على معدات تقنية المعلومات التي ستغذيها، وقيود المساحة والتهوية في الراك الذي ستُركَّب فيه، وأي مراقبة أو تحكم يحتاجه فريق التشغيل لديك فعلياً. أي خطأ في واحد من هذه الجوانب ينتهي بك إلى PDU لا يناسب المساحة، أو لا يستطيع تزويد كل ما هو موصول به بالطاقة، أو يجلس على الشبكة دون أن يتمكن أحد من قراءته. تستعرض قائمة التحقق هذه المعايير التي يجب تأكيدها قبل إرسال طلب عرض سعر، بالترتيب الذي يحتاجه معظم المشترين، وتنتهي بنموذج طلب عرض سعر قصير يمكنك تعبئته وإرساله مباشرة إلى المورد.",
+        },
+        {
+          heading: "1. تأكد من إمداد الكهرباء ومتطلبات الحمل",
+          content:
+            "ابدأ بما هو متاح فعلياً عند الراك، لا بما تتمنى توفره. تأكد من جهد الدخل والتردد والطور — أحادي الطور أو ثلاثي الطور — القادم من لوحة التوزيع الأعلى أو خرج UPS، لأن PDU المصمم لأحدهما لن يتكيف ببساطة مع الآخر. اجمع استهلاك الطاقة المقدَّر للمعدات التي سيغذيها الـPDU، بما في ذلك هامش للتوسع المخطط له على مدى عمر خدمة الراك، لا فقط ما هو مُركَّب في اليوم الأول. من هناك، تأكد من التيار المقنن لـPDU، وموصل الدخل الخاص به، وأن القاطع أو الفيوز الأعلى الذي يحمي تلك الدائرة مصنَّف ليطابق ذلك — فجهاز حماية أعلى بتصنيف أقل من اللازم سيقطع التيار تحت حمل كان بإمكان الـPDU نفسه تحمّله. لا شيء من هذا يجب تخمينه: اطلب من مهندس كهربائي مؤهل تأكيد التصميم مقابل إمداد وحمل موقعك الفعليين، وتعامل بحذر مع أي نسبة حمل عامة \"تقريبية\" تراها على الإنترنت — فالهوامش الحقيقية تعتمد على مزيج معداتك المحدد، والظروف المحيطة، والكود المحلي، وليس رقماً واحداً يناسب الجميع.",
+        },
+        {
+          heading: "2. طابق المخارج مع معدات تقنية المعلومات لديك",
+          content:
+            "قبل تحديد نوع المخرج، افحص فعلياً موصلات الطاقة على المعدات التي ستدخل الراك — لا تأتي مزودات طاقة الخوادم وأجهزة الشبكة ووحدات التخزين كلها بنفس نوع الكابل. يُعد IEC C13 وC19 أكثر أنواع مخارج مراكز البيانات شيوعاً (C19 للمعدات ذات التيار الأعلى مثل حاويات Blade وبعض المحولات، وC13 لمعظم الخوادم ومعدات تقنية المعلومات القياسية)، لكن الموقع قد يحتاج أيضاً مقابس خاصة بالمنطقة — Schuko أو NEMA أو المملكة المتحدة (BS 1363) أو غيرها — حسب ما هو موصول فعلياً وأي معدات دولة مُركَّبة. تأكد من أن كابل الطاقة الذي تأتي به كل وحدة متوافق مع المخرج الذي تحدده، وتحقق من أن تخطيط المخارج الفعلي والمسافات بينها على الـPDU تترك مساحة لتثبيت كل قابس دون أن تتعارض أجسام الموصلات المتجاورة — وهي مشكلة حقيقية في الوحدات الرأسية ذات الكثافة العالية. تعامل مع اسم منتج المورد كوصف لنوع المخرج والسعة المقننة، لا كدليل على أن الوحدة تستوفي معياراً إقليمياً أو معيار سلامة معيناً؛ تأكد من الشهادات بشكل منفصل، وفق النقطة 6 أدناه.",
+        },
+        {
+          heading: "3. اختر وظائف المراقبة والتحكم المناسبة",
+          content:
+            "تُصنَّع وحدات PDU للراك في عدد صغير من المستويات الوظيفية، والمستوى المناسب يعتمد على ما يحتاجه فريق التشغيل لديك فعلياً للقيام به عن بُعد، لا على ما يبدو أكثر تقدماً. يوزّع PDU الأساسي الطاقة فقط، دون شاشة ودون اتصال شبكي — مناسب للأحمال غير الحرجة حيث لا يحتاج أحد للتحقق من الاستهلاك عن بُعد. يضيف PDU المقاس شاشة رقمية محلية للتيار و/أو الجهد، مفيدة عندما يحتاج الموظفون قراءة عرضية في الموقع لكن لا توجد شبكة مراقبة للاتصال بها. يُبلغ PDU المراقَب (المتصل بالشبكة) عن التيار والجهد والطاقة واستهلاك الطاقة عبر SNMP أو Modbus بحيث يمكن لفرق المنشأة وتقنية المعلومات قراءتها عن بُعد، دون إضافة أي قدرة تبديل. يتضمن PDU القابل للتبديل كل ما تقدمه الوحدة المراقَبة، بالإضافة إلى تحكم عن بُعد قابل للتوجيه الفردي بكل مخرج، يتيح للمسؤول إعادة تشغيل جهاز واحد أو ترتيب تسلسل بدء تشغيل الراك دون زيارة ميدانية. استخدم الجدول أدناه كمقارنة أولية، ثم تأكد وفق ورقة بيانات الطراز المحدد نفسها — فتسمية الموردين لهذه المستويات ليست موحدة تماماً، وما يسميه مورد \"ذكياً\" قد يسميه آخر \"مراقَباً\".",
+          table: {
+            columns: ["أساسي", "مقاس", "مراقَب", "قابل للتبديل"],
+            rows: [
+              { label: "يوزّع الطاقة على المخارج", values: ["نعم", "نعم", "نعم", "نعم"] },
+              { label: "شاشة محلية للتيار/الجهد", values: ["لا", "نعم", "نعم", "نعم"] },
+              { label: "مراقبة عن بُعد (SNMP/Modbus)", values: ["لا", "لا", "نعم", "نعم"] },
+              { label: "تبديل عن بُعد لكل مخرج", values: ["لا", "لا", "لا", "نعم"] },
+              {
+                label: "يُحدَّد عادة لـ",
+                values: [
+                  "أحمال غير حرجة، رفوف بسيطة",
+                  "مواقع تحتاج فحوصات حمل عرضية، دون بناء شبكة",
+                  "رؤية طاقة عن بُعد دون فحوصات ميدانية",
+                  "مواقع نائية/غير مأهولة تحتاج إعادة تشغيل أو تسلسل بدء",
+                ],
+              },
+            ],
+          },
+        },
+        {
+          heading: "4. تحقق من ملاءمة الراك والتركيب وتوجيه الكابلات",
+          content:
+            "الـPDU الصحيح كهربائياً لكن الخاطئ فيزيائياً للراك لا يزال يسبب مشاكل. التركيب الرأسي (0U)، المُركَّب في القناة الجانبية للراك، هو الخيار المعتاد عندما تحتاج عدد مخارج كبير أو راك عميق بمساحة سكة أفقية محدودة؛ يناسب التركيب الأفقي (1U–2U) الرفوف الضحلة أو التركيبات ذات عدد المخارج الأصغر. في كلتا الحالتين، تحقق من الأبعاد الفيزيائية الفعلية للوحدة — لا فقط شكل تركيبها — مقابل العمق الداخلي للراك ونظام الحامل أو السكة الذي تستخدمه، لأن عتاد التركيب ليس موحداً دائماً بين الشركات المصنعة. خطط لتوجيه الكابلات قبل الطلب: تحتاج كابلات الطاقة الصادرة مساراً إلى كل جهاز لا يعيق التهوية الأمامية أو الخلفية، ولا يتعارض مع وصول الصيانة الروتينية، ولا يمنع إغلاق باب الراك الأمامي أو الخلفي بالكامل. هذه مشاكل يسهل اكتشافها على رسم تخطيطي ومكلفة اكتشافها بعد تركيب الـPDU فعلياً.",
+        },
+        {
+          heading: "5. راجع متطلبات التكرار والتشغيل",
+          content:
+            "إذا كانت المعدات التي ستدخل الراك ذات مزودي طاقة مزدوجين، خطط لتغذية A/B: وحدتا PDU، كل منهما متصلة بمصدر طاقة أعلى مستقل، بحيث لا يؤدي فشل تغذية واحدة إلى إسقاط المعدات. الشرط المهم هو الاستقلالية — فوحدتا PDU موصولتان بنفس اللوحة الأعلى أو نفس خرج UPS تمنحانك وحدتي PDU، لا مسارَي طاقة، ولا توفران تكراراً حقيقياً بمفردهما. ما إذا كان زوج PDU من نوع A/B يوفر فعلياً طاقة متكررة يعتمد على التصميم الكهربائي الأعلى الذي يغذي كلاً منهما، وهو خارج نطاق الـPDU نفسه ويحتاج تأكيداً من مصمم توزيع الطاقة في المنشأة. من المهم أيضاً أن تكون دقيقاً بشأن ما لا يكونه الـPDU: فـPDU قياسي للراك، بما في ذلك الطرازات المقاسة والمراقَبة والقابلة للتبديل، لا يوفر نسخاً احتياطياً بالبطارية ولا يبدّل تلقائياً بين مصادر الطاقة — تلك مهمة UPS، وبشكل منفصل، PDU بمفتاح تحويل تلقائي (ATS)، وهو منتج مختلف مصمم خصيصاً لتلك الوظيفة. إذا احتجت تنبيهاً عن بُعد، أو بروتوكولات شبكة محددة، أو وصولاً قائماً على الأدوار لموظفين مختلفين، أو تكاملاً مع منصة DCIM أو مراقبة قائمة، تأكد من هذه المتطلبات مقابل قائمة ميزات الـPDU الموثقة قبل الطلب، لا بعده.",
+        },
+        {
+          heading: "6. تحقق من الوثائق قبل الطلب",
+          content:
+            "قبل تقديم الطلب، احصل على الأوراق التي تتيح لك التحقق من الوحدة على الورق، لا فقط أخذ كلمة المورد: ورقة مواصفات كاملة (الجهد، التيار، عدد المخارج ونوعها، موصل الدخل)، ورسم أبعاد يتيح لك تأكيد الملاءمة الفيزيائية من النقطة 4، وقائمة واجهات كاملة إذا كانت الوحدة مقاسة أو مراقَبة أو قابلة للتبديل. اطلب وثائق الشهادات أو الاختبار ذات الصلة بسوقك المستهدف والطراز المحدد الذي تطلبه — فتغطية الشهادات يمكن أن تختلف حسب الطراز والتكوين حتى ضمن خط منتجات مورد واحد، فلا تفترض أنها تنتقل من وحدة مشابهة الشكل. إذا احتجت أي شيء خارج التكوين القياسي، احصل على نطاق التخصيص ومدة التسليم وشروط الضمان ومعلومات التغليف مؤكدة كتابياً كجزء من عرض السعر — ولا تعتبر أياً من هذه مستقرة حتى يؤكدها موردك كتابياً مقابل طلبك المحدد؛ لا تعتمد على صفحة منتج عامة لالتزامات تحتاج أن تكون خاصة بالمشروع.",
+        },
+        {
+          heading: "7. قائمة تحقق طلب عرض سعر PDU للراك",
+          content:
+            "انسخ الجدول أدناه، واملأ ما تعرفه، وضع علامة \"TBC\" (سيُحدَّد لاحقاً) على أي شيء لم تؤكده بعد بدلاً من التخمين — يمكن للمورد العمل مع TBC صادقة وطرح سؤال المتابعة الصحيح؛ أما الرقم المخمَّن فينقل الخطأ فقط إلى مرحلة أبعد.",
+          table: {
+            columns: ["إجابتك / المواصفة"],
+            rows: [
+              { label: "بلد / منطقة المشروع", values: ["TBC"] },
+              { label: "سيناريو التركيب (قاعة بيانات، غرفة اتصالات، خزانة خارجية، إلخ)", values: ["TBC"] },
+              { label: "جهد الدخل / الطور / التردد", values: ["TBC"] },
+              { label: "التيار المقنن", values: ["TBC"] },
+              { label: "موصل الدخل / نوع القابس", values: ["TBC"] },
+              { label: "نوع المخرج والكمية", values: ["TBC"] },
+              { label: "اتجاه التركيب (رأسي 0U / أفقي)", values: ["TBC"] },
+              { label: "القيود البعدية (عمق الراك، المساحة المتاحة)", values: ["TBC"] },
+              { label: "وظائف المراقبة/التبديل المطلوبة", values: ["TBC"] },
+              { label: "متطلبات بروتوكول الاتصال", values: ["TBC"] },
+              { label: "متطلبات الشهادات", values: ["TBC"] },
+              { label: "كمية الطلب", values: ["TBC"] },
+              { label: "تاريخ التسليم المستهدف", values: ["TBC"] },
+            ],
+          },
+        },
+        {
+          heading: "هل أنت مستعد لطلب تكوين؟",
+          content:
+            "املأ أكبر قدر ممكن من قائمة التحقق أعلاه — TBC إجابة جيدة لأي شيء لم تؤكده بعد — وأرسلها إلى فريق الهندسة لدينا. سنتحقق منها مقابل إمداد الكهرباء والمعدات وقيود الراك لديك، ونعود بتكوين يناسب المشروع فعلياً، بدلاً من وحدة عامة لديها عدد كافٍ من المخارج فقط.",
+        },
+      ],
+      faqs: [
+        {
+          question: "ما الفرق بين PDU الأساسي وPDU الذكي؟",
+          answer:
+            "يُستخدم \"PDU الذكي\" عموماً كمصطلح شامل لأي PDU للراك يتجاوز الأساسي — مقاس أو مراقَب أو قابل للتبديل — يضيف قياساً أو تقارير شبكية أو تحكماً عن بُعد بالمخارج. يوزّع PDU الأساسي الطاقة فقط دون شاشة ودون اتصال شبكي. تحقق من قائمة الميزات الموثقة لطراز محدد، لأن الخط الفاصل بين المستويات يختلف حسب المورد.",
+        },
+        {
+          question: "كيف أختار بين التركيب الأفقي والرأسي؟",
+          answer:
+            "الأمر يعتمد على عدد المخارج وعمق الراك. تتعامل الوحدات الرأسية (0U)، المُركَّبة في القناة الجانبية للراك، مع أعداد مخارج أعلى دون استخدام مساحة السكة وتناسب الرفوف الأعمق. تناسب الوحدات الأفقية (1U–2U) الرفوف الضحلة أو التركيبات التي تحتاج فقط عدد مخارج متواضعاً. تأكد دائماً من الأبعاد الفيزيائية للوحدة مقابل راكك وعتاد التركيب المحدد لديك بدلاً من افتراض التوافق من شكل التركيب وحده.",
+        },
+        {
+          question: "ما المعلومات التي يجب أن أقدمها عند طلب عرض سعر PDU؟",
+          answer:
+            "كحد أدنى: جهد الدخل والطور والتردد؛ التيار المقنن وموصل الدخل؛ نوع المخرج وكميته؛ اتجاه التركيب وأي قيود بعدية؛ وظائف المراقبة أو التبديل التي تحتاجها؛ وأي متطلبات شهادات لسوقك المستهدف. تغطي قائمة تحقق طلب عرض السعر في هذا المقال القائمة الكاملة — ضع علامة TBC على أي شيء غير مؤكد بدلاً من التخمين.",
+        },
+        {
+          question: "هل تركيب وحدتي PDU يوفر تلقائياً طاقة متكررة؟",
+          answer:
+            "لا. توفر وحدتا PDU طاقة متكررة فقط إذا كانت كل منهما مغذاة من مصدر أعلى مستقل — تغذيتان منفصلتان من المرفق العام، أو مساران منفصلان لـUPS/مولد، على سبيل المثال. وحدتا PDU موصولتان بنفس اللوحة الأعلى تشتركان في نقطة فشل واحدة ولا توفران تكراراً حقيقياً بمفردهما، بغض النظر عن عدد وحدات PDU في الراك.",
+        },
+      ],
+    },
+    fr: {
+      title: "Comment choisir un PDU de rack pour votre data center : la checklist de l'acheteur",
+      category: "Distribution électrique",
+      excerpt: "Vous sourcez un PDU de rack ? Cette checklist d'achat couvre l'alimentation électrique, les prises, le niveau de surveillance, l'adéquation au rack et la redondance, avec un modèle de demande de devis à copier-coller.",
+      readingTime: "8 min de lecture",
+      body: [
+        {
+          heading: "Vue d'ensemble",
+          content:
+            "Choisir un PDU de rack n'est pas qu'une question de compter les prises ou de comparer les prix. L'unité doit correspondre à votre alimentation électrique, aux connecteurs d'alimentation des équipements informatiques qu'elle alimentera, aux contraintes d'espace et de flux d'air du rack dans lequel elle se monte, et à la surveillance ou au contrôle dont votre équipe d'exploitation a réellement besoin. Une erreur sur l'un de ces points et vous vous retrouvez avec un PDU qui ne rentre pas, qui ne peut pas alimenter tout ce qui y est branché, ou qui siège sur le réseau sans que personne ne puisse le lire. Cette checklist passe en revue les paramètres à confirmer avant d'envoyer une demande de devis, dans l'ordre où la plupart des acheteurs doivent les traiter, et se termine par un modèle de demande de devis court que vous pouvez remplir et envoyer directement à un fournisseur.",
+        },
+        {
+          heading: "1. Confirmez votre alimentation électrique et vos besoins de charge",
+          content:
+            "Commencez par ce qui est réellement disponible au niveau du rack, pas par ce que vous aimeriez avoir. Confirmez la tension d'entrée, la fréquence et la phase — monophasée ou triphasée — provenant du tableau de distribution amont ou de la sortie de l'onduleur, car un PDU conçu pour l'une ne s'adaptera pas simplement à l'autre. Additionnez la puissance nominale des équipements que le PDU alimentera, en incluant une marge pour l'expansion prévue sur la durée de vie du rack, pas seulement ce qui est installé le premier jour. À partir de là, confirmez le courant nominal du PDU, son connecteur d'entrée, et que le disjoncteur ou fusible amont protégeant ce circuit est dimensionné en conséquence — une protection amont sous-dimensionnée se déclenchera sous une charge que le PDU lui-même pourrait pourtant supporter. Rien de tout cela ne doit être deviné : faites confirmer la conception par un ingénieur électricien qualifié au regard de l'alimentation et de la charge réelles de votre site, et traitez avec prudence tout ratio de charge générique « empirique » trouvé en ligne — les marges réelles dépendent de votre mix d'équipements spécifique, des conditions ambiantes et du code local, pas d'un chiffre universel.",
+        },
+        {
+          heading: "2. Faites correspondre les prises à votre équipement informatique",
+          content:
+            "Avant de spécifier le type de prise, vérifiez physiquement les connecteurs d'alimentation des équipements qui entreront dans le rack — les alimentations de serveurs, commutateurs réseau et baies de stockage n'utilisent pas tous le même cordon. Les IEC C13 et C19 sont les types de prises les plus courants en data center (C19 pour les équipements à courant plus élevé comme certains châssis lames et commutateurs, C13 pour la plupart des serveurs et équipements informatiques standards), mais un site peut aussi nécessiter des prises régionales spécifiques — Schuko, NEMA, britannique (BS 1363), ou autres — selon ce qui est réellement branché et le pays d'origine de l'équipement installé. Confirmez que le cordon d'alimentation livré avec chaque appareil est compatible avec la prise spécifiée, et vérifiez que la disposition et l'espacement physiques des prises sur le PDU laissent la place pour chaque fiche sans que les corps des connecteurs adjacents ne se gênent — un problème réel sur les unités verticales à forte densité. Considérez le nom de produit d'un fournisseur comme une description du type de prise et de la capacité nominale, pas comme une preuve qu'une unité respecte une norme régionale ou de sécurité particulière ; vérifiez la certification séparément, voir le point 6 ci-dessous.",
+        },
+        {
+          heading: "3. Choisissez les bonnes fonctions de surveillance et de contrôle",
+          content:
+            "Les PDU de rack sont construits selon un petit nombre de niveaux fonctionnels, et le bon choix dépend de ce que votre équipe d'exploitation doit réellement faire à distance, pas de ce qui semble le plus avancé. Un PDU basique ne fait que distribuer l'alimentation, sans écran ni connexion réseau — adapté aux charges non critiques où personne n'a besoin de vérifier la consommation à distance. Un PDU mesuré ajoute un affichage numérique local du courant et/ou de la tension, utile quand le personnel a besoin d'une lecture occasionnelle sur site mais qu'il n'y a pas de réseau de surveillance auquel se connecter. Un PDU surveillé (en réseau) rapporte le courant, la tension, la puissance et l'énergie via SNMP ou Modbus afin que les équipes d'exploitation et informatiques puissent le lire à distance, sans ajouter de capacité de commutation. Un PDU commuté inclut tout ce qu'offre une unité surveillée, plus un contrôle à distance individuellement adressable de chaque prise, permettant à un administrateur de redémarrer un seul appareil ou de séquencer le démarrage d'un rack sans déplacement sur site. Utilisez le tableau ci-dessous comme comparaison de départ, puis vérifiez la fiche technique du modèle spécifique — la dénomination des fournisseurs pour ces niveaux n'est pas pleinement standardisée, et ce qu'un fournisseur appelle « intelligent » peut être « surveillé » chez un autre.",
+          table: {
+            columns: ["Basique", "Mesuré", "Surveillé", "Commuté"],
+            rows: [
+              { label: "Distribue l'alimentation aux prises", values: ["Oui", "Oui", "Oui", "Oui"] },
+              { label: "Affichage local courant/tension", values: ["Non", "Oui", "Oui", "Oui"] },
+              { label: "Surveillance à distance (SNMP/Modbus)", values: ["Non", "Non", "Oui", "Oui"] },
+              { label: "Commutation à distance par prise", values: ["Non", "Non", "Non", "Oui"] },
+              {
+                label: "Généralement spécifié pour",
+                values: [
+                  "Charges non critiques, racks simples",
+                  "Sites nécessitant des vérifications occasionnelles, sans réseau dédié",
+                  "Visibilité d'alimentation à distance sans vérification sur site",
+                  "Sites distants/non surveillés nécessitant redémarrage ou séquencement",
+                ],
+              },
+            ],
+          },
+        },
+        {
+          heading: "4. Vérifiez l'adéquation au rack, le montage et le cheminement des câbles",
+          content:
+            "Un PDU électriquement correct mais physiquement inadapté au rack pose quand même problème. Le montage vertical (0U), installé dans le rail latéral du rack, est le choix habituel pour un nombre élevé de prises ou un rack profond avec un espace de rail horizontal limité ; le montage horizontal (1U–2U) convient aux racks peu profonds ou aux installations avec un nombre de prises plus restreint. Dans tous les cas, vérifiez les dimensions physiques réelles de l'unité — pas seulement son format de montage — par rapport à la profondeur interne du rack et au système de support ou de rail utilisé, car le matériel de montage n'est pas toujours universel d'un fabricant à l'autre. Planifiez le cheminement des câbles avant de commander : les cordons d'alimentation sortants ont besoin d'un chemin vers chaque appareil qui ne bloque ni le flux d'air avant ou arrière, ni l'accès de maintenance courant, et qui n'empêche pas la fermeture complète de la porte avant ou arrière du rack. Ce sont des problèmes faciles à détecter sur un plan et coûteux à découvrir une fois le PDU déjà monté.",
+        },
+        {
+          heading: "5. Examinez les exigences de redondance et d'exploitation",
+          content:
+            "Si l'équipement entrant dans le rack a une double alimentation, prévoyez une alimentation A/B : deux PDU, chacun connecté à une source d'alimentation amont indépendante, de sorte qu'une seule défaillance d'alimentation n'interrompe pas l'équipement. Le qualificatif important est indépendante — deux PDU branchés sur le même tableau amont ou la même sortie d'onduleur vous donnent deux PDU, pas deux chemins d'alimentation, et n'offrent pas de redondance réelle à eux seuls. Le fait qu'une paire de PDU A/B fournisse réellement une alimentation redondante dépend de la conception électrique amont alimentant chacun d'eux, ce qui est extérieur au PDU lui-même et doit être confirmé auprès de celui qui a conçu la distribution électrique de l'installation. Il convient aussi d'être précis sur ce qu'un PDU n'est pas : un PDU de rack standard, y compris les variantes mesurées, surveillées et commutées, ne fournit pas d'alimentation de secours par batterie et ne commute pas automatiquement entre sources d'alimentation — c'est le rôle d'un onduleur et, séparément, d'un PDU à commutation automatique de transfert (ATS), un produit distinct conçu spécifiquement pour cette fonction. Si vous avez besoin d'alertes à distance, de protocoles réseau spécifiques, d'un accès basé sur les rôles pour différents membres du personnel, ou d'une intégration avec une plateforme DCIM ou de surveillance existante, vérifiez ces exigences par rapport à la liste de fonctionnalités documentée du PDU avant de commander, pas après.",
+        },
+        {
+          heading: "6. Vérifiez la documentation avant de commander",
+          content:
+            "Avant de passer commande, procurez-vous les documents qui vous permettent de vérifier l'unité sur papier, pas seulement de croire un fournisseur sur parole : une fiche technique complète (tension, courant, nombre et type de prises, connecteur d'entrée), un plan dimensionnel pour confirmer l'adéquation physique du point 4, et une liste d'interfaces complète si l'unité est mesurée, surveillée ou commutée. Demandez la documentation de certification ou de test pertinente pour votre marché cible et le modèle spécifique commandé — la couverture de certification peut varier selon le modèle et la configuration, même au sein de la gamme d'un seul fournisseur, donc ne supposez pas qu'elle se reporte d'une unité d'apparence similaire. Si vous avez besoin de quoi que ce soit hors configuration standard, faites confirmer par écrit dans le devis l'étendue de la personnalisation, le délai, les conditions de garantie et l'emballage — et ne considérez rien de tout cela comme acquis tant que votre fournisseur ne l'a pas confirmé par écrit pour votre commande spécifique ; ne vous fiez pas à une page produit générale pour des engagements qui doivent être propres au projet.",
+        },
+        {
+          heading: "7. Checklist de demande de devis pour PDU de rack",
+          content:
+            "Copiez le tableau ci-dessous, remplissez ce que vous savez, et marquez TBC (à confirmer) tout ce que vous n'avez pas encore confirmé plutôt que de deviner — un fournisseur peut travailler avec un TBC honnête et poser la bonne question de suivi ; un chiffre deviné ne fait que déplacer l'erreur plus loin dans le processus.",
+          table: {
+            columns: ["Votre réponse / spécification"],
+            rows: [
+              { label: "Pays / région du projet", values: ["TBC"] },
+              { label: "Scénario d'installation (salle data center, local télécom, armoire extérieure, etc.)", values: ["TBC"] },
+              { label: "Tension d'entrée / phase / fréquence", values: ["TBC"] },
+              { label: "Courant nominal", values: ["TBC"] },
+              { label: "Connecteur d'entrée / type de fiche", values: ["TBC"] },
+              { label: "Type et nombre de prises", values: ["TBC"] },
+              { label: "Orientation de montage (vertical 0U / horizontal)", values: ["TBC"] },
+              { label: "Contraintes dimensionnelles (profondeur du rack, espace disponible)", values: ["TBC"] },
+              { label: "Fonctions de surveillance / commutation requises", values: ["TBC"] },
+              { label: "Exigences de protocole de communication", values: ["TBC"] },
+              { label: "Exigences de certification", values: ["TBC"] },
+              { label: "Quantité commandée", values: ["TBC"] },
+              { label: "Date de livraison cible", values: ["TBC"] },
+            ],
+          },
+        },
+        {
+          heading: "Prêt à demander une configuration ?",
+          content:
+            "Remplissez autant que possible la checklist ci-dessus — TBC est une réponse tout à fait valable pour tout ce que vous n'avez pas encore confirmé — et envoyez-la à notre équipe d'ingénierie. Nous la vérifierons par rapport à votre alimentation électrique, votre équipement et vos contraintes de rack, et reviendrons avec une configuration qui correspond réellement au projet, plutôt qu'une unité générique qui a simplement assez de prises.",
+        },
+      ],
+      faqs: [
+        {
+          question: "Quelle est la différence entre un PDU basique et un PDU intelligent ?",
+          answer:
+            "« PDU intelligent » est généralement utilisé comme terme générique pour tout PDU de rack au-delà du basique — mesuré, surveillé ou commuté — qui ajoute de la mesure, du reporting réseau ou un contrôle à distance des prises. Un PDU basique ne fait que distribuer l'alimentation, sans écran ni connexion réseau. Vérifiez la liste de fonctionnalités documentée d'un modèle spécifique, car la limite entre niveaux varie selon le fournisseur.",
+        },
+        {
+          question: "Comment choisir entre montage horizontal et vertical ?",
+          answer:
+            "Cela dépend du nombre de prises et de la profondeur du rack. Les unités verticales (0U), montées dans le rail latéral du rack, gèrent un nombre de prises plus élevé sans utiliser l'espace des rails et conviennent aux racks plus profonds. Les unités horizontales (1U–2U) conviennent aux racks peu profonds ou aux installations nécessitant seulement un nombre modeste de prises. Vérifiez toujours les dimensions physiques de l'unité par rapport à votre rack spécifique et à votre matériel de montage, plutôt que de supposer la compatibilité à partir du seul format de montage.",
+        },
+        {
+          question: "Quelles informations dois-je fournir pour demander un devis de PDU ?",
+          answer:
+            "Au minimum : tension d'entrée, phase et fréquence ; courant nominal et connecteur d'entrée ; type et nombre de prises ; orientation de montage et contraintes dimensionnelles éventuelles ; les fonctions de surveillance ou de commutation dont vous avez besoin ; et toute exigence de certification pour votre marché cible. La checklist de demande de devis de cet article couvre la liste complète — marquez TBC tout ce qui n'est pas confirmé plutôt que de deviner.",
+        },
+        {
+          question: "L'installation de deux PDU fournit-elle automatiquement une alimentation redondante ?",
+          answer:
+            "Non. Deux PDU ne fournissent une alimentation redondante que si chacun est alimenté par une source amont indépendante — deux alimentations secteur séparées, ou des chemins onduleur/générateur séparés, par exemple. Deux PDU branchés sur le même tableau amont partagent un point de défaillance unique et n'offrent pas de véritable redondance à eux seuls, quel que soit le nombre de PDU dans le rack.",
+        },
+      ],
+    },
+    es: {
+      title: "Cómo elegir un PDU de rack para su centro de datos: la checklist del comprador",
+      category: "Distribución de energía",
+      excerpt: "¿Está comprando un PDU de rack? Esta checklist de compra cubre el suministro eléctrico, las tomas, el nivel de monitoreo, el ajuste al rack y la redundancia, con una plantilla de solicitud de cotización para copiar y pegar.",
+      readingTime: "8 min de lectura",
+      body: [
+        {
+          heading: "Descripción general",
+          content:
+            "Elegir un PDU de rack no es solo cuestión de contar tomas o comparar precios. La unidad debe coincidir con su suministro eléctrico, los conectores de alimentación del equipo de TI que alimentará, las limitaciones de espacio y flujo de aire del rack en el que se monta, y el monitoreo o control que su equipo de operaciones realmente necesita. Si se equivoca en cualquiera de estos puntos, termina con un PDU que no encaja, que no puede alimentar todo lo conectado a él, o que está en la red sin que nadie pueda leerlo. Esta checklist recorre los parámetros a confirmar antes de enviar una solicitud de cotización, en el orden en que la mayoría de los compradores necesitan trabajarlos, y termina con una plantilla de solicitud de cotización corta que puede completar y enviar directamente a un proveedor.",
+        },
+        {
+          heading: "1. Confirme su suministro eléctrico y requisitos de carga",
+          content:
+            "Empiece por lo que realmente está disponible en el rack, no por lo que le gustaría tener. Confirme el voltaje de entrada, la frecuencia y la fase — monofásica o trifásica — proveniente del tablero de distribución ascendente o la salida del SAI, ya que un PDU construido para una no se adaptará simplemente a la otra. Sume la demanda de potencia nominal del equipo que alimentará el PDU, incluyendo margen para la expansión planificada durante la vida útil del rack, no solo lo instalado el primer día. A partir de ahí, confirme la corriente nominal del PDU, su conector de entrada, y que el interruptor o fusible ascendente que protege ese circuito esté dimensionado para coincidir — una protección ascendente subdimensionada se disparará bajo una carga que el propio PDU podría soportar. Nada de esto debe adivinarse: haga que un ingeniero eléctrico calificado confirme el diseño contra el suministro y la carga reales de su sitio, y trate con precaución cualquier proporción de carga genérica de \"regla general\" que vea en línea — los márgenes reales dependen de su combinación específica de equipos, las condiciones ambientales y el código local, no de un número único para todos.",
+        },
+        {
+          heading: "2. Haga coincidir las tomas con su equipo de TI",
+          content:
+            "Antes de especificar el tipo de toma, verifique físicamente los conectores de alimentación del equipo que entrará en el rack — las fuentes de alimentación de servidores, conmutadores de red y arreglos de almacenamiento no vienen todos con el mismo cable. IEC C13 y C19 son los tipos de tomas más comunes en centros de datos (C19 para equipos de mayor corriente como algunos chasis blade y conmutadores, C13 para la mayoría de servidores y equipo de TI estándar), pero un sitio también puede necesitar tomas específicas de la región — Schuko, NEMA, Reino Unido (BS 1363), u otras — según lo que esté realmente conectado y de qué país sea el equipo instalado. Confirme que el cable de alimentación que trae cada dispositivo sea compatible con la toma que está especificando, y verifique que la disposición física y el espaciado de las tomas en el PDU dejen espacio para asentar cada clavija sin que los cuerpos de los conectores adyacentes se interpongan — un problema real en unidades verticales densamente pobladas. Trate el nombre del producto de un proveedor como una descripción del tipo de toma y la capacidad nominal, no como evidencia de que una unidad cumple con un estándar regional o de seguridad específico; confirme la certificación por separado, según el punto 6 a continuación.",
+        },
+        {
+          heading: "3. Elija las funciones de monitoreo y control adecuadas",
+          content:
+            "Los PDU de rack se fabrican en un pequeño número de niveles funcionales, y el correcto depende de lo que su equipo de operaciones realmente necesite hacer de forma remota, no de lo que suene más avanzado. Un PDU básico solo distribuye energía, sin pantalla y sin conexión de red — adecuado para cargas no críticas donde nadie necesita verificar el consumo remotamente. Un PDU medido añade una pantalla digital local de corriente y/o voltaje, útil cuando el personal necesita una lectura ocasional en sitio pero no hay una red de monitoreo a la cual conectarse. Un PDU monitoreado (en red) reporta corriente, voltaje, potencia y energía a través de SNMP o Modbus para que los equipos de instalaciones y TI puedan leerlo remotamente, sin añadir capacidad de conmutación. Un PDU conmutado incluye todo lo que ofrece una unidad monitoreada, más control remoto direccionable individualmente de cada toma, permitiendo a un administrador reiniciar un solo dispositivo o secuenciar el encendido de un rack sin una visita al sitio. Use la tabla a continuación como comparación inicial, y luego confirme con la ficha técnica del modelo específico — la nomenclatura de los proveedores para estos niveles no está totalmente estandarizada, y lo que un proveedor llama \"inteligente\" podría ser \"monitoreado\" para otro.",
+          table: {
+            columns: ["Básico", "Medido", "Monitoreado", "Conmutado"],
+            rows: [
+              { label: "Distribuye energía a las tomas", values: ["Sí", "Sí", "Sí", "Sí"] },
+              { label: "Pantalla local de corriente/voltaje", values: ["No", "Sí", "Sí", "Sí"] },
+              { label: "Monitoreo remoto (SNMP/Modbus)", values: ["No", "No", "Sí", "Sí"] },
+              { label: "Conmutación remota por toma", values: ["No", "No", "No", "Sí"] },
+              {
+                label: "Normalmente especificado para",
+                values: [
+                  "Cargas no críticas, racks simples",
+                  "Sitios que necesitan verificaciones ocasionales, sin red dedicada",
+                  "Visibilidad remota de energía sin verificaciones en sitio",
+                  "Sitios remotos/no atendidos que necesitan reinicio o secuenciación",
+                ],
+              },
+            ],
+          },
+        },
+        {
+          heading: "4. Verifique el ajuste al rack, el montaje y el enrutamiento de cables",
+          content:
+            "Un PDU eléctricamente correcto pero físicamente inadecuado para el rack sigue causando problemas. El montaje vertical (0U), instalado en el canal lateral del rack, es la opción habitual cuando necesita un alto número de tomas o un rack profundo con espacio de riel horizontal limitado; el montaje horizontal (1U–2U) se adapta a racks poco profundos o instalaciones con un número de tomas más reducido. En cualquier caso, verifique las dimensiones físicas reales de la unidad — no solo su formato de montaje — contra la profundidad interna del rack y el sistema de soporte o riel que está usando, ya que el hardware de montaje no siempre es universal entre fabricantes. Planifique el enrutamiento de cables antes de ordenar: los cables de alimentación salientes necesitan una ruta a cada dispositivo que no bloquee el flujo de aire frontal o trasero, no interfiera con el acceso de mantenimiento rutinario, y no impida que la puerta frontal o trasera del rack cierre completamente. Estos son problemas fáciles de detectar en un plano y costosos de descubrir una vez que el PDU ya está montado.",
+        },
+        {
+          heading: "5. Revise los requisitos de redundancia y operación",
+          content:
+            "Si el equipo que entra en el rack tiene fuentes de alimentación duales, planifique una alimentación A/B: dos PDU, cada uno conectado a una fuente de energía ascendente independiente, de modo que el fallo de una sola alimentación no derribe el equipo. El calificativo importante es independiente — dos PDU conectados al mismo tablero ascendente o a la misma salida de SAI le dan dos PDU, no dos rutas de energía, y no proporcionan redundancia real por sí solos. Que un par de PDU A/B realmente entregue energía redundante depende del diseño eléctrico ascendente que alimenta a cada uno, lo cual está fuera del PDU mismo y necesita confirmarse con quien diseñó la distribución eléctrica de la instalación. También vale la pena ser preciso sobre lo que un PDU no es: un PDU de rack estándar, incluidas las variantes medidas, monitoreadas y conmutadas, no proporciona respaldo de batería ni conmuta automáticamente entre fuentes de energía — esa es la función de un SAI y, por separado, de un PDU con conmutación automática de transferencia (ATS), un producto distinto diseñado específicamente para esa función. Si necesita alertas remotas, protocolos de red específicos, acceso basado en roles para distinto personal, o integración con una plataforma DCIM o de monitoreo existente, confirme esos requisitos contra la lista de funciones documentada del PDU antes de ordenar, no después.",
+        },
+        {
+          heading: "6. Verifique la documentación antes de ordenar",
+          content:
+            "Antes de realizar un pedido, obtenga la documentación que le permita verificar la unidad en papel, no solo confiar en la palabra de un proveedor: una ficha de especificaciones completa (voltaje, corriente, cantidad y tipo de tomas, conector de entrada), un plano dimensional para confirmar el ajuste físico del punto 4, y una lista completa de interfaces si la unidad es medida, monitoreada o conmutada. Solicite la documentación de certificación o prueba relevante para su mercado objetivo y el modelo específico que está ordenando — la cobertura de certificación puede variar según el modelo y la configuración incluso dentro de la línea de productos de un mismo proveedor, así que no asuma que se traslada de una unidad de apariencia similar. Si necesita algo fuera de una configuración estándar, haga que el alcance de la personalización, el plazo de entrega, los términos de garantía y el embalaje se confirmen por escrito como parte de la cotización — y no considere nada de esto resuelto hasta que su proveedor lo haya confirmado por escrito para su pedido específico; no confíe en una página de producto general para compromisos que deben ser específicos del proyecto.",
+        },
+        {
+          heading: "7. Checklist de solicitud de cotización para PDU de rack",
+          content:
+            "Copie la tabla a continuación, complete lo que sabe, y marque como TBC (por confirmar) cualquier cosa que aún no haya confirmado en lugar de adivinar — un proveedor puede trabajar con un TBC honesto y hacer la pregunta de seguimiento correcta; un número adivinado solo traslada el error más adelante.",
+          table: {
+            columns: ["Su respuesta / especificación"],
+            rows: [
+              { label: "País / región del proyecto", values: ["TBC"] },
+              { label: "Escenario de instalación (sala de centro de datos, sala de telecomunicaciones, gabinete exterior, etc.)", values: ["TBC"] },
+              { label: "Voltaje de entrada / fase / frecuencia", values: ["TBC"] },
+              { label: "Corriente nominal", values: ["TBC"] },
+              { label: "Conector de entrada / tipo de clavija", values: ["TBC"] },
+              { label: "Tipo y cantidad de tomas", values: ["TBC"] },
+              { label: "Orientación de montaje (vertical 0U / horizontal)", values: ["TBC"] },
+              { label: "Restricciones dimensionales (profundidad del rack, espacio disponible)", values: ["TBC"] },
+              { label: "Funciones de monitoreo / conmutación requeridas", values: ["TBC"] },
+              { label: "Requisitos de protocolo de comunicación", values: ["TBC"] },
+              { label: "Requisitos de certificación", values: ["TBC"] },
+              { label: "Cantidad del pedido", values: ["TBC"] },
+              { label: "Fecha de entrega objetivo", values: ["TBC"] },
+            ],
+          },
+        },
+        {
+          heading: "¿Listo para solicitar una configuración?",
+          content:
+            "Complete tanto como pueda de la checklist anterior — TBC es una respuesta perfectamente válida para cualquier cosa que aún no haya confirmado — y envíela a nuestro equipo de ingeniería. La verificaremos contra su suministro eléctrico, equipo y restricciones de rack, y le responderemos con una configuración que realmente se ajuste al proyecto, en lugar de una unidad genérica que simplemente tiene suficientes tomas.",
+        },
+      ],
+      faqs: [
+        {
+          question: "¿Cuál es la diferencia entre un PDU básico y un PDU inteligente?",
+          answer:
+            "\"PDU inteligente\" se usa generalmente como un término general para cualquier PDU de rack más allá del básico — medido, monitoreado o conmutado — que añade medición, reporte de red o control remoto de tomas. Un PDU básico solo distribuye energía sin pantalla ni conexión de red. Verifique la lista de funciones documentada de un modelo específico, ya que la línea divisoria entre niveles varía según el proveedor.",
+        },
+        {
+          question: "¿Cómo elijo entre montaje horizontal y vertical?",
+          answer:
+            "Se reduce a la cantidad de tomas y la profundidad del rack. Las unidades verticales (0U), montadas en el canal lateral del rack, manejan cantidades mayores de tomas sin usar espacio de riel y se adaptan a racks más profundos. Las unidades horizontales (1U–2U) se adaptan a racks poco profundos o instalaciones que solo necesitan una cantidad modesta de tomas. Siempre verifique las dimensiones físicas de la unidad contra su rack específico y el hardware de montaje, en lugar de asumir compatibilidad solo por el formato de montaje.",
+        },
+        {
+          question: "¿Qué información debo proporcionar al solicitar una cotización de PDU?",
+          answer:
+            "Como mínimo: voltaje de entrada, fase y frecuencia; corriente nominal y conector de entrada; tipo y cantidad de tomas; orientación de montaje y cualquier restricción dimensional; las funciones de monitoreo o conmutación que necesita; y cualquier requisito de certificación para su mercado objetivo. La checklist de solicitud de cotización de este artículo cubre la lista completa — marque como TBC cualquier cosa sin confirmar en lugar de adivinar.",
+        },
+        {
+          question: "¿Instalar dos PDU proporciona automáticamente energía redundante?",
+          answer:
+            "No. Dos PDU solo proporcionan energía redundante si cada uno se alimenta de una fuente ascendente independiente — dos alimentaciones de red eléctrica separadas, o rutas separadas de SAI/generador, por ejemplo. Dos PDU conectados al mismo tablero ascendente comparten un único punto de fallo y no proporcionan redundancia real por sí solos, sin importar cuántos PDU haya en el rack.",
+        },
+      ],
+    },
+    ru: {
+      title: "Как выбрать стоечный PDU для вашего дата-центра: чек-лист покупателя",
+      category: "Распределение питания",
+      excerpt: "Выбираете стоечный PDU? Этот чек-лист покупателя охватывает электропитание, розетки, уровень мониторинга, соответствие стойке и резервирование, с готовым шаблоном запроса коммерческого предложения.",
+      readingTime: "8 мин на чтение",
+      body: [
+        {
+          heading: "Обзор",
+          content:
+            "Выбор стоечного PDU — это не просто подсчёт розеток или сравнение цен. Устройство должно соответствовать вашему электропитанию, разъёмам питания ИТ-оборудования, которое оно будет обслуживать, ограничениям по месту и воздушному потоку в стойке, куда оно монтируется, а также тому мониторингу или управлению, которые реально нужны вашей эксплуатационной команде. Ошибка в любом из этих пунктов — и вы получаете PDU, который не помещается, не может запитать всё подключённое к нему оборудование, или висит в сети, которую никто не может прочитать. Этот чек-лист проходит по параметрам, которые нужно подтвердить перед отправкой запроса коммерческого предложения, в том порядке, в котором большинству покупателей нужно их прорабатывать, и завершается коротким шаблоном запроса, который можно заполнить и отправить поставщику напрямую.",
+        },
+        {
+          heading: "1. Подтвердите электропитание и требования к нагрузке",
+          content:
+            "Начните с того, что реально доступно у стойки, а не с того, что хотелось бы иметь. Подтвердите входное напряжение, частоту и фазность — однофазное или трёхфазное — поступающие от вышестоящего распределительного щита или выхода ИБП, поскольку PDU, рассчитанный на одно, не просто адаптируется под другое. Сложите номинальную мощность оборудования, которое будет питать PDU, включая запас на плановое расширение в течение срока службы стойки, а не только то, что установлено в первый день. Далее подтвердите номинальный ток PDU, его входной разъём, и что вышестоящий автомат или предохранитель, защищающий эту цепь, рассчитан соответствующим образом — недостаточно рассчитанная вышестоящая защита сработает при нагрузке, которую сам PDU мог бы выдержать. Ничего из этого не следует угадывать: попросите квалифицированного инженера-электрика подтвердить проект исходя из реального электропитания и нагрузки вашего объекта, и относитесь с осторожностью к любому общему «эмпирическому» коэффициенту нагрузки, встреченному в интернете — реальные запасы зависят от конкретного состава вашего оборудования, условий окружающей среды и местных норм, а не от единого числа для всех.",
+        },
+        {
+          heading: "2. Согласуйте розетки с вашим ИТ-оборудованием",
+          content:
+            "Перед тем как указывать тип розетки, физически проверьте разъёмы питания оборудования, которое будет установлено в стойку — блоки питания серверов, сетевых коммутаторов и систем хранения поставляются не с одним и тем же кабелем. IEC C13 и C19 — самые распространённые типы розеток в дата-центрах (C19 для оборудования с более высоким током, например некоторых блейд-шасси и коммутаторов, C13 для большинства серверов и стандартного ИТ-оборудования), но на объекте могут также понадобиться региональные розетки — Schuko, NEMA, британские (BS 1363) или другие — в зависимости от того, что реально подключается, и оборудования какой страны установлено. Подтвердите, что кабель питания, поставляемый с каждым устройством, совместим с указываемой розеткой, и проверьте, что физическое расположение и расстояние между розетками на PDU оставляют место для установки каждой вилки без того, чтобы корпуса соседних разъёмов мешали друг другу — реальная проблема на плотно заполненных вертикальных блоках. Относитесь к названию продукта поставщика как к описанию типа розетки и номинальной мощности, а не как к доказательству соответствия блока конкретному региональному стандарту или стандарту безопасности; сертификацию подтверждайте отдельно, см. пункт 6 ниже.",
+        },
+        {
+          heading: "3. Выберите правильные функции мониторинга и управления",
+          content:
+            "Стоечные PDU выпускаются в небольшом количестве функциональных уровней, и правильный выбор зависит от того, что реально нужно делать удалённо вашей эксплуатационной команде, а не от того, что звучит продвинутее. Базовый PDU только распределяет питание, без дисплея и без сетевого подключения — подходит для некритичных нагрузок, где никому не нужно проверять потребление удалённо. Измерительный PDU добавляет локальный цифровой дисплей тока и/или напряжения, полезный, когда персоналу нужно периодическое считывание на месте, но нет сети мониторинга для подключения. Контролируемый (сетевой) PDU передаёт данные о токе, напряжении, мощности и энергии по SNMP или Modbus, так что команды объекта и ИТ могут считывать их удалённо, без добавления функции коммутации. Коммутируемый PDU включает всё, что предлагает контролируемый блок, плюс индивидуально адресуемое удалённое управление каждой розеткой, позволяющее администратору перезагрузить одно устройство или выстроить последовательность включения стойки без выезда на объект. Используйте таблицу ниже как первоначальное сравнение, а затем сверьтесь с паспортом конкретной модели — наименования уровней у поставщиков не полностью стандартизированы, и то, что один поставщик называет «интеллектуальным», другой может называть «контролируемым».",
+          table: {
+            columns: ["Базовый", "Измерительный", "Контролируемый", "Коммутируемый"],
+            rows: [
+              { label: "Распределяет питание по розеткам", values: ["Да", "Да", "Да", "Да"] },
+              { label: "Локальный дисплей тока/напряжения", values: ["Нет", "Да", "Да", "Да"] },
+              { label: "Удалённый мониторинг (SNMP/Modbus)", values: ["Нет", "Нет", "Да", "Да"] },
+              { label: "Удалённая коммутация по розеткам", values: ["Нет", "Нет", "Нет", "Да"] },
+              {
+                label: "Обычно применяется для",
+                values: [
+                  "Некритичных нагрузок, простых стоек",
+                  "Объектов с периодической проверкой нагрузки, без сети мониторинга",
+                  "Удалённой видимости питания без выезда на объект",
+                  "Удалённых/необслуживаемых объектов с перезагрузкой или последовательным запуском",
+                ],
+              },
+            ],
+          },
+        },
+        {
+          heading: "4. Проверьте соответствие стойке, монтаж и прокладку кабелей",
+          content:
+            "PDU, электрически корректный, но физически неподходящий для стойки, всё равно создаёт проблемы. Вертикальный монтаж (0U), устанавливаемый в боковом канале стойки, — обычный выбор при большом количестве розеток или глубокой стойке с ограниченным местом на горизонтальных рейках; горизонтальный монтаж (1U–2U) подходит для неглубоких стоек или установок с меньшим количеством розеток. В любом случае проверьте фактические физические размеры блока — не только формат монтажа — относительно внутренней глубины стойки и используемой системы креплений или реек, поскольку монтажное оборудование не всегда универсально у разных производителей. Спланируйте прокладку кабелей до заказа: исходящим кабелям питания нужен путь к каждому устройству, не перекрывающий передний или задний воздушный поток, не мешающий плановому обслуживанию и не препятствующий полному закрытию передней или задней двери стойки. Это проблемы, которые легко выявить на чертеже и дорого обнаружить уже после монтажа PDU.",
+        },
+        {
+          heading: "5. Проверьте требования к резервированию и эксплуатации",
+          content:
+            "Если оборудование, устанавливаемое в стойку, имеет двойное питание, спланируйте схему A/B: два PDU, каждый подключён к независимому вышестоящему источнику питания, так чтобы отказ одного фидера не отключал оборудование. Важное уточнение — независимому: два PDU, подключённые к одному и тому же вышестоящему щиту или одному выходу ИБП, дают вам два PDU, но не два пути питания, и сами по себе не обеспечивают реального резервирования. Обеспечивает ли пара PDU A/B действительно резервное питание, зависит от вышестоящей электрической схемы, питающей каждый из них, что находится вне зоны ответственности самого PDU и должно быть подтверждено с тем, кто проектировал систему электроснабжения объекта. Также стоит быть точным в том, чем PDU не является: стандартный стоечный PDU, включая измерительные, контролируемые и коммутируемые варианты, не обеспечивает резервное питание от батареи и не переключается автоматически между источниками питания — это функция ИБП и, отдельно, PDU с автоматическим переключателем ввода резерва (ATS) — отдельного продукта, созданного специально для этой функции. Если вам нужны удалённые оповещения, конкретные сетевые протоколы, ролевой доступ для разных сотрудников или интеграция с существующей платформой DCIM или мониторинга, подтвердите эти требования по документированному списку функций PDU до заказа, а не после.",
+        },
+        {
+          heading: "6. Проверьте документацию перед заказом",
+          content:
+            "Перед размещением заказа получите документы, которые позволят проверить устройство на бумаге, а не просто поверить поставщику на слово: полный технический паспорт (напряжение, ток, количество и тип розеток, входной разъём), чертёж с размерами, чтобы подтвердить физическое соответствие из пункта 4, и полный список интерфейсов, если устройство измерительное, контролируемое или коммутируемое. Запросите документацию по сертификации или испытаниям, актуальную для вашего целевого рынка и конкретной заказываемой модели — покрытие сертификацией может различаться в зависимости от модели и конфигурации даже в рамках линейки продуктов одного поставщика, поэтому не предполагайте, что она переносится с внешне похожего устройства. Если вам нужно что-то за пределами стандартной конфигурации, получите письменное подтверждение объёма кастомизации, сроков поставки, условий гарантии и упаковки как часть коммерческого предложения — и не считайте ничего из этого окончательным, пока поставщик не подтвердил это письменно применительно к вашему конкретному заказу; не полагайтесь на общую страницу продукта в вопросах, требующих привязки к конкретному проекту.",
+        },
+        {
+          heading: "7. Чек-лист запроса коммерческого предложения на стоечный PDU",
+          content:
+            "Скопируйте таблицу ниже, заполните то, что знаете, и отметьте как TBC (будет уточнено) всё, что ещё не подтверждено, вместо того чтобы угадывать — поставщик может работать с честным TBC и задать правильный уточняющий вопрос; угаданное число лишь переносит ошибку дальше по цепочке.",
+          table: {
+            columns: ["Ваш ответ / спецификация"],
+            rows: [
+              { label: "Страна / регион проекта", values: ["TBC"] },
+              { label: "Сценарий установки (зал дата-центра, телеком-помещение, уличный шкаф и т. д.)", values: ["TBC"] },
+              { label: "Входное напряжение / фаза / частота", values: ["TBC"] },
+              { label: "Номинальный ток", values: ["TBC"] },
+              { label: "Входной разъём / тип вилки", values: ["TBC"] },
+              { label: "Тип и количество розеток", values: ["TBC"] },
+              { label: "Ориентация монтажа (вертикальный 0U / горизонтальный)", values: ["TBC"] },
+              { label: "Габаритные ограничения (глубина стойки, доступное пространство)", values: ["TBC"] },
+              { label: "Требуемые функции мониторинга / коммутации", values: ["TBC"] },
+              { label: "Требования к протоколу связи", values: ["TBC"] },
+              { label: "Требования к сертификации", values: ["TBC"] },
+              { label: "Заказываемое количество", values: ["TBC"] },
+              { label: "Целевая дата поставки", values: ["TBC"] },
+            ],
+          },
+        },
+        {
+          heading: "Готовы запросить конфигурацию?",
+          content:
+            "Заполните чек-лист выше настолько, насколько можете — TBC вполне допустимый ответ для всего, что ещё не подтверждено, — и отправьте его нашей инженерной команде. Мы сверим его с вашим электропитанием, оборудованием и ограничениями по стойке и вернёмся с конфигурацией, которая реально подходит для проекта, а не с типовым блоком, у которого просто достаточно розеток.",
+        },
+      ],
+      faqs: [
+        {
+          question: "В чём разница между базовым и интеллектуальным PDU?",
+          answer:
+            "«Интеллектуальный PDU» обычно используется как обобщающий термин для любого стоечного PDU выше базового — измерительного, контролируемого или коммутируемого, — добавляющего измерение, сетевую отчётность или удалённое управление розетками. Базовый PDU только распределяет питание, без дисплея и сетевого подключения. Проверяйте документированный список функций конкретной модели, поскольку граница между уровнями различается у разных поставщиков.",
+        },
+        {
+          question: "Как выбрать между горизонтальным и вертикальным монтажом?",
+          answer:
+            "Это зависит от количества розеток и глубины стойки. Вертикальные (0U) блоки, устанавливаемые в боковом канале стойки, обеспечивают большее количество розеток без использования места на рейках и подходят для более глубоких стоек. Горизонтальные (1U–2U) блоки подходят для неглубоких стоек или установок, которым нужно лишь скромное количество розеток. Всегда проверяйте физические размеры блока относительно конкретной стойки и монтажного оборудования, а не полагайтесь на совместимость исходя только из формата монтажа.",
+        },
+        {
+          question: "Какую информацию нужно предоставить при запросе коммерческого предложения на PDU?",
+          answer:
+            "Как минимум: входное напряжение, фазность и частоту; номинальный ток и входной разъём; тип и количество розеток; ориентацию монтажа и любые габаритные ограничения; требуемые функции мониторинга или коммутации; и любые требования к сертификации для вашего целевого рынка. Чек-лист запроса коммерческого предложения в этой статье охватывает полный список — отмечайте всё неподтверждённое как TBC, а не угадывайте.",
+        },
+        {
+          question: "Обеспечивает ли установка двух PDU автоматически резервное питание?",
+          answer:
+            "Нет. Два PDU обеспечивают резервное питание только в том случае, если каждый из них питается от независимого вышестоящего источника — например, двух отдельных вводов от сети или отдельных путей ИБП/генератора. Два PDU, подключённые к одному вышестоящему щиту, имеют общую единую точку отказа и не обеспечивают реального резервирования сами по себе, независимо от количества PDU в стойке.",
+        },
+      ],
+    },
+    zh: {
+      title: "如何为数据中心选择机架PDU：采购清单",
+      category: "配电",
+      excerpt: "正在采购机架PDU？这份采购清单涵盖供电条件、插座匹配、监控等级、机柜适配性与冗余要求，并附带可直接复制使用的询价模板。",
+      readingTime: "8分钟阅读",
+      body: [
+        {
+          heading: "概述",
+          content:
+            "选择机架PDU不只是数插座数量或比较价格那么简单。这台设备必须匹配你的供电条件、它要供电的IT设备的电源接口、它所安装机柜的空间与气流限制，以及运维团队实际需要的监控或控制能力。只要其中一项出了差错，最终拿到的PDU可能装不进机柜、带不动插在上面的所有设备，或者挂在网络上却没人能读到数据。这份清单按大多数采购人员需要的顺序，逐项梳理发送询价之前应该确认的参数，最后附上一份可以直接填写、发给供应商的简短询价模板。",
+        },
+        {
+          heading: "1. 确认供电条件与负载需求",
+          content:
+            "先看机柜处实际有什么供电条件，而不是你希望有什么。确认来自上级配电柜或UPS输出端的输入电压、频率和相数——单相还是三相——因为为其中一种设计的PDU不会简单地适配另一种。把该PDU将要供电的设备额定功耗加总，并留出机柜使用周期内计划扩容的余量，而不只是第一天安装的设备。在此基础上，确认PDU的额定电流、输入接口，以及保护该回路的上级断路器或熔断器是否匹配——一个选型偏小的上级保护装置，会在PDU本身完全可以承受的负载下跳闸。这些都不应该靠猜：请合格的电气工程师根据你场地的真实供电和负载来确认设计，并对网上看到的任何通用“经验法则”负载比例保持谨慎——真实的余量取决于你具体的设备组合、环境条件和当地规范，不是一个放之四海而皆准的数字。",
+        },
+        {
+          heading: "2. 使插座与你的IT设备相匹配",
+          content:
+            "在确定插座类型之前，先实际查看将要进入机柜的设备的电源接口——服务器电源、网络交换机和存储阵列并不都配备相同的电源线。IEC C13和C19是数据中心最常见的插座类型（C19用于电流较大的设备，比如部分刀片式机箱和交换机；C13用于大多数服务器和标准IT设备），但有些场地还可能需要地区特定的插座——Schuko、NEMA、英标（BS 1363）或其他类型——具体取决于实际接入的设备以及所安装设备来自哪个国家。确认每台设备自带的电源线与你所选插座兼容，并检查PDU上插座的物理布局和间距是否留有足够空间插入每个插头，不会让相邻插头的插头体互相干涉——这在插座密集排布的垂直式产品上是个真实存在的问题。把供应商的产品名称当作插座类型和额定容量的描述即可，不要当作该产品符合某一地区标准或安全标准的证明；认证需要按下面第6点单独确认。",
+        },
+        {
+          heading: "3. 选择合适的监控与控制功能",
+          content:
+            "机架PDU按功能分为数量不多的几个档位，选对档位取决于你的运维团队实际需要远程做什么，而不是听起来哪个更“高级”。基础型PDU只负责配电，没有显示屏、不联网——适用于没人需要远程查看用电量的非关键负载。计量型PDU在此基础上增加了本地数字显示屏，显示电流和/或电压，适合运维人员偶尔需要到现场读数、但没有可接入的监控网络的场景。监控型（联网）PDU通过SNMP或Modbus上报电流、电压、功率和能耗数据，让设施和IT团队可以远程读取，但不具备开关控制能力。可切换型PDU在监控型的基础上，增加了对每个插座可单独寻址的远程控制，管理员无需到现场即可重启单台设备或按顺序启动整机柜。下表可作为初步对比参考，但最终请以具体型号自己的资料为准——各厂商对这些档位的命名并不完全统一，一家厂商说的“智能型”，在另一家可能就是“监控型”。",
+          table: {
+            columns: ["基础型", "计量型", "监控型", "可切换型"],
+            rows: [
+              { label: "配电到插座", values: ["是", "是", "是", "是"] },
+              { label: "本地电流/电压显示", values: ["否", "是", "是", "是"] },
+              { label: "远程监控（SNMP/Modbus）", values: ["否", "否", "是", "是"] },
+              { label: "远程逐插座开关控制", values: ["否", "否", "否", "是"] },
+              {
+                label: "典型适用场景",
+                values: [
+                  "非关键负载，简单机柜",
+                  "需要偶尔现场查看负载、不想建网络的场地",
+                  "需要远程了解用电情况、无需现场检查",
+                  "需要远程重启或顺序启动的无人值守/远程场地",
+                ],
+              },
+            ],
+          },
+        },
+        {
+          heading: "4. 检查机柜适配性、安装方式与线缆走向",
+          content:
+            "一台电气参数正确但物理上不适配机柜的PDU，照样会带来麻烦。垂直（0U）安装在机柜侧边通道，通常适用于插座数量多，或者机柜较深、水平导轨空间有限的情况；水平（1U–2U）安装适合浅型机柜或插座需求较少的安装场景。无论哪种方式，都要核对设备实际的物理尺寸——而不只是安装形式——是否与机柜内部深度以及你所用的支架或导轨系统匹配，因为安装硬件在不同厂商之间并不总是通用的。下单之前先规划好线缆走向：出线电源线到每台设备的路径，不应阻挡前后气流，不应妨碍日常维护的操作空间，也不应导致机柜前门或后门无法完全关闭。这些问题在图纸阶段很容易发现，但等PDU已经装上去之后再发现，代价就高了。",
+        },
+        {
+          heading: "5. 核查冗余与运维需求",
+          content:
+            "如果进入机柜的设备配有双路电源，应规划A/B两路供电：两台PDU，各自接入一路独立的上级电源，这样单一路供电故障不会导致设备掉电。这里的关键词是“独立”——两台PDU如果接在同一个上级配电盘或同一台UPS输出上，你得到的只是两台PDU，而不是两条独立的供电路径，单靠这样并不能提供真正的冗余。一对A/B PDU能否真正提供冗余供电，取决于给它们各自供电的上级电气设计，这超出了PDU本身的范畴，需要和设计该设施配电系统的人员确认。同样值得明确的是，PDU不是什么：标准机架PDU，包括计量型、监控型和可切换型在内，都不提供电池后备，也不会在不同电源之间自动切换——那是UPS的功能，以及另一种专门为此设计的产品：带自动转换开关（ATS）的PDU。如果你需要远程告警、特定网络协议、针对不同员工的分级权限管理，或者与现有DCIM或监控平台的集成，请在下单前对照PDU自身的功能清单逐项确认，而不是下单之后才发现。",
+        },
+        {
+          heading: "6. 下单前核实相关文件",
+          content:
+            "下单之前，拿到能让你落在纸面上核实这台设备的资料，而不只是听供应商口头说说：完整的规格表（电压、电流、插座数量与类型、输入接口）、能让你核对第4点物理适配情况的尺寸图，以及如果该设备是计量型、监控型或可切换型，还要有完整的接口清单。向供应商索取与你目标市场和具体订购型号对应的认证或测试文件——认证覆盖范围在同一供应商的产品线内，也可能因型号和配置不同而不同，不要想当然地认为外观相似的型号认证也一样适用。如果你需要标准配置之外的内容，要把定制范围、交期、质保条款和包装信息都作为报价的一部分以书面形式确认下来——在供应商针对你这个具体订单书面确认之前，不要把这些内容当作已经敲定的事情；不要依赖一个通用的产品页面来承诺本应针对具体项目确认的条款。",
+        },
+        {
+          heading: "7. 机架PDU询价清单",
+          content:
+            "复制下面的表格，把你知道的内容填进去，还不确定的项目填“TBC”（待确认），而不是去猜一个数字——供应商完全可以根据诚实的TBC来追问正确的问题；而一个猜出来的数字只会把错误带到后面的环节。",
+          table: {
+            columns: ["你的回答/规格"],
+            rows: [
+              { label: "项目所在国家/地区", values: ["TBC"] },
+              { label: "安装场景（数据中心机房、电信机房、室外机柜等）", values: ["TBC"] },
+              { label: "输入电压/相数/频率", values: ["TBC"] },
+              { label: "额定电流", values: ["TBC"] },
+              { label: "输入接口/插头类型", values: ["TBC"] },
+              { label: "插座类型及数量", values: ["TBC"] },
+              { label: "安装方式（垂直0U/水平）", values: ["TBC"] },
+              { label: "尺寸限制（机柜深度、可用空间）", values: ["TBC"] },
+              { label: "所需的监控/开关功能", values: ["TBC"] },
+              { label: "通信协议要求", values: ["TBC"] },
+              { label: "认证要求", values: ["TBC"] },
+              { label: "采购数量", values: ["TBC"] },
+              { label: "目标交付日期", values: ["TBC"] },
+            ],
+          },
+        },
+        {
+          heading: "准备好索取配置方案了吗？",
+          content:
+            "尽量把上面的清单填完——对于还没确定的内容，填“TBC”完全没问题——然后发给我们的工程团队。我们会对照你的供电条件、设备情况和机柜限制条件进行核对，回复一套真正适配这个项目的配置方案，而不是一台插座数量刚好够用的通用产品。",
+        },
+      ],
+      faqs: [
+        {
+          question: "基础型PDU和智能型PDU有什么区别？",
+          answer:
+            "“智能型PDU”通常是一个统称，泛指基础型以外的所有机架PDU——计量型、监控型或可切换型——这些产品在基础配电功能上增加了计量、联网上报或远程插座控制能力。基础型PDU只负责配电，没有显示屏，也不联网。具体档位的划分标准请以某一型号自己的功能清单为准，因为不同供应商之间的命名并不统一。",
+        },
+        {
+          question: "水平安装和垂直安装该怎么选？",
+          answer:
+            "主要看插座数量和机柜深度。垂直（0U）安装的设备装在机柜侧边通道，不占用导轨空间，能容纳更多插座，适合较深的机柜。水平（1U–2U）安装适合浅型机柜，或者插座需求不多的安装场景。无论哪种，都要核对设备的实际物理尺寸是否与你具体的机柜和安装硬件匹配，不要仅凭安装形式就假定一定兼容。",
+        },
+        {
+          question: "询价PDU时应该提供哪些信息？",
+          answer:
+            "至少应提供：输入电压、相数和频率；额定电流和输入接口；插座类型和数量；安装方向以及任何尺寸限制；你需要的监控或开关功能；以及你目标市场所需的认证要求。本文中的询价清单涵盖了完整的信息列表——还没确定的内容标注TBC即可，不要去猜。",
+        },
+        {
+          question: "安装两台PDU是否自动就能实现冗余供电？",
+          answer:
+            "不会。只有当两台PDU各自接入一路独立的上级电源时——比如两路独立的市电接入，或者分别来自UPS/发电机的两条路径——才能实现真正的冗余供电。如果两台PDU接在同一个上级配电盘上，它们共享同一个单点故障，无论机柜里装了多少台PDU，单靠这一点本身都无法提供真正的冗余。",
+        },
+      ],
+    },
+  },
   "what-is-n-plus-1-redundancy": {
     ar: {
       title: "ما هو تكرار N+1؟",
