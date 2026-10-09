@@ -96,7 +96,7 @@ for (const locale of locales) {
 }
 assert.equal(counts.products, 378);
 assert.equal(counts.articles, 78);
-assert.equal(counts.faqAnswers, 921);
+assert.equal(counts.faqAnswers, 939);
 assert.ok(counts.productsWithArticles > 12);
 assert.ok(counts.productsWithProjects > 0);
 console.log(JSON.stringify(counts, null, 2));
