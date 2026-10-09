@@ -16,6 +16,7 @@ import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { RelatedSolutions } from "@/components/product/RelatedSolutions";
 import { InquiryCTA } from "@/components/product/InquiryCTA";
+import { PduSelector } from "@/components/product/PduSelector";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
@@ -205,6 +206,8 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
             <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
           </div>
         </section>
+
+        {product.slug === "pdu" ? <PduSelector locale={locale} /> : null}
 
         <section>
           <SectionHeading eyebrow={t.featuresEyebrow} title={t.featuresTitle} />

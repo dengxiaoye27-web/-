@@ -216,6 +216,9 @@ export interface ProductsUIMessages {
   relatedArticlesTitle: string;
   categoryComingSoon: string;
   categorySelectionCta: string;
+  pduSelectorEyebrow: string;
+  pduSelectorTitle: string;
+  pduSelectorCta: string;
 }
 
 export interface ProjectsUIMessages {

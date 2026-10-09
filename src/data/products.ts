@@ -10,8 +10,9 @@ export const products: Product[] = [
     tagline: "Reliable rack-level power distribution for data center and telecom cabinets.",
     overview:
       "The Wandtung Rack PDU distributes utility or UPS power to IT equipment inside a cabinet. It is manufactured in basic, metered, monitored and switched variants, in single-phase and three-phase configurations, and is available in vertical (0U) and horizontal rack-mount formats for data center, telecom and industrial environments.",
+    metaTitle: "Rack PDU: Basic, Metered, Monitored & Switched | Wandtung",
     metaDescription:
-      "Distributing utility or UPS power to a cabinet? Wandtung's Rack PDU comes in basic, metered, monitored and switched variants, single- or three-phase.",
+      "Configuring a rack PDU? Wandtung's basic, metered, monitored and switched models come single- or three-phase, with C13/C19 outlets for IT cabinets.",
     featured: true,
     keyFeatures: [
       "Single-phase and three-phase configurations",
@@ -79,7 +80,7 @@ export const products: Product[] = [
           "Yes. Wandtung is a factory-direct manufacturer and configures outlet type, quantity, input plug, circuit breaker grouping and cable length to match each project's electrical and rack specification, including OEM/ODM branding.",
       },
     ],
-    relatedProductSlugs: ["intelligent-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu", "uk-pdu", "iec-pdu"],
+    relatedProductSlugs: ["intelligent-pdu", "metered-pdu", "monitored-pdu", "switched-pdu", "three-phase-pdu", "ats-pdu", "high-power-pdu", "network-cabinet", "schuko-pdu", "nema-pdu", "multi-function-pdu", "uk-pdu", "iec-pdu"],
     relatedSolutionSlugs: ["smart-power-distribution", "critical-power"],
   },
   {

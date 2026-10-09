@@ -55,17 +55,15 @@ export function productSchema(product: Product, locale: Locale = defaultLocale) 
         value: s.value,
       }))
     ),
-    // Wandtung sells B2B/build-to-order with no published catalog price and
-    // no fixed stock position, so `offers` intentionally omits both
-    // price/priceCurrency and availability rather than inventing them — this
-    // only satisfies Google's requirement that Product markup declare at
-    // least one of offers/review/aggregateRating.
-    offers: {
-      "@type": "Offer",
-      url: `${siteConfig.url}${localizedPath(locale, `/products/${product.slug}`)}`,
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@id": `${siteConfig.url}/#organization` },
-    },
+    // Wandtung sells B2B/project-quote products (PDU, liquid cooling, and
+    // the rest of the catalog) with no published catalog price, no fixed
+    // stock position and no per-order lead time — `offers` is intentionally
+    // omitted rather than publishing an incomplete Offer (no price) that
+    // Google's Merchant listing / product snippet validation flags as an
+    // error in Search Console. Product structured data is valid without
+    // `offers`; it simply isn't eligible for the merchant/price rich result,
+    // which is correct for a quote-based business that can't commit to a
+    // price without a project spec.
   };
 }
 
