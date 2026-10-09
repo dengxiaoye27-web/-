@@ -31,6 +31,9 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "Related Articles",
     categoryComingSoon: "Detailed product pages for this category are being added. Contact our engineering team for current availability and specifications.",
     categorySelectionCta: "Get Selection Advice →",
+    pduSelectorEyebrow: "Find Your PDU",
+    pduSelectorTitle: "Select a Rack PDU by Type, Phase or Outlet",
+    pduSelectorCta: "Request PDU Configuration",
   },
   ar: {
     hubTitle: "منتجات البنية التحتية لمراكز البيانات",
@@ -61,6 +64,9 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "مقالات ذات صلة",
     categoryComingSoon: "يتم حالياً إضافة صفحات تفصيلية للمنتجات في هذه الفئة. تواصل مع فريقنا الهندسي للاطلاع على التوافر الحالي والمواصفات.",
     categorySelectionCta: "احصل على استشارة الاختيار ←",
+    pduSelectorEyebrow: "اعثر على PDU المناسب",
+    pduSelectorTitle: "اختر PDU الراك حسب النوع أو الطور أو نوع المخرج",
+    pduSelectorCta: "اطلب تكوين PDU",
   },
   fr: {
     hubTitle: "Produits d'infrastructure pour centres de données",
@@ -91,6 +97,9 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "Articles associés",
     categoryComingSoon: "Les pages détaillées des produits de cette catégorie sont en cours d'ajout. Contactez notre équipe d'ingénierie pour connaître la disponibilité actuelle et les spécifications.",
     categorySelectionCta: "Obtenir des conseils de sélection →",
+    pduSelectorEyebrow: "Trouvez votre PDU",
+    pduSelectorTitle: "Choisir un PDU de rack par type, phase ou prise",
+    pduSelectorCta: "Demander une configuration de PDU",
   },
   es: {
     hubTitle: "Productos de infraestructura para centros de datos",
@@ -121,6 +130,9 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "Artículos relacionados",
     categoryComingSoon: "Se están añadiendo páginas detalladas de productos para esta categoría. Contacte a nuestro equipo de ingeniería para conocer la disponibilidad actual y las especificaciones.",
     categorySelectionCta: "Obtener asesoría de selección →",
+    pduSelectorEyebrow: "Encuentre su PDU",
+    pduSelectorTitle: "Elija un PDU de rack por tipo, fase o toma",
+    pduSelectorCta: "Solicitar configuración de PDU",
   },
   ru: {
     hubTitle: "Продукция для инфраструктуры ЦОД",
@@ -151,6 +163,9 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "Похожие статьи",
     categoryComingSoon: "Подробные страницы товаров для этой категории добавляются. Свяжитесь с нашей инженерной командой, чтобы узнать о текущей доступности и характеристиках.",
     categorySelectionCta: "Получить консультацию по выбору →",
+    pduSelectorEyebrow: "Подберите PDU",
+    pduSelectorTitle: "Выберите стоечный PDU по типу, фазе или розетке",
+    pduSelectorCta: "Запросить конфигурацию PDU",
   },
   zh: {
     hubTitle: "数据中心基础设施产品",
@@ -181,5 +196,8 @@ export const productsUiMessages: Record<Locale, ProductsUIMessages> = {
     relatedArticlesTitle: "相关文章",
     categoryComingSoon: "该分类下的详细产品页面正在陆续添加中。请联系我们的工程团队了解当前可提供的产品及规格。",
     categorySelectionCta: "获取选型建议 →",
+    pduSelectorEyebrow: "找到合适的PDU",
+    pduSelectorTitle: "按类型、相数或插座选择机架PDU",
+    pduSelectorCta: "索取PDU配置方案",
   },
 };

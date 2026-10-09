@@ -35,10 +35,15 @@ for (const locale of locales) {
     for (const schema of schemas) {
       if (schema['@type'] === 'Product') {
         counts.products++;
-        // No published catalog price or fixed stock position exists, so
-        // offers (if present) must not fabricate either one.
-        if (schema.offers) {
-          assert.ok(!('price' in schema.offers) && !('priceCurrency' in schema.offers), `${file}: fabricated offer price`);
+        // No published catalog price or fixed stock position exists for
+        // any product — Product markup must not declare an `offers` block
+        // at all (an Offer without price/availability is flagged as an
+        // invalid item in Search Console's product snippet / Merchant
+        // listing checks). Regression guard for PDU and liquid cooling
+        // specifically, which Search Console had flagged.
+        assert.equal(schema.offers, undefined, `${file}: Product schema must not declare offers (no published price)`);
+        if (route === '/products/pdu' || route === '/products/liquid-cooling') {
+          assert.ok(!('offers' in schema), `${file}: ${route} must not have an offers/price/availability claim`);
         }
         assert.equal(schema.url, url, `${file}: product URL`);
         assert.equal(schema['@id'], `${origin}${route}#product`, `${file}: stable product ID`);
@@ -62,6 +67,24 @@ for (const locale of locales) {
           assert.ok(normalize(body).includes(normalize(escapeHtml(question.acceptedAnswer.text))), `${file}: FAQ answer absent from server HTML: ${question.name}`);
         }
         assert.equal((body.match(/<details\b/g) ?? []).length, schema.mainEntity.length, `${file}: FAQ disclosure count`);
+      }
+    }
+    // canonical must self-reference this exact page (never force everything
+    // to the English URL), and hreflang must cover all 6 locales plus
+    // x-default, with no duplicate or missing alternates — on real,
+    // existing pages only. Legal pages are an intentional exception: they
+    // are untranslated, so their canonical/hreflang collapse to the single
+    // English URL instead (see src/app/[locale]/legal/*/page.tsx and the
+    // matching untranslatedRoutes set in src/app/sitemap.ts).
+    if (!route.startsWith('/legal/')) {
+      const canonicalHref = html.match(/<link rel="canonical" href="([^"]*)"/)?.[1];
+      assert.equal(canonicalHref, url, `${file}: canonical must self-reference this page, not another locale`);
+      const hreflangMatches = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]*)" href="([^"]*)"/g)];
+      assert.equal(hreflangMatches.length, locales.length + 1, `${file}: expected hreflang for all locales + x-default, got ${hreflangMatches.length}`);
+      const seenHreflang = new Set();
+      for (const [, hreflang] of hreflangMatches) {
+        assert.ok(!seenHreflang.has(hreflang), `${file}: duplicate hreflang ${hreflang}`);
+        seenHreflang.add(hreflang);
       }
     }
     if (locale !== 'en' && ['', '/products', '/solutions', '/projects', '/resources', '/about', '/contact'].includes(route)) {
