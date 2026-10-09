@@ -384,49 +384,125 @@ export const articles: Article[] = [
   },
   {
     slug: "how-to-choose-a-data-center-pdu",
-    title: "How to Choose a Data Center PDU",
+    title: "How to Choose a Rack PDU for Your Data Center: A Buyer's Checklist",
+    metaTitle: "How to Choose a Rack PDU: Buyer's Checklist | WANDTUNG",
     category: "Power Distribution",
-    excerpt: "A step-by-step checklist for specifying the right rack PDU for your data center project.",
-    publishedAt: "2026-02-18",
-    readingTime: "6 min read",
+    excerpt:
+      "Sourcing a rack PDU? This buyer's checklist covers electrical supply, outlets, monitoring tier, rack fit and redundancy, with a copy-paste RFQ template.",
+    publishedAt: "2026-10-09",
+    readingTime: "8 min read",
     body: [
       {
-        heading: "1. Match Voltage and Current to Your Circuit",
+        heading: "Overview",
         content:
-          "Confirm the rated voltage and current of the upstream circuit (e.g. 200-250V/32A three-phase) and select a PDU rated to match, with margin for load growth.",
+          "Choosing a rack PDU is not just a matter of counting outlets or comparing prices. The unit has to match your electrical supply, the power connectors on the IT equipment it will feed, the space and airflow constraints of the rack it mounts in, and whatever monitoring or control your operations team actually needs. Get any one of those wrong and you end up with a PDU that doesn't fit, can't power everything plugged into it, or sits on the network with no one able to read it. This checklist walks through the parameters to confirm before you send a request for quotation, in the order most buyers need to work through them, and ends with a short RFQ template you can fill in and send straight to a supplier.",
       },
       {
-        heading: "2. Choose Mounting Format",
+        heading: "1. Confirm Your Electrical Supply and Load Requirements",
         content:
-          "Vertical (0U) mounting suits high outlet counts and deep racks; horizontal (1U-2U) mounting suits shallow racks or low outlet-count requirements.",
+          "Start with what's actually available at the rack, not what you'd like to have. Confirm the input voltage, frequency and phase — single-phase or three-phase — coming from the upstream distribution board or UPS output, since a PDU built for one will not simply adapt to the other. Add up the rated power draw of the equipment the PDU will feed, including headroom for planned expansion over the rack's service life, not just what's installed on day one. From there, confirm the PDU's rated current, its input connector, and that the upstream breaker or fuse protecting that circuit is sized to match — an undersized upstream protection device will trip under a load the PDU itself could otherwise carry. None of this should be guessed: have a qualified electrical engineer confirm the design against your site's actual supply and load, and treat any generic \"rule of thumb\" load ratio you see online with caution — real margins depend on your specific equipment mix, ambient conditions and local code, not a one-size-fits-all number.",
       },
       {
-        heading: "3. Decide on Monitoring and Control",
+        heading: "2. Match the Outlets to Your IT Equipment",
         content:
-          "Basic PDUs suit non-critical loads with no reporting need; metered/monitored PDUs suit facilities tracking power usage; switched PDUs suit unattended or remote sites needing remote power-cycling.",
+          "Before specifying outlet type, physically check the power connectors on the equipment going into the rack — server power supplies, network switches and storage arrays don't all ship with the same cord. IEC C13 and C19 are the most common data center outlet types (C19 for higher-current equipment such as blade enclosures and some switches, C13 for most servers and standard IT gear), but a site may also need region-specific sockets — Schuko, NEMA, UK (BS 1363), or others — depending on what's actually plugged in and which country's equipment is installed. Confirm the power cord each device ships with is compatible with the outlet you're specifying, and check that the physical outlet layout and spacing on the PDU leaves room to seat every plug without the bodies of adjacent connectors fouling each other — a real issue on densely populated vertical units. Treat a supplier's product name as a description of outlet type and rated capacity, not as evidence that a unit meets a specific regional or safety standard; confirm certification separately, per point 6 below.",
       },
       {
-        heading: "4. Confirm Outlet Type",
+        heading: "3. Choose the Right Monitoring and Control Functions",
         content:
-          "Match outlet type (IEC C13/C19, country-specific, or custom) to the power cords of the equipment that will be connected.",
+          "Rack PDUs are built in a small number of functional tiers, and the right one depends on what your operations team actually needs to do remotely, not what sounds most advanced. A basic PDU only distributes power, with no display and no network connection — fine for non-critical loads where no one needs to check draw remotely. A metered PDU adds a local digital display of current and/or voltage, useful when staff need an occasional on-site reading but there's no monitoring network to connect to. A monitored (networked) PDU reports current, voltage, power and energy data over SNMP or Modbus so facility and IT teams can read it remotely, without adding any switching capability. A switched PDU includes everything a monitored unit offers, plus individually addressable remote control of each outlet, letting an administrator power-cycle a single device or sequence a rack's startup without a site visit. Use the table below as a starting comparison, then confirm against the specific model's own datasheet — vendor naming for these tiers is not fully standardized, and what one supplier calls \"intelligent\" might be another's \"monitored.\"",
+        table: {
+          columns: ["Basic", "Metered", "Monitored", "Switched"],
+          rows: [
+            { label: "Distributes power to outlets", values: ["Yes", "Yes", "Yes", "Yes"] },
+            { label: "Local current/voltage display", values: ["No", "Yes", "Yes", "Yes"] },
+            { label: "Remote monitoring (SNMP/Modbus)", values: ["No", "No", "Yes", "Yes"] },
+            { label: "Remote, per-outlet switching", values: ["No", "No", "No", "Yes"] },
+            {
+              label: "Typically specified for",
+              values: [
+                "Non-critical loads, simple racks",
+                "Sites needing occasional load checks, no network build-out",
+                "Remote power visibility without on-site checks",
+                "Unattended/remote sites needing reboot or sequenced startup",
+              ],
+            },
+          ],
+        },
       },
       {
-        heading: "5. Plan for Redundancy",
+        heading: "4. Check Rack Fit, Mounting and Cable Routing",
         content:
-          "For dual-corded equipment, plan for A/B PDU feeds from independent power sources to support true redundancy.",
+          "A PDU that's electrically correct but physically wrong for the rack still causes problems. Vertical (0U) mounting, installed in the rack's side channel, is the usual choice when you need a high outlet count or a deep rack with limited horizontal rail space; horizontal (1U–2U) mounting suits shallow racks or installations with a smaller outlet count. Either way, check the unit's actual physical dimensions — not just its mounting format — against the rack's internal depth and the bracket or rail system you're using, since mounting hardware is not always universal across manufacturers. Plan the cable routing before ordering: outgoing power cords need a path to each device that doesn't block front or rear airflow, doesn't interfere with routine maintenance access, and doesn't prevent the rack's front or rear door from closing fully. These are easy problems to catch on a drawing and expensive ones to discover after the PDU is already mounted.",
+      },
+      {
+        heading: "5. Review Redundancy and Operational Requirements",
+        content:
+          "If the equipment going into the rack has dual power supplies, plan an A/B feed: two PDUs, each connected to an independent upstream power source, so a single feed failure doesn't take the equipment down. The important qualifier is independent — two PDUs plugged into the same upstream panel or the same UPS output give you two PDUs, not two power paths, and don't provide real redundancy on their own. Whether an A/B PDU pair actually delivers redundant power depends on the upstream electrical design feeding each one, which is outside the PDU itself and needs to be confirmed with whoever designed the facility's power distribution. It's also worth being precise about what a PDU is not: a standard rack PDU, including metered, monitored and switched variants, does not provide battery backup and does not automatically switch between power sources — that's the job of a UPS and, separately, an automatic transfer switch (ATS) PDU, a distinct product built specifically for that function. If you need remote alerting, specific network protocols, role-based access for different staff, or integration with an existing DCIM or monitoring platform, confirm those requirements against the PDU's own documented feature list before ordering, not after.",
+      },
+      {
+        heading: "6. Verify Documentation Before Ordering",
+        content:
+          "Before placing an order, get the paperwork that lets you verify the unit on paper, not just take a supplier's word for it: a full specification sheet (voltage, current, outlet count and type, input connector), a dimensional drawing so you can confirm the physical fit from point 4, and a complete interface list if the unit is metered, monitored or switched. Ask for the certification or test documentation relevant to your target market and the specific model you're ordering — certification coverage can vary by model and configuration even within one supplier's product line, so don't assume it carries over from a similar-looking unit. If you need anything outside a standard configuration, get the scope of customization, lead time, warranty terms and packaging confirmed in writing as part of the quotation — and treat none of these as settled until your supplier has confirmed them in writing against your specific order; don't rely on a general product page for commitments that need to be project-specific.",
+      },
+      {
+        heading: "7. Rack PDU RFQ Checklist",
+        content:
+          "Copy the table below, fill in what you know, and mark anything you haven't confirmed yet as TBC rather than guessing — a supplier can work with an honest TBC and ask the right follow-up question; a guessed number just moves the error further down the line.",
+        table: {
+          columns: ["Your Answer / Spec"],
+          rows: [
+            { label: "Project country / region", values: ["TBC"] },
+            { label: "Installation scenario (data hall, telecom room, outdoor cabinet, etc.)", values: ["TBC"] },
+            { label: "Input voltage / phase / frequency", values: ["TBC"] },
+            { label: "Rated current", values: ["TBC"] },
+            { label: "Input connector / plug type", values: ["TBC"] },
+            { label: "Outlet type and quantity", values: ["TBC"] },
+            { label: "Mounting orientation (vertical 0U / horizontal)", values: ["TBC"] },
+            { label: "Dimensional constraints (rack depth, available space)", values: ["TBC"] },
+            { label: "Monitoring / switching functions required", values: ["TBC"] },
+            { label: "Communication protocol requirements", values: ["TBC"] },
+            { label: "Certification requirements", values: ["TBC"] },
+            { label: "Order quantity", values: ["TBC"] },
+            { label: "Target delivery date", values: ["TBC"] },
+          ],
+        },
+      },
+      {
+        heading: "Ready to Request a Configuration?",
+        content:
+          "Fill in as much of the checklist above as you can — TBC is a fine answer for anything you haven't confirmed yet — and send it to our engineering team. We'll check it against your electrical supply, equipment and rack constraints and come back with a configuration that actually fits the project, rather than a generic unit that happens to have enough outlets.",
       },
     ],
     faqs: [
       {
-        question: "What is the difference between a basic PDU and a metered or monitored PDU?",
+        question: "What is the difference between a basic PDU and an intelligent PDU?",
         answer:
-          "A basic PDU only distributes power. A metered PDU adds a local current/voltage display. A monitored PDU adds remote, network-based monitoring. A switched PDU adds remote outlet control on top of monitoring.",
+          "\"Intelligent PDU\" is generally used as an umbrella term for any rack PDU beyond basic — metered, monitored or switched — that adds measurement, network reporting or remote outlet control. A basic PDU only distributes power with no display and no network connection. Check a specific model's documented feature list, since the dividing line between tiers varies by supplier.",
+      },
+      {
+        question: "How do I choose between horizontal and vertical mounting?",
+        answer:
+          "It comes down to outlet count and rack depth. Vertical (0U) units, mounted in the rack's side channel, handle higher outlet counts without using rail space and suit deeper racks. Horizontal (1U–2U) units suit shallow racks or installations that only need a modest outlet count. Always confirm the unit's physical dimensions against your specific rack and mounting hardware rather than assuming compatibility from the mounting format alone.",
+      },
+      {
+        question: "What information should I provide when requesting a PDU quotation?",
+        answer:
+          "At minimum: input voltage, phase and frequency; rated current and input connector; outlet type and quantity; mounting orientation and any dimensional constraints; the monitoring or switching functions you need; and any certification requirements for your target market. The RFQ checklist in this article covers the full list — mark anything unconfirmed as TBC rather than guessing.",
+      },
+      {
+        question: "Does installing two PDUs automatically provide redundant power?",
+        answer:
+          "No. Two PDUs only provide redundant power if each one is fed from an independent upstream source — two separate utility feeds, or separate UPS/generator paths, for example. Two PDUs plugged into the same upstream panel share a single point of failure and don't provide true redundancy on their own, regardless of how many PDUs are in the rack.",
       },
     ],
     ctaLinks: [
       { label: "Browse Rack PDU Options", href: "/products/pdu" },
       { label: "See the Intelligent PDU", href: "/products/intelligent-pdu" },
+      { label: "Explore Smart Power Distribution Solutions", href: "/solutions/smart-power-distribution" },
+      { label: "Request a Quote", href: "/contact" },
     ],
+    relatedArticleSlugs: ["what-is-n-plus-1-redundancy", "metered-vs-switched-pdu", "what-is-intelligent-pdu"],
   },
   {
     slug: "what-is-n-plus-1-redundancy",
