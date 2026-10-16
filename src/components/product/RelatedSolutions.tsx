@@ -1,8 +1,10 @@
+import { Locale } from "@/i18n/config";
+import { getSolutionContent } from "@/i18n/content/solutions";
 import { Card } from "@/components/ui/Card";
 import { getSolution } from "@/data/solutions";
 
-export function RelatedSolutions({ slugs }: { slugs: string[] }) {
-  const items = slugs.map((s) => getSolution(s)).filter(Boolean);
+export function RelatedSolutions({ slugs, locale }: { slugs: string[]; locale: Locale }) {
+  const items = slugs.map((s) => getSolution(s)).filter((item): item is NonNullable<typeof item> => Boolean(item)).map((item) => ({ ...item, ...getSolutionContent(item.slug, locale, item) }));
   if (items.length === 0) return null;
 
   return (

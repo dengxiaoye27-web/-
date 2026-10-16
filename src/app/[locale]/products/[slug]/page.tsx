@@ -1,3 +1,6 @@
+import { projects } from "@/data/projects";
+import { RelatedProjects } from "@/components/product/RelatedProjects";
+import { getArticleSlugsForProduct } from "@/data/articles";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -7,17 +10,22 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpecTable } from "@/components/ui/SpecTable";
 import { Accordion } from "@/components/ui/Accordion";
 import { FeatureGrid } from "@/components/product/FeatureGrid";
+import { CategoryIntroCard } from "@/components/product/CategoryIntroCard";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
+import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { RelatedSolutions } from "@/components/product/RelatedSolutions";
 import { InquiryCTA } from "@/components/product/InquiryCTA";
+import { PduSelector } from "@/components/product/PduSelector";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getProduct, getProductsByCategory, products } from "@/data/products";
 import { getCategory, productCategories } from "@/data/categories";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { getProductContent } from "@/i18n/content/products";
+import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
 export function generateStaticParams() {
   return [
@@ -36,18 +44,27 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (product) {
     const content = getProductContent(slug, locale, product);
+    const description =
+      locale === defaultLocale && product.metaDescription
+        ? product.metaDescription
+        : content.overview;
+    const title =
+      locale === defaultLocale && product.metaTitle
+        ? { absolute: product.metaTitle }
+        : content.name;
     return {
-      title: content.name,
-      description: content.overview,
-      alternates: { canonical: `/products/${product.slug}` },
+      title,
+      description,
+      alternates: buildAlternates(locale, `/products/${product.slug}`),
     };
   }
   const category = getCategory(slug);
   if (category) {
+    const categoryContent = getCategoryContent(slug, locale, category);
     return {
-      title: category.name,
-      description: category.shortDescription,
-      alternates: { canonical: `/products/${category.slug}` },
+      title: categoryContent.name,
+      description: categoryContent.shortDescription,
+      alternates: buildAlternates(locale, `/products/${category.slug}`),
     };
   }
   return {};
@@ -71,49 +88,53 @@ export default async function ProductOrCategoryPage({
 
 function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
   const category = getCategory(slug)!;
+  const categoryContent = getCategoryContent(slug, locale, category);
   const items = getProductsByCategory(slug);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [
+    { label: common.nav.home, href: "/" },
+    { label: common.nav.products, href: "/products" },
+    { label: categoryContent.name },
+  ];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(
+          breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${category.slug}` }))
+        , locale)}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs
-            items={[
-              { label: common.nav.home, href: "/" },
-              { label: common.nav.products, href: "/products" },
-              { label: category.name },
-            ]}
-          />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-            {category.name}
+            {categoryContent.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70 text-lg">{category.heroTagline}</p>
-          <p className="mt-4 max-w-2xl text-white/60">{category.shortDescription}</p>
+          <p className="mt-4 max-w-2xl text-white/70 text-lg">{categoryContent.heroTagline}</p>
+          <p className="mt-4 max-w-2xl text-white/60">{categoryContent.shortDescription}</p>
         </div>
       </div>
 
       <div className="container-page py-20">
         {items.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {items.map((p, index) => {
+            <CategoryIntroCard
+              name={categoryContent.name}
+              tagline={categoryContent.shortDescription}
+              sellingPoints={categoryContent.sellingPoints}
+              ctaLabel={t.categorySelectionCta}
+            />
+            {items.map((p) => {
               const content = getProductContent(p.slug, locale, p);
-              const isFirst = index === 0;
               return (
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className={`group flex h-full flex-col overflow-hidden rounded-2xl border transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-ink-900/10 ${
-                    isFirst ? "border-navy-700 bg-navy-950" : "border-line-200 bg-white hover:border-accent-500/60"
-                  }`}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-200 bg-white transition-all hover:-translate-y-1 hover:border-accent-500/60 hover:shadow-lg hover:shadow-ink-900/10"
                 >
                   {p.images?.[0] ? (
-                    <div
-                      className={`relative aspect-video flex items-center justify-center overflow-hidden ${
-                        isFirst ? "bg-navy-900" : "bg-paper-50"
-                      }`}
-                    >
+                    <div className="relative aspect-square flex items-center justify-center overflow-hidden bg-paper-50">
                       <Image
                         src={p.images[0]}
                         alt={content.name}
@@ -124,11 +145,9 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
                     </div>
                   ) : null}
                   <div className="p-6 md:p-8">
-                    <p className={`eyebrow mb-2 ${isFirst ? "text-accent-400" : ""}`}>{content.shortName}</p>
-                    <h2 className={`text-lg font-semibold ${isFirst ? "text-white" : "text-ink-900"}`}>{content.name}</h2>
-                    <p className={`mt-2 text-sm leading-relaxed ${isFirst ? "text-white/70" : "text-ink-600"}`}>
-                      {content.tagline}
-                    </p>
+                    <p className="eyebrow mb-2">{content.shortName}</p>
+                    <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{content.tagline}</p>
                   </div>
                 </Link>
               );
@@ -145,14 +164,16 @@ function CategoryListing({ slug, locale }: { slug: string; locale: Locale }) {
 function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
   const product = getProduct(slug)!;
   const category = getCategory(product.category);
+  const categoryContent = category ? getCategoryContent(category.slug, locale, category) : null;
   const content = getProductContent(slug, locale, product);
+  const relatedArticleSlugs = getArticleSlugsForProduct(slug, product.relatedArticleSlugs);
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
 
   const breadcrumbItems = [
     { label: common.nav.home, href: "/" },
     { label: common.nav.products, href: "/products" },
-    ...(category ? [{ label: category.name, href: `/products/${category.slug}` }] : []),
+    ...(category && categoryContent ? [{ label: categoryContent.name, href: `/products/${category.slug}` }] : []),
     { label: content.name },
   ];
 
@@ -160,16 +181,16 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
     <div className="bg-white">
       <JsonLd
         data={[
-          productSchema({ ...product, ...content }),
+          productSchema({ ...product, ...content }, locale),
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${product.slug}` }))),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/products/${product.slug}` })), locale),
         ]}
       />
 
       <div className="hero-band">
         <div className="container-page">
           <Breadcrumbs items={breadcrumbItems} />
-          <p className="eyebrow mt-6 mb-3">{category?.name}</p>
+          <p className="eyebrow mt-6 mb-3">{categoryContent?.name}</p>
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {content.name}
           </h1>
@@ -185,6 +206,8 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
             <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed text-lg">{content.overview}</p>
           </div>
         </section>
+
+        {product.slug === "pdu" ? <PduSelector locale={locale} /> : null}
 
         <section>
           <SectionHeading eyebrow={t.featuresEyebrow} title={t.featuresTitle} />
@@ -249,14 +272,14 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
         </section>
 
         <section>
-          <InquiryCTA productName={content.name} productSlug={product.slug} />
+          <InquiryCTA productName={content.name} productSlug={product.slug} locale={locale} />
         </section>
 
         {product.relatedSolutionSlugs.length > 0 ? (
           <section>
             <SectionHeading eyebrow={t.relatedSolutionsEyebrow} title={t.relatedSolutionsTitle} />
             <div className="mt-8">
-              <RelatedSolutions slugs={product.relatedSolutionSlugs} />
+              <RelatedSolutions slugs={product.relatedSolutionSlugs} locale={locale} />
             </div>
           </section>
         ) : null}
@@ -265,7 +288,25 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
           <section>
             <SectionHeading eyebrow={t.relatedProductsEyebrow} title={t.relatedProductsTitle} />
             <div className="mt-8">
-              <RelatedProducts slugs={product.relatedProductSlugs} />
+              <RelatedProducts slugs={product.relatedProductSlugs} locale={locale} />
+            </div>
+          </section>
+        ) : null}
+
+        {projects.some((project) => project.productsUsed.includes(product.name)) ? (
+          <section>
+            <SectionHeading title={common.nav.projects} />
+            <div className="mt-8">
+              <RelatedProjects productName={product.name} locale={locale} />
+            </div>
+          </section>
+        ) : null}
+
+        {relatedArticleSlugs.length ? (
+          <section>
+            <SectionHeading eyebrow={t.relatedArticlesEyebrow} title={t.relatedArticlesTitle} />
+            <div className="mt-8">
+              <RelatedArticles slugs={relatedArticleSlugs} locale={locale} />
             </div>
           </section>
         ) : null}

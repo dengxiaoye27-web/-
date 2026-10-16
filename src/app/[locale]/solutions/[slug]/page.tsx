@@ -4,12 +4,14 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Accordion } from "@/components/ui/Accordion";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
+import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getSolution, solutions } from "@/data/solutions";
 import { getSolutionContent } from "@/i18n/content/solutions";
 import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -26,10 +28,14 @@ export async function generateMetadata({
   if (!solution) return {};
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const content = getSolutionContent(slug, locale, solution);
+  const title =
+    locale === defaultLocale && solution.metaTitle
+      ? { absolute: solution.metaTitle }
+      : content.name;
   return {
-    title: content.name,
+    title,
     description: content.tagline,
-    alternates: { canonical: `/solutions/${solution.slug}` },
+    alternates: buildAlternates(locale, `/solutions/${solution.slug}`),
   };
 }
 
@@ -58,7 +64,7 @@ export default async function SolutionPage({
       <JsonLd
         data={[
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/solutions/${solution.slug}` }))),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/solutions/${solution.slug}` })), locale),
         ]}
       />
 
@@ -113,7 +119,7 @@ export default async function SolutionPage({
         <section>
           <SectionHeading eyebrow={ui.detail.configEyebrow} title={ui.detail.configTitle} />
           <div className="mt-8">
-            <RelatedProducts slugs={solution.relatedProductSlugs} />
+            <RelatedProducts slugs={solution.relatedProductSlugs} locale={locale} />
           </div>
         </section>
 
@@ -159,6 +165,15 @@ export default async function SolutionPage({
             <Accordion items={content.faqs} />
           </div>
         </section>
+
+        {solution.relatedArticleSlugs?.length ? (
+          <section>
+            <SectionHeading eyebrow={ui.detail.relatedArticlesEyebrow} title={ui.detail.relatedArticlesTitle} />
+            <div className="mt-8">
+              <RelatedArticles slugs={solution.relatedArticleSlugs} locale={locale} />
+            </div>
+          </section>
+        ) : null}
 
         <section className="rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center">
           <h3 className="text-2xl font-semibold">{ui.detail.ctaTitle}</h3>

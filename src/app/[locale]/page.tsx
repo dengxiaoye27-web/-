@@ -1,3 +1,4 @@
+import { getProductContent } from "@/i18n/content/products";
 import type { Metadata } from "next";
 import Image from "next/image";
 import fs from "node:fs";
@@ -29,13 +30,30 @@ import { articles } from "@/data/articles";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
 
-export const metadata: Metadata = {
-  title: "Data Center Infrastructure & Critical Power Solutions",
-  description:
-    "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: { absolute: {
+      en: "Data Center Infrastructure & Power Solutions | Wandtung",
+      ar: "البنية التحتية لمراكز البيانات وحلول الطاقة | Wandtung",
+      fr: "Infrastructure de centres de données et solutions électriques | Wandtung",
+      es: "Infraestructura de centros de datos y soluciones eléctricas | Wandtung",
+      ru: "Инфраструктура ЦОД и системы электропитания | Wandtung",
+      zh: "数据中心基础设施与电力解决方案 | Wandtung",
+    }[locale] },
+    description: locale !== defaultLocale ? getHomeMessages(locale).trustedPartner.description :
+      "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
+    alternates: buildAlternates(locale, ""),
+  };
+}
 
 const coreSolutionHrefs = [
   "/solutions/critical-power",
@@ -46,6 +64,28 @@ const coreSolutionHrefs = [
   "/solutions/liquid-cooling",
   "/solutions/energy-storage",
 ];
+
+// Matches coreSolutionHrefs order.
+const coreSolutionSlugs = [
+  "critical-power",
+  "power-distribution",
+  "network-cabinets",
+  "micro-modular",
+  "containerized",
+  "liquid-cooling",
+  "energy-storage",
+];
+
+// Images with baked-in title text/callouts (infographic-style uploads) must
+// never be cropped — object-contain guarantees nothing gets cut off. Plain
+// product photos use object-cover so they fill the card edge-to-edge.
+const coreSolutionContainSlugs = new Set(["critical-power", "power-distribution", "network-cabinets", "micro-modular"]);
+
+function getCoreSolutionImage(slug: string) {
+  const relPath = `/images/core-solutions/${slug}.jpg`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
 
 // Matches t.architecture.nodes order: Grid Power, UPS, PDU, Rack, Cooling,
 // Monitoring, Fire Protection, Liquid Cooling, Energy Storage
@@ -72,6 +112,18 @@ function getIndustryImage(slug: string) {
   return fs.existsSync(absPath) ? relPath : null;
 }
 
+function getFactoryImage() {
+  const relPath = `/images/factory/01-exterior.png`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
+
+function getGlobalMarketImage() {
+  const relPath = `/images/global-market/banner.png`;
+  const absPath = path.join(process.cwd(), "public", relPath);
+  return fs.existsSync(absPath) ? relPath : null;
+}
+
 const exhibitionImages = [
   "/images/exhibitions/03-booth-presentation.png",
   "/images/exhibitions/08-liquid-cooling-booth.png",
@@ -93,8 +145,10 @@ export default async function HomePage({
   const t = getHomeMessages(locale);
   const common = getCommonMessages(locale);
 
-  const featuredProducts = getFeaturedProducts();
-  const latestArticles = articles.slice(0, 3);
+  const featuredProducts = getFeaturedProducts().map((product) => ({ ...product, ...getProductContent(product.slug, locale, product) }));
+  const latestArticles = [...articles]
+    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+    .slice(0, 3);
 
   return (
     <>
@@ -113,10 +167,20 @@ export default async function HomePage({
                 description={t.trustedPartner.description}
               />
               <div className="relative aspect-[4/3] rounded-2xl bg-paper-50 shadow-lg shadow-ink-900/10 overflow-hidden flex items-center justify-center">
-                <div className="flex flex-col items-center gap-2 text-ink-600/50">
-                  <IconFactory className="h-12 w-12" />
-                  <span className="text-sm">{t.trustedPartner.factoryPhotoPlaceholder}</span>
-                </div>
+                {getFactoryImage() ? (
+                  <Image
+                    src={getFactoryImage()!}
+                    alt={t.trustedPartner.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center gap-2 text-ink-600/50">
+                    <IconFactory className="h-12 w-12" />
+                    <span className="text-sm">{t.trustedPartner.factoryPhotoPlaceholder}</span>
+                  </div>
+                )}
               </div>
             </div>
           </Reveal>
@@ -146,10 +210,22 @@ export default async function HomePage({
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {t.coreSolutions.items.map((item, i) => {
               const Icon = coreSolutionIcons[i] ?? coreSolutionIcons[0];
+              const slug = coreSolutionSlugs[i];
+              const image = getCoreSolutionImage(slug);
               return (
                 <Card key={item.title} href={coreSolutionHrefs[i]}>
                   <div className="relative mb-5 -mx-6 -mt-6 md:-mx-8 md:-mt-8 aspect-video rounded-t-2xl bg-paper-50 overflow-hidden flex items-center justify-center">
-                    <Icon className="h-10 w-10 text-ink-600/20" />
+                    {image ? (
+                      <Image
+                        src={image}
+                        alt={item.title}
+                        fill
+                        className={coreSolutionContainSlugs.has(slug) ? "object-contain" : "object-cover"}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      />
+                    ) : (
+                      <Icon className="h-10 w-10 text-ink-600/20" />
+                    )}
                   </div>
                   <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-500 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                     <Icon className="h-6 w-6" />
@@ -176,7 +252,7 @@ export default async function HomePage({
             {featuredProducts.map((product) => (
               <Card key={product.slug} href={`/products/${product.slug}`}>
                 {product.images?.[0] ? (
-                  <div className="relative mb-4 aspect-video -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
+                  <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
                     <Image
                       src={product.images[0]}
                       alt={product.name}
@@ -295,6 +371,11 @@ export default async function HomePage({
               description={t.globalProjects.description}
             />
           </Reveal>
+          {getGlobalMarketImage() ? (
+            <div className="relative mt-10 aspect-[2/1] md:aspect-[21/9] w-full overflow-hidden rounded-2xl">
+              <Image src={getGlobalMarketImage()!} alt={t.globalProjects.title} fill className="object-cover" sizes="100vw" />
+            </div>
+          ) : null}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
             {t.globalProjects.markets.map((market) => (
               <div

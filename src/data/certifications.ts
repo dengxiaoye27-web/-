@@ -1,5 +1,3 @@
-import { Certification } from "./types";
-
 // Real certificates on file for Wandtung. Each entry is backed by a scanned
 // certificate/test report in /public/certifications — do not add entries
 // here without a corresponding document, and keep `products` scoped to
@@ -106,12 +104,4 @@ export const certificateRecords: CertificateRecord[] = [
     date: "2016-04-04",
     image: "/certifications/ul-cable-trays.jpg",
   },
-];
-
-// Summary badges shown on the homepage / About page certification strip.
-export const certifications: Certification[] = [
-  { name: "CE", description: "LVD 2014/35/EU compliance — network cabinets and cable tray systems." },
-  { name: "UL", description: "UL-listed cable trays and optical fiber raceway cable routing assemblies." },
-  { name: "TÜV SÜD", description: "Attestation of conformity for cable tray and cable ladder systems." },
-  { name: "IEC / EN Standards", description: "Tested to IEC 62368-1 and EN 61537 for applicable product lines." },
 ];

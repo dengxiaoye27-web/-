@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import { productCategories } from "@/data/categories";
 import { ContactMessages } from "@/i18n/messages";
+import { useLocale } from "@/i18n/LocaleContext";
+import { getCategoryContent } from "@/i18n/content/categories";
 
 type InquiryType = "product" | "project";
 
@@ -21,6 +23,7 @@ export function RFQForm({
   initialProductName?: string;
   initialRequestType?: "datasheet";
 }) {
+  const locale = useLocale();
   const [inquiryType, setInquiryType] = useState<InquiryType>("product");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const initialRequirements = initialProductName
@@ -118,7 +121,7 @@ export function RFQForm({
             </option>
             {productCategories.map((c) => (
               <option key={c.slug} value={c.name}>
-                {c.name}
+                {getCategoryContent(c.slug, locale, c).name}
               </option>
             ))}
           </select>

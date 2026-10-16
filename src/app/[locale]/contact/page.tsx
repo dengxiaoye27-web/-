@@ -2,18 +2,30 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RFQForm } from "@/components/forms/RFQForm";
+import Link from "@/components/ui/LocaleLink";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { getProduct } from "@/data/products";
 import { getCategory } from "@/data/categories";
+import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Contact & Request a Quote",
-  description:
-    "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage.",
-  alternates: { canonical: "/contact" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: locale === defaultLocale ? "Contact & Request a Quote" : getContactMessages(locale).hero.title,
+    description: locale === defaultLocale ? "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage." : getContactMessages(locale).hero.subtitle,
+    alternates: buildAlternates(locale, "/contact"),
+  };
+}
 
 export default async function ContactPage({
   params,
@@ -27,15 +39,19 @@ export default async function ContactPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getContactMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.contact }];
 
   const product = productSlug ? getProduct(productSlug) : undefined;
   const category = product ? getCategory(product.category) : undefined;
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/contact" })), locale)}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.contact }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hero.title}
           </h1>
@@ -75,6 +91,15 @@ export default async function ContactPage({
             <span className="absolute inset-x-0 top-0 h-0.5 bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-600">{t.sidebar.location}</h3>
             <p className="mt-2 text-ink-900">{siteConfig.address}</p>
+          </div>
+
+          <div className="space-y-2 pt-2 text-sm">
+            <Link href="/projects" className="block text-ink-600 hover:text-accent-500 transition-colors">
+              {t.exploreLinks.caseStudies} →
+            </Link>
+            <Link href="/products" className="block text-ink-600 hover:text-accent-500 transition-colors">
+              {t.exploreLinks.products} →
+            </Link>
           </div>
         </div>
       </div>

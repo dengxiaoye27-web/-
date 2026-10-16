@@ -6,6 +6,8 @@ import { productCategories } from "@/data/categories";
 import { solutions } from "@/data/solutions";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getCommonMessages } from "@/i18n/messages";
+import { getCategoryContent } from "@/i18n/content/categories";
+import { getSolutionContent } from "@/i18n/content/solutions";
 
 export function SiteFooter() {
   const locale = useLocale();
@@ -36,10 +38,10 @@ export function SiteFooter() {
             {t.footer.productsHeading}
           </p>
           <ul className="space-y-2 text-sm">
-            {productCategories.slice(0, 6).map((c) => (
+            {productCategories.map((c) => (
               <li key={c.slug}>
                 <Link href={`/products/${c.slug}`} className="hover:text-white">
-                  {c.name}
+                  {getCategoryContent(c.slug, locale, c).name}
                 </Link>
               </li>
             ))}
@@ -51,10 +53,10 @@ export function SiteFooter() {
             {t.footer.solutionsHeading}
           </p>
           <ul className="space-y-2 text-sm">
-            {solutions.slice(0, 6).map((s) => (
+            {solutions.map((s) => (
               <li key={s.slug}>
                 <Link href={`/solutions/${s.slug}`} className="hover:text-white">
-                  {s.name}
+                  {getSolutionContent(s.slug, locale, s).name}
                 </Link>
               </li>
             ))}
@@ -71,6 +73,7 @@ export function SiteFooter() {
             <li><Link href="/resources" className="hover:text-white">{t.nav.resources}</Link></li>
             <li><Link href="/contact" className="hover:text-white">{t.nav.contact}</Link></li>
             <li><Link href="/legal/privacy-policy" className="hover:text-white">{t.footer.privacyPolicy}</Link></li>
+            <li><Link href="/legal/terms-of-use" className="hover:text-white">{t.footer.termsOfUse}</Link></li>
           </ul>
         </div>
       </div>

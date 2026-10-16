@@ -5,13 +5,17 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
 import { Link as LocaleLink } from "@/components/ui/LocaleLink";
+import { ArchitectureDiagram } from "@/components/sections/ArchitectureDiagram";
+import { ComparisonTable } from "@/components/ui/ComparisonTable";
+import { RelatedArticles } from "@/components/product/RelatedArticles";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticle, articles } from "@/data/articles";
-import { articleSchema, breadcrumbSchema, faqSchema, organizationSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { localizedPath, buildAlternates } from "@/lib/alternates";
 
 // Body paragraphs are plain data strings, but support a minimal
 // `[label](/href)` markdown-link syntax so articles can carry inline
@@ -71,9 +75,9 @@ export async function generateMetadata({
   if (!article) return {};
   const content = getArticleContent(slug, locale, article);
   return {
-    title: content.title,
+    title: locale === defaultLocale && article.metaTitle ? { absolute: article.metaTitle } : content.title,
     description: content.excerpt,
-    alternates: { canonical: `/resources/blog/${article.slug}` },
+    alternates: buildAlternates(locale, `/resources/blog/${article.slug}`),
   };
 }
 
@@ -96,7 +100,7 @@ export default async function ArticlePage({
     { label: common.nav.resources, href: "/resources" },
     { label: content.title },
   ];
-  const url = `${siteConfig.url}/resources/blog/${article.slug}`;
+  const url = `${siteConfig.url}${localizedPath(locale, `/resources/blog/${article.slug}`)}`;
 
   return (
     <div className="bg-white">
@@ -109,8 +113,7 @@ export default async function ArticlePage({
             url,
           }),
           faqSchema(content.faqs),
-          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` }))),
-          organizationSchema(),
+          breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? `/resources/blog/${article.slug}` })), locale),
         ]}
       />
 
@@ -139,14 +142,42 @@ export default async function ArticlePage({
                   <p className="mt-1 text-xs text-ink-600">{section.image.caption}</p>
                 </div>
               ) : null}
+              {section.diagram ? (
+                <div className="mt-6">
+                  <ArchitectureDiagram nodes={section.diagram.nodes} caption={section.diagram.caption} />
+                </div>
+              ) : null}
+              {section.table ? (
+                <div className="mt-6">
+                  <ComparisonTable columns={section.table.columns} rows={section.table.rows} />
+                </div>
+              ) : null}
             </div>
           ))}
         </article>
+
+        {article.ctaLinks?.length ? (
+          <div className="max-w-3xl mt-10 flex flex-wrap gap-3">
+            {article.ctaLinks.map((link, i) => (
+              <Button key={link.href} href={link.href} variant={i === 0 ? "solid" : "outline"}>
+                {link.label}
+              </Button>
+            ))}
+          </div>
+        ) : null}
 
         <div className="max-w-3xl mt-16">
           <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.faqTitle}</h2>
           <Accordion items={content.faqs} />
         </div>
+
+        {article.relatedArticleSlugs?.length ? (
+          <div className="mt-16">
+            <p className="eyebrow mb-2">{t.relatedArticlesEyebrow}</p>
+            <h2 className="text-2xl font-semibold text-ink-900 mb-6">{t.relatedArticlesTitle}</h2>
+            <RelatedArticles slugs={article.relatedArticleSlugs} locale={locale} />
+          </div>
+        ) : null}
 
         <div className="max-w-3xl mt-16 rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 text-center">
           <h3 className="text-xl font-semibold">{t.ctaTitle}</h3>

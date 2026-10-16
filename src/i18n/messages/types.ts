@@ -116,6 +116,7 @@ export interface AboutMessages {
     eyebrow: string;
     title: string;
     paragraph: string;
+    gallery: string[];
   };
   qualityControl: {
     eyebrow: string;
@@ -138,6 +139,11 @@ export interface AboutMessages {
     eyebrow: string;
     title: string;
     paragraph: string;
+  };
+  exploreLinks: {
+    caseStudies: string;
+    solutions: string;
+    products: string;
   };
   cta: {
     title: string;
@@ -173,6 +179,8 @@ export interface SolutionsUIMessages {
     appsTitle: string;
     faqEyebrow: string;
     faqTitle: string;
+    relatedArticlesEyebrow: string;
+    relatedArticlesTitle: string;
     ctaTitle: string;
     ctaDescription: string;
     ctaButton: string;
@@ -204,7 +212,13 @@ export interface ProductsUIMessages {
   relatedSolutionsTitle: string;
   relatedProductsEyebrow: string;
   relatedProductsTitle: string;
+  relatedArticlesEyebrow: string;
+  relatedArticlesTitle: string;
   categoryComingSoon: string;
+  categorySelectionCta: string;
+  pduSelectorEyebrow: string;
+  pduSelectorTitle: string;
+  pduSelectorCta: string;
 }
 
 export interface ProjectsUIMessages {
@@ -236,6 +250,8 @@ export interface ResourcesUIMessages {
   hubTitle: string;
   hubSubtitle: string;
   faqTitle: string;
+  relatedArticlesEyebrow: string;
+  relatedArticlesTitle: string;
   ctaTitle: string;
   ctaButton: string;
 }
@@ -285,5 +301,9 @@ export interface ContactMessages {
     whatsapp: string;
     whatsappCta: string;
     location: string;
+  };
+  exploreLinks: {
+    caseStudies: string;
+    products: string;
   };
 }

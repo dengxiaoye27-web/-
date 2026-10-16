@@ -4,17 +4,29 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { categoryIcons } from "@/components/ui/SectionIcons";
 import { ProductFilterGrid } from "@/components/product/ProductFilterGrid";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { productCategories } from "@/data/categories";
 import { products } from "@/data/products";
+import { getCategoryContent } from "@/i18n/content/categories";
 import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Data Center Infrastructure Products",
-  description:
-    "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage.",
-  alternates: { canonical: "/products" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: locale === defaultLocale ? "Data Center Infrastructure Products" : getProductsUiMessages(locale).hubTitle,
+    description: locale === defaultLocale ? "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage." : getProductsUiMessages(locale).hubSubtitle,
+    alternates: buildAlternates(locale, "/products"),
+  };
+}
 
 export default async function ProductsPage({
   params,
@@ -25,12 +37,16 @@ export default async function ProductsPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getProductsUiMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.products }];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/products" })), locale)}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.products }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hubTitle}
           </h1>
@@ -43,6 +59,7 @@ export default async function ProductsPage({
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {productCategories.map((c) => {
             const Icon = categoryIcons[c.slug];
+            const content = getCategoryContent(c.slug, locale, c);
             return (
               <Link
                 key={c.slug}
@@ -54,8 +71,8 @@ export default async function ProductsPage({
                     <Icon className="h-5.5 w-5.5" />
                   </div>
                 ) : null}
-                <h2 className="text-lg font-semibold text-ink-900">{c.name}</h2>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{c.shortDescription}</p>
+                <h2 className="text-lg font-semibold text-ink-900">{content.name}</h2>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{content.shortDescription}</p>
               </Link>
             );
           })}

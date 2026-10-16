@@ -1,19 +1,43 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Button } from "@/components/ui/Button";
 import { CertificationCards } from "@/components/sections/CertificationCards";
+import Link from "@/components/ui/LocaleLink";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery.",
-  alternates: { canonical: "/about" },
-};
+const factoryPhotos = [
+  "/images/factory/01-exterior.png",
+  "/images/factory/02-industrial-outdoor.png",
+  "/images/factory/03-pdu-production-line.jpg",
+  "/images/factory/04-coating-production-line.jpg",
+  "/images/factory/05-cable-tray-production-line.jpg",
+  "/images/factory/06-cabinet-assembly-workshop.jpg",
+  "/images/factory/07-cabinet-assembly-02.jpg",
+  "/images/factory/08-cabinet-assembly-03.jpg",
+];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: locale === defaultLocale ? "About Us" : getAboutMessages(locale).hero.title,
+    description: locale === defaultLocale ? "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery." : getAboutMessages(locale).hero.subtitle,
+    alternates: buildAlternates(locale, "/about"),
+  };
+}
 
 export default async function AboutPage({
   params,
@@ -24,12 +48,16 @@ export default async function AboutPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getAboutMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.about }];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/about" })), locale)}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.about }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hero.title}
           </h1>
@@ -56,6 +84,19 @@ export default async function AboutPage({
         <section id="factory">
           <SectionHeading eyebrow={t.factory.eyebrow} title={t.factory.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.factory.paragraph}</p>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {factoryPhotos.map((src, i) => (
+              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-paper-50">
+                <Image
+                  src={src}
+                  alt={t.factory.gallery[i] ?? t.factory.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                />
+              </div>
+            ))}
+          </div>
         </section>
 
         <section id="quality-control">
@@ -81,11 +122,26 @@ export default async function AboutPage({
         <section id="global-markets">
           <SectionHeading eyebrow={t.globalMarkets.eyebrow} title={t.globalMarkets.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.globalMarkets.paragraph}</p>
+          <Link
+            href="/projects"
+            className="mt-4 inline-block text-sm font-medium text-accent-600 hover:text-accent-500"
+          >
+            {t.exploreLinks.caseStudies} →
+          </Link>
         </section>
 
         <section id="history">
           <SectionHeading eyebrow={t.engineering.eyebrow} title={t.engineering.title} />
           <p className="mt-6 max-w-3xl text-ink-600 leading-relaxed">{t.engineering.paragraph}</p>
+        </section>
+
+        <section className="flex flex-wrap gap-x-8 gap-y-3">
+          <Link href="/solutions" className="text-sm font-medium text-accent-600 hover:text-accent-500">
+            {t.exploreLinks.solutions} →
+          </Link>
+          <Link href="/products" className="text-sm font-medium text-accent-600 hover:text-accent-500">
+            {t.exploreLinks.products} →
+          </Link>
         </section>
 
         <section className="relative overflow-hidden rounded-2xl border border-navy-700 bg-navy-900 text-white p-8 md:p-10 text-center grid-texture">

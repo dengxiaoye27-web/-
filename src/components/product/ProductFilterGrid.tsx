@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Product, ProductCategory } from "@/data/types";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getProductContent } from "@/i18n/content/products";
+import { getCategoryContent } from "@/i18n/content/categories";
 import { getCommonMessages } from "@/i18n/messages";
 
 export function ProductFilterGrid({
@@ -35,20 +36,23 @@ export function ProductFilterGrid({
         >
           {common.nav.products}
         </button>
-        {categories.map((c) => (
-          <button
-            key={c.slug}
-            type="button"
-            onClick={() => setActive(c.slug)}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-              active === c.slug
-                ? "bg-navy-950 text-white"
-                : "border border-line-200 text-ink-600 hover:border-accent-500"
-            }`}
-          >
-            {c.name}
-          </button>
-        ))}
+        {categories.map((c) => {
+          const content = getCategoryContent(c.slug, locale, c);
+          return (
+            <button
+              key={c.slug}
+              type="button"
+              onClick={() => setActive(c.slug)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                active === c.slug
+                  ? "bg-navy-950 text-white"
+                  : "border border-line-200 text-ink-600 hover:border-accent-500"
+              }`}
+            >
+              {content.name}
+            </button>
+          );
+        })}
       </div>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +61,7 @@ export function ProductFilterGrid({
           return (
             <Card key={product.slug} href={`/products/${product.slug}`}>
               {product.images?.[0] ? (
-                <div className="relative mb-4 aspect-video -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
+                <div className="relative mb-4 aspect-square -mx-6 -mt-6 md:-mx-8 md:-mt-8 bg-paper-50 rounded-t-2xl overflow-hidden flex items-center justify-center">
                   <Image
                     src={product.images[0]}
                     alt={content.name}

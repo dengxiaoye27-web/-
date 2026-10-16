@@ -27,6 +27,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Factory & Manufacturing",
       paragraph:
         "Wandtung operates factory-direct production for cabinets, power distribution and enclosure systems, with in-house engineering for electrical, mechanical and thermal design. Production is organized around standard catalog specifications as well as project-configured builds for micro modular and containerized data center orders.",
+      gallery: [
+        "Factory exterior",
+        "Industrial & outdoor working area",
+        "Rack PDU production line",
+        "Spray coating production line",
+        "Cable tray production line",
+        "Network cabinet assembly workshop",
+        "Network cabinet assembly line",
+        "Network cabinet assembly line",
+      ],
     },
     qualityControl: {
       eyebrow: "Assurance",
@@ -52,6 +62,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Custom Solutions & Project Delivery",
       paragraph:
         "Beyond catalog products, Wandtung's engineering team supports project-specific configuration — from PDU outlet layout and cabinet dimensions to complete micro modular and containerized data center system design — backed by technical documentation and delivery coordination for overseas projects.",
+    },
+        exploreLinks: {
+      caseStudies: "See our project case studies",
+      solutions: "Explore our solutions",
+      products: "Browse our product range",
     },
     cta: { title: "Want to Work With Our Engineering Team?", button: "Contact Engineering Team" },
   },
@@ -80,6 +95,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "المصنع والتصنيع",
       paragraph:
         "تدير واندتونغ إنتاجاً مباشراً من المصنع للخزانات وأنظمة توزيع الطاقة والهياكل، مع هندسة داخلية للتصميم الكهربائي والميكانيكي والحراري. يُنظَّم الإنتاج حول المواصفات القياسية للكتالوج، بالإضافة إلى الإنتاج المُهيأ حسب المشروع لطلبات مراكز البيانات المعيارية المصغرة والحاوية.",
+      gallery: [
+        "واجهة المصنع الخارجية",
+        "منطقة العمل الصناعية والخارجية",
+        "خط إنتاج PDU للراك",
+        "خط إنتاج الطلاء بالرش",
+        "خط إنتاج مدارج الكابلات",
+        "ورشة تجميع خزانات الشبكات",
+        "خط تجميع خزانات الشبكات",
+        "خط تجميع خزانات الشبكات",
+      ],
     },
     qualityControl: {
       eyebrow: "ضمان الجودة",
@@ -105,6 +130,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "حلول مخصصة وتسليم المشاريع",
       paragraph:
         "بالإضافة إلى منتجات الكتالوج، يدعم فريق هندسة واندتونغ التكوين الخاص بكل مشروع — من تخطيط منافذ PDU وأبعاد الخزانات إلى تصميم أنظمة كاملة لمراكز البيانات المعيارية المصغرة والحاوية — مدعوماً بوثائق تقنية وتنسيق التسليم للمشاريع الخارجية.",
+    },
+        exploreLinks: {
+      caseStudies: "اطلع على دراسات حالة مشاريعنا",
+      solutions: "استكشف حلولنا",
+      products: "تصفح مجموعة منتجاتنا",
     },
     cta: { title: "هل ترغب بالعمل مع فريقنا الهندسي؟", button: "تواصل مع فريق الهندسة" },
   },
@@ -133,6 +163,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Usine et fabrication",
       paragraph:
         "Wandtung exploite une production directe en usine pour les baies, les systèmes de distribution électrique et les enceintes, avec une ingénierie interne pour la conception électrique, mécanique et thermique. La production est organisée autour des spécifications standards du catalogue ainsi que des configurations spécifiques aux projets pour les commandes de centres de données modulaires micro et conteneurisés.",
+      gallery: [
+        "Extérieur de l'usine",
+        "Zone de travail industrielle et extérieure",
+        "Ligne de production des PDU de rack",
+        "Ligne de production de peinture par pulvérisation",
+        "Ligne de production des chemins de câbles",
+        "Atelier d'assemblage des armoires réseau",
+        "Ligne d'assemblage des armoires réseau",
+        "Ligne d'assemblage des armoires réseau",
+      ],
     },
     qualityControl: {
       eyebrow: "Assurance",
@@ -158,6 +198,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Solutions sur mesure et livraison de projets",
       paragraph:
         "Au-delà des produits du catalogue, l'équipe d'ingénierie de Wandtung accompagne la configuration spécifique à chaque projet — de la disposition des prises PDU et des dimensions des baies à la conception complète de systèmes de centres de données modulaires micro et conteneurisés — avec documentation technique et coordination de la livraison pour les projets à l'international.",
+    },
+        exploreLinks: {
+      caseStudies: "Découvrez nos études de cas",
+      solutions: "Découvrez nos solutions",
+      products: "Parcourir notre gamme de produits",
     },
     cta: { title: "Vous souhaitez travailler avec notre équipe d'ingénierie ?", button: "Contacter l'équipe d'ingénierie" },
   },
@@ -186,6 +231,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Fábrica y fabricación",
       paragraph:
         "Wandtung opera producción directa de fábrica para gabinetes, sistemas de distribución de energía y recintos, con ingeniería interna para el diseño eléctrico, mecánico y térmico. La producción se organiza en torno a especificaciones estándar de catálogo, así como configuraciones específicas de proyecto para pedidos de centros de datos modulares micro y en contenedores.",
+      gallery: [
+        "Exterior de la fábrica",
+        "Área de trabajo industrial y exterior",
+        "Línea de producción de PDU de rack",
+        "Línea de producción de pintura por pulverización",
+        "Línea de producción de bandejas de cables",
+        "Taller de ensamblaje de gabinetes de red",
+        "Línea de ensamblaje de gabinetes de red",
+        "Línea de ensamblaje de gabinetes de red",
+      ],
     },
     qualityControl: {
       eyebrow: "Garantía",
@@ -211,6 +266,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Soluciones personalizadas y entrega de proyectos",
       paragraph:
         "Más allá de los productos de catálogo, el equipo de ingeniería de Wandtung apoya la configuración específica de cada proyecto — desde la disposición de las tomas del PDU y las dimensiones del gabinete hasta el diseño completo de sistemas de centros de datos modulares micro y en contenedores — respaldado por documentación técnica y coordinación de entrega para proyectos internacionales.",
+    },
+        exploreLinks: {
+      caseStudies: "Vea nuestros casos de estudio de proyectos",
+      solutions: "Explore nuestras soluciones",
+      products: "Explore nuestra gama de productos",
     },
     cta: { title: "¿Desea trabajar con nuestro equipo de ingeniería?", button: "Contactar al equipo de ingeniería" },
   },
@@ -239,6 +299,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Завод и производство",
       paragraph:
         "Wandtung осуществляет прямое заводское производство шкафов, систем распределения питания и корпусов, с собственной инженерной службой для электрического, механического и теплового проектирования. Производство организовано как по стандартным каталожным спецификациям, так и по индивидуальным проектным заказам для микромодульных и контейнерных дата-центров.",
+      gallery: [
+        "Внешний вид завода",
+        "Промышленная и открытая рабочая зона",
+        "Линия производства стоечных PDU",
+        "Линия покрасочного производства",
+        "Линия производства кабельных лотков",
+        "Цех сборки сетевых шкафов",
+        "Линия сборки сетевых шкафов",
+        "Линия сборки сетевых шкафов",
+      ],
     },
     qualityControl: {
       eyebrow: "Контроль",
@@ -264,6 +334,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "Индивидуальные решения и реализация проектов",
       paragraph:
         "Помимо каталожной продукции, инженерная команда Wandtung поддерживает индивидуальную конфигурацию под конкретный проект — от компоновки розеток PDU и габаритов шкафов до полного проектирования систем микромодульных и контейнерных дата-центров — с технической документацией и координацией поставки для зарубежных проектов.",
+    },
+        exploreLinks: {
+      caseStudies: "Посмотрите наши примеры проектов",
+      solutions: "Изучите наши решения",
+      products: "Просмотрите наш ассортимент продукции",
     },
     cta: { title: "Хотите работать с нашей инженерной командой?", button: "Связаться с инженерной командой" },
   },
@@ -292,6 +367,16 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "工厂与生产",
       paragraph:
         "万电通为机柜、配电系统及机箱产品提供工厂直营生产,并配备自有电气、机械与热设计工程团队。生产体系既涵盖标准目录规格产品,也支持微模块及集装箱数据中心订单的项目定制化生产。",
+      gallery: [
+        "工厂外景",
+        "工业与户外作业区",
+        "机架PDU生产线",
+        "喷涂生产线",
+        "槽式桥架生产线",
+        "网络机柜组装车间",
+        "网络机柜组装线",
+        "网络机柜组装线",
+      ],
     },
     qualityControl: {
       eyebrow: "质量保障",
@@ -317,6 +402,11 @@ export const aboutMessages: Record<Locale, AboutMessages> = {
       title: "定制方案与项目交付",
       paragraph:
         "除标准目录产品外,万电通工程团队还支持项目专属配置——从PDU出口布局、机柜尺寸,到完整的微模块及集装箱数据中心系统设计——并提供技术文档支持及海外项目交付协调。",
+    },
+        exploreLinks: {
+      caseStudies: "查看我们的项目案例",
+      solutions: "探索我们的解决方案",
+      products: "浏览我们的产品系列",
     },
     cta: { title: "希望与我们的工程团队合作？", button: "联系工程团队" },
   },

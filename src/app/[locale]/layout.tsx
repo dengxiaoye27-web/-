@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -82,6 +83,16 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script id="okki-analytics-config" strategy="afterInteractive">
+          {`window.okkiConfigs = window.okkiConfigs || [];
+function okkiAdd() { okkiConfigs.push(arguments); };
+okkiAdd("analytics", { siteId: "524791-33655", gId: "" });`}
+        </Script>
+        <Script
+          async
+          src="//tfile.xiaoman.cn/okki/analyze.js?id=524791-33655-"
+          strategy="afterInteractive"
+        />
         <LocaleProvider locale={locale as Locale}>
           <JsonLd data={organizationSchema()} />
           <SiteHeader />

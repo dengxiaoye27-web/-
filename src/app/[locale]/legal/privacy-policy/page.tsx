@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   alternates: { canonical: "/legal/privacy-policy" },
 };
 
+const breadcrumbItems = [
+  { label: "Home", href: "/" },
+  { label: "Privacy Policy" },
+];
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="container-page py-16 md:py-20">
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Privacy Policy" },
-        ]}
+      <JsonLd
+        data={breadcrumbSchema(
+          breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/legal/privacy-policy" }))
+        )}
       />
+      <Breadcrumbs items={breadcrumbItems} />
       <h1 className="mt-6 text-3xl md:text-5xl font-semibold tracking-tight text-ink-900">
         Privacy Policy
       </h1>

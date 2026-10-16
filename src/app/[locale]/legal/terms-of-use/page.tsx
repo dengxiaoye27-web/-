@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
   alternates: { canonical: "/legal/terms-of-use" },
 };
 
+const breadcrumbItems = [
+  { label: "Home", href: "/" },
+  { label: "Terms of Use" },
+];
+
 export default function TermsOfUsePage() {
   return (
     <div className="container-page py-16 md:py-20">
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Terms of Use" },
-        ]}
+      <JsonLd
+        data={breadcrumbSchema(
+          breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/legal/terms-of-use" }))
+        )}
       />
+      <Breadcrumbs items={breadcrumbItems} />
       <h1 className="mt-6 text-3xl md:text-5xl font-semibold tracking-tight text-ink-900">
         Terms of Use
       </h1>

@@ -2,17 +2,28 @@ import type { Metadata } from "next";
 import Link from "@/components/ui/LocaleLink";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { articles } from "@/data/articles";
 import { getArticleContent } from "@/i18n/content/articles";
 import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { buildAlternates } from "@/lib/alternates";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Resources & Knowledge Center",
-  description:
-    "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design.",
-  alternates: { canonical: "/resources" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
+
+  return {
+    title: locale === defaultLocale ? "Resources & Knowledge Center" : getResourcesUiMessages(locale).hubTitle,
+    description: locale === defaultLocale ? "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design." : getResourcesUiMessages(locale).hubSubtitle,
+    alternates: buildAlternates(locale, "/resources"),
+  };
+}
 
 export default async function ResourcesPage({
   params,
@@ -23,12 +34,16 @@ export default async function ResourcesPage({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getResourcesUiMessages(locale);
   const common = getCommonMessages(locale);
+  const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.resources }];
 
   return (
     <div className="bg-white">
+      <JsonLd
+        data={breadcrumbSchema(breadcrumbItems.map((i) => ({ label: i.label, href: i.href ?? "/resources" })), locale)}
+      />
       <div className="hero-band">
         <div className="container-page">
-          <Breadcrumbs items={[{ label: common.nav.home, href: "/" }, { label: common.nav.resources }]} />
+          <Breadcrumbs items={breadcrumbItems} />
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight max-w-3xl">
             {t.hubTitle}
           </h1>

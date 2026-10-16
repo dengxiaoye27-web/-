@@ -14,6 +14,7 @@ export interface ProductCategory {
   name: string;
   shortDescription: string;
   heroTagline: string;
+  sellingPoints?: string[];
 }
 
 export interface SpecGroup {
@@ -33,6 +34,19 @@ export interface Product {
   shortName: string;
   tagline: string;
   overview: string;
+  // SEO-only meta description (~150-160 chars). Distinct from `overview`
+  // (the on-page body paragraph, which is longer by design) so the two
+  // don't have to trade off against each other. English-only for now —
+  // other locales fall back to their translated `overview` until this
+  // gets translated too. Optional so untouched products keep their prior
+  // behavior (falling back to overview) rather than being blocked on this.
+  metaDescription?: string;
+  // SEO-only <title> override (~≤60 chars). Distinct from `name` (the H1
+  // and the label used in breadcrumbs/cards/related-product links, which
+  // stays a clean product name) — only needed where `name` alone would be
+  // too long or collide with another page's title. English-only, same
+  // fallback rationale as metaDescription.
+  metaTitle?: string;
   featured?: boolean;
   images?: string[];
   keyFeatures: string[];
@@ -43,11 +57,15 @@ export interface Product {
   faqs: FaqItem[];
   relatedProductSlugs: string[];
   relatedSolutionSlugs: string[];
+  relatedArticleSlugs?: string[];
 }
 
 export interface Solution {
   slug: string;
   name: string;
+  // SEO-only <title> override — see the matching field on Product for why
+  // this is separate from `name` (kept as the clean on-page H1/label).
+  metaTitle?: string;
   tagline: string;
   customerChallenge: string;
   solutionArchitecture: string;
@@ -58,6 +76,7 @@ export interface Solution {
   typicalApplications: string[];
   faqs: FaqItem[];
   relatedProductSlugs: string[];
+  relatedArticleSlugs?: string[];
 }
 
 export type ProjectIndustry =
@@ -88,15 +107,19 @@ export interface ProjectCaseStudy {
 export interface Article {
   slug: string;
   title: string;
+  metaTitle?: string;
   category: string;
   excerpt: string;
   publishedAt: string;
   readingTime: string;
-  body: { heading: string; content: string; image?: { alt: string; caption: string } }[];
+  body: {
+    heading: string;
+    content: string;
+    image?: { alt: string; caption: string };
+    diagram?: { nodes: string[]; caption: string };
+    table?: { columns: string[]; rows: { label: string; values: string[] }[] };
+  }[];
   faqs: FaqItem[];
-}
-
-export interface Certification {
-  name: string;
-  description: string;
+  ctaLinks?: { label: string; href: string }[];
+  relatedArticleSlugs?: string[];
 }

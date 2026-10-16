@@ -37,6 +37,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local fallback storage for /admin/uploads in dev (production uses
+# ADMIN_UPLOADS_DIR, outside the repo — see UPDATE_WORKFLOW.md)
+/.local-uploads/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
