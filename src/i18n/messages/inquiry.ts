@@ -1,7 +1,7 @@
 import { Locale } from "../config";
 
 export const inquiryMessages: Record<Locale, { title: string; description: string; datasheet: string }> = {
-  en: { title: "Interested in {product}?", description: "Get a datasheet, technical consultation, or a project-specific quote from our engineering team.", datasheet: "Get Datasheet" },
+  en: { title: "Interested in {product}?", description: "Request a datasheet, technical consultation, or a project-specific quote from our engineering team.", datasheet: "Request Datasheet" },
   ar: { title: "هل أنت مهتم بـ {product}؟", description: "احصل على ورقة بيانات أو استشارة فنية أو عرض سعر خاص بمشروعك من فريقنا الهندسي.", datasheet: "طلب ورقة البيانات" },
   fr: { title: "Vous souhaitez en savoir plus sur {product} ?", description: "Demandez une fiche technique, un conseil technique ou un devis adapté à votre projet à notre équipe d’ingénierie.", datasheet: "Demander la fiche technique" },
   es: { title: "¿Le interesa {product}?", description: "Solicite una ficha técnica, asesoramiento técnico o un presupuesto para su proyecto a nuestro equipo de ingeniería.", datasheet: "Solicitar ficha técnica" },

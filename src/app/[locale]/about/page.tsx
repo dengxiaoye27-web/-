@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatTile } from "@/components/ui/StatTile";
 import { Button } from "@/components/ui/Button";
+import { CertificationCards } from "@/components/sections/CertificationCards";
 import Link from "@/components/ui/LocaleLink";
 import { CertificateGallery } from "@/components/sections/CertificateGallery";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -110,6 +111,9 @@ export default async function AboutPage({
             description={t.certifications.description}
           />
           <div className="mt-8">
+            <CertificationCards heldByPartnerLabel={t.certifications.heldByPartner} />
+          </div>
+          <div className="mt-10">
             <p className="text-sm text-ink-600 mb-6">{t.certifications.caption}</p>
             <CertificateGallery />
           </div>

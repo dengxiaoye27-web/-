@@ -12,10 +12,23 @@ const inputClasses =
   "w-full rounded-lg border border-line-200 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-600/50 focus:border-accent-500 focus:outline-none";
 const labelClasses = "block text-sm font-medium text-ink-900 mb-1.5";
 
-export function RFQForm({ messages: f }: { messages: ContactMessages["form"] }) {
+export function RFQForm({
+  messages: f,
+  initialCategoryName,
+  initialProductName,
+  initialRequestType,
+}: {
+  messages: ContactMessages["form"];
+  initialCategoryName?: string;
+  initialProductName?: string;
+  initialRequestType?: "datasheet";
+}) {
   const locale = useLocale();
   const [inquiryType, setInquiryType] = useState<InquiryType>("product");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const initialRequirements = initialProductName
+    ? `${initialRequestType === "datasheet" ? "Requesting a datasheet for" : "Inquiring about"}: ${initialProductName}\n\n`
+    : undefined;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -102,7 +115,7 @@ export function RFQForm({ messages: f }: { messages: ContactMessages["form"] }) 
         </div>
         <div>
           <label className={labelClasses} htmlFor="product">{f.productOfInterest}</label>
-          <select id="product" name="product" className={inputClasses} defaultValue="">
+          <select id="product" name="product" className={inputClasses} defaultValue={initialCategoryName ?? ""}>
             <option value="" disabled>
               {f.selectCategory}
             </option>
@@ -170,6 +183,7 @@ export function RFQForm({ messages: f }: { messages: ContactMessages["form"] }) 
           rows={5}
           className={inputClasses}
           placeholder={f.requirementsPlaceholder}
+          defaultValue={initialRequirements}
         />
       </div>
 

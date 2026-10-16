@@ -8,6 +8,7 @@ export interface ArticleContent {
   body: {
     heading: string;
     content: string;
+    image?: { alt: string; caption: string };
     diagram?: { nodes: string[]; caption: string };
     table?: { columns: string[]; rows: { label: string; values: string[] }[] };
   }[];
