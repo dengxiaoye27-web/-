@@ -2,11 +2,16 @@ import { Button } from "@/components/ui/Button";
 
 export function InquiryCTA({
   productName,
+  productSlug,
   compact = false,
 }: {
   productName: string;
+  productSlug: string;
   compact?: boolean;
 }) {
+  // No datasheet PDFs exist in the project yet — the button requests one
+  // through the quote form instead of linking to a file that isn't real.
+  const contactHref = `/contact?product=${encodeURIComponent(productSlug)}`;
   return (
     <div
       className={`rounded-2xl border border-navy-700 bg-navy-900 text-white ${
@@ -17,13 +22,13 @@ export function InquiryCTA({
         Interested in {productName}?
       </h3>
       <p className="mt-2 text-sm text-white/60">
-        Get a datasheet, technical consultation, or a project-specific quote
-        from our engineering team.
+        Request a datasheet, technical consultation, or a project-specific
+        quote from our engineering team.
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Button href="/contact">Request a Quote</Button>
-        <Button href="/contact" variant="outline">
-          Get Datasheet
+        <Button href={contactHref}>Request a Quote</Button>
+        <Button href={`${contactHref}&type=datasheet`} variant="outline">
+          Request Datasheet
         </Button>
       </div>
     </div>

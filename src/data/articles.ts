@@ -55,17 +55,17 @@ export const articles: Article[] = [
       {
         heading: "Metered PDU",
         content:
-          "A metered PDU displays current and/or voltage locally, usually on a built-in LCD or LED display, giving on-site staff a quick load reading without remote access.",
+          "A [metered PDU](/products/metered-pdu) displays current and/or voltage locally, usually on a built-in LCD or LED display, giving on-site staff a quick load reading without remote access.",
       },
       {
         heading: "Monitored PDU",
         content:
-          "A monitored PDU adds network connectivity, reporting current, voltage, power and often energy consumption remotely — useful for tracking load and PUE without a site visit.",
+          "A [monitored PDU](/products/monitored-pdu) adds network connectivity, reporting current, voltage, power and often energy consumption remotely — useful for tracking load and PUE without a site visit.",
       },
       {
         heading: "Switched PDU",
         content:
-          "A switched PDU includes monitoring capability and adds remote, individually addressable outlet control — administrators can power-cycle a single device or sequence a rack's power-up remotely.",
+          "A [switched PDU](/products/switched-pdu) includes monitoring capability and adds remote, individually addressable outlet control — administrators can power-cycle a single device or sequence a rack's power-up remotely.",
       },
       {
         heading: "Choosing Between Them",

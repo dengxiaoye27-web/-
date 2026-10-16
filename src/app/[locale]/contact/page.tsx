@@ -5,6 +5,8 @@ import { RFQForm } from "@/components/forms/RFQForm";
 import { siteConfig } from "@/lib/site";
 import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
+import { getProduct } from "@/data/products";
+import { getCategory } from "@/data/categories";
 
 export const metadata: Metadata = {
   title: "Contact & Request a Quote",
@@ -15,13 +17,19 @@ export const metadata: Metadata = {
 
 export default async function ContactPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ product?: string; type?: string }>;
 }) {
   const { locale: rawLocale } = await params;
+  const { product: productSlug, type: inquiryKind } = await searchParams;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getContactMessages(locale);
   const common = getCommonMessages(locale);
+
+  const product = productSlug ? getProduct(productSlug) : undefined;
+  const category = product ? getCategory(product.category) : undefined;
 
   return (
     <div className="bg-white">
@@ -39,7 +47,12 @@ export default async function ContactPage({
         <div className="lg:col-span-2">
           <SectionHeading eyebrow={t.form.eyebrow} title={t.form.title} />
           <div className="mt-8">
-            <RFQForm messages={t.form} />
+            <RFQForm
+              messages={t.form}
+              initialCategoryName={category?.name}
+              initialProductName={product?.name}
+              initialRequestType={inquiryKind === "datasheet" ? "datasheet" : undefined}
+            />
           </div>
         </div>
 

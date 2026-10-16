@@ -249,7 +249,7 @@ function ProductDetail({ slug, locale }: { slug: string; locale: Locale }) {
         </section>
 
         <section>
-          <InquiryCTA productName={content.name} />
+          <InquiryCTA productName={content.name} productSlug={product.slug} />
         </section>
 
         {product.relatedSolutionSlugs.length > 0 ? (
