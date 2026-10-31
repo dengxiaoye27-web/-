@@ -1778,6 +1778,293 @@ export const articleContentTranslations: Record<string, Record<TranslatedLocale,
       ],
     },
   },
+  "what-is-a-static-transfer-switch": {
+    ar: {
+      title: "ما هو مفتاح التحويل الثابت (STS)؟ ومتى يحتاجه مركز البيانات لديك",
+      category: "الطاقة الحرجة",
+      excerpt: "ما الذي يفعله مفتاح التحويل الثابت، وكيف يختلف عن ATS أو ATS PDU، ومتى تحتاج الأحمال أحادية السلك في مركز بيانات ثنائي التغذية إلى واحد.",
+      readingTime: "6 دقائق قراءة",
+      body: [
+        { heading: "الحلقة الأضعف في تصميم طاقة 2N", content: "لقد دفعت ثمن مسارين مستقلين للطاقة: نظاما UPS، ولوحتا توزيع، ووحدتا PDU من نوع A وB في كل راك. ثم يقوم أحدهم بتوصيل جدار حماية أو مبدّل رئيسي أو جهاز KVM بسلك طاقة واحد. هذا الجهاز لا يرى إلا مساراً واحداً. وعندما يتعطل هذا المسار ينطفئ الجهاز، ويتصرف تصميم 2N لديك كأنه N. في كل مركز بيانات بعض هذه الأحمال أحادية السلك. فأجهزة الشبكات والخوادم القديمة ووحدات التحكم في التخزين ومعدات الاتصالات غالباً ما تأتي بمزوّد طاقة (PSU) واحد. ومفتاح التحويل الثابت (STS) هو الطريقة المعتمدة لمنحها الحماية نفسها التي تتمتع بها المعدات ثنائية السلك من حولها. يشرح هذا الدليل ما يفعله STS، وكيف يُقارن بـATS وATS PDU، وكيف تقرر ما إذا كان مشروعك يحتاج إليه." },
+        { heading: "ما هو مفتاح التحويل الثابت؟", content: "مفتاح التحويل الثابت جهاز بمدخلي طاقة مستقلين ومخرج واحد. يغذّي الحمل من مصدر مفضّل، وإذا تعطل هذا المصدر أو خرج عن حدود التفاوت المسموح بها، ينقل الحمل إلى المصدر البديل خلال بضعة أجزاء من الألف من الثانية. وتعني كلمة \"ثابت\" عدم وجود ملامسات متحركة في مسار التبديل. فبدلاً من مرحّل أو قاطع يعمل بمحرك، يستخدم STS عناصر إلكترونية صلبة، عادةً الثايرستورات (SCR)، التي يمكن تشغيلها وإيقافها أسرع بكثير مما يمكن لأي ملامس ميكانيكي أن يفتح ويغلق. يحدث التحويل في أربع خطوات. 1. المراقبة: يأخذ STS عينات مستمرة من الجهد والتردد وشكل الموجة على كلا المدخلين. 2. الكشف: عندما ينخفض المصدر النشط أو يرتفع أو ينقطع، يرصده المتحكم خلال جزء من الدورة. 3. التبديل: تُطفأ عناصر SCR على المصدر المتعطل وتُشغَّل على المصدر السليم. 4. العودة: عندما يستقر المصدر المفضّل من جديد، يمكن لـSTS أن يعود إليه تلقائياً أو أن ينتظر المشغّل، بحسب الإعدادات. لماذا تهم أجزاء الألف من الثانية: معظم مزوّدات طاقة تقنية المعلومات تحافظ على خرجها لنحو 10 إلى 20 ميلي ثانية بعد فقدان طاقة الدخل. التحويل الذي ينتهي داخل هذه النافذة لا يلاحظه الخادم أو المبدّل. أما التحويل الأطول فيسبب إعادة تشغيل، حتى لو عادت الطاقة خلال ثانية. لهذا فإن زمن التحويل، وليس مجرد \"التبديل التلقائي\"، هو المواصفة التي تحدد ما إذا كان جهاز التحويل يحمي معدات تقنية المعلومات فعلاً." },
+        {
+          heading: "STS مقابل ATS مقابل ATS PDU مقابل التغذية ثنائية السلك",
+          content: "تمنح الخيارات الأربعة المعدات وصولاً إلى مصدرين للطاقة، لكنها تختلف في سرعة التبديل وموقعها وما تحميه. الخلاصة العملية: مفتاح ATS على مستوى المنشأة يحمي المبنى لا الخادم. بين حمل تقنية المعلومات وتغذيتين مدعومتين بـUPS، تحتاج إما إلى معدات ثنائية السلك أو STS أو ATS PDU. STS أم ATS PDU؟ كلاهما يحل مشكلة السلك الواحد على مستوى الراك. اختر ATS PDU عندما تريد التحويل وتوزيع المخارج في وحدة واحدة لأحمال متوسطة. واختر STS عندما يكون الحمل هو الأكثر أهمية في الغرفة، أو عندما يجب أن يحمي مفتاح واحد عدة أجهزة، أو عندما تريد جهاز تحويل مخصصاً يغذي وحدات PDU قياسية بعده.",
+          table: {
+            columns: ["معدات ثنائية السلك على PDU من نوع A/B", "مفتاح التحويل الثابت (STS)", "ATS PDU", "ATS المنشأة"],
+            rows: [
+              { label: "طريقة التبديل", values: ["لا يوجد مفتاح: مزوّدا طاقة يتقاسمان الحمل", "إلكتروني صلب (SCR)", "مرحّل داخل PDU الراك", "قاطع أو ملامس يعمل بمحرك"] },
+              { label: "زمن التحويل النموذجي", values: ["غير مطلوب", "بضعة ميلي ثانية؛ أقل من 10 ميلي ثانية في STS بارتفاع 1U من Wandtung", "عادةً ضمن زمن صمود مزوّد الطاقة", "مئات الميلي ثانية إلى ثوانٍ"] },
+              { label: "موقعه", values: ["داخل الخادم", "في الراك، أو قبل مجموعة من الرفوف", "في الراك", "لوحة التوزيع الرئيسية"] },
+              { label: "الأنسب لـ", values: ["الخوادم والتخزين بمزوّدي طاقة", "الأحمال الحرجة أحادية السلك التي لا تحتمل أي انقطاع", "المعدات أحادية السلك في غرف الاتصالات والرفوف الطرفية", "التحويل بين الشبكة والمولد، لا أحمال تقنية المعلومات مباشرة"] },
+            ],
+          },
+        },
+        { heading: "هل تحتاج إلى STS؟ اختبار من خمسة أسئلة", content: "إذا كانت إجابتك نعم على السؤالين الأولين وعلى أي سؤال من البقية، فإن STS يجب أن يكون جزءاً من تصميمك. 1. هل يتلقى الراك مصدرين مستقلين للطاقة؟ يحتاج STS إلى تغذية A وتغذية B، ويُفضّل أن تكونا من نظامي UPS منفصلين أو من UPS ومسار شبكة منفصل. 2. هل يوجد جهاز واحد على الأقل أحادي السلك لا يمكنك تحمّل فقدانه؟ المبدّلات الرئيسية وجدران الحماية وأنظمة الإدارة خارج النطاق هي المرشحة المعتادة. 3. هل ستؤدي إعادة تشغيل هذا الجهاز إلى توقف أنظمة أخرى؟ إعادة تشغيل المبدّل الرئيسي قد تقطع كل الخوادم خلفه، حتى لو بقيت هذه الخوادم مزودة بالطاقة. 4. هل ستجري صيانة أحد مساري الطاقة أثناء تشغيل الموقع؟ مع STS يمكنك إيقاف UPS A للصيانة ويستمر الحمل أحادي السلك في العمل على B. 5. هل الموقع غير مأهول؟ المواقع الطرفية وملاجئ الاتصالات وغرف الفروع لا يوجد فيها من ينقل القابس عند تعطل إحدى التغذيات. من التطبيقات النموذجية: غرف التعافي من الكوارث في البنوك وشركات الأوراق المالية حيث لا تزال الأجهزة القديمة تعمل بمزوّد طاقة واحد؛ وغرف معدات الاتصالات و5G ذات تغذيتي التيار المتردد والمعدات المختلطة أحادية وثنائية السلك؛ والمنشآت الحكومية ومنشآت تقنية المعلومات الآمنة التي تشترط قابلية الصيانة المتزامنة لكل حمل؛ ومراكز البيانات المعيارية الصغيرة والطرفية حيث تتشارك بضعة أجهزة حرجة أحادية السلك خزانة واحدة مع خوادم ثنائية السلك. إذا كانت كل الأجهزة في الراك ثنائية السلك فلا تحتاج إلى STS؛ غذِّ كل مزوّد طاقة من PDU منفصلة، كما هو موضح في دليل شراء وحدات PDU لدينا." },
+        {
+          heading: "أين يوضع STS في الراك",
+          content: "يوضع STS بجانب وحدتي PDU من نوع A وB، ويأخذ مدخلاً واحداً من كل مسار طاقة، ويغذي المعدات أحادية السلك فقط. تستمر الخوادم ثنائية السلك في السحب من وحدتي PDU مباشرة، بينما يحصل المبدّل الرئيسي ذو السلك الواحد على كلا المسارين عبر STS. ولمجموعة أكبر من الأحمال أحادية السلك، يمكن وضع STS بقدرة أعلى قبلها ليغذي PDU مخصصة. أما لجهاز أو جهازين، فإن STS بارتفاع 1U مركّب داخل الخزانة أبسط ويُبقي الكابلات قصيرة.",
+          diagram: {
+            nodes: ["UPS A + UPS B (مسارا طاقة)", "STS — يختار A أو B في أقل من 10 ميلي ثانية", "مبدّل رئيسي أحادي السلك"],
+            caption: "تسحب الخوادم ثنائية السلك الطاقة من PDU A وPDU B مباشرة؛ ولا يُغذّى عبر STS إلا الجهاز أحادي السلك.",
+          },
+        },
+        { heading: "ما يجب التحقق منه قبل شراء STS", content: "ضع هذه النقاط في طلب عرض الأسعار حتى تكون عروض الموردين قابلة للمقارنة. التيار والجهد المقننان: حدد الحجم وفق الحمل المتصل مع هامش للنمو، وطابقه مع القاطع في المنبع. زمن التحويل: اطلب الحد الأقصى المضمون لا القيمة النموذجية؛ فأقل من 10 ميلي ثانية يُبقي معظم مزوّدات طاقة تقنية المعلومات تعمل. المصدر المفضّل والعودة إليه: تأكد من إمكانية تحديد المدخل الأساسي ومن كون العودة إليه تلقائية أو يدوية. توصيلات الدخل والخرج: كتلة أطراف، أو مداخل IEC، أو مخارج IEC C13/C19 على الوحدة نفسها. الشكل: وحدات 1U المركّبة في الراك تناسب الخزانة التي تحميها، بينما توضع الهياكل الأكبر في غرفة الطاقة. الحالة والإنذارات: كحد أدنى، مؤشرات لكل مصدر وللخرج مع إنذار صوتي، وأضف المراقبة الشبكية إذا كان الموقع غير مأهول. الشهادات: حدد المعايير التي يتطلبها سوقك حتى يتمكن المورد من الحصول على الشهادات وفقها." },
+        {
+          heading: "مفتاح STS من Wandtung",
+          content: "مفتاح التحويل الثابت (STS) من Wandtung وحدة بارتفاع 1U تُركّب في الراك، صُممت تحديداً لمشكلة الأحمال أحادية السلك الموضحة أعلاه. ولأننا نصنّع مسار الطاقة بالكامل، يمكن تحديد STS كنظام واحد مع وحدات PDU للراك وUPS معياري وخزانات متوافقة، مع اختبار كل وحدة تحت الطاقة قبل مغادرتها المصنع.",
+          table: {
+            columns: ["STS من Wandtung"],
+            rows: [
+              { label: "الشكل", values: ["1U للتركيب في الراك"] },
+              { label: "المدخلات", values: ["مصدران مستقلان A/B، كتلة أطراف"] },
+              { label: "زمن التحويل", values: ["سلس، أقل من 10 ميلي ثانية"] },
+              { label: "المخرج", values: ["مخارج IEC C13/C19 و/أو كتلة أطراف (حسب الطراز)"] },
+              { label: "الحالة", values: ["مؤشرات LED للمصدر 1 والمصدر 2 والخرج على اللوحة الأمامية"] },
+              { label: "التحكم في الإنذار", values: ["زر كتم الصوت على اللوحة الأمامية"] },
+              { label: "التخصيص", values: ["التيار المقنن، تكوين المخارج، حزمة المراقبة"] },
+              { label: "الشهادات", values: ["متاحة عند الطلب وفق مواصفات مشروعك"] },
+            ],
+          },
+        },
+        { heading: "سُدّ الثغرة في تصميم التكرار لديك", content: "تصميم 2N لا يكون أقوى من أقل أجهزته حماية. اكتب قائمة بالأحمال أحادية السلك لديك، ثم أرسلها إلينا مع مخطط الرفوف وتفاصيل التغذية. سيوصي فريقنا الهندسي بمواضع استخدام STS أو ATS PDU أو زوج بسيط من وحدات PDU من نوع A/B، ويقدّم عرض سعر لمسار الطاقة الكامل." },
+      ],
+      faqs: [
+        { question: "هل يمكن لـSTS أن يحل محل UPS؟", answer: "لا. يختار STS بين مصدرين لكنه لا يولّد الطاقة. إذا تعطل المصدران معاً يتوقف الحمل. يعمل STS بعد أنظمة UPS، لا بدلاً منها." },
+        { question: "هل يضيف STS نقطة فشل منفردة؟", answer: "يصبح STS نفسه جزءاً من مسار الأجهزة التي يغذيها. لهذا يجب أن يحمي الأحمال أحادية السلك فقط، بينما تبقى الخوادم ثنائية السلك على وحدتي PDU منفصلتين من نوع A وB." },
+        { question: "هل يمكنني وضع خوادم ثنائية السلك خلف STS؟", answer: "يمكنك ذلك، لكنه نادراً ما يكون منطقياً. فالمعدات ثنائية السلك تتحمل أصلاً فقدان إحدى التغذيتين، وإضافة STS تضع جهازاً بينها وبين كلا المصدرين." },
+        { question: "ما الفرق بين STS وATS PDU؟", answer: "يجمع ATS PDU بين التحويل وتوزيع المخارج في PDU راك واحدة. أما STS فهو وحدة تحويل إلكترونية صلبة مخصصة بتحويل سلس في أقل من 10 ميلي ثانية، تناسب الأحمال أحادية السلك الأكثر أهمية." },
+      ],
+    },
+    fr: {
+      title: "Qu'est-ce qu'un commutateur de transfert statique (STS) ? Quand votre data center en a besoin",
+      category: "Alimentation critique",
+      excerpt: "Ce que fait un commutateur de transfert statique, en quoi il diffère d'un ATS ou d'un PDU ATS, et quand les charges mono-cordon d'un data center à double alimentation en ont besoin.",
+      readingTime: "6 min de lecture",
+      body: [
+        { heading: "Le maillon faible d'une architecture électrique 2N", content: "Vous avez payé pour deux chemins d'alimentation indépendants : deux onduleurs, deux tableaux de distribution, des PDU A et B dans chaque rack. Puis quelqu'un branche un pare-feu, un commutateur cœur de réseau ou un KVM doté d'un seul cordon d'alimentation. Cet équipement ne voit qu'un seul chemin. Quand ce chemin tombe, il s'éteint, et votre architecture 2N se comporte comme du N. Chaque data center compte quelques-unes de ces charges mono-cordon. Appliances réseau, serveurs anciens, contrôleurs de stockage et équipements télécom sont souvent livrés avec une seule alimentation (PSU). Le commutateur de transfert statique (STS) est la solution standard pour leur offrir la même protection qu'aux équipements double cordon qui les entourent. Ce guide explique ce que fait un STS, comment il se compare à un ATS et à un PDU ATS, et comment déterminer si votre projet en a besoin." },
+        { heading: "Qu'est-ce qu'un commutateur de transfert statique ?", content: "Un commutateur de transfert statique est un appareil doté de deux entrées d'alimentation indépendantes et d'une sortie. Il alimente la charge à partir d'une source préférée et, si cette source tombe ou sort des tolérances, bascule la charge vers la source alternative en quelques millisecondes. « Statique » signifie qu'aucun contact mobile ne se trouve dans le chemin de commutation. Au lieu d'un relais ou d'un disjoncteur motorisé, un STS utilise des composants à semi-conducteurs, généralement des thyristors (SCR), que l'électronique peut activer et désactiver bien plus vite qu'un contact mécanique ne peut s'ouvrir et se fermer. Un transfert se déroule en quatre étapes. 1. Surveillance : le STS échantillonne en continu la tension, la fréquence et la forme d'onde sur les deux entrées. 2. Détection : quand la source active subit un creux, une surtension ou disparaît, le contrôleur le signale en une fraction de cycle. 3. Commutation : les SCR de la source défaillante sont désactivés et ceux de la source saine sont activés. 4. Retour : quand la source préférée est de nouveau stable, le STS peut y revenir automatiquement ou attendre un opérateur, selon la configuration. Pourquoi les millisecondes comptent : la plupart des alimentations informatiques maintiennent leur sortie environ 10 à 20 ms après une perte d'alimentation en entrée. Un transfert qui se termine dans cette fenêtre est invisible pour le serveur ou le commutateur. Un transfert plus long provoque un redémarrage, même si le courant revient en moins d'une seconde. C'est pourquoi le temps de transfert, et pas seulement la « commutation automatique », est la spécification qui détermine si un dispositif de transfert protège réellement les équipements informatiques." },
+        {
+          heading: "STS vs ATS vs PDU ATS vs alimentation double cordon",
+          content: "Les quatre solutions donnent aux équipements accès à deux sources d'alimentation. Elles diffèrent par leur vitesse de commutation, leur emplacement et ce qu'elles protègent. À retenir : un ATS de bâtiment protège le bâtiment, pas le serveur. Entre la charge informatique et deux alimentations secourues par onduleur, il vous faut soit des équipements double cordon, soit un STS, soit un PDU ATS. STS ou PDU ATS ? Les deux résolvent le problème du cordon unique au niveau du rack. Choisissez un PDU ATS si vous voulez le transfert et la distribution des prises dans une seule unité pour des charges modérées. Choisissez un STS quand la charge est la plus critique de la salle, quand un seul commutateur doit protéger plusieurs équipements, ou quand vous voulez un dispositif de transfert dédié alimentant des PDU standard en aval.",
+          table: {
+            columns: ["Équipements double cordon sur PDU A/B", "Commutateur de transfert statique (STS)", "PDU ATS", "ATS de bâtiment"],
+            rows: [
+              { label: "Méthode de commutation", values: ["Pas de commutateur : deux PSU se partagent la charge", "À semi-conducteurs (SCR)", "Relais intégré à un PDU de rack", "Disjoncteur ou contacteur motorisé"] },
+              { label: "Temps de transfert typique", values: ["Aucun nécessaire", "Quelques ms ; moins de 10 ms sur le STS 1U de Wandtung", "Généralement dans le temps de maintien des PSU", "Centaines de ms à quelques secondes"] },
+              { label: "Emplacement", values: ["Dans le serveur", "Rack, ou en amont d'un groupe de racks", "Rack", "Tableau général"] },
+              { label: "Idéal pour", values: ["Serveurs et stockage à deux PSU", "Charges critiques mono-cordon ne tolérant aucune interruption", "Équipements mono-cordon en salles télécom et racks périphériques", "Basculement réseau/groupe électrogène, pas directement les charges informatiques"] },
+            ],
+          },
+        },
+        { heading: "Avez-vous besoin d'un STS ? Un test en cinq questions", content: "Si vous répondez oui aux deux premières questions et à l'une des suivantes, un STS a sa place dans votre conception. 1. Le rack reçoit-il deux sources d'alimentation indépendantes ? Un STS a besoin d'une alimentation A et d'une alimentation B, idéalement issues d'onduleurs distincts ou d'un onduleur et d'un chemin réseau séparé. 2. Y a-t-il au moins un équipement mono-cordon que vous ne pouvez pas vous permettre de perdre ? Commutateurs cœur de réseau, pare-feux et gestion hors bande sont les candidats habituels. 3. Le redémarrage de cet équipement ferait-il tomber d'autres systèmes ? Le redémarrage d'un commutateur cœur peut couper tous les serveurs derrière lui, même s'ils sont restés alimentés. 4. Allez-vous assurer la maintenance d'un chemin d'alimentation pendant que le site est en service ? Avec un STS, vous pouvez arrêter l'onduleur A pour maintenance et la charge mono-cordon continue de fonctionner sur B. 5. Le site est-il sans personnel ? Sites périphériques, shelters télécom et salles d'agences n'ont personne sur place pour déplacer une fiche quand une alimentation tombe. Applications typiques : salles de reprise d'activité des banques et sociétés de bourse où des appliances anciennes n'ont toujours qu'une alimentation ; salles d'équipements télécom et 5G avec double alimentation AC et un mélange d'équipements mono et double cordon ; installations gouvernementales et informatiques sécurisées exigeant la maintenabilité simultanée de chaque charge ; data centers micro-modulaires et périphériques où quelques équipements critiques mono-cordon partagent une baie avec des serveurs double cordon. Si tous les équipements du rack sont double cordon, vous n'avez pas besoin de STS : alimentez chaque PSU depuis un PDU distinct, comme expliqué dans notre guide d'achat des PDU." },
+        {
+          heading: "Où placer le STS dans le rack",
+          content: "Le STS se place à côté des PDU A et B, prend une entrée sur chaque chemin d'alimentation et n'alimente que les équipements mono-cordon. Les serveurs double cordon continuent de puiser directement sur les deux PDU. Le commutateur cœur, qui n'a qu'un cordon, bénéficie des deux chemins via le STS. Pour un groupe plus important de charges mono-cordon, un STS de plus forte puissance peut être placé en amont pour alimenter un PDU dédié. Pour un ou deux équipements, un STS 1U monté dans la baie est plus simple et garde un câblage court.",
+          diagram: {
+            nodes: ["Onduleur A + onduleur B (deux chemins)", "STS — choisit A ou B en moins de 10 ms", "Commutateur cœur mono-cordon"],
+            caption: "Les serveurs double cordon puisent directement sur le PDU A et le PDU B ; seul l'équipement mono-cordon est alimenté via le STS.",
+          },
+        },
+        { heading: "Ce qu'il faut vérifier avant d'acheter un STS", content: "Intégrez ces points à votre appel d'offres pour que les fournisseurs chiffrent des offres comparables. Courant et tension nominaux : dimensionnez pour la charge connectée plus la croissance, et alignez-vous sur le disjoncteur amont. Temps de transfert : demandez le maximum garanti, pas une valeur typique ; moins de 10 ms maintient la plupart des alimentations informatiques en fonctionnement. Source préférée et retour : vérifiez que vous pouvez définir l'entrée principale et si le retour vers elle est automatique ou manuel. Connexions d'entrée et de sortie : bornier, embases IEC, ou prises IEC C13/C19 sur l'unité elle-même. Format : les unités 1U montées en rack tiennent dans la baie qu'elles protègent ; les châssis plus grands se placent en salle électrique. États et alarmes : au minimum, des voyants par source et pour la sortie ainsi qu'une alarme sonore, avec une supervision réseau si le site est sans personnel. Certification : indiquez les normes exigées par votre marché pour que le fournisseur puisse certifier en conséquence." },
+        {
+          heading: "Le STS Wandtung",
+          content: "Notre STS (commutateur de transfert statique) est une unité 1U montée en rack, conçue précisément pour le problème des charges mono-cordon décrit ci-dessus. Comme nous fabriquons l'ensemble de la chaîne d'alimentation, le STS peut être spécifié comme un système unique avec des PDU de rack, un onduleur modulaire et des baies assortis, chaque unité étant testée sous tension avant de quitter l'usine.",
+          table: {
+            columns: ["STS Wandtung"],
+            rows: [
+              { label: "Format", values: ["1U monté en rack"] },
+              { label: "Entrées", values: ["Deux sources A/B indépendantes, bornier"] },
+              { label: "Temps de transfert", values: ["Sans coupure, moins de 10 ms"] },
+              { label: "Sortie", values: ["Prises IEC C13/C19 et/ou bornier (selon modèle)"] },
+              { label: "États", values: ["Voyants LED Source 1, Source 2 et Sortie en façade"] },
+              { label: "Contrôle de l'alarme", values: ["Bouton de mise en sourdine en façade"] },
+              { label: "Personnalisation", values: ["Courant nominal, configuration des prises, pack de supervision"] },
+              { label: "Certification", values: ["Disponible sur demande selon les spécifications de votre projet"] },
+            ],
+          },
+        },
+        { heading: "Comblez la faille de votre redondance", content: "Une architecture 2N ne vaut que par son équipement le moins protégé. Dressez la liste de vos charges mono-cordon, puis envoyez-la-nous avec l'implantation de vos racks et le détail de vos alimentations. Notre équipe d'ingénierie vous recommandera où placer un STS, un PDU ATS ou une simple paire de PDU A/B, et chiffrera l'ensemble de la chaîne d'alimentation." },
+      ],
+      faqs: [
+        { question: "Un STS peut-il remplacer un onduleur ?", answer: "Non. Un STS choisit entre deux sources mais ne peut pas produire d'énergie. Si les deux sources tombent, la charge s'arrête. Un STS fonctionne en aval des onduleurs, pas à leur place." },
+        { question: "Un STS ajoute-t-il un point de défaillance unique ?", answer: "Le STS fait lui-même partie du chemin des équipements qu'il alimente. C'est pourquoi il ne doit protéger que les charges mono-cordon, tandis que les serveurs double cordon restent sur des PDU A et B séparés." },
+        { question: "Puis-je placer des serveurs double cordon derrière un STS ?", answer: "C'est possible, mais rarement pertinent. Les équipements double cordon supportent déjà la perte d'une alimentation, et ajouter un STS place un appareil entre eux et les deux sources." },
+        { question: "En quoi le STS diffère-t-il d'un PDU ATS ?", answer: "Le PDU ATS combine commutation de transfert et distribution des prises dans un seul PDU de rack. Le STS est une unité de transfert à semi-conducteurs dédiée, avec un transfert sans coupure en moins de 10 ms, adaptée aux charges mono-cordon les plus critiques." },
+      ],
+    },
+    es: {
+      title: "¿Qué es un interruptor de transferencia estática (STS)? Cuándo lo necesita su centro de datos",
+      category: "Energía crítica",
+      excerpt: "Qué hace un interruptor de transferencia estática, en qué se diferencia de un ATS o un PDU ATS, y cuándo lo necesitan las cargas de un solo cable en un centro de datos con doble alimentación.",
+      readingTime: "6 min de lectura",
+      body: [
+        { heading: "El eslabón débil de un diseño eléctrico 2N", content: "Usted pagó por dos rutas de energía independientes: dos sistemas UPS, dos cuadros de distribución y PDU A y B en cada rack. Luego alguien conecta un firewall, un switch troncal o un KVM con un solo cable de alimentación. Ese equipo solo ve una ruta. Cuando esa ruta falla, se apaga, y su diseño 2N se comporta como N. Todo centro de datos tiene algunas de estas cargas de un solo cable. Los equipos de red, servidores antiguos, controladoras de almacenamiento y equipos de telecomunicaciones suelen venir con una sola fuente de alimentación (PSU). El interruptor de transferencia estática (STS) es la forma estándar de darles la misma protección que tienen los equipos de doble cable a su alrededor. Esta guía explica qué hace un STS, cómo se compara con un ATS y un PDU ATS, y cómo decidir si su proyecto lo necesita." },
+        { heading: "¿Qué es un interruptor de transferencia estática?", content: "Un interruptor de transferencia estática es un dispositivo con dos entradas de energía independientes y una salida. Alimenta la carga desde una fuente preferida y, si esa fuente falla o se sale de tolerancia, traslada la carga a la fuente alternativa en pocos milisegundos. \"Estático\" significa que no hay contactos móviles en la ruta de conmutación. En lugar de un relé o un interruptor motorizado, un STS usa dispositivos de estado sólido, normalmente tiristores (SCR), que la electrónica puede encender y apagar mucho más rápido de lo que cualquier contacto mecánico puede abrir y cerrar. Una transferencia ocurre en cuatro pasos. 1. Monitorizar: el STS muestrea continuamente la tensión, la frecuencia y la forma de onda en ambas entradas. 2. Detectar: cuando la fuente activa sufre una caída, una sobretensión o desaparece, el controlador lo detecta en una fracción de ciclo. 3. Conmutar: los SCR de la fuente que falla se apagan y los de la fuente sana se encienden. 4. Retornar: cuando la fuente preferida vuelve a ser estable, el STS puede retransferir automáticamente o esperar a un operador, según la configuración. Por qué importan los milisegundos: la mayoría de las fuentes de alimentación de TI mantienen su salida unos 10 a 20 ms tras perder la energía de entrada. Una transferencia que termina dentro de esa ventana es invisible para el servidor o el switch. Una transferencia más larga provoca un reinicio, aunque la energía vuelva en menos de un segundo. Por eso el tiempo de transferencia, y no solo la \"conmutación automática\", es la especificación que decide si un dispositivo de transferencia protege realmente los equipos de TI." },
+        {
+          heading: "STS vs ATS vs PDU ATS vs alimentación de doble cable",
+          content: "Las cuatro opciones dan a los equipos acceso a dos fuentes de energía. Se diferencian en la velocidad de conmutación, su ubicación y lo que protegen. La conclusión práctica: un ATS de instalación protege el edificio, no el servidor. Entre la carga de TI y dos alimentaciones respaldadas por UPS, necesita equipos de doble cable, un STS o un PDU ATS. ¿STS o PDU ATS? Ambos resuelven el problema del cable único a nivel de rack. Elija un PDU ATS cuando quiera transferencia y distribución de tomas en una sola unidad para cargas moderadas. Elija un STS cuando la carga sea la más crítica de la sala, cuando un solo interruptor deba proteger varios equipos o cuando quiera un dispositivo de transferencia dedicado que alimente PDU estándar aguas abajo.",
+          table: {
+            columns: ["Equipos de doble cable en PDU A/B", "Interruptor de transferencia estática (STS)", "PDU ATS", "ATS de instalación"],
+            rows: [
+              { label: "Método de conmutación", values: ["Sin interruptor: dos PSU comparten la carga", "Estado sólido (SCR)", "Relé dentro de un PDU de rack", "Interruptor o contactor motorizado"] },
+              { label: "Tiempo de transferencia típico", values: ["No necesario", "Pocos ms; menos de 10 ms en el STS 1U de Wandtung", "Normalmente dentro del tiempo de respaldo de la PSU", "Cientos de ms a segundos"] },
+              { label: "Ubicación", values: ["Dentro del servidor", "Rack, o aguas arriba de un grupo de racks", "Rack", "Cuadro general"] },
+              { label: "Ideal para", values: ["Servidores y almacenamiento con dos PSU", "Cargas críticas de un solo cable que no toleran ninguna interrupción", "Equipos de un solo cable en salas de telecomunicaciones y racks edge", "Conmutación red-generador, no cargas de TI directamente"] },
+            ],
+          },
+        },
+        { heading: "¿Necesita un STS? Una comprobación de cinco preguntas", content: "Si responde sí a las dos primeras preguntas y a cualquiera de las demás, un STS debe formar parte de su diseño. 1. ¿Recibe el rack dos fuentes de energía independientes? Un STS necesita una alimentación A y una B, idealmente de sistemas UPS separados o de un UPS y una ruta de red independiente. 2. ¿Hay al menos un equipo de un solo cable que no pueda permitirse perder? Los switches troncales, firewalls y la gestión fuera de banda son los candidatos habituales. 3. ¿El reinicio de ese equipo haría caer otros sistemas? El reinicio de un switch troncal puede desconectar todos los servidores que dependen de él, aunque sigan alimentados. 4. ¿Hará mantenimiento a una ruta de energía con el sitio en funcionamiento? Con un STS puede apagar el UPS A para mantenimiento y la carga de un solo cable sigue funcionando con B. 5. ¿El sitio está desatendido? Los sitios edge, casetas de telecomunicaciones y salas de sucursales no tienen a nadie que cambie un enchufe cuando falla una alimentación. Aplicaciones típicas: salas de recuperación ante desastres de bancos y casas de valores donde equipos antiguos aún tienen una sola PSU; salas de equipos de telecomunicaciones y 5G con doble alimentación AC y equipos mixtos de uno y dos cables; instalaciones gubernamentales y de TI seguras que exigen mantenibilidad concurrente en cada carga; y centros de datos micro modulares y edge donde unos pocos equipos críticos de un solo cable comparten armario con servidores de doble cable. Si todos los equipos del rack son de doble cable, no necesita un STS: alimente cada PSU desde un PDU distinto, como se explica en nuestra guía de compra de PDU." },
+        {
+          heading: "Dónde va el STS en el rack",
+          content: "El STS se instala junto a los PDU A y B, toma una entrada de cada ruta de energía y alimenta solo a los equipos de un solo cable. Los servidores de doble cable siguen tomando energía directamente de ambos PDU. El switch troncal, que tiene un solo cable, recibe ambas rutas a través del STS. Para un grupo mayor de cargas de un solo cable, un STS de mayor capacidad puede situarse aguas arriba y alimentar un PDU dedicado. Para uno o dos equipos, un STS 1U montado dentro del armario es más sencillo y mantiene el cableado corto.",
+          diagram: {
+            nodes: ["UPS A + UPS B (dos rutas de energía)", "STS — elige A o B en menos de 10 ms", "Switch troncal de un solo cable"],
+            caption: "Los servidores de doble cable toman energía directamente del PDU A y del PDU B; solo el equipo de un solo cable se alimenta a través del STS.",
+          },
+        },
+        { heading: "Qué comprobar antes de comprar un STS", content: "Incluya estos puntos en su solicitud de cotización para que los proveedores coticen en igualdad de condiciones. Corriente y tensión nominales: dimensione para la carga conectada más el crecimiento, y coordine con el interruptor aguas arriba. Tiempo de transferencia: pida el máximo garantizado, no un valor típico; menos de 10 ms mantiene funcionando la mayoría de las fuentes de alimentación de TI. Fuente preferida y retransferencia: confirme que puede definir la entrada principal y si el retorno a ella es automático o manual. Conexiones de entrada y salida: bornera, entradas IEC o tomas IEC C13/C19 en la propia unidad. Formato: las unidades 1U de montaje en rack caben en el armario que protegen; los bastidores más grandes van en la sala eléctrica. Estado y alarmas: como mínimo, indicadores por fuente y de salida más una alarma sonora, y añada monitorización en red si el sitio está desatendido. Certificación: indique las normas que exige su mercado para que el proveedor pueda certificar conforme a ellas." },
+        {
+          heading: "El STS de Wandtung",
+          content: "Nuestro STS (interruptor de transferencia estática) es una unidad 1U de montaje en rack diseñada precisamente para el problema de las cargas de un solo cable descrito arriba. Como fabricamos toda la ruta de energía, el STS puede especificarse como un único sistema con PDU de rack, UPS modular y armarios a juego, y cada unidad se prueba bajo tensión antes de salir de fábrica.",
+          table: {
+            columns: ["STS de Wandtung"],
+            rows: [
+              { label: "Formato", values: ["1U de montaje en rack"] },
+              { label: "Entradas", values: ["Dos fuentes A/B independientes, bornera"] },
+              { label: "Tiempo de transferencia", values: ["Sin interrupción, menos de 10 ms"] },
+              { label: "Salida", values: ["Tomas IEC C13/C19 y/o bornera (según modelo)"] },
+              { label: "Estado", values: ["LED de Fuente 1, Fuente 2 y Salida en el panel frontal"] },
+              { label: "Control de alarma", values: ["Botón de silencio en el panel frontal"] },
+              { label: "Personalización", values: ["Corriente nominal, configuración de tomas, paquete de monitorización"] },
+              { label: "Certificación", values: ["Disponible bajo pedido según las especificaciones de su proyecto"] },
+            ],
+          },
+        },
+        { heading: "Cierre la brecha en su redundancia", content: "Un diseño 2N es tan fuerte como su equipo menos protegido. Haga una lista de sus cargas de un solo cable y envíenosla junto con la distribución de sus racks y los detalles de alimentación. Nuestro equipo de ingeniería le recomendará dónde encaja un STS, un PDU ATS o un simple par de PDU A/B, y cotizará la ruta de energía completa." },
+      ],
+      faqs: [
+        { question: "¿Puede un STS sustituir a un UPS?", answer: "No. Un STS elige entre dos fuentes, pero no puede generar energía. Si fallan ambas fuentes, la carga se apaga. Un STS trabaja aguas abajo de los sistemas UPS, no en su lugar." },
+        { question: "¿Añade un STS un punto único de fallo?", answer: "El propio STS pasa a formar parte de la ruta de los equipos que alimenta. Por eso debe proteger solo las cargas de un solo cable, mientras los servidores de doble cable permanecen en PDU A y B separados." },
+        { question: "¿Puedo poner servidores de doble cable detrás de un STS?", answer: "Se puede, pero rara vez tiene sentido. Los equipos de doble cable ya soportan la pérdida de una alimentación, y añadir un STS coloca un dispositivo entre ellos y ambas fuentes." },
+        { question: "¿En qué se diferencia el STS de un PDU ATS?", answer: "El PDU ATS combina la conmutación de transferencia y la distribución de tomas en un solo PDU de rack. El STS es una unidad de transferencia de estado sólido dedicada, con transferencia sin interrupción en menos de 10 ms, adecuada para las cargas de un solo cable más críticas." },
+      ],
+    },
+    ru: {
+      title: "Что такое статический переключатель (STS)? Когда он нужен вашему дата-центру",
+      category: "Критическое питание",
+      excerpt: "Что делает статический переключатель, чем он отличается от ATS и ATS PDU и когда он нужен однокабельным нагрузкам в дата-центре с двумя вводами питания.",
+      readingTime: "6 мин на чтение",
+      body: [
+        { heading: "Слабое звено схемы питания 2N", content: "Вы заплатили за два независимых пути питания: два ИБП, два распределительных щита, PDU A и B в каждой стойке. Затем кто-то подключает межсетевой экран, коммутатор ядра или KVM с одним кабелем питания. Это устройство видит только один путь. Когда этот путь отказывает, оно отключается, и ваша схема 2N ведёт себя как N. В каждом дата-центре есть такие однокабельные нагрузки. Сетевые устройства, устаревшие серверы, контроллеры СХД и телекоммуникационное оборудование часто поставляются с одним блоком питания (PSU). Статический переключатель (STS) — стандартный способ обеспечить им ту же защиту, что и у окружающего их двухкабельного оборудования. В этом руководстве объясняется, что делает STS, чем он отличается от ATS и ATS PDU и как понять, нужен ли он вашему проекту." },
+        { heading: "Что такое статический переключатель?", content: "Статический переключатель — это устройство с двумя независимыми входами питания и одним выходом. Он питает нагрузку от приоритетного источника, а если этот источник отказывает или выходит за допустимые пределы, переводит нагрузку на резервный источник за несколько миллисекунд. «Статический» означает, что в цепи коммутации нет подвижных контактов. Вместо реле или моторизованного автомата STS использует полупроводниковые приборы, обычно тиристоры (SCR), которые электроника включает и выключает гораздо быстрее, чем может разомкнуться и замкнуться любой механический контакт. Переключение проходит в четыре шага. 1. Контроль: STS непрерывно измеряет напряжение, частоту и форму сигнала на обоих входах. 2. Обнаружение: когда активный источник проседает, даёт перенапряжение или пропадает, контроллер фиксирует это за долю периода. 3. Переключение: тиристоры отказавшего источника закрываются, а тиристоры исправного открываются. 4. Возврат: когда приоритетный источник снова стабилен, STS может вернуться на него автоматически или дождаться оператора — в зависимости от настройки. Почему важны миллисекунды: большинство блоков питания ИТ-оборудования удерживают выходное напряжение примерно 10–20 мс после пропадания входного. Переключение, завершившееся в этом окне, незаметно для сервера или коммутатора. Более долгое переключение вызывает перезагрузку, даже если питание вернулось меньше чем через секунду. Поэтому именно время переключения, а не просто «автоматическое переключение», определяет, действительно ли устройство защищает ИТ-оборудование." },
+        {
+          heading: "STS, ATS, ATS PDU и двухкабельное питание: сравнение",
+          content: "Все четыре варианта дают оборудованию доступ к двум источникам питания. Они различаются скоростью переключения, местом установки и тем, что защищают. Практический вывод: ATS на уровне здания защищает здание, а не сервер. Между ИТ-нагрузкой и двумя вводами, резервированными ИБП, нужно либо двухкабельное оборудование, либо STS, либо ATS PDU. STS или ATS PDU? Оба решают проблему одного кабеля на уровне стойки. Выбирайте ATS PDU, если нужны переключение и распределение по розеткам в одном устройстве для умеренных нагрузок. Выбирайте STS, если нагрузка — самая критичная в зале, если один переключатель должен защищать несколько устройств или если нужен отдельный переключатель, питающий стандартные PDU ниже по цепи.",
+          table: {
+            columns: ["Двухкабельное оборудование на PDU A/B", "Статический переключатель (STS)", "ATS PDU", "ATS здания"],
+            rows: [
+              { label: "Способ переключения", values: ["Переключателя нет: два PSU делят нагрузку", "Полупроводниковый (SCR)", "Реле внутри стоечного PDU", "Моторизованный автомат или контактор"] },
+              { label: "Типичное время переключения", values: ["Не требуется", "Несколько мс; менее 10 мс у 1U STS Wandtung", "Обычно в пределах времени удержания PSU", "От сотен мс до секунд"] },
+              { label: "Место установки", values: ["Внутри сервера", "Стойка или выше по цепи для группы стоек", "Стойка", "Главный распределительный щит"] },
+              { label: "Лучше всего для", values: ["Серверов и СХД с двумя PSU", "Критичных однокабельных нагрузок, не допускающих перерыва", "Однокабельного оборудования в телеком-помещениях и edge-стойках", "Переключения сеть–генератор, а не прямо ИТ-нагрузок"] },
+            ],
+          },
+        },
+        { heading: "Нужен ли вам STS? Проверка из пяти вопросов", content: "Если вы ответили «да» на первые два вопроса и на любой из остальных, STS должен быть в вашем проекте. 1. Получает ли стойка два независимых источника питания? Для STS нужны ввод A и ввод B, в идеале от разных ИБП или от ИБП и отдельного сетевого пути. 2. Есть ли хотя бы одно однокабельное устройство, потерю которого вы не можете допустить? Обычные кандидаты — коммутаторы ядра, межсетевые экраны и системы внеполосного управления. 3. Приведёт ли перезагрузка этого устройства к отказу других систем? Перезагрузка коммутатора ядра может отключить все серверы за ним, даже если они остались под питанием. 4. Будете ли вы обслуживать один из путей питания при работающем объекте? Со STS можно отключить ИБП A на обслуживание, и однокабельная нагрузка продолжит работать от B. 5. Объект необслуживаемый? На edge-площадках, в телеком-контейнерах и серверных филиалов нет никого, кто переключит вилку при отказе ввода. Типичные применения: резервные центры банков и брокерских компаний, где устаревшие устройства всё ещё имеют один PSU; телекоммуникационные и 5G-аппаратные с двумя вводами переменного тока и смешанным одно- и двухкабельным оборудованием; государственные и защищённые ИТ-объекты, требующие параллельного обслуживания каждой нагрузки; микромодульные и edge-дата-центры, где несколько критичных однокабельных устройств стоят в одном шкафу с двухкабельными серверами. Если всё оборудование в стойке двухкабельное, STS не нужен: подключите каждый PSU к отдельному PDU, как описано в нашем руководстве по выбору PDU." },
+        {
+          heading: "Где STS располагается в стойке",
+          content: "STS устанавливается рядом с PDU A и B, получает по одному входу от каждого пути питания и питает только однокабельное оборудование. Двухкабельные серверы по-прежнему питаются напрямую от обоих PDU. Коммутатор ядра с одним кабелем получает оба пути через STS. Для большей группы однокабельных нагрузок STS большей мощности можно поставить выше по цепи, чтобы он питал выделенный PDU. Для одного-двух устройств проще стоечный 1U STS внутри шкафа — так кабели остаются короткими.",
+          diagram: {
+            nodes: ["ИБП A + ИБП B (два пути питания)", "STS — выбирает A или B менее чем за 10 мс", "Однокабельный коммутатор ядра"],
+            caption: "Двухкабельные серверы питаются напрямую от PDU A и PDU B; через STS питается только однокабельное устройство.",
+          },
+        },
+        { heading: "Что проверить перед покупкой STS", content: "Включите эти пункты в запрос предложений, чтобы поставщики давали сопоставимые цены. Номинальный ток и напряжение: рассчитывайте на подключённую нагрузку плюс рост и согласуйте с вышестоящим автоматом. Время переключения: запрашивайте гарантированный максимум, а не типичное значение; менее 10 мс сохраняет работу большинства блоков питания ИТ-оборудования. Приоритетный источник и возврат: убедитесь, что можно задать основной вход и выбрать автоматический или ручной возврат на него. Подключение входов и выходов: клеммная колодка, входы IEC или розетки IEC C13/C19 на самом устройстве. Форм-фактор: стоечные устройства 1U помещаются в защищаемый шкаф, более крупные шасси ставятся в электрощитовой. Индикация и аварийные сигналы: как минимум индикаторы каждого источника и выхода плюс звуковой сигнал, а для необслуживаемых объектов — сетевой мониторинг. Сертификация: укажите стандарты, которых требует ваш рынок, чтобы поставщик мог сертифицировать оборудование по ним." },
+        {
+          heading: "STS от Wandtung",
+          content: "Наш STS (статический переключатель) — стоечное устройство 1U, созданное именно для описанной выше проблемы однокабельных нагрузок. Поскольку мы производим весь путь питания, STS можно заказать как единую систему с подходящими стоечными PDU, модульными ИБП и шкафами, причём каждое устройство проходит испытание под нагрузкой перед отгрузкой с завода.",
+          table: {
+            columns: ["STS Wandtung"],
+            rows: [
+              { label: "Форм-фактор", values: ["1U, стоечный"] },
+              { label: "Входы", values: ["Два независимых источника A/B, клеммная колодка"] },
+              { label: "Время переключения", values: ["Бесперебойное, менее 10 мс"] },
+              { label: "Выход", values: ["Розетки IEC C13/C19 и/или клеммная колодка (в зависимости от модели)"] },
+              { label: "Индикация", values: ["Светодиоды «Источник 1», «Источник 2» и «Выход» на передней панели"] },
+              { label: "Управление сигналом", values: ["Кнопка отключения звука на передней панели"] },
+              { label: "Индивидуальная настройка", values: ["Номинальный ток, конфигурация розеток, пакет мониторинга"] },
+              { label: "Сертификация", values: ["По запросу в соответствии с требованиями вашего проекта"] },
+            ],
+          },
+        },
+        { heading: "Закройте брешь в резервировании", content: "Схема 2N надёжна ровно настолько, насколько защищено её наименее защищённое устройство. Составьте список однокабельных нагрузок и отправьте его нам вместе с планировкой стоек и данными о вводах питания. Наши инженеры подскажут, где уместен STS, ATS PDU или простая пара PDU A/B, и рассчитают стоимость всего пути питания." },
+      ],
+      faqs: [
+        { question: "Может ли STS заменить ИБП?", answer: "Нет. STS выбирает между двумя источниками, но не может вырабатывать энергию. Если откажут оба источника, нагрузка отключится. STS работает после ИБП, а не вместо них." },
+        { question: "Создаёт ли STS единую точку отказа?", answer: "Сам STS становится частью пути питания устройств, которые он питает. Поэтому он должен защищать только однокабельные нагрузки, а двухкабельные серверы должны оставаться на отдельных PDU A и B." },
+        { question: "Можно ли подключить двухкабельные серверы через STS?", answer: "Можно, но это редко имеет смысл. Двухкабельное оборудование и так переживает потерю одного ввода, а STS добавляет устройство между ним и обоими источниками." },
+        { question: "Чем STS отличается от ATS PDU?", answer: "ATS PDU объединяет переключение и распределение по розеткам в одном стоечном PDU. STS — отдельное полупроводниковое устройство переключения с бесперебойным переводом менее чем за 10 мс, подходящее для самых критичных однокабельных нагрузок." },
+      ],
+    },
+    zh: {
+      title: "什么是静态转换开关（STS）？数据中心什么时候需要它",
+      category: "关键电力",
+      excerpt: "静态转换开关的作用、它与 ATS 和 ATS PDU 的区别，以及双路供电数据中心里的单电源负载何时需要它。",
+      readingTime: "6分钟阅读",
+      body: [
+        { heading: "2N 供电设计中的薄弱环节", content: "你已经为两条独立的供电路径付了钱：两套 UPS、两面配电柜、每个机柜里都有 A、B 两路 PDU。然后有人插上了一台只有一根电源线的防火墙、核心交换机或 KVM。这台设备只能看到一条路径。这条路径一断，它就断电，你的 2N 设计实际上变成了 N。每个数据中心都有一些这样的单电源负载。网络设备、老旧服务器、存储控制器和通信设备常常只配一个电源模块（PSU）。静态转换开关（STS）是让它们获得与周围双电源设备同等保护的标准做法。本文介绍 STS 的作用、它与 ATS 和 ATS PDU 的对比，以及如何判断你的项目是否需要它。" },
+        { heading: "什么是静态转换开关？", content: "静态转换开关是一种有两路独立电源输入、一路输出的设备。它由首选电源为负载供电，一旦该电源故障或超出允许范围，就在几毫秒内把负载切换到备用电源。\"静态\"指切换回路中没有可动触点。STS 不用继电器或电动断路器，而是使用固态器件，通常是晶闸管（SCR），电子电路控制它们导通和关断的速度远快于任何机械触点的分合。一次切换分四步。1. 监测：STS 持续采样两路输入的电压、频率和波形。2. 检测：当前供电源出现跌落、过压或中断时，控制器在不到一个周波内识别出来。3. 切换：关断故障电源一侧的 SCR，导通正常电源一侧的 SCR。4. 回切：首选电源恢复稳定后，STS 可按配置自动切回，或等待运维人员操作。为什么毫秒很关键：大多数 IT 电源在输入断电后能维持输出约 10 到 20 毫秒。在这个窗口内完成的切换，服务器或交换机完全感知不到；超过这个时间，即使一秒内就来电，设备也会重启。所以决定转换设备能否真正保护 IT 设备的指标是转换时间，而不只是\"自动切换\"。" },
+        {
+          heading: "STS、ATS、ATS PDU 与双电源供电对比",
+          content: "这四种方式都能让设备接入两路电源，区别在于切换速度、安装位置和保护对象。实际结论是：配电层面的 ATS 保护的是建筑，不是服务器。在 IT 负载与两路 UPS 后备电源之间，你需要的是双电源设备、STS 或 ATS PDU 三者之一。选 STS 还是 ATS PDU？两者都能在机柜层面解决单电源问题。如果负载适中，并且希望转换和插座分配集成在一台设备里，选 ATS PDU。如果负载是机房里最关键的，或需要一台开关保护多台设备，或希望用一台专用转换设备给下游标准 PDU 供电，选 STS。",
+          table: {
+            columns: ["双电源设备接 A/B 两路 PDU", "静态转换开关（STS）", "ATS PDU", "配电级 ATS"],
+            rows: [
+              { label: "切换方式", values: ["无切换：两个 PSU 分担负载", "固态（SCR）", "机柜 PDU 内置继电器", "电动断路器或接触器"] },
+              { label: "典型转换时间", values: ["无需切换", "几毫秒；Wandtung 1U STS 小于 10 毫秒", "通常在 PSU 掉电保持时间内", "数百毫秒到数秒"] },
+              { label: "安装位置", values: ["服务器内部", "机柜内，或一组机柜的上游", "机柜内", "总配电柜"] },
+              { label: "适用场景", values: ["配双 PSU 的服务器和存储", "不能容忍任何中断的关键单电源负载", "通信机房和边缘机柜中的单电源设备", "市电与发电机切换，不直接用于 IT 负载"] },
+            ],
+          },
+        },
+        { heading: "你需要 STS 吗？五个问题自查", content: "如果前两个问题回答\"是\"，并且后面任意一个也回答\"是\"，你的设计里就应该有 STS。1. 机柜是否接入了两路独立电源？STS 需要 A 路和 B 路供电，最好来自两套独立 UPS，或一套 UPS 加一条独立市电路径。2. 是否至少有一台不能失去的单电源设备？常见的有核心交换机、防火墙和带外管理设备。3. 这台设备重启会不会拖垮其他系统？核心交换机一重启，后面所有服务器都会断网，即便它们一直有电。4. 是否需要在业务运行时检修某一路电源？有了 STS，可以停掉 UPS A 进行检修，单电源负载继续由 B 路供电。5. 站点是否无人值守？边缘站点、通信方舱和分支机房在某路供电故障时，没有人能去换插头。典型应用包括：银行和证券公司的灾备机房，其中老旧设备仍只有一个 PSU；双路交流供电、单双电源设备混用的通信和 5G 机房；要求每个负载都可在线维护的政府和涉密 IT 设施；以及少量关键单电源设备与双电源服务器共用一个机柜的微模块和边缘数据中心。如果机柜里的设备全都是双电源，就不需要 STS，只要把每个 PSU 分别接到不同的 PDU 即可，详见我们的 PDU 选购指南。" },
+        {
+          heading: "STS 在机柜中的位置",
+          content: "STS 安装在 A、B 两路 PDU 旁边，从每条供电路径各取一路输入，只给单电源设备供电。双电源服务器继续直接从两路 PDU 取电，只有一根电源线的核心交换机则通过 STS 获得两路供电。如果单电源负载较多，可以在上游配置更大容量的 STS，为一台专用 PDU 供电。如果只有一两台设备，在机柜内装一台 1U 机架式 STS 更简单，布线也更短。",
+          diagram: {
+            nodes: ["UPS A + UPS B（两条供电路径）", "STS — 10 毫秒内选择 A 路或 B 路", "单电源核心交换机"],
+            caption: "双电源服务器直接从 PDU A 和 PDU B 取电；只有单电源设备经由 STS 供电。",
+          },
+        },
+        { heading: "采购 STS 前要确认的事项", content: "把以下几点写进询价单，让各家供应商按同一标准报价。额定电流和电压：按接入负载加上扩容余量选型，并与上游断路器匹配。转换时间：要求供应商给出保证的最大值，而不是典型值；小于 10 毫秒可以让大多数 IT 电源持续运行。首选电源与回切：确认可以设定哪一路为主输入，以及回切是自动还是手动。输入输出接线：接线端子、IEC 输入插座，或设备自带的 IEC C13/C19 输出插座。外形规格：1U 机架式设备可装在它所保护的机柜内，更大的机型放在配电室。状态与告警：至少要有每路电源和输出的指示灯以及声音告警；无人值守站点还应增加网络监控。认证：说明你所在市场要求的标准，以便供应商据此办理认证。" },
+        {
+          heading: "Wandtung STS",
+          content: "我们的 STS（静态转换开关）是一款 1U 机架式设备，正是为上文所述的单电源问题而设计。由于我们生产整条供电链路的产品，STS 可以与配套的机柜 PDU、模块化 UPS 和机柜作为一套系统选型，每台设备出厂前都经过通电测试。",
+          table: {
+            columns: ["Wandtung STS"],
+            rows: [
+              { label: "外形规格", values: ["1U 机架式"] },
+              { label: "输入", values: ["A/B 两路独立电源，接线端子"] },
+              { label: "转换时间", values: ["无缝切换，小于 10 毫秒"] },
+              { label: "输出", values: ["IEC C13/C19 插座和/或接线端子（视型号而定）"] },
+              { label: "状态指示", values: ["前面板电源 1、电源 2 和输出 LED 指示灯"] },
+              { label: "告警控制", values: ["前面板消音按钮"] },
+              { label: "可定制项", values: ["额定电流、输出插座配置、监控套件"] },
+              { label: "认证", values: ["可根据项目要求提供"] },
+            ],
+          },
+        },
+        { heading: "补上冗余设计的缺口", content: "2N 设计的可靠性取决于保护最薄弱的那台设备。列出你的单电源负载，连同机柜布局和供电信息一起发给我们。我们的工程团队会建议在哪里用 STS、ATS PDU 或一对普通的 A/B PDU，并为整条供电链路报价。" },
+      ],
+      faqs: [
+        { question: "STS 能代替 UPS 吗？", answer: "不能。STS 只在两路电源之间做选择，本身不能产生电力。两路电源都断了，负载就会断电。STS 装在 UPS 下游，而不是替代 UPS。" },
+        { question: "STS 会增加单点故障吗？", answer: "STS 本身会成为它所供电设备的供电路径的一部分。因此它只应保护单电源负载，双电源服务器仍应分别接在独立的 A、B 两路 PDU 上。" },
+        { question: "可以把双电源服务器接在 STS 后面吗？", answer: "可以，但通常没有意义。双电源设备本身就能承受失去一路供电，加一台 STS 反而在它和两路电源之间多了一台设备。" },
+        { question: "STS 和 ATS PDU 有什么区别？", answer: "ATS PDU 把转换开关和插座分配集成在一台机柜 PDU 中。STS 是专用的固态转换设备，无缝切换时间小于 10 毫秒，适合最关键的单电源负载。" },
+      ],
+    },
+  },
 };
 
 export function getArticleContent<T extends ArticleContent>(
