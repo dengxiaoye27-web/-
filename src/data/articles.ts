@@ -919,6 +919,134 @@ export const articles: Article[] = [
       "what-is-n-plus-1-redundancy",
     ],
   },
+  {
+    slug: "what-is-a-static-transfer-switch",
+    title: "What Is a Static Transfer Switch (STS)? When Your Data Center Needs One",
+    metaTitle: "Static Transfer Switch (STS) vs ATS for Data Centers",
+    category: "Critical Power",
+    excerpt:
+      "What a static transfer switch does, how it differs from an ATS or ATS PDU, and when single-corded loads in a dual-feed data center need one.",
+    publishedAt: "2026-10-31",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "The Weak Link in a 2N Power Design",
+        content:
+          "You paid for two independent power paths: two UPS systems, two distribution boards, A and B PDUs in every rack. Then someone plugs in a firewall, a core switch or a KVM with a single power cord. That device sees only one path. When that path fails, it goes dark, and your 2N design behaves like N. Every data center has some of these single-corded loads. Network appliances, legacy servers, storage controllers and telecom gear often ship with one PSU. A static transfer switch (STS) is the standard way to give them the same protection as the dual-corded equipment around them. This guide explains what an STS does, how it compares with an ATS and an ATS PDU, and how to decide whether your project needs one.",
+      },
+      {
+        heading: "What Is a Static Transfer Switch?",
+        content:
+          "A static transfer switch is a device with two independent power inputs and one output. It feeds the load from a preferred source and, if that source fails or drifts out of tolerance, moves the load to the alternate source in a few milliseconds. \"Static\" means there are no moving contacts in the switching path. Instead of a relay or motor-driven breaker, an STS uses solid-state devices, usually thyristors (SCRs). Electronics can turn them on and off far faster than any mechanical contact can open and close. A transfer happens in four steps. 1. Monitor: the STS continuously samples voltage, frequency and waveform on both inputs. 2. Detect: when the active source sags, swells or disappears, the controller flags it within a fraction of a cycle. 3. Switch: the SCRs on the failing source are turned off and the SCRs on the healthy source are turned on. 4. Return: when the preferred source is stable again, the STS can transfer back automatically or wait for an operator, depending on configuration. Why milliseconds matter: most IT power supplies hold up their output for roughly 10 to 20 ms after input power is lost. A transfer that finishes inside that window is invisible to the server or switch. A transfer that takes longer causes a reboot, even though power came back within a second. That is why transfer time, not just \"automatic switching\", is the specification that decides whether a transfer device actually protects IT equipment.",
+      },
+      {
+        heading: "STS vs ATS vs ATS PDU vs Dual-Corded Feeds",
+        content:
+          "All four give equipment access to two power sources. They differ in how fast they switch, where they sit and what they protect. The practical takeaway: a facility ATS protects the building, not the server. Between the IT load and two UPS-backed feeds, you need either dual-corded equipment, an STS or an ATS PDU. STS or ATS PDU? Both solve the single-cord problem at the rack. Choose an ATS PDU when you want transfer and outlet distribution in one unit for moderate loads. Choose an STS when the load is the most critical in the room, when one switch must protect several devices, or when you want a dedicated transfer device feeding standard PDUs downstream.",
+        table: {
+          columns: ["Dual-corded equipment on A/B PDUs", "Static transfer switch (STS)", "ATS PDU", "Facility ATS"],
+          rows: [
+            {
+              label: "Switching method",
+              values: ["No switch: two PSUs share the load", "Solid-state (SCR)", "Relay inside a rack PDU", "Motorized breaker or contactor"],
+            },
+            {
+              label: "Typical transfer time",
+              values: ["None needed", "A few ms; under 10 ms on Wandtung's 1U STS", "Usually within PSU ride-through", "Hundreds of ms to seconds"],
+            },
+            {
+              label: "Where it sits",
+              values: ["Inside the server", "Rack, or upstream of a group of racks", "Rack", "Main switchboard"],
+            },
+            {
+              label: "Best for",
+              values: [
+                "Servers and storage with two PSUs",
+                "Single-corded critical loads that cannot tolerate any interruption",
+                "Single-corded gear in telecom rooms and edge racks",
+                "Utility-to-generator changeover, not IT loads directly",
+              ],
+            },
+          ],
+        },
+      },
+      {
+        heading: "Do You Need an STS? A Five-Question Check",
+        content:
+          "If you answer yes to the first two questions and to any one of the rest, an STS belongs in your design. 1. Does the rack receive two independent power sources? An STS needs an A feed and a B feed, ideally from separate UPS systems or a UPS and a separate utility path. 2. Is there at least one single-corded device you cannot afford to lose? Core network switches, firewalls and out-of-band management are the usual candidates. 3. Would a reboot of that device take down other systems? A core switch reboot can drop every server behind it, even if those servers stayed powered. 4. Will you maintain one power path while the site is live? With an STS, you can shut down UPS A for service and the single-corded load keeps running on B. 5. Is the site unattended? Edge sites, telecom shelters and branch rooms have nobody on hand to move a plug when a feed fails. Typical applications include bank and securities disaster recovery rooms where legacy appliances still have one PSU; telecom and 5G equipment rooms with dual AC feeds and mixed single- and dual-corded gear; government and secure IT facilities that require concurrent maintainability on every load; and micro modular and edge data centers where a few critical single-corded devices share a cabinet with dual-corded servers. If every device in the rack is dual-corded, you do not need an STS. Feed each PSU from a separate PDU, as covered in our PDU buyer's guide.",
+      },
+      {
+        heading: "Where the STS Goes in the Rack",
+        content:
+          "The STS sits beside the A and B PDUs, takes one input from each power path, and feeds only the single-corded equipment. Dual-corded servers keep drawing from both PDUs directly. The core switch, which has one cord, gets both paths through the STS. For a larger group of single-corded loads, a higher-rated STS can sit upstream and feed a dedicated PDU. For one or two devices, a 1U rack-mount STS inside the cabinet is simpler and keeps the cabling short.",
+        diagram: {
+          nodes: ["UPS A + UPS B (two power paths)", "STS — picks A or B in under 10 ms", "Single-corded core switch"],
+          caption:
+            "Dual-corded servers draw from PDU A and PDU B directly; only the single-corded device is fed through the STS.",
+        },
+      },
+      {
+        heading: "What to Check Before You Buy an STS",
+        content:
+          "Put these points in your RFQ so suppliers quote like for like. Rated current and voltage: size for the connected load plus growth, and match the upstream circuit breaker. Transfer time: ask for the guaranteed maximum, not a typical value; under 10 ms keeps most IT power supplies running. Preferred source and retransfer: confirm you can set which input is primary and whether return to it is automatic or manual. Input and output connections: terminal block, IEC inlets, or IEC C13/C19 outlets on the unit itself. Form factor: 1U rack-mount units fit inside the cabinet they protect; larger frames sit in the power room. Status and alarms: at minimum, per-source and output indicators plus an audible alarm, with network monitoring added if the site is unattended. Certification: state the standards your market requires so the supplier can certify to them.",
+      },
+      {
+        heading: "The Wandtung STS",
+        content:
+          "Our STS (Static Transfer Switch) is a 1U rack-mount unit built for exactly the single-corded problem described above. Because we manufacture the full power path, the STS can be specified as one system with matching rack PDUs, modular UPS and cabinets, with every unit power-tested before it leaves the factory.",
+        table: {
+          columns: ["Wandtung STS"],
+          rows: [
+            { label: "Form factor", values: ["1U rack-mount"] },
+            { label: "Inputs", values: ["Dual independent A/B sources, terminal block"] },
+            { label: "Transfer time", values: ["Seamless, under 10 ms"] },
+            { label: "Output", values: ["IEC C13/C19 outlets and/or terminal block (model dependent)"] },
+            { label: "Status", values: ["Source 1, Source 2 and Output LEDs on the front panel"] },
+            { label: "Alarm control", values: ["Front-panel mute button"] },
+            { label: "Customization", values: ["Current rating, outlet configuration, monitoring package"] },
+            { label: "Certification", values: ["Available on request to your project specification"] },
+          ],
+        },
+      },
+      {
+        heading: "Close the Gap in Your Redundancy",
+        content:
+          "A 2N design is only as strong as its least-protected device. List your single-corded loads, then send us the list with your rack layout and feed details. Our engineering team will recommend where an STS, an ATS PDU or a simple A/B PDU pair fits, and quote the complete power path.",
+      },
+    ],
+    ctaLinks: [
+      { label: "View the STS →", href: "/products/sts" },
+      { label: "Explore Critical Power Solutions →", href: "/solutions/critical-power" },
+      { label: "Talk to Our Engineering Team →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "Can an STS replace a UPS?",
+        answer:
+          "No. An STS chooses between two sources but cannot create power. If both sources fail, the load goes down. An STS works downstream of UPS systems, not instead of them.",
+      },
+      {
+        question: "Does an STS add a single point of failure?",
+        answer:
+          "The STS itself becomes part of the path for the devices it feeds. That is why it should protect only single-corded loads, while dual-corded servers stay on separate A and B PDUs.",
+      },
+      {
+        question: "Can I put dual-corded servers behind an STS?",
+        answer:
+          "You can, but it rarely makes sense. Dual-corded equipment already rides through the loss of one feed, and adding an STS puts a device between it and both sources.",
+      },
+      {
+        question: "How is the STS different from an ATS PDU?",
+        answer:
+          "The ATS PDU combines transfer switching and outlet distribution in one rack PDU. The STS is a dedicated solid-state transfer unit with under-10 ms seamless transfer, suited to the most critical single-corded loads.",
+      },
+    ],
+    relatedArticleSlugs: [
+      "what-is-n-plus-1-redundancy",
+      "online-vs-line-interactive-vs-standby-ups",
+      "how-to-choose-a-data-center-pdu",
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
