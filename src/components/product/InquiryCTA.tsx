@@ -5,15 +5,20 @@ import { Button } from "@/components/ui/Button";
 
 export function InquiryCTA({
   productName,
+  productSlug,
   locale,
   compact = false,
 }: {
   productName: string;
+  /** When set, the buttons open the quote form with this product preselected. */
+  productSlug?: string;
   locale: Locale;
   compact?: boolean;
 }) {
   const t = inquiryMessages[locale];
   const common = getCommonMessages(locale);
+  const contactHref = productSlug ? `/contact?product=${encodeURIComponent(productSlug)}` : "/contact";
+  const datasheetHref = productSlug ? `${contactHref}&type=datasheet` : "/contact";
   return (
     <div
       className={`rounded-2xl border border-navy-700 bg-navy-900 text-white ${
@@ -27,8 +32,8 @@ export function InquiryCTA({
         {t.description}
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Button href="/contact">{common.nav.requestQuote}</Button>
-        <Button href="/contact" variant="outline">
+        <Button href={contactHref}>{common.nav.requestQuote}</Button>
+        <Button href={datasheetHref} variant="outline">
           {t.datasheet}
         </Button>
       </div>
