@@ -10,6 +10,10 @@ import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
 import { metaDescription } from "@/lib/meta-description";
+import { getProduct } from "@/data/products";
+import { getCategory } from "@/data/categories";
+import { getProductContent } from "@/i18n/content/products";
+import { inquiryMessages } from "@/i18n/messages/inquiry";
 
 export async function generateMetadata({
   params,
@@ -28,14 +32,29 @@ export async function generateMetadata({
 
 export default async function ContactPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ product?: string | string[]; type?: string | string[] }>;
 }) {
   const { locale: rawLocale } = await params;
+  const query = await searchParams;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const t = getContactMessages(locale);
   const common = getCommonMessages(locale);
   const breadcrumbItems = [{ label: common.nav.home, href: "/" }, { label: common.nav.contact }];
+
+  // Arriving from a product page's "Request Quote" / datasheet button:
+  // preselect its category and note the product in the requirements field.
+  // Unknown slugs are ignored, so a plain /contact visit is unchanged.
+  const productSlug = typeof query.product === "string" ? query.product : undefined;
+  const wantsDatasheet = query.type === "datasheet";
+  const product = productSlug ? getProduct(productSlug) : undefined;
+  const category = product ? getCategory(product.category) : undefined;
+  const inquiry = inquiryMessages[locale];
+  const initialRequirements = product
+    ? `${wantsDatasheet ? inquiry.requestingDatasheet : inquiry.inquiringAbout}: ${getProductContent(product.slug, locale, product).name}\n\n`
+    : undefined;
 
   return (
     <div className="bg-white">
@@ -56,7 +75,12 @@ export default async function ContactPage({
         <div className="lg:col-span-2">
           <SectionHeading eyebrow={t.form.eyebrow} title={t.form.title} />
           <div className="mt-8">
-            <RFQForm messages={t.form} />
+            <RFQForm
+              key={`${product?.slug ?? ""}:${wantsDatasheet}`}
+              messages={t.form}
+              initialCategoryName={category?.name}
+              initialRequirements={initialRequirements}
+            />
           </div>
         </div>
 
