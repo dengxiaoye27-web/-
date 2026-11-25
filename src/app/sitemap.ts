@@ -36,11 +36,11 @@ const hubRoutes = new Set(["", "/resources"]);
 
 // Only the target markets' locales are submitted as sitemap entries, so
 // Google's crawl and indexing attention for a young domain goes to
-// English, French, Spanish and Chinese first. Arabic and Russian pages stay
+// English, French, Spanish, Chinese and Arabic first. Russian pages stay
 // live and are still listed as hreflang alternates (and linked from the
 // language switcher), so they remain discoverable — they just aren't pushed.
 // Add a locale back here to put it in the sitemap again.
-const sitemapLocales = locales.filter((l) => l !== "ar" && l !== "ru");
+const sitemapLocales = locales.filter((l) => l !== "ru");
 
 function lastModifiedFor(route: string): string | undefined {
   return articleDates.get(route) ?? (hubRoutes.has(route) ? newestArticleDate : undefined);
