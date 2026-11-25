@@ -1807,6 +1807,33 @@ export const products: Product[] = [
         ],
       },
       {
+        title: "Micro Module Parameters",
+        specs: [
+          { label: "Channel Configuration", value: "Single channel / dual channel" },
+          { label: "Cabinet Quantity", value: "Single channel ≤ 24 cabinets; dual channel ≤ 48 cabinets" },
+          { label: "Power Supply", value: "208 / 380 / 400 / 415V, 50/60 Hz, 3Ph + N + PE" },
+          { label: "Max IT Load", value: "125 kW (with integrated UPS) / 145 kW (with integrated PDU)" },
+        ],
+      },
+      {
+        title: "Cabinet Enclosure",
+        specs: [
+          { label: "Cabinet Size (W×D×H)", value: "600 × 1200 × 2000 mm" },
+          { label: "Space Available", value: "42U / 47U" },
+          { label: "Material", value: "SPCC cold-rolled steel" },
+          { label: "Cabinet Standard", value: "International standard" },
+        ],
+      },
+      {
+        title: "Integrated Power & Cooling",
+        specs: [
+          { label: "Integrated UPS Capacity", value: "25 kVA – 125 kVA" },
+          { label: "UPS Efficiency", value: "≥ 96%" },
+          { label: "In-Row Air Conditioner Cooling Capacity", value: "25 / 35 / 40 / 50 / 60 kW" },
+          { label: "Power Distribution Output", value: "32A / 1P, up to 144 circuits" },
+        ],
+      },
+      {
         title: "Safety & Sensing",
         specs: [
           { label: "Sensors", value: "Temperature/humidity, smoke, water-leak" },
@@ -1816,7 +1843,7 @@ export const products: Product[] = [
       },
     ],
     applications: ["Enterprise IT rooms", "Bank branch data rooms", "Edge / regional data centers"],
-    customizationOptions: ["Number of bays (1-5)", "Power redundancy level", "Cooling type", "Sensor package"],
+    customizationOptions: ["Number of bays (1-5)", "Power redundancy level", "Cooling type", "Sensor package", "Private mold / OEM / ODM"],
     standards: ["Designed to IEC 62040 UPS performance standards", "Certification available on request per project spec"],
     faqs: [
       {
@@ -1865,20 +1892,47 @@ export const products: Product[] = [
       {
         title: "System Composition",
         specs: [
-          { label: "Layout", value: "Single row, 2–6 cabinets typical" },
+          { label: "Layout", value: "Single channel, up to 24 cabinets" },
           { label: "Power", value: "Rack mount or modular UPS + intelligent PDU" },
           { label: "Cooling", value: "In-row or precision air conditioning" },
         ],
       },
+      {
+        title: "Micro Module Parameters",
+        specs: [
+          { label: "Channel Configuration", value: "Single channel" },
+          { label: "Cabinet Quantity", value: "≤ 24 cabinets" },
+          { label: "Power Supply", value: "208 / 380 / 400 / 415V, 50/60 Hz, 3Ph + N + PE" },
+          { label: "Max IT Load", value: "125 kW (with integrated UPS) / 145 kW (with integrated PDU)" },
+        ],
+      },
+      {
+        title: "Cabinet Enclosure",
+        specs: [
+          { label: "Cabinet Size (W×D×H)", value: "600 × 1200 × 2000 mm" },
+          { label: "Space Available", value: "42U / 47U" },
+          { label: "Material", value: "SPCC cold-rolled steel" },
+          { label: "Cabinet Standard", value: "International standard" },
+        ],
+      },
+      {
+        title: "Integrated Power & Cooling",
+        specs: [
+          { label: "Integrated UPS Capacity", value: "25 kVA – 125 kVA" },
+          { label: "UPS Efficiency", value: "≥ 96%" },
+          { label: "In-Row Air Conditioner Cooling Capacity", value: "25 / 35 / 40 / 50 / 60 kW" },
+          { label: "Power Distribution Output", value: "32A / 1P, up to 144 circuits" },
+        ],
+      },
     ],
     applications: ["Small branch data rooms", "Retail back-office IT", "Regional office server rooms"],
-    customizationOptions: ["Cabinet count", "Power redundancy level", "Cooling type"],
+    customizationOptions: ["Cabinet count", "Power redundancy level", "Cooling type", "Private mold / OEM / ODM"],
     standards: ["Certification available on request per project spec"],
     faqs: [
       {
         question: "When is a single row micro data center enough, versus dual row?",
         answer:
-          "A single row layout suits smaller IT loads (typically under 6 cabinets) where floor space is limited and full aisle containment isn't required — dual row becomes more efficient as cabinet count and cooling density increase.",
+          "A single row layout suits smaller IT loads (up to 24 cabinets) where floor space is limited and full aisle containment isn't required — dual row becomes more efficient as cabinet count and cooling density increase.",
       },
     ],
     relatedProductSlugs: ["smart-micro-module", "dual-row-micro-data-center"],
@@ -1905,14 +1959,41 @@ export const products: Product[] = [
       {
         title: "System Composition",
         specs: [
-          { label: "Layout", value: "Dual row, containment aisle between" },
+          { label: "Layout", value: "Dual channel, containment aisle between, up to 48 cabinets" },
           { label: "Power", value: "Modular UPS + intelligent PDU" },
           { label: "Cooling", value: "In-row cooling within the containment aisle" },
         ],
       },
+      {
+        title: "Micro Module Parameters",
+        specs: [
+          { label: "Channel Configuration", value: "Dual channel" },
+          { label: "Cabinet Quantity", value: "≤ 48 cabinets" },
+          { label: "Power Supply", value: "208 / 380 / 400 / 415V, 50/60 Hz, 3Ph + N + PE" },
+          { label: "Max IT Load", value: "125 kW (with integrated UPS) / 145 kW (with integrated PDU)" },
+        ],
+      },
+      {
+        title: "Cabinet Enclosure",
+        specs: [
+          { label: "Cabinet Size (W×D×H)", value: "600 × 1200 × 2000 mm" },
+          { label: "Space Available", value: "42U / 47U" },
+          { label: "Material", value: "SPCC cold-rolled steel" },
+          { label: "Cabinet Standard", value: "International standard" },
+        ],
+      },
+      {
+        title: "Integrated Power & Cooling",
+        specs: [
+          { label: "Integrated UPS Capacity", value: "25 kVA – 125 kVA" },
+          { label: "UPS Efficiency", value: "≥ 96%" },
+          { label: "In-Row Air Conditioner Cooling Capacity", value: "25 / 35 / 40 / 50 / 60 kW" },
+          { label: "Power Distribution Output", value: "32A / 1P, up to 144 circuits" },
+        ],
+      },
     ],
     applications: ["Mid-size enterprise data rooms", "Regional data centers", "Higher-density branch deployments"],
-    customizationOptions: ["Row length / cabinet count", "Containment type", "Redundancy level"],
+    customizationOptions: ["Row length / cabinet count", "Containment type", "Redundancy level", "Private mold / OEM / ODM"],
     standards: ["Certification available on request per project spec"],
     faqs: [
       {
