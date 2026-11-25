@@ -9,6 +9,7 @@ import { getContactMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -20,7 +21,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "Contact & Request a Quote" : getContactMessages(locale).hero.title,
-    description: locale === defaultLocale ? "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage." : getContactMessages(locale).hero.subtitle,
+    description: locale === defaultLocale ? "Contact Wandtung's engineering team for data center infrastructure product inquiries and project quotes — power distribution, UPS, cabinets, modular and containerized data centers, cooling and energy storage." : metaDescription(getContactMessages(locale).hero.subtitle, locale),
     alternates: buildAlternates(locale, "/contact"),
   };
 }

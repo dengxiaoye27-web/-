@@ -30,6 +30,7 @@ import { getArticleContent } from "@/i18n/content/articles";
 import { getHomeMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -48,7 +49,7 @@ export async function generateMetadata({
       ru: "Инфраструктура ЦОД и системы электропитания | Wandtung",
       zh: "数据中心基础设施与电力解决方案 | Wandtung",
     }[locale] },
-    description: locale !== defaultLocale ? getHomeMessages(locale).trustedPartner.description :
+    description: locale !== defaultLocale ? metaDescription(getHomeMessages(locale).trustedPartner.description, locale) :
       "Wandtung is a China-based manufacturer of data center infrastructure and critical power solutions — PDUs, UPS, cabinets, micro modular and containerized data centers, liquid cooling and energy storage — for data center, telecom, government and industrial customers worldwide.",
     alternates: buildAlternates(locale, ""),
   };

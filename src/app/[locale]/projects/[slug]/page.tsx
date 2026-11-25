@@ -12,6 +12,7 @@ import { getProjectContent } from "@/i18n/content/projects";
 import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
+import { metaDescription } from "@/lib/meta-description";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -29,7 +30,7 @@ export async function generateMetadata({
   const content = getProjectContent(slug, locale, project);
   return {
     title: content.title,
-    description: content.summary,
+    description: metaDescription(content.summary, locale),
     alternates: buildAlternates(locale, `/projects/${project.slug}`),
   };
 }
