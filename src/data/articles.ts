@@ -597,6 +597,7 @@ export const articles: Article[] = [
           "This depends on your specific rack layout, containment, and site conditions, so there's no single number that applies everywhere. As a general industry guideline, air-based cooling is common up to around 15–20 kW per rack, with cold plate liquid cooling becoming the practical choice above that. Our engineering team can review your target rack density and recommend whether air, liquid, or a hybrid approach fits your deployment.",
       },
     ],
+    relatedArticleSlugs: ["how-to-choose-a-data-center-raised-floor"],
   },
   {
     slug: "solar-storage-bess-data-center-guide",
@@ -743,6 +744,7 @@ export const articles: Article[] = [
           "Yes. Because it's produced in-house rather than through a trading intermediary, width, rung spacing, surface finish and OEM/ODM branding are configured per order rather than limited to a fixed catalog list.",
       },
     ],
+    relatedArticleSlugs: ["how-to-choose-a-data-center-raised-floor"],
   },
   {
     slug: "online-vs-line-interactive-vs-standby-ups",

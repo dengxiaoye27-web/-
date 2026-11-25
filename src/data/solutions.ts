@@ -44,6 +44,7 @@ export const solutions: Solution[] = [
       },
     ],
     relatedProductSlugs: ["intelligent-pdu", "modular-ups", "data-center-cabinet", "precision-air-conditioner"],
+    relatedArticleSlugs: ["how-to-choose-a-data-center-raised-floor"],
   },
   {
     slug: "micro-modular-data-center",
