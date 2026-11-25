@@ -10,6 +10,7 @@ import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -21,7 +22,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "Data Center & Critical Power Solutions" : getSolutionsUiMessages(locale).hub.title,
-    description: locale === defaultLocale ? "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions." : getSolutionsUiMessages(locale).hub.subtitle,
+    description: locale === defaultLocale ? "Wandtung designs complete data center infrastructure, micro modular, containerized, edge, telecom, AI, liquid cooling, critical power, smart power distribution and energy storage solutions." : metaDescription(getSolutionsUiMessages(locale).hub.subtitle, locale),
     alternates: buildAlternates(locale, "/solutions"),
   };
 }

@@ -11,6 +11,7 @@ import { getAboutMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 const factoryPhotos = [
   "/images/factory/01-exterior.png",
@@ -33,7 +34,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "About Us" : getAboutMessages(locale).hero.title,
-    description: locale === defaultLocale ? "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery." : getAboutMessages(locale).hero.subtitle,
+    description: locale === defaultLocale ? "Guangdong Haisen New Building Materials Technology Co., Ltd. is a factory-direct manufacturer of data center infrastructure and critical power products, offering OEM/ODM, engineering support and global project delivery." : metaDescription(getAboutMessages(locale).hero.subtitle, locale),
     alternates: buildAlternates(locale, "/about"),
   };
 }

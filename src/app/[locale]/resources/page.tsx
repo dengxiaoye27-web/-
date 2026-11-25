@@ -9,6 +9,7 @@ import { getResourcesUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -20,7 +21,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "Resources & Knowledge Center" : getResourcesUiMessages(locale).hubTitle,
-    description: locale === defaultLocale ? "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design." : getResourcesUiMessages(locale).hubSubtitle,
+    description: locale === defaultLocale ? "Technical guides, FAQs and knowledge center articles on PDUs, UPS systems, micro modular and containerized data centers, liquid cooling and data center power design." : metaDescription(getResourcesUiMessages(locale).hubSubtitle, locale),
     alternates: buildAlternates(locale, "/resources"),
   };
 }

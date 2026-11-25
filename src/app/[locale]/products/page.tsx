@@ -12,6 +12,7 @@ import { getProductsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -23,7 +24,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "Data Center Infrastructure Products" : getProductsUiMessages(locale).hubTitle,
-    description: locale === defaultLocale ? "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage." : getProductsUiMessages(locale).hubSubtitle,
+    description: locale === defaultLocale ? "Browse Wandtung's full range of data center infrastructure products — PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling, raised flooring, cable management and energy storage." : metaDescription(getProductsUiMessages(locale).hubSubtitle, locale),
     alternates: buildAlternates(locale, "/products"),
   };
 }

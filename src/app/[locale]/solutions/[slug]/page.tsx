@@ -13,6 +13,7 @@ import { getSolutionsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export function generateStaticParams() {
   return solutions.map((s) => ({ slug: s.slug }));
@@ -34,7 +35,7 @@ export async function generateMetadata({
       : content.name;
   return {
     title,
-    description: content.tagline,
+    description: metaDescription(content.tagline, locale),
     alternates: buildAlternates(locale, `/solutions/${solution.slug}`),
   };
 }

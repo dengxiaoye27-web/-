@@ -9,6 +9,7 @@ import { getProjectsUiMessages, getCommonMessages } from "@/i18n/messages";
 import { isLocale, defaultLocale, Locale } from "@/i18n/config";
 import { buildAlternates } from "@/lib/alternates";
 import { breadcrumbSchema } from "@/lib/schema";
+import { metaDescription } from "@/lib/meta-description";
 
 export async function generateMetadata({
   params,
@@ -20,7 +21,7 @@ export async function generateMetadata({
 
   return {
     title: locale === defaultLocale ? "Projects & Case Studies" : getProjectsUiMessages(locale).hubTitle,
-    description: locale === defaultLocale ? "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments." : getProjectsUiMessages(locale).hubSubtitle,
+    description: locale === defaultLocale ? "Wandtung data center infrastructure project case studies across data center, telecom, government, banking, industrial, energy and overseas deployments." : metaDescription(getProjectsUiMessages(locale).hubSubtitle, locale),
     alternates: buildAlternates(locale, "/projects"),
   };
 }

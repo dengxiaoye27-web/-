@@ -24,6 +24,20 @@ function languageAlternates(route: string) {
   return languages;
 }
 
+// lastmod must reflect when a page's content actually changed — Google
+// ignores the field for the whole sitemap once it sees every URL claim
+// "modified right now" on every fetch, which is what `new Date()` did.
+// Articles carry a real publish date; the blog hubs change when a new
+// article lands. Other pages have no reliable modification date in the
+// data files, so they omit lastmod rather than report a false one.
+const articleDates = new Map(articles.map((a) => [`/resources/blog/${a.slug}`, a.publishedAt]));
+const newestArticleDate = articles.map((a) => a.publishedAt).sort().at(-1);
+const hubRoutes = new Set(["", "/resources"]);
+
+function lastModifiedFor(route: string): string | undefined {
+  return articleDates.get(route) ?? (hubRoutes.has(route) ? newestArticleDate : undefined);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
@@ -51,15 +65,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (untranslatedRoutes.has(route)) {
       entries.push({
         url: `${siteConfig.url}${route}`,
-        lastModified: new Date(),
       });
       continue;
     }
 
+    const lastModified = lastModifiedFor(route);
     for (const locale of locales) {
       entries.push({
         url: `${siteConfig.url}${localizedPath(locale, route)}`,
-        lastModified: new Date(),
+        ...(lastModified ? { lastModified } : {}),
         alternates: { languages: languageAlternates(route) },
       });
     }
