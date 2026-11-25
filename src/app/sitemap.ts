@@ -34,14 +34,6 @@ const articleDates = new Map(articles.map((a) => [`/resources/blog/${a.slug}`, a
 const newestArticleDate = articles.map((a) => a.publishedAt).sort().at(-1);
 const hubRoutes = new Set(["", "/resources"]);
 
-// Only the target markets' locales are submitted as sitemap entries, so
-// Google's crawl and indexing attention for a young domain goes to
-// English, French, Spanish, Chinese and Arabic first. Russian pages stay
-// live and are still listed as hreflang alternates (and linked from the
-// language switcher), so they remain discoverable — they just aren't pushed.
-// Add a locale back here to put it in the sitemap again.
-const sitemapLocales = locales.filter((l) => l !== "ru");
-
 function lastModifiedFor(route: string): string | undefined {
   return articleDates.get(route) ?? (hubRoutes.has(route) ? newestArticleDate : undefined);
 }
@@ -78,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     const lastModified = lastModifiedFor(route);
-    for (const locale of sitemapLocales) {
+    for (const locale of locales) {
       entries.push({
         url: `${siteConfig.url}${localizedPath(locale, route)}`,
         ...(lastModified ? { lastModified } : {}),
