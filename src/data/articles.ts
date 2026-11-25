@@ -1047,6 +1047,157 @@ export const articles: Article[] = [
       "how-to-choose-a-data-center-pdu",
     ],
   },
+  {
+    slug: "how-to-choose-a-data-center-raised-floor",
+    title: "How to Choose a Raised Floor for Your Data Center: Panel Types, Load Ratings and Height",
+    metaTitle: "Data Center Raised Floor Guide: Panel Types & Load Ratings",
+    category: "Data Center Flooring",
+    excerpt:
+      "How to choose a data center raised floor: compare steel, calcium sulphate and glass panels, size load ratings, pick floor height and anti-static specs.",
+    publishedAt: "2026-11-25",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Why the Raised Floor Decision Matters",
+        content:
+          "The raised floor is the first thing installed in a data hall and the last thing anyone thinks about, until a rack is rolled in and a panel cracks, or a cold aisle runs warm because the void under the floor is too shallow. Replacing a floor under live equipment is slow and expensive, so the choice is worth getting right at the design stage. This guide covers what a raised floor actually does, how the main panel constructions compare, how to read load ratings, and what to put in your RFQ so suppliers quote like for like.",
+      },
+      {
+        heading: "What a Raised Floor Does in a Data Center",
+        content:
+          "A raised access floor is a grid of removable panels, usually 600 x 600 mm, sitting on adjustable steel pedestals above the concrete slab. The void it creates does three jobs. First, it works as an air plenum: in raised-floor cooling, precision air conditioners pressurise the void with cold air, and perforated panels release it into the cold aisle in front of the racks. Second, it carries cables and pipes: power cables, data cabling, grounding and, increasingly, liquid cooling pipework can run under the floor, out of the way of people and equipment. Third, it provides static control and access: an anti-static surface helps protect IT equipment from electrostatic discharge, and any panel can be lifted to reach what is underneath. Not every site needs one. Halls that use overhead cabling, in-row cooling or rear-door and direct-to-chip liquid cooling can work on a slab. But where underfloor air delivery, flexible cable routes or a clean, serviceable white space are part of the design, a raised floor remains the standard approach.",
+      },
+      {
+        heading: "The Main Panel Constructions Compared",
+        content:
+          "Most of the difference between raised floors lies in the panel core. Each construction trades cost, strength, fire performance and appearance differently. Steel cementitious is the workhorse: cost-effective, widely available and compatible with common pedestal systems. Calcium sulphate is the step up when racks are heavy, fire rules are strict or humidity swings would make other panels move; its non-combustible core carries a Class A fire rating. Glass is chosen when the cabling under the floor is meant to be seen.",
+        table: {
+          columns: ["Steel cementitious", "Calcium sulphate", "Anti-static steel (3-layer)", "Glass"],
+          rows: [
+            {
+              label: "Core",
+              values: [
+                "Foamed cement in a steel shell, welded honeycomb steel base",
+                "Dense calcium sulphate, steel-encased",
+                "SPCC steel surface, deep-drawn steel dimple base, foamed cement core",
+                "12 mm tempered glass, aluminium alloy frame",
+              ],
+            },
+            {
+              label: "Surface",
+              values: ["HPL anti-static laminate", "HPL anti-static laminate, black edge trim", "Anti-static PVC", "Glass, anti-static"],
+            },
+            {
+              label: "Strength",
+              values: ["Standard loads", "Highest of the range", "Medium to high", "Medium to high"],
+            },
+            {
+              label: "Best for",
+              values: [
+                "Standard white space and equipment rooms on a budget",
+                "Heavy racks, fire-rated rooms, humid sites",
+                "General data halls, server rooms, control rooms",
+                "NOCs, lobbies, showrooms",
+              ],
+            },
+          ],
+        },
+      },
+      {
+        heading: "Load Ratings: Uniform vs Concentrated",
+        content:
+          "Load figures cause more floor failures than any other specification, because suppliers quote different numbers. Uniform load (kg/m²) is weight spread evenly over the panel surface. It describes general room loading, not racks. Concentrated load (kg) is weight on a small point, measured with a small indenter in common test procedures. This is the figure that matters for racks, because a cabinet's whole weight sits on four casters or levelling feet. A quick check: divide the fully loaded cabinet weight by four to get the load per foot, then add margin for heavier future hardware and for the moment of move-in, when a rolling cabinet or pallet jack crosses panels that are not under its final position. High-density AI racks deserve particular care, as they are far heavier than traditional IT cabinets. Ask every supplier for uniform, concentrated and rolling load figures on the same basis, and for the test method used. A high uniform rating alone does not tell you the panel will hold a rack.",
+      },
+      {
+        heading: "Choosing the Finished Floor Height",
+        content:
+          "Finished floor height is set by what has to fit and flow beneath the panels. Cable-only voids in offices and control rooms can be shallow. Air plenums need a deeper void, because cables, trays and pipes in the void obstruct airflow and cause uneven pressure from one end of the aisle to the other. Liquid cooling adds pipework, drip trays and leak detection, all of which need clearance. Wandtung pedestals adjust from 100 to 500 mm. Fix the height early, because it also sets ramp lengths, door thresholds and the height of equipment entering the room.",
+      },
+      {
+        heading: "Anti-Static Performance: What 10^6–10^9 Ω Means",
+        content:
+          "Electrostatic discharge can damage sensitive electronics. An anti-static floor carries static charge away to ground in a controlled way rather than letting it build up on people and trolleys. Wandtung panels have a surface resistance of 10^6–10^9 Ω, the static-dissipative range commonly specified for data center floors. The panel surface is only part of the system. The pedestals and grid must be bonded to the site's earthing system, or the dissipative surface has nowhere to send the charge.",
+      },
+      {
+        heading: "Perforated Airflow Panels",
+        content:
+          "In raised-floor cooling, the perforated tiles decide where the cold air goes. Wandtung airflow panels come in 25%, 40% and 56% open area, with fixed or adjustable dampers, on the standard 600 x 600 mm grid. Higher open area delivers more air per tile, and dampers let you balance supply between racks of different density without rearranging tiles. Place perforated tiles only in the cold aisle. A perforated tile in a hot aisle or open floor area wastes cold air.",
+      },
+      {
+        heading: "What to Put in Your Raised Floor RFQ",
+        content:
+          "Include these points so every supplier quotes on the same basis. Room area, layout drawing and finished floor height. Heaviest cabinet weight and footprint, now and planned. Required uniform, concentrated and rolling loads, with the test method. Panel construction and surface finish. Number and position of perforated tiles, open area and damper type. Fire rating and anti-static requirements. Underfloor services such as cable trays, pipework and leak detection. Certifications your market or client requires. Delivery, installation support and spare panel quantity.",
+      },
+      {
+        heading: "The Wandtung Raised Floor Range",
+        content:
+          "We manufacture raised floors alongside cabinets, cable trays, precision cooling and power distribution, so the floor can be specified as part of one white-space package. Custom panel sizes and OEM/ODM are available, and certification is available on request to your project specification.",
+        table: {
+          columns: ["Panel", "Load rating", "Pedestal"],
+          rows: [
+            {
+              label: "Steel Cementitious Raised Floor",
+              values: ["600 x 600 mm, HPL surface", "Up to 900 kg concentrated (model dependent)", "Adjustable pedestal and stringer system"],
+            },
+            {
+              label: "Calcium Sulphate Raised Floor",
+              values: ["600 x 600 mm, HPL surface", "1200 kg/m² uniform, up to 1250 kg concentrated (model dependent)", "Galvanized steel, 100–500 mm"],
+            },
+            {
+              label: "Anti-Static Raised Floor",
+              values: ["600 x 600 mm, PVC surface", "800–1200 kg/m² (model dependent)", "Steel, 100–500 mm"],
+            },
+            {
+              label: "Glass Anti-Static Raised Floor",
+              values: ["600 x 600 mm, 12 mm tempered glass", "800–1000 kg/m²", "Galvanized steel, 100–500 mm"],
+            },
+            {
+              label: "Airflow Floor",
+              values: ["600 x 600 mm, 25% / 40% / 56% open area", "On request", "Fits the standard 600 x 600 mm grid"],
+            },
+          ],
+        },
+      },
+      {
+        heading: "Start With the Load, Not the Price",
+        content:
+          "The cheapest panel is the one you never have to replace. Send us your layout, rack weights and floor height, and our engineering team will recommend a panel construction, load rating and airflow tile plan for your data hall.",
+      },
+    ],
+    ctaLinks: [
+      { label: "View the Anti-Static Raised Floor →", href: "/products/anti-static-raised-floor" },
+      { label: "Compare Calcium Sulphate Panels →", href: "/products/calcium-sulphate-raised-floor" },
+      { label: "See Airflow Floor Panels →", href: "/products/airflow-floor" },
+      { label: "Talk to Our Engineering Team →", href: "/contact" },
+    ],
+    faqs: [
+      {
+        question: "What load rating does a data center raised floor need?",
+        answer:
+          "Size the floor to the concentrated load from your heaviest cabinet: its loaded weight divided by its four feet, plus margin for growth and move-in. Heavy AI racks often point to a calcium sulphate panel, rated up to 1250 kg concentrated in our range.",
+      },
+      {
+        question: "Is calcium sulphate better than steel cementitious raised floor?",
+        answer:
+          "It is stronger, more stable in changing humidity and carries a Class A fire rating, but costs more. Steel cementitious panels remain a cost-effective choice for standard data center loads.",
+      },
+      {
+        question: "How high should a data center raised floor be?",
+        answer:
+          "It depends on whether the void carries air, cables or pipework. Air plenums need the deepest voids. Wandtung pedestals adjust from 100 to 500 mm.",
+      },
+      {
+        question: "Do I still need a raised floor with liquid cooling?",
+        answer:
+          "Not always. Many liquid-cooled halls run on a slab with overhead services, but a raised floor is still useful when pipework, cabling and leak detection need to be routed and accessed beneath the racks.",
+      },
+    ],
+    relatedArticleSlugs: [
+      "air-cooling-vs-liquid-cooling-ai-data-centers",
+      "aluminum-cable-tray-manufacturer-guide",
+      "what-is-micro-modular-data-center",
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
