@@ -21,6 +21,7 @@ export interface CommonMessages {
     tagline: string;
     manufactured: string;
     rightsReserved: string;
+    alibabaStore: string;
   };
   common: {
     email: string;

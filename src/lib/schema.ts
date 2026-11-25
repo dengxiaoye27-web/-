@@ -13,6 +13,9 @@ export function organizationSchema() {
     name: siteConfig.legalName,
     alternateName: "Wandtung",
     url: siteConfig.url,
+    // Profiles on other sites that belong to this company, so search engines
+    // can tie them to the same entity.
+    sameAs: [siteConfig.alibabaStore],
     email: siteConfig.email,
     description:
       "Guangdong Haisen New Building Materials Technology Co., Ltd. is a China-based manufacturer of data center infrastructure and critical power products, including PDUs, UPS systems, network and server cabinets, micro modular and containerized data centers, cooling and liquid cooling systems, and energy storage systems, serving data center operators, telecom operators, system integrators and EPC contractors worldwide.",
