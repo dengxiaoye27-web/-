@@ -62,8 +62,9 @@ Note: the new article's non-English translations (`src/i18n/content/articles.ts`
 The site has a reusable `RelatedArticles` component (`src/components/product/RelatedArticles.tsx`) that renders a "Related Articles" section on product pages, solution pages, and other blog articles — driven entirely by an optional `relatedArticleSlugs: string[]` field. No template changes are ever needed; it's a one-line data addition per page:
 
 1. On the new article itself, set `relatedArticleSlugs` to 1–2 existing articles on the same topic (cross-link both directions: also add the new article's slug to the *older* article's `relatedArticleSlugs`).
-2. On the 1–3 most relevant product pages (`src/data/products.ts`) and/or solution pages (`src/data/solutions.ts`), add the new article's slug to their `relatedArticleSlugs` array (create the field if it doesn't exist yet on that entry).
-3. Rebuild and grep the static output to confirm the links landed (same check used in every PR — `grep -o "<slug>" .next/server/app/en/products/<slug>.html`) before opening the PR.
+2. **Product pages are automatic**: any product page the article links to in its `ctaLinks` (`/products/<slug>`) already lists the article under "Related Articles" (via `getArticleSlugsForProduct` in `src/data/articles.ts`) — no edit needed. Only add the slug to a product's `relatedArticleSlugs` in `src/data/products.ts` if that product is relevant but not in the article's `ctaLinks`.
+3. **Solution pages are manual**: on the 1–2 most relevant solution pages (`src/data/solutions.ts`), add the new article's slug to their `relatedArticleSlugs` array (create the field if it doesn't exist yet on that entry).
+4. Rebuild and grep the static output to confirm the links landed (e.g. `grep -o "<slug>" .next/server/app/en/products/<slug>.html`) before opening the PR. If dependencies can't be installed in the session, say so in the PR and check the live pages after deploy instead.
 
 ### 5. After publishing, Claude reminds you to
 
