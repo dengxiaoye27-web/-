@@ -6,6 +6,7 @@ export const siteConfig = {
   url: "https://www.wandtung.com",
   email: "Regina@wandtung.com",
   whatsapp: "https://wa.me/8613970822554",
+  alibabaStore: "https://wandtung.en.alibaba.com/",
   phone: "+86 139 7082 2554",
   address: "Room 535, No.1630, Airport Road, Baiyun District, Guangzhou, 510080, Guangdong, China",
 };

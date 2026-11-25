@@ -72,6 +72,11 @@ export function SiteFooter() {
             <li><Link href="/projects" className="hover:text-white">{t.nav.projects}</Link></li>
             <li><Link href="/resources" className="hover:text-white">{t.nav.resources}</Link></li>
             <li><Link href="/contact" className="hover:text-white">{t.nav.contact}</Link></li>
+            <li>
+              <a href={siteConfig.alibabaStore} target="_blank" rel="noopener" className="hover:text-white">
+                {t.footer.alibabaStore}
+              </a>
+            </li>
             <li><Link href="/legal/privacy-policy" className="hover:text-white">{t.footer.privacyPolicy}</Link></li>
             <li><Link href="/legal/terms-of-use" className="hover:text-white">{t.footer.termsOfUse}</Link></li>
           </ul>
